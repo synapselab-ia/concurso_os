@@ -50,7 +50,7 @@ validation:
   binary_changes: none
   apostila_md_changed: false
   apostila_pdf_changed: false
-  critical_readback: pending_before_merge
+  critical_readback: pass
 ci: disabled
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
