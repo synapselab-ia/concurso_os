@@ -12,9 +12,7 @@ A reconstrução 2.0.0 passou pelos gates editoriais internos de cobertura, exat
 
 O gate de publicação do PDF também está concluído. Após detectar e revogar uma tentativa anterior truncada, foi gerada uma distribuição compacta específica para transporte pelo conector GitHub. O arquivo foi validado localmente, publicado como blob byte-identical e confirmado por readback no repositório.
 
-O primeiro **smoke test real no NotebookLM** foi iniciado em 2026-09-11 e produziu evidência útil, mas **não passou ainda como QA-7 live**. As respostas sobre causa x explicação e inferência x extrapolação recuperaram o conteúdo corretamente, porém houve uma formulação absoluta mais forte que a fonte. Na explicação de `à qual`, o raciocínio central de regência + pronome relativo estava correto, mas um exemplo sem crase gramaticalmente válido foi rotulado como “incorreto”. No treino de concordância, a questão estava adequada, porém a correção agrupou alternativas e explicou de forma insuficientemente específica a construção `Devem haver` → `Deve haver`. Também foi observada uma sugestão automática da interface exibindo o gabarito antes da tentativa, possivelmente fora do controle das instruções persistentes.
-
-A configuração do tutor foi endurecida em `METODOLOGIA_NOTEBOOKLM.md` versão `2.0.0-rc2` para corrigir os comportamentos controláveis: evitar formulações absolutas não sustentadas, rotular corretamente pares mínimos, impedir vazamento de gabarito produzido pelo próprio chat e exigir correção específica por construção/alternativa. O QA-7 live permanece **PENDING RETEST**; não converter em pass sem nova execução real.
+O smoke real no NotebookLM está em fase final. A primeira tentativa do chat revelou problemas concretos de formulação/rotulagem e correção insuficientemente específica; a configuração foi endurecida em `METODOLOGIA_NOTEBOOKLM.md` versão `2.0.0-rc2`. O reteste do chat com rc2 passou. O Teste nativo também passou em amostras de concordância, semântica figurada e relações lógico-semânticas. Os Cartões passaram em amostras de voz enunciadora, inferência, extrapolação e concordância de `cujo`. Resta somente validar o Mapa mental antes de marcar QA-7 live como `PASS` integral.
 
 O gate determinístico `python tools/verify.py` também não pôde ser executado contra um checkout canônico porque o runtime local não resolve `github.com`; a impossibilidade permanece documentada sem ser convertida em `pass`.
 
@@ -85,39 +83,57 @@ A análise das 88 questões históricas orienta profundidade e integração, mas
 
 ## QA-7 — Utilidade para NotebookLM
 
-**Resultado: STATIC PASS; LIVE SMOKE PENDING RETEST.**
+**Resultado: STATIC PASS; LIVE SMOKE PARTIAL PASS — MAPA MENTAL PENDENTE.**
 
 A revisão estática confirma que o corpus é autocontido, mantém contrastes próximos, contém definições, regras, exemplos, exceções e prática suficientes e separa conteúdo estudável da instrução operacional do tutor.
 
-### Primeira tentativa live — 2026-09-11
+### Primeira tentativa live — achados e correção
 
-**Causa x explicação / inferência x extrapolação:** conteúdo central recuperado corretamente. Ressalva menor: a formulação de inferência como algo que “decorre necessariamente” ficou mais absoluta que a apostila, que exige sustentação textual sem esse absolutismo.
+A primeira execução real encontrou:
 
-**Crase em `à qual`:** mecanismo central correto — preposição `a` exigida pela regência + pronome relativo `a qual` → `à qual`. Falha observada: o exemplo `A norma a qual o parecer analisou foi alterada` foi rotulado como “INCORRETO / SEM CRASE”, embora a própria análise reconhecesse que `analisar` é transitivo direto e que `a qual` sem crase é gramatical nesse contexto. Isso é inconsistência de rotulagem, não falha do corpus.
+- formulação de inferência mais absoluta que a fonte;
+- um exemplo válido sem crase rotulado como “incorreto”;
+- correção de concordância insuficientemente específica para `Devem haver` → `Deve haver`;
+- sugestão automática da interface exibindo resposta correta antes da tentativa, aparentemente fora da resposta principal do tutor.
 
-**Treino de concordância:** a questão gerada foi válida e a alternativa correta `Devem existir soluções...` estava correta. A correção explicou adequadamente `existir` pessoal e `fazer` temporal impessoal, mas agrupou `A, B e E` sob a regra de `haver` e não explicitou suficientemente o ponto de B: `Devem haver alternativas` deve ser `Deve haver alternativas`, pois `haver` existencial é impessoal e o auxiliar permanece no singular.
+`METODOLOGIA_NOTEBOOKLM.md` foi atualizada para `2.0.0-rc2`, com proibição de absolutismos não sustentados, rotulagem correta de pares mínimos, questão por vez sem gabarito produzido pelo tutor e correção específica por construção/alternativa.
 
-**Vazamento de gabarito na interface:** foi observada uma sugestão automática abaixo da questão com o texto `A resposta correta é a D.` antes da tentativa do estudante. Esse elemento parece pertencer à camada de sugestões da interface, não necessariamente à resposta principal controlada pelo tutor. O comportamento deve ser reavaliado no reteste; a rc2 proíbe explicitamente qualquer vazamento produzido pelo chat, mas não presume controle sobre componentes externos da interface.
+### Reteste do chat configurado — PASS
 
-### Correção aplicada
+No reteste com rc2:
 
-`METODOLOGIA_NOTEBOOKLM.md` foi atualizada para `2.0.0-rc2` com:
+- questão de concordância foi válida;
+- correção explicou separadamente `fazer` temporal impessoal, `menos` invariável, concordância de `anexo` e `dever + existir`;
+- formas corrigidas foram explicitadas;
+- reteste curto de consolidação foi pertinente;
+- não foi observado vazamento de gabarito produzido pela resposta do tutor.
 
-- proibição de intensificar a fonte com absolutos não sustentados;
-- distinção entre rótulo gramatical (`CORRETO/INCORRETO`) e contraste descritivo (`COM CRASE/SEM CRASE`);
-- questão por vez sem gabarito, dica ou continuação no mesmo turno;
-- correção detalhada por construção e por alternativa relevante;
-- forma padrão corrigida explicitamente em erros de norma-padrão;
-- exemplo canônico `Devem haver alternativas` → `Deve haver alternativas`.
+Sugestões automáticas da interface continuam tratadas como risco de camada externa do produto, não como comportamento garantidamente controlável pela configuração persistente.
 
-### Critério para PASS
+### Teste nativo — PASS
 
-Executar novo smoke real após substituir a configuração personalizada pelo bloco `2.0.0-rc2`. O QA-7 live só passa se:
+Foram inspecionadas amostras reais do quiz nativo sobre:
 
-- as explicações conceituais permanecerem corretas e sem contradições de rotulagem;
-- o treino não vazar gabarito na resposta controlada pelo tutor;
-- a correção explicar a construção específica do erro, especialmente em concordância/regência/crase;
-- Teste, Cartões e Mapa mental também forem verificados sobre o mesmo `APOSTILA.pdf` 2.0.0 limpo.
+- concordância com expressão partitiva (`a maioria dos processos`);
+- sentido figurado de `chave`;
+- equivalência adversativa entre `entretanto` e `contudo`.
+
+As amostras exigiram aplicação do conteúdo, apresentaram distratores semanticamente plausíveis e não desviaram para metodologia/backoffice. A dica observada era opcional e foi aberta deliberadamente pelo usuário; não foi tratada como vazamento obrigatório.
+
+### Cartões — PASS
+
+Foram inspecionadas amostras reais de cartões sobre:
+
+- identificação de quem enuncia;
+- definição de inferência legítima;
+- definição de extrapolação;
+- concordância do pronome relativo `cujo` com o termo possuído.
+
+As perguntas são curtas, as respostas são recuperáveis e fiéis ao corpus, e a amostra cobre conceito, contraste interpretativo e regra gramatical. Não houve metadiscurso nem conteúdo de backoffice nos cartões mostrados.
+
+### Mapa mental — PENDENTE
+
+Falta apenas confirmar que o Mapa mental recupera de forma inteligível a hierarquia principal da apostila e que questões/gabaritos não dominam a estrutura. QA-7 live só deve ser promovido a `PASS` integral após essa verificação visual real.
 
 ## QA-8 — Redundância e coerência interna
 
@@ -183,8 +199,6 @@ Sem checkout canônico, executar `python tools/verify.py` sobre diretório parci
 
 ## Parecer de release
 
-**Português 2.0.0 está editorialmente apto e o PDF canônico está publicado de forma íntegra, mas QA-7 live ainda não passou.**
+**Português 2.0.0 está editorialmente apto, o PDF canônico está publicado e chat/Teste/Cartões passaram no smoke real.**
 
-O primeiro smoke real encontrou falhas de comportamento/rotulagem suficientemente concretas para exigir ajuste e reteste. A configuração rc2 já foi criada; o próximo passo é reinstalá-la no NotebookLM, repetir o chat crítico e concluir Teste, Cartões e Mapa mental. Só depois disso o release pode ser promovido e o PR #12 mesclado.
-
-Se `python tools/verify.py` continuar impossível no ambiente de execução, manter a justificativa explícita em vez de inventar um resultado.
+Resta apenas o Mapa mental para fechar QA-7 live. Se esse artefato preservar a hierarquia do conteúdo e não for dominado por questões/gabaritos, promover QA-7 live a `PASS`, concluir release e revisar/mesclar o PR #12 sob DEC-0009. Se `python tools/verify.py` continuar impossível no ambiente de execução, manter a justificativa explícita em vez de inventar um resultado.
