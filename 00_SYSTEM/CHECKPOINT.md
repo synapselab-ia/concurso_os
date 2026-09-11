@@ -2,10 +2,23 @@
 
 ```yaml
 project_state: active
-phase: baseline_ready
+phase: baseline_in_progress
 branch: main
 last_implementation_branch: adapter/tjsp-escrevente-2025
 current_task: BASE-001 execute first p001 TJSP baseline
+baseline_progress:
+  participant_id: p001
+  competition_id: tjsp-escrevente-2025
+  stage: stage_1
+  completed_items: 1
+  total_items: 13
+  next_item: 2
+  last_result:
+    competency_id: PT.TEXT.INTERPRET_LITERAL_INFERENCE
+    selected_answer: C
+    correct: true
+    confidence: between_two
+    considered_alternatives: [C, E]
 completed:
   - repository foundation merged
   - multi-participant and multi-competition architecture active
@@ -22,12 +35,12 @@ completed:
   - stage-1 baseline plan created with confidence capture
   - auditor extended to validate competitions, competency references and enrollments
   - PR 4 diff reviewed and critical files read back from GitHub
+  - first real p001 baseline EvidenceEvent persisted
 not_started:
-  - real p001 baseline evidence
   - evidence-derived mastery projection
   - scheduler implementation from real evidence
 blockers:
-  - BASE-001 requires real answers from p001
+  - BASE-001 requires remaining real answers from p001
 validation:
   command: python tools/verify.py
   result: not_executed_in_current_environment
