@@ -26,6 +26,7 @@ Nenhuma decisão, avanço, bloqueio ou próxima ação pode existir exclusivamen
 - Não incluir dados sensíveis. Este repositório é público durante a produção.
 - Não criar GitHub Actions nesta fase.
 - Alterações estruturais exigem registro em `DECISION_LOG.md`.
+- Ao criar ou reconstruir substancialmente uma apostila, ler e aplicar `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` **antes da redação completa**.
 - Antes de encerrar uma sessão de implementação, atualizar `CHECKPOINT.md` e `NEXT_ACTION.md` quando o estado tiver mudado.
 - Nenhuma tarefa é concluída sem executar ou justificar explicitamente a não execução de `python tools/verify.py`.
 
