@@ -12,7 +12,9 @@ A reconstrução 2.0.0 passou pelos gates editoriais internos de cobertura, exat
 
 O gate de publicação do PDF também está concluído. Após detectar e revogar uma tentativa anterior truncada, foi gerada uma distribuição compacta específica para transporte pelo conector GitHub. O arquivo foi validado localmente, publicado como blob byte-identical e confirmado por readback no repositório.
 
-Permanece uma pendência deliberadamente não marcada como concluída: o **smoke test real no NotebookLM** com o `APOSTILA.pdf` 2.0.0 como corpus limpo. O ambiente desta execução não dispõe de interação autenticada com o produto NotebookLM do usuário. Portanto, a release permanece `release-candidate` e o merge deve aguardar o QA-7 live, conforme a Definition of Done de `APOSTILA-002`.
+O primeiro **smoke test real no NotebookLM** foi iniciado em 2026-09-11 e produziu evidência útil, mas **não passou ainda como QA-7 live**. As respostas sobre causa x explicação e inferência x extrapolação recuperaram o conteúdo corretamente, porém houve uma formulação absoluta mais forte que a fonte. Na explicação de `à qual`, o raciocínio central de regência + pronome relativo estava correto, mas um exemplo sem crase gramaticalmente válido foi rotulado como “incorreto”. No treino de concordância, a questão estava adequada, porém a correção agrupou alternativas e explicou de forma insuficientemente específica a construção `Devem haver` → `Deve haver`. Também foi observada uma sugestão automática da interface exibindo o gabarito antes da tentativa, possivelmente fora do controle das instruções persistentes.
+
+A configuração do tutor foi endurecida em `METODOLOGIA_NOTEBOOKLM.md` versão `2.0.0-rc2` para corrigir os comportamentos controláveis: evitar formulações absolutas não sustentadas, rotular corretamente pares mínimos, impedir vazamento de gabarito produzido pelo próprio chat e exigir correção específica por construção/alternativa. O QA-7 live permanece **PENDING RETEST**; não converter em pass sem nova execução real.
 
 O gate determinístico `python tools/verify.py` também não pôde ser executado contra um checkout canônico porque o runtime local não resolve `github.com`; a impossibilidade permanece documentada sem ser convertida em `pass`.
 
@@ -83,11 +85,39 @@ A análise das 88 questões históricas orienta profundidade e integração, mas
 
 ## QA-7 — Utilidade para NotebookLM
 
-**Resultado: STATIC PASS; LIVE SMOKE PENDING.**
+**Resultado: STATIC PASS; LIVE SMOKE PENDING RETEST.**
 
 A revisão estática confirma que o corpus é autocontido, mantém contrastes próximos, contém definições, regras, exemplos, exceções e prática suficientes e separa conteúdo estudável da instrução operacional do tutor.
 
-**Não executado:** geração real de Teste, Cartões, Mapa mental e conversa configurada no NotebookLM usando exclusivamente o PDF 2.0.0 publicado. Esse gate requer interação autenticada com o produto externo e continua sendo o último gate semântico de aceitação.
+### Primeira tentativa live — 2026-09-11
+
+**Causa x explicação / inferência x extrapolação:** conteúdo central recuperado corretamente. Ressalva menor: a formulação de inferência como algo que “decorre necessariamente” ficou mais absoluta que a apostila, que exige sustentação textual sem esse absolutismo.
+
+**Crase em `à qual`:** mecanismo central correto — preposição `a` exigida pela regência + pronome relativo `a qual` → `à qual`. Falha observada: o exemplo `A norma a qual o parecer analisou foi alterada` foi rotulado como “INCORRETO / SEM CRASE”, embora a própria análise reconhecesse que `analisar` é transitivo direto e que `a qual` sem crase é gramatical nesse contexto. Isso é inconsistência de rotulagem, não falha do corpus.
+
+**Treino de concordância:** a questão gerada foi válida e a alternativa correta `Devem existir soluções...` estava correta. A correção explicou adequadamente `existir` pessoal e `fazer` temporal impessoal, mas agrupou `A, B e E` sob a regra de `haver` e não explicitou suficientemente o ponto de B: `Devem haver alternativas` deve ser `Deve haver alternativas`, pois `haver` existencial é impessoal e o auxiliar permanece no singular.
+
+**Vazamento de gabarito na interface:** foi observada uma sugestão automática abaixo da questão com o texto `A resposta correta é a D.` antes da tentativa do estudante. Esse elemento parece pertencer à camada de sugestões da interface, não necessariamente à resposta principal controlada pelo tutor. O comportamento deve ser reavaliado no reteste; a rc2 proíbe explicitamente qualquer vazamento produzido pelo chat, mas não presume controle sobre componentes externos da interface.
+
+### Correção aplicada
+
+`METODOLOGIA_NOTEBOOKLM.md` foi atualizada para `2.0.0-rc2` com:
+
+- proibição de intensificar a fonte com absolutos não sustentados;
+- distinção entre rótulo gramatical (`CORRETO/INCORRETO`) e contraste descritivo (`COM CRASE/SEM CRASE`);
+- questão por vez sem gabarito, dica ou continuação no mesmo turno;
+- correção detalhada por construção e por alternativa relevante;
+- forma padrão corrigida explicitamente em erros de norma-padrão;
+- exemplo canônico `Devem haver alternativas` → `Deve haver alternativas`.
+
+### Critério para PASS
+
+Executar novo smoke real após substituir a configuração personalizada pelo bloco `2.0.0-rc2`. O QA-7 live só passa se:
+
+- as explicações conceituais permanecerem corretas e sem contradições de rotulagem;
+- o treino não vazar gabarito na resposta controlada pelo tutor;
+- a correção explicar a construção específica do erro, especialmente em concordância/regência/crase;
+- Teste, Cartões e Mapa mental também forem verificados sobre o mesmo `APOSTILA.pdf` 2.0.0 limpo.
 
 ## QA-8 — Redundância e coerência interna
 
@@ -153,8 +183,8 @@ Sem checkout canônico, executar `python tools/verify.py` sobre diretório parci
 
 ## Parecer de release
 
-**Português 2.0.0 está editorialmente apto e o PDF canônico está publicado de forma íntegra.**
+**Português 2.0.0 está editorialmente apto e o PDF canônico está publicado de forma íntegra, mas QA-7 live ainda não passou.**
 
-Resta um gate material antes do merge: executar o smoke real no NotebookLM com `APOSTILA.pdf` como única fonte de conteúdo e registrar QA-7 live como `PASS` somente se Teste, Cartões, Mapa mental e chat configurado funcionarem sem falha material.
+O primeiro smoke real encontrou falhas de comportamento/rotulagem suficientemente concretas para exigir ajuste e reteste. A configuração rc2 já foi criada; o próximo passo é reinstalá-la no NotebookLM, repetir o chat crítico e concluir Teste, Cartões e Mapa mental. Só depois disso o release pode ser promovido e o PR #12 mesclado.
 
-Depois desse smoke, atualizar o status para release final, revisar o PR #12 e fazer merge sob DEC-0009. Se `python tools/verify.py` continuar impossível no ambiente de execução, manter a justificativa explícita em vez de inventar um resultado.
+Se `python tools/verify.py` continuar impossível no ambiente de execução, manter a justificativa explícita em vez de inventar um resultado.
