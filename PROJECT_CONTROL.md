@@ -1,15 +1,16 @@
 # Project Control
 
 - **Status:** ACTIVE
-- **Phase:** SUBJECT_PACK_RELEASE_VALIDATION
+- **Phase:** SUBJECT_PACK_TRANSITION
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
 - **Current implementation branch:** `content/apostila-portugues-2.0.0`
 - **Last implementation branch:** `docs/apostila-authoring-protocol`
 - **Current competition:** `tjsp-escrevente-2025`
-- **Current subject:** `portugues`
-- **Current pack:** `portugues 2.0.0` release candidate; conteúdo, matriz, QA editorial e PDF canônico concluídos; smoke real do NotebookLM pendente
+- **Current subject:** `portugues` — release 2.0.0 concluído; próximo domínio canônico: `conhecimentos-em-direito`
+- **Current pack:** `portugues 2.0.0` final; conteúdo, matriz, QA editorial, PDF e smoke real do NotebookLM concluídos
 - **Current repository PDF:** Português 2.0.0 íntegro, 16 páginas A4, 20824 bytes, Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`
+- **Next subject evidence:** o syllabus vigente atribui 30 questões a Conhecimentos em Direito, maior bloco ainda sem SubjectPack
 - **Study stack:** GitHub + ChatGPT + NotebookLM
 - **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte; instruções de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` obrigatório para criação/reconstrução substancial
