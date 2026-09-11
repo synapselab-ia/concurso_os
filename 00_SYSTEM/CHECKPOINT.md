@@ -2,40 +2,37 @@
 
 ```yaml
 project_state: active
-phase: system_build
-branch: fix/defer-real-baseline
-current_task: ENGINE-001 close evidence projection pipeline before real baseline
+phase: subject_pack_build
+branch: architecture/notebooklm-study-stack
+current_task: PACK-001 produce first complete NotebookLM subject pack
 completed:
   - repository foundation merged
-  - multi-participant and multi-competition architecture active
   - chat-independent continuity active
   - autonomous merge policy active
-  - first real competition adapter created: tjsp-escrevente-2025
-  - current edital and historical exam sources registered with provenance hashes
-  - 70-question blueprint and elimination constraints encoded
-  - official syllabus mapped
-  - reusable baseline competency catalog created
-  - TJSP competency map created
-  - writing protocol and initial VUNESP profile created
-  - p001 study enrollment created without claiming official candidate status
-  - stage-1 baseline plan created with confidence capture
-  - auditor extended to validate competitions, competency references and enrollments
-  - PR 4 merged
-  - one real p001 response collected prematurely and preserved as append-only history
-  - real baseline paused by DEC-0012 until projection/scheduler pipeline is implemented
+  - TJSP 2025 adapter, edital map, blueprint and source registry created
+  - historical exams 2021/2023/2024/2025 registered
+  - legacy adaptive-study methodology recovered as design input
+  - premature real baseline stopped and preserved only as preflight history
+  - architecture corrected to GitHub + ChatGPT + NotebookLM
+  - GitHub defined as canonical analysis/material store
+  - ChatGPT defined as research, authoring and QA layer
+  - NotebookLM defined as primary subject-study environment
+  - subject-pack contract defined in docs/STACK_NOTEBOOKLM.md
+  - answer-level mastery/scheduler removed from V0.1 critical path
 in_progress:
-  - evidence correction and projection eligibility semantics
-  - deterministic per-participant state projection
-  - synthetic isolation fixtures for p001 and p002
-  - scheduler implementation over derived state
+  - first subject pack: Portuguese
 not_started:
-  - resume real p001 baseline
-  - writing screen
+  - Portuguese exam-pattern analysis
+  - Portuguese apostila
+  - Portuguese NotebookLM methodology
+  - Portuguese distribution PDF
+  - subject packs for remaining subjects
 blockers: []
 validation:
   command: python tools/verify.py
-  result: pending_for_ENGINE_001
-  previous_known_result: foundation branch passed auditor and 3 tests before adapter work
+  result: not_executed_for_docs_pivot
+  reason: architecture-only pivot; diff/readback review required before merge
 ci: disabled
 last_adapter_pull_request: 4
+last_architecture_correction_pull_request: 5
 ```

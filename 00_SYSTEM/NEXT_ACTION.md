@@ -1,17 +1,33 @@
 # NEXT_ACTION
 
-## ENGINE-001 — Fechar pipeline de evidência antes de retomar baseline real
+## PACK-001 — Produzir o primeiro SubjectPack completo
 
-O adapter TJSP já existe, mas a coleta real foi pausada porque ainda faltam as camadas que transformam eventos em estado e prioridade sem misturar participantes.
+A arquitetura canônica agora é GitHub + ChatGPT + NotebookLM. O próximo passo não é construir scheduler nem coletar baseline.
 
-Próxima execução de engenharia:
+Produzir o primeiro pacote completo para `tjsp-escrevente-2025`, começando por **Língua Portuguesa** para validar o formato ponta a ponta.
 
-1. formalizar eventos de correção/anotação e regras de elegibilidade para projeção;
-2. implementar projeção determinística por `participant_id + competition_id + enrollment_id`;
-3. garantir isolamento entre participantes com fixtures sintéticas de `p001` e `p002`;
-4. implementar o primeiro scheduler sobre estado derivado, sem dados reais;
-5. testar reconstrução completa de estado a partir de eventos append-only;
-6. validar que nenhum evento de um participante altera o estado de outro;
-7. executar o gate canônico e só então reabrir `BASE-001`.
+O pacote deve conter:
 
-A resposta real já coletada de `p001` permanece no histórico como preflight, mas não deve influenciar domínio nem scheduler até revalidação.
+```text
+materials/tjsp-escrevente-2025/portugues/
+├── MANIFEST.md
+├── APOSTILA.md
+├── APOSTILA.pdf
+├── ANALISE_BANCA.md
+├── METODOLOGIA_NOTEBOOKLM.md
+├── SOURCES.md
+└── CHANGELOG.md
+```
+
+Antes de considerar PACK-001 concluído:
+
+1. mapear todo o recorte de Português do edital;
+2. analisar de forma reproduzível as provas 2021/2023/2024/2025 para padrões da VUNESP;
+3. escrever a apostila source-grounded e focada no edital;
+4. adaptar a metodologia legada para uso específico no NotebookLM de Português;
+5. gerar PDF de distribuição;
+6. revisar o pacote contra edital, provas e política de fontes;
+7. validar que um usuário consegue criar o notebook apenas seguindo o MANIFEST;
+8. atualizar checkpoint e preparar a replicação para a próxima matéria.
+
+Não retomar pipeline de mastery/scheduler questão a questão durante PACK-001.
