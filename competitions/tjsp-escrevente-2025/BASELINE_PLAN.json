@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1",
+  "plan_id": "tjsp-baseline-v0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "status": "ready",
+  "purpose": "Obtain a fast first signal across every exam block without pretending to establish mastery.",
+  "stage_1": {
+    "objective_items": 13,
+    "confidence_required": true,
+    "confidence_scale": ["certain", "between_two", "unsure", "guess"],
+    "competency_ids": [
+      "PT.TEXT.INTERPRET_LITERAL_INFERENCE",
+      "PT.TEXT.COHESION_RELATIONS",
+      "PT.GRAM.AGREEMENT",
+      "PT.GRAM.REGENCY_CRASE",
+      "LAW.PENAL.TYPICITY_ELEMENTS",
+      "LAW.CPP.PROCEDURE_AND_DEADLINES",
+      "LAW.CPC.PROCEDURE_AND_REMEDIES",
+      "LAW.TJSP.INTERNAL_RULES",
+      "GA.CURRENT.EVENT_CONTEXT",
+      "LAW.LBI.RIGHTS_AND_WORK",
+      "MATH.RATIO_PERCENT_RULE3",
+      "IT.OFFICE.WORD_EXCEL",
+      "LOGIC.PROPOSITIONS_ARGUMENTS"
+    ],
+    "question_policy": {
+      "one_at_a_time": true,
+      "new_questions_preferred": true,
+      "five_alternatives": true,
+      "do_not_reveal_answer_before_attempt": true,
+      "record_answer_confidence_and_error_type": true
+    }
+  },
+  "writing_screen": {
+    "items": 1,
+    "competency_ids": [
+      "WRITING.ARGUMENTATIVE.COHERENCE",
+      "WRITING.FORMAL_LANGUAGE_COHESION"
+    ],
+    "status": "after_objective_stage_1"
+  },
+  "stage_2_policy": {
+    "trigger": "after_stage_1_evidence",
+    "purpose": "Expand coverage where signal is weak, uncertain, high-confidence wrong, or missing.",
+    "rules": [
+      "No competency can become MASTERED from stage 1 alone.",
+      "High-confidence errors receive higher diagnostic priority than low-confidence errors.",
+      "B1 and B2 elimination risk takes precedence over pure global-score optimization.",
+      "Unsampled syllabus areas remain unknown, never implicitly mastered."
+    ]
+  }
+}
