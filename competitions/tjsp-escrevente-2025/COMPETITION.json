@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "title": "TJSP — Escrevente Técnico Judiciário — Edital de Abertura n.º 02/2025",
+  "organization": "Tribunal de Justiça do Estado de São Paulo",
+  "role": "Escrevente Técnico Judiciário",
+  "exam_board": "Fundação VUNESP",
+  "official_reference": "TJSP2503",
+  "status": "in_progress",
+  "status_verified_at": "2026-09-11",
+  "scope": "Comarca de São Paulo (Capital) e Circunscrições Judiciárias da 1ª Região Administrativa Judiciária",
+  "exam_date": "2025-12-07",
+  "study_use": "latest_available_real_blueprint_and_style_reference",
+  "source_refs": [
+    "SRC-TJSP-EDITAL-2025-02",
+    "SRC-VUNESP-TJSP2503",
+    "SRC-TJSP-PROVA-2025",
+    "SRC-TJSP-PROVA-2024",
+    "SRC-TJSP-PROVA-2023",
+    "SRC-TJSP-PROVA-2021"
+  ],
+  "artifacts": {
+    "blueprint": "BLUEPRINT.json",
+    "syllabus": "SYLLABUS.md",
+    "sources": "SOURCES.json",
+    "competency_map": "COMPETENCY_MAP.json",
+    "baseline_plan": "BASELINE_PLAN.json",
+    "writing_protocol": "REDACAO_PROTOCOL.md",
+    "board_profile": "BANCA_PROFILE.md"
+  }
+}
