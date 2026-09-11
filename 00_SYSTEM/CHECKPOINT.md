@@ -13,6 +13,7 @@ completed:
   - canonical foundation files created
   - deterministic local verification implemented
   - seed participant profiles created for p001 and p002
+  - foundation pull request opened
 in_progress:
   - foundation pull request review
 not_started:
@@ -27,5 +28,5 @@ validation:
   tests: 3_passed
   note: verifier logic executed locally and branch contents confirmed through GitHub
 ci: disabled
-pull_request: pending_creation
+pull_request: 1
 ```
