@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "organization-role-year",
+  "title": "Nome do concurso",
+  "status": "draft",
+  "exam_board": null,
+  "source_refs": [],
+  "blocks": []
+}
