@@ -55,3 +55,7 @@ A V0.1 usa GitHub como memória canônica de análise e materiais, ChatGPT como 
 ## DEC-0014 — Sincronização NotebookLM é manual e versionada
 **Status:** accepted  
 NotebookLM não é tratado como espelho do GitHub. Cada subject pack possui versão explícita; arquivos canônicos são exportados pelo projeto e carregados/substituídos manualmente no notebook. Feedback de sessão pode retornar ao ChatGPT em relatório resumido, sem exigir transcrição de todas as questões.
+
+## DEC-0015 — Estúdio do NotebookLM primeiro; sem micro-orquestração por padrão
+**Status:** accepted  
+A experiência de estudo da V0.1 deve aproveitar os recursos nativos do Estúdio do NotebookLM (testes, cartões, mapas mentais, relatórios, tabelas, resumos e outros artefatos) em vez de transformar o chat em única interface ou exigir um prompt complexo para cada ação. O corpus recomendado é carregado uma vez e permanece disponível. Subseleção de fontes, prompts longos e configurações especiais só entram quando um teste real demonstrar necessidade. Rótulos nativos de dificuldade (`Fácil`, `Médio`, `Difícil`) são genéricos e não equivalem automaticamente ao nível de uma banca; a calibração de estilo deve vir das provas e da análise de banca carregadas. O objetivo operacional é `poucos cliques + instruções curtas + corpus forte`.
