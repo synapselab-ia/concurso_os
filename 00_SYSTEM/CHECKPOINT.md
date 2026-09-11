@@ -34,14 +34,14 @@ completed:
   - Portuguese 2.0.0 PDF release candidate generated
   - PDF textual QA passed
   - PDF visual QA passed after rendering and inspecting 34 pages
+  - validated 34-page APOSTILA.pdf published on implementation branch
   - SOURCES/MANIFEST/METODOLOGIA/CHANGELOG aligned with 2.0.0 release candidate
+  - PR 12 opened from content/apostila-portugues-2.0.0 to main
 in_progress:
-  - publish the validated 34-page PDF blob on the implementation branch
-  - open release-candidate PR to main
   - execute live NotebookLM smoke test with APOSTILA.pdf as clean corpus
 not_started:
   - promote Portuguese 2.0.0 release-candidate to final release
-  - merge APOSTILA-002 PR
+  - merge PR 12
   - SubjectPacks for remaining subjects
 blockers:
   - live NotebookLM smoke test requires external NotebookLM interaction not available in the current tool environment
@@ -55,10 +55,10 @@ validation:
     error: Could not resolve host github.com
   github_state_review:
     result: pass
-    branch_before_closure: content/apostila-portugues-2.0.0
-    branch_ahead_before_closure: 4
-    branch_behind_before_closure: 0
-    open_pr_before_closure: none
+    branch: content/apostila-portugues-2.0.0
+    branch_behind_main: 0
+    pull_request: 12
+    pull_request_state: open
     diff_readback: pass
   editorial_qa:
     qa_1_coverage: pass
@@ -76,12 +76,13 @@ validation:
     page_size: A4
     bytes: 140496
     sha256: 90052841384431f942f78234ce543fc5dbeb67f44793f40459632c6939dfbbc2
+    git_blob: 5bea23e3bd98b307496a086e98effc51853a0cd7
     searchable_text: pass
     unicode_glyph_check: pass
     rendered_pages_inspected: 34
     clipping_overlap: none_observed
 ci: disabled
-expected_pull_request: pending_creation
+current_pull_request: 12
 merge_status: withheld_until_live_notebooklm_smoke
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
