@@ -1,15 +1,11 @@
 # METODOLOGIA NOTEBOOKLM — Configuração do chat de Língua Portuguesa
 
 **Pack:** `tjsp-escrevente-2025/portugues`  
-**Versão:** `2.0.0-rc2`
+**Versão:** `2.0.0`
 
 ## 1. Função deste arquivo
 
-Este arquivo é a **cópia canônica e versionada da configuração do tutor** para o chat do NotebookLM.
-
-Ele não é conteúdo de Língua Portuguesa e, quando houver configuração nativa da conversa, **não deve ser carregado como fonte**.
-
-Para o smoke de aceitação da 2.0.0, usar somente o `APOSTILA.pdf` 2.0.0 íntegro como fonte.
+Este arquivo é a cópia canônica e versionada da configuração do tutor para o chat do NotebookLM. Ele não é conteúdo de Língua Portuguesa e não deve ser carregado como fonte quando houver configuração nativa da conversa.
 
 Instalação preferida:
 
@@ -25,7 +21,7 @@ Se a interface mudar, usar o mecanismo equivalente de instruções persistentes 
 
 ## 2. Bloco operacional para copiar
 
-Copiar somente o conteúdo entre `INICIO_CONFIG` e `FIM_CONFIG` para a configuração personalizada da conversa.
+Copiar somente o conteúdo entre `INICIO_CONFIG` e `FIM_CONFIG`.
 
 ```text
 INICIO_CONFIG
@@ -56,7 +52,7 @@ Quando o estudante pedir para ser testado:
 - prefira pergunta aberta curta quando ela medir melhor o conceito;
 - use alternativas A–E quando o formato objetivo fizer sentido;
 - nunca revele, antecipe, sugira ou insinue o gabarito antes da tentativa;
-- ao apresentar uma questão, termine apenas com o pedido de resposta; não acrescente dica, explicação, “resposta correta”, sugestão de continuação ou qualquer texto que entregue a alternativa;
+- ao apresentar uma questão, termine apenas com o pedido de resposta; não acrescente dica, explicação, “resposta correta”, sugestão de continuação ou texto que entregue a alternativa;
 - aguarde a resposta do estudante;
 - corrija completamente antes de seguir para a próxima;
 - não passe automaticamente para outra questão até concluir a correção da atual;
@@ -122,23 +118,13 @@ FIM_CONFIG
 
 ## 3. Uso cotidiano
 
-Depois de instalar a configuração, o usuário pode falar normalmente:
-
-- `não entendi crase`
-- `qual a diferença entre concessão e condição?`
-- `por que a B está errada?`
-- `me dá outro exemplo`
-- `me testa nisso`
-- `faz mais uma questão`
-- `resume meus erros de hoje`
+Depois de instalar a configuração, o usuário pode falar normalmente, por exemplo: `não entendi crase`, `qual a diferença entre concessão e condição?`, `por que a B está errada?`, `me testa nisso`, `faz mais uma questão`, `resume meus erros de hoje`.
 
 Não exigir comandos formais.
 
 ## 4. Relação com o Estúdio
 
-Esta metodologia não controla `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, áudio, apresentação ou infográfico.
-
-Esses recursos trabalham sobre as fontes do notebook — idealmente o `APOSTILA.pdf` 2.0.0 íntegro como corpus principal desta matéria.
+Esta metodologia não controla Teste, Cartões, Mapa mental, Relatórios ou outros artefatos nativos. Esses recursos trabalham sobre as fontes do notebook — por padrão, somente o `APOSTILA.pdf` 2.0.0 desta matéria.
 
 ## 5. Segurança epistemológica
 
@@ -148,24 +134,9 @@ Esses recursos trabalham sobre as fontes do notebook — idealmente o `APOSTILA.
 - não transformar análise da sessão em diagnóstico definitivo de nível;
 - não tratar esta metodologia/configuração como matéria.
 
-## 6. Evidência do smoke e ajuste rc2
+## 6. Validação da versão 2.0.0
 
-O primeiro smoke real do chat em 2026-09-11 mostrou três pontos a corrigir na configuração:
-
-- uma explicação de inferência usou formulação absoluta mais forte que a fonte;
-- um par mínimo sobre `à qual` rotulou como “incorreta” uma construção sem crase que era gramaticalmente válida;
-- no treino de concordância, a correção agrupou alternativas e não explicitou suficientemente a construção específica de `Devem haver` → `Deve haver`.
-
-Também foi observada uma sugestão automática da interface exibindo a resposta correta antes da tentativa. Como esse elemento pode estar fora da resposta controlada pelo tutor, a configuração rc2 proíbe qualquer vazamento produzido pelo próprio chat e registra o componente de interface como risco a ser reavaliado no reteste.
-
-## 7. Manutenção
-
-Quando este arquivo mudar:
-
-1. incrementar a versão do pack quando couber;
-2. registrar no `CHANGELOG.md`;
-3. atualizar manualmente o texto na configuração personalizada do NotebookLM;
-4. não reenviar este arquivo como fonte, salvo teste deliberado.
+A configuração final incorpora os ajustes observados no primeiro smoke real: cautela com formulações absolutas, rótulos gramaticais consistentes, ausência de gabarito produzido pelo tutor antes da tentativa e correção específica por construção. O reteste do chat passou, assim como Teste, Cartões e Mapa mental sobre o corpus limpo.
 
 Prioridade permanente:
 
