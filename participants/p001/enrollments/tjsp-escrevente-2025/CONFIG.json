@@ -11,8 +11,8 @@
   "goal": "Prepare using the latest available real TJSP Escrevente blueprint and migrate to a newer edital when one becomes canonical.",
   "baseline": {
     "plan_id": "tjsp-baseline-v0.1",
-    "status": "pending",
-    "evidence_events_recorded": 0
+    "status": "in_progress",
+    "evidence_events_recorded": 1
   },
   "privacy": "public_minimal"
 }
