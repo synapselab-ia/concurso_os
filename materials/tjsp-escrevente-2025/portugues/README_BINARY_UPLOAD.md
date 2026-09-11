@@ -1,1 +1,0 @@
-Temporary staging note: APOSTILA.pdf binary still needs to be committed from the validated local artifact before merge. Remove this file before merge.

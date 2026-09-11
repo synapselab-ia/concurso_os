@@ -1,1 +1,0 @@
-APOSTILA.pdf is generated locally from APOSTILA.md and validated visually. Binary commit is pending; this placeholder should be removed before merge.
