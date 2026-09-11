@@ -25,7 +25,9 @@ not_started:
 blockers: []
 validation:
   command: python tools/verify.py
-  result: pending_for_current_branch
+  result: not_executed_in_current_environment
+  reason: execution environment could not resolve github.com to clone the public branch
+  previous_known_result: foundation branch passed auditor and 3 tests
 ci: disabled
 previous_pull_request: 1
 ```
