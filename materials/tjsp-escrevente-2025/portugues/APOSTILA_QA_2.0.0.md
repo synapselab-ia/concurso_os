@@ -10,11 +10,11 @@
 
 A reconstrução 2.0.0 passou pelos gates editoriais internos de cobertura, exatidão editorial, didática, distinções, prática, coerência com a análise empírica, organização para recuperação semântica e coerência interna.
 
-O QA local do PDF 2.0.0 também passou em um artefato íntegro de **29 páginas A4**. Porém, o readback do GitHub revelou que a tentativa anterior de publicar o PDF pela API de blobs foi truncada. O blob que estava na branch (`5bea23e3bd98b307496a086e98effc51853a0cd7`) tinha apenas **7500 bytes**, embora a documentação anterior registrasse 140496 bytes. Esse binário não é um PDF 2.0.0 válido para release.
+O gate de publicação do PDF também está concluído. Após detectar e revogar uma tentativa anterior truncada, foi gerada uma distribuição compacta específica para transporte pelo conector GitHub. O arquivo foi validado localmente, publicado como blob byte-identical e confirmado por readback no repositório.
 
-Para impedir que um arquivo corrompido permanecesse como distribuição canônica, `APOSTILA.pdf` foi restaurado temporariamente ao último binário íntegro conhecido, o PDF 1.0.0 (`2287be2ba025228cc311722effc794fc9edf476f`, 13950 bytes). Portanto, a branch contém **APOSTILA.md 2.0.0 + PDF fallback 1.0.0** até que o PDF 2.0.0 seja publicado por um caminho binário íntegro.
+Permanece uma pendência deliberadamente não marcada como concluída: o **smoke test real no NotebookLM** com o `APOSTILA.pdf` 2.0.0 como corpus limpo. O ambiente desta execução não dispõe de interação autenticada com o produto NotebookLM do usuário. Portanto, a release permanece `release-candidate` e o merge deve aguardar o QA-7 live, conforme a Definition of Done de `APOSTILA-002`.
 
-Além disso, o smoke test real no NotebookLM continua pendente e `python tools/verify.py` não pôde ser executado contra um checkout canônico porque o runtime local não resolve `github.com`.
+O gate determinístico `python tools/verify.py` também não pôde ser executado contra um checkout canônico porque o runtime local não resolve `github.com`; a impossibilidade permanece documentada sem ser convertida em `pass`.
 
 ---
 
@@ -24,7 +24,7 @@ Além disso, o smoke test real no NotebookLM continua pendente e `python tools/v
 
 - O syllabus vigente contém 13 frentes de Língua Portuguesa em `competitions/tjsp-escrevente-2025/SYLLABUS.md`.
 - `APOSTILA_AUTHORING_MATRIX_2.0.0.md` mapeia B1.1 a B1.13 e localiza a cobertura principal em `APOSTILA.md`.
-- Todos os 13 itens estão `covered`; nenhum foi omitido, remetido silenciosamente ao backoffice ou declarado fora de escopo.
+- Todos os 13 itens estão `covered`; nenhum foi omitido ou remetido silenciosamente ao backoffice.
 - A cobertura é ensinável, não apenas nominal.
 
 ## QA-2 — Exatidão e fonte
@@ -41,16 +41,7 @@ Além disso, o smoke test real no NotebookLM continua pendente e `python tools/v
 
 **Resultado: PASS.**
 
-Foram verificados:
-
-- definição antes de aplicação;
-- ponte entre regra e exemplo;
-- exemplos próximos ao conceito;
-- procedimentos de reconhecimento em contexto;
-- reescritas que testam forma e sentido;
-- sínteses de recuperação após blocos densos.
-
-A sequência parte de leitura/sentido, passa por coesão e semântica e depois avança para morfologia, concordância, regência, pronomes, crase, pontuação e integração.
+Foram verificados definição antes de aplicação, ponte entre regra e exemplo, procedimentos de reconhecimento em contexto, reescritas que testam forma e sentido e sínteses de recuperação. A sequência parte de leitura/sentido, passa por coesão e semântica e depois avança para morfologia, concordância, regência, pronomes, crase, pontuação e integração.
 
 ## QA-4 — Distinções e casos-limite
 
@@ -88,26 +79,15 @@ Foram conferidas, entre outras, as fronteiras:
 
 **Resultado: PASS.**
 
-A análise das 88 questões históricas orienta profundidade e integração, mas o produto:
-
-- não transforma ocorrência passada em previsão;
-- não declara assunto “garantido”;
-- não reproduz questões reais;
-- evita metadiscurso recorrente sobre VUNESP/TJSP.
+A análise das 88 questões históricas orienta profundidade e integração, mas o produto não transforma ocorrência passada em previsão, não declara assunto “garantido”, não reproduz questões reais e evita metadiscurso recorrente sobre VUNESP/TJSP.
 
 ## QA-7 — Utilidade para NotebookLM
 
 **Resultado: STATIC PASS; LIVE SMOKE PENDING.**
 
-A revisão estática confirma que `APOSTILA.md` 2.0.0:
+A revisão estática confirma que o corpus é autocontido, mantém contrastes próximos, contém definições, regras, exemplos, exceções e prática suficientes e separa conteúdo estudável da instrução operacional do tutor.
 
-- é autocontida e não depende de backoffice;
-- usa títulos semanticamente informativos;
-- mantém contrastes próximos;
-- contém definições, regras, exemplos, exceções e prática suficientes para Teste, Cartões e Mapa mental;
-- separa conteúdo estudável de instrução operacional do tutor.
-
-**Não executado:** Teste/Cartões/Mapa mental e conversa configurada no NotebookLM usando exclusivamente o PDF 2.0.0. O smoke só deve ser feito depois que o binário 2.0.0 íntegro estiver publicado.
+**Não executado:** geração real de Teste, Cartões, Mapa mental e conversa configurada no NotebookLM usando exclusivamente o PDF 2.0.0 publicado. Esse gate requer interação autenticada com o produto externo e continua sendo o último gate semântico de aceitação.
 
 ## QA-8 — Redundância e coerência interna
 
@@ -120,46 +100,33 @@ A revisão estática confirma que `APOSTILA.md` 2.0.0:
 
 ## QA-9 — PDF
 
-**Resultado: LOCAL PASS; PUBLICAÇÃO NO REPOSITÓRIO BLOQUEADA.**
+**Resultado: PASS — arquivo publicado e confirmado por readback.**
 
-### Artefato 2.0.0 validado localmente
+### Distribuição canônica 2.0.0 na branch
 
-- páginas: **29**;
-- formato: A4 (595.276 x 841.89 pt);
-- tamanho: **40928 bytes**;
-- SHA-256: `1a7a1cbe8a0597f94ea490da7eec8ff874f2430ef596ec5bb9c3a14ecb2f1d62`;
-- Git blob esperado para esses bytes: `b06f1150ac71cd9b87a3f8341be70a1c87355ccc`;
+- páginas: **16**;
+- formato: A4 (595 x 842 pt);
+- tamanho: **20824 bytes**;
+- SHA-256 local: `b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931`;
+- Git blob esperado para os bytes locais: `640efaed13dd43cc83f6904c62fdb86131b9124a`;
+- Git blob publicado: `640efaed13dd43cc83f6904c62fdb86131b9124a`;
 - PDF 1.4, não criptografado;
-- texto pesquisável;
-- extração textual: aproximadamente 56,4 mil caracteres;
-- conferência positiva de `Questão 30`, `Gabarito comentado`, `próclise`, `à qual` e síntese final;
-- as 29 páginas foram renderizadas e inspecionadas em contact sheet, sem clipping/overlap evidente.
+- texto pesquisável: **PASS**;
+- extração textual: aproximadamente 54,5 mil caracteres;
+- conferência positiva de `Questão 30`, `Gabarito comentado`, `próclise`, `à qual` e `Síntese final de alta recuperação`;
+- 16 páginas renderizadas a 150 dpi e inspecionadas em contact sheet;
+- clipping/overlap: nenhum observado;
+- preflight: PDF abre em PyMuPDF, sem XFA, não escaneado.
 
-Também foi produzida uma variante ASCII-safe de 29 páginas para investigação do problema de transporte; ela passou em `pdfinfo`, `pdftotext` e renderização das 29 páginas, mas não foi promovida a distribuição canônica.
+A distribuição usa uma composição tipográfica compacta (Helvetica 9,2 pt) para permanecer abaixo do limite prático de transporte do conector sem sacrificar o conteúdo textual do `APOSTILA.md`. O Markdown continua sendo a fonte autoral editável; o PDF é a distribuição estudável e o corpus do NotebookLM.
 
-### Falha detectada na publicação anterior
+### Incidentes revogados
 
-O readback do GitHub mostrou:
+- `5bea23e3bd98b307496a086e98effc51853a0cd7` — upload truncado de 7500 bytes, rejeitado;
+- `82046b5da25a7565fd84763763be33ebac2556fc` — tentativa órfã/intermediária, não promovida;
+- fallback 1.0.0 `2287be2ba025228cc311722effc794fc9edf476f` — usado temporariamente para remover corrupção e substituído pelo PDF 2.0.0 íntegro.
 
-- documentação anterior: 34 páginas / 140496 bytes / SHA-256 `900528...`;
-- blob efetivamente publicado: `5bea23e3bd98b307496a086e98effc51853a0cd7`;
-- tamanho efetivo no GitHub: **7500 bytes**;
-- conteúdo base64 termina durante stream compactado, sem fechamento estrutural confiável.
-
-Logo, o gate de publicação do PDF não passou. A afirmação anterior de que o “PDF 34 páginas foi publicado” foi revogada por evidência de readback.
-
-Um segundo blob órfão, `82046b5da25a7565fd84763763be33ebac2556fc`, também não é tratado como distribuição válida: o tamanho exposto pelo GitHub não corresponde ao artefato local pretendido. Ele não foi ligado à branch.
-
-### Estado seguro atual da branch
-
-`materials/tjsp-escrevente-2025/portugues/APOSTILA.pdf` foi restaurado ao último PDF íntegro conhecido:
-
-- versão material: 1.0.0 fallback;
-- páginas: 8;
-- tamanho: 13950 bytes;
-- Git blob: `2287be2ba025228cc311722effc794fc9edf476f`.
-
-Esse fallback evita distribuir um PDF corrompido, mas **não satisfaz o release 2.0.0** e não deve ser usado no smoke do NotebookLM.
+O readback do diretório da branch confirma `APOSTILA.pdf` com `size: 20824` e `sha: 640efaed13dd43cc83f6904c62fdb86131b9124a`.
 
 ## QA-10 — Repositório e gate determinístico
 
@@ -169,8 +136,8 @@ Estado:
 
 - base `main`: `29f92f11d822b426d6af239afa31a09829881844`;
 - branch: `content/apostila-portugues-2.0.0`;
-- PR: #12, aberto;
-- binário corrompido removido da branch por restauração do fallback íntegro;
+- PR: #12, aberto em draft enquanto QA-7 live estiver pendente;
+- PDF 2.0.0 íntegro publicado e confirmado por readback;
 - diff/readback realizado pelo conector GitHub.
 
 Gate canônico tentado:
@@ -186,11 +153,8 @@ Sem checkout canônico, executar `python tools/verify.py` sobre diretório parci
 
 ## Parecer de release
 
-**Português 2.0.0 está editorialmente apto, mas não está liberado para merge.**
+**Português 2.0.0 está editorialmente apto e o PDF canônico está publicado de forma íntegra.**
 
-Restam dois gates materiais, nesta ordem:
+Resta um gate material antes do merge: executar o smoke real no NotebookLM com `APOSTILA.pdf` como única fonte de conteúdo e registrar QA-7 live como `PASS` somente se Teste, Cartões, Mapa mental e chat configurado funcionarem sem falha material.
 
-1. publicar no GitHub o PDF 2.0.0 íntegro e confirmar por readback que os bytes/tamanho correspondem ao artefato validado;
-2. executar o smoke real no NotebookLM com esse PDF 2.0.0 como única fonte de conteúdo e registrar QA-7 live como `PASS` somente se o comportamento for aprovado.
-
-Depois disso, atualizar release/continuidade, executar `python tools/verify.py` se o ambiente permitir (ou manter a justificativa explícita), revisar o PR #12 e fazer merge sob DEC-0009.
+Depois desse smoke, atualizar o status para release final, revisar o PR #12 e fazer merge sob DEC-0009. Se `python tools/verify.py` continuar impossível no ambiente de execução, manter a justificativa explícita em vez de inventar um resultado.
