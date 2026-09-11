@@ -1,33 +1,28 @@
 # NEXT_ACTION
 
-## PACK-001 — Produzir o primeiro SubjectPack completo
+## INSTALL-001 — Validar o SubjectPack de Português no NotebookLM
 
-A arquitetura canônica agora é GitHub + ChatGPT + NotebookLM. O próximo passo não é construir scheduler nem coletar baseline.
+O `SubjectPack` de Língua Portuguesa `1.0.0` está produzido e pronto para teste de instalação. O próximo passo é validar a experiência real de uso no NotebookLM antes de replicar o formato para as demais matérias.
 
-Produzir o primeiro pacote completo para `tjsp-escrevente-2025`, começando por **Língua Portuguesa** para validar o formato ponta a ponta.
+### Execução manual pelo usuário
 
-O pacote deve conter:
+1. criar um notebook novo de Português;
+2. carregar, nesta ordem:
+   - `METODOLOGIA_NOTEBOOKLM.md`;
+   - `APOSTILA.pdf`;
+   - `ANALISE_BANCA.md`;
+   - edital 2025 original;
+   - prova TJSP/VUNESP 2025;
+   - opcionalmente, provas 2024, 2023 e 2021;
+3. executar os quatro testes descritos em `materials/tjsp-escrevente-2025/portugues/MANIFEST.md`;
+4. confirmar que o notebook identifica a versão `1.0.0`, o escopo de 16 questões, a distinção entre inferência e extrapolação e a dinâmica de uma questão por vez;
+5. testar uma sessão curta de 3 a 5 questões e observar se as correções seguem a metodologia;
+6. trazer ao ChatGPT apenas os desvios relevantes ou um `SESSION_REPORT` curto.
 
-```text
-materials/tjsp-escrevente-2025/portugues/
-├── MANIFEST.md
-├── APOSTILA.md
-├── APOSTILA.pdf
-├── ANALISE_BANCA.md
-├── METODOLOGIA_NOTEBOOKLM.md
-├── SOURCES.md
-└── CHANGELOG.md
-```
+### Critério de aprovação
 
-Antes de considerar PACK-001 concluído:
+`INSTALL-001` passa quando o notebook consegue ser montado apenas com o MANIFEST e executa o protocolo sem depender de contexto deste chat.
 
-1. mapear todo o recorte de Português do edital;
-2. analisar de forma reproduzível as provas 2021/2023/2024/2025 para padrões da VUNESP;
-3. escrever a apostila source-grounded e focada no edital;
-4. adaptar a metodologia legada para uso específico no NotebookLM de Português;
-5. gerar PDF de distribuição;
-6. revisar o pacote contra edital, provas e política de fontes;
-7. validar que um usuário consegue criar o notebook apenas seguindo o MANIFEST;
-8. atualizar checkpoint e preparar a replicação para a próxima matéria.
+Após aprovação, a próxima ação será replicar o padrão de `SubjectPack` para a próxima matéria prioritária, reutilizando o que funcionou em Português e corrigindo qualquer problema detectado na instalação.
 
-Não retomar pipeline de mastery/scheduler questão a questão durante PACK-001.
+Não iniciar outro pack antes de concluir este smoke test, salvo decisão canônica explícita.
