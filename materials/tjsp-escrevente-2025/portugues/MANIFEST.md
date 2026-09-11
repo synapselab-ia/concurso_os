@@ -2,122 +2,115 @@
 
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `portugues`  
-**Pack version:** `1.0.1`  
-**Status:** studio-smoke-test  
+**Pack version:** `1.0.2`  
+**Status:** `content-rebuild-pending`  
 **Release date:** `2026-09-11`
 
 ## Objetivo
 
-Este pacote é a distribuição canônica de Língua Portuguesa para criação de um NotebookLM focado no TJSP/VUNESP.
+Este pack separa o que é **conteúdo do estudante** do que é **backoffice** e do que é **instrução do chat**.
 
-A versão `1.0.1` simplifica a usabilidade: o notebook deve ser montado uma vez e usado naturalmente pelo **Estúdio + chat**, sem exigir que o estudante escolha manualmente um conjunto diferente de fontes ou cole prompts longos para cada ferramenta.
+A versão `1.0.2` corrige a arquitetura de uso do NotebookLM após os smoke tests reais. A apostila/PDF ainda é a mesma distribuição de `1.0.0`; sua reconstrução qualitativa é a próxima ação canônica.
 
 ## Arquivos canônicos do pack
 
-- `APOSTILA.md` — fonte autoral editável.
-- `APOSTILA.pdf` — distribuição recomendada para o NotebookLM.
-- `ANALISE_BANCA.md` — análise reproduzível das provas 2021/2023/2024/2025.
-- `METODOLOGIA_NOTEBOOKLM.md` — regras de uso simples do Estúdio e do chat.
-- `SOURCES.md` — registro e função das fontes.
-- `CHANGELOG.md` — histórico de versões.
+- `APOSTILA.md` — fonte autoral editável do material do estudante.
+- `APOSTILA.pdf` — distribuição atual para o NotebookLM.
+- `METODOLOGIA_NOTEBOOKLM.md` — **instrução exclusiva do chat**, não conteúdo.
+- `ANALISE_BANCA.md` — backoffice editorial.
+- `SOURCES.md` — proveniência/backoffice.
+- `CHANGELOG.md` — histórico de versão/backoffice.
 
-## Apostila PDF
+## Apostila PDF atual
 
-A apostila não mudou na versão `1.0.1`; portanto o mesmo PDF validado do release `1.0.0` é reutilizado.
+A versão `1.0.2` não altera o PDF. Ele continua sendo o artefato validado originalmente em `1.0.0`:
 
 - páginas: `8`;
 - tamanho: `13950 bytes`;
 - SHA-256: `e203e62c6be1207dc5ca475e61460d9619be4bfeeeeb32bcf90990b485e8cc23`;
 - Git blob: `2287be2ba025228cc311722effc794fc9edf476f`.
 
+**Importante:** o PDF atual não é considerado qualidade final para replicação. `APOSTILA-002` deverá reconstruí-lo.
+
 ## O que carregar no NotebookLM
 
-### Núcleo recomendado
+Carregue somente:
 
-1. `METODOLOGIA_NOTEBOOKLM.md`
-2. `APOSTILA.pdf`
-3. `ANALISE_BANCA.md`
-4. Edital 2025 — `TJSP2503_224_20250801114000.pdf.pdf`
-5. Prova TJSP/VUNESP 2025 — `tjsp 2025.pdf`
+1. `APOSTILA.pdf`
+2. `METODOLOGIA_NOTEBOOKLM.md`
 
-### Histórico recomendado
+Não carregar por padrão:
 
-6. `tjsp 2024.pdf`
-7. `tjsp 2023.pdf`
-8. `tjsp 2021.pdf`
+- `ANALISE_BANCA.md`;
+- `MANIFEST.md`;
+- `SOURCES.md`;
+- `CHANGELOG.md`;
+- edital e provas históricas apenas para dar contexto de projeto.
 
-Não é necessário carregar `APOSTILA.md` junto com `APOSTILA.pdf`.
+Esses documentos permanecem no GitHub/ChatGPT para análise, autoria e QA.
 
-## Regra de uso sem burocracia
+## Como selecionar as fontes
 
-Depois de carregar as fontes:
+### Estúdio
 
-- **não** fique trocando fontes a cada botão do Estúdio por padrão;
-- use `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, resumos e outros recursos conforme forem úteis;
-- use comandos curtos;
-- só ajuste fontes/configurações de forma mais detalhada se um resultado real mostrar problema;
-- use o chat para dúvida, correção profunda ou análise de uma questão específica.
+Para `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, Áudio, Apresentação, Infográfico e equivalentes:
 
-A metodologia completa está em `METODOLOGIA_NOTEBOOKLM.md`.
+```text
+[x] APOSTILA.pdf
+[ ] METODOLOGIA_NOTEBOOKLM.md
+```
 
-## Primeiro smoke test — Teste do Estúdio
+A metodologia deve ficar **desmarcada** para que o NotebookLM não produza questões ou cartões sobre as próprias instruções.
 
-Este é o teste que deve ser feito agora.
+### Chat
 
-1. abrir **Teste**;
-2. deixar **Número de questões = Padrão**;
-3. deixar **Nível de dificuldade = Médio (padrão)**;
-4. manter as fontes carregadas sem microgerenciamento;
-5. no campo de tema, escrever somente:
+Para tirar dúvidas, pedir explicação, fazer treino interativo, corrigir uma questão ou pedir relatório da sessão:
 
-> `Teste de Português no padrão TJSP/VUNESP das provas carregadas.`
+```text
+[x] APOSTILA.pdf
+[x] METODOLOGIA_NOTEBOOKLM.md
+```
 
-6. gerar o teste;
-7. responder algumas questões normalmente;
-8. observar:
-   - se o conteúdo está dentro do edital;
-   - se as alternativas são plausíveis;
-   - se a linguagem lembra a forma de cobrança das provas carregadas;
-   - se a dificuldade parece compatível, sem obscuridade artificial;
-   - se as explicações são úteis.
+O chat deve usar a metodologia como comportamento e a apostila como conteúdo.
 
-**Não usar `Difícil` como sinônimo de nível VUNESP.** O seletor é genérico; o padrão da banca deve vir do corpus carregado.
+## O que os smoke tests mostraram
 
-## O que trazer de volta ao ChatGPT
+- Com a metodologia incluída no `Teste`, o NotebookLM gerou pergunta sobre a própria metodologia.
+- Sem a metodologia, o `Teste` gerou pergunta conceitual diretamente baseada na apostila, confirmando que o recurso funciona como quiz sobre a fonte selecionada.
+- No chat, a metodologia funcionou melhor: questão por vez, alternativas A–E, resposta + confiança e possibilidade de relatório da sessão.
 
-Não precisa produzir relatório formal agora.
+Por isso, a V0.1 não tenta mais fazer um corpus misto cumprir todos os papéis.
 
-Se algo der errado, basta trazer:
+## Uso cotidiano
 
-- print da questão;
-- enunciado/alternativas;
-- explicação estranha;
-- ou uma frase dizendo o que pareceu inadequado.
+### Para estudar com Estúdio
 
-Se tudo parecer bom após algumas questões, informar apenas que o smoke test passou.
+Escolha um recurso e deixe apenas a apostila marcada. Não precisa citar TJSP/VUNESP nem administrar documentação interna do projeto.
 
-## Critério de aprovação do pack
+### Para usar o chat
 
-O SubjectPack está aprovado para replicação quando o usuário consegue estudar no Estúdio em poucos cliques, sem receita complexa, e os artefatos gerados permanecem coerentes com edital + corpus TJSP/VUNESP.
+Deixe apostila + metodologia marcadas e fale normalmente, por exemplo:
+
+- `não entendi este tópico`
+- `me explica por que a B está errada`
+- `me testa nisso`
+- `faz mais uma questão`
+- `resume meus acertos, erros e dúvidas desta sessão`
 
 ## Múltiplos participantes
 
-O mesmo SubjectPack pode alimentar notebooks separados de `p001`, `p002`, `p003` etc. O material é compartilhado; histórico e artefatos pessoais podem permanecer separados em cada notebook.
+O mesmo pack pode alimentar notebooks separados para `p001`, `p002`, `p003` etc. O material é compartilhado; histórico pessoal pode permanecer isolado no notebook de cada participante.
 
-## Atualização
+## Próxima versão de conteúdo
 
-Quando o pack mudar:
+A próxima mudança substancial deve reconstruir `APOSTILA.md` e `APOSTILA.pdf` para que sejam materiais fortes por si só e alimentem bem os recursos do NotebookLM.
 
-1. incrementar a versão;
-2. atualizar `CHANGELOG.md`;
-3. regenerar `APOSTILA.pdf` apenas se a apostila mudar;
-4. substituir no NotebookLM somente os arquivos alterados;
-5. repetir apenas o smoke test necessário à mudança.
+Target recomendado após reconstrução: `2.0.0`.
 
 ## Limites
 
 - não implementa mastery questão a questão;
 - não mistura participantes;
-- não trata frequência histórica como garantia futura;
-- o edital prevalece sobre provas antigas quanto ao escopo;
-- detalhes da interface do NotebookLM podem mudar e não são invariantes do projeto.
+- não presume que `Teste` nativo simula automaticamente a banca;
+- não transforma backoffice em conteúdo de estudo;
+- detalhes da UI do NotebookLM podem mudar.
