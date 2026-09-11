@@ -50,12 +50,24 @@ A decisão interrompeu corretamente a coleta real iniciada cedo demais. A V0.1 a
 
 ## DEC-0013 — Stack pedagógica canônica: GitHub + ChatGPT + NotebookLM
 **Status:** accepted  
-A V0.1 usa GitHub como memória canônica de análise e materiais, ChatGPT como camada de pesquisa/autoria/QA e NotebookLM como principal ambiente de estudo source-grounded. O objeto de entrega passa a ser um `SubjectPack` versionado por matéria (apostila, análise de banca, metodologia NotebookLM, manifesto de fontes e changelog). Rastreamento questão a questão, mastery projection e scheduler próprio ficam fora do caminho crítico até demonstrarem benefício real.
+A V0.1 usa GitHub como memória canônica de análise e materiais, ChatGPT como camada de pesquisa/autoria/QA e NotebookLM como principal ambiente de estudo source-grounded. O objeto de entrega é um `SubjectPack` versionado por matéria. Rastreamento questão a questão, mastery projection e scheduler próprio ficam fora do caminho crítico até demonstrarem benefício real.
 
 ## DEC-0014 — Sincronização NotebookLM é manual e versionada
 **Status:** accepted  
-NotebookLM não é tratado como espelho do GitHub. Cada subject pack possui versão explícita; arquivos canônicos são exportados pelo projeto e carregados/substituídos manualmente no notebook. Feedback de sessão pode retornar ao ChatGPT em relatório resumido, sem exigir transcrição de todas as questões.
+NotebookLM não é tratado como espelho do GitHub. Cada SubjectPack possui versão explícita; arquivos canônicos são exportados pelo projeto e carregados/substituídos manualmente no notebook. Feedback de sessão pode retornar ao ChatGPT em relatório resumido, sem exigir transcrição de todas as questões.
 
 ## DEC-0015 — Estúdio do NotebookLM primeiro; sem micro-orquestração por padrão
+**Status:** superseded by DEC-0016  
+A decisão reduziu corretamente prompts e micro-orquestração, mas o smoke test mostrou que um corpus misto ainda produz comportamento indesejado: o `Teste` nativo transforma documentos operacionais e didáticos em alvo de perguntas. A simplificação correta não é carregar tudo e esperar que o NotebookLM infira papéis; é separar explicitamente conteúdo do estudante de instrução operacional.
+
+## DEC-0016 — Apostila como produto do estudante; metodologia isolada para o chat
 **Status:** accepted  
-A experiência de estudo da V0.1 deve aproveitar os recursos nativos do Estúdio do NotebookLM (testes, cartões, mapas mentais, relatórios, tabelas, resumos e outros artefatos) em vez de transformar o chat em única interface ou exigir um prompt complexo para cada ação. O corpus recomendado é carregado uma vez e permanece disponível. Subseleção de fontes, prompts longos e configurações especiais só entram quando um teste real demonstrar necessidade. Rótulos nativos de dificuldade (`Fácil`, `Médio`, `Difícil`) são genéricos e não equivalem automaticamente ao nível de uma banca; a calibração de estilo deve vir das provas e da análise de banca carregadas. O objetivo operacional é `poucos cliques + instruções curtas + corpus forte`.
+A V0.1 passa a separar os arquivos do SubjectPack por função.
+
+- `APOSTILA.pdf` é o principal conteúdo do estudante e a fonte padrão para `Teste`, `Cartões`, `Mapa mental`, `Relatórios` e outros artefatos do Estúdio.
+- `METODOLOGIA_NOTEBOOKLM.md` é **instrução do chat**, não matéria. Ela pode ficar carregada no notebook, mas deve ser desmarcada ao gerar artefatos do Estúdio e selecionada junto com a apostila no chat.
+- `ANALISE_BANCA.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md`, provas históricas e documentação de QA são backoffice do GitHub/ChatGPT por padrão; servem para produzir e auditar a apostila, não para serem estudados diretamente.
+- O chat do NotebookLM é o local para dúvidas, treino interativo, correção, confiança e `SESSION_REPORT` opcional.
+- O Estúdio é usado para transformar **conteúdo da apostila** em ferramentas de revisão; não é presumido como simulador fiel de banca apenas por receber provas e instruções.
+
+A consequência editorial é forte: a qualidade da `APOSTILA.pdf` passa a ser o principal gargalo e próximo foco do projeto.
