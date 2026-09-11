@@ -19,6 +19,15 @@ Este pacote é a distribuição canônica de Língua Portuguesa para criação d
 - `SOURCES.md` — registro e função das fontes.
 - `CHANGELOG.md` — histórico de versões.
 
+### Identidade da distribuição PDF 1.0.0
+
+- páginas: `8`;
+- tamanho: `13950 bytes`;
+- SHA-256: `e203e62c6be1207dc5ca475e61460d9619be4bfeeeeb32bcf90990b485e8cc23`;
+- Git blob: `2287be2ba025228cc311722effc794fc9edf476f`.
+
+O hash permite conferir se o arquivo carregado no NotebookLM corresponde exatamente ao release canônico.
+
 ## Fontes que devem ser carregadas no NotebookLM
 
 ### Obrigatórias
