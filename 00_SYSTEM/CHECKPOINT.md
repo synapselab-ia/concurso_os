@@ -4,7 +4,7 @@
 project_state: active
 phase: subject_pack_content_rebuild
 branch: main
-last_implementation_branch: docs/notebooklm-content-first
+last_implementation_branch: docs/notebooklm-conversation-config
 current_task: APOSTILA-002 rebuild Portuguese apostila for NotebookLM
 completed:
   - repository foundation merged
@@ -24,29 +24,32 @@ completed:
   - native Test with methodology selected generated question about methodology itself
   - native Test without methodology generated quiz directly about apostila content
   - NotebookLM chat followed operational methodology substantially better than native Test
-  - chat demonstrated one-question-at-a-time flow, A-E alternatives, answer + confidence and session-report capability
   - DEC-0015 superseded by DEC-0016
-  - DEC-0016 adopted: APOSTILA is student content; METODOLOGIA_NOTEBOOKLM is chat-only instruction; analysis/source/manifest/changelog stay backoffice
-  - Portuguese MANIFEST and METODOLOGIA advanced to 1.0.2 without changing apostila/PDF bytes
-  - stack, project spec, architecture and data model aligned with content-first separation
+  - DEC-0016 adopted: APOSTILA is student content; analysis/source/manifest/changelog stay backoffice
+  - content-first architecture merged in PR 9
+  - NotebookLM custom conversation configuration observed in real UI
+  - DEC-0017 adopted: tutor instructions belong in native conversation configuration, not notebook sources
+  - Portuguese MANIFEST/METODOLOGIA advanced to 1.0.3 without changing apostila/PDF bytes
+  - METODOLOGIA_NOTEBOOKLM now contains a pasteable canonical configuration block
+  - project spec, architecture, data model and stack aligned with source-vs-conversation-config separation
 in_progress:
-  - prepare next chat to rebuild Portuguese apostila as the primary NotebookLM study source
+  - hand off to next chat for Portuguese apostila rebuild as primary NotebookLM study source
 not_started:
   - APOSTILA-002 content audit and rewrite
   - new Portuguese PDF release after rewrite
-  - Studio validation using rebuilt apostila only
+  - NotebookLM validation using rebuilt apostila as clean corpus
   - SubjectPacks for remaining subjects
 blockers: []
 validation:
   command: python tools/verify.py
   result: not_executed_current_environment
-  reason: local runtime cannot resolve github.com; clone of docs/notebooklm-content-first failed before gate execution
+  reason: local runtime cannot resolve github.com; clone of docs/notebooklm-conversation-config failed before gate execution
   attempted_at: 2026-09-11
   clone_error: Could not resolve host github.com
   static_diff_review: pass
-  branch_base: 577eab84ebc49f3c9f334b00f86cffda108b3730
-  change_scope: documentation_and_methodology_only
-  changed_files_reviewed: 10
+  branch_base: 0099aea4309e99143c587052838f7bd6fd2695cf
+  change_scope: documentation_and_notebooklm_configuration_only
+  changed_files_reviewed_before_checkpoint: 10
   binary_changes: none
   apostila_md_changed: false
   apostila_pdf_changed: false
@@ -56,4 +59,5 @@ last_adapter_pull_request: 4
 last_architecture_pull_request: 6
 last_subject_pack_pull_request: 7
 last_usability_pull_request: 8
+last_content_first_pull_request: 9
 ```
