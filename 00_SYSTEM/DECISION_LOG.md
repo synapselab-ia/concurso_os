@@ -61,13 +61,40 @@ NotebookLM não é tratado como espelho do GitHub. Cada SubjectPack possui vers�
 A decisão reduziu corretamente prompts e micro-orquestração, mas o smoke test mostrou que um corpus misto ainda produz comportamento indesejado: o `Teste` nativo transforma documentos operacionais e didáticos em alvo de perguntas. A simplificação correta não é carregar tudo e esperar que o NotebookLM infira papéis; é separar explicitamente conteúdo do estudante de instrução operacional.
 
 ## DEC-0016 — Apostila como produto do estudante; metodologia isolada para o chat
-**Status:** accepted  
-A V0.1 passa a separar os arquivos do SubjectPack por função.
+**Status:** accepted, refined by DEC-0017  
+A V0.1 separa os arquivos do SubjectPack por função.
 
 - `APOSTILA.pdf` é o principal conteúdo do estudante e a fonte padrão para `Teste`, `Cartões`, `Mapa mental`, `Relatórios` e outros artefatos do Estúdio.
-- `METODOLOGIA_NOTEBOOKLM.md` é **instrução do chat**, não matéria. Ela pode ficar carregada no notebook, mas deve ser desmarcada ao gerar artefatos do Estúdio e selecionada junto com a apostila no chat.
+- `METODOLOGIA_NOTEBOOKLM.md` é **instrução do chat**, não matéria.
 - `ANALISE_BANCA.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md`, provas históricas e documentação de QA são backoffice do GitHub/ChatGPT por padrão; servem para produzir e auditar a apostila, não para serem estudados diretamente.
 - O chat do NotebookLM é o local para dúvidas, treino interativo, correção, confiança e `SESSION_REPORT` opcional.
 - O Estúdio é usado para transformar **conteúdo da apostila** em ferramentas de revisão; não é presumido como simulador fiel de banca apenas por receber provas e instruções.
 
-A consequência editorial é forte: a qualidade da `APOSTILA.pdf` passa a ser o principal gargalo e próximo foco do projeto.
+DEC-0017 refina apenas **como** a instrução do chat é entregue ao NotebookLM: ela deixa de ser uma fonte do notebook e passa a ser configuração nativa da conversa quando esse recurso estiver disponível.
+
+## DEC-0017 — Instruções do tutor na configuração nativa da conversa
+**Status:** accepted  
+A interface observada do NotebookLM oferece `Configurar as conversas → Personalizado`, com campo próprio para definir meta/estilo/papel da conversa. Esse mecanismo é mais apropriado para comportamento do tutor do que carregar a metodologia como fonte.
+
+Regra operacional da V0.1:
+
+- o notebook recebe `APOSTILA.pdf` como **fonte de conteúdo**;
+- o texto canônico de `METODOLOGIA_NOTEBOOKLM.md` é copiado para a configuração `Personalizado` da conversa;
+- `METODOLOGIA_NOTEBOOKLM.md` permanece versionado no GitHub, mas **não é carregado como fonte** do NotebookLM;
+- Estúdio e chat passam a consultar o mesmo corpus didático limpo, enquanto o chat recebe comportamento pela camada de configuração;
+- por padrão, manter o tamanho de resposta nativo em `Padrão`, salvo necessidade concreta do usuário;
+- a configuração é sincronizada manualmente quando o notebook é criado ou quando a metodologia muda.
+
+Consequência:
+
+```text
+NotebookLM sources
+└── APOSTILA.pdf
+
+NotebookLM conversation configuration
+└── conteúdo canônico de METODOLOGIA_NOTEBOOKLM.md
+```
+
+Isso elimina a necessidade cotidiana de marcar/desmarcar a metodologia e evita que instruções operacionais virem conteúdo de Teste, Cartões ou outros artefatos.
+
+Como NotebookLM é produto externo, o nome e a forma desse controle de UI não são invariantes arquiteturais. Se a interface mudar, preservar o princípio: **instruções de comportamento ficam fora do corpus estudável sempre que houver uma camada nativa de configuração equivalente**.
