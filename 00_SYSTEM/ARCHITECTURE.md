@@ -16,7 +16,7 @@ subject packs versionados
  sincronização manual
         ↓
    NotebookLM
-estudo por matéria
+Estúdio + chat por matéria
         ↓
 feedback opcional
         ↓
@@ -54,6 +54,23 @@ Responsável por:
 ### NotebookLM
 
 Ambiente principal de estudo source-grounded. A unidade recomendada é um notebook por matéria; quando houver histórico individual relevante, cada participante usa sua própria instância baseada no mesmo pacote de fontes.
+
+A interface de estudo **não é apenas o chat**. O Estúdio do NotebookLM é parte central da experiência: testes, cartões, mapas mentais, relatórios, tabelas, resumos e demais artefatos podem ser usados diretamente conforme forem úteis à matéria. O chat fica disponível para dúvida, aprofundamento, correção diagnóstica e tarefas que realmente exigem interação.
+
+### Regra de usabilidade
+
+O pacote deve reduzir decisões operacionais do estudante, não aumentá-las.
+
+Por padrão:
+
+- carregar o corpus recomendado uma vez;
+- manter as fontes disponíveis no notebook;
+- usar os recursos nativos do Estúdio com seus controles padrão;
+- adicionar apenas uma instrução curta quando for necessário calibrar objetivo ou banca;
+- não exigir seleção manual de subconjuntos de fontes para cada artefato, salvo quando um teste real mostrar que isso melhora o resultado;
+- não tratar `Fácil`, `Médio` ou `Difícil` como equivalentes automáticos a uma banca específica.
+
+A calibração de estilo e nível vem do **corpus da banca + análise reproduzível**, e não de burocracia de configuração.
 
 ## Unidade canônica de entrega
 
