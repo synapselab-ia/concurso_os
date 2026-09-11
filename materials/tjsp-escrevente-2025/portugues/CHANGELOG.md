@@ -1,5 +1,85 @@
 # CHANGELOG — Português — TJSP Escrevente 2025
 
+## 2.0.0 — 2026-09-11 — release candidate
+
+Reconstrução major da apostila de Língua Portuguesa sob `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`.
+
+### Autoria e cobertura
+
+- auditada a distribuição 1.0.0 em `APOSTILA_AUDIT_1.0.0.md`;
+- criada e fechada a matriz `APOSTILA_AUTHORING_MATRIX_2.0.0.md`;
+- os 13 itens do syllabus B1.1–B1.13 estão explicitamente localizados e marcados `covered`;
+- o sumário foi reorganizado por dependências pedagógicas, em vez de repetir a ordem literal do edital;
+- `APOSTILA.md` foi reconstruída para aprendizado do zero, revisão e recuperação semântica pelo NotebookLM.
+
+### Conteúdo reconstruído
+
+- leitura de textos verbais, não verbais, multissemióticos, literários e não literários;
+- literalidade, pressuposição, inferência, extrapolação, tema, tese, argumento e ponto de vista;
+- progressão, coesão referencial, pronomes relativos e relações lógico-semânticas;
+- pares críticos como causa/explicação, consequência/conclusão, condição/concessão e finalidade/consequência;
+- semântica contextual, polissemia, sinonímia, antonímia, linguagem figurada, ambiguidade e modalização;
+- classes de palavras em funcionamento;
+- concordância verbal/nominal, inclusive impessoais e `se`;
+- regência verbal/nominal, pronomes oblíquos, colocação pronominal e crase;
+- pontuação e reescrita integrada;
+- unidade de estratégias integradas de análise.
+
+### Prática
+
+- adicionadas 30 questões autorais A–E;
+- prática dividida entre interpretação/coesão/semântica, norma-padrão e integração;
+- gabarito comentado mantido separado da bateria;
+- comentários apontam o elemento decisivo de cada item.
+
+### QA editorial
+
+`APOSTILA_QA_2.0.0.md` registra:
+
+- QA-1 cobertura: pass;
+- QA-2 exatidão/fonte no escopo editorial: pass;
+- QA-3 didática: pass;
+- QA-4 distinções/casos-limite: pass;
+- QA-5 prática: pass;
+- QA-6 coerência com banca sem overfitting: pass;
+- QA-7 utilidade estática para NotebookLM: pass; smoke real pendente;
+- QA-8 redundância/coerência: pass;
+- QA-9 PDF: pass;
+- QA-10: parcial, pois o gate determinístico não pôde ser executado no runtime local.
+
+### PDF 2.0.0 release candidate
+
+- 34 páginas A4;
+- 140496 bytes;
+- SHA-256 `90052841384431f942f78234ce543fc5dbeb67f44793f40459632c6939dfbbc2`;
+- pesquisável, com fontes Unicode incorporadas;
+- 34 páginas renderizadas e inspecionadas sem clipping/overlap ou glyphs corrompidos;
+- extração textual conferida, inclusive acentos e símbolos críticos.
+
+### Arquitetura NotebookLM preservada
+
+```text
+FONTES
+→ APOSTILA.pdf
+
+CONFIGURAÇÃO DA CONVERSA
+→ bloco operacional de METODOLOGIA_NOTEBOOKLM.md
+```
+
+A metodologia foi versionada junto do pack sem mudança semântica relevante no bloco operacional.
+
+### Pendências para release final
+
+- executar smoke test real no NotebookLM usando somente o novo `APOSTILA.pdf` como corpus de conteúdo;
+- verificar Teste, Cartões, Mapa mental e chat configurado;
+- registrar o resultado e, se passar, concluir merge de APOSTILA-002.
+
+### Gate determinístico
+
+O runtime local não conseguiu resolver `github.com`, impedindo checkout canônico e execução válida de `python tools/verify.py`. A impossibilidade está registrada, sem ser tratada como `pass`.
+
+---
+
 ## 1.0.3 — 2026-09-11
 
 Patch de instalação após observar a configuração nativa de conversas do NotebookLM.
