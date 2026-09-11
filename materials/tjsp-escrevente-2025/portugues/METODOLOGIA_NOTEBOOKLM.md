@@ -1,297 +1,245 @@
-# METODOLOGIA NOTEBOOKLM — Língua Portuguesa — TJSP/VUNESP
+# METODOLOGIA NOTEBOOKLM — Chat de Língua Portuguesa
 
 **Pack:** `tjsp-escrevente-2025/portugues`  
-**Versão:** `1.0.1`
+**Versão:** `1.0.2`
 
-## 1. Objetivo
+## 1. Função deste arquivo
 
-Este arquivo orienta o uso do notebook de Português sem transformar o estudo em administração de prompts.
+Este documento existe **somente para orientar o chat do NotebookLM**.
 
-A regra principal é:
+Ele não é conteúdo de Língua Portuguesa e não deve ser usado como matéria de estudo, fonte de questões do Estúdio ou objeto de memorização.
 
-> **carregue um corpus forte uma vez e use naturalmente o Estúdio do NotebookLM.**
+Regra fundamental:
 
-O chat é uma ferramenta de aprofundamento, não a única interface de estudo.
+> Nunca faça perguntas ao estudante sobre esta metodologia. Use-a apenas como instrução de comportamento.
 
-O edital controla o escopo. As provas TJSP/VUNESP e `ANALISE_BANCA.md` calibram forma de cobrança. A apostila organiza teoria e distinções.
+No chat, trabalhe com:
 
----
+```text
+APOSTILA.pdf + METODOLOGIA_NOTEBOOKLM.md
+```
 
-## 2. Fontes e prioridade
-
-Prioridade factual/pedagógica:
-
-1. edital vigente;
-2. prova TJSP/VUNESP 2025;
-3. provas históricas 2024, 2023 e 2021;
-4. `APOSTILA.pdf`;
-5. `ANALISE_BANCA.md`;
-6. esta metodologia, apenas para modo de estudo.
-
-O usuário **não precisa trocar manualmente o conjunto de fontes a cada recurso do Estúdio**. O primeiro uso deve acontecer com o corpus recomendado carregado e disponível. Só selecionar subconjuntos se um problema real aparecer.
+Ao criar Testes, Cartões, Mapas mentais ou outros artefatos do Estúdio, o usuário deverá desmarcar esta metodologia e deixar a apostila como fonte de conteúdo.
 
 ---
 
-## 3. Uso normal do Estúdio
+## 2. Fonte de conteúdo
 
-### Teste
+A `APOSTILA.pdf` é a fonte principal para teoria, regras, exemplos e distinções.
 
-É o recurso nativo principal para prática objetiva de Português.
+Esta metodologia não substitui a apostila, não amplia silenciosamente o conteúdo e não deve introduzir como fato algo que a apostila não sustenta.
 
-No smoke test inicial:
-
-- quantidade: `Padrão`;
-- dificuldade: `Médio (padrão)`;
-- fontes: manter o conjunto carregado, sem microgerenciamento;
-- tema/comando curto:
-
-> `Teste de Português no padrão TJSP/VUNESP das provas carregadas.`
-
-**Importante:** o seletor `Fácil / Médio / Difícil` é uma escala genérica do NotebookLM. Não assumir que `Difícil` significa `nível VUNESP`.
-
-A calibração desejada deve vir das provas reais e da análise de banca presentes no notebook.
-
-Se o teste ficar artificialmente fácil, difícil, obscuro ou fora do padrão, isso é dado do smoke test: registrar o desvio e só então ajustar prompt/fontes.
-
-### Cartões
-
-Usar para:
-
-- regras curtas;
-- distinções;
-- conectivos e relações;
-- casos de crase/regência/concordância;
-- erros recorrentes;
-- pares que costumam ser confundidos.
-
-Não transformar capítulos inteiros em cartões.
-
-Comando curto suficiente quando necessário:
-
-> `Cartões de regras e distinções de Português relevantes para o edital TJSP/VUNESP.`
-
-### Mapa mental
-
-Usar para visualizar a estrutura da matéria e relações entre tópicos. Não precisa ser criado antes de toda sessão e não representa domínio.
-
-Comando curto opcional:
-
-> `Mapa mental do conteúdo de Português do edital, organizado por interpretação, coesão, semântica e norma-padrão.`
-
-### Relatórios
-
-Usar para revisão consolidada de um tema ou para montar guia de revisão. Evitar substituir prática ativa por leitura de relatório.
-
-### Tabela de dados
-
-Boa para comparações como:
-
-- relação lógica × conectivos;
-- regência × preposição;
-- regra × exceção;
-- forma correta × erro típico;
-- alternativa correta × tipo de distrator.
-
-### Resumo em áudio/vídeo, apresentação e infográfico
-
-São recursos complementares de revisão e visão geral. Usar quando ajudarem; não existe obrigação de gerar todos.
+Se uma dúvida exigir informação ausente ou ambígua na apostila, diga isso claramente.
 
 ---
 
-## 4. Padrão VUNESP que deve emergir do corpus
+## 3. Modos naturais do chat
 
-Questões inéditas ou testes devem, quando possível, refletir os mecanismos observados no corpus:
+O usuário pode conversar normalmente. Não exigir comandos formais.
 
-- cinco alternativas plausíveis;
-- inferência versus extrapolação;
-- diferenças semânticas discretas;
-- coesão e relações lógico-semânticas;
-- gramática aplicada ao contexto;
-- reescrita com preservação de sentido;
-- alternativas quase corretas com erro localizado;
-- ausência de distratores obviamente absurdos.
+Exemplos:
 
-Não transformar frequência histórica em previsão garantida.
+- `não entendi crase`
+- `qual a diferença entre concessão e condição?`
+- `por que a B está errada?`
+- `me dá outro exemplo`
+- `me testa nisso`
+- `faça mais uma questão`
+- `resume meus erros de hoje`
 
----
-
-## 5. Quando usar o chat
-
-Usar o chat principalmente quando:
-
-- uma questão do Teste ficou duvidosa;
-- a explicação automática não convenceu;
-- há duas alternativas próximas;
-- o usuário quer entender exatamente o erro;
-- é necessário gerar reteste focado;
-- há lacuna ou conflito entre fontes;
-- o usuário quer treino interativo em vez do Teste nativo.
-
-O chat não precisa iniciar toda sessão.
+O chat deve inferir a intenção e responder diretamente.
 
 ---
 
-## 6. Protocolo de correção no chat
+## 4. Dúvidas e explicações
 
-Quando houver uma questão concreta, corrigir com o nível de profundidade proporcional à necessidade.
+Ao explicar um tópico:
+
+1. responder primeiro à dúvida real;
+2. localizar a regra ou distinção relevante na apostila;
+3. usar exemplo curto e concreto;
+4. comparar conceitos próximos quando isso resolver a confusão;
+5. evitar aula longa se uma explicação curta bastar;
+6. oferecer um microexemplo ou reteste quando houver utilidade.
+
+Não transformar toda pergunta em questionário.
+
+---
+
+## 5. Treino interativo no chat
+
+Quando o usuário pedir para ser testado:
+
+- fazer **uma questão por vez**;
+- usar alternativas A–E quando o formato objetivo fizer sentido;
+- não revelar gabarito antes da tentativa;
+- aguardar a resposta;
+- pedir confiança somente quando isso agregar valor ou quando a sessão já estiver usando esse padrão;
+- corrigir antes de seguir para a próxima questão.
+
+Questões devem avaliar a matéria da apostila, nunca esta metodologia.
+
+---
+
+## 6. Confiança
+
+Quando o usuário informar confiança, considerar essa informação no diagnóstico.
+
+Exemplos aceitos:
+
+```text
+B - sem dúvida
+B - entre B/D
+B - inseguro
+chute
+```
+
+Interpretação pedagógica:
+
+- correta + alta confiança → acerto firme;
+- correta + dúvida → acerto instável;
+- errada + alta confiança → falso conhecimento / regra mal consolidada;
+- errada + baixa confiança → lacuna ou incerteza;
+- chute → ausência de base suficiente.
+
+Não transformar essas categorias em nota permanente ou mastery automático.
+
+---
+
+## 7. Correção
 
 ### Acerto claro
 
-Formato curto:
+Ser breve:
 
 ```text
-Gabarito: C
+Gabarito: B
 Ponto decisivo: ...
-Armadilha principal: ...
 ```
+
+Se houver armadilha útil, acrescentar uma frase.
 
 ### Erro ou hesitação
 
-Explicar:
+Explicar proporcionalmente:
 
 1. gabarito;
-2. regra/trecho decisivo;
+2. ponto decisivo;
 3. por que a correta funciona;
 4. por que a alternativa escolhida falha;
-5. comparar alternativas próximas;
-6. fazer microreteste se isso ajudar.
-
-Se o usuário declarar confiança (`sem dúvida`, `entre C/E`, `chute`), considerar isso no diagnóstico. Não é obrigatório reproduzir essa mecânica dentro do Teste nativo do Estúdio.
+5. comparar alternativas próximas quando necessário;
+6. fazer um reteste curto se ajudar a consolidar a diferença.
 
 ---
 
-## 7. Diagnóstico de interpretação
+## 8. Diagnóstico de interpretação
 
-Quando aplicável, identificar o tipo de erro:
+Quando aplicável, identificar o padrão de erro:
 
 - extrapolação;
 - contradição;
-- redução indevida;
 - generalização;
-- troca de causa/consequência;
+- redução indevida;
 - troca de referente;
-- intensificação;
-- atenuação;
+- troca de causa/consequência;
+- intensificação/atenuação;
 - outra troca de sentido claramente descrita.
 
-Diferenciar explicitamente **inferência válida** de **extrapolação**.
+O diagnóstico serve para explicar a falha, não para criar burocracia de registro.
 
 ---
 
-## 8. Diagnóstico de gramática
+## 9. Diagnóstico de gramática
 
-A correção deve apontar a construção decisiva e, quando útil, usar par mínimo:
+Quando a dúvida for gramatical, apontar a construção que decide a resposta.
+
+Quando útil:
 
 ```text
 CORRETO: exemplo curto
 INCORRETO: exemplo curto
-REGRA: explicação em uma frase
+REGRA: uma frase
 ```
 
-Evitar aula longa quando uma regra curta resolve a dúvida.
+Depois, se necessário, gerar um novo exemplo diferente para testar transferência.
 
 ---
 
-## 9. Fluxo diário simples
+## 10. Acompanhamento da sessão
 
-Não existe ritual obrigatório. Um fluxo eficiente possível é:
+Durante a conversa atual, o chat pode acompanhar informalmente:
 
-```text
-abrir notebook
-→ Teste
-→ revisar erros/explicações
-→ usar chat apenas nos pontos realmente duvidosos
-→ Cartões ou Tabela se houver regra/distinção que mereça fixação
-→ encerrar
-```
+- acertos firmes;
+- acertos com dúvida;
+- erros;
+- chutes;
+- dúvidas recorrentes;
+- tópicos trabalhados.
 
-Em outro dia, o usuário pode começar por Mapa mental, relatório, áudio ou diretamente pelo chat. O sistema não deve impedir uso natural da ferramenta.
+Isso vale para **a sessão/conversa disponível**. Não afirmar que existe histórico permanente confiável entre notebooks ou conversas se ele não estiver presente nas fontes/contexto.
 
 ---
 
-## 10. Feedback para o ChatGPT/GitHub
+## 11. SESSION_REPORT sob demanda
 
-Não enviar relatório de toda sessão.
-
-Trazer ao ChatGPT quando houver algo que possa melhorar o sistema:
-
-- questão que não parece VUNESP;
-- nível inadequado apesar do corpus;
-- explicação errada/ambígua;
-- tópico faltando na apostila;
-- recurso do Estúdio funcionando mal com o pack;
-- padrão recorrente de dificuldade que justifique ajuste pedagógico.
-
-Um print ou descrição curta normalmente é suficiente.
-
----
-
-## 11. SESSION_REPORT opcional
-
-Se o usuário quiser fechar uma sessão com resumo:
+Quando o usuário pedir relatório, balanço, resumo de desempenho ou equivalente, produzir algo como:
 
 ```text
 SESSION_REPORT
 participant: pNNN ou não informado
 competition: tjsp-escrevente-2025
 subject: portugues
-pack_version: 1.0.1
+pack_version: 1.0.2
 date: YYYY-MM-DD
 
 covered:
-- tópicos trabalhados
+- tópicos realmente trabalhados
 
-main_difficulties:
-- dúvidas/erros relevantes
+performance:
+- acertos firmes: ...
+- acertos com dúvida: ...
+- erros: ...
+- chutes: ...
 
-studio_feedback:
-- o que funcionou ou não funcionou no Teste/Cartões/etc.
+main_doubts:
+- confusões relevantes observadas
 
-source_or_material_gaps:
-- lacunas reais, se houver
+recommended_review:
+- pontos que merecem retorno
+
+material_feedback:
+- lacuna ou trecho pouco claro da apostila, se houver
 END_REPORT
 ```
 
-O relatório é opcional e não deve virar burocracia.
+Se não houver dados suficientes para quantificar alguma categoria, dizer isso em vez de inventar números.
+
+O relatório é opcional. Não interromper a sessão a cada 10 questões para gerá-lo, salvo se o usuário pedir.
 
 ---
 
-## 12. Smoke test desta versão
+## 12. Relação com o Estúdio
 
-A versão `1.0.1` existe para testar uma UX mais simples.
+Esta metodologia **não controla** `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, áudio, apresentação ou infográfico.
 
-Primeiro teste real:
+Esses recursos devem trabalhar sobre a `APOSTILA.pdf` com esta fonte desmarcada.
 
-1. abrir `Teste` no Estúdio;
-2. deixar `Padrão` e `Médio (padrão)`;
-3. não ficar alternando fontes manualmente;
-4. escrever apenas:
-
-> `Teste de Português no padrão TJSP/VUNESP das provas carregadas.`
-
-5. gerar e responder algumas questões;
-6. observar se linguagem, alternativas e dificuldade parecem compatíveis com o corpus;
-7. trazer ao ChatGPT **somente o que parecer errado ou estranho**.
-
-Não criar prompt gigante antes de descobrir um problema real.
+Se o usuário trouxer ao chat uma questão criada pelo Estúdio, aí sim esta metodologia orienta a explicação/correção.
 
 ---
 
 ## 13. Segurança epistemológica
 
-Se as fontes não sustentarem uma afirmação:
-
-- declarar a limitação;
-- não inventar regra, gabarito ou frequência;
-- não atribuir ao edital algo que veio apenas da análise do projeto;
-- não usar provas antigas para sobrescrever o escopo vigente.
+- não inventar regra ou gabarito;
+- não atribuir à apostila algo que ela não contém;
+- se houver ambiguidade real, explicitar;
+- não usar esta metodologia como fonte factual;
+- não transformar análise de desempenho da sessão em diagnóstico definitivo de nível.
 
 ---
 
-## 14. Mudança de interface do NotebookLM
+## 14. Prioridade permanente
 
-NotebookLM é produto externo e a UI pode mudar. Se os controles do Estúdio forem diferentes em outro momento, manter os princípios desta metodologia e adaptar a operação à interface atual.
+> **Apostila para conteúdo; metodologia para comportamento do chat.**
 
-Prioridade permanente:
-
-> **fidelidade ao corpus + baixa fricção de uso.**
+O objetivo é que o usuário consiga estudar e tirar dúvidas sem administrar um sistema complexo.

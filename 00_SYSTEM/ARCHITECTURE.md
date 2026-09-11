@@ -5,22 +5,18 @@
 A arquitetura da V0.1 é uma cadeia editorial e pedagógica, não um LMS próprio.
 
 ```text
-fontes oficiais + provas
-        ↓
-     ChatGPT
-análise / autoria / QA
-        ↓
-      GitHub
-subject packs versionados
-        ↓
- sincronização manual
-        ↓
-   NotebookLM
-Estúdio + chat por matéria
-        ↓
-feedback opcional
-        ↓
-     ChatGPT
+fontes oficiais + provas + análise empírica
+                  ↓
+               ChatGPT
+        pesquisa / autoria / QA
+                  ↓
+                GitHub
+        backoffice + SubjectPack
+                  ↓
+       distribuição manual mínima
+                  ↓
+              NotebookLM
+       APOSTILA + instrução de chat
 ```
 
 ## Papéis
@@ -31,71 +27,101 @@ Fonte canônica de:
 
 - edital e mapa do concurso;
 - registro de fontes;
-- análise de banca;
-- apostilas;
-- metodologias de NotebookLM por matéria;
+- provas e análise de banca referenciadas;
+- apostilas editáveis e PDFs de distribuição;
+- metodologia/instruções de chat do NotebookLM;
 - manifests/changelogs;
 - QA;
 - continuidade entre chats.
 
-GitHub não é o ambiente primário de estudo nem precisa armazenar cada resposta do aluno.
+GitHub é o **backoffice intelectual** do sistema. Nem tudo que existe no repositório deve ser carregado no NotebookLM.
 
 ### ChatGPT
 
 Responsável por:
 
 - pesquisar e verificar;
-- analisar provas e edital;
-- produzir e atualizar materiais;
+- analisar edital, provas e banca;
+- decidir prioridades editoriais;
+- escrever e reescrever apostilas;
+- produzir exemplos e exercícios;
 - fazer QA source-grounded;
-- integrar feedback de sessões;
 - manter a continuidade canônica no GitHub.
+
+A análise de banca deve melhorar silenciosamente o material do estudante. Não é necessário transformar o aluno em leitor da análise da análise.
 
 ### NotebookLM
 
-Ambiente principal de estudo source-grounded. A unidade recomendada é um notebook por matéria; quando houver histórico individual relevante, cada participante usa sua própria instância baseada no mesmo pacote de fontes.
+Ambiente principal de estudo por matéria.
 
-A interface de estudo **não é apenas o chat**. O Estúdio do NotebookLM é parte central da experiência: testes, cartões, mapas mentais, relatórios, tabelas, resumos e demais artefatos podem ser usados diretamente conforme forem úteis à matéria. O chat fica disponível para dúvida, aprofundamento, correção diagnóstica e tarefas que realmente exigem interação.
+A unidade recomendada é um notebook por matéria e, quando houver interesse em histórico individual, por participante.
 
-### Regra de usabilidade
+O NotebookLM recebe dois tipos diferentes de fonte:
 
-O pacote deve reduzir decisões operacionais do estudante, não aumentá-las.
+#### 1. Conteúdo do estudante
 
-Por padrão:
+`APOSTILA.pdf` é a fonte principal. Ela deve ser escrita para suportar leitura, consulta, Testes, Cartões, Mapas mentais, Relatórios, Áudio, Apresentações e demais artefatos nativos.
 
-- carregar o corpus recomendado uma vez;
-- manter as fontes disponíveis no notebook;
-- usar os recursos nativos do Estúdio com seus controles padrão;
-- adicionar apenas uma instrução curta quando for necessário calibrar objetivo ou banca;
-- não exigir seleção manual de subconjuntos de fontes para cada artefato, salvo quando um teste real mostrar que isso melhora o resultado;
-- não tratar `Fácil`, `Médio` ou `Difícil` como equivalentes automáticos a uma banca específica.
+#### 2. Instrução operacional do chat
 
-A calibração de estilo e nível vem do **corpus da banca + análise reproduzível**, e não de burocracia de configuração.
+`METODOLOGIA_NOTEBOOKLM.md` existe apenas para orientar o **chat**: dúvidas, treino interativo, correção, confiança, reteste local e relatório de sessão.
+
+Ela não é conteúdo da matéria.
+
+## Regra de seleção de fontes
+
+A V0.1 aceita uma única distinção operacional simples porque os smoke tests mostraram utilidade real:
+
+```text
+ESTÚDIO
+→ selecionar APOSTILA.pdf
+→ desmarcar METODOLOGIA_NOTEBOOKLM.md
+
+CHAT
+→ selecionar APOSTILA.pdf + METODOLOGIA_NOTEBOOKLM.md
+```
+
+Não carregar por padrão no notebook:
+
+- `ANALISE_BANCA.md`;
+- `MANIFEST.md`;
+- `SOURCES.md`;
+- `CHANGELOG.md`;
+- documentação de arquitetura/QA;
+- provas históricas e edital apenas para ensinar ao NotebookLM como o projeto funciona.
+
+Fontes oficiais adicionais podem ser carregadas quando uma matéria realmente exigir consulta literal, normativa ou técnica; isso deve ser uma necessidade pedagógica concreta, não rotina administrativa.
+
+## O que aprendemos com o smoke test
+
+O `Teste` nativo do NotebookLM tratou documentos selecionados como **conteúdo a ser perguntado**. Com metodologia selecionada, gerou questão sobre a própria metodologia; sem ela, gerou questão explicitamente sobre conceitos da apostila. Isso é comportamento útil para revisão do conteúdo, mas não prova que o recurso simula automaticamente o estilo de uma banca.
+
+Já o chat, quando recebeu a metodologia, respeitou bem instruções como uma questão por vez, alternativas A–E, resposta + confiança e possibilidade de relatório da sessão.
+
+Por isso, a arquitetura deixa de tentar fazer um corpus misto cumprir todos os papéis ao mesmo tempo.
 
 ## Unidade canônica de entrega
 
-O objeto principal da V0.1 é o `SubjectPack`:
+O objeto principal continua sendo o `SubjectPack`:
 
 ```text
 Competition + Subject
         ↓
 MANIFEST
-APOSTILA
-ANALISE_BANCA
-METODOLOGIA_NOTEBOOKLM
-SOURCES
-CHANGELOG
+APOSTILA.md / APOSTILA.pdf      # produto do estudante
+METODOLOGIA_NOTEBOOKLM.md       # instrução de chat
+ANALISE_BANCA.md                # backoffice
+SOURCES.md                      # backoffice
+CHANGELOG.md                    # backoffice
 ```
-
-Conhecimento pode continuar reutilizável entre concursos, mas a primeira prioridade é produzir um pacote de estudo correto e utilizável para o concurso-alvo.
 
 ## Participantes
 
-Perfis de participantes continuam permitidos para organizar materiais e feedback, mas o kernel não depende de lógica específica por pessoa. Progresso individual, quando persistido, deve ser resumido e separado do material compartilhado.
+O material é compartilhável. Histórico de conversa, artefatos e relatórios pessoais podem permanecer em notebooks separados de `p001`, `p002`, etc.
 
 ## Evidência e scheduler
 
-O modelo de `EvidenceEvent` e projeções permanece como experimento possível, mas **não é requisito nem caminho crítico da V0.1**. Não construir infraestrutura de rastreamento questão a questão antes de provar que ela melhora o fluxo NotebookLM + ChatGPT + GitHub.
+`EvidenceEvent`, mastery projection e scheduler próprio continuam fora do caminho crítico da V0.1. Se o chat do NotebookLM produzir um resumo útil de acertos, erros e dúvidas, o usuário pode exportá-lo ou trazê-lo ao ChatGPT sem registrar cada resposta no GitHub.
 
 ## Continuidade
 
