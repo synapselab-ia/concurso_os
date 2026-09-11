@@ -5,12 +5,12 @@
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
 - **Current implementation branch:** `main`
-- **Last implementation branch:** `docs/notebooklm-content-first`
+- **Last implementation branch:** `docs/notebooklm-conversation-config`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `portugues`
-- **Current pack:** `portugues 1.0.2` (arquitetura de uso atualizada; apostila ainda é a distribuição 1.0.0)
+- **Current pack:** `portugues 1.0.3` (arquitetura/configuração atualizadas; apostila ainda é a distribuição 1.0.0)
 - **Study stack:** GitHub + ChatGPT + NotebookLM
-- **Primary NotebookLM UX:** `APOSTILA.pdf` para Estúdio; `APOSTILA.pdf + METODOLOGIA_NOTEBOOKLM.md` para chat
+- **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte; instruções de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa
 - **Backoffice:** edital, provas, análise de banca, fontes, QA e histórico ficam no GitHub/ChatGPT por padrão
 - **Stack specification:** `docs/STACK_NOTEBOOKLM.md`
 - **Validation gate:** `python tools/verify.py`
