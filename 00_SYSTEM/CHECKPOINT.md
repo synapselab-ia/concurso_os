@@ -53,7 +53,9 @@ validation:
   reason: local runtime cannot resolve github.com; clone of docs/apostila-authoring-protocol failed before gate execution
   attempted_at: 2026-09-11
   clone_error: Could not resolve host github.com
-  static_diff_review: pending_before_pr
+  static_diff_review: pass
+  critical_readback: pass
+  changed_files_reviewed: 10
   branch_base: b2bfd8248e744c61e77278e4c975192e86f4429c
   change_scope: documentation_and_authoring_protocol_only
   binary_changes: none
