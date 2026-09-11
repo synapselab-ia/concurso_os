@@ -1,21 +1,10 @@
 # NEXT_ACTION
 
-## APOSTILA-002 — Reconstruir a apostila de Português para o NotebookLM
+## APOSTILA-002 — Reconstruir Português aplicando o protocolo canônico de autoria
 
-A arquitetura de uso do NotebookLM está definida por `DEC-0016` e refinada por `DEC-0017`. O próximo trabalho não é testar mais prompts nem replicar packs: é **refazer a apostila de Português**, porque ela passou a ser o produto principal do estudante e o insumo dos recursos do Estúdio.
+A arquitetura NotebookLM está definida por `DEC-0016`/`DEC-0017` e o processo editorial por `DEC-0018` + `APOSTILA_AUTHORING_PROTOCOL.md`.
 
-### Objetivo
-
-Produzir uma nova `APOSTILA.md` e `APOSTILA.pdf` que sejam excelentes materiais de estudo por si só e funcionem bem como fonte para:
-
-- leitura/consulta;
-- `Teste`;
-- `Cartões`;
-- `Mapa mental`;
-- `Relatórios`;
-- `Tabela de dados`;
-- resumos/áudio/apresentações;
-- chat do NotebookLM.
+O próximo trabalho é **refazer a apostila de Português**, porque ela é o produto principal do estudante e o corpus que alimenta o NotebookLM.
 
 Target recomendado do release: `portugues 2.0.0`.
 
@@ -30,121 +19,134 @@ Antes de escrever, seguir `AGENTS.md` e ler pelo menos:
 5. `00_SYSTEM/DATA_MODEL.md`;
 6. `00_SYSTEM/CHECKPOINT.md`;
 7. este `NEXT_ACTION.md`;
-8. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0010, DEC-0013, DEC-0014, DEC-0016 e DEC-0017;
-9. `00_SYSTEM/SOURCE_POLICY.md` e `00_SYSTEM/QA_PROTOCOL.md`;
-10. `competitions/tjsp-escrevente-2025/SYLLABUS.md`;
-11. `materials/tjsp-escrevente-2025/portugues/ANALISE_BANCA.md`;
-12. `materials/tjsp-escrevente-2025/portugues/SOURCES.md`;
-13. `materials/tjsp-escrevente-2025/portugues/APOSTILA.md` atual, somente como objeto de auditoria/reaproveitamento seletivo;
-14. `materials/tjsp-escrevente-2025/portugues/METODOLOGIA_NOTEBOOKLM.md`, apenas para garantir que a nova apostila sustente bem o tutor configurado no NotebookLM.
+8. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0010, DEC-0013, DEC-0014, DEC-0016, DEC-0017 e DEC-0018;
+9. `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` **integralmente**;
+10. `00_SYSTEM/SOURCE_POLICY.md` e `00_SYSTEM/QA_PROTOCOL.md`;
+11. `competitions/tjsp-escrevente-2025/SYLLABUS.md`;
+12. `materials/tjsp-escrevente-2025/portugues/ANALISE_BANCA.md`;
+13. `materials/tjsp-escrevente-2025/portugues/SOURCES.md`;
+14. `materials/tjsp-escrevente-2025/portugues/APOSTILA.md` atual, somente como objeto de auditoria/reaproveitamento seletivo;
+15. `materials/tjsp-escrevente-2025/portugues/METODOLOGIA_NOTEBOOKLM.md`, somente para garantir compatibilidade do corpus com o tutor configurado.
 
 Verificar também o estado real da `main` e PRs abertos antes de escrever.
 
 ## Arquitetura NotebookLM a preservar
-
-A partir de DEC-0017:
 
 ```text
 FONTES DO NOTEBOOKLM
 → APOSTILA.pdf
 
 CONFIGURAÇÃO DA CONVERSA
-→ Configurar as conversas / Personalizado (ou equivalente)
-→ colar o bloco operacional de METODOLOGIA_NOTEBOOKLM.md
+→ Personalizado (ou equivalente)
+→ bloco operacional de METODOLOGIA_NOTEBOOKLM.md
 ```
 
-`METODOLOGIA_NOTEBOOKLM.md` continua no GitHub como configuração versionada, mas **não deve ser carregada como fonte** por padrão.
+A apostila deve funcionar como **corpus didático limpo**. `ANALISE_BANCA.md`, `SOURCES.md`, protocolo de autoria, manifest, changelog e documentação de QA permanecem no backoffice.
 
-Isso significa que a apostila precisa ser boa o suficiente para que Estúdio e chat trabalhem sobre um corpus didático limpo.
+## Execução obrigatória pelo protocolo
 
-## Princípios editoriais obrigatórios
+### Etapa 1 — Auditoria
 
-### 1. A apostila é material do aluno, não relatório do projeto
+Auditar a apostila atual e registrar lacunas concretas de:
 
-Evitar poluir o texto didático com frases como:
+- cobertura;
+- profundidade;
+- precisão;
+- exemplos;
+- distinções;
+- exercícios;
+- sequência pedagógica;
+- utilidade para NotebookLM;
+- redundância/metadiscurso.
 
-- `segundo a análise da banca...`;
-- `a VUNESP cobrou X vezes...`;
-- `no TJSP 2025...`;
-- referências a `source_id`, SHA, manifest, QA ou decisões internas.
+### Etapa 2 — Matriz de cobertura/autoria
 
-Edital, provas e análise de banca orientam **o que entra, a profundidade, a ênfase, os exemplos e as distinções**, mas a engenharia fica no backoffice.
-
-### 2. Cobrir integralmente o recorte do edital
-
-Não sacrificar cobertura por concisão. Todo o recorte de Português do edital deve estar ensinável e recuperável na apostila.
-
-### 3. Escrever para compreensão humana e recuperação pelo NotebookLM
-
-Usar estrutura semântica forte:
+Antes da reescrita completa, mapear cada item do syllabus para:
 
 ```text
-conceito
-→ definição
-→ como reconhecer
-→ contraste com conceito próximo
-→ exemplo
-→ contraexemplo/caso-limite
-→ erro típico
-→ aplicação
-→ síntese
+learning_goal
+concepts
+contrasts
+applications
+source_refs
+banca_signal
+depth
+status
 ```
 
-Nem todo tópico precisa seguir mecanicamente essa sequência, mas a apostila deve conter informação explícita suficiente para o NotebookLM gerar artefatos úteis.
+Nenhum item do edital pode desaparecer silenciosamente.
 
-### 4. Densidade didática, não resumo raso
+### Etapa 3 — Sumário pedagógico
 
-A apostila atual é curta demais para o novo papel. A nova versão deve ter explicações, exemplos e distinções suficientes para estudo real. Não limitar o material a 8 páginas ou ao tamanho atual.
+Desenhar o novo sumário a partir de dependências de aprendizado e da matriz, não apenas copiando a ordem do edital ou da apostila antiga.
 
-Também evitar enciclopedismo: aprofundar o que é relevante ao edital e às operações observadas nas provas.
+### Etapa 4 — Reconstrução
 
-### 5. Exemplos e exercícios autorais
+Reescrever `APOSTILA.md` segundo o perfil de Língua Portuguesa do protocolo:
 
-Incluir exemplos próprios e pequenas aplicações que ajudem tanto o estudante quanto os geradores do NotebookLM.
+```text
+conceito linguístico
+→ efeito/regra
+→ como reconhecer no contexto
+→ contraste
+→ exemplos/pares mínimos
+→ reescrita
+→ aplicação
+→ síntese/prática
+```
 
-Quando útil, incluir:
+A banca deve influenciar silenciosamente profundidade, distinções, tipos de erro e prática. Evitar transformar o material em relatório sobre TJSP/VUNESP.
 
-- pares mínimos;
-- reescritas;
-- frases contrastivas;
-- miniquestões;
-- análise de alternativas hipotéticas;
-- exercícios curtos com resposta/comentário em seção separada.
+### Etapa 5 — QA editorial
 
-Não copiar questões reais extensamente para dentro da apostila.
+Executar e registrar os gates aplicáveis de `APOSTILA_AUTHORING_PROTOCOL.md`:
 
-### 6. Banca como engenharia silenciosa
+1. cobertura;
+2. exatidão/fonte;
+3. didática;
+4. distinções/casos-limite;
+5. prática;
+6. coerência com banca sem overfitting;
+7. utilidade para NotebookLM;
+8. redundância/coerência.
 
-Usar `ANALISE_BANCA.md` para priorizar tipos de operação, erros plausíveis e fronteiras conceituais. Não transformar a apostila em uma coleção de comentários sobre a VUNESP.
+### Etapa 6 — PDF
 
-### 7. Compatibilidade com o chat configurado
+Gerar novo `APOSTILA.pdf` pesquisável e executar QA textual/visual:
 
-`METODOLOGIA_NOTEBOOKLM.md` 1.0.3 é **configuração de conversa**, não fonte. A nova apostila deve fornecer conteúdo suficiente para que o chat configurado possa explicar dúvidas, gerar treino, corrigir e produzir `SESSION_REPORT` sem recorrer à análise de banca/backoffice.
+- extração de texto;
+- acentos/símbolos;
+- clipping/overlap;
+- tabelas;
+- hierarquia;
+- legibilidade;
+- separação de perguntas/gabaritos.
 
-## Processo de implementação
+### Etapa 7 — Release e continuidade
 
-1. auditar a apostila atual e listar lacunas concretas;
-2. desenhar novo sumário antes da reescrita completa;
-3. reconstruir `APOSTILA.md`;
-4. conferir cobertura contra o syllabus do edital;
-5. conferir coerência com a análise reproduzível da banca sem inserir metadiscurso desnecessário;
-6. fazer QA de precisão, exemplos, terminologia, completude e utilidade para NotebookLM;
-7. gerar novo `APOSTILA.pdf` pesquisável;
-8. fazer QA textual e visual do PDF;
-9. atualizar `MANIFEST.md`, `CHANGELOG.md`, `CHECKPOINT.md`, `PROJECT_CONTROL.md` e `NEXT_ACTION.md`;
-10. executar `python tools/verify.py` ou documentar explicitamente a impossibilidade;
-11. revisar diff/readback, abrir PR e fazer merge quando couber sob DEC-0009.
+Atualizar:
+
+- `MANIFEST.md`;
+- `CHANGELOG.md`;
+- `PROJECT_CONTROL.md`;
+- `CHECKPOINT.md`;
+- `NEXT_ACTION.md`.
+
+Executar `python tools/verify.py` ou justificar explicitamente a impossibilidade. Revisar diff/readback, abrir PR e fazer merge quando couber sob `DEC-0009`.
 
 ## Definition of Done
 
 `APOSTILA-002` só termina quando:
 
-- o conteúdo cobre integralmente o edital de Português;
-- a apostila é material didático suficiente por si só;
-- a leitura não depende de conhecer este projeto/GitHub;
-- Teste/Cartões/Mapa mental podem usar somente o PDF sem virar quiz sobre documentação interna;
-- o chat pode usar a apostila como corpus + a configuração personalizada derivada de `METODOLOGIA_NOTEBOOKLM.md`;
-- PDF novo foi validado;
-- continuidade e versão foram atualizadas no GitHub.
+- todos os itens de Português do syllabus estão cobertos de modo ensinável;
+- a apostila funciona para aprender do zero e revisar;
+- conceitos confundíveis estão explicitamente separados;
+- exemplos, contraexemplos e prática autoral são suficientes;
+- fatos/regras sensíveis estão source-grounded;
+- a apostila funciona como corpus do NotebookLM sem depender do backoffice;
+- o chat configurado consegue explicar/treinar usando esse corpus;
+- todos os gates aplicáveis do protocolo estão registrados como executados;
+- o novo PDF foi validado;
+- versão, continuidade e release foram atualizados no GitHub.
 
-Não iniciar os SubjectPacks das outras matérias antes de fechar este padrão de apostila, salvo nova decisão canônica explícita.
+Não iniciar os SubjectPacks das outras matérias antes de fechar e testar este padrão com Português, salvo nova decisão canônica explícita.
