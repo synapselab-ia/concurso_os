@@ -2,7 +2,7 @@
 
 ## APOSTILA-002 — Reconstruir a apostila de Português para o NotebookLM
 
-A arquitetura de uso do NotebookLM está definida por `DEC-0016`. O próximo trabalho não é testar mais prompts nem replicar packs: é **refazer a apostila de Português**, porque ela passou a ser o produto principal do estudante e o insumo dos recursos do Estúdio.
+A arquitetura de uso do NotebookLM está definida por `DEC-0016` e refinada por `DEC-0017`. O próximo trabalho não é testar mais prompts nem replicar packs: é **refazer a apostila de Português**, porque ela passou a ser o produto principal do estudante e o insumo dos recursos do Estúdio.
 
 ### Objetivo
 
@@ -30,14 +30,32 @@ Antes de escrever, seguir `AGENTS.md` e ler pelo menos:
 5. `00_SYSTEM/DATA_MODEL.md`;
 6. `00_SYSTEM/CHECKPOINT.md`;
 7. este `NEXT_ACTION.md`;
-8. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0010, DEC-0013, DEC-0014 e DEC-0016;
+8. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0010, DEC-0013, DEC-0014, DEC-0016 e DEC-0017;
 9. `00_SYSTEM/SOURCE_POLICY.md` e `00_SYSTEM/QA_PROTOCOL.md`;
 10. `competitions/tjsp-escrevente-2025/SYLLABUS.md`;
 11. `materials/tjsp-escrevente-2025/portugues/ANALISE_BANCA.md`;
 12. `materials/tjsp-escrevente-2025/portugues/SOURCES.md`;
-13. `materials/tjsp-escrevente-2025/portugues/APOSTILA.md` atual, somente como objeto de auditoria/reaproveitamento seletivo.
+13. `materials/tjsp-escrevente-2025/portugues/APOSTILA.md` atual, somente como objeto de auditoria/reaproveitamento seletivo;
+14. `materials/tjsp-escrevente-2025/portugues/METODOLOGIA_NOTEBOOKLM.md`, apenas para garantir que a nova apostila sustente bem o tutor configurado no NotebookLM.
 
 Verificar também o estado real da `main` e PRs abertos antes de escrever.
+
+## Arquitetura NotebookLM a preservar
+
+A partir de DEC-0017:
+
+```text
+FONTES DO NOTEBOOKLM
+→ APOSTILA.pdf
+
+CONFIGURAÇÃO DA CONVERSA
+→ Configurar as conversas / Personalizado (ou equivalente)
+→ colar o bloco operacional de METODOLOGIA_NOTEBOOKLM.md
+```
+
+`METODOLOGIA_NOTEBOOKLM.md` continua no GitHub como configuração versionada, mas **não deve ser carregada como fonte** por padrão.
+
+Isso significa que a apostila precisa ser boa o suficiente para que Estúdio e chat trabalhem sobre um corpus didático limpo.
 
 ## Princípios editoriais obrigatórios
 
@@ -99,9 +117,9 @@ Não copiar questões reais extensamente para dentro da apostila.
 
 Usar `ANALISE_BANCA.md` para priorizar tipos de operação, erros plausíveis e fronteiras conceituais. Não transformar a apostila em uma coleção de comentários sobre a VUNESP.
 
-### 7. Compatibilidade com o chat
+### 7. Compatibilidade com o chat configurado
 
-`METODOLOGIA_NOTEBOOKLM.md` 1.0.2 é chat-only. A nova apostila deve fornecer conteúdo suficiente para que o chat possa explicar dúvidas e gerar treino sem recorrer à análise de banca/backoffice.
+`METODOLOGIA_NOTEBOOKLM.md` 1.0.3 é **configuração de conversa**, não fonte. A nova apostila deve fornecer conteúdo suficiente para que o chat configurado possa explicar dúvidas, gerar treino, corrigir e produzir `SESSION_REPORT` sem recorrer à análise de banca/backoffice.
 
 ## Processo de implementação
 
@@ -125,7 +143,7 @@ Usar `ANALISE_BANCA.md` para priorizar tipos de operação, erros plausíveis e 
 - a apostila é material didático suficiente por si só;
 - a leitura não depende de conhecer este projeto/GitHub;
 - Teste/Cartões/Mapa mental podem usar somente o PDF sem virar quiz sobre documentação interna;
-- o chat pode usar `APOSTILA.pdf + METODOLOGIA_NOTEBOOKLM.md` para dúvidas/treino;
+- o chat pode usar a apostila como corpus + a configuração personalizada derivada de `METODOLOGIA_NOTEBOOKLM.md`;
 - PDF novo foi validado;
 - continuidade e versão foram atualizadas no GitHub.
 
