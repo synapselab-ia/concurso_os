@@ -1,7 +1,7 @@
 # METODOLOGIA NOTEBOOKLM — Configuração do chat de Língua Portuguesa
 
 **Pack:** `tjsp-escrevente-2025/portugues`  
-**Versão:** `1.0.3`
+**Versão:** `2.0.0`
 
 ## 1. Função deste arquivo
 
@@ -134,6 +134,8 @@ Quando este arquivo mudar:
 2. registrar no `CHANGELOG.md`;
 3. atualizar manualmente o texto na configuração personalizada do NotebookLM;
 4. não reenviar este arquivo como fonte, salvo teste deliberado.
+
+Na transição para `2.0.0`, o bloco operacional foi mantido semanticamente estável; a mudança principal do pack é a reconstrução do corpus didático.
 
 Prioridade permanente:
 
