@@ -11,8 +11,10 @@
   "goal": "Prepare using the latest available real TJSP Escrevente blueprint and migrate to a newer edital when one becomes canonical.",
   "baseline": {
     "plan_id": "tjsp-baseline-v0.1",
-    "status": "in_progress",
-    "evidence_events_recorded": 1
+    "status": "paused_preflight",
+    "evidence_events_recorded": 1,
+    "projection_eligible_events": 0,
+    "pause_reason": "ENGINE-001 must implement and validate evidence projection and scheduler isolation before real baseline resumes."
   },
   "privacy": "public_minimal"
 }
