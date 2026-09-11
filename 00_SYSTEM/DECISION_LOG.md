@@ -31,3 +31,7 @@ Um agente novo deve recuperar o projeto somente pelo repositório.
 ## DEC-0008 — Kernel sem condicionais por pessoa
 **Status:** accepted  
 Comportamento específico deve vir de configuração/evidência, nunca de `if participant == ...`.
+
+## DEC-0009 — Merge autônomo após validação
+**Status:** accepted  
+Durante a fase de desenvolvimento, PRs podem ser mescladas sem aprovação manual a cada merge quando o agente responsável tiver revisado o diff, confirmado ausência de mudança destrutiva não prevista e executado o gate canônico ou documentado por que ele não pôde ser executado. Mudanças com impacto externo irreversível continuam exigindo autorização específica quando aplicável.
