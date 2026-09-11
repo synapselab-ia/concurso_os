@@ -6,9 +6,11 @@ A V0.1 não transforma o GitHub em um aplicativo de treino nem exige que o ChatG
 
 - **GitHub:** memória canônica de análise e fábrica de materiais.
 - **ChatGPT:** pesquisador, autor, revisor, integrador e mantenedor dos materiais.
-- **NotebookLM:** ambiente de estudo source-grounded, com um notebook por matéria e por participante quando houver necessidade de histórico individual.
+- **NotebookLM:** ambiente principal de estudo source-grounded, usando **Estúdio + chat**.
 
-A regra de usabilidade é simples: o estudante deve passar a maior parte do tempo estudando no NotebookLM; o ChatGPT deve passar a maior parte do tempo melhorando o corpus e analisando o concurso; o GitHub deve guardar o que precisa sobreviver a qualquer chat.
+A regra de usabilidade é: **o estudante deve estudar, não administrar o sistema**.
+
+Depois de montar um notebook de matéria, a rotina deve exigir poucos cliques, comandos curtos e o mínimo possível de seleção manual de fontes/configurações.
 
 ## Fluxo principal
 
@@ -24,19 +26,56 @@ EDITAL + PROVAS + FONTES OFICIAIS
        sincronização manual
               ↓
          NotebookLM
-      estudo source-grounded
+      Estúdio + chat
               ↓
-     relatório de sessão opcional
+     feedback opcional
               ↓
           ChatGPT
- análise agregada / melhoria do material
+ melhoria do corpus / materiais
               ↓
            GitHub
 ```
 
+## Princípio de usabilidade: Studio-first
+
+O NotebookLM não deve ser tratado como apenas um chat com documentos. O Estúdio é parte central do produto de estudo.
+
+Recursos como `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, `Resumo em áudio/vídeo`, `Apresentações` e `Infográficos` podem ser usados diretamente quando forem pedagogicamente úteis.
+
+O pack fornece **um corpus bom e uma metodologia curta**. Ele não deve obrigar o usuário a decorar uma receita diferente de fontes e prompts para cada botão.
+
+### Padrão operacional
+
+1. carregar o conjunto recomendado de fontes uma vez;
+2. manter essas fontes disponíveis no notebook;
+3. escolher o recurso do Estúdio que fizer sentido naquele momento;
+4. usar controles padrão quando não houver motivo para alterá-los;
+5. quando precisar direcionar a geração, escrever uma instrução curta e concreta;
+6. só introduzir subseleção de fontes ou prompt detalhado se um resultado real estiver ruim e houver hipótese clara de correção.
+
+**Não otimizar antes de observar problema.**
+
+## Calibração de banca versus dificuldade genérica
+
+Os controles nativos de dificuldade de ferramentas como Testes/Cartões são genéricos. Eles não devem ser interpretados como escala oficial de VUNESP, FCC, FGV etc.
+
+Para calibrar uma banca:
+
+```text
+provas reais + análise reproduzível da banca + edital
+                         ↓
+               instrução curta de foco
+```
+
+Exemplo para o TJSP/VUNESP:
+
+> `Teste de Português no padrão TJSP/VUNESP das provas carregadas.`
+
+Por padrão, usar a configuração nativa neutra (`Médio/Padrão`) durante o smoke test. Só mudar o seletor se o usuário quiser deliberadamente uma versão mais fácil ou mais difícil para fins pedagógicos. Não usar `Difícil` como sinônimo de `nível VUNESP`.
+
 ## Pacote obrigatório por matéria
 
-Cada matéria deve possuir um `subject pack` reutilizável por qualquer participante. O pacote canônico é produzido no GitHub e exportado para uso no NotebookLM.
+Cada matéria possui um `SubjectPack` reutilizável:
 
 ```text
 materials/<competition_id>/<subject_id>/
@@ -51,60 +90,23 @@ materials/<competition_id>/<subject_id>/
 
 ### MANIFEST.md
 
-Identifica concurso, matéria, versão do pacote, data de atualização, arquivos que devem estar no notebook e fontes externas que o usuário precisa adicionar manualmente.
-
-O notebook deve conseguir responder à pergunta `qual versão do seu pacote?` com a mesma versão do manifesto.
+Diz o que carregar no notebook, versão do pack e smoke test mínimo. Deve ser suficiente para uma pessoa ou agente montar o notebook sem contexto de chat anterior.
 
 ### APOSTILA
 
-Material didático autoral e versionado. Deve ser suficiente para orientar o estudo, mas não substituir fontes oficiais quando literalidade, versão normativa ou precisão técnica forem relevantes.
-
-Estrutura mínima:
-
-```text
-escopo do edital
-→ mapa da matéria
-→ teoria essencial
-→ distinções e tabelas comparativas
-→ exemplos de aplicação
-→ armadilhas da banca
-→ pontos de alta literalidade
-→ checklist de revisão
-→ resumo de alta retenção
-→ referências
-```
-
-A apostila não deve ser uma enciclopédia. Prioriza o que está no edital e o que a análise reproduzível das provas demonstra ser pedagogicamente importante.
+Material didático autoral e versionado. Deve cobrir o edital de forma eficiente, com teoria essencial, distinções, exemplos, armadilhas, checklist e referências. Não substitui fonte oficial quando literalidade/versão normativa forem decisivas.
 
 ### ANALISE_BANCA.md
 
-É produzida pelo ChatGPT a partir das provas disponíveis e separada da apostila para que padrões empíricos não sejam confundidos com conteúdo normativo.
-
-Deve registrar, quando houver evidência suficiente:
-
-```text
-tipos de comando
-formas de alternativa errada
-nível de literalidade
-subtemas observados
-fronteiras entre alternativas próximas
-pegadinhas recorrentes
-perfil de cálculo/aplicação/interpretação
-exemplos referenciados por prova/questão
-limites da amostra
-```
-
-Não inventar frequências nem tendências sem contagem reproduzível.
+Registra padrões observados em provas reais, com método reproduzível e limites da amostra. Não transformar ocorrência histórica em previsão garantida.
 
 ### METODOLOGIA_NOTEBOOKLM.md
 
-É a instrução operacional da matéria. Ela transforma o NotebookLM de simples ferramenta de consulta em tutor ativo. O arquivo deve ser carregado como fonte do notebook e sua versão deve acompanhar o manifesto.
-
-A metodologia geral preserva os componentes úteis do protocolo legado: uma questão por vez, registro explícito de confiança, distinção entre acerto firme/instável, análise profunda de erro, comparação entre alternativas próximas, revisão ativa e relatórios periódicos.
+Define **como usar o notebook sem burocracia** e, quando o chat for usado, como corrigir/explicar. Não deve tentar controlar todas as ferramentas do Estúdio por um único superprompt.
 
 ## Organização dos notebooks
 
-A unidade pedagógica é matéria, não bloco de prova. Para TJSP, a segmentação recomendada é:
+A unidade pedagógica é matéria, não bloco da prova. Para TJSP, a segmentação inicial é:
 
 ```text
 Português
@@ -122,211 +124,157 @@ Raciocínio Lógico
 Redação
 ```
 
-Quando o volume for pequeno, matérias próximas podem ser combinadas; quando o corpus ficar grande demais, podem ser subdivididas. A divisão existe para reduzir ruído de recuperação e manter cada notebook semanticamente focado.
+Quando o volume for pequeno, matérias próximas podem ser combinadas; quando o corpus ficar grande, podem ser subdivididas.
 
-Para múltiplos participantes, o **pacote de fontes é compartilhável**, mas o notebook de estudo pode ser separado por participante para evitar que histórico de conversa, notas e artefatos pessoais se misturem.
+Para múltiplos participantes, o **SubjectPack é compartilhável**, mas notebooks podem ser separados por participante para evitar mistura de histórico e artefatos pessoais.
 
-## O que carregar em cada NotebookLM
+## O que carregar no NotebookLM
 
-O notebook deve receber quatro camadas de fonte:
-
-```text
-1. METODOLOGIA_NOTEBOOKLM da matéria
-2. APOSTILA da matéria
-3. ANALISE_BANCA da matéria
-4. fontes primárias relevantes
-```
-
-Fontes primárias incluem, conforme a matéria, edital, lei seca, normativos, provas históricas, documentação técnica oficial e materiais autorizados. Provas e PDFs de terceiros podem ser usados diretamente no NotebookLM sem necessidade de republicá-los no GitHub público.
-
-## Ciclo de estudo no NotebookLM
-
-A sessão usa cinco fases.
-
-### 1. Recuperação
-
-Antes de explicar conteúdo, testar conhecimento prévio com perguntas curtas, distinções ou uma questão de prova inédita baseada nas fontes selecionadas.
-
-### 2. Correção diagnóstica
-
-A resposta do estudante deve incluir grau de confiança. Classificações principais:
+Por matéria, o conjunto normal contém:
 
 ```text
-acerto firme
-acerto instável
-acerto por eliminação
-erro de conteúdo
-erro de leitura
-erro por pegadinha
-falso conhecimento
-chute
+APOSTILA.pdf
+ANALISE_BANCA.md
+METODOLOGIA_NOTEBOOKLM.md
+edital / recorte oficial relevante
+prova mais recente da banca
+provas históricas úteis (opcionais/recomendadas)
+fontes normativas ou técnicas quando necessárias
 ```
 
-A correção deve identificar a fronteira técnica que decidiu a questão, e não apenas fornecer o gabarito.
+Não exigir que o estudante alterne subconjuntos de fontes a cada ferramenta. O primeiro teste sempre usa o corpus completo recomendado. Seleção específica de fontes é uma **ferramenta de correção**, não uma obrigação diária.
 
-### 3. Estudo direcionado
+## Papel dos recursos do Estúdio
 
-Explicar somente o necessário para corrigir a lacuna detectada, usando citações das fontes do notebook. Não transformar cada erro em aula longa.
+Não existe uma sequência obrigatória universal. Cada matéria usa os recursos que agregam valor.
 
-### 4. Reteste
+### Teste
 
-Erro ou hesitação exige nova recuperação em formato diferente: microquestão, comparação, variação numérica, caso hipotético ou pergunta de explicação curta.
+Principal mecanismo nativo de prática quando a matéria se presta a questões objetivas.
 
-### 5. Fechamento
+- usar questões geradas a partir das fontes;
+- para banca específica, dar instrução curta de calibração;
+- revisar resultado usando os controles nativos;
+- levar ao chat apenas erros, ambiguidades ou explicações que mereçam aprofundamento.
 
-Ao final, gerar revisão ativa e um relatório curto de sessão. O relatório pode ser trazido ao ChatGPT quando o usuário quiser análise longitudinal ou atualização de materiais.
+### Cartões
 
-## Metodologia específica por matéria
+Úteis para recuperação de regras, definições, exceções, prazos, comandos e contrastes curtos. Evitar transformar texto longo em cartão.
+
+### Mapa mental
+
+Útil para estrutura e relações entre tópicos. Não é prova de domínio e não precisa preceder todo estudo.
+
+### Relatórios / Apresentações / Áudio / Vídeo
+
+Servem para visão geral, revisão e consolidação. São complementares à prática ativa.
+
+### Tabela de dados
+
+Boa para comparações estruturadas: regra × exceção, instituto × hipótese, conectivo × relação, comando × função etc.
+
+### Infográfico
+
+Opcional. Usar quando a informação realmente se beneficiar de visualização.
+
+### Chat
+
+Usar quando houver necessidade de:
+
+- tirar dúvida;
+- corrigir uma questão de forma profunda;
+- comparar alternativas próximas;
+- pedir exemplos/reteste;
+- discutir lacuna ou contradição nas fontes;
+- gerar um relatório curto da sessão.
+
+O chat **não precisa** ser a porta de entrada de toda sessão.
+
+## Metodologia por matéria
 
 ### Direito
 
-Prioridade: fonte normativa → decomposição da regra → aplicação → distinção.
-
-Toda correção relevante deve indicar diploma e dispositivo, trecho essencial quando necessário, requisito que decide a questão e por que as alternativas próximas falham. Diferenciar letra de lei, interpretação, aplicação em caso hipotético, exceção e eventual conhecimento jurisprudencial. Se a fonte carregada não sustenta uma afirmação, o NotebookLM deve declarar a limitação em vez de completar com memória geral.
+Prioridade: fonte normativa → distinção → aplicação. Testes e cartões tendem a ser úteis; tabelas são especialmente valiosas para hipóteses, prazos, competências e exceções.
 
 ### Português
 
-Prioridade: texto/regra → elemento linguístico decisivo → padrão de erro.
-
-Em interpretação, classificar erros como extrapolação, contradição, redução indevida, troca de sentido ou generalização. Em gramática, apontar a construção que decide o gabarito, dar exemplo contrastivo curto e mostrar a forma típica de cobrança da banca.
+Prioridade: texto/regra → elemento linguístico decisivo → padrão de erro. Testes são centrais; chat entra para interpretação ambígua, análise A–E e correção gramatical. Tabelas/cartões servem bem para relações lógicas e regras curtas.
 
 ### Matemática
 
-Prioridade: resolução independente → caminho mais rápido de prova → verificação.
-
-A correção deve preservar passos essenciais, mostrar atalho apenas depois da compreensão e gerar variação numérica curta após erro. O foco é método transferível, não decorar uma resolução.
+Prioridade: resolver → verificar → comparar método. Testes e chat predominam. Cartões têm papel secundário.
 
 ### Raciocínio Lógico
 
-Prioridade: formalização → restrições → dedução → contraprova.
-
-Quando útil, converter linguagem natural em estrutura simbólica/diagrama. Após erro, retestar mudando entidades e valores para verificar transferência.
+Prioridade: formalização → dedução → contraprova. Testes e chat predominam; mapas podem ajudar apenas em alguns tópicos.
 
 ### Informática
 
-Prioridade: comportamento real da ferramenta → caminho operacional → distinção entre comandos parecidos.
-
-Usar documentação/versão relevante quando disponível. Distinguir conceito de interface e evitar afirmar comportamento de software sem fonte adequada.
+Prioridade: comportamento real da ferramenta → distinção entre comandos. Testes, cartões e tabelas têm alto valor.
 
 ### Atualidades
 
-Prioridade: corpus atualizado e datado. Esta matéria exige pacote com validade temporal curta. O manifesto deve registrar a janela temporal e a última atualização. Fatos novos entram por atualização do source pack, não por memória solta do modelo.
+Prioridade: corpus atualizado e datado. Relatórios/áudio/mapas podem ajudar na construção de contexto; testes verificam retenção e relações.
 
 ### Redação
 
-Prioridade: produzir → diagnosticar por dimensão → reescrever.
+Prioridade: produzir → diagnosticar → reescrever. Chat e relatórios são mais importantes; Teste/Cartões são auxiliares.
 
-A avaliação separa aderência ao tema/gênero, tese e desenvolvimento, coerência, coesão, norma-padrão e riscos eliminatórios do edital. Usar textos motivadores e rubrica; evitar modelos prontos memorizados.
+## Correção aprofundada no chat
 
-## Artefatos do NotebookLM
+Quando o usuário levar uma questão/erro ao chat, preservar os elementos úteis do protocolo legado:
 
-Flashcards, testes, mapas mentais, relatórios e resumos em áudio/vídeo são complementares. Não substituem recuperação ativa. A ordem recomendada é primeiro tentar lembrar/aplicar; depois usar o artefato para consolidar ou revisar.
+- resposta antes da explicação quando a questão ainda estiver aberta;
+- confiança quando fizer sentido;
+- diferença entre acerto firme e hesitante;
+- diagnóstico do erro;
+- comparação entre alternativas próximas;
+- explicação localizada;
+- reteste curto quando necessário.
 
-O ChatGPT não deve tentar reconstruir todos esses artefatos no GitHub. O repositório guarda os insumos e os outputs que agregam valor longitudinal.
+Isso é uma **camada de aprofundamento**, não uma exigência para cada artefato do Estúdio.
 
-## Relatório de sessão para retorno ao ChatGPT
+## Feedback ao ChatGPT
 
-Quando for útil manter acompanhamento entre notebooks ou melhorar materiais, pedir ao NotebookLM um relatório neste formato:
+Não é necessário exportar cada sessão.
 
-```text
-SESSION_REPORT
-participant: pNNN
-competition: <id>
-subject: <id>
-pack_version: <version>
-date: YYYY-MM-DD
-
-covered:
-- tópicos realmente trabalhados
-
-performance:
-- acertos firmes
-- acertos instáveis
-- erros
-- chutes
-
-error_patterns:
-- padrões recorrentes e confusões específicas
-
-source_gaps:
-- ponto em que as fontes não foram suficientes, se houver
-
-recommended_review:
-- conteúdos e tipo de recuperação sugeridos
-
-material_feedback:
-- trechos da apostila/metodologia que pareceram insuficientes ou ambíguos
-END_REPORT
-```
-
-O relatório é **resumo de sessão**, não transcrição questão a questão. Só deve ser persistido no GitHub quando houver utilidade real para continuidade/análise.
-
-## Feedback loop ChatGPT → GitHub
-
-Quando receber relatórios ou quando novas provas/fontes aparecerem, o ChatGPT decide entre três ações:
+Trazer ao ChatGPT somente quando houver valor:
 
 ```text
-problema do estudante → atualização apenas de acompanhamento
-problema recorrente de vários estudantes → melhoria da apostila/metodologia
-nova evidência de banca/fonte → atualização da análise e, se necessário, da apostila
+- questão gerada que parece fora do padrão da banca
+- explicação duvidosa
+- lacuna da apostila
+- recurso do Estúdio que funcionou/mal funcionou
+- resumo curto de dificuldades recorrentes
 ```
 
-Assim o material melhora sem misturar dificuldade individual com verdade curricular.
+Se for útil, usar `SESSION_REPORT`, mas ele é opcional.
 
-## Sincronização manual GitHub → NotebookLM
+## Sincronização GitHub → NotebookLM
 
-NotebookLM não é tratado como espelho automático do repositório. O GitHub mantém o pacote canônico; a cópia no NotebookLM é uma distribuição manual versionada.
+NotebookLM não é espelho automático do GitHub. O GitHub mantém o pack canônico; o usuário substitui/adiciona apenas os arquivos alterados quando sai nova versão.
 
-Quando um subject pack mudar:
+Atualizações pequenas podem aguardar um release para evitar burocracia.
 
-```text
-1. ChatGPT incrementa a versão do MANIFEST.
-2. Atualiza CHANGELOG.
-3. Gera novamente o PDF da apostila/metodologia quando necessário.
-4. O usuário substitui/adiciona os arquivos no NotebookLM.
-5. Confere a versão perguntando ao notebook ou lendo o manifesto carregado.
-```
+## Produto externo e deriva de UI
 
-Atualizações pequenas que não afetam o estudo podem aguardar um release de pacote para evitar sincronização excessiva.
+NotebookLM é um produto externo e seus controles podem mudar. Detalhes da interface observados não devem virar invariantes arquiteturais.
 
-## Papel do GitHub
+Ao continuar este projeto em outro chat:
 
-Guardar de forma auditável:
-
-```text
-análise do edital
-análise de provas e banca
-mapas de conteúdo
-apostilas
-metodologias por matéria
-manifests e changelogs
-prompts/protocolos de geração
-índices de fontes
-relatórios de QA
-opcionalmente, resumos de progresso por participante
-```
-
-Não é objetivo da V0.1 transformar o GitHub em banco de respostas, LMS ou motor de quiz.
-
-## Papel do ChatGPT
-
-O ChatGPT é a camada de engenharia intelectual:
-
-```text
-pesquisar/verificar
-analisar provas
-criar e atualizar apostilas
-criar metodologia específica por matéria
-fazer QA contra edital e fontes
-comparar versões
-integrar feedback dos notebooks
-manter o repositório recuperável por qualquer chat
-```
-
-Ele também pode estudar diretamente com o usuário quando isso for conveniente, mas esse não é o requisito central do sistema.
+- confiar nos princípios do repositório;
+- se a UI do NotebookLM tiver mudado, verificar o comportamento atual antes de reescrever a metodologia;
+- preferir sempre a solução de menor fricção que mantenha fidelidade às fontes e à banca.
 
 ## Definition of Done da V0.1
 
-A V0.1 está realmente utilizável quando uma matéria completa possuir um subject pack aprovado, o usuário conseguir criar um NotebookLM a partir dele em poucos minutos, estudar sem depender de contexto de chat anterior e retornar feedback suficiente para o ChatGPT melhorar o pacote.
+Uma matéria está aprovada quando o usuário consegue:
+
+1. montar o notebook em poucos minutos;
+2. abrir um recurso nativo do Estúdio sem precisar de receita complexa;
+3. obter conteúdo coerente com edital e corpus da banca;
+4. usar o chat somente quando realmente precisar de aprofundamento;
+5. estudar sem depender do contexto de um chat anterior;
+6. reportar um problema ao ChatGPT de forma simples quando algo não funcionar.
 
 Depois disso, o padrão é replicado matéria por matéria.
