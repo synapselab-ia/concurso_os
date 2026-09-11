@@ -4,8 +4,8 @@
 project_state: active
 phase: subject_pack_content_rebuild
 branch: main
-last_implementation_branch: docs/notebooklm-conversation-config
-current_task: APOSTILA-002 rebuild Portuguese apostila for NotebookLM
+last_implementation_branch: docs/apostila-authoring-protocol
+current_task: APOSTILA-002 rebuild Portuguese apostila using canonical authoring protocol
 completed:
   - repository foundation merged
   - chat-independent continuity active
@@ -25,39 +25,47 @@ completed:
   - native Test without methodology generated quiz directly about apostila content
   - NotebookLM chat followed operational methodology substantially better than native Test
   - DEC-0015 superseded by DEC-0016
-  - DEC-0016 adopted: APOSTILA is student content; analysis/source/manifest/changelog stay backoffice
   - content-first architecture merged in PR 9
   - NotebookLM custom conversation configuration observed in real UI
-  - DEC-0017 adopted: tutor instructions belong in native conversation configuration, not notebook sources
+  - DEC-0017 adopted and conversation-config architecture merged in PR 10
   - Portuguese MANIFEST/METODOLOGIA advanced to 1.0.3 without changing apostila/PDF bytes
-  - METODOLOGIA_NOTEBOOKLM now contains a pasteable canonical configuration block
-  - project spec, architecture, data model and stack aligned with source-vs-conversation-config separation
+  - DEC-0018 adopted: canonical apostila authoring protocol required for major creation/rebuilds
+  - APOSTILA_AUTHORING_PROTOCOL created with coverage matrix, domain profiles, NotebookLM engineering and 10 QA gates
+  - AGENTS and START_HERE require/read the authoring protocol for apostila work
+  - PROJECT_SPEC and ARCHITECTURE aligned with protocol-driven authoring
+  - QA_PROTOCOL extended to require semantic editorial QA in addition to deterministic verify
+  - APOSTILA-002 rewritten to apply the protocol explicitly
 in_progress:
-  - hand off to next chat for Portuguese apostila rebuild as primary NotebookLM study source
+  - hand off to next chat for Portuguese 2.0.0 reconstruction under APOSTILA_AUTHORING_PROTOCOL
 not_started:
-  - APOSTILA-002 content audit and rewrite
-  - new Portuguese PDF release after rewrite
+  - APOSTILA-002 audit of current Portuguese apostila
+  - Portuguese coverage/authoring matrix
+  - new pedagogical outline
+  - Portuguese 2.0.0 content rewrite
+  - semantic QA gates for Portuguese 2.0.0
+  - new Portuguese PDF release and PDF QA
   - NotebookLM validation using rebuilt apostila as clean corpus
   - SubjectPacks for remaining subjects
 blockers: []
 validation:
   command: python tools/verify.py
   result: not_executed_current_environment
-  reason: local runtime cannot resolve github.com; clone of docs/notebooklm-conversation-config failed before gate execution
+  reason: local runtime cannot resolve github.com; clone of docs/apostila-authoring-protocol failed before gate execution
   attempted_at: 2026-09-11
   clone_error: Could not resolve host github.com
   static_diff_review: pass
-  branch_base: 0099aea4309e99143c587052838f7bd6fd2695cf
-  change_scope: documentation_and_notebooklm_configuration_only
-  changed_files_reviewed_before_checkpoint: 10
+  critical_readback: pass
+  changed_files_reviewed: 10
+  branch_base: b2bfd8248e744c61e77278e4c975192e86f4429c
+  change_scope: documentation_and_authoring_protocol_only
   binary_changes: none
   apostila_md_changed: false
   apostila_pdf_changed: false
-  critical_readback: pass
 ci: disabled
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
 last_subject_pack_pull_request: 7
 last_usability_pull_request: 8
 last_content_first_pull_request: 9
+last_conversation_config_pull_request: 10
 ```

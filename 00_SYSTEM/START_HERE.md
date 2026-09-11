@@ -20,6 +20,7 @@ Antes de qualquer alteração, confirme no GitHub a branch real, PRs abertos e o
 ## Mapa de protocolos
 
 - continuidade entre chats/agentes: `CONTINUITY_PROTOCOL.md`
+- autoria/reconstrução de apostilas: `APOSTILA_AUTHORING_PROTOCOL.md`
 - estudo: `STUDY_PROTOCOL.md`
 - avaliação: `ASSESSMENT_PROTOCOL.md`
 - domínio: `MASTERY_PROTOCOL.md`
@@ -27,3 +28,5 @@ Antes de qualquer alteração, confirme no GitHub a branch real, PRs abertos e o
 - fontes: `SOURCE_POLICY.md`
 - garantia de qualidade: `QA_PROTOCOL.md`
 - decisões arquiteturais: `DECISION_LOG.md`
+
+Ao criar ou reconstruir substancialmente uma `APOSTILA.md`/`APOSTILA.pdf`, ler `APOSTILA_AUTHORING_PROTOCOL.md` **antes de começar a redação**.

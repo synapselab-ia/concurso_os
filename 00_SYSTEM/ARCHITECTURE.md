@@ -10,6 +10,8 @@ fontes oficiais + provas + análise empírica
                ChatGPT
         pesquisa / autoria / QA
                   ↓
+     APOSTILA_AUTHORING_PROTOCOL
+                  ↓
                 GitHub
         backoffice + SubjectPack
                   ↓
@@ -29,6 +31,7 @@ Fonte canônica de:
 - edital e mapa do concurso;
 - registro de fontes;
 - provas e análise de banca referenciadas;
+- protocolo de autoria das apostilas;
 - apostilas editáveis e PDFs de distribuição;
 - instruções versionadas para o chat do NotebookLM;
 - manifests/changelogs;
@@ -44,12 +47,32 @@ Responsável por:
 - pesquisar e verificar;
 - analisar edital, provas e banca;
 - decidir prioridades editoriais;
+- aplicar `APOSTILA_AUTHORING_PROTOCOL.md`;
 - escrever e reescrever apostilas;
 - produzir exemplos e exercícios;
 - fazer QA source-grounded;
 - manter a continuidade canônica no GitHub.
 
 A análise de banca deve melhorar silenciosamente o material do estudante. Não é necessário transformar o aluno em leitor da análise da análise.
+
+### Protocolo de autoria
+
+`00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` é a camada canônica entre pesquisa/análise e release de uma apostila.
+
+Ele exige:
+
+```text
+escopo e fontes
+→ matriz de cobertura/autoria
+→ sumário pedagógico
+→ redação adaptada ao domínio
+→ QA editorial
+→ QA NotebookLM
+→ PDF + QA textual/visual
+→ release
+```
+
+O protocolo padroniza o processo de qualidade, não o formato de todas as matérias. Direito, Português, Matemática, RLM, Informática, Atualidades e Redação têm perfis didáticos próprios dentro do mesmo sistema de gates.
 
 ### NotebookLM
 
@@ -88,6 +111,7 @@ CONFIGURAÇÃO DA CONVERSA
 Não carregar por padrão no notebook:
 
 - `METODOLOGIA_NOTEBOOKLM.md` como fonte;
+- `APOSTILA_AUTHORING_PROTOCOL.md`;
 - `ANALISE_BANCA.md`;
 - `MANIFEST.md`;
 - `SOURCES.md`;
@@ -110,7 +134,7 @@ Por isso, a arquitetura final da V0.1 separa:
 ```text
 conteúdo estudável → fontes
 comportamento do tutor → configuração da conversa
-engenharia editorial → GitHub/ChatGPT
+engenharia editorial → GitHub/ChatGPT + protocolo de autoria
 ```
 
 ## Unidade canônica de entrega
@@ -127,6 +151,8 @@ ANALISE_BANCA.md                # backoffice
 SOURCES.md                      # backoffice
 CHANGELOG.md                    # backoffice
 ```
+
+`APOSTILA_AUTHORING_PROTOCOL.md` é sistêmico e compartilhado por todos os SubjectPacks; não é duplicado dentro de cada matéria.
 
 ## Participantes
 
@@ -146,7 +172,7 @@ A arquitetura não depende do texto exato do botão. O princípio permanente é:
 
 ## Continuidade
 
-Chats são descartáveis. Decisões, versões de pacote, estado de produção e próxima ação devem permanecer no repositório.
+Chats são descartáveis. Decisões, versões de pacote, estado de produção, etapa do protocolo de autoria e próxima ação devem permanecer no repositório.
 
 ## Especificação detalhada
 

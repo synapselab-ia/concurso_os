@@ -8,6 +8,8 @@ Construir um sistema de preparação para concursos assistido por IA em que o Gi
 
 Produzir e versionar `SubjectPacks` reutilizáveis por matéria. O produto principal para o estudante é uma **apostila forte, autocontida e adequada aos recursos do NotebookLM**. Edital, provas, análise de banca, fontes, QA e decisões editoriais permanecem no GitHub como backoffice do projeto.
 
+A criação e reconstrução substancial de apostilas segue `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, que padroniza cobertura, processo editorial e QA sem impor o mesmo formato didático a matérias diferentes.
+
 Cada pack também contém `METODOLOGIA_NOTEBOOKLM.md`, mas esse arquivo tem função restrita: registrar a configuração de comportamento do **chat** do NotebookLM para dúvidas, treino interativo, correção e relatórios de sessão. Ele não é conteúdo da matéria nem deve ser carregado como fonte quando houver configuração nativa da conversa.
 
 Um agente novo deve conseguir recuperar pelo GitHub tanto o estado da produção quanto a próxima ação sem depender de memória de chat.
@@ -32,7 +34,29 @@ Assim:
 - o chat recebe comportamento de tutor pela camada nativa de configuração;
 - não é necessário marcar/desmarcar a metodologia como fonte a cada uso.
 
-Arquivos de engenharia editorial (`ANALISE_BANCA.md`, `SOURCES.md`, `CHANGELOG.md`, `MANIFEST.md`, provas históricas e registros de QA) não entram no notebook por padrão. Eles existem para o ChatGPT produzir uma apostila melhor, não para virar matéria de quiz.
+Arquivos de engenharia editorial (`ANALISE_BANCA.md`, `SOURCES.md`, `CHANGELOG.md`, `MANIFEST.md`, provas históricas, protocolo de autoria e registros de QA) não entram no notebook por padrão. Eles existem para o ChatGPT produzir uma apostila melhor, não para virar matéria de quiz.
+
+## Processo canônico de autoria
+
+Para uma apostila major, o fluxo esperado é:
+
+```text
+edital/syllabus + fontes + provas + análise da banca
+                    ↓
+       matriz de cobertura/autoria
+                    ↓
+           sumário pedagógico
+                    ↓
+        redação adequada ao domínio
+                    ↓
+       QA editorial + QA NotebookLM
+                    ↓
+           PDF + QA visual/textual
+                    ↓
+                release
+```
+
+A análise de banca orienta silenciosamente profundidade, distinções, exemplos e tipos de aplicação. O estudante recebe o resultado didático, não a documentação de engenharia editorial.
 
 ## Não objetivos da V0.1
 
@@ -46,7 +70,7 @@ Arquivos de engenharia editorial (`ANALISE_BANCA.md`, `SOURCES.md`, `CHANGELOG.m
 - obrigar o estudante a administrar o backoffice do projeto;
 - fazer o NotebookLM inferir sozinho o papel de documentos misturados;
 - usar `Teste` nativo como simulador exato de banca quando ele se comporta como quiz sobre as fontes selecionadas;
-- transformar metodologia, análise de banca ou manifest em conteúdo estudável;
+- transformar metodologia, análise de banca, protocolo de autoria ou manifest em conteúdo estudável;
 - depender do nome exato de um controle de UI do NotebookLM.
 
 ## Critério de sucesso
@@ -54,11 +78,12 @@ Arquivos de engenharia editorial (`ANALISE_BANCA.md`, `SOURCES.md`, `CHANGELOG.m
 Uma matéria está operacional quando:
 
 1. sua `APOSTILA.pdf` é boa o suficiente para sustentar estudo, Testes, Cartões, Mapas mentais e demais artefatos sem depender de documentação interna do projeto;
-2. o chat funciona com a apostila como corpus e com as instruções do tutor na configuração nativa da conversa;
-3. o estudante não recebe questões sobre a própria metodologia, manifest ou análise interna;
-4. o GitHub mantém rastreabilidade de por que o material foi escrito daquela forma;
-5. outro chat consegue continuar a autoria/QA pelo estado canônico;
-6. a rotina cotidiana não exige alternar fontes operacionais.
+2. a apostila passou pelos gates aplicáveis de `APOSTILA_AUTHORING_PROTOCOL.md`;
+3. o chat funciona com a apostila como corpus e com as instruções do tutor na configuração nativa da conversa;
+4. o estudante não recebe questões sobre a própria metodologia, manifest ou análise interna;
+5. o GitHub mantém rastreabilidade de por que o material foi escrito daquela forma;
+6. outro chat consegue continuar a autoria/QA pelo estado canônico;
+7. a rotina cotidiana não exige alternar fontes operacionais.
 
 ## Stack canônica
 

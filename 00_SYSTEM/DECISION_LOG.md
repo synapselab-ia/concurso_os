@@ -98,3 +98,37 @@ NotebookLM conversation configuration
 Isso elimina a necessidade cotidiana de marcar/desmarcar a metodologia e evita que instruções operacionais virem conteúdo de Teste, Cartões ou outros artefatos.
 
 Como NotebookLM é produto externo, o nome e a forma desse controle de UI não são invariantes arquiteturais. Se a interface mudar, preservar o princípio: **instruções de comportamento ficam fora do corpus estudável sempre que houver uma camada nativa de configuração equivalente**.
+
+## DEC-0018 — Protocolo canônico de autoria de apostilas
+**Status:** accepted  
+A qualidade da apostila é o principal determinante da qualidade do corpus entregue ao NotebookLM. Portanto, criação e reconstrução substancial de apostilas passam a seguir `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`.
+
+O protocolo padroniza o **processo de qualidade**, sem forçar todas as matérias ao mesmo formato editorial.
+
+Regras principais:
+
+- mapear cobertura do edital/syllabus antes de redigir capítulos;
+- construir uma matriz de autoria com objetivos, conceitos, distinções, aplicações e fontes;
+- usar banca/provas como **engenharia silenciosa** de profundidade, exemplos e armadilhas, sem transformar a apostila em relatório da banca;
+- escrever com densidade suficiente para aprendizado humano e recuperação semântica pelo NotebookLM;
+- adaptar a estrutura ao domínio da matéria (Direito, Português, Matemática, RLM, Informática, Atualidades, Redação etc.);
+- incluir exemplos, contraexemplos, casos-limite e prática autoral quando a compreensão exigir;
+- submeter releases major a gates explícitos de cobertura, exatidão, didática, distinções, prática, coerência com a banca, utilidade para NotebookLM, redundância, PDF e repositório.
+
+Consequência operacional:
+
+```text
+AUTHORING PROTOCOL
+        ↓
+matriz de cobertura/autoria
+        ↓
+sumário pedagógico
+        ↓
+redação por domínio
+        ↓
+QA editorial + QA NotebookLM + QA PDF
+        ↓
+release da apostila
+```
+
+`APOSTILA-002` é o primeiro uso obrigatório do protocolo e servirá como validação prática antes de replicar o padrão para as demais matérias.
