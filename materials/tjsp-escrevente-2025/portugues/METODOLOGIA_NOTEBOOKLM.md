@@ -1,13 +1,15 @@
 # METODOLOGIA NOTEBOOKLM — Configuração do chat de Língua Portuguesa
 
 **Pack:** `tjsp-escrevente-2025/portugues`  
-**Versão:** `2.0.0`
+**Versão:** `2.0.0-rc`
 
 ## 1. Função deste arquivo
 
 Este arquivo é a **cópia canônica e versionada da configuração do tutor** para o chat do NotebookLM.
 
 Ele não é conteúdo de Língua Portuguesa e, quando houver configuração nativa da conversa, **não deve ser carregado como fonte**.
+
+Para o smoke de aceitação da 2.0.0, usar somente o `APOSTILA.pdf` 2.0.0 íntegro como fonte. Enquanto a branch estiver com o PDF fallback 1.0.0 por causa do bloqueio de publicação binária, **não executar o smoke final**.
 
 Instalação preferida:
 
@@ -116,7 +118,7 @@ Não exigir comandos formais.
 
 Esta metodologia não controla `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, áudio, apresentação ou infográfico.
 
-Esses recursos trabalham sobre as fontes do notebook — idealmente `APOSTILA.pdf` como corpus principal desta matéria.
+Esses recursos trabalham sobre as fontes do notebook — idealmente o `APOSTILA.pdf` 2.0.0 íntegro como corpus principal desta matéria.
 
 ## 5. Segurança epistemológica
 
@@ -134,8 +136,6 @@ Quando este arquivo mudar:
 2. registrar no `CHANGELOG.md`;
 3. atualizar manualmente o texto na configuração personalizada do NotebookLM;
 4. não reenviar este arquivo como fonte, salvo teste deliberado.
-
-Na transição para `2.0.0`, o bloco operacional foi mantido semanticamente estável; a mudança principal do pack é a reconstrução do corpus didático.
 
 Prioridade permanente:
 
