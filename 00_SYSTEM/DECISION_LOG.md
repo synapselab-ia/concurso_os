@@ -9,12 +9,12 @@ Chats não carregam estado autoritativo do projeto.
 Participant, Enrollment e Competition são entidades distintas.
 
 ## DEC-0003 — Eventos append-only
-**Status:** accepted  
-Evidência histórica é imutável; métricas são projeções reconstruíveis.
+**Status:** accepted, experimental for study telemetry  
+Evidência histórica é imutável; métricas são projeções reconstruíveis. O uso de eventos questão a questão deixou de ser requisito da V0.1 por DEC-0013.
 
-## DEC-0004 — Competência é a unidade pedagógica principal
+## DEC-0004 — Competência é uma unidade pedagógica útil
 **Status:** accepted  
-Questões são instrumentos de observação, não a fonte principal do estado de domínio.
+Questões são instrumentos de observação, não a fonte principal do conhecimento. Competências podem apoiar análise e materiais sem exigir um motor próprio de mastery.
 
 ## DEC-0005 — Repositório público durante produção
 **Status:** accepted  
@@ -30,7 +30,7 @@ Um agente novo deve recuperar o projeto somente pelo repositório.
 
 ## DEC-0008 — Kernel sem condicionais por pessoa
 **Status:** accepted  
-Comportamento específico deve vir de configuração/evidência, nunca de `if participant == ...`.
+Comportamento específico deve vir de configuração/material/feedback, nunca de `if participant == ...`.
 
 ## DEC-0009 — Merge autônomo após validação
 **Status:** accepted  
@@ -38,12 +38,20 @@ Durante a fase de desenvolvimento, PRs podem ser mescladas sem aprovação manua
 
 ## DEC-0010 — Edital vigente prevalece sobre provas históricas
 **Status:** accepted  
-No adapter `tjsp-escrevente-2025`, o Edital de Abertura n.º 02/2025 controla estrutura, distribuição, escopo e regras eliminatórias. A prova de 2025 é a referência empírica mais próxima para forma e estilo. Provas de 2024, 2023 e 2021 são históricas e não podem sobrescrever o blueprint atual, inclusive porque possuíam estrutura objetiva distinta.
+No adapter `tjsp-escrevente-2025`, o Edital de Abertura n.º 02/2025 controla estrutura, distribuição, escopo e regras eliminatórias. A prova de 2025 é a referência empírica mais próxima para forma e estilo. Provas de 2024, 2023 e 2021 são históricas e não podem sobrescrever o blueprint atual.
 
 ## DEC-0011 — Binários-fonte não são copiados para o repositório público
 **Status:** accepted  
-Durante a fase pública de produção, PDFs e outros binários de fonte não são republicados no GitHub. A rastreabilidade é mantida por `source_id`, nome original, autoridade/URL quando disponível, hash SHA-256 e tamanho. Uma futura política de arquivos poderá alterar isso sem perder a identidade da fonte.
+Durante a fase pública de produção, PDFs e outros binários de fonte não são republicados no GitHub. A rastreabilidade é mantida por `source_id`, nome original, autoridade/URL quando disponível, hash SHA-256 e tamanho. Materiais autorais produzidos pelo projeto podem ser publicados normalmente.
 
-## DEC-0012 — Evidência real só entra após o pipeline de projeção estar pronto
+## DEC-0012 — Baseline real pausado durante a fase de engenharia
+**Status:** superseded by DEC-0013  
+A decisão interrompeu corretamente a coleta real iniciada cedo demais. A V0.1 agora não depende de baseline nem de pipeline de projeção questão a questão.
+
+## DEC-0013 — Stack pedagógica canônica: GitHub + ChatGPT + NotebookLM
 **Status:** accepted  
-Não coletar baseline real de participantes enquanto o contrato de eventos, a política de correção/eligibilidade, a projeção de estado por participante e o scheduler ainda não estiverem implementados e testados. Até lá, desenvolvimento usa fixtures sintéticas. Evidência real coletada prematuramente permanece no histórico append-only, mas deve ser explicitamente anotada como `preflight` e excluída das projeções de domínio até revalidação.
+A V0.1 usa GitHub como memória canônica de análise e materiais, ChatGPT como camada de pesquisa/autoria/QA e NotebookLM como principal ambiente de estudo source-grounded. O objeto de entrega passa a ser um `SubjectPack` versionado por matéria (apostila, análise de banca, metodologia NotebookLM, manifesto de fontes e changelog). Rastreamento questão a questão, mastery projection e scheduler próprio ficam fora do caminho crítico até demonstrarem benefício real.
+
+## DEC-0014 — Sincronização NotebookLM é manual e versionada
+**Status:** accepted  
+NotebookLM não é tratado como espelho do GitHub. Cada subject pack possui versão explícita; arquivos canônicos são exportados pelo projeto e carregados/substituídos manualmente no notebook. Feedback de sessão pode retornar ao ChatGPT em relatório resumido, sem exigir transcrição de todas as questões.
