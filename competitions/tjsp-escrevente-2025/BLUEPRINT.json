@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "source_ref": "SRC-TJSP-EDITAL-2025-02",
+  "objective": {
+    "questions": 70,
+    "alternatives_per_question": 5,
+    "equal_question_weight": true,
+    "score_scale": [0, 10],
+    "minimum_overall_score": 5.0,
+    "blocks": [
+      {
+        "block_id": "B1",
+        "name": "Língua Portuguesa",
+        "questions": 16,
+        "eliminatory": true,
+        "minimum_correct_fraction": 0.5,
+        "subjects": [
+          {"subject_id": "portuguese", "name": "Língua Portuguesa", "questions": 16}
+        ]
+      },
+      {
+        "block_id": "B2",
+        "name": "Conhecimentos em Direito",
+        "questions": 30,
+        "eliminatory": true,
+        "minimum_correct_fraction": 0.5,
+        "subjects": [
+          {"subject_id": "law", "name": "Conhecimentos em Direito", "questions": 30}
+        ]
+      },
+      {
+        "block_id": "B3",
+        "name": "Conhecimentos Gerais",
+        "questions": 24,
+        "eliminatory": false,
+        "subjects": [
+          {"subject_id": "current_affairs_lbi", "name": "Atualidades e Estatuto da Pessoa com Deficiência", "questions": 4},
+          {"subject_id": "mathematics", "name": "Matemática", "questions": 4},
+          {"subject_id": "informatics", "name": "Informática", "questions": 9},
+          {"subject_id": "logic", "name": "Raciocínio Lógico", "questions": 7}
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "type": "dissertative_argumentative",
+    "eliminatory": true,
+    "language": "pt-BR",
+    "same_session_as_objective": true,
+    "session_duration_hours": 5,
+    "rules_file": "REDACAO_PROTOCOL.md"
+  },
+  "scheduler_constraints": [
+    "Do not optimize only for global question share.",
+    "Protect elimination risk in B1 and B2 before maximizing expected total score.",
+    "Treat B3 as classificatory, not eliminatory.",
+    "Track writing as a separate eliminatory risk dimension."
+  ]
+}

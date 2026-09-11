@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1",
+  "catalog_id": "core-v0.1",
+  "competencies": [
+    {"competency_id":"PT.TEXT.INTERPRET_LITERAL_INFERENCE","domain":"portuguese","description":"Distinguir informação literal, inferência válida e extrapolação em textos."},
+    {"competency_id":"PT.TEXT.COHESION_RELATIONS","domain":"portuguese","description":"Identificar relações de sentido, coesão e articulação entre trechos."},
+    {"competency_id":"PT.LEX.CONTEXT_MEANING","domain":"portuguese","description":"Determinar sentido contextual, sinonímia, antonímia e emprego figurado."},
+    {"competency_id":"PT.GRAM.AGREEMENT","domain":"portuguese","description":"Aplicar concordância verbal e nominal em contexto."},
+    {"competency_id":"PT.GRAM.REGENCY_CRASE","domain":"portuguese","description":"Aplicar regência verbal/nominal e crase em contexto."},
+    {"competency_id":"PT.GRAM.PUNCTUATION_PRONOUNS","domain":"portuguese","description":"Avaliar pontuação e colocação pronominal segundo a norma-padrão."},
+
+    {"competency_id":"LAW.PENAL.TYPICITY_ELEMENTS","domain":"law","description":"Reconhecer elementos, requisitos, sujeitos, finalidades e distinções de tipos penais dentro do escopo aplicável."},
+    {"competency_id":"LAW.CPP.PROCEDURE_AND_DEADLINES","domain":"law","description":"Aplicar regras processuais penais, procedimentos, atos, recursos e prazos dentro do escopo aplicável."},
+    {"competency_id":"LAW.CPC.PROCEDURE_AND_REMEDIES","domain":"law","description":"Aplicar regras processuais civis, tutelas, atos, procedimentos e recursos dentro do escopo aplicável."},
+    {"competency_id":"LAW.CONST.EXPRESS_TEXT","domain":"law","description":"Reconhecer e aplicar o texto constitucional expressamente abrangido pelo programa."},
+    {"competency_id":"LAW.ADMIN.PUBLIC_SERVANT_IMPROBITY","domain":"law","description":"Aplicar regras sobre servidores estaduais e improbidade administrativa dentro do escopo aplicável."},
+    {"competency_id":"LAW.TJSP.INTERNAL_RULES","domain":"law","description":"Aplicar legislação interna, regimento e normas da Corregedoria abrangidas pelo concurso."},
+
+    {"competency_id":"GA.CURRENT.EVENT_CONTEXT","domain":"current_affairs","description":"Identificar contexto factual e consequências de acontecimentos contemporâneos dentro da janela temporal do concurso."},
+    {"competency_id":"LAW.LBI.RIGHTS_AND_WORK","domain":"law","description":"Aplicar direitos, definições e regras de trabalho da Lei Brasileira de Inclusão no recorte exigido."},
+
+    {"competency_id":"MATH.RATIO_PERCENT_RULE3","domain":"mathematics","description":"Resolver razão, proporção, porcentagem e regra de três em situações-problema."},
+    {"competency_id":"MATH.ALGEBRA_AVERAGE","domain":"mathematics","description":"Resolver equações, sistemas, médias e problemas algébricos elementares."},
+    {"competency_id":"MATH.GEOMETRY_MEASURES","domain":"mathematics","description":"Resolver problemas de medidas, perímetro, área, volume, ângulos e Pitágoras."},
+
+    {"competency_id":"IT.OFFICE.WORD_EXCEL","domain":"informatics","description":"Resolver tarefas conceituais e operacionais sobre Word e Excel no escopo do edital."},
+    {"competency_id":"IT.WINDOWS_FILES_ONEDRIVE","domain":"informatics","description":"Resolver tarefas sobre Windows, arquivos, pastas e OneDrive."},
+    {"competency_id":"IT.INTERNET_MAIL_TEAMS","domain":"informatics","description":"Resolver tarefas sobre internet, URL, correio eletrônico e Microsoft Teams."},
+
+    {"competency_id":"LOGIC.PROPOSITIONS_ARGUMENTS","domain":"logic","description":"Analisar proposições, conectivos, negações, equivalências e argumentos."},
+    {"competency_id":"LOGIC.RELATIONS_DIAGRAMS","domain":"logic","description":"Deduzir informações em relações arbitrárias e diagramas lógicos."},
+    {"competency_id":"LOGIC.SEQUENCES","domain":"logic","description":"Identificar padrões e determinar termos de sequências numéricas ou figurais."},
+
+    {"competency_id":"WRITING.ARGUMENTATIVE.COHERENCE","domain":"writing","description":"Construir tese e desenvolvimento dissertativo-argumentativo coerente, autônomo e aderente ao tema."},
+    {"competency_id":"WRITING.FORMAL_LANGUAGE_COHESION","domain":"writing","description":"Empregar norma-padrão, precisão lexical, paragrafação e recursos coesivos adequados."}
+  ]
+}

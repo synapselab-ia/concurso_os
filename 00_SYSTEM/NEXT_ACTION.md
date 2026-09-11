@@ -1,14 +1,17 @@
 # NEXT_ACTION
 
-## BOOT-002 — Validar fundação e criar primeiro adapter
+## BASE-001 — Executar baseline inicial de `p001` no TJSP
 
-Após a PR de fundação ser revisada/mesclada:
+Pré-condições já satisfeitas: adapter, fontes, blueprint, enrollment e mapa mínimo de competências existem.
 
-1. criar o adapter do primeiro concurso real;
-2. registrar suas fontes canônicas;
-3. mapear blocos, regras eliminatórias e estrutura de prova;
-4. criar o primeiro enrollment real sem dados sensíveis;
-5. definir o primeiro pacote mínimo de competências;
-6. gerar baseline inicial somente depois do adapter existir.
+Próxima execução com participação do estudante:
 
-Não construir frontend, banco, autenticação ou CI antes disso.
+1. carregar `competitions/tjsp-escrevente-2025/BASELINE_PLAN.json`;
+2. aplicar o `stage_1` uma questão por vez, registrando resposta e confiança antes da correção;
+3. usar questões inéditas por padrão e corrigir com fonte apropriada;
+4. persistir cada observação como `EvidenceEvent` append-only no enrollment de `p001`;
+5. não atribuir `MASTERED` com base nesse rastreio inicial;
+6. ao concluir o stage 1, produzir o primeiro estado derivado e definir o stage 2 adaptativo;
+7. fazer o writing screen depois do stage 1 objetivo.
+
+O baseline exige respostas reais de `p001`; não inventar evidência para avançar o estado.

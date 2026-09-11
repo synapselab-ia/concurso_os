@@ -35,3 +35,11 @@ Comportamento específico deve vir de configuração/evidência, nunca de `if pa
 ## DEC-0009 — Merge autônomo após validação
 **Status:** accepted  
 Durante a fase de desenvolvimento, PRs podem ser mescladas sem aprovação manual a cada merge quando o agente responsável tiver revisado o diff, confirmado ausência de mudança destrutiva não prevista e executado o gate canônico ou documentado por que ele não pôde ser executado. Mudanças com impacto externo irreversível continuam exigindo autorização específica quando aplicável.
+
+## DEC-0010 — Edital vigente prevalece sobre provas históricas
+**Status:** accepted  
+No adapter `tjsp-escrevente-2025`, o Edital de Abertura n.º 02/2025 controla estrutura, distribuição, escopo e regras eliminatórias. A prova de 2025 é a referência empírica mais próxima para forma e estilo. Provas de 2024, 2023 e 2021 são históricas e não podem sobrescrever o blueprint atual, inclusive porque possuíam estrutura objetiva distinta.
+
+## DEC-0011 — Binários-fonte não são copiados para o repositório público
+**Status:** accepted  
+Durante a fase pública de produção, PDFs e outros binários de fonte não são republicados no GitHub. A rastreabilidade é mantida por `source_id`, nome original, autoridade/URL quando disponível, hash SHA-256 e tamanho. Uma futura política de arquivos poderá alterar isso sem perder a identidade da fonte.

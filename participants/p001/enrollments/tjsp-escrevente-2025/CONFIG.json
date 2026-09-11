@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "participant_id": "p001",
+  "competition_id": "tjsp-escrevente-2025",
+  "status": "active",
+  "started_at": "2026-09-11",
+  "study_mode": "adaptive",
+  "relationship_to_official_contest": "study_reference",
+  "official_candidate_status": "unknown",
+  "goal": "Prepare using the latest available real TJSP Escrevente blueprint and migrate to a newer edital when one becomes canonical.",
+  "baseline": {
+    "plan_id": "tjsp-baseline-v0.1",
+    "status": "pending",
+    "evidence_events_recorded": 0
+  },
+  "privacy": "public_minimal"
+}
