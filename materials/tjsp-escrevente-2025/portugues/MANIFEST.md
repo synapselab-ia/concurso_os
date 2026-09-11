@@ -2,28 +2,30 @@
 
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `portugues`  
-**Pack version:** `1.0.2`  
+**Pack version:** `1.0.3`  
 **Status:** `content-rebuild-pending`  
 **Release date:** `2026-09-11`
 
 ## Objetivo
 
-Este pack separa o que é **conteúdo do estudante** do que é **backoffice** e do que é **instrução do chat**.
+Este pack separa o que é **conteúdo do estudante**, o que é **configuração do tutor** e o que é **backoffice**.
 
-A versão `1.0.2` corrige a arquitetura de uso do NotebookLM após os smoke tests reais. A apostila/PDF ainda é a mesma distribuição de `1.0.0`; sua reconstrução qualitativa é a próxima ação canônica.
+A versão `1.0.3` mantém a apostila/PDF atuais, mas melhora a instalação do NotebookLM: as instruções do chat deixam de ser carregadas como fonte e passam a ser usadas na configuração nativa da conversa (`Personalizado` ou equivalente).
+
+A reconstrução qualitativa da apostila continua sendo a próxima ação canônica.
 
 ## Arquivos canônicos do pack
 
 - `APOSTILA.md` — fonte autoral editável do material do estudante.
 - `APOSTILA.pdf` — distribuição atual para o NotebookLM.
-- `METODOLOGIA_NOTEBOOKLM.md` — **instrução exclusiva do chat**, não conteúdo.
+- `METODOLOGIA_NOTEBOOKLM.md` — configuração versionada do tutor no chat; **não é fonte de conteúdo**.
 - `ANALISE_BANCA.md` — backoffice editorial.
 - `SOURCES.md` — proveniência/backoffice.
 - `CHANGELOG.md` — histórico de versão/backoffice.
 
 ## Apostila PDF atual
 
-A versão `1.0.2` não altera o PDF. Ele continua sendo o artefato validado originalmente em `1.0.0`:
+A versão `1.0.3` não altera o PDF. Ele continua sendo o artefato validado originalmente em `1.0.0`:
 
 - páginas: `8`;
 - tamanho: `13950 bytes`;
@@ -32,64 +34,48 @@ A versão `1.0.2` não altera o PDF. Ele continua sendo o artefato validado orig
 
 **Importante:** o PDF atual não é considerado qualidade final para replicação. `APOSTILA-002` deverá reconstruí-lo.
 
-## O que carregar no NotebookLM
+## Instalação no NotebookLM
 
-Carregue somente:
+### Fontes
+
+Carregue como fonte, por padrão:
 
 1. `APOSTILA.pdf`
-2. `METODOLOGIA_NOTEBOOKLM.md`
 
-Não carregar por padrão:
+Não carregar como fonte:
 
+- `METODOLOGIA_NOTEBOOKLM.md`;
 - `ANALISE_BANCA.md`;
 - `MANIFEST.md`;
 - `SOURCES.md`;
 - `CHANGELOG.md`;
-- edital e provas históricas apenas para dar contexto de projeto.
+- edital/provas históricas apenas para dar contexto de projeto.
 
-Esses documentos permanecem no GitHub/ChatGPT para análise, autoria e QA.
+Esses documentos permanecem no GitHub/ChatGPT para análise, autoria, QA ou configuração.
 
-## Como selecionar as fontes
+### Configurar as conversas
 
-### Estúdio
+Na interface observada do NotebookLM:
 
-Para `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, Áudio, Apresentação, Infográfico e equivalentes:
+1. abrir `Configurar as conversas`;
+2. escolher `Personalizado`;
+3. copiar o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` para o campo de meta/estilo/papel;
+4. manter `Tamanho da resposta = Padrão` inicialmente;
+5. salvar.
 
-```text
-[x] APOSTILA.pdf
-[ ] METODOLOGIA_NOTEBOOKLM.md
-```
-
-A metodologia deve ficar **desmarcada** para que o NotebookLM não produza questões ou cartões sobre as próprias instruções.
-
-### Chat
-
-Para tirar dúvidas, pedir explicação, fazer treino interativo, corrigir uma questão ou pedir relatório da sessão:
-
-```text
-[x] APOSTILA.pdf
-[x] METODOLOGIA_NOTEBOOKLM.md
-```
-
-O chat deve usar a metodologia como comportamento e a apostila como conteúdo.
-
-## O que os smoke tests mostraram
-
-- Com a metodologia incluída no `Teste`, o NotebookLM gerou pergunta sobre a própria metodologia.
-- Sem a metodologia, o `Teste` gerou pergunta conceitual diretamente baseada na apostila, confirmando que o recurso funciona como quiz sobre a fonte selecionada.
-- No chat, a metodologia funcionou melhor: questão por vez, alternativas A–E, resposta + confiança e possibilidade de relatório da sessão.
-
-Por isso, a V0.1 não tenta mais fazer um corpus misto cumprir todos os papéis.
+Se os nomes da interface mudarem, usar o controle equivalente de instruções persistentes da conversa.
 
 ## Uso cotidiano
 
-### Para estudar com Estúdio
+Depois da instalação:
 
-Escolha um recurso e deixe apenas a apostila marcada. Não precisa citar TJSP/VUNESP nem administrar documentação interna do projeto.
+- **Estúdio:** usar normalmente com a apostila como fonte;
+- **Chat:** conversar normalmente; as instruções do tutor já ficam na configuração da conversa;
+- não precisa marcar/desmarcar metodologia;
+- não precisa citar TJSP/VUNESP a cada comando;
+- não precisa administrar os arquivos de backoffice dentro do notebook.
 
-### Para usar o chat
-
-Deixe apostila + metodologia marcadas e fale normalmente, por exemplo:
+Exemplos de chat:
 
 - `não entendi este tópico`
 - `me explica por que a B está errada`
@@ -97,9 +83,16 @@ Deixe apostila + metodologia marcadas e fale normalmente, por exemplo:
 - `faz mais uma questão`
 - `resume meus acertos, erros e dúvidas desta sessão`
 
+## O que os smoke tests mostraram
+
+- Com a metodologia incluída no `Teste`, o NotebookLM gerou pergunta sobre a própria metodologia.
+- Sem a metodologia, o `Teste` gerou pergunta conceitual diretamente baseada na apostila.
+- No chat, a metodologia funcionou melhor: questão por vez, alternativas A–E, resposta + confiança e possibilidade de relatório da sessão.
+- A interface do NotebookLM também oferece configuração personalizada da conversa, que é um canal mais apropriado para as instruções do tutor do que uma fonte documental.
+
 ## Múltiplos participantes
 
-O mesmo pack pode alimentar notebooks separados para `p001`, `p002`, `p003` etc. O material é compartilhado; histórico pessoal pode permanecer isolado no notebook de cada participante.
+O mesmo SubjectPack pode alimentar notebooks separados para `p001`, `p002`, `p003` etc. O material é compartilhado; histórico pessoal pode permanecer isolado no notebook de cada participante.
 
 ## Próxima versão de conteúdo
 
@@ -107,10 +100,19 @@ A próxima mudança substancial deve reconstruir `APOSTILA.md` e `APOSTILA.pdf` 
 
 Target recomendado após reconstrução: `2.0.0`.
 
+## Atualização
+
+Quando o pack mudar:
+
+- se mudar `APOSTILA.pdf`, substituir a fonte no notebook;
+- se mudar `METODOLOGIA_NOTEBOOKLM.md`, atualizar a configuração personalizada da conversa;
+- se mudar apenas backoffice, nenhuma ação no NotebookLM é necessária.
+
 ## Limites
 
 - não implementa mastery questão a questão;
 - não mistura participantes;
 - não presume que `Teste` nativo simula automaticamente a banca;
 - não transforma backoffice em conteúdo de estudo;
+- não transforma instruções de chat em fonte estudável;
 - detalhes da UI do NotebookLM podem mudar.

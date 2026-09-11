@@ -1,5 +1,35 @@
 # CHANGELOG — Português — TJSP Escrevente 2025
 
+## 1.0.3 — 2026-09-11
+
+Patch de instalação após observar a configuração nativa de conversas do NotebookLM.
+
+### Observado
+
+- o NotebookLM oferece uma configuração própria de conversa em `Configurar as conversas → Personalizado`, destinada a definir meta, estilo ou papel do chat;
+- essa camada é mais apropriada para instruções do tutor do que carregar `METODOLOGIA_NOTEBOOKLM.md` como fonte;
+- a interface observada também oferece controle de tamanho de resposta, mantido em `Padrão` por default do projeto.
+
+### Decisão
+
+- `APOSTILA.pdf` permanece como fonte principal do notebook;
+- `METODOLOGIA_NOTEBOOKLM.md` permanece versionada no GitHub, mas passa a ser **texto de configuração da conversa**, não fonte do NotebookLM;
+- o usuário copia o bloco operacional da metodologia para a configuração `Personalizado` (ou equivalente);
+- Estúdio e chat passam a usar o mesmo corpus didático limpo;
+- deixa de existir a necessidade cotidiana de marcar/desmarcar a metodologia;
+- `DEC-0017` refina `DEC-0016` nesse mecanismo de entrega das instruções.
+
+### Conteúdo não alterado
+
+- `APOSTILA.md` permanece igual ao release 1.0.0;
+- `APOSTILA.pdf` permanece igual ao release 1.0.0;
+- `ANALISE_BANCA.md` permanece igual ao release 1.0.0;
+- `SOURCES.md` permanece igual ao release 1.0.0.
+
+A próxima ação continua sendo reconstruir a apostila, com target recomendado `2.0.0`.
+
+---
+
 ## 1.0.2 — 2026-09-11
 
 Patch arquitetural após smoke tests reais do NotebookLM.

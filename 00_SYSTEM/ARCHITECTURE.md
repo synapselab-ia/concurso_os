@@ -16,7 +16,8 @@ fontes oficiais + provas + análise empírica
        distribuição manual mínima
                   ↓
               NotebookLM
-       APOSTILA + instrução de chat
+      APOSTILA como fonte de estudo
+      + configuração nativa do chat
 ```
 
 ## Papéis
@@ -29,7 +30,7 @@ Fonte canônica de:
 - registro de fontes;
 - provas e análise de banca referenciadas;
 - apostilas editáveis e PDFs de distribuição;
-- metodologia/instruções de chat do NotebookLM;
+- instruções versionadas para o chat do NotebookLM;
 - manifests/changelogs;
 - QA;
 - continuidade entre chats.
@@ -56,33 +57,37 @@ Ambiente principal de estudo por matéria.
 
 A unidade recomendada é um notebook por matéria e, quando houver interesse em histórico individual, por participante.
 
-O NotebookLM recebe dois tipos diferentes de fonte:
+O notebook separa duas camadas:
 
-#### 1. Conteúdo do estudante
+#### 1. Corpus estudável
 
 `APOSTILA.pdf` é a fonte principal. Ela deve ser escrita para suportar leitura, consulta, Testes, Cartões, Mapas mentais, Relatórios, Áudio, Apresentações e demais artefatos nativos.
 
-#### 2. Instrução operacional do chat
+#### 2. Configuração do tutor
 
-`METODOLOGIA_NOTEBOOKLM.md` existe apenas para orientar o **chat**: dúvidas, treino interativo, correção, confiança, reteste local e relatório de sessão.
+`METODOLOGIA_NOTEBOOKLM.md` é o registro canônico, no GitHub, das instruções de comportamento do chat: dúvidas, treino interativo, correção, confiança, reteste local e relatório de sessão.
 
-Ela não é conteúdo da matéria.
+Quando a interface do NotebookLM oferecer uma configuração nativa equivalente a `Configurar as conversas → Personalizado`, o conteúdo operacional da metodologia deve ser colocado **nessa configuração**, e não carregado como fonte.
 
-## Regra de seleção de fontes
+A metodologia continua versionada no SubjectPack, mas não faz parte do corpus estudável.
 
-A V0.1 aceita uma única distinção operacional simples porque os smoke tests mostraram utilidade real:
+## Regra operacional de instalação
+
+Padrão V0.1 observado e preferido:
 
 ```text
-ESTÚDIO
-→ selecionar APOSTILA.pdf
-→ desmarcar METODOLOGIA_NOTEBOOKLM.md
+FONTES DO NOTEBOOKLM
+→ APOSTILA.pdf
 
-CHAT
-→ selecionar APOSTILA.pdf + METODOLOGIA_NOTEBOOKLM.md
+CONFIGURAÇÃO DA CONVERSA
+→ Personalizado
+→ colar as instruções canônicas de METODOLOGIA_NOTEBOOKLM.md
+→ tamanho de resposta: Padrão, salvo necessidade concreta
 ```
 
 Não carregar por padrão no notebook:
 
+- `METODOLOGIA_NOTEBOOKLM.md` como fonte;
 - `ANALISE_BANCA.md`;
 - `MANIFEST.md`;
 - `SOURCES.md`;
@@ -92,13 +97,21 @@ Não carregar por padrão no notebook:
 
 Fontes oficiais adicionais podem ser carregadas quando uma matéria realmente exigir consulta literal, normativa ou técnica; isso deve ser uma necessidade pedagógica concreta, não rotina administrativa.
 
-## O que aprendemos com o smoke test
+## O que aprendemos com os smoke tests
 
-O `Teste` nativo do NotebookLM tratou documentos selecionados como **conteúdo a ser perguntado**. Com metodologia selecionada, gerou questão sobre a própria metodologia; sem ela, gerou questão explicitamente sobre conceitos da apostila. Isso é comportamento útil para revisão do conteúdo, mas não prova que o recurso simula automaticamente o estilo de uma banca.
+O `Teste` nativo do NotebookLM tratou documentos selecionados como **conteúdo a ser perguntado**. Com metodologia selecionada, gerou questão sobre a própria metodologia; sem ela, gerou questão explicitamente sobre conceitos da apostila.
 
-Já o chat, quando recebeu a metodologia, respeitou bem instruções como uma questão por vez, alternativas A–E, resposta + confiança e possibilidade de relatório da sessão.
+Já o chat respeitou bem instruções operacionais como uma questão por vez, alternativas A–E, resposta + confiança e possibilidade de relatório da sessão.
 
-Por isso, a arquitetura deixa de tentar fazer um corpus misto cumprir todos os papéis ao mesmo tempo.
+Depois, a interface mostrou uma camada própria de personalização da conversa. Isso elimina a necessidade de usar a metodologia como fonte apenas para controlar o chat.
+
+Por isso, a arquitetura final da V0.1 separa:
+
+```text
+conteúdo estudável → fontes
+comportamento do tutor → configuração da conversa
+engenharia editorial → GitHub/ChatGPT
+```
 
 ## Unidade canônica de entrega
 
@@ -109,7 +122,7 @@ Competition + Subject
         ↓
 MANIFEST
 APOSTILA.md / APOSTILA.pdf      # produto do estudante
-METODOLOGIA_NOTEBOOKLM.md       # instrução de chat
+METODOLOGIA_NOTEBOOKLM.md       # configuração versionada do chat
 ANALISE_BANCA.md                # backoffice
 SOURCES.md                      # backoffice
 CHANGELOG.md                    # backoffice
@@ -122,6 +135,14 @@ O material é compartilhável. Histórico de conversa, artefatos e relatórios p
 ## Evidência e scheduler
 
 `EvidenceEvent`, mastery projection e scheduler próprio continuam fora do caminho crítico da V0.1. Se o chat do NotebookLM produzir um resumo útil de acertos, erros e dúvidas, o usuário pode exportá-lo ou trazê-lo ao ChatGPT sem registrar cada resposta no GitHub.
+
+## Deriva de produto externo
+
+NotebookLM é produto externo. Nomes, limites e posição dos controles de personalização podem mudar.
+
+A arquitetura não depende do texto exato do botão. O princípio permanente é:
+
+> sempre que houver uma camada nativa de configuração do chat, instruções de comportamento devem ficar fora do corpus estudável.
 
 ## Continuidade
 

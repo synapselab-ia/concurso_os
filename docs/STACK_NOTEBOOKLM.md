@@ -2,7 +2,7 @@
 
 ## Princípio central
 
-A V0.1 separa **engenharia editorial** de **material do estudante**.
+A V0.1 separa **engenharia editorial**, **conteúdo estudável** e **configuração do tutor**.
 
 ```text
 EDITAL + PROVAS + FONTES OFICIAIS
@@ -18,7 +18,7 @@ EDITAL + PROVAS + FONTES OFICIAIS
          NotebookLM
 ```
 
-O estudante não deve estudar a documentação interna do projeto. O NotebookLM não precisa entender por conta própria qual arquivo é metodologia, qual é análise de banca e qual é conteúdo.
+O estudante não deve estudar a documentação interna do projeto. O NotebookLM também não precisa inferir por conta própria qual arquivo é metodologia, qual é análise de banca e qual é conteúdo.
 
 ## Papéis da stack
 
@@ -31,7 +31,7 @@ Guarda o que precisa sobreviver a qualquer chat:
 - provas e análises;
 - `ANALISE_BANCA.md`;
 - `APOSTILA.md` e `APOSTILA.pdf`;
-- `METODOLOGIA_NOTEBOOKLM.md`;
+- `METODOLOGIA_NOTEBOOKLM.md` como configuração versionada do tutor;
 - manifest/changelog;
 - QA e continuidade.
 
@@ -52,44 +52,64 @@ Guarda o que precisa sobreviver a qualquer chat:
 
 É o ambiente de estudo da matéria.
 
-Na V0.1, ele recebe dois papéis de fonte claramente separados:
+Na V0.1, o NotebookLM recebe **conteúdo** e **comportamento do tutor** por canais diferentes:
 
 ```text
+FONTES
 APOSTILA.pdf
 = conteúdo da matéria
 
-METODOLOGIA_NOTEBOOKLM.md
-= instrução do chat
+CONFIGURAÇÃO DA CONVERSA
+conteúdo operacional de METODOLOGIA_NOTEBOOKLM.md
+= comportamento do tutor
 ```
 
-## Regra operacional no NotebookLM
+## Instalação recomendada
 
-### Para o Estúdio
+### 1. Fontes
 
-Ao criar `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, resumo em áudio/vídeo, apresentação, infográfico ou artefato equivalente:
+Carregar como fonte, por padrão:
 
 ```text
-selecionar APOSTILA.pdf
-DESMARCAR METODOLOGIA_NOTEBOOKLM.md
+APOSTILA.pdf
 ```
 
-O objetivo é fazer o Estúdio trabalhar sobre a matéria, não sobre instruções operacionais.
+Não carregar `METODOLOGIA_NOTEBOOKLM.md` como fonte quando houver configuração nativa da conversa.
 
-### Para o chat
+### 2. Configurar as conversas
 
-Ao usar o chat para dúvida, explicação, treino interativo, correção ou relatório de sessão:
+Na interface observada do NotebookLM existe uma configuração equivalente a:
 
 ```text
-selecionar APOSTILA.pdf
-selecionar METODOLOGIA_NOTEBOOKLM.md
+Configurar as conversas
+→ Personalizado
+→ definir meta, estilo ou papel na conversa
 ```
 
-O chat deve tratar a metodologia como instrução, nunca como conteúdo que o aluno precisa memorizar.
+Colar ali o texto operacional mantido em `METODOLOGIA_NOTEBOOKLM.md`.
+
+No estado observado, a interface também oferece escolha de tamanho da resposta. O default do projeto é:
+
+```text
+Tamanho da resposta = Padrão
+```
+
+Só alterar se houver necessidade concreta.
+
+### 3. Uso cotidiano
+
+Depois da instalação:
+
+- não marcar/desmarcar metodologia;
+- não administrar backoffice dentro do notebook;
+- Estúdio e chat usam a mesma apostila;
+- o chat recebe suas regras pela configuração da conversa.
 
 ## O que NÃO carregar no NotebookLM por padrão
 
 Estes arquivos permanecem no GitHub/ChatGPT:
 
+- `METODOLOGIA_NOTEBOOKLM.md` como fonte;
 - `ANALISE_BANCA.md`;
 - `SOURCES.md`;
 - `MANIFEST.md`;
@@ -101,21 +121,23 @@ Uma fonte oficial adicional só deve entrar no notebook quando tiver valor diret
 
 ## Por que essa separação existe
 
-O smoke test de Português mostrou dois comportamentos:
+Os smoke tests de Português mostraram três fatos úteis:
 
 1. com a metodologia selecionada no `Teste`, o NotebookLM gerou pergunta sobre a própria metodologia;
-2. sem a metodologia, o `Teste` passou a perguntar conceitos da apostila — comportamento coerente com um quiz sobre a fonte selecionada, mas não prova de simulação automática da banca.
+2. sem a metodologia, o `Teste` passou a perguntar conceitos da apostila — comportamento coerente com um quiz sobre a fonte selecionada;
+3. no chat, instruções operacionais funcionaram bem para questão por vez, alternativas A–E, confiança, correção e relatório de sessão.
 
-Já o chat respeitou bem instruções como:
+Depois foi observada uma camada própria de `Configurar as conversas → Personalizado`. Essa camada resolve melhor o problema: **comportamento do chat não precisa ocupar um slot de fonte**.
 
-- uma questão por vez;
-- alternativas A–E;
-- aguardar resposta;
-- considerar confiança;
-- corrigir de forma diagnóstica;
-- gerar relatório de acertos/erros/dúvidas.
+Portanto, a solução não é um superprompt nem um corpus maior. É:
 
-Portanto, a solução não é um superprompt nem um corpus maior. É **uma apostila melhor + papéis de fonte separados**.
+```text
+apostila melhor
++
+corpus limpo
++
+configuração nativa do tutor
+```
 
 ## SubjectPack
 
@@ -159,9 +181,9 @@ Backoffice. Sustenta decisões editoriais e QA. Não é fonte de estudo padrão.
 
 ### METODOLOGIA_NOTEBOOKLM.md
 
-Instrução exclusiva do chat.
+É a **configuração versionada do tutor**.
 
-Ela deve dizer ao chat como:
+O arquivo deve conter instruções para:
 
 - responder dúvidas;
 - conduzir treino interativo;
@@ -171,6 +193,8 @@ Ela deve dizer ao chat como:
 - fazer reteste curto quando útil;
 - acompanhar a sessão corrente;
 - gerar `SESSION_REPORT` sob demanda.
+
+O destino operacional preferido é a configuração `Personalizado` da conversa, não a lista de fontes.
 
 Ela não deve conter conteúdo programático desnecessário nem tentar controlar os geradores do Estúdio.
 
@@ -214,7 +238,7 @@ O chat é especialmente útil para:
 - “faça um reteste”;
 - “resuma meus acertos, erros e dúvidas desta sessão”.
 
-A metodologia pode manter contexto da sessão corrente, mas o sistema não presume banco de dados permanente dentro do NotebookLM.
+A configuração do tutor pode manter contexto da sessão corrente, mas o sistema não presume banco de dados permanente dentro do NotebookLM.
 
 ## SESSION_REPORT opcional
 
@@ -252,7 +276,7 @@ O relatório é opcional. Não registrar cada resposta no GitHub por padrão.
 
 ## Múltiplos participantes
 
-O SubjectPack é compartilhável. Se Lucas, Duda ou outra pessoa quiserem preservar histórico pessoal no NotebookLM, usam notebooks separados baseados na mesma apostila/metodologia.
+O SubjectPack é compartilhável. Se participantes diferentes quiserem preservar histórico pessoal no NotebookLM, usam notebooks separados baseados na mesma apostila e na mesma configuração canônica do tutor.
 
 ## Sincronização
 
@@ -262,8 +286,17 @@ Quando o pack mudar:
 
 1. atualizar versão e changelog;
 2. regenerar `APOSTILA.pdf` quando a apostila mudar;
-3. substituir no notebook apenas os arquivos distribuídos que mudaram;
-4. não reenviar documentos de backoffice.
+3. substituir a apostila no notebook apenas quando o PDF mudar;
+4. atualizar a configuração `Personalizado` somente quando `METODOLOGIA_NOTEBOOKLM.md` mudar;
+5. não reenviar documentos de backoffice.
+
+## Deriva de UI
+
+NotebookLM é produto externo. O nome `Configurar as conversas`, a opção `Personalizado`, o limite de caracteres e os controles de tamanho podem mudar.
+
+O princípio arquitetural é mais estável que a UI:
+
+> comportamento do tutor deve usar uma camada de configuração separada do corpus estudável sempre que a ferramenta oferecer essa possibilidade.
 
 ## Definition of Done da matéria
 
@@ -271,6 +304,7 @@ Uma matéria está pronta para replicação quando:
 
 1. a apostila é material de estudo forte por si só;
 2. o Estúdio gera artefatos úteis usando apenas a apostila;
-3. o chat usa apostila + metodologia sem perguntar sobre a metodologia;
+3. o chat usa a apostila como corpus e a configuração nativa como comportamento, sem transformar metodologia em matéria;
 4. dúvidas e sessões podem ser resumidas sem infraestrutura própria;
-5. o backoffice permite auditar e atualizar o material em qualquer chat novo.
+5. o backoffice permite auditar e atualizar o material em qualquer chat novo;
+6. o uso cotidiano não exige alternar fontes operacionais.

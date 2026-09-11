@@ -1,6 +1,6 @@
 # DATA_MODEL
 
-A V0.1 organiza **materiais e fontes para estudo**, não um LMS próprio. O modelo principal reflete a stack GitHub + ChatGPT + NotebookLM e separa claramente material do estudante de documentação de engenharia editorial.
+A V0.1 organiza **materiais, fontes e configuração de estudo**, não um LMS próprio. O modelo principal reflete a stack GitHub + ChatGPT + NotebookLM e separa material do estudante, instrução do tutor e documentação de engenharia editorial.
 
 ## Competition
 
@@ -24,7 +24,7 @@ Arquivos mínimos:
 - `SOURCES.md`;
 - `CHANGELOG.md`.
 
-Esses arquivos não têm o mesmo papel. Cada pack possui três classes lógicas:
+Esses arquivos não têm o mesmo papel. Cada pack possui três classes lógicas.
 
 ### StudentContent
 
@@ -36,18 +36,22 @@ Na V0.1, o principal `StudentContent` é:
 
 `APOSTILA.md` é a fonte autoral editável correspondente.
 
-### ChatInstruction
+### ConversationInstruction
 
-Documento operacional que orienta o chat do NotebookLM e **não deve ser tratado como matéria**.
+Configuração versionada do comportamento do tutor no chat do NotebookLM.
 
-- `METODOLOGIA_NOTEBOOKLM.md`.
+- arquivo canônico: `METODOLOGIA_NOTEBOOKLM.md`;
+- destino operacional preferido: configuração nativa da conversa (`Personalizado` ou equivalente);
+- **não é fonte de conteúdo** e não deve ser carregada como documento estudável quando houver uma camada nativa de configuração do chat.
 
 Uso esperado:
 
 ```text
-chat = APOSTILA.pdf + METODOLOGIA_NOTEBOOKLM.md
-Estúdio = APOSTILA.pdf, com a metodologia desmarcada
+NotebookLM sources = APOSTILA.pdf
+Conversation config = conteúdo operacional de METODOLOGIA_NOTEBOOKLM.md
 ```
+
+A sincronização dessa configuração é manual e acontece na criação do notebook ou quando a metodologia muda.
 
 ### BackofficeArtifact
 
@@ -94,7 +98,7 @@ Não exige persistência questão a questão.
 fonte de verdade
 != análise da banca
 != material didático
-!= instrução do chat
+!= instrução do tutor
 != feedback individual
 ```
 
@@ -102,7 +106,14 @@ Também:
 
 ```text
 arquivo existente no SubjectPack
-!= arquivo que deve ser carregado no NotebookLM
+!= arquivo que deve ser carregado como fonte no NotebookLM
+```
+
+E:
+
+```text
+instrução versionada no GitHub
+!= fonte estudável
 ```
 
 ## IDs e versões
