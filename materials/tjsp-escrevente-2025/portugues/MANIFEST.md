@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `portugues`  
 **Pack version:** `2.0.0`  
-**Status:** `release-candidate-blocked`  
+**Status:** `release-candidate`  
 **Candidate date:** `2026-09-11`
 
 ## Objetivo
@@ -14,8 +14,8 @@ Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizad
 
 ### StudentContent
 
-- `APOSTILA.md` — fonte autoral editável **2.0.0**, reconstruída e editorialmente validada.
-- `APOSTILA.pdf` — distribuição para NotebookLM. **No estado atual da branch, este arquivo é temporariamente o fallback íntegro 1.0.0, não o PDF 2.0.0.**
+- `APOSTILA.md` — fonte autoral editável 2.0.0, reconstruída e editorialmente validada.
+- `APOSTILA.pdf` — distribuição 2.0.0 pesquisável, publicada integralmente na branch e destinada ao estudante/NotebookLM.
 
 ### ConversationInstruction
 
@@ -32,7 +32,7 @@ Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizad
 
 ## O que mudou em 2.0.0
 
-A apostila foi reconstruída, não apenas ampliada. A nova fonte autoral:
+A apostila foi reconstruída, não apenas ampliada. A nova versão:
 
 - cobre os 13 itens de Português do syllabus com localização explícita na matriz;
 - organiza o conteúdo por dependências pedagógicas;
@@ -44,41 +44,30 @@ A apostila foi reconstruída, não apenas ampliada. A nova fonte autoral:
 - inclui reescrita integrada e fronteiras conceituais;
 - contém 30 questões autorais A–E com gabarito comentado separado.
 
-## Estado do PDF 2.0.0
+## APOSTILA.pdf — release candidate publicado
 
-### Artefato validado localmente
+Artefato canônico da branch:
 
-O candidato de distribuição 2.0.0 que passou no QA local possui:
-
-- páginas: `29`;
-- formato: A4;
-- tamanho: `40928 bytes`;
-- SHA-256: `1a7a1cbe8a0597f94ea490da7eec8ff874f2430ef596ec5bb9c3a14ecb2f1d62`;
-- Git blob esperado: `b06f1150ac71cd9b87a3f8341be70a1c87355ccc`;
+- páginas: `16`;
+- formato: A4 (`595 x 842 pt`);
+- tamanho: `20824 bytes`;
+- SHA-256: `b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931`;
+- Git blob: `640efaed13dd43cc83f6904c62fdb86131b9124a`;
 - texto pesquisável: sim;
-- QA textual e visual: pass local.
+- PDF: 1.4, não criptografado;
+- extração textual: aproximadamente `54,5 mil` caracteres;
+- QA visual: 16 páginas renderizadas e inspecionadas sem clipping/overlap observado;
+- readback GitHub: `size=20824`, `sha=640efaed13dd43cc83f6904c62fdb86131b9124a`.
 
-Esse artefato **ainda não está publicado de forma íntegra no GitHub**.
+A versão compacta foi produzida especificamente para transporte íntegro pelo conector GitHub e preserva o conteúdo estudável da fonte autoral. Detalhes e incidentes de upload rejeitados estão em `APOSTILA_QA_2.0.0.md`.
 
-### Fallback presente na branch
-
-Após detectar que uma tentativa de upload binário foi truncada, a branch foi restaurada ao último `APOSTILA.pdf` íntegro conhecido para não deixar um arquivo corrompido como distribuição:
-
-- versão material: `1.0.0` fallback;
-- páginas: `8`;
-- tamanho: `13950 bytes`;
-- SHA-256: `e203e62c6be1207dc5ca475e61460d9619be4bfeeeeb32bcf90990b485e8cc23`;
-- Git blob: `2287be2ba025228cc311722effc794fc9edf476f`.
-
-**Não usar esse fallback no smoke de aceitação da 2.0.0.** O smoke só começa depois que o PDF 2.0.0 íntegro for publicado e confirmado por readback.
-
-## Instalação no NotebookLM após publicação do PDF 2.0.0
+## Instalação no NotebookLM
 
 ### Fontes
 
 Carregar como fonte por padrão:
 
-1. `APOSTILA.pdf` **2.0.0 íntegro**.
+1. `APOSTILA.pdf` 2.0.0.
 
 Não carregar como fonte:
 
@@ -117,13 +106,11 @@ Passaram:
 - QA-6 coerência com banca sem overfitting;
 - QA-7 revisão estática de utilidade para NotebookLM;
 - QA-8 redundância/coerência;
-- QA-9 textual/visual **do artefato local 2.0.0**.
+- QA-9 PDF textual/visual + publicação/readback no GitHub.
 
-Pendentes antes de promover para release final:
+Pendente antes de promover para release final:
 
-1. publicação íntegra do `APOSTILA.pdf` 2.0.0 no GitHub, com readback confirmando o artefato;
-2. smoke real no NotebookLM com esse PDF como corpus limpo;
-3. fechamento do QA/release e merge do PR #12.
+- QA-7 live: smoke real no NotebookLM usando o `APOSTILA.pdf` 2.0.0 como corpus limpo e `METODOLOGIA_NOTEBOOKLM.md` na configuração da conversa.
 
 `python tools/verify.py` continua não executado neste runtime porque o ambiente local não resolve `github.com`; a impossibilidade está registrada em `APOSTILA_QA_2.0.0.md` e não é tratada como `pass`.
 
@@ -144,4 +131,4 @@ O mesmo SubjectPack pode alimentar notebooks separados de participantes diferent
 - não presume que o Teste nativo reproduza automaticamente a banca;
 - não transforma backoffice em conteúdo estudável;
 - não transforma instruções de chat em fonte estudável;
-- a 2.0.0 não pode ser mesclada enquanto o PDF final e o smoke real não estiverem validados.
+- a promoção para release final continua condicionada ao smoke real do NotebookLM.
