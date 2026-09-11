@@ -60,13 +60,19 @@
 
 ## Artefatos autorais e de engenharia do pack
 
-### `APOSTILA.md` / `APOSTILA.pdf`
+### `APOSTILA.md`
 
-Produto didático autoral reconstruído para 2.0.0. O syllabus controla o que precisa ser coberto; provas e `ANALISE_BANCA.md` calibram silenciosamente profundidade, distinções e tipos de aplicação. Exemplos e as 30 questões da apostila são autorais.
+Fonte autoral **2.0.0** reconstruída. O syllabus controla o que precisa ser coberto; provas e `ANALISE_BANCA.md` calibram silenciosamente profundidade, distinções e tipos de aplicação. Exemplos e as 30 questões são autorais.
+
+### `APOSTILA.pdf`
+
+A distribuição final 2.0.0 ainda está em gate de publicação binária. O candidato local validado possui 29 páginas A4, 40928 bytes e SHA-256 `1a7a1cbe8a0597f94ea490da7eec8ff874f2430ef596ec5bb9c3a14ecb2f1d62`.
+
+**Estado real da branch:** o arquivo `APOSTILA.pdf` atualmente apontado no GitHub é deliberadamente o fallback íntegro da versão 1.0.0 (`2287be2ba025228cc311722effc794fc9edf476f`, 13950 bytes), restaurado depois que o readback demonstrou truncamento da tentativa de upload do PDF 2.0.0. Ele não deve ser confundido com a distribuição 2.0.0 nem usado no smoke de aceitação.
 
 ### `ANALISE_BANCA.md`
 
-Análise do projeto a partir das 88 questões de Português do corpus. A classificação por categoria primária é uma taxonomia analítica própria e reproduzível pelo apêndice do arquivo.
+Análise do projeto a partir das 88 questões de Português do corpus. A classificação por categoria primária é taxonomia analítica própria e reproduzível pelo apêndice do arquivo.
 
 ### `APOSTILA_AUDIT_1.0.0.md`
 
@@ -78,11 +84,11 @@ Matriz de cobertura/autoria que liga os 13 itens do syllabus aos objetivos, conc
 
 ### `APOSTILA_QA_2.0.0.md`
 
-Registro dos gates editoriais, de PDF e de repositório aplicados ao release candidate 2.0.0, incluindo limitações explicitamente não validadas.
+Registro dos gates editoriais, do PDF e de repositório aplicados ao release candidate 2.0.0, incluindo a falha de publicação binária e as validações ainda pendentes.
 
 ### `METODOLOGIA_NOTEBOOKLM.md`
 
-Configuração versionada do tutor. Não é fonte factual nem conteúdo estudável. Quando houver configuração nativa da conversa, seu bloco operacional deve ser copiado para essa camada e não carregado como fonte.
+Configuração versionada do tutor. Não é fonte factual nem conteúdo estudável. Seu bloco operacional deve ficar na configuração nativa da conversa quando disponível.
 
 ## Política canônica de uso no NotebookLM
 
@@ -90,14 +96,14 @@ Conforme DEC-0016/DEC-0017:
 
 ```text
 FONTES DO NOTEBOOKLM
-→ APOSTILA.pdf
+→ APOSTILA.pdf 2.0.0 íntegro
 
 CONFIGURAÇÃO DA CONVERSA
 → Personalizado (ou equivalente)
 → bloco operacional de METODOLOGIA_NOTEBOOKLM.md
 ```
 
-Por padrão, não carregar como fontes do notebook:
+Por padrão, não carregar como fontes:
 
 - `METODOLOGIA_NOTEBOOKLM.md`;
 - `ANALISE_BANCA.md`;
