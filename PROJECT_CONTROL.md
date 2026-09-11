@@ -1,12 +1,11 @@
 # Project Control
 
 - **Status:** ACTIVE
-- **Phase:** BASELINE_READY
+- **Phase:** SYSTEM_BUILD
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main`
-- **Last implementation branch:** `adapter/tjsp-escrevente-2025`
-- **Current participant:** `p001`
+- **Current implementation branch:** `fix/defer-real-baseline`
+- **Current participant:** none
 - **Current competition:** `tjsp-escrevente-2025`
 - **Validation gate:** `python tools/verify.py`
 - **CI:** disabled during production
