@@ -7,7 +7,7 @@ branch: content/apostila-portugues-2.0.0
 base_branch: main
 base_sha: 29f92f11d822b426d6af239afa31a09829881844
 last_implementation_branch: docs/apostila-authoring-protocol
-current_task: APOSTILA-002 finish native NotebookLM Teste, Cartões and Mapa mental smoke, then finalize release
+current_task: APOSTILA-002 validate NotebookLM Mapa mental, then finalize Portuguese 2.0.0 release
 current_pack: portugues 2.0.0 release-candidate
 completed:
   - repository foundation merged
@@ -45,15 +45,17 @@ completed:
   - configured-chat rc2 retest executed by user and passed controlled tutor behavior
   - rc2 concordance correction explained each relevant construction specifically, including fazer temporal, menos invariável, anexo agreement and dever + existir
   - tutor-generated answer leak was not observed in rc2 retest; interface suggestion chips remain an external UI risk
+  - NotebookLM native Teste smoke passed on concordância, sentido figurado and relações lógico-semânticas samples
+  - NotebookLM Cartões smoke passed on enunciador, inferência, extrapolação and pronome relativo cujo samples
   - PR 12 remains open in draft from content/apostila-portugues-2.0.0 to main
 in_progress:
-  - complete native Teste, Cartões and Mapa mental smoke over published APOSTILA.pdf 2.0.0
+  - validate native NotebookLM Mapa mental over published APOSTILA.pdf 2.0.0
 not_started:
   - promote Portuguese 2.0.0 release-candidate to final release
   - merge PR 12
   - SubjectPacks for remaining subjects
 blockers:
-  - remaining NotebookLM Studio smoke requires authenticated interaction with the user's NotebookLM; no NotebookLM connector/browser session is available in this execution environment
+  - remaining NotebookLM Mapa mental smoke requires authenticated interaction with the user's NotebookLM; no NotebookLM connector/browser session is available in this execution environment
 validation:
   canonical_gate:
     command: python tools/verify.py
@@ -77,9 +79,12 @@ validation:
     qa_5_practice: pass
     qa_6_banca_without_overfit: pass
     qa_7_notebooklm_static: pass
-    qa_7_notebooklm_live: partial_chat_pass_studio_pending
+    qa_7_notebooklm_live: partial_chat_test_cards_pass_map_pending
     qa_7_first_live_attempt: findings_recorded_not_passed
     qa_7_chat_rc2_retest: pass
+    qa_7_native_test: pass
+    qa_7_cards: pass
+    qa_7_mind_map: pending
     qa_8_redundancy_coherence: pass
   notebooklm_live_findings:
     first_attempt:
@@ -95,6 +100,16 @@ validation:
       corrected_forms_explicit: pass
       followup_retest_quality: pass
       external_ui_suggestion_chips: still_possible_product_layer_risk
+    native_test:
+      concordancia_partitive_sample: pass
+      figurative_semantics_sample: pass
+      adversative_connective_sample: pass
+      optional_hint_ui: observed_user_enabled_not_blocking
+    cards:
+      enunciador_sample: pass
+      inferencia_sample: pass
+      extrapolacao_sample: pass
+      cujo_agreement_sample: pass
   pdf_qa:
     repository_distribution:
       result: pass
@@ -118,7 +133,7 @@ validation:
         result: orphan_intermediate_not_promoted
 ci: disabled
 current_pull_request: 12
-merge_status: withheld_until_notebooklm_studio_smoke_pass
+merge_status: withheld_until_notebooklm_mind_map_pass
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
 last_subject_pack_pull_request: 7
