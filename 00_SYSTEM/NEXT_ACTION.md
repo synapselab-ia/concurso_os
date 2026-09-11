@@ -1,16 +1,14 @@
 # NEXT_ACTION
 
-## APOSTILA-002-FINAL — Publicar PDF 2.0.0 íntegro, validar no NotebookLM e concluir o release
+## APOSTILA-002-FINAL — Validar Português 2.0.0 no NotebookLM e concluir o release
 
-A reconstrução editorial de Português 2.0.0 está concluída na branch `content/apostila-portugues-2.0.0`, mas o release candidate **não pode ser mesclado ainda**.
+A reconstrução editorial de Português 2.0.0 está concluída na branch `content/apostila-portugues-2.0.0` e o `APOSTILA.pdf` 2.0.0 já foi publicado de forma íntegra e confirmado por readback.
 
-O readback do GitHub corrigiu um estado anteriormente registrado de forma incorreta: a tentativa de publicar o PDF 2.0.0 via blob foi truncada. Para não manter um binário corrompido, `APOSTILA.pdf` foi restaurado temporariamente ao fallback íntegro da distribuição 1.0.0.
+O próximo e último gate material de `APOSTILA-002` é o **smoke test real no NotebookLM**. Não reabrir a redação integral nem regenerar o PDF sem evidência concreta de problema observada nesse smoke.
 
-Portanto, o próximo gate não é reescrever a apostila. É **publicar o PDF 2.0.0 exato e validado**, confirmar o binário no GitHub e somente depois executar o smoke real no NotebookLM.
+## Estado fechado antes do smoke
 
-## Estado editorial já fechado
-
-Existem e foram revisados:
+Já existem e foram revisados:
 
 - `APOSTILA_AUDIT_1.0.0.md`;
 - `APOSTILA_AUTHORING_MATRIX_2.0.0.md` com B1.1–B1.13 `covered`;
@@ -20,9 +18,20 @@ Existem e foram revisados:
 - QA-1 a QA-6 `PASS`;
 - QA-7 estático `PASS`;
 - QA-8 `PASS`;
-- PDF 2.0.0 validado localmente em QA textual/visual.
+- QA-9 PDF `PASS`, incluindo publicação/readback no GitHub.
 
-Não reabrir a redação integral sem evidência concreta de problema.
+Distribuição canônica do PDF na branch:
+
+```text
+path: materials/tjsp-escrevente-2025/portugues/APOSTILA.pdf
+pages: 16
+page_size: A4
+bytes: 20824
+sha256: b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931
+git_blob: 640efaed13dd43cc83f6904c62fdb86131b9124a
+```
+
+O readback do diretório confirmou exatamente `size=20824` e `sha=640efaed13dd43cc83f6904c62fdb86131b9124a`.
 
 ## Recuperação obrigatória
 
@@ -38,55 +47,15 @@ Seguir `AGENTS.md` e ler pelo menos:
 8. `materials/tjsp-escrevente-2025/portugues/APOSTILA_QA_2.0.0.md`;
 9. `materials/tjsp-escrevente-2025/portugues/METODOLOGIA_NOTEBOOKLM.md`.
 
-Conferir também `main`, a branch `content/apostila-portugues-2.0.0` e o PR #12 antes de escrever.
+Conferir `main`, a branch `content/apostila-portugues-2.0.0` e o PR #12 antes de qualquer mutação.
 
-## Gate 1 — Publicar o PDF 2.0.0 íntegro
+## Gate único restante — Smoke real no NotebookLM
 
-O artefato aprovado localmente possui exatamente:
-
-```text
-pages: 29
-page_size: A4
-bytes: 40928
-sha256: 1a7a1cbe8a0597f94ea490da7eec8ff874f2430ef596ec5bb9c3a14ecb2f1d62
-expected_git_blob: b06f1150ac71cd9b87a3f8341be70a1c87355ccc
-```
-
-Destino:
-
-```text
-materials/tjsp-escrevente-2025/portugues/APOSTILA.pdf
-```
-
-Depois da publicação, fazer readback real e confirmar pelo menos:
-
-- tamanho corresponde ao artefato pretendido;
-- Git blob corresponde aos bytes esperados quando a publicação for byte-identical;
-- download abre como PDF;
-- `pdfinfo` identifica 29 páginas A4;
-- `pdftotext` recupera conteúdo até Questão 30, gabarito e síntese final.
-
-### Estado atual que não deve ser confundido com 2.0.0
-
-O `APOSTILA.pdf` atualmente ligado à branch é um fallback seguro da 1.0.0:
-
-```text
-bytes: 13950
-git_blob: 2287be2ba025228cc311722effc794fc9edf476f
-material_version: 1.0.0
-```
-
-Ele foi restaurado apenas para remover o binário truncado. **Não usar esse arquivo no smoke de aceitação da 2.0.0.**
-
-Também não promover os blobs rejeitados `5bea23e3...` ou `82046b5d...`.
-
-## Gate 2 — Smoke real no NotebookLM
-
-Somente depois do Gate 1 passar, preservar a arquitetura:
+Preservar a arquitetura:
 
 ```text
 FONTES DO NOTEBOOKLM
-→ APOSTILA.pdf 2.0.0 íntegro
+→ APOSTILA.pdf 2.0.0
 
 CONFIGURAÇÃO DA CONVERSA
 → Personalizado (ou equivalente)
@@ -95,7 +64,7 @@ CONFIGURAÇÃO DA CONVERSA
 
 Não carregar metodologia, análise de banca, manifest, sources, QA, edital ou provas históricas como fontes durante o smoke.
 
-### Teste
+### 1. Teste
 
 Gerar um Teste nativo e confirmar que:
 
@@ -103,7 +72,7 @@ Gerar um Teste nativo e confirmar que:
 - inclui aplicação, não apenas reprodução literal;
 - consegue distinguir interpretação, relações de sentido e norma-padrão.
 
-### Cartões
+### 2. Cartões
 
 Confirmar recuperação útil de definições, regras, exceções e contrastes, por exemplo:
 
@@ -114,11 +83,11 @@ Confirmar recuperação útil de definições, regras, exceções e contrastes, 
 - regência x crase;
 - restritiva x explicativa.
 
-### Mapa mental
+### 3. Mapa mental
 
 Confirmar que a hierarquia principal da apostila é recuperada de forma inteligível e que questões/gabaritos não dominam a estrutura.
 
-### Chat configurado
+### 4. Chat configurado
 
 Testar pelo menos:
 
@@ -129,26 +98,21 @@ Testar pelo menos:
 
 Marcar QA-7 live como `PASS` somente se esse smoke tiver sido realmente executado e não revelar falha material do corpus.
 
-## Gate 3 — Fechamento do release
+## Fechamento após PASS
 
-Se Gate 1 e Gate 2 passarem:
+Se o smoke passar:
 
-1. atualizar `APOSTILA_QA_2.0.0.md` para QA-7 live `PASS` e QA-9 publicação `PASS`;
-2. atualizar `MANIFEST.md` para release final;
+1. atualizar `APOSTILA_QA_2.0.0.md` para QA-7 live `PASS`;
+2. atualizar `MANIFEST.md` de `release-candidate` para release final;
 3. fechar a pendência no `CHANGELOG.md`;
 4. atualizar `PROJECT_CONTROL.md` e `CHECKPOINT.md` para Português 2.0.0 final;
 5. executar `python tools/verify.py`; se o ambiente ainda impedir, manter justificativa explícita conforme DEC-0009;
 6. revisar diff/readback do PR #12;
-7. fazer merge quando couber sob DEC-0009;
+7. marcar o PR pronto para review e fazer merge quando couber sob DEC-0009;
 8. depois do merge, definir a próxima ação canônica para o próximo SubjectPack.
 
 ## Definition of Done restante
 
-`APOSTILA-002` termina somente quando:
-
-- o PDF 2.0.0 íntegro estiver no GitHub e validado por readback;
-- o smoke real do NotebookLM estiver registrado como aprovado;
-- release/continuidade estiverem finalizados;
-- o PR #12 puder ser mesclado com segurança.
+`APOSTILA-002` termina somente quando o smoke real do NotebookLM estiver registrado como aprovado, o release estiver promovido a final e o PR #12 tiver sido concluído.
 
 Até lá, **não iniciar os SubjectPacks das outras matérias** salvo nova decisão canônica explícita.
