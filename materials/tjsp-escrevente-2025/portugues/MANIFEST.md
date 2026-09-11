@@ -3,8 +3,8 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `portugues`  
 **Pack version:** `2.0.0`  
-**Status:** `release-candidate`  
-**Candidate date:** `2026-09-11`
+**Status:** `release`  
+**Release date:** `2026-09-11`
 
 ## Objetivo
 
@@ -14,12 +14,12 @@ Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizad
 
 ### StudentContent
 
-- `APOSTILA.md` — fonte autoral editável 2.0.0, reconstruída e editorialmente validada.
-- `APOSTILA.pdf` — distribuição 2.0.0 pesquisável, publicada integralmente na branch e destinada ao estudante/NotebookLM.
+- `APOSTILA.md` — fonte autoral editável 2.0.0.
+- `APOSTILA.pdf` — distribuição 2.0.0 pesquisável destinada ao estudante e ao NotebookLM.
 
 ### ConversationInstruction
 
-- `METODOLOGIA_NOTEBOOKLM.md` — configuração versionada do tutor; **não é fonte de conteúdo**.
+- `METODOLOGIA_NOTEBOOKLM.md` — configuração versionada do tutor; não é fonte de conteúdo.
 
 ### BackofficeArtifact
 
@@ -30,60 +30,37 @@ Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizad
 - `APOSTILA_QA_2.0.0.md` — registro dos gates editoriais e técnicos.
 - `CHANGELOG.md` — histórico de versões.
 
-## O que mudou em 2.0.0
+## Escopo entregue
 
-A apostila foi reconstruída, não apenas ampliada. A nova versão:
+A versão 2.0.0 cobre os 13 itens de Português do syllabus, organiza o conteúdo por dependências pedagógicas, aprofunda leitura, interpretação, coesão, relações lógico-semânticas, semântica, classes de palavras, concordância, regência, pronomes, colocação, crase, pontuação e reescrita, e inclui 30 questões autorais A–E com gabarito comentado separado.
 
-- cobre os 13 itens de Português do syllabus com localização explícita na matriz;
-- organiza o conteúdo por dependências pedagógicas;
-- amplia leitura verbal, não verbal, multissemiótica, literária e não literária;
-- separa literalidade, pressuposição, inferência e extrapolação;
-- aprofunda coesão, relações lógico-semânticas e semântica contextual;
-- ensina classes de palavras em funcionamento;
-- aprofunda concordância, regência, pronomes, colocação, crase e pontuação;
-- inclui reescrita integrada e fronteiras conceituais;
-- contém 30 questões autorais A–E com gabarito comentado separado.
-
-## APOSTILA.pdf — release candidate publicado
-
-Artefato canônico da branch:
+## APOSTILA.pdf — distribuição final
 
 - páginas: `16`;
 - formato: A4 (`595 x 842 pt`);
 - tamanho: `20824 bytes`;
 - SHA-256: `b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931`;
 - Git blob: `640efaed13dd43cc83f6904c62fdb86131b9124a`;
-- texto pesquisável: sim;
-- PDF: 1.4, não criptografado;
-- extração textual: aproximadamente `54,5 mil` caracteres;
-- QA visual: 16 páginas renderizadas e inspecionadas sem clipping/overlap observado;
-- readback GitHub: `size=20824`, `sha=640efaed13dd43cc83f6904c62fdb86131b9124a`.
-
-A versão compacta foi produzida especificamente para transporte íntegro pelo conector GitHub e preserva o conteúdo estudável da fonte autoral. Detalhes e incidentes de upload rejeitados estão em `APOSTILA_QA_2.0.0.md`.
+- PDF 1.4, não criptografado, texto pesquisável;
+- aproximadamente `54,5 mil` caracteres extraídos;
+- 16 páginas renderizadas e inspecionadas sem clipping/overlap observado;
+- readback GitHub confirmou `size=20824` e o blob esperado.
 
 ## Instalação no NotebookLM
 
 ### Fontes
 
-Carregar como fonte por padrão:
+Carregar por padrão somente:
 
 1. `APOSTILA.pdf` 2.0.0.
 
-Não carregar como fonte:
-
-- `METODOLOGIA_NOTEBOOKLM.md`;
-- `ANALISE_BANCA.md`;
-- `MANIFEST.md`;
-- `SOURCES.md`;
-- `CHANGELOG.md`;
-- auditoria, matriz e QA;
-- edital e provas históricas apenas para explicar o projeto.
+Não carregar como fonte `METODOLOGIA_NOTEBOOKLM.md`, análise de banca, manifest, sources, changelog, QA, edital ou provas históricas.
 
 ### Configuração da conversa
 
-1. abrir a configuração persistente da conversa (`Personalizado` ou equivalente);
+1. abrir `Configurar as conversas → Personalizado` ou equivalente;
 2. copiar o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md`;
-3. manter o tamanho de resposta em `Padrão` inicialmente;
+3. manter tamanho de resposta em `Padrão` inicialmente;
 4. salvar.
 
 Princípio arquitetural:
@@ -94,25 +71,13 @@ comportamento do tutor → configuração nativa da conversa
 backoffice → GitHub/ChatGPT
 ```
 
-## QA e status de release
+## QA de release
 
-Passaram:
+**PASS:** QA-1 cobertura; QA-2 exatidão/fonte; QA-3 didática; QA-4 distinções; QA-5 prática; QA-6 coerência com banca sem overfitting; QA-7 estático e live no NotebookLM; QA-8 redundância/coerência; QA-9 PDF textual/visual/publicação.
 
-- QA-1 cobertura;
-- QA-2 exatidão/fonte;
-- QA-3 didática;
-- QA-4 distinções;
-- QA-5 prática;
-- QA-6 coerência com banca sem overfitting;
-- QA-7 revisão estática de utilidade para NotebookLM;
-- QA-8 redundância/coerência;
-- QA-9 PDF textual/visual + publicação/readback no GitHub.
+O smoke real do NotebookLM passou após ajuste da configuração do tutor: chat configurado, Teste nativo, Cartões e Mapa mental foram inspecionados e aprovados. O mapa recuperou a hierarquia principal da apostila sem ser dominado por questões/gabaritos.
 
-Pendente antes de promover para release final:
-
-- QA-7 live: smoke real no NotebookLM usando o `APOSTILA.pdf` 2.0.0 como corpus limpo e `METODOLOGIA_NOTEBOOKLM.md` na configuração da conversa.
-
-`python tools/verify.py` continua não executado neste runtime porque o ambiente local não resolve `github.com`; a impossibilidade está registrada em `APOSTILA_QA_2.0.0.md` e não é tratada como `pass`.
+`python tools/verify.py` não foi executado neste runtime porque o ambiente local não resolve `github.com`; a impossibilidade está registrada em `APOSTILA_QA_2.0.0.md` conforme DEC-0009 e não é tratada como `PASS`.
 
 ## Múltiplos participantes
 
@@ -129,6 +94,4 @@ O mesmo SubjectPack pode alimentar notebooks separados de participantes diferent
 - não implementa mastery questão a questão;
 - não mistura participantes;
 - não presume que o Teste nativo reproduza automaticamente a banca;
-- não transforma backoffice em conteúdo estudável;
-- não transforma instruções de chat em fonte estudável;
-- a promoção para release final continua condicionada ao smoke real do NotebookLM.
+- não transforma backoffice ou instruções operacionais em conteúdo estudável.
