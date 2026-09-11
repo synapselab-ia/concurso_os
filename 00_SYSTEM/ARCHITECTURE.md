@@ -1,37 +1,89 @@
 # ARCHITECTURE
 
-## Entidades centrais
+## Visão
 
-`Participant -> Enrollment -> Competition`
-
-`KnowledgeUnit -> Competency -> EvidenceEvent -> DerivedState -> Scheduler`
-
-## Separações obrigatórias
-
-- **Participant:** pessoa que estuda.
-- **Competition:** concurso/edital/banca e sua configuração de avaliação.
-- **Enrollment:** vínculo de um participante com um concurso em um período específico.
-- **KnowledgeUnit:** unidade reutilizável de conhecimento, independente de concurso quando possível.
-- **Competency:** desempenho observável esperado sobre uma unidade.
-- **EvidenceEvent:** observação histórica imutável de estudo/avaliação.
-- **DerivedState:** inferência reconstruível a partir dos eventos.
-
-## Direção dos dados
+A arquitetura da V0.1 é uma cadeia editorial e pedagógica, não um LMS próprio.
 
 ```text
-fontes -> conhecimento/competências -> adapter do concurso
-                                  \
-participante -> enrollment -> evidence events -> derived state -> scheduler
+fontes oficiais + provas
+        ↓
+     ChatGPT
+análise / autoria / QA
+        ↓
+      GitHub
+subject packs versionados
+        ↓
+ sincronização manual
+        ↓
+   NotebookLM
+estudo por matéria
+        ↓
+feedback opcional
+        ↓
+     ChatGPT
 ```
 
-## Persistência
+## Papéis
 
-Eventos são a verdade histórica. Matrizes, pontuações e filas de revisão são projeções derivadas e podem ser regeneradas quando o modelo mudar.
+### GitHub
 
-## Portabilidade
+Fonte canônica de:
 
-O kernel não pode conter condicionais específicas por pessoa, como `if participant == "lucas"`. Adapters de concurso também não devem conter estado individual.
+- edital e mapa do concurso;
+- registro de fontes;
+- análise de banca;
+- apostilas;
+- metodologias de NotebookLM por matéria;
+- manifests/changelogs;
+- QA;
+- continuidade entre chats.
 
-## Infraestrutura
+GitHub não é o ambiente primário de estudo nem precisa armazenar cada resposta do aluno.
 
-V0.1 usa Git + Markdown + JSON/JSONL + Python padrão. Dependências e serviços externos só entram quando houver benefício demonstrável.
+### ChatGPT
+
+Responsável por:
+
+- pesquisar e verificar;
+- analisar provas e edital;
+- produzir e atualizar materiais;
+- fazer QA source-grounded;
+- integrar feedback de sessões;
+- manter a continuidade canônica no GitHub.
+
+### NotebookLM
+
+Ambiente principal de estudo source-grounded. A unidade recomendada é um notebook por matéria; quando houver histórico individual relevante, cada participante usa sua própria instância baseada no mesmo pacote de fontes.
+
+## Unidade canônica de entrega
+
+O objeto principal da V0.1 é o `SubjectPack`:
+
+```text
+Competition + Subject
+        ↓
+MANIFEST
+APOSTILA
+ANALISE_BANCA
+METODOLOGIA_NOTEBOOKLM
+SOURCES
+CHANGELOG
+```
+
+Conhecimento pode continuar reutilizável entre concursos, mas a primeira prioridade é produzir um pacote de estudo correto e utilizável para o concurso-alvo.
+
+## Participantes
+
+Perfis de participantes continuam permitidos para organizar materiais e feedback, mas o kernel não depende de lógica específica por pessoa. Progresso individual, quando persistido, deve ser resumido e separado do material compartilhado.
+
+## Evidência e scheduler
+
+O modelo de `EvidenceEvent` e projeções permanece como experimento possível, mas **não é requisito nem caminho crítico da V0.1**. Não construir infraestrutura de rastreamento questão a questão antes de provar que ela melhora o fluxo NotebookLM + ChatGPT + GitHub.
+
+## Continuidade
+
+Chats são descartáveis. Decisões, versões de pacote, estado de produção e próxima ação devem permanecer no repositório.
+
+## Especificação detalhada
+
+Ver `docs/STACK_NOTEBOOKLM.md`.
