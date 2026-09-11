@@ -1,0 +1,100 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "policy": {
+    "blueprint_authority": "SRC-TJSP-EDITAL-2025-02",
+    "closest_empirical_style_reference": "SRC-TJSP-PROVA-2025",
+    "historical_exams": [
+      "SRC-TJSP-PROVA-2024",
+      "SRC-TJSP-PROVA-2023",
+      "SRC-TJSP-PROVA-2021"
+    ],
+    "rule": "Historical exams may inform style and recurring task forms but must not override the current edital blueprint."
+  },
+  "sources": [
+    {
+      "source_id": "SRC-TJSP-EDITAL-2025-02",
+      "kind": "official_edital",
+      "authority": "TJSP",
+      "title": "Edital de Abertura n.º 02/2025 — Escrevente Técnico Judiciário",
+      "published_at": "2025-07-29",
+      "original_filename": "TJSP2503_224_20250801114000.pdf.pdf",
+      "sha256": "c87c402606c99c75cb0efef19716003b2dce0a728e58dab2800cbf5d099e7400",
+      "size_bytes": 868760,
+      "repository_binary_committed": false,
+      "factual_authority": true,
+      "priority": 1
+    },
+    {
+      "source_id": "SRC-VUNESP-TJSP2503",
+      "kind": "official_contest_page",
+      "authority": "Fundação VUNESP",
+      "title": "TJSP2503 — Tribunal de Justiça do Estado de São Paulo",
+      "url": "https://www.vunesp.com.br/TJSP2503",
+      "verified_at": "2026-09-11",
+      "observed_status": "Concurso em Andamento",
+      "factual_authority": true,
+      "priority": 2
+    },
+    {
+      "source_id": "SRC-TJSP-PROVA-2025",
+      "kind": "exam_booklet",
+      "year": 2025,
+      "exam_board": "Fundação VUNESP",
+      "original_filename": "tjsp 2025.pdf",
+      "sha256": "068cfd0fbc929d250e2703cbf90ff2a7efde3bf4fb86915eeb9088a2a78a8b87",
+      "size_bytes": 496275,
+      "repository_binary_committed": false,
+      "factual_authority": true,
+      "priority": 3
+    },
+    {
+      "source_id": "SRC-TJSP-PROVA-2024",
+      "kind": "historical_exam_booklet",
+      "year": 2024,
+      "exam_board": "Fundação VUNESP",
+      "original_filename": "tjsp 2024.pdf",
+      "sha256": "05993d52b7cd955bb29ea14f175f60ecbde2f7f9b3b4c069143c249f1947836d",
+      "size_bytes": 645374,
+      "repository_binary_committed": false,
+      "factual_authority": true,
+      "priority": 4
+    },
+    {
+      "source_id": "SRC-TJSP-PROVA-2023",
+      "kind": "historical_exam_booklet",
+      "year": 2023,
+      "exam_board": "Fundação VUNESP",
+      "original_filename": "tjsp 2023.pdf",
+      "sha256": "ae203c145c68766c83aa4c4b35dbb2778854481f9d89fb752de28b649f3bfc4d",
+      "size_bytes": 657527,
+      "repository_binary_committed": false,
+      "factual_authority": true,
+      "priority": 5
+    },
+    {
+      "source_id": "SRC-TJSP-PROVA-2021",
+      "kind": "historical_exam_booklet",
+      "year": 2021,
+      "exam_board": "Fundação VUNESP",
+      "original_filename": "tjsp 2021.pdf",
+      "sha256": "4368240090841eab1de84d20cfbfd0d8a86579a081136308f2409051f4e12d90",
+      "size_bytes": 482030,
+      "repository_binary_committed": false,
+      "factual_authority": true,
+      "priority": 6
+    },
+    {
+      "source_id": "SRC-LEGACY-STUDY-METHODOLOGY",
+      "kind": "legacy_methodology",
+      "title": "Metodologia para sessões de estudo",
+      "original_filename": "Metodologia-para-sessões-de-estudo.txt",
+      "sha256": "45a37f1cee2e620880d850c620aacd20a66bf4c48ffc133628bfcf4415387c91",
+      "size_bytes": 13178,
+      "repository_binary_committed": false,
+      "factual_authority": false,
+      "use": "migration_reference_for_training_behavior",
+      "priority": 99
+    }
+  ]
+}
