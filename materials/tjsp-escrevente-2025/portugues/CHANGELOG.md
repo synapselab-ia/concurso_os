@@ -1,6 +1,6 @@
 # CHANGELOG — Português — TJSP Escrevente 2025
 
-## 2.0.0 — 2026-09-11 — release candidate blocked
+## 2.0.0 — 2026-09-11 — release candidate
 
 Reconstrução major da apostila de Língua Portuguesa sob `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`.
 
@@ -44,46 +44,46 @@ Reconstrução major da apostila de Língua Portuguesa sob `00_SYSTEM/APOSTILA_A
 - QA-6 coerência com banca sem overfitting: pass;
 - QA-7 utilidade estática para NotebookLM: pass; smoke real pendente;
 - QA-8 redundância/coerência: pass;
-- QA-9 PDF: **pass local / publicação no GitHub bloqueada**;
+- QA-9 PDF textual/visual + publicação/readback: pass;
 - QA-10: parcial, porque o gate determinístico não pôde ser executado neste runtime.
 
-### PDF 2.0.0 — artefato local validado
+### PDF 2.0.0 — distribuição publicada
 
-O artefato que substitui a distribuição anterior no release final, quando puder ser publicado de forma íntegra, possui:
+A distribuição canônica da branch foi regenerada em formato compacto para caber integralmente no transporte do conector GitHub sem perder o conteúdo textual estudável:
 
-- 29 páginas A4;
-- 40928 bytes;
-- SHA-256 `1a7a1cbe8a0597f94ea490da7eec8ff874f2430ef596ec5bb9c3a14ecb2f1d62`;
-- Git blob esperado `b06f1150ac71cd9b87a3f8341be70a1c87355ccc`;
-- texto pesquisável;
-- `pdfinfo` e extração textual conferidos;
-- 29 páginas renderizadas e inspecionadas sem clipping/overlap evidente;
-- conferência de Questão 30, gabarito, acentuação e síntese final.
+- 16 páginas A4;
+- 20824 bytes;
+- SHA-256 `b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931`;
+- Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`;
+- PDF 1.4 pesquisável, não criptografado;
+- extração textual de aproximadamente 54,5 mil caracteres;
+- Questão 30, gabarito, acentuação crítica e síntese final recuperados por `pdftotext`;
+- 16 páginas renderizadas a 150 dpi e inspecionadas sem clipping/overlap observado;
+- readback GitHub confirmou `size=20824` e o blob esperado.
 
-### Correção de estado após readback binário
+### Incidente de transporte corrigido
 
-Uma tentativa anterior de publicação foi documentada incorretamente como um PDF de 34 páginas / 140496 bytes. O readback real do GitHub demonstrou que o blob ligado à branch (`5bea23e3bd98b307496a086e98effc51853a0cd7`) continha apenas **7500 bytes** e terminava durante um stream compactado. Logo, não era uma distribuição 2.0.0 íntegra.
+Uma tentativa anterior havia sido documentada incorretamente como um PDF de 34 páginas / 140496 bytes. O readback mostrou que o blob ligado à branch continha somente 7500 bytes e estava truncado. Esse estado foi revogado, o fallback 1.0.0 foi usado temporariamente para remover a corrupção e, nesta revisão, substituído pela distribuição 2.0.0 íntegra acima.
 
-A branch foi corrigida para não manter um arquivo corrompido: `APOSTILA.pdf` foi restaurado temporariamente ao último binário íntegro conhecido da 1.0.0 (`2287be2ba025228cc311722effc794fc9edf476f`, 13950 bytes). O Markdown 2.0.0 e o backoffice permanecem na branch.
+Os blobs intermediários/rejeitados não são distribuição:
 
-Esse fallback **não é o PDF 2.0.0** e não deve ser usado no smoke de aceitação.
+- `5bea23e3bd98b307496a086e98effc51853a0cd7` — truncado;
+- `82046b5da25a7565fd84763763be33ebac2556fc` — órfão/intermediário;
+- `2287be2ba025228cc311722effc794fc9edf476f` — fallback 1.0.0 temporário.
 
 ### Arquitetura NotebookLM preservada
 
 ```text
 FONTES
-→ APOSTILA.pdf 2.0.0 íntegro
+→ APOSTILA.pdf 2.0.0
 
 CONFIGURAÇÃO DA CONVERSA
 → bloco operacional de METODOLOGIA_NOTEBOOKLM.md
 ```
 
-### Pendências para release final
+### Pendência para release final
 
-1. publicar o PDF 2.0.0 íntegro no GitHub e confirmar por readback o artefato correto;
-2. executar smoke real no NotebookLM usando somente esse PDF como corpus de conteúdo;
-3. verificar Teste, Cartões, Mapa mental e chat configurado;
-4. registrar o resultado e, se passar, concluir release e merge do PR #12.
+Resta o smoke real no NotebookLM usando somente o `APOSTILA.pdf` 2.0.0 como corpus de conteúdo, verificando Teste, Cartões, Mapa mental e chat configurado. O resultado só deve ser marcado `PASS` se realmente executado.
 
 ### Gate determinístico
 
@@ -107,7 +107,6 @@ Patch de instalação após observar a configuração nativa de conversas do Not
 - `METODOLOGIA_NOTEBOOKLM.md` permanece versionada no GitHub, mas como texto de configuração da conversa, não fonte;
 - o usuário copia o bloco operacional da metodologia para `Personalizado` (ou equivalente);
 - Estúdio e chat usam o mesmo corpus didático limpo;
-- deixa de existir necessidade cotidiana de marcar/desmarcar metodologia;
 - DEC-0017 refina DEC-0016.
 
 ### Conteúdo não alterado
@@ -126,7 +125,7 @@ Patch arquitetural após smoke tests reais do NotebookLM.
 
 - com `METODOLOGIA_NOTEBOOKLM.md` selecionada no Teste, o NotebookLM gerou pergunta sobre a própria metodologia;
 - sem a metodologia, o Teste gerou pergunta conceitual baseada na apostila;
-- no chat, a metodologia funcionou melhor como instrução operacional: uma questão por vez, alternativas A–E, espera da resposta, confiança e possibilidade de relatório.
+- no chat, a metodologia funcionou melhor como instrução operacional.
 
 ### Decisão
 
@@ -134,10 +133,6 @@ Patch arquitetural após smoke tests reais do NotebookLM.
 - `METODOLOGIA_NOTEBOOKLM.md` passa a ser instrução exclusiva do chat;
 - `ANALISE_BANCA.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md`, edital e provas históricas ficam no backoffice;
 - DEC-0015 é substituída por DEC-0016.
-
-### Consequência editorial
-
-A qualidade da apostila passa a ser o principal gargalo do sistema. O próximo trabalho é reconstruir `APOSTILA.md`/`APOSTILA.pdf` para sustentar Testes, Cartões, Mapas mentais, Relatórios e consulta no NotebookLM sem depender do backoffice.
 
 ---
 
@@ -150,12 +145,7 @@ Patch de usabilidade para tornar o NotebookLM Studio-first e reduzir burocracia 
 - o Estúdio passa a ser interface principal de estudo;
 - Teste, Cartões, Mapa mental, Relatórios e outros artefatos podem ser usados conforme a necessidade;
 - prompts longos e seleção constante de subconjuntos de fontes deixam de ser requisitos;
-- chat passa a ser camada de aprofundamento/correção;
-- smoke test foi simplificado para observar resultado real antes de otimizações.
-
-### Artefatos não alterados
-
-- `APOSTILA.md`, `APOSTILA.pdf`, `ANALISE_BANCA.md` e `SOURCES.md` permaneceram iguais à distribuição 1.0.0.
+- chat passa a ser camada de aprofundamento/correção.
 
 ---
 
@@ -169,7 +159,6 @@ Primeira versão operacional do SubjectPack.
 - apostila autoral focada em interpretação, coesão, semântica e norma-padrão;
 - `APOSTILA.pdf` pesquisável para distribuição no NotebookLM;
 - análise de 88 questões de Português das provas 2021, 2023, 2024 e 2025;
-- classificação reproduzível por categoria primária;
 - metodologia específica para NotebookLM;
 - manifesto, fontes e limites epistemológicos.
 
