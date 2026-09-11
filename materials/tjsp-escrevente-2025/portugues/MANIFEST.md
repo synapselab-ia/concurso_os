@@ -3,19 +3,19 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `portugues`  
 **Pack version:** `2.0.0`  
-**Status:** `release-candidate`  
+**Status:** `release-candidate-blocked`  
 **Candidate date:** `2026-09-11`
 
 ## Objetivo
 
-Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizado, revisão e uso como corpus limpo no NotebookLM. A reconstrução 2.0.0 aplica `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e substitui a distribuição didática 1.0.0, mantendo a separação arquitetural entre conteúdo do estudante, configuração do tutor e backoffice.
+Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizado, revisão e uso como corpus limpo no NotebookLM. A reconstrução 2.0.0 aplica `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e mantém a separação entre conteúdo do estudante, configuração do tutor e backoffice.
 
 ## Arquivos canônicos do pack
 
 ### StudentContent
 
-- `APOSTILA.md` — fonte autoral editável.
-- `APOSTILA.pdf` — distribuição pesquisável para o estudante e fonte principal do NotebookLM.
+- `APOSTILA.md` — fonte autoral editável **2.0.0**, reconstruída e editorialmente validada.
+- `APOSTILA.pdf` — distribuição para NotebookLM. **No estado atual da branch, este arquivo é temporariamente o fallback íntegro 1.0.0, não o PDF 2.0.0.**
 
 ### ConversationInstruction
 
@@ -32,42 +32,53 @@ Este pack entrega uma apostila autocontida de Língua Portuguesa para aprendizad
 
 ## O que mudou em 2.0.0
 
-A apostila foi reconstruída, não apenas ampliada. A versão nova:
+A apostila foi reconstruída, não apenas ampliada. A nova fonte autoral:
 
 - cobre os 13 itens de Português do syllabus com localização explícita na matriz;
-- organiza o conteúdo por dependências pedagógicas, e não pela simples ordem do edital;
-- amplia leitura de textos verbais, não verbais, multissemióticos, literários e não literários;
+- organiza o conteúdo por dependências pedagógicas;
+- amplia leitura verbal, não verbal, multissemiótica, literária e não literária;
 - separa literalidade, pressuposição, inferência e extrapolação;
-- aprofunda coesão, pronomes relativos e relações lógico-semânticas;
-- amplia semântica contextual, polissemia, sinonímia, antonímia e linguagem figurada;
+- aprofunda coesão, relações lógico-semânticas e semântica contextual;
 - ensina classes de palavras em funcionamento;
 - aprofunda concordância, regência, pronomes, colocação, crase e pontuação;
-- inclui fronteiras conceituais e reescrita integrada;
-- acrescenta 30 questões autorais A–E e gabarito comentado separado.
+- inclui reescrita integrada e fronteiras conceituais;
+- contém 30 questões autorais A–E com gabarito comentado separado.
 
-## APOSTILA.pdf — release candidate
+## Estado do PDF 2.0.0
 
-Artefato produzido e validado em QA-9:
+### Artefato validado localmente
 
-- páginas: `34`;
+O candidato de distribuição 2.0.0 que passou no QA local possui:
+
+- páginas: `29`;
 - formato: A4;
-- tamanho: `140496 bytes`;
-- SHA-256: `90052841384431f942f78234ce543fc5dbeb67f44793f40459632c6939dfbbc2`;
-- Git blob preparado: `5bea23e3bd98b307496a086e98effc51853a0cd7`;
+- tamanho: `40928 bytes`;
+- SHA-256: `1a7a1cbe8a0597f94ea490da7eec8ff874f2430ef596ec5bb9c3a14ecb2f1d62`;
+- Git blob esperado: `b06f1150ac71cd9b87a3f8341be70a1c87355ccc`;
 - texto pesquisável: sim;
-- fontes incorporadas/Unicode: sim;
-- outline: `87` itens;
-- QA visual: 34 páginas renderizadas e inspecionadas sem clipping/overlap evidente.
+- QA textual e visual: pass local.
 
-Detalhes e limitações estão em `APOSTILA_QA_2.0.0.md`.
+Esse artefato **ainda não está publicado de forma íntegra no GitHub**.
 
-## Instalação no NotebookLM
+### Fallback presente na branch
+
+Após detectar que uma tentativa de upload binário foi truncada, a branch foi restaurada ao último `APOSTILA.pdf` íntegro conhecido para não deixar um arquivo corrompido como distribuição:
+
+- versão material: `1.0.0` fallback;
+- páginas: `8`;
+- tamanho: `13950 bytes`;
+- SHA-256: `e203e62c6be1207dc5ca475e61460d9619be4bfeeeeb32bcf90990b485e8cc23`;
+- Git blob: `2287be2ba025228cc311722effc794fc9edf476f`.
+
+**Não usar esse fallback no smoke de aceitação da 2.0.0.** O smoke só começa depois que o PDF 2.0.0 íntegro for publicado e confirmado por readback.
+
+## Instalação no NotebookLM após publicação do PDF 2.0.0
 
 ### Fontes
 
 Carregar como fonte por padrão:
 
-1. `APOSTILA.pdf`
+1. `APOSTILA.pdf` **2.0.0 íntegro**.
 
 Não carregar como fonte:
 
@@ -86,7 +97,7 @@ Não carregar como fonte:
 3. manter o tamanho de resposta em `Padrão` inicialmente;
 4. salvar.
 
-O princípio arquitetural é estável mesmo que a UI do NotebookLM mude:
+Princípio arquitetural:
 
 ```text
 conteúdo estudável → APOSTILA.pdf
@@ -96,23 +107,25 @@ backoffice → GitHub/ChatGPT
 
 ## QA e status de release
 
-Passaram na revisão interna:
+Passaram:
 
 - QA-1 cobertura;
-- QA-2 exatidão/fonte no escopo editorial;
+- QA-2 exatidão/fonte;
 - QA-3 didática;
 - QA-4 distinções;
 - QA-5 prática;
 - QA-6 coerência com banca sem overfitting;
 - QA-7 revisão estática de utilidade para NotebookLM;
 - QA-8 redundância/coerência;
-- QA-9 PDF textual/visual.
+- QA-9 textual/visual **do artefato local 2.0.0**.
 
-Pendente antes de promover `release-candidate` a release final:
+Pendentes antes de promover para release final:
 
-- smoke test real no NotebookLM usando o novo `APOSTILA.pdf` como corpus limpo e `METODOLOGIA_NOTEBOOKLM.md` na configuração da conversa.
+1. publicação íntegra do `APOSTILA.pdf` 2.0.0 no GitHub, com readback confirmando o artefato;
+2. smoke real no NotebookLM com esse PDF como corpus limpo;
+3. fechamento do QA/release e merge do PR #12.
 
-O gate determinístico `python tools/verify.py` não pôde ser executado no runtime desta sessão porque o ambiente local não resolve `github.com`; a impossibilidade está registrada em `APOSTILA_QA_2.0.0.md` e deve permanecer explícita, não ser tratada como `pass`.
+`python tools/verify.py` continua não executado neste runtime porque o ambiente local não resolve `github.com`; a impossibilidade está registrada em `APOSTILA_QA_2.0.0.md` e não é tratada como `pass`.
 
 ## Múltiplos participantes
 
@@ -131,4 +144,4 @@ O mesmo SubjectPack pode alimentar notebooks separados de participantes diferent
 - não presume que o Teste nativo reproduza automaticamente a banca;
 - não transforma backoffice em conteúdo estudável;
 - não transforma instruções de chat em fonte estudável;
-- o smoke test real do corpus 2.0.0 ainda precisa ser executado antes do merge final.
+- a 2.0.0 não pode ser mesclada enquanto o PDF final e o smoke real não estiverem validados.
