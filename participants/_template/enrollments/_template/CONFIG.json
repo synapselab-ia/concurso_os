@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1",
+  "enrollment_id": "pNNN__competition-slug",
+  "participant_id": "pNNN",
+  "competition_id": "competition-slug",
+  "status": "active",
+  "started_at": "YYYY-MM-DD",
+  "study_mode": "adaptive"
+}

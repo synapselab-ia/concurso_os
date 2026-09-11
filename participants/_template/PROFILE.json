@@ -1,0 +1,7 @@
+{
+  "schema_version": "0.1",
+  "participant_id": "pNNN",
+  "public_alias": "alias-publico",
+  "status": "active",
+  "created_at": "YYYY-MM-DD"
+}
