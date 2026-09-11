@@ -8,12 +8,22 @@ Primeira versão operacional do SubjectPack.
 
 - cobertura dos 13 itens de Língua Portuguesa do edital 2025;
 - apostila autoral focada em interpretação, coesão, semântica e norma-padrão;
+- `APOSTILA.pdf` pesquisável para distribuição no NotebookLM;
 - análise de 88 questões de Português das provas 2021, 2023, 2024 e 2025;
 - classificação reproduzível por categoria primária;
 - metodologia específica para NotebookLM, derivada dos elementos úteis do protocolo legado;
 - protocolo de confiança, correção rápida/profunda, diagnóstico de erro, reteste e relatório de sessão;
 - manifesto de instalação e sincronização manual;
 - registro de fontes e limites epistemológicos.
+
+### QA do release
+
+- `APOSTILA.md` revisada em UTF-8 e sem a corrupção de caracteres observada em uma tentativa intermediária de exportação;
+- PDF final: 8 páginas, formato Letter, texto pesquisável;
+- renderização das 8 páginas verificada sem clipping/overlap evidente;
+- extração textual verificada para acentos e termos-chave de Português;
+- corpus quantitativo conferido em 88 questões: 24 (2021) + 24 (2023) + 24 (2024) + 16 (2025);
+- artefatos auxiliares usados durante a tentativa de upload binário foram removidos do pack final.
 
 ### Decisões de versão
 
