@@ -2,10 +2,13 @@
 
 ```yaml
 project_state: active
-phase: subject_pack_content_rebuild
-branch: main
+phase: subject_pack_release_validation
+branch: content/apostila-portugues-2.0.0
+base_branch: main
+base_sha: 29f92f11d822b426d6af239afa31a09829881844
 last_implementation_branch: docs/apostila-authoring-protocol
-current_task: APOSTILA-002 rebuild Portuguese apostila using canonical authoring protocol
+current_task: APOSTILA-002 finalize Portuguese 2.0.0 after live NotebookLM smoke test
+current_pack: portugues 2.0.0 release-candidate
 completed:
   - repository foundation merged
   - chat-independent continuity active
@@ -13,55 +16,73 @@ completed:
   - TJSP 2025 adapter, edital map, blueprint and source registry created
   - historical exams 2021/2023/2024/2025 registered
   - GitHub + ChatGPT + NotebookLM stack established
-  - answer-level mastery/scheduler removed from V0.1 critical path
   - Portuguese edital slice mapped across 13 content fronts
   - 88 Portuguese questions from 2021/2023/2024/2025 classified reproducibly
   - Portuguese banca analysis 1.0.0 produced
-  - Portuguese apostila/PDF 1.0.0 produced and QA reviewed
   - Portuguese SubjectPack 1.0.0 merged in PR 7
-  - Studio-first usability patch 1.0.1 merged in PR 8
-  - real NotebookLM smoke test exposed source-role problem
-  - native Test with methodology selected generated question about methodology itself
-  - native Test without methodology generated quiz directly about apostila content
-  - NotebookLM chat followed operational methodology substantially better than native Test
-  - DEC-0015 superseded by DEC-0016
-  - content-first architecture merged in PR 9
-  - NotebookLM custom conversation configuration observed in real UI
-  - DEC-0017 adopted and conversation-config architecture merged in PR 10
-  - Portuguese MANIFEST/METODOLOGIA advanced to 1.0.3 without changing apostila/PDF bytes
-  - DEC-0018 adopted: canonical apostila authoring protocol required for major creation/rebuilds
-  - APOSTILA_AUTHORING_PROTOCOL created with coverage matrix, domain profiles, NotebookLM engineering and 10 QA gates
-  - AGENTS and START_HERE require/read the authoring protocol for apostila work
-  - PROJECT_SPEC and ARCHITECTURE aligned with protocol-driven authoring
-  - QA_PROTOCOL extended to require semantic editorial QA in addition to deterministic verify
-  - APOSTILA-002 rewritten to apply the protocol explicitly
+  - NotebookLM source-role smoke tests completed for 1.x architecture
+  - DEC-0016 and DEC-0017 established clean-corpus + native conversation configuration architecture
+  - DEC-0018 adopted and APOSTILA_AUTHORING_PROTOCOL made mandatory
+  - APOSTILA-002 audit of Portuguese 1.0.0 completed
+  - Portuguese 2.0.0 coverage/authoring matrix created and closed with B1.1-B1.13 covered
+  - new pedagogical outline implemented across 9 units
+  - Portuguese APOSTILA.md reconstructed for learning, review and NotebookLM recovery
+  - 30 original A-E practice questions added with separate commented answer key
+  - semantic QA-1 through QA-6 passed
+  - QA-7 static NotebookLM corpus review passed
+  - QA-8 redundancy/coherence passed
+  - Portuguese 2.0.0 PDF release candidate generated
+  - PDF textual QA passed
+  - PDF visual QA passed after rendering and inspecting 34 pages
+  - SOURCES/MANIFEST/METODOLOGIA/CHANGELOG aligned with 2.0.0 release candidate
 in_progress:
-  - hand off to next chat for Portuguese 2.0.0 reconstruction under APOSTILA_AUTHORING_PROTOCOL
+  - publish the validated 34-page PDF blob on the implementation branch
+  - open release-candidate PR to main
+  - execute live NotebookLM smoke test with APOSTILA.pdf as clean corpus
 not_started:
-  - APOSTILA-002 audit of current Portuguese apostila
-  - Portuguese coverage/authoring matrix
-  - new pedagogical outline
-  - Portuguese 2.0.0 content rewrite
-  - semantic QA gates for Portuguese 2.0.0
-  - new Portuguese PDF release and PDF QA
-  - NotebookLM validation using rebuilt apostila as clean corpus
+  - promote Portuguese 2.0.0 release-candidate to final release
+  - merge APOSTILA-002 PR
   - SubjectPacks for remaining subjects
-blockers: []
+blockers:
+  - live NotebookLM smoke test requires external NotebookLM interaction not available in the current tool environment
 validation:
-  command: python tools/verify.py
-  result: not_executed_current_environment
-  reason: local runtime cannot resolve github.com; clone of docs/apostila-authoring-protocol failed before gate execution
-  attempted_at: 2026-09-11
-  clone_error: Could not resolve host github.com
-  static_diff_review: pass
-  critical_readback: pass
-  changed_files_reviewed: 10
-  branch_base: b2bfd8248e744c61e77278e4c975192e86f4429c
-  change_scope: documentation_and_authoring_protocol_only
-  binary_changes: none
-  apostila_md_changed: false
-  apostila_pdf_changed: false
+  canonical_gate:
+    command: python tools/verify.py
+    result: not_executed_current_environment
+    reason: local runtime cannot resolve github.com, so a canonical checkout cannot be obtained for a valid repository-wide gate
+    attempted_at: 2026-09-11
+    network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
+    error: Could not resolve host github.com
+  github_state_review:
+    result: pass
+    branch_before_closure: content/apostila-portugues-2.0.0
+    branch_ahead_before_closure: 4
+    branch_behind_before_closure: 0
+    open_pr_before_closure: none
+    diff_readback: pass
+  editorial_qa:
+    qa_1_coverage: pass
+    qa_2_accuracy_source: pass
+    qa_3_didactics: pass
+    qa_4_distinctions: pass
+    qa_5_practice: pass
+    qa_6_banca_without_overfit: pass
+    qa_7_notebooklm_static: pass
+    qa_7_notebooklm_live: pending
+    qa_8_redundancy_coherence: pass
+  pdf_qa:
+    result: pass
+    pages: 34
+    page_size: A4
+    bytes: 140496
+    sha256: 90052841384431f942f78234ce543fc5dbeb67f44793f40459632c6939dfbbc2
+    searchable_text: pass
+    unicode_glyph_check: pass
+    rendered_pages_inspected: 34
+    clipping_overlap: none_observed
 ci: disabled
+expected_pull_request: pending_creation
+merge_status: withheld_until_live_notebooklm_smoke
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
 last_subject_pack_pull_request: 7
