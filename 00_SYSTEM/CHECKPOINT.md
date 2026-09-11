@@ -7,7 +7,7 @@ branch: content/apostila-portugues-2.0.0
 base_branch: main
 base_sha: 29f92f11d822b426d6af239afa31a09829881844
 last_implementation_branch: docs/apostila-authoring-protocol
-current_task: APOSTILA-002 retest NotebookLM chat with METODOLOGIA_NOTEBOOKLM 2.0.0-rc2, finish Studio smoke, then finalize release
+current_task: APOSTILA-002 finish native NotebookLM Teste, Cartões and Mapa mental smoke, then finalize release
 current_pack: portugues 2.0.0 release-candidate
 completed:
   - repository foundation merged
@@ -42,16 +42,18 @@ completed:
   - first live NotebookLM chat smoke attempt executed by user
   - live smoke findings recorded: minor overstatement in inference explanation, incorrect label on valid no-crase example, under-specific concordance correction, UI suggestion leaking answer
   - METODOLOGIA_NOTEBOOKLM hardened to 2.0.0-rc2 based only on observed failures
+  - configured-chat rc2 retest executed by user and passed controlled tutor behavior
+  - rc2 concordance correction explained each relevant construction specifically, including fazer temporal, menos invariável, anexo agreement and dever + existir
+  - tutor-generated answer leak was not observed in rc2 retest; interface suggestion chips remain an external UI risk
   - PR 12 remains open in draft from content/apostila-portugues-2.0.0 to main
 in_progress:
-  - reinstall METODOLOGIA_NOTEBOOKLM 2.0.0-rc2 in NotebookLM and retest configured chat
   - complete native Teste, Cartões and Mapa mental smoke over published APOSTILA.pdf 2.0.0
 not_started:
   - promote Portuguese 2.0.0 release-candidate to final release
   - merge PR 12
   - SubjectPacks for remaining subjects
 blockers:
-  - live NotebookLM retest requires authenticated interaction with the user's NotebookLM; no NotebookLM connector/browser session is available in this execution environment
+  - remaining NotebookLM Studio smoke requires authenticated interaction with the user's NotebookLM; no NotebookLM connector/browser session is available in this execution environment
 validation:
   canonical_gate:
     command: python tools/verify.py
@@ -75,15 +77,24 @@ validation:
     qa_5_practice: pass
     qa_6_banca_without_overfit: pass
     qa_7_notebooklm_static: pass
-    qa_7_notebooklm_live: pending_retest
+    qa_7_notebooklm_live: partial_chat_pass_studio_pending
     qa_7_first_live_attempt: findings_recorded_not_passed
+    qa_7_chat_rc2_retest: pass
     qa_8_redundancy_coherence: pass
   notebooklm_live_findings:
-    inference_wording: minor_overstatement
-    crase_pair_label: inconsistent
-    concordance_correction_specificity: insufficient
-    answer_leak_suggestion: observed_in_ui_component_control_uncertain
+    first_attempt:
+      inference_wording: minor_overstatement
+      crase_pair_label: inconsistent
+      concordance_correction_specificity: insufficient
+      answer_leak_suggestion: observed_in_ui_component_control_uncertain
     remediation: METODOLOGIA_NOTEBOOKLM_2.0.0-rc2
+    rc2_retest:
+      controlled_tutor_answer_leak: not_observed
+      concordance_question_quality: pass
+      concordance_correction_specificity: pass
+      corrected_forms_explicit: pass
+      followup_retest_quality: pass
+      external_ui_suggestion_chips: still_possible_product_layer_risk
   pdf_qa:
     repository_distribution:
       result: pass
@@ -107,7 +118,7 @@ validation:
         result: orphan_intermediate_not_promoted
 ci: disabled
 current_pull_request: 12
-merge_status: withheld_until_live_notebooklm_retest_pass
+merge_status: withheld_until_notebooklm_studio_smoke_pass
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
 last_subject_pack_pull_request: 7
