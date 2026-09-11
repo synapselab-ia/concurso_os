@@ -2,23 +2,9 @@
 
 ```yaml
 project_state: active
-phase: baseline_in_progress
-branch: main
-last_implementation_branch: adapter/tjsp-escrevente-2025
-current_task: BASE-001 execute first p001 TJSP baseline
-baseline_progress:
-  participant_id: p001
-  competition_id: tjsp-escrevente-2025
-  stage: stage_1
-  completed_items: 1
-  total_items: 13
-  next_item: 2
-  last_result:
-    competency_id: PT.TEXT.INTERPRET_LITERAL_INFERENCE
-    selected_answer: C
-    correct: true
-    confidence: between_two
-    considered_alternatives: [C, E]
+phase: system_build
+branch: fix/defer-real-baseline
+current_task: ENGINE-001 close evidence projection pipeline before real baseline
 completed:
   - repository foundation merged
   - multi-participant and multi-competition architecture active
@@ -34,20 +20,22 @@ completed:
   - p001 study enrollment created without claiming official candidate status
   - stage-1 baseline plan created with confidence capture
   - auditor extended to validate competitions, competency references and enrollments
-  - PR 4 diff reviewed and critical files read back from GitHub
-  - first real p001 baseline EvidenceEvent persisted
+  - PR 4 merged
+  - one real p001 response collected prematurely and preserved as append-only history
+  - real baseline paused by DEC-0012 until projection/scheduler pipeline is implemented
+in_progress:
+  - evidence correction and projection eligibility semantics
+  - deterministic per-participant state projection
+  - synthetic isolation fixtures for p001 and p002
+  - scheduler implementation over derived state
 not_started:
-  - evidence-derived mastery projection
-  - scheduler implementation from real evidence
-blockers:
-  - BASE-001 requires remaining real answers from p001
+  - resume real p001 baseline
+  - writing screen
+blockers: []
 validation:
   command: python tools/verify.py
-  result: not_executed_in_current_environment
-  reason: runtime cannot resolve github.com to clone the public branch
+  result: pending_for_ENGINE_001
   previous_known_result: foundation branch passed auditor and 3 tests before adapter work
-  current_static_review: pass
-  current_readback: pass
 ci: disabled
 last_adapter_pull_request: 4
 ```
