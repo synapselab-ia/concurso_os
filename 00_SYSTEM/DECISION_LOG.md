@@ -43,3 +43,7 @@ No adapter `tjsp-escrevente-2025`, o Edital de Abertura n.º 02/2025 controla es
 ## DEC-0011 — Binários-fonte não são copiados para o repositório público
 **Status:** accepted  
 Durante a fase pública de produção, PDFs e outros binários de fonte não são republicados no GitHub. A rastreabilidade é mantida por `source_id`, nome original, autoridade/URL quando disponível, hash SHA-256 e tamanho. Uma futura política de arquivos poderá alterar isso sem perder a identidade da fonte.
+
+## DEC-0012 — Evidência real só entra após o pipeline de projeção estar pronto
+**Status:** accepted  
+Não coletar baseline real de participantes enquanto o contrato de eventos, a política de correção/eligibilidade, a projeção de estado por participante e o scheduler ainda não estiverem implementados e testados. Até lá, desenvolvimento usa fixtures sintéticas. Evidência real coletada prematuramente permanece no histórico append-only, mas deve ser explicitamente anotada como `preflight` e excluída das projeções de domínio até revalidação.
