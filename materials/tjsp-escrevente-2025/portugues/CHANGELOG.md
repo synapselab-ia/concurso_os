@@ -1,5 +1,39 @@
 # CHANGELOG — Português — TJSP Escrevente 2025
 
+## 1.0.2 — 2026-09-11
+
+Patch arquitetural após smoke tests reais do NotebookLM.
+
+### Observado
+
+- com `METODOLOGIA_NOTEBOOKLM.md` selecionada no `Teste`, o NotebookLM gerou pergunta sobre a própria metodologia;
+- ao retirar a metodologia e manter a apostila, o `Teste` continuou funcionando como quiz sobre o conteúdo da fonte, inclusive com formulações do tipo “de acordo com a apostila”;
+- no chat, a metodologia funcionou melhor como instrução operacional: uma questão por vez, alternativas A–E, espera da resposta, confiança e possibilidade de relatório de acertos/erros/dúvidas.
+
+### Decisão
+
+- `APOSTILA.pdf` passa a ser o principal conteúdo do estudante;
+- `METODOLOGIA_NOTEBOOKLM.md` passa a ser instrução **exclusiva do chat**;
+- para artefatos do Estúdio, usar a apostila e desmarcar a metodologia;
+- para o chat, usar apostila + metodologia;
+- `ANALISE_BANCA.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md`, edital e provas históricas deixam de ser fontes padrão do NotebookLM e permanecem no backoffice do GitHub/ChatGPT;
+- `DEC-0015` é substituída por `DEC-0016`.
+
+### Consequência editorial
+
+A qualidade da apostila passa a ser o principal gargalo do sistema. O próximo trabalho é reconstruir `APOSTILA.md`/`APOSTILA.pdf` para que o material sustente sozinho Testes, Cartões, Mapas mentais, Relatórios e consulta no NotebookLM sem depender de documentação interna do projeto.
+
+Target recomendado após a reconstrução: `2.0.0`.
+
+### Artefatos de conteúdo não alterados neste patch
+
+- `APOSTILA.md` permanece igual ao release 1.0.0;
+- `APOSTILA.pdf` permanece igual ao release 1.0.0;
+- `ANALISE_BANCA.md` permanece igual ao release 1.0.0;
+- `SOURCES.md` permanece igual ao release 1.0.0.
+
+---
+
 ## 1.0.1 — 2026-09-11
 
 Patch de usabilidade para tornar o NotebookLM **Studio-first** e reduzir burocracia operacional.
