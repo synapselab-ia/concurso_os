@@ -1,12 +1,13 @@
 # Project Control
 
 - **Status:** ACTIVE
-- **Phase:** FOUNDATION
+- **Phase:** BASELINE_READY
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `chore/automerge-policy`
-- **Current participant:** none
-- **Current competition:** none
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `adapter/tjsp-escrevente-2025`
+- **Current participant:** `p001`
+- **Current competition:** `tjsp-escrevente-2025`
 - **Validation gate:** `python tools/verify.py`
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
