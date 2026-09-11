@@ -1,15 +1,16 @@
 # Project Control
 
 - **Status:** ACTIVE
-- **Phase:** SUBJECT_PACK_INSTALL_TEST
+- **Phase:** NOTEBOOKLM_STUDIO_SMOKE_TEST
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
 - **Current implementation branch:** `main`
-- **Last implementation branch:** `pack/portugues-v1`
+- **Last implementation branch:** `docs/notebooklm-studio-first`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `portugues`
-- **Current pack:** `portugues 1.0.0`
+- **Current pack:** `portugues 1.0.1`
 - **Study stack:** GitHub + ChatGPT + NotebookLM
+- **Primary NotebookLM UX:** Studio-first, chat for aprofundamento
 - **Stack specification:** `docs/STACK_NOTEBOOKLM.md`
 - **Validation gate:** `python tools/verify.py`
 - **CI:** disabled during production

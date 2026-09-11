@@ -1,5 +1,40 @@
 # CHANGELOG — Português — TJSP Escrevente 2025
 
+## 1.0.1 — 2026-09-11
+
+Patch de usabilidade para tornar o NotebookLM **Studio-first** e reduzir burocracia operacional.
+
+### Alterado
+
+- o Estúdio do NotebookLM passa a ser interface principal de estudo, não apenas o chat;
+- `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, resumos e outros artefatos podem ser usados naturalmente conforme a necessidade;
+- removida a expectativa de selecionar subconjuntos de fontes para cada recurso por padrão;
+- prompts longos deixaram de ser requisito operacional;
+- `Teste` passa a usar inicialmente `Médio (padrão)` como posição neutra, com calibração de banca feita pelo corpus e por instrução curta;
+- explicitado que `Fácil / Médio / Difícil` não equivalem automaticamente ao nível VUNESP;
+- chat passa a ser camada de aprofundamento/correção, e não porta de entrada obrigatória de toda sessão;
+- smoke test simplificado para poucos cliques e observação do resultado real antes de qualquer otimização.
+
+### Smoke test recomendado
+
+```text
+Teste
+→ Padrão
+→ Médio (padrão)
+→ "Teste de Português no padrão TJSP/VUNESP das provas carregadas."
+→ responder algumas questões
+→ trazer ao ChatGPT apenas desvios relevantes
+```
+
+### Artefatos não alterados
+
+- `APOSTILA.md` permanece igual ao release 1.0.0;
+- `APOSTILA.pdf` permanece igual ao release 1.0.0;
+- `ANALISE_BANCA.md` permanece igual ao release 1.0.0;
+- `SOURCES.md` permanece igual ao release 1.0.0.
+
+---
+
 ## 1.0.0 — 2026-09-11
 
 Primeira versão operacional do SubjectPack.

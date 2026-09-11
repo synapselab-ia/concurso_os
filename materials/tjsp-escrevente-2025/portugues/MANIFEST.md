@@ -2,95 +2,122 @@
 
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `portugues`  
-**Pack version:** `1.0.0`  
-**Status:** ready-for-notebook  
+**Pack version:** `1.0.1`  
+**Status:** studio-smoke-test  
 **Release date:** `2026-09-11`
 
 ## Objetivo
 
-Este pacote é a distribuição canônica de Língua Portuguesa para criação de um NotebookLM focado no TJSP/VUNESP. O GitHub mantém os arquivos autorais e o histórico de versão; os PDFs oficiais e históricos são adicionados manualmente pelo usuário no NotebookLM.
+Este pacote é a distribuição canônica de Língua Portuguesa para criação de um NotebookLM focado no TJSP/VUNESP.
+
+A versão `1.0.1` simplifica a usabilidade: o notebook deve ser montado uma vez e usado naturalmente pelo **Estúdio + chat**, sem exigir que o estudante escolha manualmente um conjunto diferente de fontes ou cole prompts longos para cada ferramenta.
 
 ## Arquivos canônicos do pack
 
 - `APOSTILA.md` — fonte autoral editável.
 - `APOSTILA.pdf` — distribuição recomendada para o NotebookLM.
 - `ANALISE_BANCA.md` — análise reproduzível das provas 2021/2023/2024/2025.
-- `METODOLOGIA_NOTEBOOKLM.md` — comportamento pedagógico do notebook.
+- `METODOLOGIA_NOTEBOOKLM.md` — regras de uso simples do Estúdio e do chat.
 - `SOURCES.md` — registro e função das fontes.
 - `CHANGELOG.md` — histórico de versões.
 
-### Identidade da distribuição PDF 1.0.0
+## Apostila PDF
+
+A apostila não mudou na versão `1.0.1`; portanto o mesmo PDF validado do release `1.0.0` é reutilizado.
 
 - páginas: `8`;
 - tamanho: `13950 bytes`;
 - SHA-256: `e203e62c6be1207dc5ca475e61460d9619be4bfeeeeb32bcf90990b485e8cc23`;
 - Git blob: `2287be2ba025228cc311722effc794fc9edf476f`.
 
-O hash permite conferir se o arquivo carregado no NotebookLM corresponde exatamente ao release canônico.
+## O que carregar no NotebookLM
 
-## Fontes que devem ser carregadas no NotebookLM
-
-### Obrigatórias
+### Núcleo recomendado
 
 1. `METODOLOGIA_NOTEBOOKLM.md`
 2. `APOSTILA.pdf`
 3. `ANALISE_BANCA.md`
-4. Edital 2025 — arquivo original `TJSP2503_224_20250801114000.pdf.pdf`
+4. Edital 2025 — `TJSP2503_224_20250801114000.pdf.pdf`
 5. Prova TJSP/VUNESP 2025 — `tjsp 2025.pdf`
 
-### Recomendadas para análise histórica mais rica
+### Histórico recomendado
 
 6. `tjsp 2024.pdf`
 7. `tjsp 2023.pdf`
 8. `tjsp 2021.pdf`
 
-Não é necessário carregar `APOSTILA.md` se `APOSTILA.pdf` já estiver no notebook; isso evita duplicação semântica.
+Não é necessário carregar `APOSTILA.md` junto com `APOSTILA.pdf`.
 
-## Configuração recomendada
+## Regra de uso sem burocracia
 
-Use **um notebook de Português por participante** quando houver interesse em preservar histórico individual de conversas, notas e artefatos. O mesmo SubjectPack pode alimentar notebooks diferentes.
+Depois de carregar as fontes:
 
-Exemplo:
+- **não** fique trocando fontes a cada botão do Estúdio por padrão;
+- use `Teste`, `Cartões`, `Mapa mental`, `Relatórios`, `Tabela de dados`, resumos e outros recursos conforme forem úteis;
+- use comandos curtos;
+- só ajuste fontes/configurações de forma mais detalhada se um resultado real mostrar problema;
+- use o chat para dúvida, correção profunda ou análise de uma questão específica.
 
-```text
-SubjectPack Português 1.0.0
-├── Notebook Português — p001
-├── Notebook Português — p002
-└── Notebook Português — p003
-```
+A metodologia completa está em `METODOLOGIA_NOTEBOOKLM.md`.
 
-## Teste de instalação
+## Primeiro smoke test — Teste do Estúdio
 
-Após carregar as fontes, faça estas perguntas ao NotebookLM:
+Este é o teste que deve ser feito agora.
 
-1. `Qual é a versão do SubjectPack de Português?`
-   - resposta esperada: `1.0.0`.
-2. `Quantas questões de Língua Portuguesa o edital 2025 prevê?`
-   - resposta esperada: `16`, com apoio do edital.
-3. `Qual deve ser a diferença entre inferência válida e extrapolação no treino?`
-   - deve responder a partir da apostila/metodologia.
-4. `Comece uma sessão diagnóstica de Português no padrão deste pack.`
-   - deve apresentar uma questão por vez e aguardar a tentativa antes de corrigir.
+1. abrir **Teste**;
+2. deixar **Número de questões = Padrão**;
+3. deixar **Nível de dificuldade = Médio (padrão)**;
+4. manter as fontes carregadas sem microgerenciamento;
+5. no campo de tema, escrever somente:
 
-Se o notebook não reconhecer a versão ou ignorar a dinâmica de uma questão por vez, confirme se `METODOLOGIA_NOTEBOOKLM.md` e `APOSTILA.pdf` foram realmente carregados.
+> `Teste de Português no padrão TJSP/VUNESP das provas carregadas.`
 
-## Comando inicial recomendado
+6. gerar o teste;
+7. responder algumas questões normalmente;
+8. observar:
+   - se o conteúdo está dentro do edital;
+   - se as alternativas são plausíveis;
+   - se a linguagem lembra a forma de cobrança das provas carregadas;
+   - se a dificuldade parece compatível, sem obscuridade artificial;
+   - se as explicações são úteis.
 
-> Siga a `METODOLOGIA_NOTEBOOKLM` deste notebook. Comece uma sessão de Português para TJSP/VUNESP com questões inéditas, uma por vez. Exija resposta e confiança antes da correção. Use o edital para escopo, a apostila para teoria e a análise de banca para forma de cobrança.
+**Não usar `Difícil` como sinônimo de nível VUNESP.** O seletor é genérico; o padrão da banca deve vir do corpus carregado.
 
-## Regra de atualização
+## O que trazer de volta ao ChatGPT
 
-Quando este pack mudar:
+Não precisa produzir relatório formal agora.
+
+Se algo der errado, basta trazer:
+
+- print da questão;
+- enunciado/alternativas;
+- explicação estranha;
+- ou uma frase dizendo o que pareceu inadequado.
+
+Se tudo parecer bom após algumas questões, informar apenas que o smoke test passou.
+
+## Critério de aprovação do pack
+
+O SubjectPack está aprovado para replicação quando o usuário consegue estudar no Estúdio em poucos cliques, sem receita complexa, e os artefatos gerados permanecem coerentes com edital + corpus TJSP/VUNESP.
+
+## Múltiplos participantes
+
+O mesmo SubjectPack pode alimentar notebooks separados de `p001`, `p002`, `p003` etc. O material é compartilhado; histórico e artefatos pessoais podem permanecer separados em cada notebook.
+
+## Atualização
+
+Quando o pack mudar:
 
 1. incrementar a versão;
 2. atualizar `CHANGELOG.md`;
-3. regenerar `APOSTILA.pdf` se a apostila mudar;
+3. regenerar `APOSTILA.pdf` apenas se a apostila mudar;
 4. substituir no NotebookLM somente os arquivos alterados;
-5. repetir o teste de instalação.
+5. repetir apenas o smoke test necessário à mudança.
 
 ## Limites
 
-- Este pack não registra mastery questão a questão.
-- Não mistura histórico de participantes.
-- Não trata frequências históricas como garantia de cobrança futura.
-- O edital prevalece sobre provas antigas quanto ao escopo vigente.
+- não implementa mastery questão a questão;
+- não mistura participantes;
+- não trata frequência histórica como garantia futura;
+- o edital prevalece sobre provas antigas quanto ao escopo;
+- detalhes da interface do NotebookLM podem mudar e não são invariantes do projeto.
