@@ -7,7 +7,7 @@ branch: content/apostila-portugues-2.0.0
 base_branch: main
 base_sha: 29f92f11d822b426d6af239afa31a09829881844
 last_implementation_branch: docs/apostila-authoring-protocol
-current_task: APOSTILA-002 run live NotebookLM smoke, then finalize Portuguese 2.0.0 release
+current_task: APOSTILA-002 retest NotebookLM chat with METODOLOGIA_NOTEBOOKLM 2.0.0-rc2, finish Studio smoke, then finalize release
 current_pack: portugues 2.0.0 release-candidate
 completed:
   - repository foundation merged
@@ -39,16 +39,19 @@ completed:
   - exact 2.0.0 PDF blob published on implementation branch
   - GitHub readback confirmed PDF size and blob SHA byte-identical to local artifact
   - QA-9 PDF publication gate passed
-  - SOURCES/MANIFEST/CHANGELOG/QA/PROJECT_CONTROL aligned with published 2.0.0 candidate
-  - PR 12 open in draft from content/apostila-portugues-2.0.0 to main
+  - first live NotebookLM chat smoke attempt executed by user
+  - live smoke findings recorded: minor overstatement in inference explanation, incorrect label on valid no-crase example, under-specific concordance correction, UI suggestion leaking answer
+  - METODOLOGIA_NOTEBOOKLM hardened to 2.0.0-rc2 based only on observed failures
+  - PR 12 remains open in draft from content/apostila-portugues-2.0.0 to main
 in_progress:
-  - execute live NotebookLM smoke test with published APOSTILA.pdf 2.0.0 as clean corpus
+  - reinstall METODOLOGIA_NOTEBOOKLM 2.0.0-rc2 in NotebookLM and retest configured chat
+  - complete native Teste, Cartões and Mapa mental smoke over published APOSTILA.pdf 2.0.0
 not_started:
   - promote Portuguese 2.0.0 release-candidate to final release
   - merge PR 12
   - SubjectPacks for remaining subjects
 blockers:
-  - live NotebookLM smoke requires authenticated interaction with the user's NotebookLM; no NotebookLM connector/browser session is available in this execution environment
+  - live NotebookLM retest requires authenticated interaction with the user's NotebookLM; no NotebookLM connector/browser session is available in this execution environment
 validation:
   canonical_gate:
     command: python tools/verify.py
@@ -72,8 +75,15 @@ validation:
     qa_5_practice: pass
     qa_6_banca_without_overfit: pass
     qa_7_notebooklm_static: pass
-    qa_7_notebooklm_live: pending
+    qa_7_notebooklm_live: pending_retest
+    qa_7_first_live_attempt: findings_recorded_not_passed
     qa_8_redundancy_coherence: pass
+  notebooklm_live_findings:
+    inference_wording: minor_overstatement
+    crase_pair_label: inconsistent
+    concordance_correction_specificity: insufficient
+    answer_leak_suggestion: observed_in_ui_component_control_uncertain
+    remediation: METODOLOGIA_NOTEBOOKLM_2.0.0-rc2
   pdf_qa:
     repository_distribution:
       result: pass
@@ -97,7 +107,7 @@ validation:
         result: orphan_intermediate_not_promoted
 ci: disabled
 current_pull_request: 12
-merge_status: withheld_until_live_notebooklm_smoke
+merge_status: withheld_until_live_notebooklm_retest_pass
 last_adapter_pull_request: 4
 last_architecture_pull_request: 6
 last_subject_pack_pull_request: 7
