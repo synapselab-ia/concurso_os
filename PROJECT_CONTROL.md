@@ -8,7 +8,8 @@
 - **Last implementation branch:** `docs/apostila-authoring-protocol`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `portugues`
-- **Current pack:** `portugues 2.0.0` release candidate; conteúdo, matriz, QA editorial e PDF concluídos; smoke real do NotebookLM pendente
+- **Current pack:** `portugues 2.0.0` release candidate; conteúdo, matriz e QA editorial concluídos; publicação íntegra do PDF 2.0.0 e smoke real do NotebookLM pendentes
+- **Current repository PDF:** fallback íntegro da distribuição 1.0.0; não usar para validar a 2.0.0
 - **Study stack:** GitHub + ChatGPT + NotebookLM
 - **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte; instruções de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` obrigatório para criação/reconstrução substancial
