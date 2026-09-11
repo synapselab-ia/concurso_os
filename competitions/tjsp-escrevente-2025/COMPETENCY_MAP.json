@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "catalog_ref": "knowledge/competencies/core_v0.1.json",
+  "mappings": [
+    {"competency_id":"PT.TEXT.INTERPRET_LITERAL_INFERENCE","block_id":"B1","subject_id":"portuguese","syllabus_refs":["1","2","3"]},
+    {"competency_id":"PT.TEXT.COHESION_RELATIONS","block_id":"B1","subject_id":"portuguese","syllabus_refs":["4"]},
+    {"competency_id":"PT.LEX.CONTEXT_MEANING","block_id":"B1","subject_id":"portuguese","syllabus_refs":["5","6","7"]},
+    {"competency_id":"PT.GRAM.AGREEMENT","block_id":"B1","subject_id":"portuguese","syllabus_refs":["8","9"]},
+    {"competency_id":"PT.GRAM.REGENCY_CRASE","block_id":"B1","subject_id":"portuguese","syllabus_refs":["8","10","12"]},
+    {"competency_id":"PT.GRAM.PUNCTUATION_PRONOUNS","block_id":"B1","subject_id":"portuguese","syllabus_refs":["11","13"]},
+
+    {"competency_id":"LAW.PENAL.TYPICITY_ELEMENTS","block_id":"B2","subject_id":"law","syllabus_refs":["direito_penal"]},
+    {"competency_id":"LAW.CPP.PROCEDURE_AND_DEADLINES","block_id":"B2","subject_id":"law","syllabus_refs":["direito_processual_penal"]},
+    {"competency_id":"LAW.CPC.PROCEDURE_AND_REMEDIES","block_id":"B2","subject_id":"law","syllabus_refs":["direito_processual_civil"]},
+    {"competency_id":"LAW.CONST.EXPRESS_TEXT","block_id":"B2","subject_id":"law","syllabus_refs":["direito_constitucional"]},
+    {"competency_id":"LAW.ADMIN.PUBLIC_SERVANT_IMPROBITY","block_id":"B2","subject_id":"law","syllabus_refs":["direito_administrativo"]},
+    {"competency_id":"LAW.TJSP.INTERNAL_RULES","block_id":"B2","subject_id":"law","syllabus_refs":["legislacao_interna"]},
+
+    {"competency_id":"GA.CURRENT.EVENT_CONTEXT","block_id":"B3","subject_id":"current_affairs_lbi","syllabus_refs":["atualidades"]},
+    {"competency_id":"LAW.LBI.RIGHTS_AND_WORK","block_id":"B3","subject_id":"current_affairs_lbi","syllabus_refs":["lei_13146_arts_1_13_34_38"]},
+
+    {"competency_id":"MATH.RATIO_PERCENT_RULE3","block_id":"B3","subject_id":"mathematics","syllabus_refs":["razao_proporcao_porcentagem_regra_de_tres"]},
+    {"competency_id":"MATH.ALGEBRA_AVERAGE","block_id":"B3","subject_id":"mathematics","syllabus_refs":["medias_equacoes_sistemas"]},
+    {"competency_id":"MATH.GEOMETRY_MEASURES","block_id":"B3","subject_id":"mathematics","syllabus_refs":["medidas_geometria"]},
+
+    {"competency_id":"IT.OFFICE.WORD_EXCEL","block_id":"B3","subject_id":"informatics","syllabus_refs":["word","excel"]},
+    {"competency_id":"IT.WINDOWS_FILES_ONEDRIVE","block_id":"B3","subject_id":"informatics","syllabus_refs":["windows","onedrive"]},
+    {"competency_id":"IT.INTERNET_MAIL_TEAMS","block_id":"B3","subject_id":"informatics","syllabus_refs":["internet","email","teams"]},
+
+    {"competency_id":"LOGIC.PROPOSITIONS_ARGUMENTS","block_id":"B3","subject_id":"logic","syllabus_refs":["estruturas_logicas","argumentacao"]},
+    {"competency_id":"LOGIC.RELATIONS_DIAGRAMS","block_id":"B3","subject_id":"logic","syllabus_refs":["relacoes","diagramas"]},
+    {"competency_id":"LOGIC.SEQUENCES","block_id":"B3","subject_id":"logic","syllabus_refs":["sequencias"]},
+
+    {"competency_id":"WRITING.ARGUMENTATIVE.COHERENCE","block_id":"WRITING","subject_id":"writing","syllabus_refs":["dissertative_argumentative"]},
+    {"competency_id":"WRITING.FORMAL_LANGUAGE_COHESION","block_id":"WRITING","subject_id":"writing","syllabus_refs":["language","cohesion"]}
+  ]
+}
