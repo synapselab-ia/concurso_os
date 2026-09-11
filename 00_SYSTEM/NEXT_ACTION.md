@@ -1,14 +1,14 @@
 # NEXT_ACTION
 
-## APOSTILA-002-FINAL — Retestar configuração rc2 no NotebookLM e concluir o release
+## APOSTILA-002-FINAL — Validar Mapa mental no NotebookLM e concluir o release
 
 A reconstrução editorial de Português 2.0.0 está concluída na branch `content/apostila-portugues-2.0.0` e o `APOSTILA.pdf` 2.0.0 já foi publicado de forma íntegra e confirmado por readback.
 
-O primeiro smoke real no NotebookLM foi iniciado em 2026-09-11 e **não deve ser marcado como PASS ainda**. Ele recuperou o conteúdo central, mas revelou falhas concretas de comportamento/rotulagem no chat configurado. Essas falhas foram tratadas em `METODOLOGIA_NOTEBOOKLM.md` versão `2.0.0-rc2`.
+O smoke real no NotebookLM avançou: o reteste do chat configurado com `METODOLOGIA_NOTEBOOKLM.md` `2.0.0-rc2` passou, o Teste nativo passou e os Cartões passaram. Resta apenas o **Mapa mental** para fechar QA-7 live.
 
-O próximo gate é reinstalar a configuração rc2, repetir o chat crítico e concluir os artefatos nativos do Estúdio. Não reabrir a redação integral nem regenerar o PDF sem nova evidência de problema no corpus.
+Não reabrir a redação integral nem regenerar o PDF sem nova evidência concreta de problema no corpus.
 
-## Estado fechado antes do reteste
+## Estado fechado
 
 Já estão concluídos:
 
@@ -18,6 +18,9 @@ Já estão concluídos:
 - 30 questões autorais A–E com gabarito comentado separado;
 - QA-1 a QA-6 `PASS`;
 - QA-7 estático `PASS`;
+- QA-7 live chat rc2 `PASS`;
+- QA-7 Teste nativo `PASS`;
+- QA-7 Cartões `PASS`;
 - QA-8 `PASS`;
 - QA-9 PDF `PASS`, incluindo publicação/readback no GitHub.
 
@@ -32,16 +35,32 @@ sha256: b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931
 git_blob: 640efaed13dd43cc83f6904c62fdb86131b9124a
 ```
 
-## Evidência da primeira tentativa live
+## Evidência live já aceita
 
-Foram observados:
+### Chat rc2
 
-- causa x explicação / inferência x extrapolação: conteúdo central correto, com uma formulação de inferência mais absoluta que a fonte;
-- `à qual`: mecanismo de crase correto, mas um caso válido sem crase foi rotulado como “incorreto”;
-- treino de concordância: questão válida, porém correção pouco específica para `Devem haver` → `Deve haver`;
-- sugestão automática da interface exibindo `A resposta correta é a D.` antes da tentativa, possivelmente fora do controle das instruções persistentes.
+O reteste passou em treino de concordância e correção específica por construção. Foram explicitados corretamente `fazer` temporal impessoal, `menos` invariável, concordância de `anexo` e `dever + existir`. Não houve vazamento do gabarito produzido pela resposta controlada do tutor. Sugestões automáticas da interface permanecem um risco separado da camada do produto.
 
-`METODOLOGIA_NOTEBOOKLM.md` `2.0.0-rc2` corrige os comportamentos controláveis e registra o vazamento de sugestão de interface como risco a reavaliar, sem presumir controle sobre a camada externa do produto.
+### Teste nativo
+
+Amostras aceitas cobriram:
+
+- concordância com expressão partitiva;
+- sentido figurado;
+- equivalência de conectivos adversativos.
+
+As questões exigiram aplicação real do conteúdo e não desviaram para metodologia/backoffice.
+
+### Cartões
+
+Amostras aceitas cobriram:
+
+- identificação de quem enuncia;
+- inferência legítima;
+- extrapolação;
+- concordância de `cujo` com o termo possuído.
+
+Os cartões mostrados foram curtos, recuperáveis e fiéis ao corpus.
 
 ## Recuperação obrigatória
 
@@ -59,56 +78,19 @@ Seguir `AGENTS.md` e ler pelo menos:
 
 Conferir `main`, a branch `content/apostila-portugues-2.0.0` e o PR #12 antes de qualquer mutação.
 
-## Gate restante — Reteste real no NotebookLM
+## Gate único restante — Mapa mental
 
-Preservar a arquitetura:
+No mesmo notebook, mantendo como fonte apenas `APOSTILA.pdf` 2.0.0, gerar/abrir o Mapa mental e confirmar visualmente que:
 
-```text
-FONTES DO NOTEBOOKLM
-→ APOSTILA.pdf 2.0.0
+- a hierarquia principal da matéria é inteligível;
+- os grandes blocos de leitura/interpretação, coesão/semântica e norma-padrão aparecem de modo coerente;
+- regras e conceitos relevantes são recuperados em níveis subordinados;
+- questões e gabaritos não dominam a árvore;
+- não aparecem metodologia, QA, manifest ou outro backoffice como conteúdo estudável.
 
-CONFIGURAÇÃO DA CONVERSA
-→ Personalizado (ou equivalente)
-→ bloco operacional de METODOLOGIA_NOTEBOOKLM.md 2.0.0-rc2
-```
+Uma evidência visual suficiente do mapa permite marcar QA-7 live como `PASS` integral se nenhum problema material aparecer.
 
-Não carregar metodologia, análise de banca, manifest, sources, QA, edital ou provas históricas como fontes.
-
-### 1. Reteste do chat configurado
-
-Substituir a configuração anterior pelo bloco `2.0.0-rc2` e repetir:
-
-- `qual a diferença entre causa e explicação?`;
-- `por que há crase em "à qual"?`;
-- `me testa em concordância`;
-- responder uma questão errada ou pedir `por que a B está errada?`.
-
-Aceitar o chat somente se:
-
-- não houver contradição entre rótulo e explicação;
-- o tutor não vazar o gabarito em sua própria resposta antes da tentativa;
-- a correção explicar a construção específica do erro e mostrar a forma padrão corrigida;
-- a resposta permanecer fiel à formulação da apostila sem absolutismos desnecessários.
-
-Se a **interface externa** continuar exibindo sugestão automática com gabarito, registrar separadamente como limitação do produto e avaliar a usabilidade real; não atribuir automaticamente esse elemento ao prompt do tutor.
-
-### 2. Teste nativo
-
-Gerar um Teste e confirmar que pergunta sobre Língua Portuguesa, inclui aplicação e não vira teste sobre metodologia/backoffice.
-
-### 3. Cartões
-
-Confirmar recuperação útil de definições, regras, exceções e contrastes, incluindo alguns dos pares críticos da apostila.
-
-### 4. Mapa mental
-
-Confirmar que a hierarquia principal da apostila é inteligível e que questões/gabaritos não dominam a estrutura.
-
-Marcar QA-7 live como `PASS` somente após esse reteste real completo.
-
-## Fechamento após PASS
-
-Se o smoke passar:
+## Fechamento após PASS do Mapa mental
 
 1. atualizar `APOSTILA_QA_2.0.0.md` para QA-7 live `PASS`;
 2. atualizar `MANIFEST.md` de `release-candidate` para release final;
@@ -121,6 +103,6 @@ Se o smoke passar:
 
 ## Definition of Done restante
 
-`APOSTILA-002` termina somente quando o reteste real do NotebookLM estiver aprovado, o release estiver promovido a final e o PR #12 tiver sido concluído.
+`APOSTILA-002` termina somente quando o Mapa mental estiver aprovado, QA-7 live estiver fechado, o release estiver promovido a final e o PR #12 tiver sido concluído.
 
 Até lá, **não iniciar os SubjectPacks das outras matérias** salvo nova decisão canônica explícita.
