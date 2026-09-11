@@ -21,6 +21,7 @@ completed:
   - p001 study enrollment created without claiming official candidate status
   - stage-1 baseline plan created with confidence capture
   - auditor extended to validate competitions, competency references and enrollments
+  - PR 4 diff reviewed and critical files read back from GitHub
 not_started:
   - real p001 baseline evidence
   - evidence-derived mastery projection
@@ -32,6 +33,8 @@ validation:
   result: not_executed_in_current_environment
   reason: runtime cannot resolve github.com to clone the public branch
   previous_known_result: foundation branch passed auditor and 3 tests before adapter work
-  current_static_review: required before adapter merge
+  current_static_review: pass
+  current_readback: pass
 ci: disabled
+last_adapter_pull_request: 4
 ```
