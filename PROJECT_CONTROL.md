@@ -4,8 +4,8 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `research/direito-b2-gate3-banca`
-- **Last implementation branch:** `research/direito-b2-gate2-state-tjsp`
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `research/direito-b2-gate3-banca`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — fronteira, fontes/versões e análise histórica da banca fechadas; matrizes de cobertura são o próximo gate
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
@@ -19,6 +19,7 @@
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
 - **B2 state/TJSP source PR:** `#15`, merged to `main` at `fa0fb7c66f6db2d83df98bedf75b2708f51baad3`
+- **B2 banca PR:** `#18`, merged to `main` at `c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008`
 - **Gate 2:** `closed` — federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
 - **Gate 3:** `closed` — questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
 - **Next Gate:** Gate 4 — construir matrizes de cobertura/autoria dos seis SubjectPacks sem lacunas de syllabus
