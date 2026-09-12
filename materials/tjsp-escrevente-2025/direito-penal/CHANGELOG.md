@@ -1,5 +1,36 @@
 # CHANGELOG — Direito Penal — TJSP Escrevente 2025
 
+## `0.1.0-rc.1` — 2026-09-12
+
+Preparação de release candidate sob `DIREITO-007`, sem promoção a release final.
+
+### Adicionado
+
+- `METODOLOGIA_NOTEBOOKLM.md` específica de Direito Penal, destinada à configuração nativa da conversa e não ao corpus estudável;
+- regras de tutoria para distinguir texto legal, explicação didática e aplicação hipotética, sem inventar jurisprudência ou doutrina ausente da fonte.
+
+### Sincronizado
+
+- `APOSTILA.md` promovida para identidade `0.1.0-rc.1`, mantendo congelado o conteúdo editorial/normativo aprovado no `0.1.0-draft.3`;
+- `MANIFEST.md`, `SOURCES.md` e registro de QA alinhados ao estado real do candidato.
+
+### QA executado
+
+- QA estático de utilidade do corpus no NotebookLM: `pass_static`;
+- candidato local de `APOSTILA.pdf` gerado a partir do Markdown congelado, pesquisável e em A4;
+- candidato local de PDF: `18` páginas, `48.593` bytes, SHA-256 `d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469`;
+- readback textual confirmou títulos, unidades, gabarito, artigos e caracteres jurídicos relevantes;
+- todas as 18 páginas foram renderizadas e inspecionadas sem clipping, sobreposição, glifos quebrados ou mistura acidental entre questões e gabarito;
+- o gate determinístico permaneceu `not_executed_current_environment`: `git ls-remote` continua falhando com `Could not resolve host: github.com`.
+
+### Bloqueios mantidos
+
+- `APOSTILA.pdf` ainda não está publicado no GitHub. O conector disponível neste runtime não oferece caminho confiável para gravar o artefato binário local como arquivo canônico; o PDF local auditado não é tratado como binário versionado;
+- smoke real do NotebookLM: `pending_user_smoke`;
+- `python tools/verify.py`: não executado por impossibilidade de obter checkout canônico neste runtime.
+
+Nenhuma alteração semântica de Direito Penal foi introduzida no `rc.1`.
+
 ## `0.1.0-draft.3` — 2026-09-12
 
 Fechamento do QA semântico `DIREITO-006`.
