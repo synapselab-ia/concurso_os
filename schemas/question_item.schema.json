@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "question_item.schema.json",
+  "title": "QuestionItem",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "question_id",
+    "competition_id",
+    "subject_id",
+    "mode",
+    "syllabus_refs",
+    "stem",
+    "response",
+    "provenance",
+    "qa"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "question_id": {"type": "string", "minLength": 1},
+    "competition_id": {"type": "string", "minLength": 1},
+    "subject_id": {"type": "string", "minLength": 1},
+    "mode": {"enum": ["microdrill", "simulation"]},
+    "stimulus_id": {"type": ["string", "null"]},
+    "syllabus_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "competency_ids": {"type": "array", "items": {"type": "string"}},
+    "skill_primary": {"type": "string"},
+    "operations": {"type": "array", "items": {"type": "string"}},
+    "stem": {"type": "string", "minLength": 1},
+    "response": {
+      "type": "object",
+      "required": ["format"],
+      "properties": {
+        "format": {"enum": ["multiple_choice_5", "multiple_choice", "short_answer", "true_false"]},
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "text"],
+            "properties": {
+              "label": {"type": "string"},
+              "text": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          }
+        },
+        "correct_option": {"type": "string"},
+        "accepted_answer": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "rationale": {"type": "string"},
+    "distractor_rationales": {"type": "object", "additionalProperties": {"type": "string"}},
+    "difficulty_target": {"type": ["integer", "null"], "minimum": 1, "maximum": 5},
+    "estimated_time_sec": {"type": ["integer", "null"], "minimum": 1},
+    "provenance": {
+      "type": "object",
+      "required": ["origin", "source_refs"],
+      "properties": {
+        "origin": {"enum": ["authorial"]},
+        "source_refs": {"type": "array", "items": {"type": "string"}},
+        "banca_calibration_refs": {"type": "array", "items": {"type": "string"}},
+        "generator": {"type": "string"},
+        "prompt_version": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "qa": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["draft", "pending", "pass", "reject"]},
+        "reviewer": {"type": "string"},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"mode": {"const": "simulation"}}, "required": ["mode"]},
+      "then": {
+        "properties": {
+          "response": {
+            "properties": {
+              "format": {"const": "multiple_choice_5"},
+              "options": {"minItems": 5, "maxItems": 5}
+            },
+            "required": ["format", "options", "correct_option"]
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}
