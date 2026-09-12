@@ -3,11 +3,11 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: content/direito-b2-gate4-matrices
 base_branch: main
 last_implementation_branch: research/direito-b2-gate3-banca
-current_task: build B2 Gate 4 coverage and authoring matrices for all six Direito SubjectPacks
-current_pack: none_in_progress
+current_task: authorize and start B2 Gate 5 authoring with direito-penal under coverage rows DP-01 through DP-10
+current_pack: direito-penal_authorized_not_started
 last_released_pack: portugues 2.0.0
 completed:
   - repository foundation and chat-independent continuity active
@@ -29,12 +29,15 @@ completed:
   - B2 Gate 3 source binaries reverified locally against SOURCES.json hashes and sizes
   - B2 Gate 3 classified 150 legal questions from 2021, 2023, 2024 and 2025
   - DIREITO_B2_BANCA_ANALYSIS.md created with reproducible taxonomy, per-question classification, domain synthesis and editorial signals
-  - observed legal-question counts recorded as 40 in 2021, 40 in 2023, 40 in 2024 and 30 in 2025
   - Gate 3 preserves historical frequencies as descriptive evidence only and does not override current syllabus
   - BANCA_PROFILE.md updated to reference reproducible Direito evidence
-  - DIREITO_B2_AUTHORING_PLAN.md Gate 3 promoted to closed
-  - PR 18 reviewed and merged under DEC-0009
-  - B2 Gate 3 historical banca analysis merged to main at c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
+  - PR 18 B2 Gate 3 analysis merged to main at c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
+  - DIREITO_B2_COVERAGE_MATRIX.md created with six independent pack matrices
+  - all B2 syllabus recuts mapped to stable coverage_id entries without orphaned ranges or diplomas
+  - all Gate 2 source_ids associated to coverage units and normative drift attached to affected rows
+  - Gate 3 empirical signals converted into pedagogical forms, contrasts and practice/QA requirements without predictive weighting
+  - duplicate NSCGJ Capitulo XI reference preserved in the coverage matrix without inferred correction
+  - B2 Gate 4 closed on current branch and Gate 5 authorized for direito-penal
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
@@ -76,20 +79,36 @@ b2_banca_gate:
     2025: 30
   source_integrity: all four local exam PDFs matched SOURCES.json sha256 and byte size
   authority_rule: current syllabus remains controlling; observed distributions are non-predictive
-next_gate:
-  id: DIREITO-004
-  name: coverage_authoring_matrices
+b2_coverage_gate:
+  status: closed
+  verified_at: 2026-09-12
   artifact: competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md
-  packs:
-    - direito-penal
-    - direito-processual-penal
-    - direito-processual-civil
-    - direito-constitucional
-    - direito-administrativo
-    - legislacao-interna
+  packs: 6
+  coverage_result: complete
+  authority_rule: syllabus controls scope; matrix rows are authoring and QA contracts, not new syllabus
+  first_authorized_pack: direito-penal
+  first_pack_contract:
+    - DP-01
+    - DP-02
+    - DP-03
+    - DP-04
+    - DP-05
+    - DP-06
+    - DP-07
+    - DP-08
+    - DP-09
+    - DP-10
+next_gate:
+  id: DIREITO-005
+  name: author_direito_penal
+  pack: direito-penal
+  target_path: materials/tjsp-escrevente-2025/direito-penal
+  contract: competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md#direito-penal
 not_started:
-  - close Gate 4 coverage/authoring matrices for all six B2 SubjectPacks
-  - authorize Gate 5 drafting
+  - create direito-penal material workspace and source manifest
+  - draft direito-penal APOSTILA.md from DP-01 through DP-10
+  - execute pack-level editorial, normative, PDF and NotebookLM QA before release
+  - continue remaining five B2 SubjectPacks only after the first pack pipeline is validated
 validation:
   portuguese_editorial_qa: pass
   portuguese_notebooklm_live: pass
@@ -114,7 +133,7 @@ last_subject_pack_pull_request: 12
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
-merge_status: b2_gate3_closed_gate4_pending
+merge_status: b2_gate4_closure_in_progress_branch
 last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
 last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
 last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
