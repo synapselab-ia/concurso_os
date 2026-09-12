@@ -73,7 +73,7 @@ Baseline autoral: texto vigente em `2025-07-29`. O Gate 2 classificou o recorte 
 
 ## Histórico da revisão
 
-O `draft.2` resultou da revisão normativa integral e aprofundou formas do art. 293, §§ previdenciários do art. 297, penas dos arts. 300–301, peculato culposo, excesso de exação, corrupção passiva privilegiada, arts. 321–325, resistência e aumentos dos arts. 342–344.
+O `draft.2` resultou da revisão normativa integral e aprofundou formas do art. 293, §§ previdenciários do art. 297, penas dos arts. 300–301, peculato culposo, excesso de exação, art. 317, § 2º, arts. 321–325, resistência e aumentos dos arts. 342–344.
 
 O `draft.3` resolveu as duas pendências semânticas restantes: Q12 passou a testar isoladamente o art. 311-A, § 2º; Q29 passou a usar atividade privada suspensa por decisão judicial e o corpo ganhou contraste explícito `art. 324 x art. 359`.
 
