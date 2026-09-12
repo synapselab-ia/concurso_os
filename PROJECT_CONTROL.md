@@ -4,8 +4,8 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `content/direito-b2-authoring-prep`
-- **Last implementation branch:** `content/apostila-portugues-2.0.0`
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `content/direito-b2-authoring-prep`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — fronteira editorial fechada em seis SubjectPacks; fechamento de fontes/versões em andamento
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
@@ -15,6 +15,7 @@
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`
 - **B2 boundary decision:** DEC-0019
+- **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **Next subject evidence:** o syllabus vigente atribui **30 questões** a Conhecimentos em Direito; o bloco contém Direito Penal, Processual Penal, Processual Civil, Constitucional, Administrativo e Legislação Interna
 - **Study stack:** GitHub + ChatGPT + NotebookLM
 - **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte; instruções de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa
