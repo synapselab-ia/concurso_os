@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1",
+  "feedback_id": "p001-tjsp-2025-portugues-quiz-001",
+  "participant_id": "p001",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "portuguese",
+  "occurred_at": "2026-09-12",
+  "practice_mode": "microdrill",
+  "source": {
+    "type": "notebooklm_session_report",
+    "raw_report_persisted": false,
+    "question_level_evidence_complete": false
+  },
+  "score": {
+    "correct": 18,
+    "total": 28,
+    "reported_percent": 64,
+    "computed_percent": 64.3
+  },
+  "evidence_status": "provisional_session_signal",
+  "signals": {
+    "strengths_observed": [
+      "existir_vs_haver_distinction",
+      "retest_passive_synthetic_agreement",
+      "meio_adverb_vs_numeral"
+    ],
+    "instabilities_supported_by_report": [
+      "concordancia_partitiva",
+      "fazer_temporal_impessoal",
+      "passiva_sintetica_com_se",
+      "colocacao_pronominal_inicio_de_oracao",
+      "finalidade_vs_consequencia",
+      "pontuacao_de_termo_intercalado"
+    ],
+    "signals_requiring_question_level_confirmation": [
+      "emprego_de_onde_em_antecedente_abstrato",
+      "regencia_e_funcao_de_lhe"
+    ]
+  },
+  "next_microdrill_priority": [
+    {
+      "priority": "high",
+      "targets": [
+        "se_apassivador_vs_indeterminador",
+        "concordancia_verbal_com_se",
+        "haver_e_fazer_impessoais",
+        "relacoes_logico_semanticas_finalidade_vs_consequencia"
+      ]
+    },
+    {
+      "priority": "medium",
+      "targets": [
+        "concordancia_partitiva",
+        "colocacao_pronominal",
+        "pontuacao_de_intercalacoes"
+      ]
+    },
+    {
+      "priority": "confirm_before_escalating",
+      "targets": [
+        "onde",
+        "lhe"
+      ]
+    }
+  ],
+  "normalization_notes": [
+    "18/28 corresponds to 64.3%, so the reported 64% is a normal rounded value.",
+    "The NotebookLM report is treated as a session summary, not as authoritative question-level telemetry.",
+    "The report's 'lhe' example is not sufficient to establish an error because 'lhe' can be an indirect object while 'o relatorio' remains the direct object; this signal is withheld pending the original item.",
+    "The report's absolute wording that 'onde' applies only to concrete physical places is too rigid; the operational criterion is locative value/antecedent of place, so this signal also remains provisional.",
+    "No mastery state is inferred from a single session."
+  ],
+  "privacy": "public_pseudonymous_aggregate_no_raw_answers"
+}
