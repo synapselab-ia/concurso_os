@@ -1,60 +1,68 @@
 # NEXT_ACTION
 
-## DIREITO-007 — Concluir release candidate do SubjectPack `direito-penal`
+## DIREITO-007: Concluir release candidate do SubjectPack `direito-penal`
 
 O conteúdo jurídico de `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` foi aprovado em `0.1.0-draft.3` e congelado no release candidate `0.1.0-rc.1`.
 
-Já foram executados nesta passagem:
+Estado já comprovado:
 
-- criação e auditoria estática de `METODOLOGIA_NOTEBOOKLM.md`;
-- sincronização de `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e QA para `0.1.0-rc.1`;
-- QA estático do corpus para NotebookLM;
-- geração e QA textual/visual de um candidato local de PDF com 18 páginas A4, 48.593 bytes e SHA-256 `d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469`.
+- `METODOLOGIA_NOTEBOOKLM.md` criada e auditada estaticamente;
+- `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e QA sincronizados para `0.1.0-rc.1`;
+- QA estático do corpus para NotebookLM concluído;
+- `APOSTILA.md` canônico possui Git blob `008c3ac439d8b7d4038fd0114e486c1daaf755b1`;
+- a cópia local usada para a nova geração do PDF foi verificada e possui o mesmo Git blob do Markdown canônico;
+- candidato local preferido para publicação: `17` páginas A4, `30.167` bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob local esperado `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
+- o candidato preferido passou readback textual e inspeção visual de `17/17` páginas a 150 dpi, sem clipping, sobreposição, glifos quebrados, quebra impeditiva de tabela ou mistura entre questões e gabarito;
+- tentativas de transferência binária pelo conector GitHub produziram blobs remotos diferentes do Git blob local esperado. Nenhum blob divergente foi anexado à árvore ou à branch;
+- o probe de rede local continua falhando em resolver `github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
 
-O pack **ainda não é release**. O PDF auditado nesta passagem é local e não está publicado no GitHub. O smoke real do NotebookLM também não foi executado. Não marcar esses gates como PASS canônico antes da execução real.
+O pack ainda não é release. O PDF auditado continua local, o smoke real do NotebookLM não foi executado e o gate determinístico continua pendente.
 
 ## Entradas obrigatórias
 
 Ler conjuntamente:
 
-- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` — conteúdo congelado do `0.1.0-rc.1`;
-- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md` — evidência dos gates já realizados e dos bloqueios atuais;
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md`;
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md`;
 - `materials/tjsp-escrevente-2025/direito-penal/METODOLOGIA_NOTEBOOKLM.md`;
 - `materials/tjsp-escrevente-2025/direito-penal/MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md`;
 - `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, especialmente QA-7, QA-9 e QA-10;
 - `00_SYSTEM/QA_PROTOCOL.md`;
-- arquitetura NotebookLM em `00_SYSTEM/PROJECT_SPEC.md` e `00_SYSTEM/ARCHITECTURE.md`.
+- `00_SYSTEM/PROJECT_SPEC.md` e `00_SYSTEM/ARCHITECTURE.md`.
 
 ## 1. Preservar o conteúdo congelado
 
-Não reabrir escopo nem alterar silenciosamente DP-01…DP-10 ou as 30 questões.
+Não reabrir escopo nem alterar silenciosamente DP-01 a DP-10 ou as 30 questões.
 
 Se surgir erro material no conteúdo jurídico, voltar o estado para draft, corrigir e registrar nova passagem semântica antes de qualquer PDF final.
 
-## 2. Publicar `APOSTILA.pdf` canônico
+## 2. Publicar `APOSTILA.pdf` com integridade exata
 
-O repositório ainda não contém o binário.
+A branch operacional é `release/direito-penal-0.1.0-rc.1-pdf`.
 
-Quando houver caminho confiável para transferir ou regenerar o PDF no ambiente de implementação:
+O repositório ainda não contém `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`.
 
-1. produzir o PDF exclusivamente a partir do `APOSTILA.md` congelado;
-2. preferir reproduzir o candidato local já auditado quando tecnicamente possível;
-3. se o binário diferir, registrar novo número de páginas, tamanho e SHA-256;
-4. versionar `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf` no GitHub.
+Prioridade técnica:
 
-Não usar o hash do candidato local como se fosse hash do repositório enquanto o arquivo não estiver efetivamente versionado.
+1. transferir o candidato local auditado ou regenerar binário equivalente exclusivamente a partir do `APOSTILA.md` congelado;
+2. se for transferido o candidato preferido atual, aceitar a publicação somente se o Git blob remoto for exatamente `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
+3. se houver qualquer divergência de blob, não anexar o objeto à árvore e não tratar a publicação como concluída;
+4. se for gerado outro binário válido, registrar novamente páginas, bytes, SHA-256, Git blob e executar QA-9 sobre esse arquivo exato;
+5. somente depois versionar o caminho canônico `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`.
 
-## 3. Confirmar QA-9 no binário versionado
+Não usar SHA-256 ou Git blob local como se fossem identificadores do repositório antes de existir correspondência real no GitHub.
+
+## 3. Fechar QA-9 somente sobre o binário versionado
 
 Sobre o `APOSTILA.pdf` efetivamente publicado:
 
-- confirmar que é pesquisável;
+- confirmar pesquisa e extração de texto;
 - fazer readback textual;
-- conferir acentos e símbolos;
-- renderizar e inspecionar todas as páginas;
+- conferir acentos e símbolos jurídicos;
+- renderizar e inspecionar todas as páginas ou confirmar identidade binária exata com um candidato já integralmente auditado;
 - verificar clipping, sobreposição, tabelas, hierarquia e legibilidade;
 - verificar separação entre perguntas e gabarito;
-- registrar páginas, tamanho, SHA-256 e, quando disponível, Git blob.
+- registrar páginas, bytes, SHA-256 e Git blob.
 
 Somente essa verificação fecha o gate canônico de PDF.
 
@@ -64,20 +72,20 @@ Quando houver acesso efetivo à interface:
 
 ```text
 FONTES
-→ somente APOSTILA.pdf canônico
+-> somente APOSTILA.pdf canônico
 
 CONFIGURAÇÃO DA CONVERSA
-→ bloco operacional de METODOLOGIA_NOTEBOOKLM.md
+-> bloco operacional de METODOLOGIA_NOTEBOOKLM.md
 ```
 
-Inspecionar, no mínimo:
+Inspecionar no mínimo:
 
 - chat configurado para dúvida jurídica e correção;
 - Teste ou artefato de recuperação equivalente;
 - Cartões;
 - Mapa mental ou artefato hierárquico equivalente.
 
-Confirmar que metodologia/backoffice não viram conteúdo estudável e que o tutor não inventa jurisprudência ou doutrina ausente da fonte.
+Confirmar que metodologia e backoffice não viram conteúdo estudável e que o tutor não inventa jurisprudência ou doutrina ausente da fonte.
 
 Enquanto a interface estiver indisponível, manter `pending_user_smoke`.
 
@@ -89,17 +97,17 @@ Antes de encerrar `DIREITO-007`:
 python tools/verify.py
 ```
 
-Neste runtime, `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` continua falhando com `Could not resolve host: github.com`, impedindo checkout canônico. Enquanto isso persistir, registrar `not_executed_current_environment`; não tratar como PASS.
+O runtime local continua sem resolução DNS para `github.com`, impedindo checkout canônico. Enquanto isso persistir, registrar `not_executed_current_environment`; não tratar como `PASS`.
 
 ## 6. Critério de saída
 
 `DIREITO-007` só fecha quando houver evidência real de:
 
-- `METODOLOGIA_NOTEBOOKLM.md` criada e auditada;
-- metadados do `0.1.0-rc.1` coerentes;
+- configuração de tutor auditada;
+- metadados coerentes do `0.1.0-rc.1`;
 - `APOSTILA.pdf` versionado e QA textual/visual confirmado sobre o binário canônico;
 - QA NotebookLM estático concluído e smoke real registrado;
-- `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e QA refletindo exatamente o estado;
+- `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md`, QA e continuidade refletindo exatamente o estado;
 - `python tools/verify.py` executado ou impossibilidade atual explicitamente reavaliada conforme DEC-0009.
 
 Somente depois disso decidir explicitamente se o candidato pode ser promovido a release final. Os outros cinco SubjectPacks de B2 permanecem aguardando a validação completa deste primeiro pipeline jurídico.
