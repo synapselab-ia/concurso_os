@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: release/direito-penal-0.1.0-rc.1
+branch: main
 base_branch: main
-last_implementation_branch: qa/direito-penal-v0.1
+last_implementation_branch: release/direito-penal-0.1.0-rc.1
 current_task: complete DIREITO-007 after rc.1 preparation; canonical PDF publication, live NotebookLM smoke and deterministic gate remain pending
 current_pack: direito-penal_0.1.0-rc.1_release_candidate_incomplete
 last_released_pack: portugues 2.0.0
@@ -49,6 +49,8 @@ completed:
   - local searchable PDF candidate generated from frozen rc.1 Markdown
   - local PDF candidate textual readback passed
   - all 18 local PDF pages rendered and visually inspected without clipping overlap or broken glyphs
+  - PR 22 Direito Penal rc.1 preparation reviewed and merged under DEC-0009
+  - PR 22 merged to main at 1972f0c6a6f984ecf363413810ccb7cf082f7e79
 
 b2_source_gate:
   status: closed
@@ -119,7 +121,7 @@ direito_penal_release_candidate:
   path: materials/tjsp-escrevente-2025/direito-penal
   content_base: 0.1.0-draft.3
   content_semantic_change_in_rc: false
-  files_present_in_branch:
+  files_present_in_main:
     - APOSTILA.md
     - METODOLOGIA_NOTEBOOKLM.md
     - SOURCES.md
@@ -154,6 +156,8 @@ direito_penal_release_candidate:
   baseline: 2025-07-29
   cp_scoped_drift: none_identified_by_gate2
   release_status: blocked_until_canonical_pdf_live_notebooklm_and_applicable_repository_gate
+  rc_pull_request: 22
+  rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
   previous_qa_pull_request: 21
   previous_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 
@@ -219,14 +223,16 @@ validation:
     policy: impossibility documented under DEC-0009; not treated as pass
 
 ci: disabled
-last_subject_pack_pull_request: 21
+last_subject_pack_pull_request: 22
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
 last_b2_matrix_pull_request: 19
 last_direito_penal_draft_pull_request: 20
 last_direito_penal_qa_pull_request: 21
-merge_status: direito_penal_rc1_branch_prepared_pr_pending
+last_direito_penal_rc_pull_request: 22
+merge_status: direito_penal_rc1_merged_incomplete_gates_pending
+last_direito_penal_rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
 last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 last_direito_penal_draft_merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
 last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3
