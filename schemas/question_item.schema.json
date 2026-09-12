@@ -49,7 +49,7 @@
       },
       "additionalProperties": false
     },
-    "rationale": {"type": "string"},
+    "rationale": {"type": "string", "minLength": 1},
     "distractor_rationales": {"type": "object", "additionalProperties": {"type": "string"}},
     "difficulty_target": {"type": ["integer", "null"], "minimum": 1, "maximum": 5},
     "estimated_time_sec": {"type": ["integer", "null"], "minimum": 1},
@@ -80,11 +80,24 @@
     {
       "if": {"properties": {"mode": {"const": "simulation"}}, "required": ["mode"]},
       "then": {
+        "required": ["rationale", "distractor_rationales"],
         "properties": {
           "response": {
             "properties": {
               "format": {"const": "multiple_choice_5"},
-              "options": {"minItems": 5, "maxItems": 5}
+              "options": {
+                "minItems": 5,
+                "maxItems": 5,
+                "prefixItems": [
+                  {"type": "object", "required": ["label", "text"], "properties": {"label": {"const": "A"}, "text": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+                  {"type": "object", "required": ["label", "text"], "properties": {"label": {"const": "B"}, "text": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+                  {"type": "object", "required": ["label", "text"], "properties": {"label": {"const": "C"}, "text": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+                  {"type": "object", "required": ["label", "text"], "properties": {"label": {"const": "D"}, "text": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+                  {"type": "object", "required": ["label", "text"], "properties": {"label": {"const": "E"}, "text": {"type": "string", "minLength": 1}}, "additionalProperties": false}
+                ],
+                "items": false
+              },
+              "correct_option": {"enum": ["A", "B", "C", "D", "E"]}
             },
             "required": ["format", "options", "correct_option"]
           }
