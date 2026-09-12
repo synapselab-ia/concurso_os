@@ -3,11 +3,11 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: qa/direito-penal-v0.1
+branch: main
 base_branch: main
-last_implementation_branch: content/direito-penal-v0.1-draft
-current_task: close DIREITO-006 semantic QA for direito-penal and hand off to release candidate preparation
-current_pack: direito-penal_0.1.0-draft.3_semantic_qa_passed
+last_implementation_branch: qa/direito-penal-v0.1
+current_task: prepare direito-penal release candidate under DIREITO-007 without promoting pending PDF or NotebookLM gates
+current_pack: direito-penal_0.1.0-draft.3_semantic_qa_passed_release_candidate_pending
 last_released_pack: portugues 2.0.0
 
 completed:
@@ -39,6 +39,8 @@ completed:
   - 30 of 30 original practice questions passed final semantic review
   - Q-LIT Q-CMP Q-CAS requirements satisfied across DP-01 through DP-10
   - DIREITO-006 semantic QA closed; Markdown authorized for release candidate preparation
+  - PR 21 Direito Penal semantic QA reviewed and merged under DEC-0009
+  - PR 21 merged to main at d89b7aefd69db3f3fc653807eb98f036755f6f2e
 
 b2_source_gate:
   status: closed
@@ -127,6 +129,8 @@ direito_penal_draft:
   baseline: 2025-07-29
   cp_scoped_drift: none_identified_by_gate2
   release_status: blocked_until_release_candidate_pdf_notebooklm_gates
+  qa_pull_request: 21
+  qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 
 next_gate:
   id: DIREITO-007
@@ -179,13 +183,15 @@ validation:
     policy: impossibility documented under DEC-0009; not treated as pass
 
 ci: disabled
-last_subject_pack_pull_request: 20
+last_subject_pack_pull_request: 21
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
 last_b2_matrix_pull_request: 19
 last_direito_penal_draft_pull_request: 20
-merge_status: direito_penal_semantic_qa_ready_for_pr
+last_direito_penal_qa_pull_request: 21
+merge_status: direito_penal_semantic_qa_merged_release_candidate_pending
+last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 last_direito_penal_draft_merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
 last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3
 last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
