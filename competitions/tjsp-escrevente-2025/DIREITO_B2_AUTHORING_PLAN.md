@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 — Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** Gate 1 fechado; Gate 2 pendente  
+**Status:** Gates 1 e 2 fechados; Gate 3 pendente  
 
 ## Objetivo
 
@@ -88,13 +88,29 @@ Lei Federal n.º 8.429/1992: integral, porque o edital não restringe artigos.
 
 ### Anomalia textual do edital
 
-O último par de recortes das Normas da Corregedoria referencia o **Capítulo XI duas vezes**. O repositório deve preservar essa literalidade até existir evidência oficial suficiente para corrigir ou interpretar o segundo apontamento. Não inferir silenciosamente outro capítulo por plausibilidade.
+O último par de recortes das Normas da Corregedoria referencia o **Capítulo XI duas vezes**. O repositório preserva essa literalidade porque não foi localizada fonte oficial inequívoca que autorize corrigir o segundo apontamento. Para cobertura, a segunda linha literal (`Seções I a VII`) engloba as seções I, IV e V da primeira; essa relação de inclusão não altera a referência oficial.
+
+## Gate 2 — versão normativa fechada
+
+`competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` fecha a versão-base de todas as fontes em `2025-07-29` e separa drift posterior.
+
+Pontos de manutenção que não podem ser perdidos na autoria:
+
+- CPP: art. 584, § 4º sofreu alteração posterior pela Lei n.º 15.358/2026;
+- CPC: alterações posteriores em arts. 196, 529-A e 998, com vigências distintas;
+- Constituição: EC n.º 138/2025 alterou art. 37, XVI, `b` após o cutoff;
+- Lei Estadual n.º 10.261/1968: Lei n.º 18.473/2026 atingiu o art. 78 dentro do recorte;
+- LC Estadual n.º 1.111/2010: Lei n.º 18.373/2025 e LC n.º 1.441/2026 são posteriores ao cutoff;
+- Regimento Interno: baseline inclui Assento n.º 591/2025 e exclui 592–596;
+- NSCGJ: baseline dos recortes literais exclui, entre outras alterações posteriores identificadas, Provimentos CG n.º 30/2025 e 04/2026 no Capítulo XI.
+
+A cláusula do edital sobre legislação superveniente/complementar continua válida. Fechar o Gate 2 significa controlar a versão e o drift, não afirmar que toda norma posterior deve ser ignorada.
 
 ## Ordem de produção
 
 A ordem abaixo é operacional, não estatística:
 
-1. fechar inventário e versão de **todas** as fontes de B2;
+1. **concluído** — inventário e versão de todas as fontes de B2;
 2. concluir análise histórica reproduzível de 2021/2023/2024/2025;
 3. construir a matriz de cobertura dos seis packs;
 4. iniciar autoria por `direito-penal`, o menor recorte normativo independente e um bom primeiro teste do pipeline jurídico;
@@ -111,7 +127,7 @@ A sequência pode ser alterada por decisão canônica posterior, mas nenhum pack
 | Gate | Estado | Critério |
 |---|---|---|
 | 1 — fronteira | `closed` | seis SubjectPacks definidos e decisão registrada |
-| 2 — fontes/versões | `pending` | inventário oficial, cutoff, proveniência e drift normativo fechados |
+| 2 — fontes/versões | `closed` | inventário oficial, cutoff, proveniência e drift normativo fechados em `DIREITO_SOURCES.md` |
 | 3 — banca | `pending` | questões de Direito de 2021/2023/2024/2025 classificadas de forma reproduzível |
 | 4 — matriz | `pending` | todos os recortes do syllabus mapeados sem lacunas |
 | 5 — autorização de redação | `blocked` | depende dos Gates 1–4 |
