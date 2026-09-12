@@ -1,10 +1,10 @@
 # NEXT_ACTION
 
-## DIREITO-002 — Fechar o Gate 2 de fontes e versões de Conhecimentos em Direito
+## DIREITO-002B — Fechar fontes estaduais e internas do TJSP no Gate 2
 
-O Gate 1 foi concluído: B2 permanece um único bloco estatístico de 30 questões no edital, mas sua entrega editorial foi dividida, sob DEC-0019, em seis SubjectPacks: `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo` e `legislacao-interna`.
+O subgate federal de fontes/versões foi concluído em `2026-09-11`. O Gate 2 global continua aberto apenas porque as fontes estaduais e internas do TJSP ainda precisam ser reconciliadas com o cutoff do edital de **2025-07-29**.
 
-**Não iniciar a redação de nenhuma apostila.** O próximo objetivo é tornar cada fonte normativa autorável, versionada e verificável para o corte do edital.
+**Não iniciar a redação de nenhuma apostila.** Gates 3 e 4 também continuam bloqueados pela ordem canônica de autoria.
 
 ## Evidência canônica
 
@@ -12,71 +12,121 @@ Usar conjuntamente:
 
 - `competitions/tjsp-escrevente-2025/SYLLABUS.md` para o recorte oficial;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md` para a fronteira editorial;
-- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` para o inventário em andamento;
+- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` para o inventário e o audit trail de versão;
 - `SRC-TJSP-EDITAL-2025-02` como autoridade de escopo;
-- `00_SYSTEM/SOURCE_POLICY.md` e DEC-0010/DEC-0011 para autoridade e proveniência.
+- fontes oficiais ALESP/TJSP para legislação estadual e interna;
+- `00_SYSTEM/SOURCE_POLICY.md` e DEC-0010/DEC-0011 para autoridade, proveniência e política de binários.
 
-O cutoff-base registrado para o edital é **2025-07-29**. O próprio edital admite legislação superveniente ou complementar quando relacionada ou indispensável ao tópico, portanto qualquer atualização posterior deve ser analisada e não simplesmente ignorada ou absorvida pela versão atual.
+## Estado federal já fechado
 
-## Gate 2 — Trabalho obrigatório
+Não repetir a auditoria federal sem evidência nova. O inventário registra:
 
-### 1. Auditar fontes federais
+- Código Penal — sem drift textual pós-cutoff dentro do recorte;
+- CPP — drift pós-cutoff no art. 584, § 4º, pela Lei n.º 15.358/2026;
+- Lei n.º 9.099/1995 — sem drift textual direto identificado;
+- CPC — drift nos arts. 196, 529-A e 998 por Leis n.º 15.479/2026 e 15.484/2026, com controle de vigência;
+- Lei n.º 12.153/2009 — sem drift textual direto identificado;
+- Constituição — drift no art. 37, XVI, `b`, pela EC n.º 138/2025;
+- Lei n.º 8.429/1992 — sem alteração efetiva pós-cutoff; o art. 18 da Lei n.º 15.269/2025 foi vetado.
 
-Para cada recorte abaixo, comparar o texto aplicável no cutoff com a compilação oficial atual e identificar alterações posteriores que atinjam artigos exigidos:
+A versão-base autoral permanece a vigente em `2025-07-29`; alterações posteriores ficam rastreadas separadamente.
 
-- Código Penal;
-- Código de Processo Penal;
-- Lei n.º 9.099/1995;
-- Código de Processo Civil;
-- Lei n.º 12.153/2009;
-- Constituição Federal;
-- Lei n.º 8.429/1992.
+## Trabalho obrigatório agora
 
-Registrar em `DIREITO_SOURCES.md` o resultado por fonte. Não basta apontar a URL atual.
+### 1. Lei Estadual n.º 10.261/1968
 
-### 2. Reconstruir as fontes estaduais com drift confirmado
+Recorte: arts. `1–86`, `171–175`, `239–323`.
 
-A compilação oficial atual já demonstra mudanças posteriores ao cutoff em pelo menos:
+A compilação ALESP atual contém alterações posteriores ao cutoff. Reconstruir com histórico oficial:
 
-- Lei Estadual n.º 10.261/1968;
-- LC Estadual n.º 1.111/2010.
+- quais dispositivos do recorte estavam vigentes em `2025-07-29`;
+- quais leis posteriores alteraram dispositivos efetivamente cobrados;
+- data de eficácia quando diferente da publicação;
+- baseline autoral e drift posterior, sem misturá-los.
 
-Determinar, com histórico legislativo oficial, quais dispositivos do recorte do edital estavam vigentes em 2025-07-29 e quais alterações posteriores atingem esse recorte.
+### 2. LC Estadual n.º 1.111/2010
 
-### 3. Fechar fontes internas do TJSP
+O edital cobra o diploma integral. A compilação ALESP atual contém alteração posterior ao cutoff.
 
-- confirmar o histórico da Resolução TJSP n.º 850/2021 até o cutoff;
-- confirmar a versão da Resolução TJSP n.º 963/2025 em 2025-07-29 e atos posteriores relevantes;
-- localizar/validar a versão do Regimento Interno vigente em 2025-07-29;
-- localizar/validar o Tomo I das Normas da Corregedoria vigente em 2025-07-29.
+Fechar:
 
-### 4. Não resolver a duplicidade do Capítulo XI por inferência
+- texto aplicável em `2025-07-29`;
+- atos alteradores posteriores;
+- dispositivos atingidos;
+- vigência/efeitos quando relevante.
 
-O edital imprime dois recortes sucessivos como `Tomo I — Capítulo XI`. Essa anomalia já está registrada no syllabus e no plano de autoria.
+### 3. Resolução TJSP n.º 850/2021
 
-Somente corrigir ou reinterpretar essa referência se uma fonte oficial inequívoca permitir fazê-lo. Caso contrário, manter a ambiguidade documentada e tratá-la explicitamente no planejamento de cobertura.
+A fonte oficial hoje indica compilação anterior ao cutoff e está marcada como `candidate_closed`.
 
-### 5. Completar proveniência
+Confirmar, pela própria base legislativa do TJSP ou histórico oficial equivalente:
 
-Para cada fonte fechada, registrar quando aplicável:
+- que não houve alteração entre a última compilação registrada e `2025-07-29`;
+- se houve ato posterior relevante até `2026-09-11`;
+- qual identificação oficial será usada como versão-base.
+
+### 4. Resolução TJSP n.º 963/2025
+
+A resolução é anterior ao cutoff e está marcada como `candidate_closed`.
+
+Confirmar:
+
+- texto vigente em `2025-07-29`;
+- atos alteradores/complementares posteriores;
+- se alguma norma superveniente é indispensável ao tópico eproc na forma prevista pelo edital.
+
+### 5. Regimento Interno do TJSP
+
+O PDF oficial atual já é posterior ao cutoff.
+
+Localizar ou reconstruir, com atos oficiais:
+
+- a versão vigente em `2025-07-29`;
+- alterações posteriores até a data de verificação;
+- regra segura para produzir a futura apostila sem ensinar texto de 2026 como se fosse o texto-base do edital.
+
+### 6. NSCGJ — Tomo I
+
+O Tomo I oficial atual também é posterior ao cutoff. Usar apenas os recortes impressos no edital e reconstruir a versão aplicável em `2025-07-29`.
+
+Recortes canônicos:
+
+1. Capítulo II — Seção I — subseções I e II;
+2. Capítulo III — Seções I, II, V, VI e VII;
+3. Capítulo III — Seção VIII — subseções I, II e III;
+4. Capítulo III — Seções IX a XIX;
+5. Capítulo XI — Seções I, IV e V;
+6. Capítulo XI — Seções I a VII.
+
+O edital repete **Capítulo XI** nos itens 5 e 6. Não corrigir por plausibilidade. Somente resolver se fonte oficial inequívoca demonstrar que há erro material e qual é a referência correta; do contrário, encerrar o Gate 2 com a ambiguidade explicitamente documentada.
+
+## Proveniência mínima
+
+Para cada fonte fechada, registrar em `DIREITO_SOURCES.md`, quando aplicável:
 
 - `source_id`;
 - autoridade;
-- título/diploma;
+- diploma/ato;
 - recorte;
-- URL ou identificação oficial;
-- data/versão relevante;
-- histórico de alteração necessário;
+- URL ou identificador oficial;
+- cutoff/version date;
+- atos alteradores relevantes;
+- vigência/efeitos;
 - data de verificação;
-- hash SHA-256 e tamanho quando um arquivo estável tiver sido obtido localmente para auditoria.
+- hash SHA-256 e tamanho de arquivo estável quando obtido para auditoria local.
 
-Binários-fonte de terceiros não entram no repositório público, conforme DEC-0011.
+Não publicar binários-fonte de terceiros no repositório público, conforme DEC-0011.
 
 ## Critério de fechamento do Gate 2
 
-Marcar o Gate 2 como `closed` somente quando todos os diplomas e recortes de B2 tiverem versão aplicável definida ou uma ambiguidade oficial explicitamente registrada sem falsa resolução.
+Marcar B2 Gate 2 como `closed` somente quando:
 
-A existência de uma página oficial atual **não** equivale a fechar a versão do edital quando houver alteração posterior ao cutoff.
+- as sete fontes federais permanecerem fechadas;
+- Lei 10.261/1968 e LC 1.111/2010 tiverem baseline do cutoff reconstruído;
+- Resoluções 850/2021 e 963/2025 tiverem histórico confirmado;
+- Regimento Interno e NSCGJ tiverem versão-base validada ou reconstruída;
+- a duplicidade do Capítulo XI estiver resolvida por fonte oficial **ou** registrada como ambiguidade oficial não resolvida;
+- nenhuma fonte atual posterior ao cutoff tiver sido usada silenciosamente como baseline.
 
 ## Depois do Gate 2 — DIREITO-003
 
@@ -95,10 +145,10 @@ A frequência histórica servirá à engenharia silenciosa da apostila e não po
 
 ## Gate canônico
 
-Antes de encerrar a próxima implementação:
+Antes de encerrar a implementação:
 
 ```bash
 python tools/verify.py
 ```
 
-Se o runtime continuar incapaz de obter um checkout canônico por falha de resolução de `github.com`, registrar a tentativa e a impossibilidade; não tratar como `PASS`, conforme DEC-0009.
+Neste runtime, a tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` em `2026-09-11` ainda falhou com `Could not resolve host: github.com`. Se a condição persistir, registrar a impossibilidade; não tratá-la como `PASS`, conforme DEC-0009.
