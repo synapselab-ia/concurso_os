@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: content/direito-b2-authoring-prep
+branch: main
 base_branch: main
-last_implementation_branch: content/apostila-portugues-2.0.0
+last_implementation_branch: content/direito-b2-authoring-prep
 current_task: close Gate 2 for B2 Conhecimentos em Direito by reconciling all normative sources and versions to the 2025-07-29 edital cutoff
 current_pack: none_in_progress
 last_released_pack: portugues 2.0.0
@@ -43,6 +43,8 @@ completed:
   - duplicate Capitulo XI reference in the edital preserved as an official-source anomaly instead of being silently corrected
   - DIREITO_B2_AUTHORING_PLAN.md created with gate order and production boundary
   - DIREITO_SOURCES.md started with official federal, state and TJSP provenance and version-drift status
+  - PR 13 reviewed and merged under DEC-0009
+  - B2 Gate 1 preparation merged to main at 540765b17e224a319b90a4e9da5272dd4db0684e
 b2_source_gate:
   status: in_progress
   edital_cutoff: 2025-07-29
@@ -86,6 +88,8 @@ validation:
     policy: impossibility documented under DEC-0009; not treated as pass
 ci: disabled
 last_subject_pack_pull_request: 12
-merge_status: b2_authoring_prep_in_progress
+last_b2_preparation_pull_request: 13
+merge_status: b2_gate1_merged_gate2_in_progress
+last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
 last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
 ```
