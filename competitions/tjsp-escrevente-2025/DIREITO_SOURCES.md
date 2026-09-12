@@ -13,17 +13,55 @@ O edital determina legislação com alterações e atualizações vigentes até 
 
 Para autoria canônica, uma página oficial **atualizada depois de 2025-07-29 não pode ser tratada automaticamente como snapshot do edital**. O Gate 2 só fecha quando cada recorte tiver uma versão-base reconciliada com o cutoff e, quando aplicável, forem registradas alterações posteriores relevantes.
 
+Estados usados neste inventário:
+
+- `cutoff_closed_no_scoped_drift` — versão-base do cutoff fechada e nenhuma alteração posterior encontrada dentro do recorte do edital;
+- `cutoff_closed_drift_mapped` — versão-base do cutoff fechada, mas existe alteração posterior dentro do recorte; a diferença está identificada e não pode ser absorvida silenciosamente;
+- `candidate_closed` — a fonte parece estável, mas o histórico oficial ainda precisa de conferência final;
+- `drift_confirmed` — a fonte oficial atual difere do cutoff e o snapshot aplicável ainda precisa ser reconstruído/validado.
+
+## Auditoria federal — método e corte temporal
+
+A auditoria federal foi fechada em `2026-09-11` usando as compilações oficiais do Planalto e os índices oficiais de leis/emendas posteriores ao cutoff. O objetivo foi identificar **alteração textual direta nos dispositivos exigidos pelo edital**, não apenas leis novas que mencionem o mesmo tema.
+
+A versão-base autoral continua sendo a vigente em `2025-07-29`. Alterações posteriores registradas abaixo são metadados obrigatórios de drift e só entram no material do estudante quando a regra do edital sobre legislação superveniente/complementar justificar isso de forma explícita.
+
 ## Fontes federais
 
 | source_id | Diploma | Recorte do edital | Autoridade / proveniência oficial | Estado de versão |
 |---|---|---|---|---|
-| `SRC-B2-CP` | Decreto-Lei n.º 2.848/1940 — Código Penal | arts. 293–305; 307; 308; 311-A; 312–317; 319–333; 336–337; 339–347; 357; 359 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm` | `audit_required` — página compilada atual; conferir drift no recorte após 2025-07-29 |
-| `SRC-B2-CPP` | Decreto-Lei n.º 3.689/1941 — Código de Processo Penal | arts. 251–258; 261–267; 274; 351–372; 394–497; 531–538; 541–548; 574–667 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm` | `audit_required` |
-| `SRC-B2-L9099` | Lei n.º 9.099/1995 | penal: arts. 60–83, 88–89; civil: arts. 3–19 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/leis/l9099.htm` | `audit_required` |
-| `SRC-B2-CPC` | Lei n.º 13.105/2015 — Código de Processo Civil | arts. 144–155; 188–275; 294–311; 318–538; 994–1026 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105compilada.htm` | `audit_required` |
-| `SRC-B2-L12153` | Lei n.º 12.153/2009 — Juizados Especiais da Fazenda Pública | integral | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12153.htm` | `audit_required` |
-| `SRC-B2-CF88` | Constituição da República Federativa do Brasil de 1988 | Título II, Caps. I–III; Título III, Cap. VII, Seções I–II; art. 92 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm` | `audit_required` |
-| `SRC-B2-L8429` | Lei n.º 8.429/1992 — Improbidade Administrativa | integral | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm` | `audit_required` |
+| `SRC-B2-CP` | Decreto-Lei n.º 2.848/1940 — Código Penal | arts. 293–305; 307; 308; 311-A; 312–317; 319–333; 336–337; 339–347; 357; 359 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm` | `cutoff_closed_no_scoped_drift` — atos pós-cutoff que alteraram o CP foram auditados contra o recorte; não foi identificada alteração direta nos artigos listados. A Lei n.º 15.280/2025 incluiu o art. 338-A, mas o edital salta de 336–337 para 339–347, portanto 338-A está fora do recorte. Outras alterações pós-cutoff identificadas incidem fora dos artigos exigidos |
+| `SRC-B2-CPP` | Decreto-Lei n.º 3.689/1941 — Código de Processo Penal | arts. 251–258; 261–267; 274; 351–372; 394–497; 531–538; 541–548; 574–667 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm` | `cutoff_closed_drift_mapped` — Lei n.º 15.358/2026 alterou o art. 584, § 4º, dentro do recorte 574–667. A versão de 2025-07-29 deve ser preservada como baseline; a alteração posterior fica registrada separadamente. Leis n.º 15.272/2025, 15.280/2025, 15.438/2026 e 15.487/2026 alteram dispositivos fora dos intervalos exigidos |
+| `SRC-B2-L9099` | Lei n.º 9.099/1995 | penal: arts. 60–83, 88–89; civil: arts. 3–19 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/leis/l9099.htm` | `cutoff_closed_no_scoped_drift` — a compilação oficial não registra alteração textual de 2025 ou 2026 e os índices oficiais auditados não apontam lei pós-cutoff alterando diretamente a Lei n.º 9.099/1995 |
+| `SRC-B2-CPC` | Lei n.º 13.105/2015 — Código de Processo Civil | arts. 144–155; 188–275; 294–311; 318–538; 994–1026 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105compilada.htm` | `cutoff_closed_drift_mapped` — Lei n.º 15.484/2026 alterou o art. 998, dentro do recorte 994–1026, com vigência 30 dias após a publicação. Lei n.º 15.479/2026 alterou o art. 196 e incluiu o art. 529-A, ambos dentro do recorte, mas sua vigência começa apenas 1 ano após a publicação; em 2026-09-11 ainda não estava em vigor. Baseline permanece 2025-07-29 |
+| `SRC-B2-L12153` | Lei n.º 12.153/2009 — Juizados Especiais da Fazenda Pública | integral | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12153.htm` | `cutoff_closed_no_scoped_drift` — a página oficial não registra alteração textual de 2025 ou 2026 e não foi identificado ato pós-cutoff que altere diretamente o diploma |
+| `SRC-B2-CF88` | Constituição da República Federativa do Brasil de 1988 | Título II, Caps. I–III; Título III, Cap. VII, Seções I–II; art. 92 | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm` | `cutoff_closed_drift_mapped` — EC n.º 138/2025 alterou o art. 37, XVI, `b`, dentro do recorte, para permitir acumulação de um cargo de professor com outro de qualquer natureza. ECs n.º 136/2025, 137/2025 e 139/2026 foram auditadas e não atingem os dispositivos exigidos. O quadro oficial consultado vai até a EC n.º 139/2026 |
+| `SRC-B2-L8429` | Lei n.º 8.429/1992 — Improbidade Administrativa | integral | Presidência da República / Planalto — `https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm` | `cutoff_closed_no_scoped_drift` — a Lei n.º 15.269/2025 menciona alteração da LIA em sua ementa, porém o art. 18, que veicularia essa mudança, foi vetado; a compilação oficial vigente não apresenta alteração textual de 2025/2026 na Lei n.º 8.429/1992 |
+
+## Registro objetivo do drift federal pós-cutoff
+
+### CPP — Lei n.º 15.358/2026
+
+O art. 38 da Lei n.º 15.358/2026 alterou diversos dispositivos do CPP. Dentro do recorte do edital para o TJSP, a alteração relevante é:
+
+- **art. 584, § 4º** — está dentro do intervalo `574–667`.
+
+Alterações da mesma lei nos arts. 3º-B, 78, 310 e 313 estão fora dos intervalos cobrados no syllabus atual.
+
+### CPC — Leis n.º 15.479/2026 e 15.484/2026
+
+- **Lei n.º 15.479/2026:** altera o art. 196 e inclui o art. 529-A, ambos dentro do recorte; o próprio ato prevê entrada em vigor **1 ano após a publicação**, portanto ainda não vigente em `2026-09-11`.
+- **Lei n.º 15.484/2026:** altera, entre outros, o **art. 998**, dentro do recorte `994–1026`; o ato prevê entrada em vigor **30 dias após a publicação**, de modo que a alteração já estava vigente em `2026-09-11`.
+
+### Constituição Federal — EC n.º 138/2025
+
+A EC n.º 138/2025 modificou o art. 37, XVI, `b`, que pertence a `Título III — Capítulo VII — Seção I`, expressamente cobrado. O texto posterior permite a acumulação remunerada de **um cargo de professor com outro de qualquer natureza**.
+
+A versão autoral de cutoff deve preservar a redação vigente em `2025-07-29`; a EC n.º 138/2025 é drift posterior obrigatório de rastrear.
+
+### Lei de Improbidade — Lei n.º 15.269/2025
+
+A ementa da Lei n.º 15.269/2025 anuncia alteração da Lei n.º 8.429/1992, mas o **art. 18 foi vetado**. Por isso a auditoria não promove essa referência a alteração efetiva do texto da LIA.
 
 ## Fontes estaduais e TJSP
 
@@ -60,13 +98,18 @@ Estas fontes não definem o texto jurídico vigente, mas serão usadas no Gate 3
 
 ## Checklist para fechar o Gate 2
 
-- [ ] auditar alterações pós-cutoff dentro dos recortes do Código Penal;
-- [ ] auditar alterações pós-cutoff dentro dos recortes do CPP;
-- [ ] auditar alterações pós-cutoff nos recortes da Lei n.º 9.099/1995;
-- [ ] auditar alterações pós-cutoff nos recortes do CPC;
-- [ ] auditar alterações pós-cutoff na Lei n.º 12.153/2009;
-- [ ] auditar alterações constitucionais pós-cutoff nos recortes exigidos;
-- [ ] auditar alterações pós-cutoff na Lei n.º 8.429/1992;
+### Federal
+
+- [x] auditar alterações pós-cutoff dentro dos recortes do Código Penal;
+- [x] auditar alterações pós-cutoff dentro dos recortes do CPP;
+- [x] auditar alterações pós-cutoff nos recortes da Lei n.º 9.099/1995;
+- [x] auditar alterações pós-cutoff nos recortes do CPC;
+- [x] auditar alterações pós-cutoff na Lei n.º 12.153/2009;
+- [x] auditar alterações constitucionais pós-cutoff nos recortes exigidos;
+- [x] auditar alterações pós-cutoff na Lei n.º 8.429/1992.
+
+### Estadual/TJSP
+
 - [ ] reconstruir versão de 2025-07-29 da Lei Estadual n.º 10.261/1968 nos artigos exigidos;
 - [ ] confirmar versão da Resolução TJSP n.º 850/2021 no cutoff;
 - [ ] confirmar versão da Resolução TJSP n.º 963/2025 no cutoff e eventuais atos supervenientes pertinentes;
@@ -75,6 +118,10 @@ Estas fontes não definem o texto jurídico vigente, mas serão usadas no Gate 3
 - [ ] localizar/validar Tomo I das NSCGJ vigente em 2025-07-29;
 - [ ] resolver, apenas com fonte oficial, a duplicidade `Capítulo XI` ou registrá-la como ambiguidade não resolvida;
 - [ ] registrar data de verificação e, quando houver arquivo estável obtido para auditoria local, SHA-256 e tamanho sem republicar binário de terceiro.
+
+## Próximo fechamento
+
+O subgate federal está `closed`. O Gate 2 global permanece `in_progress` exclusivamente porque as fontes estaduais/TJSP ainda exigem reconstrução histórica ou confirmação de atos alteradores.
 
 ## Política de publicação
 
