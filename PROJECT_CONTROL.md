@@ -4,8 +4,8 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `research/direito-b2-gate2-federal`
-- **Last implementation branch:** `content/direito-b2-authoring-prep`
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `research/direito-b2-gate2-federal`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — fronteira editorial fechada em seis SubjectPacks; Gate 2 federal fechado; fontes estaduais/TJSP pendentes
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
@@ -16,6 +16,7 @@
 - **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`
 - **B2 boundary decision:** DEC-0019
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
+- **Last B2 source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
 - **Gate 2 federal audit:** fechado em 2026-09-11; drift mapeado em CPP, CPC e Constituição; CP, Lei 9.099/1995, Lei 12.153/2009 e Lei 8.429/1992 sem drift textual pós-cutoff dentro do recorte auditado
 - **Next Gate 2 work:** reconstruir/validar fontes estaduais e internas do TJSP no cutoff de 2025-07-29
 - **Next subject evidence:** o syllabus vigente atribui **30 questões** a Conhecimentos em Direito; o bloco contém Direito Penal, Processual Penal, Processual Civil, Constitucional, Administrativo e Legislação Interna
