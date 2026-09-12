@@ -1,111 +1,108 @@
 # NEXT_ACTION
 
-## DIREITO-004 — Construir as seis matrizes de cobertura/autoria de B2
+## DIREITO-005 — Iniciar autoria do SubjectPack `direito-penal`
 
-Os Gates 1, 2 e 3 estão fechados. A fronteira editorial, o baseline normativo e a análise histórica reproduzível da banca já existem.
+Os Gates 1–4 de B2 estão fechados. O escopo editorial, o baseline normativo, a análise histórica da banca e a matriz de cobertura/autoria já estão definidos e rastreáveis.
 
-**Ainda não iniciar a redação substancial das apostilas.** O último gate comum antes da autoria é garantir que todo o syllabus vigente esteja mapeado, sem lacunas, para uma estratégia de ensino e QA em cada um dos seis SubjectPacks.
+A redação substancial está agora **autorizada somente para o primeiro SubjectPack**, `direito-penal`, como validação do pipeline jurídico. Os demais cinco packs permanecem posteriores na ordem operacional.
 
-## Evidência obrigatória
+## Contrato obrigatório
 
 Usar conjuntamente:
 
 - `competitions/tjsp-escrevente-2025/SYLLABUS.md` — autoridade de escopo;
-- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — baseline, proveniência e drift;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — forma de cobrança e sinais editoriais;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md` — fronteiras dos seis packs;
-- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` — contrato de autoria.
+- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — baseline e proveniência;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — sinais empíricos de forma, sem peso preditivo;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — contrato DP-01…DP-10;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md` — fronteira e ordem de produção;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` — processo obrigatório;
+- `00_SYSTEM/SOURCE_POLICY.md` e `00_SYSTEM/QA_PROTOCOL.md` — proveniência e gates de qualidade.
 
-Histórico da banca calibra profundidade e apresentação, mas não pode eliminar ou adicionar conteúdo do edital.
+## Escopo exato
 
-## Artefato esperado
+Código Penal:
 
-Criar:
+`arts. 293–305; 307; 308; 311-A; 312–317; 319–333; 336–337; 339–347; 357; 359`.
 
-`competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`
+A versão-base autoral é a vigente em `2025-07-29`. O Gate 2 não identificou drift textual pós-cutoff dentro desse recorte. O art. 338-A, incluído posteriormente, está fora do recorte e não deve ser absorvido por proximidade numérica.
 
-O arquivo deve conter uma matriz independente para cada SubjectPack:
+## Unidade de autoria
 
-1. `direito-penal`;
-2. `direito-processual-penal`;
-3. `direito-processual-civil`;
-4. `direito-constitucional`;
-5. `direito-administrativo`;
-6. `legislacao-interna`.
+Criar o workspace:
 
-## Campos mínimos por unidade de cobertura
+`materials/tjsp-escrevente-2025/direito-penal/`
 
-Cada linha deve registrar, no mínimo:
+A primeira implementação deve estabelecer, no mínimo:
 
-- `coverage_id` estável;
-- pack;
-- fonte/source_id;
-- recorte normativo exato;
-- instituto/tema;
-- objetivo de aprendizagem;
-- forma pedagógica principal (`exposição`, `quadro comparativo`, `fluxo`, `tabela`, `mini-caso`, `linha do tempo`, combinação);
-- contraste/risco de confusão;
-- evidência de banca relevante, quando existir;
-- risco de versão/drift, quando existir;
-- requisito de prática/QA.
+- `APOSTILA.md` — corpo didático em versão de trabalho;
+- `SOURCES.md` — referências do pack para `SRC-B2-CP`, edital e evidência empírica aplicável, sem copiar binário de terceiro;
+- `MANIFEST.md` — identidade, escopo, versão e estado do material;
+- `CHANGELOG.md` — histórico desde o primeiro draft.
 
-## Regras de granularidade
+O documento de QA deve ser criado/atualizado quando houver uma versão suficientemente completa para os gates editoriais. Não publicar `APOSTILA.pdf` como final antes do fluxo de QA previsto no protocolo.
 
-A matriz não precisa ter uma linha por artigo. Deve agrupar dispositivos apenas quando formarem uma unidade jurídica coerente e verificável.
+## Contrato DP-01…DP-10
 
-É proibido usar grupos tão amplos que ocultem partes do edital. Todo artigo, intervalo, diploma integral ou recorte interno listado no syllabus deve poder ser rastreado a pelo menos um `coverage_id`.
+A apostila deve tornar rastreáveis as dez unidades da matriz:
 
-Quando um intervalo contiver institutos muito diferentes, subdividi-lo. Quando vários artigos contíguos compuserem um único procedimento ou instituto, podem ficar juntos.
+1. `DP-01` — arts. 293–295: papéis públicos e petrechos;
+2. `DP-02` — arts. 296–305: falsidades documentais, atestados, uso e supressão;
+3. `DP-03` — arts. 307–308: falsa identidade x documento de identidade alheio;
+4. `DP-04` — art. 311-A: fraude em certame de interesse público;
+5. `DP-05` — arts. 312–317: crimes funcionais nucleares;
+6. `DP-06` — arts. 319–327: prevaricação e crimes funcionais do intervalo;
+7. `DP-07` — arts. 328–333: crimes de particular contra a Administração;
+8. `DP-08` — arts. 336–337: inutilização/subtração de edital, sinal, livro ou documento;
+9. `DP-09` — arts. 339–347: crimes contra a Administração da Justiça;
+10. `DP-10` — arts. 357 e 359: exploração de prestígio e desobediência a decisão judicial sobre perda/suspensão de direito.
 
-## Sinais editoriais obrigatórios do Gate 3
+Nenhuma linha pode desaparecer na redação. Agrupamentos pedagógicos são permitidos se a rastreabilidade continuar explícita no QA.
 
-Sem alterar o conteúdo programático, incorporar na matriz:
+## Engenharia didática obrigatória
 
-- Penal: elementos típicos + tipos vizinhos + mini-casos;
-- Processual Penal: fluxos, decisões, recursos, prazos e sujeitos;
-- Processual Civil: regra/exceção, competência, efeitos, JEC/JEFaz e mini-casos;
-- Constitucional: regra/exceção, pares conceituais, nacionalidade e servidores;
-- Administrativo: hipótese→requisito→efeito, linhas do tempo disciplinares e modalidade→sanção;
-- Legislação Interna: tabelas operacionais, sujeitos, condições, prazos e controle de versão.
+Para Direito Penal, seguir a família jurídica do `APOSTILA_AUTHORING_PROTOCOL.md`:
 
-## Controle de versão obrigatório
+```text
+regra/fonte normativa
+→ elementos/requisitos
+→ hipótese de incidência
+→ consequência
+→ exceção
+→ contraste com tipo próximo
+→ caso aplicado
+→ síntese
+```
 
-A matriz deve carregar explicitamente os pontos de drift já fechados no Gate 2, sem substituí-los por texto atual:
+A evidência histórica do Gate 3 exige atenção especial a tipos vizinhos, sujeito ativo, objeto material, elemento subjetivo/finalidade, modalidade da conduta e consequência jurídica. Converter isso em explicação, quadros comparativos, pares mínimos e mini-casos; não inserir metadiscurso como “a VUNESP cobra”.
 
-- CPP art. 584, § 4º;
-- CPC arts. 196, 529-A e 998;
-- CF art. 37, XVI, `b`;
-- Lei SP 10.261/1968 art. 78;
-- LC SP 1.111/2010 — alterações posteriores já mapeadas;
-- RITJSP — baseline até Assento 591/2025;
-- NSCGJ — baseline do cutoff e alterações posteriores mapeadas;
-- duplicidade literal de `Capítulo XI` no edital continua sem correção inferida.
+## Prática mínima
 
-## Critério de fechamento do Gate 4
+Respeitar os requisitos `Q-LIT`, `Q-CMP` e `Q-CAS` definidos por linha na matriz. Questões autorais devem usar cinco alternativas plausíveis quando em formato objetivo, separar pergunta/gabarito e explicar o elemento decisivo.
 
-Marcar `closed` somente quando:
+Questões reais ficam no backoffice para calibração; não copiar extensamente conteúdo protegido para a apostila.
 
-- os seis packs tiverem matriz própria;
-- 100% dos recortes do syllabus estiverem cobertos;
-- toda fonte estiver ligada a `coverage_id` verificável;
-- não houver artigo/faixa/diploma interno órfão;
-- riscos de confusão e sinais editoriais estiverem registrados;
-- drift relevante estiver associado às unidades afetadas;
-- a duplicidade oficial das NSCGJ estiver preservada sem falsa resolução;
-- a matriz puder servir diretamente de contrato para a redação e para QA de cobertura.
+## Critério da primeira implementação
 
-## Depois do Gate 4 — DIREITO-005
+A primeira branch de autoria só deve ser considerada pronta para revisão quando:
 
-Com Gates 1–4 fechados, autorizar a redação do primeiro SubjectPack: `direito-penal`.
+- DP-01…DP-10 estiverem cobertos ou explicitamente rastreados no draft;
+- nenhuma afirmação normativa extrapolar `SRC-B2-CP`/baseline do cutoff;
+- os contrastes jurídicos essenciais estiverem explícitos;
+- houver exemplos e mini-casos suficientes para ligar regra a aplicação;
+- a estrutura funcionar como material de aprendizado e como corpus recuperável pelo NotebookLM;
+- `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` estiverem coerentes com o estado do draft;
+- o próximo QA estiver claramente indicado, sem promover draft a release prematuramente.
 
-A primeira implementação de autoria deverá usar a matriz como contrato: nenhuma unidade fora do syllabus, nenhuma unidade do syllabus omitida, e engenharia de banca aplicada silenciosamente.
+## Depois da primeira implementação
+
+Executar QA editorial/normativo e iterar o draft de `direito-penal`. Só após os gates de conteúdo, PDF e NotebookLM o pack pode ser promovido a release final. O resultado desse primeiro pipeline jurídico deve informar apenas ajustes operacionais; não pode alterar silenciosamente o syllabus ou a matriz dos demais packs.
 
 ## Gate canônico
 
-Antes de encerrar a implementação:
+Antes de encerrar cada implementação:
 
 ```bash
 python tools/verify.py
 ```
 
-A tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` em `2026-09-12` continuou falhando com `Could not resolve host: github.com`. Se persistir, documentar a impossibilidade conforme DEC-0009; não tratar como `PASS`.
+Neste runtime, nova tentativa em `2026-09-12` de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` falhou com `Could not resolve host: github.com`. Enquanto essa condição persistir, registrar a impossibilidade conforme DEC-0009; não tratá-la como `PASS`.
