@@ -4,8 +4,8 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `release/direito-penal-0.1.0-rc.1-pdf`
-- **Last implementation branch:** `release/direito-penal-0.1.0-rc.1`
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `release/direito-penal-0.1.0-rc.1-pdf`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–6 fechados no primeiro pipeline; `DIREITO-007` aberto no release candidate de Direito Penal
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
@@ -28,6 +28,7 @@
 - **Direito Penal draft PR:** `#20`, merged to `main` at `c0208494c1acd343572254d4d8b991d97f6cf8fc`
 - **Direito Penal QA PR:** `#21`, merged to `main` at `d89b7aefd69db3f3fc653807eb98f036755f6f2e`
 - **Direito Penal RC PR:** `#22`, merged to `main` at `1972f0c6a6f984ecf363413810ccb7cf082f7e79`
+- **Direito Penal PDF continuity PR:** `#23`, merged to `main` at `737dc881f3eb91fed461d918bd026b86ce6bb210`; registra candidato local validado e bloqueio de integridade sem alegar publicação canônica
 - **Gate 2:** `closed` — federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
 - **Gate 3:** `closed` — questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
 - **Gate 4:** `closed` — 100% dos recortes de B2 rastreados a `coverage_id`, fonte, estratégia pedagógica, risco de versão e QA
