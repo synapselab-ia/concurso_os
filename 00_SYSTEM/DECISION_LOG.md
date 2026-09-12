@@ -148,3 +148,30 @@ Motivos principais:
 Fontes compartilhadas continuam referenciadas por proveniência, sem duplicação obrigatória de binários. A Lei n.º 9.099/1995, por exemplo, alimenta recortes distintos de Processual Penal e Processual Civil.
 
 O edital contém uma anomalia literal no recorte das Normas da Corregedoria: após listar `Tomo I — Capítulo XI: Seções I, IV e V`, lista novamente `Tomo I — Capítulo XI: Seção I a VII`. O repositório deve preservar essa redação até que evidência oficial permita resolver a duplicidade; não se deve inferir silenciosamente outro capítulo.
+
+## DEC-0020 — Ciclo semanal em duas lanes: microdrill + simulado dominical
+**Status:** accepted  
+A prática passa a separar explicitamente aquisição/recuperação de transferência para a prova.
+
+Para `tjsp-escrevente-2025`, a cadência abaixo é o **default da competição**, não uma regra rígida por identidade. Cada `Enrollment` pode herdar esse default ou sobrescrevê-lo declarativamente em `CONFIG.json`; não se implementa comportamento com `if participant == ...`, preservando DEC-0008.
+
+Durante a fase regular do default TJSP:
+
+- segunda a sábado usam `microdrill` como padrão: questões curtas, alta repetição, feedback rápido e foco em uma habilidade ou distinção por vez;
+- domingo usa `weekly_full_objective`: simulado autoral completo conforme o blueprint objetivo vigente;
+- erros, hesitações, chutes e erros com alta confiança do domingo alimentam a prioridade dos microdrills da semana seguinte.
+
+O simulado dominical TJSP possui **70 questões objetivas** com a distribuição canônica de `BLUEPRINT.json`: 16 Português, 30 Conhecimentos em Direito e 24 Conhecimentos Gerais, estes divididos em 4 Atualidades/PCD, 4 Matemática, 9 Informática e 7 Raciocínio Lógico. A redação continua sendo risco eliminatório separado e não entra automaticamente no simulado objetivo semanal.
+
+Consequências arquiteturais:
+
+- o `Teste` nativo do NotebookLM permanece ferramenta de aquisição/revisão; não precisa imitar fielmente a VUNESP;
+- simulados de alta fidelidade são artefatos separados, produzidos e auditados pelo ChatGPT/GitHub;
+- provas históricas calibram estilo, operação cognitiva e distratores, mas edital/fontes vigentes controlam verdade e escopo;
+- questões de simulado são autorais e passam por QA item a item e QA de conjunto antes da aplicação;
+- um banco persistente de questões pode crescer incrementalmente quando útil, sem objetivo de pré-gerar volume massivo sem necessidade;
+- a persistência de resultado individual continua opcional e não é publicada automaticamente no repositório público.
+
+O limite inicial de até 24 questões por lote de geração é um teto operacional provisório de qualidade baseado no tamanho máximo observado das seções históricas de Português usadas no projeto; não é tratado como limite técnico do modelo. Qualquer aumento deve ser sustentado por benchmark interno de qualidade.
+
+A política específica do último mês de preparação fica deliberadamente em aberto até decisão canônica própria; não deve ser inventada antecipadamente.

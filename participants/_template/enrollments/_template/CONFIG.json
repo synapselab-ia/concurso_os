@@ -5,5 +5,8 @@
   "competition_id": "competition-slug",
   "status": "active",
   "started_at": "YYYY-MM-DD",
-  "study_mode": "adaptive"
+  "study_mode": "adaptive",
+  "practice_cycle": {
+    "inherit_competition_default": true
+  }
 }

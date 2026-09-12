@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "authority": {
+    "exam_blueprint_ref": "BLUEPRINT.json",
+    "source_ref": "SRC-TJSP-EDITAL-2025-02"
+  },
+  "weekly_cycle": {
+    "configuration_scope": "competition_default",
+    "enrollment_override": "participants/<participant_id>/enrollments/<competition_id>/CONFIG.json#practice_cycle",
+    "regular_phase": {
+      "monday_to_saturday": "microdrill",
+      "sunday": "weekly_full_objective"
+    },
+    "final_month": {
+      "policy": "not_defined_here",
+      "rule": "A final-month plan may supersede weekday practice only after an explicit canonical decision; Sunday simulations remain the default unless that plan says otherwise."
+    }
+  },
+  "weekly_full_objective": {
+    "questions": 70,
+    "alternatives_per_question": 5,
+    "answer_feedback": "after_submission",
+    "sections": [
+      {
+        "block_id": "B1",
+        "name": "Língua Portuguesa",
+        "questions": 16,
+        "eliminatory": true,
+        "minimum_correct_fraction": 0.5,
+        "subjects": [
+          {
+            "subject_id": "portuguese",
+            "name": "Língua Portuguesa",
+            "questions": 16
+          }
+        ]
+      },
+      {
+        "block_id": "B2",
+        "name": "Conhecimentos em Direito",
+        "questions": 30,
+        "eliminatory": true,
+        "minimum_correct_fraction": 0.5,
+        "subjects": [
+          {
+            "subject_id": "law",
+            "name": "Conhecimentos em Direito",
+            "questions": 30,
+            "domain_mix_policy": "calibrate_from_current_syllabus_plus_validated_banca_analysis; no fixed subdomain count is inferred from the edital"
+          }
+        ]
+      },
+      {
+        "block_id": "B3",
+        "name": "Conhecimentos Gerais",
+        "questions": 24,
+        "eliminatory": false,
+        "subjects": [
+          {
+            "subject_id": "current_affairs_lbi",
+            "name": "Atualidades e Estatuto da Pessoa com Deficiência",
+            "questions": 4
+          },
+          {
+            "subject_id": "mathematics",
+            "name": "Matemática",
+            "questions": 4
+          },
+          {
+            "subject_id": "informatics",
+            "name": "Informática",
+            "questions": 9
+          },
+          {
+            "subject_id": "logic",
+            "name": "Raciocínio Lógico",
+            "questions": 7
+          }
+        ]
+      }
+    ],
+    "writing": {
+      "included_by_default": false,
+      "reason": "The weekly Sunday artifact measures the 70-question objective component. Writing remains a separate eliminatory dimension and may be added in an explicit full-dress rehearsal."
+    }
+  },
+  "authoring": {
+    "question_origin": "authorial",
+    "style_target": "TJSP/VUNESP",
+    "current_exam_priority": 2025,
+    "historical_calibration_years": [
+      2025,
+      2024,
+      2023,
+      2021
+    ],
+    "max_questions_per_generation_batch": 24,
+    "batch_cap_status": "provisional_quality_cap_not_model_limit",
+    "assembly_rule": "compose_from_independently_authored_and_reviewed_batches_then_run_set_level_qa",
+    "historical_question_policy": "calibration_only_no_extensive_copying"
+  },
+  "qa": {
+    "item_checks": [
+      "syllabus_alignment",
+      "source_correctness_when_applicable",
+      "single_defensible_answer",
+      "plausible_distractors",
+      "answer_rationale_consistency",
+      "banca_style_fidelity",
+      "no_unintended_ambiguity",
+      "no_answer_leakage"
+    ],
+    "set_checks": [
+      "exact_blueprint_distribution",
+      "duplicate_detection",
+      "answer_key_pattern_review",
+      "difficulty_balance",
+      "reading_load_review",
+      "shared_stimulus_coherence",
+      "time_plausibility"
+    ]
+  },
+  "feedback_loop": {
+    "simulation_result_feeds_next_week_microdrills": true,
+    "priority_signals": [
+      "wrong_answer",
+      "high_confidence_wrong",
+      "repeated_error_pattern",
+      "slow_or_fragile_process",
+      "transfer_failure"
+    ],
+    "rule": "Increase targeted microdrill priority after simulation errors without eliminating maintenance practice elsewhere."
+  }
+}

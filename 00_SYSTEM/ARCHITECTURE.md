@@ -20,6 +20,15 @@ fontes oficiais + provas + análise empírica
               NotebookLM
       APOSTILA como fonte de estudo
       + configuração nativa do chat
+
+                +
+       PRACTICE_PROTOCOL
+                  ↓
+microdrill durante a semana
+                  +
+simulado autoral dominical
+                  ↓
+erros/prioridades da semana seguinte
 ```
 
 ## Papéis
@@ -35,6 +44,8 @@ Fonte canônica de:
 - apostilas editáveis e PDFs de distribuição;
 - instruções versionadas para o chat do NotebookLM;
 - manifests/changelogs;
+- protocolos e blueprints de prática/simulado;
+- lotes de questões autorais e simulados quando persistidos;
 - QA;
 - continuidade entre chats.
 
@@ -50,10 +61,12 @@ Responsável por:
 - aplicar `APOSTILA_AUTHORING_PROTOCOL.md`;
 - escrever e reescrever apostilas;
 - produzir exemplos e exercícios;
-- fazer QA source-grounded;
+- produzir microdrills e lotes autorais de simulado quando solicitado;
+- fazer QA source-grounded item a item e de conjunto;
+- montar simulados coerentes com o blueprint;
 - manter a continuidade canônica no GitHub.
 
-A análise de banca deve melhorar silenciosamente o material do estudante. Não é necessário transformar o aluno em leitor da análise da análise.
+A análise de banca deve melhorar silenciosamente o material e as questões. Não é necessário transformar o aluno em leitor da análise da análise.
 
 ### Protocolo de autoria
 
@@ -73,6 +86,22 @@ escopo e fontes
 ```
 
 O protocolo padroniza o processo de qualidade, não o formato de todas as matérias. Direito, Português, Matemática, RLM, Informática, Atualidades e Redação têm perfis didáticos próprios dentro do mesmo sistema de gates.
+
+### Prática em duas lanes
+
+`00_SYSTEM/PRACTICE_PROTOCOL.md` separa:
+
+```text
+microdrill
+→ aquisição / recuperação / discriminação rápida
+
+simulation
+→ transferência / formato real / gestão de prova
+```
+
+O simulado não é uma versão “maior” do microdrill. Ele mede outra camada de competência.
+
+`00_SYSTEM/SIMULATION_PROTOCOL.md` define autoria em lotes, QA item a item, QA de conjunto, lock, aplicação e feedback.
 
 ### NotebookLM
 
@@ -129,17 +158,21 @@ Já o chat respeitou bem instruções operacionais como uma questão por vez, al
 
 Depois, a interface mostrou uma camada própria de personalização da conversa. Isso elimina a necessidade de usar a metodologia como fonte apenas para controlar o chat.
 
-Por isso, a arquitetura final da V0.1 separa:
+Os smoke tests de Português 2.0.0 também mostraram que o Teste nativo é útil para recuperação/aplicação curta, mas não precisa reproduzir a prova TJSP/VUNESP. Por isso a fidelidade de banca passa a ser responsabilidade do pipeline de `simulation`, não do NotebookLM nativo.
+
+A arquitetura final da V0.1 separa:
 
 ```text
 conteúdo estudável → fontes
 comportamento do tutor → configuração da conversa
-engenharia editorial → GitHub/ChatGPT + protocolo de autoria
+aquisição rápida → microdrills / NotebookLM
+transferência para a prova → simulados autorais auditados
+engenharia editorial → GitHub/ChatGPT + protocolos
 ```
 
 ## Unidade canônica de entrega
 
-O objeto principal continua sendo o `SubjectPack`:
+O objeto principal de conteúdo continua sendo o `SubjectPack`:
 
 ```text
 Competition + Subject
@@ -152,15 +185,19 @@ SOURCES.md                      # backoffice
 CHANGELOG.md                    # backoffice
 ```
 
-`APOSTILA_AUTHORING_PROTOCOL.md` é sistêmico e compartilhado por todos os SubjectPacks; não é duplicado dentro de cada matéria.
+Questões e simulados são artefatos de prática separados do SubjectPack para permitir reutilização e composição entre matérias sem poluir o corpus do NotebookLM.
 
 ## Participantes
 
 O material é compartilhável. Histórico de conversa, artefatos e relatórios pessoais podem permanecer em notebooks separados de `p001`, `p002`, etc.
 
+Resultados individuais de simulados não são publicados automaticamente no repositório público.
+
 ## Evidência e scheduler
 
-`EvidenceEvent`, mastery projection e scheduler próprio continuam fora do caminho crítico da V0.1. Se o chat do NotebookLM produzir um resumo útil de acertos, erros e dúvidas, o usuário pode exportá-lo ou trazê-lo ao ChatGPT sem registrar cada resposta no GitHub.
+`EvidenceEvent`, mastery projection e scheduler próprio continuam fora do caminho crítico da V0.1. O loop mínimo necessário é mais simples: desempenho de simulado pode gerar prioridades de microdrill para a semana seguinte sem exigir telemetria questão a questão permanente.
+
+Se o chat do NotebookLM produzir um resumo útil de acertos, erros e dúvidas, o usuário pode exportá-lo ou trazê-lo ao ChatGPT.
 
 ## Deriva de produto externo
 
@@ -168,11 +205,11 @@ NotebookLM é produto externo. Nomes, limites e posição dos controles de perso
 
 A arquitetura não depende do texto exato do botão. O princípio permanente é:
 
-> sempre que houver uma camada nativa de configuração do chat, instruções de comportamento devem ficar fora do corpus estudável.
+> sempre que houver uma camada nativa de configuração do chat, instruções de comportamento devem ficar fora do corpus estudável sempre que possível.
 
 ## Continuidade
 
-Chats são descartáveis. Decisões, versões de pacote, estado de produção, etapa do protocolo de autoria e próxima ação devem permanecer no repositório.
+Chats são descartáveis. Decisões, versões de pacote, estado de produção, etapa do protocolo de autoria, blueprints de simulado e próxima ação devem permanecer no repositório.
 
 ## Especificação detalhada
 

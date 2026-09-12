@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "simulation.schema.json",
+  "title": "SimulationManifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "simulation_id",
+    "competition_id",
+    "simulation_type",
+    "blueprint_ref",
+    "status",
+    "scheduled_for",
+    "question_ids",
+    "artifacts",
+    "qa"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "simulation_id": {"type": "string", "minLength": 1},
+    "competition_id": {"type": "string", "minLength": 1},
+    "simulation_type": {"enum": ["weekly_full_objective", "partial_pilot", "full_dress_rehearsal"]},
+    "blueprint_ref": {"type": "string", "minLength": 1},
+    "status": {"enum": ["draft", "qa", "locked", "applied", "corrected"]},
+    "scheduled_for": {"type": "string", "format": "date"},
+    "question_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "artifacts": {
+      "type": "object",
+      "required": ["simulado", "gabarito", "qa"],
+      "properties": {
+        "simulado": {"type": "string"},
+        "gabarito": {"type": "string"},
+        "qa": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "timing": {
+      "type": "object",
+      "properties": {
+        "target_minutes": {"type": ["integer", "null"], "minimum": 1},
+        "actual_minutes": {"type": ["integer", "null"], "minimum": 1}
+      },
+      "additionalProperties": true
+    },
+    "qa": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["pending", "pass", "reject"]},
+        "item_qa_complete": {"type": "boolean"},
+        "set_qa_complete": {"type": "boolean"},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"simulation_type": {"const": "weekly_full_objective"}}, "required": ["simulation_type"]},
+      "then": {"properties": {"question_ids": {"minItems": 70, "maxItems": 70}}}
+    }
+  ],
+  "additionalProperties": true
+}
