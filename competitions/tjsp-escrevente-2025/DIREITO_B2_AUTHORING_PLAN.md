@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 — Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** Gates 1 e 2 fechados; Gate 3 pendente  
+**Status:** Gates 1–3 fechados; Gate 4 pendente  
 
 ## Objetivo
 
@@ -24,28 +24,6 @@ B2 será entregue como **seis SubjectPacks**, um para cada domínio explicitamen
 
 A decisão é registrada em `00_SYSTEM/DECISION_LOG.md` como DEC-0019.
 
-## Razões
-
-### 1. Escopo normativo
-
-Um único PDF de Direito teria de reunir, entre outros, grandes recortes do CPP e do CPC, legislação federal e estadual, Constituição, Regimento Interno, resoluções do TJSP e Normas da Corregedoria. A unidade resultante seria excessivamente grande para leitura, revisão dirigida e manutenção normativa.
-
-### 2. Coerência pedagógica
-
-Os seis domínios já aparecem separados no edital e possuem vocabulário, institutos, relações conceituais e tipos de erro próprios. O protocolo de autoria permite estruturas específicas por domínio sem exigir que todo B2 use um único encadeamento didático.
-
-### 3. Manutenção e versionamento
-
-Normas internas do TJSP, legislação estadual e códigos federais têm ciclos de alteração diferentes. Packs separados permitem revisar uma fonte sem republicar toda a disciplina jurídica.
-
-### 4. NotebookLM
-
-A unidade recomendada de estudo é a matéria. Separar os domínios reduz ruído de recuperação, facilita Testes/Cartões/Mapas mentais temáticos e evita um corpus jurídico monolítico.
-
-### 5. Fontes compartilhadas
-
-A divisão não duplica binários. Fontes comuns são referenciadas por proveniência. Exemplo: a Lei n.º 9.099/1995 aparece em `direito-processual-penal` nos arts. 60 a 83, 88 e 89 e em `direito-processual-civil` nos arts. 3º a 19.
-
 ## Escopo canônico por pack
 
 ### `direito-penal`
@@ -61,7 +39,7 @@ Lei n.º 9.099/1995: arts. 60 a 83; 88 e 89.
 
 Código de Processo Civil: arts. 144 a 155; 188 a 275; 294 a 311; 318 a 538; 994 a 1026.  
 Lei n.º 9.099/1995: arts. 3º a 19.  
-Lei n.º 12.153/2009: integral, porque o edital não restringe artigos.
+Lei n.º 12.153/2009: integral.
 
 ### `direito-constitucional`
 
@@ -70,7 +48,7 @@ Constituição Federal: Título II, Capítulos I, II e III; Título III, Capítu
 ### `direito-administrativo`
 
 Lei Estadual n.º 10.261/1968: arts. 1º a 86; 171 a 175; 239 a 323.  
-Lei Federal n.º 8.429/1992: integral, porque o edital não restringe artigos.
+Lei Federal n.º 8.429/1992: integral.
 
 ### `legislacao-interna`
 
@@ -102,25 +80,35 @@ Pontos de manutenção que não podem ser perdidos na autoria:
 - Lei Estadual n.º 10.261/1968: Lei n.º 18.473/2026 atingiu o art. 78 dentro do recorte;
 - LC Estadual n.º 1.111/2010: Lei n.º 18.373/2025 e LC n.º 1.441/2026 são posteriores ao cutoff;
 - Regimento Interno: baseline inclui Assento n.º 591/2025 e exclui 592–596;
-- NSCGJ: baseline dos recortes literais exclui, entre outras alterações posteriores identificadas, Provimentos CG n.º 30/2025 e 04/2026 no Capítulo XI.
+- NSCGJ: baseline dos recortes literais exclui alterações posteriores identificadas, incluindo Provimentos CG n.º 30/2025 e 04/2026 no Capítulo XI.
 
-A cláusula do edital sobre legislação superveniente/complementar continua válida. Fechar o Gate 2 significa controlar a versão e o drift, não afirmar que toda norma posterior deve ser ignorada.
+## Gate 3 — banca fechada
+
+`competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` classifica de forma reproduzível **150 questões de Direito** das provas de 2021, 2023, 2024 e 2025.
+
+Sinais permitidos para engenharia da autoria:
+
+- coexistência de literalidade normativa e aplicação curta;
+- contraste de tipos/institutos próximos;
+- troca de requisito, sujeito, prazo, competência, exceção e recurso como padrões de distractor;
+- necessidade de fluxos procedimentais, tabelas regra/exceção e mini-casos;
+- legislação interna exige tabelas operacionais e controle estrito de versão.
+
+A distribuição histórica é descritiva, não preditiva, e não altera o syllabus vigente.
 
 ## Ordem de produção
 
-A ordem abaixo é operacional, não estatística:
-
 1. **concluído** — inventário e versão de todas as fontes de B2;
-2. concluir análise histórica reproduzível de 2021/2023/2024/2025;
-3. construir a matriz de cobertura dos seis packs;
-4. iniciar autoria por `direito-penal`, o menor recorte normativo independente e um bom primeiro teste do pipeline jurídico;
+2. **concluído** — análise histórica reproduzível de 2021/2023/2024/2025;
+3. construir a matriz de cobertura/autoria dos seis packs;
+4. iniciar autoria por `direito-penal`;
 5. seguir para `direito-processual-penal`;
 6. `direito-processual-civil`;
 7. `direito-constitucional`;
 8. `direito-administrativo`;
 9. `legislacao-interna`.
 
-A sequência pode ser alterada por decisão canônica posterior, mas nenhum pack pode começar redação substancial antes dos gates comuns de fonte, análise e cobertura.
+Nenhum pack pode começar redação substancial antes do fechamento do Gate 4 comum.
 
 ## Gates
 
@@ -128,9 +116,9 @@ A sequência pode ser alterada por decisão canônica posterior, mas nenhum pack
 |---|---|---|
 | 1 — fronteira | `closed` | seis SubjectPacks definidos e decisão registrada |
 | 2 — fontes/versões | `closed` | inventário oficial, cutoff, proveniência e drift normativo fechados em `DIREITO_SOURCES.md` |
-| 3 — banca | `pending` | questões de Direito de 2021/2023/2024/2025 classificadas de forma reproduzível |
-| 4 — matriz | `pending` | todos os recortes do syllabus mapeados sem lacunas |
-| 5 — autorização de redação | `blocked` | depende dos Gates 1–4 |
+| 3 — banca | `closed` | 150 questões de Direito classificadas em `DIREITO_B2_BANCA_ANALYSIS.md` |
+| 4 — matriz | `pending` | todos os recortes do syllabus mapeados sem lacunas para as seis unidades editoriais |
+| 5 — autorização de redação | `blocked` | depende do Gate 4 |
 
 ## Regra de autoridade
 
