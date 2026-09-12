@@ -20,7 +20,7 @@ Leitura, marcação e sensação de familiaridade não equivalem a domínio. O s
 
 ## Ciclo semanal padrão
 
-A preparação usa duas lanes complementares definidas em `PRACTICE_PROTOCOL.md`:
+A preparação usa duas lanes complementares definidas em `PRACTICE_PROTOCOL.md`. Para TJSP Escrevente 2025, o ciclo padrão da competição é:
 
 ```text
 segunda–sábado
@@ -32,8 +32,10 @@ domingo
 → transferência + formato real + fadiga + gestão de prova
 ```
 
+Um enrollment pode sobrescrever essa cadência declarativamente; na ausência de override, herda o padrão da competição.
+
 O simulado dominical não substitui o estudo da semana. Ele mede a conversão do conhecimento em desempenho de prova e deve redirecionar parte da prática subsequente.
 
 Depois de cada simulado, erros, hesitações, chutes e erros com alta confiança aumentam a prioridade de microdrills correspondentes na semana seguinte, sem eliminar prática de manutenção nos demais tópicos.
 
-O último mês pode receber um protocolo de reta final específico quando essa fase for formalmente iniciada. Até lá, não inventar uma cadência diferente da definida em `PRACTICE_PROTOCOL.md`.
+O último mês pode receber um protocolo de reta final específico quando essa fase for formalmente iniciada. Até lá, não inventar uma cadência diferente da configurada segundo `PRACTICE_PROTOCOL.md`.
