@@ -3,10 +3,10 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: content/direito-penal-v0.1-draft
+branch: main
 base_branch: main
-last_implementation_branch: content/direito-b2-gate4-matrices
-current_task: review and merge the first Direito Penal draft, then run pack-specific editorial and normative QA under DIREITO-006
+last_implementation_branch: content/direito-penal-v0.1-draft
+current_task: execute DIREITO-006 pack-specific editorial and normative QA for direito-penal 0.1.0-draft.1
 current_pack: direito-penal_0.1.0-draft.1
 last_released_pack: portugues 2.0.0
 completed:
@@ -45,6 +45,8 @@ completed:
   - direito-penal APOSTILA.md first pass drafted for DP-01 through DP-10
   - 30 original A-E Direito Penal practice questions added with separated commented answer key
   - preliminary source spot-check performed against official Planalto text for key scoped provisions; full normative QA remains pending
+  - PR 20 first Direito Penal draft reviewed and merged under DEC-0009
+  - direito-penal 0.1.0-draft.1 merged to main at c0208494c1acd343572254d4d8b991d97f6cf8fc
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
@@ -106,7 +108,7 @@ b2_coverage_gate:
     - DP-09
     - DP-10
 direito_penal_draft:
-  status: draft_implemented
+  status: draft_implemented_merged
   version: 0.1.0-draft.1
   path: materials/tjsp-escrevente-2025/direito-penal
   files:
@@ -122,6 +124,8 @@ direito_penal_draft:
   source_review_status: preliminary_spot_check_only
   baseline: 2025-07-29
   cp_scoped_drift: none_identified_by_gate2
+  pull_request: 20
+  merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
 next_gate:
   id: DIREITO-006
   name: qa_direito_penal_draft
@@ -162,12 +166,14 @@ validation:
     error: Could not resolve host github.com
     policy: impossibility documented under DEC-0009; not treated as pass
 ci: disabled
-last_subject_pack_pull_request: 12
+last_subject_pack_pull_request: 20
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
 last_b2_matrix_pull_request: 19
-merge_status: direito_penal_draft_ready_for_pr
+last_direito_penal_pull_request: 20
+merge_status: direito_penal_draft_merged_qa_pending
+last_direito_penal_merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
 last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3
 last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
 last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
