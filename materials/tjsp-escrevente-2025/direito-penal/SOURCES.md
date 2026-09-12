@@ -1,7 +1,7 @@
 # SOURCES — Direito Penal — TJSP Escrevente 2025
 
-**Pack version:** `0.1.0-draft.3`  
-**Source verification for this draft:** `2026-09-12`
+**Pack version:** `0.1.0-rc.1`  
+**Source verification for this RC:** `2026-09-12`
 
 ## Regra de autoridade
 
@@ -44,6 +44,8 @@ Provas históricas não substituem o edital nem criam conteúdo programático. E
 - Uso neste pack: fonte primária para afirmações normativas específicas do conteúdo penal, sem introdução de jurisprudência não prevista na fonte.
 
 A compilação oficial foi reaberta durante `DIREITO-006` e o recorte foi revisado integralmente para o `draft.2`; os dois pontos que bloquearam a prática foram rechecados na passagem final do `draft.3`. O art. 311-A separa expressamente a forma por resultado danoso (§ 2º) do aumento por qualidade funcional (§ 3º). O art. 324 trata de função pública e estados funcionais ali enumerados; o art. 359 trata de função, atividade, direito, autoridade ou múnus suspenso ou privado por decisão judicial. A apostila evita inferir, apenas desses textos, regra jurisprudencial de concurso de normas.
+
+O `0.1.0-rc.1` não altera o conteúdo jurídico aprovado em `draft.3`; apenas promove a identidade do candidato e acrescenta a configuração do tutor e registros de QA posteriores.
 
 ## Evidência empírica da banca
 
@@ -95,7 +97,7 @@ Inventário de versão que fecha `SRC-B2-CP` no cutoff e separa alterações pos
 
 ### `APOSTILA_QA_0.1.0.md`
 
-`DIREITO-006` fechado no `draft.3`: cobertura integral, revisão normativa, didática, 30/30 questões e estrutura de corpus Markdown aprovadas. O gate determinístico permaneceu não executado por impossibilidade de resolução DNS do runtime; PDF e NotebookLM ainda não foram executados.
+`DIREITO-006` está fechado no `draft.3`: cobertura integral, revisão normativa, didática, 30/30 questões e estrutura de corpus Markdown aprovadas. Em `DIREITO-007`, a configuração do tutor e o QA estático de uso foram executados; um PDF candidato local também foi gerado e auditado, mas `APOSTILA.pdf` ainda não está versionado no GitHub e o smoke real do NotebookLM permanece pendente. O gate determinístico continua não executado por impossibilidade de resolução DNS do runtime.
 
 ## Política de redação
 
@@ -103,14 +105,16 @@ Inventário de versão que fecha `SRC-B2-CP` no cutoff e separa alterações pos
 - Dispositivos, requisitos, efeitos e penas são sintetizados a partir do Código Penal oficial.
 - Não é introduzida jurisprudência como se fosse parte do recorte legal.
 - Quando uma distinção depende apenas da letra da lei, o critério decisivo é explicitado no mesmo bloco.
-- Questões reais ficam no backoffice; a prática do draft é autoral.
+- Questões reais ficam no backoffice; a prática do RC é autoral.
 
 ## Política para NotebookLM
 
-Enquanto o pack estiver em `draft`, não há distribuição canônica no NotebookLM. Em release, a arquitetura prevista continua:
+A arquitetura do release candidate é:
 
 ```text
-fonte estudável → APOSTILA.pdf validado
+fonte estudável → APOSTILA.pdf validado e versionado
 configuração do tutor → METODOLOGIA_NOTEBOOKLM.md na camada nativa da conversa
 backoffice → GitHub/ChatGPT
 ```
+
+`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. Enquanto o binário canônico e o smoke real permanecerem pendentes, o pack continua `release_candidate_incomplete`.
