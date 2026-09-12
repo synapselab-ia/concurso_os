@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 — Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** Gates 1–3 fechados; Gate 4 pendente  
+**Status:** Gates 1–4 fechados; Gate 5 autorizado para `direito-penal`  
 
 ## Objetivo
 
@@ -96,19 +96,35 @@ Sinais permitidos para engenharia da autoria:
 
 A distribuição histórica é descritiva, não preditiva, e não altera o syllabus vigente.
 
+## Gate 4 — matriz fechada
+
+`competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` é o contrato de cobertura/autoria comum de B2.
+
+O fechamento do Gate 4 confirma:
+
+- seis matrizes independentes, uma por SubjectPack;
+- 100% dos recortes do syllabus ligados a `coverage_id` verificável;
+- todas as fontes do Gate 2 associadas às unidades pertinentes;
+- riscos de confusão e sinais de banca convertidos em decisões pedagógicas;
+- drift normativo preso às unidades afetadas;
+- duplicidade oficial das NSCGJ preservada sem correção inferida;
+- requisitos de prática e QA definidos por unidade.
+
+Para `direito-penal`, o contrato de primeira autoria é `DP-01` a `DP-10`.
+
 ## Ordem de produção
 
 1. **concluído** — inventário e versão de todas as fontes de B2;
 2. **concluído** — análise histórica reproduzível de 2021/2023/2024/2025;
-3. construir a matriz de cobertura/autoria dos seis packs;
-4. iniciar autoria por `direito-penal`;
+3. **concluído** — matriz de cobertura/autoria dos seis packs;
+4. **próximo** — iniciar autoria por `direito-penal`;
 5. seguir para `direito-processual-penal`;
 6. `direito-processual-civil`;
 7. `direito-constitucional`;
 8. `direito-administrativo`;
 9. `legislacao-interna`.
 
-Nenhum pack pode começar redação substancial antes do fechamento do Gate 4 comum.
+Cada pack deve usar a matriz como contrato e passar pelo fluxo de autoria/QA do `APOSTILA_AUTHORING_PROTOCOL.md` antes de release.
 
 ## Gates
 
@@ -117,8 +133,8 @@ Nenhum pack pode começar redação substancial antes do fechamento do Gate 4 co
 | 1 — fronteira | `closed` | seis SubjectPacks definidos e decisão registrada |
 | 2 — fontes/versões | `closed` | inventário oficial, cutoff, proveniência e drift normativo fechados em `DIREITO_SOURCES.md` |
 | 3 — banca | `closed` | 150 questões de Direito classificadas em `DIREITO_B2_BANCA_ANALYSIS.md` |
-| 4 — matriz | `pending` | todos os recortes do syllabus mapeados sem lacunas para as seis unidades editoriais |
-| 5 — autorização de redação | `blocked` | depende do Gate 4 |
+| 4 — matriz | `closed` | todos os recortes do syllabus rastreados sem lacunas em `DIREITO_B2_COVERAGE_MATRIX.md` |
+| 5 — autorização de redação | `authorized` | iniciar `direito-penal` por DP-01…DP-10, sem extrapolar syllabus/baseline |
 
 ## Regra de autoridade
 
