@@ -16,13 +16,17 @@ Uma questão curta não é considerada pior por não imitar integralmente a banc
 
 ## Ciclo semanal padrão
 
-Durante a fase regular de preparação:
+Cada competição pode definir um ciclo padrão em `SIMULATION_BLUEPRINT.json`. Esse padrão é **configuração**, não lógica específica por pessoa: um enrollment pode sobrescrevê-lo declarativamente em `CONFIG.json`, sem condicionais do tipo `if participant == ...`, preservando DEC-0008.
+
+Para TJSP Escrevente 2025, durante a fase regular, o padrão é:
 
 - **segunda a sábado:** microquestões (`microdrill`) como padrão de prática;
 - **domingo:** um simulado objetivo completo (`simulation`) com o blueprint vigente da competição;
 - os erros, hesitações e falsos conhecimentos observados no domingo alimentam a priorização dos microdrills da semana seguinte.
 
-O último mês antes da prova pode receber uma política específica de reta final. Este protocolo não inventa essa política: ela deve ser definida por decisão canônica quando a fase for iniciada. Até lá, o ciclo semanal acima é o padrão.
+Se o enrollment não declarar override, herda o padrão da competição.
+
+O último mês antes da prova pode receber uma política específica de reta final. Este protocolo não inventa essa política: ela deve ser definida por decisão canônica quando a fase for iniciada. Até lá, o ciclo semanal herdado/configurado é o padrão.
 
 ## Lane 1 — Microdrill
 
