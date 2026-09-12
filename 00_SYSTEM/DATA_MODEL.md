@@ -1,6 +1,6 @@
 # DATA_MODEL
 
-A V0.1 organiza **materiais, fontes e configuração de estudo**, não um LMS próprio. O modelo principal reflete a stack GitHub + ChatGPT + NotebookLM e separa material do estudante, instrução do tutor e documentação de engenharia editorial.
+A V0.1 organiza **materiais, fontes, configuração de estudo e artefatos de prática**, não um LMS próprio. O modelo principal reflete a stack GitHub + ChatGPT + NotebookLM e separa material do estudante, instrução do tutor, documentação de engenharia editorial e avaliação de transferência.
 
 ## Competition
 
@@ -12,7 +12,7 @@ Unidade pedagógica usada para organizar notebooks e materiais (`portugues`, `di
 
 ## SubjectPack
 
-Unidade canônica de entrega da V0.1, identificada por `competition_id + subject_id + pack_version`.
+Unidade canônica de entrega de conteúdo da V0.1, identificada por `competition_id + subject_id + pack_version`.
 
 Arquivos mínimos:
 
@@ -64,7 +64,7 @@ Arquivos usados por ChatGPT/GitHub para pesquisa, autoria, proveniência e QA. N
 - documentação de arquitetura/QA;
 - registros de provas/fontes que sustentam a autoria.
 
-O backoffice pode influenciar a apostila sem aparecer como conteúdo explícito para o aluno.
+O backoffice pode influenciar a apostila e as questões autorais sem aparecer como conteúdo explícito para o aluno.
 
 ## SourceRecord
 
@@ -76,7 +76,79 @@ Binários-fonte de terceiros não precisam ser republicados no repositório púb
 
 Análise empírica separada do conteúdo didático. Frequências, categorias e padrões só podem ser promovidos a material canônico quando houver método reproduzível e limites da amostra explícitos.
 
-Sua função é orientar autoria/QA. Não é, por padrão, fonte de estudo no NotebookLM.
+Sua função é orientar autoria/QA de apostilas **e** calibrar simulados. Não é, por padrão, fonte de estudo no NotebookLM.
+
+## QuestionItem
+
+Questão autoral reutilizável. O schema canônico é `schemas/question_item.schema.json`.
+
+Cada item declara `mode`:
+
+### `microdrill`
+
+Questão para aquisição, recuperação e aplicação curta.
+
+Pode usar formato curto e não precisa reproduzir a estrutura integral da banca. Deve continuar correta, source-grounded quando aplicável e pedagogicamente útil.
+
+### `simulation`
+
+Questão destinada a simulado de transferência.
+
+Exige formato coerente com o blueprint da prova, fidelidade maior ao estilo da banca e QA semântico específico. Para TJSP Escrevente 2025, questão objetiva de simulation usa cinco alternativas.
+
+Itens podem ser armazenados em lotes:
+
+```text
+question_banks/<competition_id>/<subject_id>/batches/<batch_id>.json
+```
+
+O banco é incremental. Não existe obrigação de pré-gerar grande volume antes de existir uso concreto.
+
+## Simulation
+
+Artefato composto que representa uma aplicação de prova. O schema do manifest é `schemas/simulation.schema.json`.
+
+Tipos previstos:
+
+- `weekly_full_objective` — simulado dominical integral da parte objetiva;
+- `partial_pilot` — piloto parcial usado em desenvolvimento/calibração;
+- `full_dress_rehearsal` — ensaio mais completo, podendo incluir redação e demais condições.
+
+Convenção:
+
+```text
+simulations/<competition_id>/<simulation_id>/
+├── MANIFEST.json
+├── SIMULADO.md
+├── GABARITO.md
+└── QA.md
+```
+
+`SIMULADO.md` e `GABARITO.md` ficam separados para evitar vazamento durante a aplicação.
+
+## SimulationBlueprint
+
+Configuração específica da competição que traduz `BLUEPRINT.json` para a rotina de simulado sem alterar o edital.
+
+Para TJSP Escrevente 2025:
+
+- arquivo: `competitions/tjsp-escrevente-2025/SIMULATION_BLUEPRINT.json`;
+- total objetivo: 70;
+- distribuição deve permanecer coerente com `BLUEPRINT.json`;
+- autoria é original e calibrada pelas provas/análises históricas;
+- redação não faz parte automaticamente do simulado objetivo semanal.
+
+## PracticeCycle
+
+Regra operacional, não entidade de banco.
+
+```text
+segunda–sábado → microdrill
+domingo → weekly_full_objective
+resultado do domingo → prioridade da semana seguinte
+```
+
+O ciclo padrão está em `PRACTICE_PROTOCOL.md`.
 
 ## Participant
 
@@ -87,6 +159,14 @@ Perfil público mínimo (`p001`, `p002`, ...), usado apenas quando a organizaç�
 Resumo opcional vindo do chat do NotebookLM quando houver utilidade longitudinal ou editorial. Pode conter tópicos trabalhados, acertos, erros, dúvidas, padrões de confusão e lacunas do material.
 
 Não exige persistência questão a questão.
+
+## SimulationResult
+
+Resultado individual opcional de uma aplicação.
+
+Pode conter totais, desempenho por bloco, tempo, categorias de erro e prioridades para a semana seguinte. **Não deve ser publicado automaticamente** no repositório público.
+
+A persistência individual continua opcional; o sistema pode usar o resultado apenas na conversa/sessão para orientar o próximo ciclo.
 
 ## Telemetria experimental
 
@@ -99,6 +179,8 @@ fonte de verdade
 != análise da banca
 != material didático
 != instrução do tutor
+!= questão autoral
+!= simulado
 != feedback individual
 ```
 
@@ -112,9 +194,11 @@ arquivo existente no SubjectPack
 E:
 
 ```text
-instrução versionada no GitHub
-!= fonte estudável
+microdrill
+!= simulation
 ```
+
+porque medem e treinam capacidades diferentes.
 
 ## IDs e versões
 
@@ -122,4 +206,6 @@ instrução versionada no GitHub
 - matérias usam slug estável;
 - participantes usam `pNNN`;
 - fontes usam `source_id` estável;
-- SubjectPacks usam versão explícita e changelog.
+- SubjectPacks usam versão explícita e changelog;
+- questões usam `question_id` estável dentro do contexto de autoria;
+- simulados usam `simulation_id` estável e data/aplicação quando necessário.
