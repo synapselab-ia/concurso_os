@@ -1,6 +1,6 @@
 # SOURCES — Direito Penal — TJSP Escrevente 2025
 
-**Pack version:** `0.1.0-draft.1`  
+**Pack version:** `0.1.0-draft.3`  
 **Source verification for this draft:** `2026-09-12`
 
 ## Regra de autoridade
@@ -41,9 +41,9 @@ Provas históricas não substituem o edital nem criam conteúdo programático. E
 - Estado de versão no Gate 2: `cutoff_closed_no_scoped_drift`.
 - Verificação do Gate 2: atos posteriores que alteraram o Código Penal foram auditados contra este recorte e não foi identificada alteração textual direta nos dispositivos exigidos.
 - Observação de fronteira: o art. `338-A`, incluído posteriormente pela Lei n.º 15.280/2025, está fora do recorte do edital e não é absorvido por proximidade numérica.
-- Uso neste pack: única fonte primária para afirmações normativas específicas do conteúdo penal, sem introdução de jurisprudência não prevista na fonte.
+- Uso neste pack: fonte primária para afirmações normativas específicas do conteúdo penal, sem introdução de jurisprudência não prevista na fonte.
 
-A página oficial compilada foi reaberta em `2026-09-12` para a primeira redação. Como o inventário canônico registra ausência de drift pós-cutoff dentro do recorte, o texto atual desses dispositivos pode ser usado para confirmar o baseline sem promover artigos posteriores fora do syllabus.
+A compilação oficial foi reaberta durante `DIREITO-006` e o recorte foi revisado integralmente para o `draft.2`; os dois pontos que bloquearam a prática foram rechecados na passagem final do `draft.3`. O art. 311-A separa expressamente a forma por resultado danoso (§ 2º) do aumento por qualidade funcional (§ 3º). O art. 324 trata de função pública e estados funcionais ali enumerados; o art. 359 trata de função, atividade, direito, autoridade ou múnus suspenso ou privado por decisão judicial. A apostila evita inferir, apenas desses textos, regra jurisprudencial de concurso de normas.
 
 ## Evidência empírica da banca
 
@@ -83,7 +83,7 @@ A página oficial compilada foi reaberta em `2026-09-12` para a primeira redaç�
 
 ### `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`
 
-Gate 3 fechado. Para Penal, registra coexistência de literalidade e casos curtos, comparação de tipos vizinhos, discriminação de requisitos e distractores que trocam objeto, sujeito, modalidade ou finalidade. O draft converte esses sinais em quadros comparativos e mini-casos, sem expor metadiscurso de banca ao estudante.
+Gate 3 fechado. Para Penal, registra coexistência de literalidade e casos curtos, comparação de tipos vizinhos, discriminação de requisitos e distractores que trocam objeto, sujeito, modalidade ou finalidade. O material converte esses sinais em quadros comparativos e mini-casos, sem expor metadiscurso de banca ao estudante.
 
 ### `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`
 
@@ -92,6 +92,10 @@ Gate 4 fechado. `DP-01`…`DP-10` formam o contrato de cobertura, profundidade, 
 ### `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`
 
 Inventário de versão que fecha `SRC-B2-CP` no cutoff e separa alterações posteriores do restante de B2.
+
+### `APOSTILA_QA_0.1.0.md`
+
+`DIREITO-006` fechado no `draft.3`: cobertura integral, revisão normativa, didática, 30/30 questões e estrutura de corpus Markdown aprovadas. O gate determinístico permaneceu não executado por impossibilidade de resolução DNS do runtime; PDF e NotebookLM ainda não foram executados.
 
 ## Política de redação
 
