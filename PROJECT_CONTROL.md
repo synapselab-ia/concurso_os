@@ -4,8 +4,8 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `qa/direito-penal-v0.1`
-- **Last implementation branch:** `content/direito-penal-v0.1-draft`
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `qa/direito-penal-v0.1`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–6 fechados no primeiro pipeline; Direito Penal pronto para preparação de release candidate
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
@@ -24,6 +24,7 @@
 - **B2 banca PR:** `#18`, merged to `main` at `c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008`
 - **B2 coverage PR:** `#19`, merged to `main` at `5784e8bb9d904c677cb655dfbb069146e688b4e3`
 - **Direito Penal draft PR:** `#20`, merged to `main` at `c0208494c1acd343572254d4d8b991d97f6cf8fc`
+- **Direito Penal QA PR:** `#21`, merged to `main` at `d89b7aefd69db3f3fc653807eb98f036755f6f2e`
 - **Gate 2:** `closed` — federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
 - **Gate 3:** `closed` — questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
 - **Gate 4:** `closed` — 100% dos recortes de B2 rastreados a `coverage_id`, fonte, estratégia pedagógica, risco de versão e QA
