@@ -80,6 +80,7 @@ b2_banca_gate:
     2023: 40
     2024: 40
     2025: 30
+  source_integrity: all four local exam PDFs matched SOURCES.json sha256 and byte size
   authority_rule: current syllabus remains controlling; observed distributions are non-predictive
 
 b2_coverage_gate:
@@ -88,6 +89,8 @@ b2_coverage_gate:
   artifact: competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md
   packs: 6
   coverage_result: complete
+  authority_rule: syllabus controls scope; matrix rows are authoring and QA contracts, not new syllabus
+  first_authorized_pack: direito-penal
   first_pack_contract:
     - DP-01
     - DP-02
