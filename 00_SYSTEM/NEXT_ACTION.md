@@ -14,6 +14,7 @@ Estado já comprovado:
 - candidato local preferido para publicação: `17` páginas A4, `30.167` bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob local esperado `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
 - o candidato preferido passou readback textual e inspeção visual de `17/17` páginas a 150 dpi, sem clipping, sobreposição, glifos quebrados, quebra impeditiva de tabela ou mistura entre questões e gabarito;
 - tentativas de transferência binária pelo conector GitHub produziram blobs remotos diferentes do Git blob local esperado. Nenhum blob divergente foi anexado à árvore ou à branch;
+- PR `#23` registrou esse estado e foi mergeada em `main` no commit `737dc881f3eb91fed461d918bd026b86ce6bb210`;
 - o probe de rede local continua falhando em resolver `github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
 
 O pack ainda não é release. O PDF auditado continua local, o smoke real do NotebookLM não foi executado e o gate determinístico continua pendente.
@@ -38,7 +39,7 @@ Se surgir erro material no conteúdo jurídico, voltar o estado para draft, corr
 
 ## 2. Publicar `APOSTILA.pdf` com integridade exata
 
-A branch operacional é `release/direito-penal-0.1.0-rc.1-pdf`.
+O estado canônico está em `main`. A última branch de implementação foi `release/direito-penal-0.1.0-rc.1-pdf`; ao retomar implementação, confirmar que ela continua alinhada à `main` ou criar nova branch a partir do HEAD canônico.
 
 O repositório ainda não contém `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`.
 
