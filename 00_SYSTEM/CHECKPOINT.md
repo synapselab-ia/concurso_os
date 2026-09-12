@@ -3,10 +3,10 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: research/direito-b2-gate2-state-tjsp
 base_branch: main
 last_implementation_branch: research/direito-b2-gate2-federal
-current_task: close remaining B2 Gate 2 state and TJSP sources after completing the federal source audit
+current_task: start B2 Gate 3 by classifying Direito questions from the 2021, 2023, 2024 and 2025 TJSP/VUNESP exams reproducibly
 current_pack: none_in_progress
 last_released_pack: portugues 2.0.0
 completed:
@@ -21,51 +21,43 @@ completed:
   - Portuguese 2.0.0 authoring matrix closed with B1.1-B1.13 covered
   - Portuguese 2.0.0 APOSTILA.md reconstructed across 9 pedagogical units
   - 30 original A-E practice questions added with commented answer key
-  - Portuguese QA-1 through QA-6 passed
-  - Portuguese QA-7 static passed
-  - Portuguese QA-8 passed
-  - corrupt/truncated PDF upload detected and rejected by GitHub readback
-  - final compact Portuguese 2.0.0 PDF generated, validated and published byte-identical
-  - Portuguese QA-9 PDF publication gate passed
-  - NotebookLM first live chat smoke findings recorded and methodology hardened to rc2
-  - configured-chat rc2 retest passed
-  - NotebookLM native Teste passed
-  - NotebookLM Cartões passed
-  - NotebookLM Mapa mental passed
-  - Portuguese QA-7 live passed completely
-  - METODOLOGIA_NOTEBOOKLM promoted to 2.0.0 final
-  - Portuguese 2.0.0 manifest/changelog/QA promoted to final release
-  - PR 12 reviewed, marked ready and merged under DEC-0009
+  - Portuguese QA-1 through QA-9 passed, including live NotebookLM and final PDF publication
   - Portuguese 2.0.0 release merged to main at e6ce9d2571e9c68a8947701c08187c07e986d567
   - B2 Gate 1 closed under DEC-0019
   - B2 editorial boundary defined as six SubjectPacks: direito-penal, direito-processual-penal, direito-processual-civil, direito-constitucional, direito-administrativo and legislacao-interna
   - exact Normas da Corregedoria recuts from the edital recorded in SYLLABUS.md
   - duplicate Capitulo XI reference in the edital preserved as an official-source anomaly instead of being silently corrected
   - DIREITO_B2_AUTHORING_PLAN.md created with gate order and production boundary
-  - DIREITO_SOURCES.md started with official federal, state and TJSP provenance and version-drift status
-  - PR 13 reviewed and merged under DEC-0009
-  - B2 Gate 1 preparation merged to main at 540765b17e224a319b90a4e9da5272dd4db0684e
-  - B2 Gate 2 federal source audit closed against official Planalto compilations and post-cutoff law indexes
-  - Codigo Penal closed with no post-cutoff textual drift inside the syllabus recut; art. 338-A added by Lei 15.280/2025 is outside the recut
-  - CPP post-cutoff drift mapped: Lei 15.358/2026 altered art. 584 paragraph 4 inside the 574-667 recut
-  - Lei 9.099/1995 closed with no direct 2025/2026 textual drift identified
-  - CPC post-cutoff drift mapped: Lei 15.484/2026 altered art. 998 in force; Lei 15.479/2026 altered art. 196 and added art. 529-A with one-year vacatio
-  - Lei 12.153/2009 closed with no direct 2025/2026 textual drift identified
-  - Constituicao post-cutoff drift mapped: EC 138/2025 altered art. 37 XVI b inside the syllabus recut; EC 136, 137 and 139 do not hit the recut
-  - Lei 8.429/1992 closed with no effective post-cutoff textual drift; proposed change in Lei 15.269/2025 was vetoed in art. 18
-  - PR 14 reviewed and merged under DEC-0009
-  - B2 Gate 2 federal source audit merged to main at 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
+  - PR 13 B2 Gate 1 preparation merged to main at 540765b17e224a319b90a4e9da5272dd4db0684e
+  - B2 Gate 2 federal source audit closed and merged through PR 14 at 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
+  - Codigo Penal closed with no post-cutoff textual drift inside the syllabus recut
+  - CPP post-cutoff drift mapped at art. 584 paragraph 4 by Lei 15.358/2026
+  - Lei 9.099/1995 closed with no direct post-cutoff textual drift identified in the scoped recuts
+  - CPC post-cutoff drift mapped at arts. 196, 529-A and 998 with vigency controlled
+  - Lei 12.153/2009 closed with no direct post-cutoff textual drift identified
+  - Constituicao post-cutoff drift mapped at art. 37 XVI b by EC 138/2025
+  - Lei 8.429/1992 closed with no effective post-cutoff textual drift from Lei 15.269/2025 because the proposed provision was vetoed
+  - B2 Gate 2 state and TJSP source audit closed on current branch
+  - Lei Estadual 10.261/1968 cutoff reconstructed; scoped post-cutoff drift mapped at art. 78 by Lei 18.473/2026; LC 1.437/2025 affects arts. 176-179 outside the syllabus recut
+  - LC Estadual 1.111/2010 cutoff reconstructed with 16/07/2025 staffing acts included; post-cutoff Lei 18.373/2025 and LC 1.441/2026 mapped
+  - Resolucao TJSP 850/2021 baseline closed using official compilation through Resolucao 864/2022; no later direct textual amendment located
+  - Resolucao TJSP 963/2025 baseline closed at DJE 29/05/2025; no direct textual amendment located; later eproc complements tracked separately
+  - Regimento Interno TJSP cutoff reconstructed from official annotated consolidation: Assento 591/2025 included and Assentos 592-596 excluded
+  - NSCGJ Tomo I cutoff reconstructed from official historical-text PDF; post-cutoff drift mapped in literal Capitulo XI by Provimentos CG 30/2025 and 04/2026
+  - duplicate Capitulo XI remains documented as unresolved official ambiguity; second literal recut subsumes the first without correcting the edital
+  - DIREITO_SOURCES.md promoted to status closed
+  - DIREITO_B2_AUTHORING_PLAN.md Gate 2 promoted to closed
 b2_source_gate:
-  status: in_progress
+  status: closed
   edital_cutoff: 2025-07-29
+  verified_at: 2026-09-11
   inventory: competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md
   federal_subgate:
     status: closed
-    verified_at: 2026-09-11
     drift_mapped:
       - CPP art. 584 paragraph 4 by Lei 15.358/2026
       - CPC art. 998 by Lei 15.484/2026
-      - CPC art. 196 and art. 529-A by Lei 15.479/2026, not yet in force on 2026-09-11
+      - CPC art. 196 and art. 529-A by Lei 15.479/2026 with one-year vacatio
       - CF art. 37 XVI b by EC 138/2025
     no_scoped_textual_drift:
       - Codigo Penal
@@ -73,24 +65,33 @@ b2_source_gate:
       - Lei 12.153/2009
       - Lei 8.429/1992
   state_tjsp_subgate:
-    status: in_progress
-    drift_confirmed:
-      - Lei Estadual 10.261/1968 current ALESP compilation contains post-cutoff changes
-      - LC Estadual 1.111/2010 current ALESP compilation contains post-cutoff changes
-      - current Regimento Interno TJSP PDF is updated after the cutoff
-      - current NSCGJ Tomo I is updated after the cutoff
-    candidate_closed_pending_final_history_check:
-      - Resolucao TJSP 850/2021
+    status: closed
+    drift_mapped:
+      - Lei Estadual 10.261/1968 art. 78 by Lei 18.473/2026
+      - LC Estadual 1.111/2010 by Lei 18.373/2025 and LC 1.441/2026
+      - Regimento Interno by Assento 592/2025 and Assentos 593-596/2026
+      - NSCGJ literal Capitulo XI by Provimentos CG 30/2025 and 04/2026
+    no_direct_textual_drift_located:
+      - Resolucao TJSP 850/2021 after Resolucao 864/2022 compilation
       - Resolucao TJSP 963/2025
-    pending:
-      - reconstruct Lei Estadual 10.261/1968 scoped snapshot at 2025-07-29 and map post-cutoff changes
-      - reconstruct LC Estadual 1.111/2010 snapshot at 2025-07-29 and map post-cutoff changes
-      - confirm amendment history for Resolucoes 850/2021 and 963/2025
-      - locate or validate Regimento Interno TJSP version applicable at 2025-07-29
-      - locate or validate NSCGJ Tomo I version applicable at 2025-07-29
-      - preserve unresolved duplicate Capitulo XI unless an official source resolves it
+    official_ambiguity:
+      - edital repeats Tomo I Capitulo XI in the final two NSCGJ recuts; preserved without inferred correction
+next_gate:
+  id: DIREITO-003
+  name: historical_banca_analysis
+  sources:
+    - SRC-TJSP-PROVA-2021
+    - SRC-TJSP-PROVA-2023
+    - SRC-TJSP-PROVA-2024
+    - SRC-TJSP-PROVA-2025
+  required_fields_per_question:
+    - domain
+    - source_or_institute
+    - cognitive_operation
+    - literalness_vs_application
+    - distractor_pattern
+    - relevant_legal_contrast
 not_started:
-  - close B2 Gate 2 source/version inventory
   - complete Gate 3 reproducible classification of Direito questions from 2021/2023/2024/2025
   - create Gate 4 coverage/authoring matrices for the six B2 SubjectPacks
   - authorize Gate 5 drafting
@@ -117,7 +118,7 @@ ci: disabled
 last_subject_pack_pull_request: 12
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 14
-merge_status: b2_gate2_federal_merged_state_tjsp_in_progress
+merge_status: b2_gate2_state_tjsp_closure_in_progress_branch
 last_b2_source_merge_commit: 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
 last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
 last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
