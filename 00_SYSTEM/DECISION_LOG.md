@@ -153,13 +153,15 @@ O edital contém uma anomalia literal no recorte das Normas da Corregedoria: ap�
 **Status:** accepted  
 A prática passa a separar explicitamente aquisição/recuperação de transferência para a prova.
 
-Durante a fase regular:
+Para `tjsp-escrevente-2025`, a cadência abaixo é o **default da competição**, não uma regra rígida por identidade. Cada `Enrollment` pode herdar esse default ou sobrescrevê-lo declarativamente em `CONFIG.json`; não se implementa comportamento com `if participant == ...`, preservando DEC-0008.
+
+Durante a fase regular do default TJSP:
 
 - segunda a sábado usam `microdrill` como padrão: questões curtas, alta repetição, feedback rápido e foco em uma habilidade ou distinção por vez;
 - domingo usa `weekly_full_objective`: simulado autoral completo conforme o blueprint objetivo vigente;
 - erros, hesitações, chutes e erros com alta confiança do domingo alimentam a prioridade dos microdrills da semana seguinte.
 
-Para `tjsp-escrevente-2025`, o simulado dominical possui **70 questões objetivas** com a distribuição canônica de `BLUEPRINT.json`: 16 Português, 30 Conhecimentos em Direito e 24 Conhecimentos Gerais, estes divididos em 4 Atualidades/PCD, 4 Matemática, 9 Informática e 7 Raciocínio Lógico. A redação continua sendo risco eliminatório separado e não entra automaticamente no simulado objetivo semanal.
+O simulado dominical TJSP possui **70 questões objetivas** com a distribuição canônica de `BLUEPRINT.json`: 16 Português, 30 Conhecimentos em Direito e 24 Conhecimentos Gerais, estes divididos em 4 Atualidades/PCD, 4 Matemática, 9 Informática e 7 Raciocínio Lógico. A redação continua sendo risco eliminatório separado e não entra automaticamente no simulado objetivo semanal.
 
 Consequências arquiteturais:
 
