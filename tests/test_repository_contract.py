@@ -41,6 +41,50 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertEqual(0.5, blocks["B2"]["minimum_correct_fraction"])
         self.assertFalse(blocks["B3"]["eliminatory"])
 
+    def test_tjsp_weekly_simulation_matches_objective_blueprint(self):
+        blueprint = json.loads(
+            (ROOT / "competitions/tjsp-escrevente-2025/BLUEPRINT.json").read_text(encoding="utf-8")
+        )
+        simulation = json.loads(
+            (
+                ROOT
+                / "competitions/tjsp-escrevente-2025/SIMULATION_BLUEPRINT.json"
+            ).read_text(encoding="utf-8")
+        )
+
+        objective = blueprint["objective"]
+        weekly = simulation["weekly_full_objective"]
+
+        self.assertEqual(objective["questions"], weekly["questions"])
+        self.assertEqual(objective["alternatives_per_question"], weekly["alternatives_per_question"])
+        self.assertEqual(70, sum(section["questions"] for section in weekly["sections"]))
+
+        objective_blocks = {block["block_id"]: block for block in objective["blocks"]}
+        simulation_blocks = {block["block_id"]: block for block in weekly["sections"]}
+        self.assertEqual(set(objective_blocks), set(simulation_blocks))
+
+        for block_id, expected in objective_blocks.items():
+            actual = simulation_blocks[block_id]
+            self.assertEqual(expected["questions"], actual["questions"])
+            expected_subjects = {
+                subject["subject_id"]: subject["questions"]
+                for subject in expected["subjects"]
+            }
+            actual_subjects = {
+                subject["subject_id"]: subject["questions"]
+                for subject in actual["subjects"]
+            }
+            self.assertEqual(expected_subjects, actual_subjects)
+
+        self.assertEqual(
+            "microdrill",
+            simulation["weekly_cycle"]["regular_phase"]["monday_to_saturday"],
+        )
+        self.assertEqual(
+            "weekly_full_objective",
+            simulation["weekly_cycle"]["regular_phase"]["sunday"],
+        )
+
     def test_p001_tjsp_enrollment_is_consistent(self):
         config = json.loads(
             (
