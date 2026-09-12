@@ -21,6 +21,8 @@ Antes de qualquer alteração, confirme no GitHub a branch real, PRs abertos e o
 
 - continuidade entre chats/agentes: `CONTINUITY_PROTOCOL.md`
 - autoria/reconstrução de apostilas: `APOSTILA_AUTHORING_PROTOCOL.md`
+- prática semanal e separação aquisição/transferência: `PRACTICE_PROTOCOL.md`
+- simulados autorais de alta fidelidade: `SIMULATION_PROTOCOL.md`
 - estudo: `STUDY_PROTOCOL.md`
 - avaliação: `ASSESSMENT_PROTOCOL.md`
 - domínio: `MASTERY_PROTOCOL.md`
@@ -30,3 +32,5 @@ Antes de qualquer alteração, confirme no GitHub a branch real, PRs abertos e o
 - decisões arquiteturais: `DECISION_LOG.md`
 
 Ao criar ou reconstruir substancialmente uma `APOSTILA.md`/`APOSTILA.pdf`, ler `APOSTILA_AUTHORING_PROTOCOL.md` **antes de começar a redação**.
+
+Ao criar microquestões em escala ou qualquer simulado que pretenda medir prontidão para a prova, ler `PRACTICE_PROTOCOL.md` e, para simulados, `SIMULATION_PROTOCOL.md` antes da autoria.
