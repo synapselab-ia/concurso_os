@@ -1,133 +1,104 @@
 # NEXT_ACTION
 
-## DIREITO-003 — Classificar de forma reproduzível as questões históricas de Direito
+## DIREITO-004 — Construir as seis matrizes de cobertura/autoria de B2
 
-Os Gates 1 e 2 de B2 estão fechados. A fronteira editorial está definida em seis SubjectPacks e todas as fontes normativas possuem baseline reconciliado com o cutoff do edital de `2025-07-29`, com drift posterior separado em `DIREITO_SOURCES.md`.
+Os Gates 1, 2 e 3 estão fechados. A fronteira editorial, o baseline normativo e a análise histórica reproduzível da banca já existem.
 
-**Não iniciar a redação de nenhuma apostila.** O próximo gate é empírico: analisar as questões reais de Direito das provas TJSP/VUNESP de 2021, 2023, 2024 e 2025 antes de construir as matrizes de autoria.
+**Ainda não iniciar a redação substancial das apostilas.** O último gate comum antes da autoria é garantir que todo o syllabus vigente esteja mapeado, sem lacunas, para uma estratégia de ensino e QA em cada um dos seis SubjectPacks.
 
-## Autoridade e limite
+## Evidência obrigatória
 
-- o edital vigente continua definindo escopo e prevalece sobre as provas históricas, conforme DEC-0010;
-- a prova de 2025 é a referência empírica mais próxima para forma e nível;
-- 2024, 2023 e 2021 são histórico útil para identificar operações cognitivas, distinções e distractores;
-- frequências históricas **não** criam conteúdo programático novo nem autorizam excluir item do syllabus;
-- a análise é backoffice e não deve ser copiada como metadiscurso para a futura apostila.
+Usar conjuntamente:
 
-## Fontes canônicas do Gate 3
+- `competitions/tjsp-escrevente-2025/SYLLABUS.md` — autoridade de escopo;
+- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — baseline, proveniência e drift;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — forma de cobrança e sinais editoriais;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md` — fronteiras dos seis packs;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` — contrato de autoria.
 
-Usar os registros existentes em `competitions/tjsp-escrevente-2025/SOURCES.json`:
-
-- `SRC-TJSP-PROVA-2025`;
-- `SRC-TJSP-PROVA-2024`;
-- `SRC-TJSP-PROVA-2023`;
-- `SRC-TJSP-PROVA-2021`.
-
-Os binários permanecem fora do repositório público conforme DEC-0011.
+Histórico da banca calibra profundidade e apresentação, mas não pode eliminar ou adicionar conteúdo do edital.
 
 ## Artefato esperado
 
 Criar:
 
-`competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`
+`competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`
 
-O arquivo deve conter método, classificação por questão, síntese por domínio e implicações editoriais limitadas pela amostra.
+O arquivo deve conter uma matriz independente para cada SubjectPack:
 
-## Unidade de análise
+1. `direito-penal`;
+2. `direito-processual-penal`;
+3. `direito-processual-civil`;
+4. `direito-constitucional`;
+5. `direito-administrativo`;
+6. `legislacao-interna`.
 
-Classificar **cada questão de Direito** das quatro provas. Não inferir o gabarito ou o dispositivo sem evidência suficiente; quando a identificação for incerta, registrar a incerteza.
+## Campos mínimos por unidade de cobertura
 
-Campos mínimos por questão:
+Cada linha deve registrar, no mínimo:
 
-| Campo | Conteúdo |
-|---|---|
-| `year_question` | ano + número da questão |
-| `domain` | Penal, Processual Penal, Processual Civil, Constitucional, Administrativo ou Legislação Interna |
-| `source_or_institute` | diploma, dispositivo ou instituto principal |
-| `task_form` | assertiva direta, caso hipotético, escolha da alternativa correta/incorreta, comparação etc. |
-| `cognitive_operation` | recordar literalidade, distinguir requisitos, aplicar norma ao caso, identificar exceção, combinar dispositivos etc. |
-| `literalness` | alta, média ou baixa, com critério explícito |
-| `distractor_pattern` | troca de sujeito, prazo, requisito, modalidade, consequência, competência, exceção, generalização, instituto próximo etc. |
-| `legal_contrast` | distinção jurídica decisiva, quando houver |
-| `editorial_signal` | o que a futura apostila precisa tornar explícito por causa desse tipo de cobrança |
+- `coverage_id` estável;
+- pack;
+- fonte/source_id;
+- recorte normativo exato;
+- instituto/tema;
+- objetivo de aprendizagem;
+- forma pedagógica principal (`exposição`, `quadro comparativo`, `fluxo`, `tabela`, `mini-caso`, `linha do tempo`, combinação);
+- contraste/risco de confusão;
+- evidência de banca relevante, quando existir;
+- risco de versão/drift, quando existir;
+- requisito de prática/QA.
 
-## Taxonomia mínima reproduzível
+## Regras de granularidade
 
-### Literalidade
+A matriz não precisa ter uma linha por artigo. Deve agrupar dispositivos apenas quando formarem uma unidade jurídica coerente e verificável.
 
-- `alta` — a solução depende predominantemente de reconhecer texto/requisito legal específico;
-- `média` — exige texto legal + distinção ou pequena aplicação;
-- `baixa` — exige aplicação sistemática, encadeamento procedimental ou comparação mais ampla.
+É proibido usar grupos tão amplos que ocultem partes do edital. Todo artigo, intervalo, diploma integral ou recorte interno listado no syllabus deve poder ser rastreado a pelo menos um `coverage_id`.
 
-### Operação cognitiva
+Quando um intervalo contiver institutos muito diferentes, subdividi-lo. Quando vários artigos contíguos compuserem um único procedimento ou instituto, podem ficar juntos.
 
-Usar uma ou mais categorias controladas:
+## Sinais editoriais obrigatórios do Gate 3
 
-- `literal_recall`;
-- `requirement_discrimination`;
-- `exception_identification`;
-- `case_application`;
-- `procedure_sequence`;
-- `competence_or_deadline`;
-- `institute_comparison`;
-- `legal_consequence`.
+Sem alterar o conteúdo programático, incorporar na matriz:
 
-### Distractor
+- Penal: elementos típicos + tipos vizinhos + mini-casos;
+- Processual Penal: fluxos, decisões, recursos, prazos e sujeitos;
+- Processual Civil: regra/exceção, competência, efeitos, JEC/JEFaz e mini-casos;
+- Constitucional: regra/exceção, pares conceituais, nacionalidade e servidores;
+- Administrativo: hipótese→requisito→efeito, linhas do tempo disciplinares e modalidade→sanção;
+- Legislação Interna: tabelas operacionais, sujeitos, condições, prazos e controle de versão.
 
-Usar categorias controladas sempre que aplicáveis:
+## Controle de versão obrigatório
 
-- `subject_swap`;
-- `object_swap`;
-- `requirement_swap`;
-- `deadline_swap`;
-- `competence_swap`;
-- `action_or_remedy_swap`;
-- `culpability_or_modality_swap`;
-- `damage_or_result_requirement`;
-- `exception_inversion`;
-- `overgeneralization`;
-- `neighboring_institute`;
-- `partial_truth`.
+A matriz deve carregar explicitamente os pontos de drift já fechados no Gate 2, sem substituí-los por texto atual:
 
-Novas categorias só devem ser criadas se a amostra exigir, com definição no próprio artefato.
+- CPP art. 584, § 4º;
+- CPC arts. 196, 529-A e 998;
+- CF art. 37, XVI, `b`;
+- Lei SP 10.261/1968 art. 78;
+- LC SP 1.111/2010 — alterações posteriores já mapeadas;
+- RITJSP — baseline até Assento 591/2025;
+- NSCGJ — baseline do cutoff e alterações posteriores mapeadas;
+- duplicidade literal de `Capítulo XI` no edital continua sem correção inferida.
 
-## Síntese obrigatória
+## Critério de fechamento do Gate 4
 
-Depois da tabela por questão, consolidar sem overfitting:
+Marcar `closed` somente quando:
 
-1. quantidade observada por domínio e por ano;
-2. operações cognitivas recorrentes;
-3. grau de literalidade observado;
-4. padrões de distractor;
-5. pares de institutos/regras que a banca aproxima;
-6. sinais editoriais para profundidade, exemplos, tabelas comparativas e casos-limite;
-7. limites da amostra e mudanças de blueprint entre os anos.
+- os seis packs tiverem matriz própria;
+- 100% dos recortes do syllabus estiverem cobertos;
+- toda fonte estiver ligada a `coverage_id` verificável;
+- não houver artigo/faixa/diploma interno órfão;
+- riscos de confusão e sinais editoriais estiverem registrados;
+- drift relevante estiver associado às unidades afetadas;
+- a duplicidade oficial das NSCGJ estiver preservada sem falsa resolução;
+- a matriz puder servir diretamente de contrato para a redação e para QA de cobertura.
 
-Não transformar contagem observada em probabilidade futura.
+## Depois do Gate 4 — DIREITO-005
 
-## Critério de fechamento do Gate 3
+Com Gates 1–4 fechados, autorizar a redação do primeiro SubjectPack: `direito-penal`.
 
-Marcar Gate 3 como `closed` somente quando:
-
-- todas as questões jurídicas das quatro provas estiverem classificadas;
-- a taxonomia usada estiver definida no arquivo;
-- cada classificação puder ser rastreada até questão/ano;
-- a síntese distinguir dado observado de interpretação editorial;
-- nenhum resultado histórico tiver sobrescrito o syllabus vigente;
-- inconsistências ou dúvidas de classificação estiverem explicitadas.
-
-## Depois do Gate 3 — DIREITO-004
-
-Construir uma matriz de cobertura/autoria para cada um dos seis SubjectPacks, conforme `APOSTILA_AUTHORING_PROTOCOL.md`, usando conjuntamente:
-
-```text
-syllabus vigente
-+ DIREITO_SOURCES.md
-+ DIREITO_B2_BANCA_ANALYSIS.md
-+ complexidade e risco de confusão
-```
-
-Só depois das seis matrizes sem lacunas o Gate 5 poderá autorizar redação substancial.
+A primeira implementação de autoria deverá usar a matriz como contrato: nenhuma unidade fora do syllabus, nenhuma unidade do syllabus omitida, e engenharia de banca aplicada silenciosamente.
 
 ## Gate canônico
 
@@ -137,4 +108,4 @@ Antes de encerrar a implementação:
 python tools/verify.py
 ```
 
-Neste runtime, a tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` em `2026-09-11` falhou com `Could not resolve host: github.com`. Se a condição persistir, registrar a impossibilidade; não tratá-la como `PASS`, conforme DEC-0009.
+A tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` em `2026-09-12` continuou falhando com `Could not resolve host: github.com`. Se persistir, documentar a impossibilidade conforme DEC-0009; não tratar como `PASS`.
