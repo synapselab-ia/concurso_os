@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: research/direito-b2-gate2-federal
+branch: main
 base_branch: main
-last_implementation_branch: content/direito-b2-authoring-prep
+last_implementation_branch: research/direito-b2-gate2-federal
 current_task: close remaining B2 Gate 2 state and TJSP sources after completing the federal source audit
 current_pack: none_in_progress
 last_released_pack: portugues 2.0.0
@@ -53,6 +53,8 @@ completed:
   - Lei 12.153/2009 closed with no direct 2025/2026 textual drift identified
   - Constituicao post-cutoff drift mapped: EC 138/2025 altered art. 37 XVI b inside the syllabus recut; EC 136, 137 and 139 do not hit the recut
   - Lei 8.429/1992 closed with no effective post-cutoff textual drift; proposed change in Lei 15.269/2025 was vetoed in art. 18
+  - PR 14 reviewed and merged under DEC-0009
+  - B2 Gate 2 federal source audit merged to main at 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
 b2_source_gate:
   status: in_progress
   edital_cutoff: 2025-07-29
@@ -114,7 +116,9 @@ validation:
 ci: disabled
 last_subject_pack_pull_request: 12
 last_b2_preparation_pull_request: 13
-merge_status: b2_gate2_federal_audit_in_progress_branch
+last_b2_source_pull_request: 14
+merge_status: b2_gate2_federal_merged_state_tjsp_in_progress
+last_b2_source_merge_commit: 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
 last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
 last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
 ```
