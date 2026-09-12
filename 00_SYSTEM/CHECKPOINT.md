@@ -35,7 +35,8 @@ completed:
   - Portuguese QA-7 live passed completely
   - METODOLOGIA_NOTEBOOKLM promoted to 2.0.0 final
   - Portuguese 2.0.0 manifest/changelog/QA promoted to final release
-  - PR 12 validated for merge
+  - PR 12 reviewed, marked ready and merged under DEC-0009
+  - Portuguese 2.0.0 release merged to main at e6ce9d2571e9c68a8947701c08187c07e986d567
 next_subject_evidence:
   syllabus_block: B2
   name: Conhecimentos em Direito
@@ -74,5 +75,6 @@ validation:
     policy: impossibility documented under DEC-0009; not treated as pass
 ci: disabled
 last_subject_pack_pull_request: 12
-merge_status: portuguese_2_0_0_validated_for_merge
+merge_status: portuguese_2_0_0_merged
+merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
 ```
