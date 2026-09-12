@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 — Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** Gates 1–4 fechados; Gate 5 com primeiro draft de `direito-penal` implementado e QA pendente  
+**Status:** Gates 1–6 fechados para o primeiro pipeline; `direito-penal` autorizado a preparar release candidate  
 
 ## Objetivo
 
@@ -116,28 +116,41 @@ Para `direito-penal`, o contrato de primeira autoria é `DP-01` a `DP-10`.
 
 ## Gate 5 — primeira implementação de `direito-penal`
 
-A branch `content/direito-penal-v0.1-draft` estabeleceu o workspace `materials/tjsp-escrevente-2025/direito-penal/` com:
+A branch `content/direito-penal-v0.1-draft` estabeleceu o workspace `materials/tjsp-escrevente-2025/direito-penal/` com `APOSTILA.md`, `SOURCES.md`, `MANIFEST.md` e `CHANGELOG.md`. O `0.1.0-draft.1` cobriu DP-01…DP-10, incluiu contrastes, mini-casos e 30 questões autorais A–E, e foi mergeado através do PR 20.
 
-- `APOSTILA.md` — `0.1.0-draft.1`, primeira passagem completa de DP-01…DP-10;
-- `SOURCES.md` — edital, `SRC-B2-CP`, baseline e corpus empírico;
-- `MANIFEST.md` — identidade, cobertura e estado do draft;
-- `CHANGELOG.md` — histórico inicial.
+## Gate 6 — QA do primeiro pack
 
-A primeira passagem inclui quadros comparativos, mini-casos e 30 questões autorais A–E com gabarito comentado separado. Foi feita conferência preliminar das regras centrais contra a fonte oficial do Código Penal, mas isso **não** substitui o QA normativo completo.
+A branch `qa/direito-penal-v0.1` executou a revisão semântica prevista em `DIREITO-006` e produziu `0.1.0-draft.3`.
 
-Não há `APOSTILA.pdf` nem release. O estado correto do pack é `draft`; o próximo gate é a revisão editorial/normativa específica.
+Resultado registrado em `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md`:
+
+- cobertura DP-01…DP-10: `pass`;
+- revisão normativa completa contra `SRC-B2-CP`: `pass_after_corrections`;
+- didática e contrastes: `pass`;
+- 30 questões autorais: `pass` — 30/30;
+- requisitos `Q-LIT`, `Q-CMP` e `Q-CAS`: `pass`;
+- corpus Markdown: `pass_for_markdown`;
+- coerência com banca sem overfitting: `pass`;
+- gate determinístico: `not_executed_current_environment`, por falha de DNS para `github.com` — não tratado como PASS;
+- PDF e NotebookLM: ainda não executados.
+
+O QA corrigiu as duas pendências finais da prática: Q12 passou a isolar o art. 311-A, § 2º; Q29 passou a isolar o art. 359 por meio de atividade privada suspensa judicialmente, com contraste explícito `art. 324 x art. 359` no corpo.
+
+O fechamento do Gate 6 autoriza **preparação de release candidate**. Não autoriza release final nem presume QA de PDF/NotebookLM.
 
 ## Ordem de produção
 
 1. **concluído** — inventário e versão de todas as fontes de B2;
 2. **concluído** — análise histórica reproduzível de 2021/2023/2024/2025;
 3. **concluído** — matriz de cobertura/autoria dos seis packs;
-4. **draft implementado; QA pendente** — `direito-penal`;
-5. após validar o primeiro pipeline jurídico, seguir para `direito-processual-penal`;
-6. `direito-processual-civil`;
-7. `direito-constitucional`;
-8. `direito-administrativo`;
-9. `legislacao-interna`.
+4. **concluído como draft** — primeira implementação de `direito-penal`;
+5. **concluído** — QA editorial/normativo do Markdown de `direito-penal`;
+6. **próximo** — preparar release candidate, PDF e QA NotebookLM de `direito-penal`;
+7. após validar o primeiro pipeline jurídico completo, seguir para `direito-processual-penal`;
+8. `direito-processual-civil`;
+9. `direito-constitucional`;
+10. `direito-administrativo`;
+11. `legislacao-interna`.
 
 Cada pack deve usar a matriz como contrato e passar pelo fluxo de autoria/QA do `APOSTILA_AUTHORING_PROTOCOL.md` antes de release.
 
@@ -149,8 +162,9 @@ Cada pack deve usar a matriz como contrato e passar pelo fluxo de autoria/QA do 
 | 2 — fontes/versões | `closed` | inventário oficial, cutoff, proveniência e drift normativo fechados em `DIREITO_SOURCES.md` |
 | 3 — banca | `closed` | 150 questões de Direito classificadas em `DIREITO_B2_BANCA_ANALYSIS.md` |
 | 4 — matriz | `closed` | todos os recortes do syllabus rastreados sem lacunas em `DIREITO_B2_COVERAGE_MATRIX.md` |
-| 5 — primeira implementação | `draft_implemented` | workspace e primeira passagem DP-01…DP-10 criados; não é release |
-| 6 — QA do primeiro pack | `pending` | cobertura, exatidão normativa, didática, distinções, prática e corpus aprovados antes de PDF/release |
+| 5 — primeira implementação | `closed_as_draft` | workspace e primeira passagem DP-01…DP-10 criados e mergeados |
+| 6 — QA do primeiro pack | `closed` | conteúdo, norma, didática, prática e corpus Markdown aprovados; gate determinístico documentado como não executável neste runtime |
+| 7 — release candidate | `pending` | metodologia/configuração do tutor, PDF e QA NotebookLM/PDF antes de release |
 
 ## Regra de autoridade
 
