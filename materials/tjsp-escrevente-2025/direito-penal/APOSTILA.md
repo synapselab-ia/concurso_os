@@ -1,767 +1,846 @@
 # Direito Penal — TJSP Escrevente 2025
 
-**Versão:** `0.1.0-draft.1`  
-**Status:** draft para QA  
+**Versão:** `0.1.0-draft.3`  
+**Status:** draft com QA editorial/normativo concluído; release ainda depende dos gates de release candidate, PDF e NotebookLM  
 **Base normativa:** Código Penal, recorte vigente em `2025-07-29`
 
 ## Como usar esta apostila
 
-O objetivo aqui é aprender a reconhecer **qual tipo penal se encaixa no fato**. Em quase todos os blocos, a diferença entre alternativas plausíveis está em um elemento pequeno: quem pratica, qual é o objeto, qual verbo foi realizado, qual finalidade específica aparece ou qual consequência a lei associa à conduta.
-
-Use sempre esta sequência mental:
+O recorte de Direito Penal desta prova é relativamente pequeno, mas contém muitos **tipos próximos**. A melhor forma de estudar não é decorar apenas o nome do crime. Em cada fato, procure uma sequência de elementos:
 
 ```text
-1. Quem pode praticar?
-2. Qual é o verbo da conduta?
-3. Sobre qual objeto/pessoa recai a conduta?
-4. Há finalidade ou condição especial?
-5. Existe forma equiparada, majorante, causa de diminuição ou subsidiariedade?
-6. Qual tipo próximo precisa ser descartado?
+1. sujeito: quem pratica e se existe qualidade funcional;
+2. verbo: falsificar, usar, exigir, solicitar, oferecer, omitir, destruir etc.;
+3. objeto: papel, documento, identidade, dado, sistema, vantagem, ordem, processo etc.;
+4. finalidade ou condição especial;
+5. consequência, forma equiparada, qualificadora, majorante ou regra subsidiária;
+6. tipo vizinho que deve ser descartado.
 ```
 
-O recorte oficial desta apostila é: `arts. 293–305; 307; 308; 311-A; 312–317; 319–333; 336; 337; 339–347; 357; 359` do Código Penal. Artigos intermediários não listados pelo edital não são acrescentados por proximidade numérica.
+O escopo oficial desta apostila é exclusivamente:
+
+`arts. 293–305; 307; 308; 311-A; 312–317; 319–333; 336; 337; 339–347; 357; 359` do Código Penal.
+
+O **art. 338-A não pertence ao recorte**. Ele não é incluído apenas porque está numericamente entre os arts. 337 e 339.
 
 ---
 
 # Unidade 1 — Papéis públicos e petrechos de falsificação — DP-01
 
-## 1.1 Art. 293 — falsificação de papéis públicos
+## Art. 293 — falsificação de papéis públicos
 
-O art. 293 protege papéis públicos especificamente enumerados. O núcleo básico é **falsificar**, por fabricação ou alteração. O objeto não é qualquer documento público: são papéis do próprio dispositivo, como selo destinado a controle tributário, papel de crédito público que não seja moeda, vale postal, cautela de penhor, certos documentos de arrecadação pública e bilhetes ou passes de transporte administrado pelo poder público.
+O art. 293 não trata de qualquer documento público. Ele enumera objetos específicos: selo destinado a controle tributário e outros papéis de emissão legal destinados à arrecadação de tributo; papel de crédito público que não seja moeda; vale postal; cautela de penhor e determinadas cadernetas de depósito; documentos relacionados à arrecadação de rendas públicas, depósito ou caução sob responsabilidade do poder público; e bilhete, passe ou conhecimento de empresa de transporte administrada pela União, Estado ou Município.
 
-A pena do caput é de **reclusão de 2 a 8 anos e multa**.
+O núcleo do caput é **falsificar, fabricando ou alterando**. Pena: **reclusão de 2 a 8 anos e multa**.
 
-O dispositivo também alcança condutas posteriores relacionadas aos papéis falsificados, como usar, guardar, possuir ou deter, e traz regras específicas para selo de controle tributário. Outra figura importante é a supressão de carimbo ou sinal de inutilização de papel legítimo com o objetivo de torná-lo novamente utilizável. Nessa hipótese, a pena é de **reclusão de 1 a 4 anos e multa**.
+### Formas que merecem leitura literal
 
-Há ainda tratamento próprio para quem recebeu o papel de boa-fé e, **depois de conhecer a falsidade ou alteração**, o usa ou o restitui à circulação: a lei prevê pena menor. O momento do conhecimento é, portanto, decisivo.
+O § 1º aplica a mesma pena do caput a grupos de condutas, entre eles:
 
-### Como não confundir
+- usar, guardar, possuir ou deter qualquer dos papéis falsificados do artigo;
+- importar, exportar, adquirir, vender, trocar, ceder, emprestar, guardar, fornecer ou restituir à circulação selo falsificado destinado a controle tributário;
+- no exercício de atividade comercial ou industrial, praticar as condutas previstas no dispositivo com produto ou mercadoria que tenha selo tributário falsificado ou que esteja sem selo oficial quando sua aplicação for obrigatória.
 
-- **art. 293:** o foco é o conjunto especial de papéis públicos enumerados no artigo;
-- **art. 297:** documento público em geral, dentro da falsidade documental;
-- **art. 304:** uso de documento falso referido nos arts. 297 a 302, e não uso dos papéis do art. 293.
+Para esse último grupo, a lei equipara à atividade comercial o comércio irregular ou clandestino, inclusive em vias públicas e residências.
 
-### Mini-caso
+O § 2º pune quem, em papel **legítimo**, suprime carimbo ou sinal de inutilização para torná-lo novamente utilizável. Pena: **reclusão de 1 a 4 anos e multa**. O § 3º aplica a mesma pena a quem usa o papel depois dessa alteração.
 
-Uma pessoa recebe de boa-fé um papel abrangido pelo art. 293. Depois descobre a falsidade e, mesmo assim, recoloca o papel em circulação. O dado decisivo não é apenas a origem de boa-fé; é o **uso posterior ao conhecimento da falsidade**, hipótese que possui disciplina própria no art. 293.
+O § 4º cuida de hipótese diferente: a pessoa recebe de boa-fé um dos papéis falsificados ou alterados, depois descobre a falsidade/alteração e ainda assim o usa ou o restitui à circulação. Pena: **detenção de 6 meses a 2 anos, ou multa**.
 
-## 1.2 Art. 294 — petrechos de falsificação
+### Contrastes decisivos
 
-O art. 294 pune fabricar, adquirir, fornecer, possuir ou guardar **objeto especialmente destinado à falsificação dos papéis do art. 293**. A pena é de **reclusão de 1 a 3 anos e multa**.
-
-A expressão decisiva é “especialmente destinado”. O tipo não descreve qualquer ferramenta genérica que eventualmente pudesse ser usada para falsificar. O vínculo funcional do objeto com a falsificação é o centro da figura.
-
-### Contraste mínimo
-
-| Situação | Tipo central |
+| Situação | Regra de referência |
 |---|---|
-| falsificar um dos papéis enumerados | art. 293 |
-| fabricar/possuir objeto especialmente destinado a falsificá-los | art. 294 |
+| fabricar ou alterar os papéis especiais | art. 293, caput |
+| usar/guardar/possuir/deter papel falsificado do art. 293 | art. 293, § 1º |
+| suprimir sinal de inutilização de papel legítimo para reutilizá-lo | art. 293, § 2º |
+| receber de boa-fé e usar depois de conhecer a falsidade | art. 293, § 4º |
+| falsidade material de documento público em geral | art. 297 |
 
-## 1.3 Art. 295 — prevalecimento do cargo
+## Art. 294 — petrechos de falsificação
 
-Se o agente é funcionário público e pratica o crime **prevalecendo-se do cargo**, a pena é aumentada de **1/6**.
+Fabricar, adquirir, fornecer, possuir ou guardar **objeto especialmente destinado** à falsificação dos papéis do art. 293. Pena: **reclusão de 1 a 3 anos e multa**.
 
-Não basta a condição abstrata de funcionário público. A redação exige que o cargo seja utilizado como vantagem ou instrumento para a prática.
+A expressão “especialmente destinado” é a chave. Não basta imaginar que um objeto comum poderia ser usado na fraude.
+
+## Art. 295 — prevalecimento do cargo
+
+Se o agente é funcionário público e pratica crime deste capítulo **prevalecendo-se do cargo**, a pena aumenta de **1/6**.
+
+A mera qualidade funcional não basta; o texto exige o aproveitamento do cargo na prática.
+
+### Três mini-casos
+
+**Caso 1.** Uma pessoa guarda equipamento especialmente preparado para produzir os papéis descritos no art. 293. O foco é o art. 294, ainda que nenhum papel já tenha sido efetivamente falsificado.
+
+**Caso 2.** Um agente recebeu de boa-fé um papel do art. 293; dias depois descobriu a falsidade e resolveu colocá-lo em circulação. A hipótese específica é a do § 4º, não a pena do caput automaticamente.
+
+**Caso 3.** Funcionário público falsifica um papel do art. 293 usando acesso proporcionado pelo próprio cargo. Além do tipo-base, deve ser examinada a majorante do art. 295.
 
 ### Síntese DP-01
 
-- Identifique primeiro o **objeto**: papel público especial ou petrecho.
-- Depois veja a **conduta**: falsificar, usar/guardar, suprimir sinal ou possuir instrumento destinado à falsificação.
-- Para a majorante do art. 295, procure o **uso funcional do cargo**, não apenas o vínculo do agente com a Administração.
+Objeto especial + verbo + momento do conhecimento + uso funcional do cargo são os quatro eixos deste bloco.
 
 ---
 
 # Unidade 2 — Falsidade documental, atestados, uso e supressão — DP-02
 
-## 2.1 Art. 296 — selo ou sinal público
+## Art. 296 — selo ou sinal público
 
-O art. 296 pune a falsificação de selo público destinado a autenticar atos oficiais e de selo ou sinal atribuído por lei a entidade/autoridade pública ou a tabelião. A lei também alcança o uso do selo ou sinal falsificado, o uso indevido do verdadeiro e a alteração, falsificação ou uso indevido de marcas, logotipos, siglas e outros símbolos identificadores de órgãos ou entidades da Administração Pública.
+Pune falsificar, fabricando ou alterando, selo público destinado a autenticar atos oficiais e selo/sinal legalmente atribuído a entidade ou autoridade pública, além de sinal público de tabelião. Pena: **reclusão de 2 a 6 anos e multa**.
 
-Pena básica: **reclusão de 2 a 6 anos e multa**. Se funcionário público pratica o crime prevalecendo-se do cargo, há aumento de **1/6**.
+Nas mesmas penas incorre quem usa selo/sinal falsificado; usa indevidamente o verdadeiro em prejuízo alheio ou proveito próprio/alheio; ou altera, falsifica ou usa indevidamente marcas, logotipos, siglas e símbolos identificadores de órgãos ou entidades da Administração Pública.
 
-## 2.2 Arts. 297 e 298 — falsidade material em documento
+Se funcionário público pratica o crime prevalecendo-se do cargo, aumento de **1/6**.
 
-### Documento público — art. 297
+## Art. 297 — falsificação de documento público
 
-Falsificar, no todo ou em parte, documento público ou alterar documento público verdadeiro: **reclusão de 2 a 6 anos e multa**.
+Falsificar, no todo ou em parte, documento público, ou alterar documento público verdadeiro. Pena: **reclusão de 2 a 6 anos e multa**. Se funcionário público pratica o crime prevalecendo-se do cargo, aumento de **1/6**.
 
-Para fins penais, a lei equipara a documento público, entre outros, documento emanado de entidade paraestatal, título ao portador ou transmissível por endosso, ações de sociedade comercial, livros mercantis e testamento particular. O art. 297 também contém hipóteses relacionadas a inserções/omissões em documentos destinados a produzir prova perante a previdência social.
+Para efeitos penais, são equiparados a documento público, entre outros, documento emanado de entidade paraestatal, título ao portador ou transmissível por endosso, ações de sociedade comercial, livros mercantis e testamento particular.
 
-### Documento particular — art. 298
+### Hipóteses previdenciárias dos §§ 3º e 4º
 
-Falsificar, no todo ou em parte, documento particular ou alterar documento particular verdadeiro: **reclusão de 1 a 5 anos e multa**. Cartão de crédito ou débito é equiparado a documento particular para esse fim.
+A mesma pena alcança inserções ou omissões específicas em documentos destinados a produzir prova perante a previdência social. O § 3º abrange, em síntese, inserção de pessoa que não seja segurado obrigatório em folha/documento previdenciário e declarações falsas ou diversas da devida em CTPS/documentos previdenciários ou contábeis relacionados às obrigações da empresa. O § 4º alcança a omissão, nesses documentos, de nome/dados do segurado, remuneração e vigência do contrato de trabalho ou prestação de serviços.
 
-### Critério decisivo: materialidade
+## Art. 298 — falsificação de documento particular
 
-Nos arts. 297 e 298, a fraude recai sobre a **formação física/documental ou alteração do documento verdadeiro**. Essa é a fronteira essencial com a falsidade ideológica do art. 299.
+Falsificar, no todo ou em parte, documento particular ou alterar documento particular verdadeiro. Pena: **reclusão de 1 a 5 anos e multa**.
 
-## 2.3 Art. 299 — falsidade ideológica
+Para esse artigo, **cartão de crédito ou débito** é equiparado a documento particular.
 
-O documento pode ser formalmente autêntico, mas conter uma declaração falsa ou omitir informação que deveria constar. O art. 299 abrange:
+## Art. 299 — falsidade ideológica
 
-- omitir declaração que devia constar do documento;
-- inserir ou fazer inserir declaração falsa ou diversa da devida;
-- agir com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante.
+O documento pode ser materialmente verdadeiro e, ainda assim, conter falsidade em seu conteúdo. O tipo consiste em omitir declaração que devia constar ou inserir/fazer inserir declaração falsa ou diversa da devida, com a finalidade de:
 
-Se o documento é público, a pena é de **reclusão de 1 a 5 anos e multa**; se particular, **reclusão de 1 a 3 anos e multa**. Há aumento de **1/6** quando funcionário público pratica o crime prevalecendo-se do cargo ou quando a falsidade recai sobre assentamento de registro civil.
+- prejudicar direito;
+- criar obrigação; ou
+- alterar a verdade sobre fato juridicamente relevante.
 
-### Par mínimo
+Pena: se o documento é público, **reclusão de 1 a 5 anos e multa**; se particular, **reclusão de 1 a 3 anos e multa**. Aumento de **1/6** se o agente é funcionário público e age prevalecendo-se do cargo ou se a falsidade/alteração recai sobre assentamento de registro civil.
 
-- alguém fabrica um diploma falso: falsidade **material**;
-- alguém insere, em documento verdadeiro, informação falsa juridicamente relevante com a finalidade exigida: falsidade **ideológica**.
+### Material x ideológica
 
-## 2.4 Art. 300 — falso reconhecimento de firma ou letra
+- fabricação ou alteração física/documental → falsidade **material**;
+- documento formalmente autêntico com declaração falsa/omitida e finalidade típica → falsidade **ideológica**.
 
-O agente, **no exercício de função pública**, reconhece como verdadeira firma ou letra que não é verdadeira. A natureza pública ou particular do documento interfere na pena.
+## Art. 300 — falso reconhecimento de firma ou letra
 
-O ponto de prova é o sujeito atuando em função pública e o ato específico de reconhecimento falso.
+Reconhecer como verdadeira, **no exercício de função pública**, firma ou letra que não seja verdadeira.
 
-## 2.5 Arts. 301 e 302 — certidões e atestado médico
+- documento público: **reclusão de 1 a 5 anos e multa**;
+- documento particular: **reclusão de 1 a 3 anos e multa**.
 
-O art. 301 diferencia duas situações:
+## Art. 301 — certidão ou atestado falso
 
-1. **certidão/atestado ideologicamente falso:** funcionário, em razão da função pública, atesta ou certifica falsamente fato ou circunstância que habilita alguém a obter cargo público, isenção de ônus/serviço público ou outra vantagem;
-2. **falsidade material de atestado/certidão:** falsificar ou alterar o teor do documento para provar situação com essa mesma finalidade de vantagem.
+### Caput — falsidade ideológica
 
-Se houver fim de lucro na forma material, soma-se multa.
+Atestar ou certificar falsamente, em razão de função pública, fato/circunstância que habilite alguém a obter cargo público, isenção de ônus ou serviço de caráter público, ou outra vantagem. Pena: **detenção de 2 meses a 1 ano**.
 
-O art. 302 é específico: **médico**, no exercício da profissão, fornece atestado falso. A pena básica é de **detenção de 1 mês a 1 ano**; se houver fim de lucro, aplica-se também multa.
+### § 1º — falsidade material
 
-### Contraste essencial
+Falsificar ou alterar atestado/certidão para prova de fato/circunstância com essa finalidade de vantagem. Pena: **detenção de 3 meses a 2 anos**.
 
-| Tipo | Elemento que identifica |
-|---|---|
-| art. 301 caput | certificação/atestação falsa em razão de função pública |
-| art. 301 §1º | falsificação material de atestado/certidão |
-| art. 302 | atestado falso dado por médico no exercício profissional |
+Se houver fim de lucro, acrescenta-se multa.
 
-## 2.6 Art. 303 — selo ou peça filatélica
+## Art. 302 — falsidade de atestado médico
 
-Pune reproduzir ou alterar selo ou peça filatélica com valor de coleção, salvo quando a reprodução/alteração estiver visivelmente anotada. Também alcança o uso para fins de comércio. Pena: **detenção de 1 a 3 anos e multa**.
+Médico, no exercício da profissão, fornece atestado falso. Pena: **detenção de 1 mês a 1 ano**; se houver fim de lucro, também multa.
 
-## 2.7 Art. 304 — uso de documento falso
+## Art. 303 — selo ou peça filatélica
 
-O art. 304 pune **fazer uso** dos papéis falsificados ou alterados a que se referem os arts. 297 a 302. A pena é a mesma cominada à falsificação ou alteração correspondente.
+Reproduzir ou alterar selo ou peça filatélica com valor de coleção, salvo reprodução/alteração visivelmente anotada. Pena: **detenção de 1 a 3 anos e multa**. A mesma pena alcança quem, para fins de comércio, usa o selo ou peça.
 
-O ponto central é não trocar o verbo: aqui a conduta típica é o **uso** do documento falso.
+## Art. 304 — uso de documento falso
 
-## 2.8 Art. 305 — supressão de documento
+Fazer uso de papéis falsificados ou alterados a que se referem os arts. **297 a 302**. A pena é **a mesma cominada à falsificação ou alteração correspondente**.
 
-Destruir, suprimir ou ocultar documento público ou particular **verdadeiro**, de que o agente não podia dispor, em benefício próprio/de outrem ou em prejuízo alheio.
+O verbo aqui é usar. Não confunda com fabricar, alterar ou suprimir.
+
+## Art. 305 — supressão de documento
+
+Destruir, suprimir ou ocultar, em benefício próprio/alheio ou prejuízo alheio, **documento verdadeiro** de que o agente não podia dispor.
 
 - documento público: **reclusão de 2 a 6 anos e multa**;
 - documento particular: **reclusão de 1 a 5 anos e multa**.
 
-### Contraste material
+### Quadro de contraste
 
-- art. 304: o documento é falso/alterado e o agente o usa;
-- art. 305: o documento é verdadeiro, mas é destruído, suprimido ou ocultado sem poder de disposição.
+| Situação | Tipo central |
+|---|---|
+| documento público fisicamente falsificado | art. 297 |
+| documento particular fisicamente falsificado | art. 298 |
+| conteúdo falso/omitido com finalidade típica | art. 299 |
+| reconhecimento público falso de firma/letra | art. 300 |
+| certidão funcional ou atestado médico falso | arts. 301–302 |
+| uso do falso dos arts. 297–302 | art. 304 |
+| destruição/supressão/ocultação de documento verdadeiro indisponível | art. 305 |
+
+### Três mini-casos
+
+**Caso 1.** Alguém altera fisicamente diploma particular verdadeiro. O problema é material, não ideológico: art. 298.
+
+**Caso 2.** Documento público é formalmente autêntico, mas recebe declaração falsa juridicamente relevante para criar obrigação. O contraste aponta ao art. 299.
+
+**Caso 3.** O agente destrói documento particular verdadeiro, de que não podia dispor, para beneficiar terceiro. O eixo é art. 305, não uso de documento falso.
 
 ### Síntese DP-02
 
-Para resolver falsidades documentais, faça quatro perguntas: o documento é público ou particular? A fraude está na materialidade ou no conteúdo? O agente falsificou ou apenas usou? O documento era falso/alterado ou verdadeiro e foi suprimido?
+Pergunte sempre: documento público ou particular? falsidade física ou conteúdo? quem é o sujeito especial? houve falsificação, uso ou supressão?
 
 ---
 
 # Unidade 3 — Falsa identidade e documento de identidade alheio — DP-03
 
-## 3.1 Art. 307 — falsa identidade
+## Art. 307 — falsa identidade
 
-O agente atribui a si ou a terceiro **identidade falsa** para obter vantagem, em benefício próprio ou alheio, ou para causar dano a outra pessoa. Pena: **detenção de 3 meses a 1 ano, ou multa**, se o fato não constitui elemento de crime mais grave.
+Atribuir a si ou a terceiro identidade falsa para obter vantagem em proveito próprio/alheio ou causar dano a outra pessoa. Pena: **detenção de 3 meses a 1 ano, ou multa**, se o fato não constitui elemento de crime mais grave.
 
-A identidade falsa pode ser atribuída sem que exista uso de documento físico alheio. Essa observação separa o art. 307 do art. 308.
+O tipo não exige, por sua redação, uso de documento físico de identidade alheio.
 
-## 3.2 Art. 308 — uso ou cessão de documento de identidade alheio
+## Art. 308 — uso ou cessão de documento de identidade alheio
 
-O art. 308 exige um **documento de identidade**: usar como próprio passaporte, título de eleitor, caderneta de reservista ou outro documento de identidade alheia; ou ceder a alguém documento dessa natureza, próprio ou de terceiro, para que seja utilizado.
+Usar como próprio passaporte, título de eleitor, caderneta de reservista ou qualquer documento de identidade **alheia**, ou ceder a alguém documento dessa natureza — próprio ou de terceiro — para que seja usado. Pena: **detenção de 4 meses a 2 anos e multa**, se o fato não constitui elemento de crime mais grave.
 
-Pena: **detenção de 4 meses a 2 anos e multa**, se o fato não constitui elemento de crime mais grave.
+### Contraste
 
-### Par mínimo
+| Art. 307 | Art. 308 |
+|---|---|
+| atribuição de identidade falsa | uso/cessão de documento de identidade |
+| foco na identidade declarada | foco no objeto documental específico |
 
-- “Meu nome é Carlos”, quando a pessoa deliberadamente assume identidade falsa com a finalidade legalmente prevista: art. 307;
-- apresentar como próprio o documento de identidade verdadeiro de Carlos: art. 308.
+### Três mini-casos
+
+**Caso 1.** Pessoa fornece verbalmente nome e identidade falsos para obter vantagem, sem apresentar documento. Referência: art. 307.
+
+**Caso 2.** Pessoa apresenta como próprio o documento verdadeiro de identidade de terceiro. Referência: art. 308.
+
+**Caso 3.** Titular empresta seu próprio documento de identidade para que outra pessoa o utilize como se fosse dela. A cessão também está prevista no art. 308.
 
 ### Síntese DP-03
 
-A pergunta decisiva é: **há documento de identidade alheio sendo usado/cedido?** Se sim, pense primeiro no art. 308. Se a fraude está na atribuição de identidade, sem esse objeto documental específico, o art. 307 é o contraste central.
+A pergunta decisiva é: existe **documento de identidade** alheio sendo usado ou cedido? Se sim, art. 308 é o primeiro contraste.
 
 ---
 
 # Unidade 4 — Fraude em certame de interesse público — DP-04
 
-## 4.1 Art. 311-A — estrutura do tipo
+## Art. 311-A — elementos do tipo
 
-O núcleo principal é **utilizar ou divulgar indevidamente conteúdo sigiloso**, com uma das finalidades legais:
+Utilizar ou divulgar indevidamente, com o fim de beneficiar a si/terceiro ou comprometer a credibilidade do certame, **conteúdo sigiloso** de:
 
-- beneficiar a si ou a terceiro; ou
-- comprometer a credibilidade do certame.
-
-O conteúdo precisa relacionar-se a concurso público, avaliação ou exame públicos, processo seletivo para ingresso no ensino superior ou exame/processo seletivo previsto em lei.
+- concurso público;
+- avaliação ou exame públicos;
+- processo seletivo para ingresso no ensino superior;
+- exame ou processo seletivo previstos em lei.
 
 Pena do caput: **reclusão de 1 a 4 anos e multa**.
 
-## 4.2 Formas relevantes
+Nas mesmas penas incorre quem permite ou facilita, por qualquer meio, acesso de pessoa não autorizada ao conteúdo sigiloso.
 
-- permitir ou facilitar, por qualquer meio, acesso de pessoa não autorizada ao conteúdo sigiloso: mesmas penas do caput;
-- se a ação ou omissão causa dano à Administração Pública: **reclusão de 2 a 6 anos e multa**;
-- se o fato é cometido por funcionário público: aumento de **1/3**.
+Se da ação ou omissão resulta dano à Administração Pública: **reclusão de 2 a 6 anos e multa**.
 
-### Mini-casos
+Se o fato é cometido por funcionário público, aumento de **1/3**.
 
-**Caso A:** pessoa recebe, sem autorização, conteúdo sigiloso de prova pública e o divulga para favorecer candidato. A finalidade de benefício e a natureza sigilosa do conteúdo são os elementos centrais.
+### Três mini-casos
 
-**Caso B:** servidor facilita o acesso de terceiro não autorizado ao conteúdo. Mesmo sem ser ele quem publica as questões, há forma expressamente equiparada e ainda deve ser examinada a majorante funcional.
+**Caso 1.** Candidato divulga conteúdo sigiloso de concurso para beneficiar outro concorrente: caput.
+
+**Caso 2.** Servidor apenas facilita o acesso de não autorizado, sem divulgar pessoalmente: forma equiparada do § 1º.
+
+**Caso 3.** A ação ou omissão causa dano à Administração. O § 2º prevê, para esse resultado, pena de reclusão de 2 a 6 anos e multa. A qualidade funcional, quando presente, é tratada separadamente pelo § 3º.
 
 ### Síntese DP-04
 
-Não reduza o tipo à ideia genérica de “colar em concurso”. Procure: **conteúdo sigiloso + certame legalmente abrangido + verbo típico + finalidade específica**.
+Não reduza o artigo à ideia vaga de “fraude em prova”. Procure **sigilo + espécie de certame + verbo + finalidade + eventual resultado/qualidade funcional**.
 
 ---
 
 # Unidade 5 — Crimes funcionais nucleares — DP-05
 
-## 5.1 Art. 312 — peculato
+## Art. 312 — peculato
 
-No peculato-apropriação/desvio, funcionário público tem posse de dinheiro, valor ou bem móvel em razão do cargo e se apropria ou desvia em proveito próprio ou alheio. Pena: **reclusão de 2 a 12 anos e multa**.
+### Apropriação ou desvio
 
-No peculato-furto, o funcionário não tem a posse, mas subtrai ou concorre para a subtração valendo-se da facilidade proporcionada pela função.
+Funcionário público apropria-se de dinheiro, valor ou bem móvel, público ou particular, de que tem posse em razão do cargo, ou o desvia em proveito próprio/alheio. Pena: **reclusão de 2 a 12 anos e multa**.
 
-No peculato culposo, o funcionário concorre culposamente para o crime de outra pessoa. A reparação do dano tem efeito especial: se anterior à sentença irrecorrível, **extingue a punibilidade**; se posterior, **reduz pela metade a pena imposta**.
+### Peculato-furto
 
-### Ponto decisivo
+Mesmo sem a posse, aplica-se a mesma pena quando o funcionário subtrai ou concorre para subtração em proveito próprio/alheio, valendo-se da facilidade proporcionada pela qualidade funcional.
 
-Não confunda “ser funcionário” com “peculato”. É preciso vínculo entre a função e a posse/facilidade utilizada.
+### Peculato culposo
 
-## 5.2 Art. 313 — peculato mediante erro de outrem
+Se o funcionário concorre **culposamente** para crime de outra pessoa: **detenção de 3 meses a 1 ano**.
 
-Funcionário se apropria de dinheiro ou utilidade que recebeu, no exercício do cargo, **por erro de outra pessoa**. Pena: **reclusão de 1 a 4 anos e multa**.
+Na forma culposa, reparação do dano:
 
-O erro de outrem é o elemento que separa esta figura das modalidades do art. 312.
+- antes da sentença irrecorrível → **extingue a punibilidade**;
+- depois → **reduz de metade a pena imposta**.
 
-## 5.3 Arts. 313-A e 313-B — dados falsos x sistema alterado
+## Art. 313 — peculato mediante erro de outrem
 
-### Art. 313-A
+Apropriar-se de dinheiro ou utilidade que recebeu, no exercício do cargo, **por erro de outra pessoa**. Pena: **reclusão de 1 a 4 anos e multa**.
 
-O sujeito é **funcionário autorizado**. Ele insere ou facilita a inserção de dados falsos, ou altera/exclui indevidamente dados corretos em sistema informatizado ou banco de dados da Administração, com o fim de obter vantagem indevida ou causar dano.
+## Art. 313-A — inserção de dados falsos em sistema
 
-Pena: **reclusão de 2 a 12 anos e multa**.
+Funcionário **autorizado** insere/facilita inserção de dados falsos ou altera/exclui indevidamente dados corretos em sistema/banco de dados da Administração, com o fim de obter vantagem indevida para si/outrem ou causar dano. Pena: **reclusão de 2 a 12 anos e multa**.
 
-### Art. 313-B
+## Art. 313-B — alteração não autorizada de sistema
 
-Funcionário modifica ou altera **o sistema de informações ou programa de informática**, sem autorização ou solicitação de autoridade competente. Pena: **detenção de 3 meses a 2 anos e multa**. Se resulta dano à Administração ou ao administrado, a pena aumenta de **1/3 até 1/2**.
+Funcionário modifica ou altera **sistema de informações ou programa de informática** sem autorização ou solicitação da autoridade competente. Pena: **detenção de 3 meses a 2 anos e multa**.
 
-### Par mínimo
+Se resulta dano à Administração ou ao administrado, aumento de **1/3 até 1/2**.
 
-- manipular **dados** com a finalidade específica prevista → 313-A;
-- modificar **sistema/programa** sem autorização → 313-B.
+### 313-A x 313-B
 
-## 5.4 Art. 314 — extravio, sonegação ou inutilização de livro/documento
+- 313-A: **dados** + funcionário autorizado + finalidade específica;
+- 313-B: **sistema/programa** + ausência de autorização/solicitação; dano funciona como majorante.
 
-Funcionário extravia livro oficial ou documento que guarda em razão do cargo, sonega-o ou o inutiliza total/parcialmente. Pena: **reclusão de 1 a 4 anos**, se o fato não constitui crime mais grave.
+## Art. 314 — extravio, sonegação ou inutilização de livro/documento
 
-Compare com o art. 337: ali a lei trata da subtração/inutilização de livro, processo ou documento confiado à custódia funcional, em capítulo de crimes praticados por particular contra a Administração.
+Funcionário extravia livro oficial ou documento sob sua guarda em razão do cargo, sonega-o ou o inutiliza total/parcialmente. Pena: **reclusão de 1 a 4 anos**, se o fato não constitui crime mais grave.
 
-## 5.5 Art. 315 — emprego irregular de verbas ou rendas públicas
+## Art. 315 — emprego irregular de verbas ou rendas públicas
 
-Dar a verba ou renda pública **aplicação diferente da estabelecida em lei**. Pena: **detenção de 1 a 3 meses, ou multa**.
+Dar às verbas ou rendas públicas aplicação **diversa da estabelecida em lei**. Pena: **detenção de 1 a 3 meses, ou multa**.
 
-O ponto é o desvio de finalidade legal da verba, não a apropriação para patrimônio particular.
+Atenção: o tipo não exige apropriação patrimonial para o agente; o foco é a destinação legal da verba/renda.
 
-## 5.6 Art. 316 — concussão e excesso de exação
+## Art. 316 — concussão e excesso de exação
 
 ### Concussão
 
-O verbo é **exigir** vantagem indevida, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, desde que em razão dela. Pena: **reclusão de 2 a 12 anos e multa**.
+**Exigir** vantagem indevida, para si/outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela. Pena: **reclusão de 2 a 12 anos e multa**.
 
-### Excesso de exação
+### Excesso de exação — § 1º
 
-O funcionário exige tributo ou contribuição social que sabe ou deveria saber indevido; ou, sendo devido, usa meio vexatório ou gravoso não autorizado por lei. Há ainda forma mais grave quando o funcionário desvia, em proveito próprio ou alheio, o que recebeu indevidamente para recolher aos cofres públicos.
+Funcionário exige tributo ou contribuição social que sabe ou deveria saber indevido ou, sendo devido, usa meio vexatório/gravoso não autorizado por lei. Pena: **reclusão de 3 a 8 anos e multa**.
 
-## 5.7 Art. 317 — corrupção passiva
+### Desvio do indevidamente recebido — § 2º
 
-O funcionário **solicita ou recebe** vantagem indevida, ou aceita promessa de vantagem, em razão da função. A regra alcança situação anterior à assunção da função ou fora dela, desde que exista relação funcional. Pena básica: **reclusão de 2 a 12 anos e multa**.
+Se o funcionário desvia, em proveito próprio/alheio, o que recebeu indevidamente para recolher aos cofres públicos: **reclusão de 2 a 12 anos e multa**.
 
-Se, em consequência da vantagem/promessa, retarda, deixa de praticar ou pratica ato de ofício infringindo dever funcional, a pena aumenta de **1/3**.
+## Art. 317 — corrupção passiva
 
-O §2º descreve hipótese de pena menor quando o funcionário pratica, deixa de praticar ou retarda ato de ofício, infringindo dever funcional, **cedendo a pedido ou influência de outrem**.
+Funcionário **solicita ou recebe** vantagem indevida, ou aceita promessa de vantagem, para si/outrem, ainda que fora da função ou antes de assumi-la, mas em razão dela. Pena: **reclusão de 2 a 12 anos e multa**.
+
+Se, em consequência da vantagem/promessa, retarda, deixa de praticar ou pratica ato de ofício infringindo dever funcional: aumento de **1/3**.
+
+Se pratica, deixa de praticar ou retarda ato de ofício infringindo dever funcional **cedendo a pedido ou influência de outrem**: **detenção de 3 meses a 1 ano, ou multa**.
 
 ### Concussão x corrupção passiva
 
 | Concussão | Corrupção passiva |
 |---|---|
 | **exigir** vantagem | **solicitar, receber ou aceitar promessa** |
-| imposição é o núcleo | pedido/recebimento/aceitação é o núcleo |
-| ambos dependem de vínculo com a função | idem |
+| art. 316 | art. 317 |
+
+### Três mini-casos
+
+**Caso 1.** Funcionário autorizado altera dado correto em banco da Administração para gerar vantagem indevida. Art. 313-A.
+
+**Caso 2.** Funcionário modifica programa da repartição sem autorização, sem a finalidade especial do 313-A. Art. 313-B.
+
+**Caso 3.** Agente público impõe pagamento de vantagem indevida em razão do cargo. O verbo “exigir” conduz à concussão; se apenas solicita/recebe/aceita promessa, o contraste é corrupção passiva.
 
 ### Síntese DP-05
 
-Nos crimes funcionais, grife mentalmente três coisas: relação com o cargo, verbo nuclear e finalidade/objeto. Pequenas trocas — exigir/solicitar, dado/sistema, posse/erro alheio — mudam o enquadramento.
+Vínculo funcional, posse/facilidade, dado x sistema, destinação de verba e verbo da vantagem são as chaves deste bloco.
 
 ---
 
 # Unidade 6 — Prevaricação e demais crimes funcionais — DP-06
 
-## 6.1 Art. 319 — prevaricação
+## Art. 319 — prevaricação
 
 Retardar ou deixar de praticar indevidamente ato de ofício, ou praticá-lo contra disposição expressa de lei, **para satisfazer interesse ou sentimento pessoal**. Pena: **detenção de 3 meses a 1 ano e multa**.
 
-A finalidade pessoal é indispensável para reconhecer a figura descrita no artigo.
+## Art. 319-A — acesso de preso a aparelho de comunicação
 
-## 6.2 Art. 319-A — acesso de preso a aparelho de comunicação
+Diretor de penitenciária e/ou agente público deixa de cumprir seu dever de impedir que preso tenha acesso a aparelho telefônico, rádio ou similar que permita comunicação com outros presos ou com o ambiente externo. Pena: **detenção de 3 meses a 1 ano**.
 
-Diretor de penitenciária e/ou agente público deixa de cumprir o dever de impedir que preso tenha acesso a aparelho telefônico, rádio ou similar apto à comunicação com outros presos ou com o exterior. Pena: **detenção de 3 meses a 1 ano**.
+## Art. 320 — condescendência criminosa
 
-## 6.3 Art. 320 — condescendência criminosa
+Funcionário, **por indulgência**, deixa de responsabilizar subordinado que praticou infração no exercício do cargo ou, se não possui competência, deixa de comunicar o fato à autoridade competente. Pena: **detenção de 15 dias a 1 mês, ou multa**.
 
-Funcionário, **por indulgência**, deixa de responsabilizar subordinado que cometeu infração no exercício do cargo ou, se não tem competência, deixa de comunicar o fato à autoridade competente.
+### 319 x 320
 
-Pena: **detenção de 15 dias a 1 mês, ou multa**.
+- prevaricação → finalidade de satisfazer interesse/sentimento pessoal;
+- condescendência → indulgência diante de infração de **subordinado**.
 
-### Prevaricação x condescendência
+## Art. 321 — advocacia administrativa
 
-- prevaricação: ato de ofício + finalidade de satisfazer interesse/sentimento pessoal;
-- condescendência: tolerância indulgente com infração de **subordinado** e omissão em responsabilizar/comunicar.
+Patrocinar, direta ou indiretamente, interesse privado perante a Administração Pública, valendo-se da qualidade de funcionário. Pena: **detenção de 1 a 3 meses, ou multa**.
 
-## 6.4 Art. 321 — advocacia administrativa
+Se o interesse é ilegítimo: **detenção de 3 meses a 1 ano, além da multa**.
 
-Patrocinar interesse privado perante a Administração Pública, direta ou indiretamente, **valendo-se da qualidade de funcionário**. Pena básica: **detenção de 1 a 3 meses, ou multa**. Se o interesse patrocinado é ilegítimo, a pena é maior.
+## Art. 322 — violência arbitrária
 
-O tipo não exige que o interesse privado seja ilegítimo para existir; a ilegitimidade agrava a resposta penal.
+Praticar violência no exercício da função ou a pretexto de exercê-la. Pena: **detenção de 6 meses a 3 anos**, além da pena correspondente à violência.
 
-## 6.5 Arts. 322 a 324
+## Art. 323 — abandono de função
 
-### Violência arbitrária — art. 322
+Abandonar cargo público fora dos casos permitidos em lei. Pena: **detenção de 15 dias a 1 mês, ou multa**.
 
-Praticar violência no exercício da função ou a pretexto de exercê-la. A pena do tipo soma-se à correspondente à violência.
+- se resulta prejuízo público → **detenção de 3 meses a 1 ano e multa**;
+- se ocorre em lugar compreendido na faixa de fronteira → **detenção de 1 a 3 anos e multa**.
 
-### Abandono de função — art. 323
+## Art. 324 — exercício funcional ilegalmente antecipado ou prolongado
 
-Abandonar cargo público fora dos casos permitidos em lei. Há formas mais graves se resulta prejuízo público ou se o fato ocorre em lugar compreendido na faixa de fronteira.
+Entrar em função pública antes de satisfeitas as exigências legais ou continuar a exercê-la, sem autorização, depois de saber oficialmente que foi exonerado, removido, substituído ou suspenso. Pena: **detenção de 15 dias a 1 mês, ou multa**.
 
-### Exercício funcional antecipado ou prolongado — art. 324
+## Art. 325 — violação de sigilo funcional
 
-Entrar em função pública antes de cumprir as exigências legais ou continuar a exercê-la, sem autorização, depois de saber oficialmente que foi exonerado, removido, substituído ou suspenso.
+Revelar fato conhecido em razão do cargo e que deva permanecer em segredo, ou facilitar sua revelação. Pena: **detenção de 6 meses a 2 anos, ou multa**, se o fato não constitui crime mais grave.
 
-## 6.6 Art. 325 — violação de sigilo funcional
+Nas mesmas penas incorre quem permite/facilita acesso de pessoa não autorizada a sistemas/bancos de dados da Administração, inclusive mediante senha, ou usa indevidamente acesso restrito.
 
-Revelar fato conhecido em razão do cargo e que deva permanecer em segredo, ou facilitar sua revelação. O artigo também alcança permitir/facilitar acesso não autorizado a sistemas ou bancos de dados da Administração e utilizar indevidamente acesso restrito.
+Se da ação/omissão resulta dano à Administração Pública ou a outra pessoa: **reclusão de 2 a 6 anos e multa**.
 
-Pena básica: **detenção de 6 meses a 2 anos, ou multa**, se o fato não constitui crime mais grave. Se resulta dano à Administração ou a terceiro, a forma qualificada tem **reclusão de 2 a 6 anos e multa**.
-
-## 6.7 Art. 326 — sigilo de proposta de concorrência
+## Art. 326 — violação do sigilo de proposta de concorrência
 
 Devassar sigilo de proposta de concorrência pública ou proporcionar a terceiro oportunidade de devassá-lo. Pena: **detenção de 3 meses a 1 ano e multa**.
 
-## 6.8 Art. 327 — conceito penal de funcionário público
+## Art. 327 — conceito penal de funcionário público
 
-Para efeitos penais, é funcionário público quem exerce cargo, emprego ou função pública, **ainda que transitoriamente ou sem remuneração**.
+É funcionário público, para efeitos penais, quem exerce cargo, emprego ou função pública, **ainda que transitoriamente ou sem remuneração**.
 
-Equipara-se também quem exerce cargo, emprego ou função em entidade paraestatal e quem trabalha para empresa prestadora de serviço contratada ou conveniada para executar atividade típica da Administração Pública.
+Equipara-se a funcionário público quem exerce cargo, emprego ou função em entidade paraestatal e quem trabalha para empresa prestadora de serviço contratada/conveniada para executar atividade típica da Administração Pública.
 
-O §2º prevê aumento de **1/3** para autores dos crimes do capítulo que ocupem cargos em comissão ou funções de direção/assessoramento nos entes ali indicados.
+A pena aumenta de **1/3** quando autores dos crimes deste capítulo ocupam cargos em comissão ou funções de direção/assessoramento nos entes indicados no § 2º.
+
+### Três mini-casos
+
+**Caso 1.** Servidor deixa de praticar ato para satisfazer sentimento pessoal: prevaricação.
+
+**Caso 2.** Chefe, por indulgência, tolera infração do subordinado e não o responsabiliza: condescendência criminosa.
+
+**Caso 3.** Empregado de empresa contratada para executar atividade típica da Administração pratica fato funcional. Antes de excluir o capítulo por ele não ser servidor efetivo, aplique o conceito do art. 327.
 
 ### Síntese DP-06
 
-“Funcionário público” no Código Penal é conceito próprio e amplo. Antes de excluir um tipo funcional porque o agente não é servidor efetivo, confira o art. 327.
+O bloco exige atenção a **motivo da omissão**, relação hierárquica, interesse privado, sigilo, estado funcional e conceito penal ampliado de funcionário público.
 
 ---
 
 # Unidade 7 — Crimes de particular contra a Administração — DP-07
 
-## 7.1 Art. 328 — usurpação de função pública
+## Art. 328 — usurpação de função pública
 
-Usurpar o exercício de função pública. Pena: **detenção de 3 meses a 2 anos e multa**. Se o agente obtém vantagem com o fato, a pena passa a **reclusão de 2 a 5 anos e multa**.
+Usurpar o exercício de função pública. Pena: **detenção de 3 meses a 2 anos e multa**.
 
-O núcleo é exercer indevidamente função pública, não apenas desobedecer ordem ou resistir a ato funcional.
+Se do fato o agente aufere vantagem: **reclusão de 2 a 5 anos e multa**.
 
-## 7.2 Art. 329 — resistência
+## Art. 329 — resistência
 
-Opor-se à execução de **ato legal**, mediante violência ou ameaça, contra funcionário competente para executá-lo ou contra quem lhe presta auxílio.
+Opor-se à execução de **ato legal**, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe presta auxílio. Pena: **detenção de 2 meses a 2 anos**.
 
-Se, em razão da resistência, o ato não se executa, a pena é mais grave. As penas da resistência não eliminam as correspondentes à violência.
+Se, em razão da resistência, o ato não se executa: **reclusão de 1 a 3 anos**. As penas são aplicadas sem prejuízo das correspondentes à violência.
 
-### Resistência x desobediência
-
-- resistência: oposição com **violência ou ameaça** à execução de ato legal;
-- desobediência: descumprimento de **ordem legal** sem esse elemento típico de violência/ameaça.
-
-## 7.3 Arts. 330 e 331
-
-### Desobediência — art. 330
+## Art. 330 — desobediência
 
 Desobedecer ordem legal de funcionário público. Pena: **detenção de 15 dias a 6 meses e multa**.
 
-### Desacato — art. 331
+### Resistência x desobediência
+
+- resistência → oposição com **violência ou ameaça** à execução de ato legal;
+- desobediência → descumprimento de **ordem legal**, sem esses elementos típicos da resistência.
+
+## Art. 331 — desacato
 
 Desacatar funcionário público no exercício da função ou em razão dela. Pena: **detenção de 6 meses a 2 anos, ou multa**.
 
-O objeto da conduta muda: ordem legal no art. 330; ofensa/desacato ligado à função no art. 331.
+## Art. 332 — tráfico de influência
 
-## 7.4 Art. 332 — tráfico de influência
+Solicitar, exigir, cobrar ou obter vantagem/promessa, para si/outrem, **a pretexto de influir em ato praticado por funcionário público no exercício da função**. Pena: **reclusão de 2 a 5 anos e multa**.
 
-Solicitar, exigir, cobrar ou obter vantagem ou promessa de vantagem **a pretexto de influir em ato de funcionário público** no exercício da função. Pena: **reclusão de 2 a 5 anos e multa**.
+Se o agente alega ou insinua que a vantagem também se destina ao funcionário: aumento **da metade**.
 
-Se o agente alega ou insinua que a vantagem também se destina ao funcionário, a pena aumenta da metade.
-
-## 7.5 Art. 333 — corrupção ativa
+## Art. 333 — corrupção ativa
 
 Oferecer ou prometer vantagem indevida a funcionário público para determiná-lo a praticar, omitir ou retardar ato de ofício. Pena: **reclusão de 2 a 12 anos e multa**.
 
-Se, em razão da vantagem ou promessa, o funcionário retarda/omite o ato ou o pratica infringindo dever funcional, a pena aumenta de **1/3**.
+Se, em razão da vantagem/promessa, o funcionário retarda/omite ato ou o pratica infringindo dever funcional: aumento de **1/3**.
 
-### Tráfico de influência x corrupção ativa
+### 332 x 333
 
 | Tráfico de influência | Corrupção ativa |
 |---|---|
-| vantagem é pedida/obtida **a pretexto de influir** em funcionário | vantagem é **oferecida/prometida ao próprio funcionário** |
-| foco no intermediário que vende suposta influência | foco na tentativa de corromper o agente público |
+| agente vende suposta influência sobre ato de funcionário | agente oferece/promete vantagem ao funcionário |
+| vantagem é para o intermediário, a pretexto de influir | vantagem é instrumento para determinar o ato funcional |
+
+### Três mini-casos
+
+**Caso 1.** Particular ameaça servidor para impedir a execução de ato legal. Art. 329.
+
+**Caso 2.** Intermediário cobra dinheiro dizendo que consegue influenciar ato de funcionário. Art. 332.
+
+**Caso 3.** Particular oferece vantagem diretamente ao funcionário para que ele omita ato de ofício. Art. 333.
 
 ### Síntese DP-07
 
-A sequência para descarte é: houve exercício indevido de função? violência/ameaça contra ato legal? simples descumprimento de ordem? desacato? venda de influência? oferta direta de vantagem ao funcionário? Cada resposta aponta para um tipo diferente.
+Exercício indevido de função, violência/ameaça, ordem legal, desacato, venda de influência e oferta direta de vantagem são categorias distintas.
 
 ---
 
 # Unidade 8 — Edital, sinal, livro, processo e documento — DP-08
 
-## 8.1 Art. 336 — inutilização de edital ou sinal
+## Art. 336 — inutilização de edital ou de sinal
 
-O artigo abrange duas famílias de conduta:
+Rasgar, inutilizar ou conspurcar edital afixado por ordem de funcionário público; ou violar/inutilizar selo ou sinal empregado, por determinação legal ou ordem de funcionário, para identificar ou cerrar objeto. Pena: **detenção de 1 mês a 1 ano, ou multa**.
 
-- rasgar, inutilizar ou conspurcar edital afixado por ordem de funcionário público;
-- violar ou inutilizar selo ou sinal empregado, por determinação legal ou ordem de funcionário público, para identificar ou cerrar objeto.
+## Art. 337 — subtração ou inutilização de livro ou documento
 
-Pena: **detenção de 1 mês a 1 ano, ou multa**.
+Subtrair ou inutilizar, total ou parcialmente, **livro oficial, processo ou documento** confiado à custódia de funcionário em razão do ofício ou de particular em serviço público. Pena: **reclusão de 2 a 5 anos**, se o fato não constitui crime mais grave.
 
-## 8.2 Art. 337 — subtração ou inutilização de livro ou documento
+### Limite do edital
 
-Subtrair ou inutilizar, total ou parcialmente, **livro oficial, processo ou documento** confiado à custódia de funcionário em razão do ofício, ou de particular em serviço público.
+O recorte contém os arts. **336 e 337**. Os artigos posteriores com letras, como `337-A`, não entram automaticamente.
 
-Pena: **reclusão de 2 a 5 anos**, se o fato não constitui crime mais grave.
+### Três mini-casos
 
-### Par mínimo
+**Caso 1.** Pessoa rasga edital regularmente afixado por ordem de servidor. Art. 336.
 
-- danificar edital afixado ou selo/sinal de identificação/fechamento → art. 336;
-- subtrair/inutilizar livro oficial, processo ou documento sob custódia funcional → art. 337.
+**Caso 2.** Pessoa inutiliza selo usado por ordem funcional para cerrar objeto. Art. 336.
+
+**Caso 3.** Pessoa subtrai processo confiado à custódia de funcionário em razão do ofício. Art. 337.
 
 ### Síntese DP-08
 
-O objeto material resolve grande parte da questão: **edital/selo/sinal** versus **livro/processo/documento custodiado**.
+A chave é o objeto: **edital/selo/sinal** versus **livro/processo/documento sob custódia**.
 
 ---
 
 # Unidade 9 — Crimes contra a Administração da Justiça — DP-09
 
-## 9.1 Art. 339 — denunciação caluniosa
+## Art. 339 — denunciação caluniosa
 
-Dar causa à instauração de investigação ou procedimento contra alguém, imputando-lhe crime, infração ético-disciplinar ou ato ímprobo **sabendo-o inocente**.
+Dar causa à instauração de inquérito policial, procedimento investigatório criminal, processo judicial, PAD, inquérito civil ou ação de improbidade contra alguém, imputando-lhe crime, infração ético-disciplinar ou ato ímprobo **de que o sabe inocente**. Pena: **reclusão de 2 a 8 anos e multa**.
 
-O dispositivo alcança inquérito policial, procedimento investigatório criminal, processo judicial, PAD, inquérito civil e ação de improbidade administrativa.
+- anonimato ou nome suposto → aumento de **1/6**;
+- imputação de contravenção → diminuição **de metade**.
 
-Pena: **reclusão de 2 a 8 anos e multa**. O anonimato ou nome suposto aumenta a pena em **1/6**; se a imputação é contravenção, a pena é reduzida pela metade.
+## Art. 340 — comunicação falsa de crime ou contravenção
 
-## 9.2 Art. 340 — comunicação falsa de crime ou contravenção
+Provocar ação da autoridade comunicando ocorrência de crime ou contravenção que sabe não ter ocorrido. Pena: **detenção de 1 a 6 meses, ou multa**.
 
-Provocar a ação da autoridade comunicando crime ou contravenção que o agente sabe não ter ocorrido. Pena: **detenção de 1 a 6 meses, ou multa**.
+### 339 x 340
 
-### Denunciação caluniosa x comunicação falsa
+- 339 → falsa imputação contra **pessoa que o agente sabe inocente**, dando causa a procedimento;
+- 340 → comunicação de **ocorrência inexistente** que provoca ação da autoridade.
 
-- art. 339: a falsa imputação é dirigida **contra alguém que o agente sabe inocente** e dá causa à instauração de procedimento;
-- art. 340: comunica-se ocorrência inexistente, sem a estrutura típica de imputação a inocente do art. 339.
+## Art. 341 — autoacusação falsa
 
-## 9.3 Art. 341 — autoacusação falsa
+Acusar-se perante autoridade de crime inexistente ou praticado por outra pessoa. Pena: **detenção de 3 meses a 2 anos, ou multa**.
 
-Acusar-se, perante autoridade, de crime inexistente ou praticado por outra pessoa. Pena: **detenção de 3 meses a 2 anos, ou multa**.
+## Art. 342 — falso testemunho ou falsa perícia
 
-Aqui o próprio agente assume falsamente a autoria.
+Testemunha, perito, contador, tradutor ou intérprete faz afirmação falsa, nega ou cala a verdade em processo judicial/administrativo, inquérito policial ou juízo arbitral. Pena: **reclusão de 2 a 4 anos e multa**.
 
-## 9.4 Art. 342 — falso testemunho ou falsa perícia
+Aumento de **1/6 a 1/3** se o crime é praticado mediante suborno ou com a finalidade especial de obter prova destinada a produzir efeito em processo penal ou em processo civil em que seja parte entidade da Administração Pública direta/indireta.
 
-Testemunha, perito, contador, tradutor ou intérprete faz afirmação falsa, nega ou cala a verdade em processo judicial/administrativo, inquérito policial ou juízo arbitral.
+O fato deixa de ser punível se, **antes da sentença no processo em que ocorreu o ilícito**, o agente se retrata ou declara a verdade.
 
-Pena: **reclusão de 2 a 4 anos e multa**. Há aumento de **1/6 a 1/3** em hipóteses legais como suborno ou finalidade especial de produção de prova. O fato deixa de ser punível se, **antes da sentença no processo em que ocorreu o ilícito**, o agente se retrata ou declara a verdade.
+## Art. 343 — corrupção de testemunha, perito, contador, tradutor ou intérprete
 
-O momento da retratação é decisivo.
+Dar, oferecer ou prometer dinheiro/outra vantagem a esses sujeitos para fazer afirmação falsa, negar ou calar a verdade em depoimento, perícia, cálculos, tradução ou interpretação. Pena: **reclusão de 3 a 4 anos e multa**.
 
-## 9.5 Art. 343 — corrupção de testemunha, perito, contador, tradutor ou intérprete
+Aumento de **1/6 a 1/3** se o crime é cometido com o fim de obter prova destinada a produzir efeito em processo penal ou em processo civil em que seja parte entidade da Administração direta/indireta.
 
-Dar, oferecer ou prometer dinheiro ou vantagem a esses sujeitos para que façam afirmação falsa, neguem ou calem a verdade em sua atuação processual/técnica. Pena: **reclusão de 3 a 4 anos e multa**, com aumento em finalidade especial prevista no artigo.
+### 342 x 343
 
-A diferença para o art. 342 é de posição no fato: um artigo recai sobre quem falseia a atuação; o outro sobre quem oferece vantagem para produzir essa falsidade.
+- art. 342 → a pessoa chamada a produzir prova falseia/nega/cala a verdade;
+- art. 343 → terceiro dá, oferece ou promete vantagem para provocar essa falsidade.
 
-## 9.6 Art. 344 — coação no curso do processo
+## Art. 344 — coação no curso do processo
 
-Usar violência ou grave ameaça, com a finalidade de favorecer interesse próprio ou alheio, contra autoridade, parte ou pessoa que atua ou é chamada a intervir em processo judicial, policial ou administrativo ou em juízo arbitral.
+Usar violência ou grave ameaça, com o fim de favorecer interesse próprio/alheio, contra autoridade, parte ou pessoa que funciona ou é chamada a intervir em processo judicial, policial ou administrativo ou em juízo arbitral. Pena: **reclusão de 1 a 4 anos e multa**, além da pena correspondente à violência.
 
-Pena: **reclusão de 1 a 4 anos e multa**, além da pena da violência. Se o processo envolve crime contra a dignidade sexual, há aumento de **1/3 até 1/2**.
+Se o processo envolve crime contra a dignidade sexual, aumento de **1/3 até a metade**.
 
-## 9.7 Arts. 345 e 346 — exercício arbitrário das próprias razões
+## Art. 345 — exercício arbitrário das próprias razões
 
-### Art. 345
+Fazer justiça pelas próprias mãos para satisfazer pretensão, **ainda que legítima**, salvo quando a lei permite. Pena: **detenção de 15 dias a 1 mês, ou multa**, além da pena da violência.
 
-Fazer justiça pelas próprias mãos para satisfazer pretensão, **ainda que legítima**, salvo quando a lei permite. Pena: **detenção de 15 dias a 1 mês, ou multa**, além da violência. Sem violência, a ação penal depende de queixa.
+Se não há violência, somente se procede mediante **queixa**.
 
-O ponto-chave é que a pretensão pode ser legítima; o ilícito está no modo privado de realização fora das hipóteses legais.
+## Art. 346 — coisa própria em poder de terceiro
 
-### Art. 346
+Tirar, suprimir, destruir ou danificar **coisa própria** que se encontra em poder de terceiro por determinação judicial ou convenção. Pena: **detenção de 6 meses a 2 anos e multa**.
 
-Tirar, suprimir, destruir ou danificar **coisa própria** que está em poder de terceiro por determinação judicial ou convenção. Pena: **detenção de 6 meses a 2 anos e multa**.
+## Art. 347 — fraude processual
 
-## 9.8 Art. 347 — fraude processual
+Inovar artificiosamente, na pendência de processo civil ou administrativo, estado de lugar, coisa ou pessoa, com o fim de induzir a erro juiz ou perito. Pena: **detenção de 3 meses a 2 anos e multa**.
 
-Inovar artificiosamente, durante processo civil ou administrativo, o estado de lugar, coisa ou pessoa, com o fim de induzir a erro juiz ou perito.
+Se a inovação se destina a produzir efeito em **processo penal**, ainda que não iniciado, as penas são aplicadas **em dobro**.
 
-Pena: **detenção de 3 meses a 2 anos e multa**. Se a inovação visa produzir efeito em **processo penal**, ainda que não iniciado, as penas são aplicadas **em dobro**.
+### Três mini-casos
+
+**Caso 1.** Alguém imputa crime a pessoa determinada que sabe inocente e provoca a instauração de investigação. Art. 339.
+
+**Caso 2.** Testemunha mente e, antes da sentença do processo onde mentiu, retrata-se e declara a verdade. Incide a regra de não punibilidade do art. 342, § 2º.
+
+**Caso 3.** Agente altera artificiosamente o estado de uma coisa para produzir efeito em futuro processo penal. A forma especial do art. 347 dobra as penas, mesmo que o processo penal ainda não tenha começado.
 
 ### Síntese DP-09
 
-Neste bloco, a banca pode trocar apenas um elemento: alvo da falsa imputação, existência do crime comunicado, posição da pessoa no processo, momento da retratação, uso de violência/ameaça, legitimidade da pretensão ou natureza do processo. Leia o fato procurando esse elemento decisivo.
+Pessoa inocente x ocorrência inexistente, posição do sujeito na prova, momento da retratação, violência/ameaça, pretensão própria e espécie do processo são elementos decisivos.
 
 ---
 
 # Unidade 10 — Exploração de prestígio e desobediência a decisão judicial — DP-10
 
-## 10.1 Art. 357 — exploração de prestígio
+## Art. 357 — exploração de prestígio
 
-Solicitar ou receber dinheiro ou outra utilidade **a pretexto de influir** em juiz, jurado, órgão do Ministério Público, funcionário de justiça, perito, tradutor, intérprete ou testemunha.
+Solicitar ou receber dinheiro/outra utilidade **a pretexto de influir** em juiz, jurado, órgão do Ministério Público, funcionário de justiça, perito, tradutor, intérprete ou testemunha. Pena: **reclusão de 1 a 5 anos e multa**.
 
-Pena: **reclusão de 1 a 5 anos e multa**. Se o agente alega ou insinua que a utilidade também se destina a uma dessas pessoas, há aumento de **1/3**.
+Se o agente alega ou insinua que o dinheiro/utilidade também se destina a uma dessas pessoas: aumento de **1/3**.
 
-### Exploração de prestígio x tráfico de influência
+### Art. 332 x art. 357
 
-Os dois tipos trabalham com a venda de suposta influência, mas o art. 357 possui lista de destinatários ligada à Administração da Justiça; o art. 332 trata de influência em ato praticado por funcionário público no exercício da função.
+- art. 332 → influência sobre **ato de funcionário público no exercício da função**;
+- art. 357 → influência sobre o conjunto específico de atores da **Administração da Justiça** enumerado no artigo.
 
-## 10.2 Art. 359 — desobediência a decisão judicial sobre perda ou suspensão de direito
+## Art. 359 — desobediência a decisão judicial sobre perda ou suspensão de direito
 
-Exercer função, atividade, direito, autoridade ou múnus de que o agente foi **suspenso ou privado por decisão judicial**.
+Exercer função, atividade, direito, autoridade ou múnus de que a pessoa foi **suspensa ou privada por decisão judicial**. Pena: **detenção de 3 meses a 2 anos, ou multa**.
 
-Pena: **detenção de 3 meses a 2 anos, ou multa**.
+Não é qualquer descumprimento de ordem judicial. O tipo exige o exercício daquilo que foi objeto de suspensão/privação judicial.
 
-O núcleo não é qualquer descumprimento de ordem judicial. O tipo exige exercício daquilo de que a pessoa foi judicialmente suspensa ou privada.
+### Art. 324 x art. 359
 
-### Mini-caso
+Os dois textos podem se aproximar quando o enunciado usa genericamente a ideia de “continuar exercendo função”. Para leitura segura do recorte:
 
-Uma decisão judicial suspende determinada função exercida pelo condenado. Se ele continua a exercê-la conscientemente, o elemento específico é a retomada/continuação da função abrangida pela suspensão, o que diferencia o art. 359 de uma noção genérica de desobediência.
+- **art. 324:** trata especificamente de **função pública**, seja pelo ingresso antes das exigências legais, seja pela continuação sem autorização após ciência oficial de exoneração, remoção, substituição ou suspensão;
+- **art. 359:** alcança função, atividade, direito, autoridade ou múnus de que houve suspensão ou privação **por decisão judicial**.
+
+A letra desses dois artigos, sozinha, não autoriza criar uma regra geral de concurso de normas para hipóteses que reúnam simultaneamente elementos de ambos. Por isso, os exemplos e as questões desta apostila isolam o elemento textual decisivo em vez de importar solução jurisprudencial não prevista no recorte.
+
+### Três mini-casos
+
+**Caso 1.** Intermediário pede dinheiro afirmando que influenciará um juiz. Art. 357.
+
+**Caso 2.** Intermediário pede dinheiro alegando influência sobre ato de servidor público comum, fora do elenco especial do art. 357. O contraste relevante é o art. 332.
+
+**Caso 3.** Decisão judicial suspende o exercício de determinada atividade privada; mesmo ciente, a pessoa continua a exercê-la. O art. 359 é a referência textual do recorte. O art. 324, em contraste, trata da função pública nas hipóteses funcionais que enumera.
 
 ### Síntese DP-10
 
-- art. 357: dinheiro/utilidade + pretexto de influência sobre sujeitos ligados à Justiça;
-- art. 359: exercício de função/atividade/direito/autoridade/múnus judicialmente suspenso ou perdido.
+Quem é o alvo da suposta influência, qual é a atividade/direito atingido e se a suspensão decorre de decisão judicial são as perguntas centrais.
 
 ---
 
-# Quadro de contrastes essenciais
+# Quadro geral de contrastes
 
-| Par de tipos | Pergunta decisiva |
+| Contraste | Critério decisivo |
 |---|---|
-| art. 293 x 294 | falsificou o papel ou lidou com objeto especialmente destinado à falsificação? |
-| 297/298 x 299 | a falsidade é material ou está no conteúdo declarado? |
-| 304 x 305 | usou documento falso ou suprimiu documento verdadeiro? |
-| 307 x 308 | atribuiu identidade falsa ou usou/cedeu documento de identidade alheio? |
-| 313-A x 313-B | manipulou dados com finalidade especial ou alterou sistema/programa sem autorização? |
-| 312 x 315 | apropriou/desviou bem em razão do cargo ou deu verba pública aplicação legalmente diversa? |
-| 316 x 317 | exigiu vantagem ou solicitou/recebeu/aceitou promessa? |
-| 319 x 320 | ato de ofício por interesse pessoal ou indulgência com infração de subordinado? |
-| 329 x 330 | houve violência/ameaça contra execução de ato legal ou simples desobediência a ordem legal? |
-| 332 x 333 | vendeu suposta influência ou ofereceu vantagem ao próprio funcionário? |
-| 336 x 337 | edital/selo/sinal ou livro/processo/documento sob custódia? |
-| 339 x 340 | imputação a inocente que gera procedimento ou comunicação de ocorrência inexistente? |
-| 342 x 343 | sujeito falseia a verdade ou alguém oferece vantagem para induzi-lo a falsear? |
-| 332 x 357 | influência sobre funcionário público em geral ou sobre os sujeitos específicos da Administração da Justiça? |
+| 293 x 294 | papel falsificado x objeto especialmente destinado à falsificação |
+| 297/298 x 299 | falsidade material x conteúdo ideologicamente falso |
+| 304 x 305 | uso de documento falso x supressão de documento verdadeiro |
+| 307 x 308 | identidade falsa x documento de identidade alheio |
+| 313-A x 313-B | dados com finalidade especial x sistema/programa sem autorização |
+| 312 x 315 | apropriação/desvio de bem x aplicação legalmente diversa de verba/renda |
+| 316 x 317 | exigir x solicitar/receber/aceitar promessa |
+| 319 x 320 | interesse/sentimento pessoal x indulgência com subordinado |
+| 324 x 359 | estado funcional de função pública x suspensão/privação por decisão judicial de função/atividade/direito/autoridade/múnus |
+| 329 x 330 | violência/ameaça contra ato legal x desobediência a ordem legal |
+| 332 x 333 | venda de suposta influência x vantagem oferecida ao funcionário |
+| 336 x 337 | edital/selo/sinal x livro/processo/documento custodiado |
+| 339 x 340 | imputação contra inocente x comunicação de ocorrência inexistente |
+| 342 x 343 | falsidade pelo sujeito da prova x vantagem oferecida para provocar falsidade |
+| 332 x 357 | funcionário público em geral x atores específicos da Justiça |
 
 ---
 
 # Prática objetiva autoral
 
-Responda sem consultar o gabarito. Todas as questões possuem cinco alternativas.
+As 30 questões abaixo são autorais. Cada bloco contém três mini-casos e corresponde a uma unidade DP da matriz.
 
-## Questões 1–3 — DP-01
+## DP-01 — questões 1 a 3
 
-**1.** Uma pessoa mantém em depósito equipamento especialmente preparado para produzir os papéis públicos descritos no art. 293, sem ainda ter falsificado qualquer papel. A figura mais diretamente relacionada à conduta é:
+**1.** Renato guarda, em oficina clandestina, equipamento especialmente construído para falsificar os papéis públicos descritos no art. 293. Ainda não chegou a fabricar nenhum papel. Considerando apenas o recorte estudado, a figura mais diretamente aplicável é:
 
-A) uso de documento falso.  
+A) falsidade ideológica.  
 B) petrechos de falsificação.  
-C) falsidade ideológica.  
+C) uso de documento falso.  
 D) supressão de documento.  
 E) falsa identidade.
 
-**2.** Para a incidência do aumento previsto no art. 295, é necessário que:
+**2.** Elisa recebeu de boa-fé um papel falsificado abrangido pelo art. 293. Depois de descobrir a falsidade, decidiu recolocá-lo em circulação. A situação possui tratamento próprio porque:
 
-A) o agente seja funcionário público, independentemente da relação do cargo com o fato.  
-B) qualquer particular atue em concurso com funcionário público.  
-C) o funcionário pratique o crime prevalecendo-se do cargo.  
-D) o papel falsificado pertença à União.  
-E) o resultado cause dano efetivo à Administração.
+A) todo recebimento de boa-fé torna o fato definitivamente atípico.  
+B) o uso posterior ao conhecimento da falsidade é expressamente disciplinado.  
+C) a lei exige que Elisa seja funcionária pública.  
+D) o art. 293 trata apenas da fabricação e nunca do uso.  
+E) a pena passa obrigatoriamente a ser a do art. 294.
 
-**3.** Alguém recebe de boa-fé papel abrangido pelo art. 293, posteriormente descobre a falsidade e, mesmo assim, o recoloca em circulação. O dado que muda a análise jurídica é:
+**3.** Servidor utiliza acesso funcional para falsificar papel do art. 293, prevalecendo-se do cargo. Além da figura-base, deve-se examinar:
 
-A) o valor econômico do papel.  
-B) a descoberta posterior da falsidade antes do novo uso.  
-C) a inexistência de funcionário público envolvido.  
-D) a ausência de falsificação material pelo próprio agente.  
-E) o fato de o documento ter sido recebido gratuitamente.
+A) aumento de 1/6 previsto no art. 295.  
+B) diminuição obrigatória de metade.  
+C) extinção da punibilidade.  
+D) conversão automática em falsidade ideológica.  
+E) aplicação exclusiva de multa.
 
-## Questões 4–6 — DP-02
+## DP-02 — questões 4 a 6
 
-**4.** A adulteração física de um documento particular verdadeiro e a inserção de declaração falsa em documento formalmente verdadeiro diferenciam-se, em regra, porque a primeira aponta para falsidade:
+**4.** Caio altera fisicamente um documento particular verdadeiro. Em outro fato, Lúcia insere informação falsa juridicamente relevante em documento materialmente autêntico para criar obrigação. Os eixos jurídicos predominantes são, respectivamente:
 
-A) ideológica; e a segunda, material.  
-B) material; e a segunda, ideológica.  
-C) de identidade; e a segunda, de selo.  
-D) de atestado; e a segunda, de assinatura.  
-E) processual; e a segunda, documental.
+A) falsidade ideológica e falsidade material.  
+B) falsidade material e falsidade ideológica.  
+C) falsa identidade e uso de documento falso.  
+D) supressão e reconhecimento falso de firma.  
+E) falsidade de atestado e fraude processual.
 
-**5.** Para o art. 298, o Código Penal equipara expressamente a documento particular:
+**5.** Médica, no exercício da profissão, fornece conscientemente atestado falso. O tipo específico estudado é:
 
-A) apenas passaporte.  
-B) cartão de crédito ou débito.  
-C) somente testamento público.  
-D) qualquer selo oficial.  
-E) qualquer processo judicial.
+A) art. 300.  
+B) art. 301, necessariamente.  
+C) art. 302.  
+D) art. 304.  
+E) art. 305.
 
-**6.** O agente destrói documento particular verdadeiro, de que não podia dispor, para beneficiar terceiro. O contraste mais importante é que:
+**6.** Bruno destrói documento particular verdadeiro de que não podia dispor, visando beneficiar terceiro. A chave que afasta o art. 304 e aponta ao art. 305 é:
 
-A) o art. 304 exige documento verdadeiro e o art. 305 exige documento falso.  
-B) o art. 305 trabalha com documento verdadeiro suprimido/destruído/ocultado.  
-C) o fato é necessariamente falsidade ideológica.  
-D) o tipo exige que o documento seja exclusivamente público.  
-E) a conduta só é típica se houver funcionário público.
+A) o documento ser verdadeiro e ser objeto de destruição/supressão/ocultação.  
+B) a necessidade de função pública.  
+C) a falsidade material do documento.  
+D) o uso do documento como se fosse autêntico.  
+E) a existência de selo tributário.
 
-## Questões 7–9 — DP-03
+## DP-03 — questões 7 a 9
 
-**7.** Pessoa assume verbalmente identidade falsa, com a finalidade legalmente prevista, sem apresentar documento de terceiro. O contraste central aponta para:
+**7.** Para obter vantagem, pessoa se apresenta verbalmente com identidade falsa, sem usar documento de terceiro. O tipo de referência é:
 
 A) art. 307.  
 B) art. 308.  
 C) art. 304.  
-D) art. 299.  
+D) art. 305.  
 E) art. 337.
 
-**8.** Pessoa apresenta como próprio o documento de identidade verdadeiro de outra pessoa. O elemento que diferencia a situação da falsa identidade do art. 307 é:
+**8.** Pessoa apresenta como próprio o passaporte verdadeiro de outra pessoa. O elemento que conduz ao art. 308 é:
 
-A) a existência de vantagem econômica.  
-B) a presença de funcionário público.  
-C) o uso de documento de identidade alheio.  
-D) a falsificação material do documento.  
-E) a necessidade de dano efetivo.
+A) simples mentira sobre a profissão.  
+B) uso, como próprio, de documento de identidade alheio.  
+C) alteração física do passaporte.  
+D) destruição do documento.  
+E) necessidade de prejuízo patrimonial efetivo.
 
-**9.** O art. 308 também alcança quem:
+**9.** Titular entrega voluntariamente seu documento de identidade a terceiro para que este o use como se fosse próprio. Pelo texto estudado:
 
-A) apenas inventa nome falso sem documento.  
-B) cede documento de identidade, próprio ou de terceiro, para que outra pessoa o utilize.  
-C) altera documento público verdadeiro.  
-D) destrói documento alheio.  
-E) omite declaração juridicamente relevante em contrato.
+A) a cessão está fora do art. 308.  
+B) somente o usuário pode ser alcançado.  
+C) a cessão do documento para esse uso também é prevista no art. 308.  
+D) o fato só pode ser analisado pelo art. 299.  
+E) exige-se falsificação material prévia.
 
-## Questões 10–12 — DP-04
+## DP-04 — questões 10 a 12
 
-**10.** No art. 311-A, utilizar ou divulgar conteúdo sigiloso de certame exige, no caput, finalidade de:
+**10.** Candidato divulga conteúdo sigiloso de concurso público para beneficiar amigo inscrito. O conjunto de elementos mais característico do art. 311-A é:
 
-A) apenas obter lucro.  
-B) beneficiar alguém ou comprometer a credibilidade do certame.  
-C) impedir o funcionamento de repartição pública.  
-D) desacatar funcionário público.  
-E) falsificar documento de inscrição.
+A) conteúdo sigiloso + certame abrangido + finalidade típica.  
+B) documento público + destruição + prejuízo.  
+C) vantagem exigida por funcionário.  
+D) violência contra autoridade.  
+E) mera violação de regra administrativa sem sigilo.
 
-**11.** Servidor permite que pessoa não autorizada acesse conteúdo sigiloso de concurso público. Para o art. 311-A, a melhor leitura é:
+**11.** Servidor facilita acesso de pessoa não autorizada ao conteúdo sigiloso de prova, mas não divulga pessoalmente o material. A afirmação correta é:
 
-A) a conduta é irrelevante se o servidor não divulgar pessoalmente o conteúdo.  
-B) permitir/facilitar acesso não autorizado é forma expressamente alcançada pelo dispositivo.  
-C) só há crime se o certame for universitário.  
-D) exige-se sempre dano efetivo à Administração.  
-E) a qualidade de funcionário exclui a incidência do tipo.
+A) a facilitação de acesso não autorizado é forma expressamente alcançada.  
+B) a ausência de divulgação pessoal elimina a tipicidade em qualquer hipótese.  
+C) o dispositivo só alcança exames universitários.  
+D) o crime exige dano efetivo à Administração em todas as formas.  
+E) funcionário público nunca pode ser sujeito do fato.
 
-**12.** Se a ação ou omissão do art. 311-A resulta dano à Administração Pública:
+**12.** Da ação ou omissão descrita no art. 311-A resulta dano à Administração Pública. Segundo a consequência expressa no § 2º, a pena passa a ser:
 
-A) a lei prevê consequência penal mais grave.  
-B) o fato deixa de ser punível.  
-C) a pena é necessariamente substituída por multa.  
-D) o crime passa a ser falsidade ideológica.  
-E) a qualidade de certame deixa de ser relevante.
+A) reclusão de 2 a 6 anos e multa.  
+B) apenas multa, sem pena privativa de liberdade.  
+C) detenção de 15 dias a 1 mês, ou multa.  
+D) reclusão de 1 a 4 anos sem multa.  
+E) redução obrigatória da pena pela metade.
 
-## Questões 13–15 — DP-05
+## DP-05 — questões 13 a 15
 
-**13.** No peculato culposo, a reparação do dano antes da sentença irrecorrível:
+**13.** Funcionário concorre culposamente para peculato praticado por outro e repara integralmente o dano antes da sentença irrecorrível. Na forma culposa, a reparação:
 
-A) não produz efeito.  
-B) apenas reduz a pena em 1/3.  
-C) extingue a punibilidade.  
-D) transforma o crime em peculato doloso.  
-E) exclui apenas a multa.
+A) apenas reduz a pena em 1/3.  
+B) extingue a punibilidade.  
+C) é juridicamente irrelevante.  
+D) transforma o fato em peculato doloso.  
+E) exclui somente a multa.
 
-**14.** Funcionário autorizado altera dados corretos em banco de dados da Administração para obter vantagem indevida. A figura mais diretamente relacionada é:
+**14.** Funcionário autorizado altera dado correto em banco de dados da Administração com o fim de obter vantagem indevida. O contraste mais adequado é:
 
-A) art. 313-A.  
-B) art. 313-B, necessariamente.  
-C) art. 315.  
-D) art. 320.  
-E) art. 337.
+A) art. 313-A, por manipulação de dados com finalidade específica.  
+B) art. 313-B, pois qualquer alteração informática é necessariamente desse artigo.  
+C) art. 315, por emprego de verba.  
+D) art. 320, por indulgência.  
+E) art. 337, por subtração de processo.
 
-**15.** A diferença nuclear entre concussão e corrupção passiva está, respectivamente, nos verbos:
+**15.** Agente público, em razão da função, impõe ao particular o pagamento de vantagem indevida. A palavra do enunciado que melhor separa concussão de corrupção passiva é:
 
-A) receber e exigir.  
-B) exigir e solicitar/receber/aceitar promessa.  
-C) oferecer e exigir.  
-D) omitir e receber.  
-E) desviar e solicitar.
+A) recebe.  
+B) aceita.  
+C) exige.  
+D) promete.  
+E) comunica.
 
-## Questões 16–18 — DP-06
+## DP-06 — questões 16 a 18
 
-**16.** Funcionário deixa de praticar ato de ofício para satisfazer sentimento pessoal. O elemento que direciona ao art. 319 é:
+**16.** Funcionário deixa de praticar ato de ofício para satisfazer sentimento pessoal. Qual elemento indica prevaricação em vez de condescendência criminosa?
 
-A) a indulgência com subordinado.  
-B) a finalidade de satisfazer interesse ou sentimento pessoal.  
-C) a exigência de vantagem indevida.  
-D) a apropriação de bem móvel.  
-E) a violência contra particular.
+A) relação de subordinação da vítima.  
+B) interesse ou sentimento pessoal como finalidade da omissão.  
+C) exigência de vantagem econômica.  
+D) emprego de violência.  
+E) falsificação de documento.
 
-**17.** Chefe, por indulgência, deixa de responsabilizar subordinado por infração funcional e não comunica o fato quando caberia fazê-lo. A figura de contraste é:
+**17.** Chefe, por indulgência, deixa de responsabilizar subordinado que praticou infração funcional. O tipo específico é:
 
-A) condescendência criminosa.  
-B) corrupção ativa.  
-C) resistência.  
-D) falso testemunho.  
-E) usurpação de função.
+A) prevaricação.  
+B) condescendência criminosa.  
+C) advocacia administrativa.  
+D) abandono de função.  
+E) corrupção ativa.
 
-**18.** Para efeitos penais, o art. 327 considera funcionário público:
+**18.** Empregado de empresa contratada para executar atividade típica da Administração pratica conduta cuja tipificação depende do conceito penal de funcionário público. Segundo o art. 327:
 
-A) somente servidor efetivo e remunerado.  
-B) apenas ocupante de cargo estatutário.  
-C) quem exerce cargo, emprego ou função pública, ainda que transitoriamente ou sem remuneração.  
-D) apenas agente aprovado em concurso.  
-E) exclusivamente ocupante de função de direção.
+A) a equiparação é impossível porque ele não ocupa cargo estatutário.  
+B) a equiparação pode alcançar quem trabalha para empresa contratada/conveniada para atividade típica da Administração.  
+C) somente quem recebe remuneração diretamente do Estado pode ser funcionário público para fins penais.  
+D) somente servidor efetivo entra no conceito.  
+E) a transitoriedade sempre exclui a qualidade funcional.
 
-## Questões 19–21 — DP-07
+## DP-07 — questões 19 a 21
 
-**19.** O agente se opõe à execução de ato legal mediante grave ameaça ao funcionário competente. O elemento que afasta a simples desobediência e aponta para resistência é:
+**19.** Particular ameaça funcionário para impedir a execução de ato legal. A violência/ameaça na oposição ao ato diferencia:
 
-A) a existência de ordem escrita.  
-B) a violência ou ameaça na oposição ao ato legal.  
-C) o recebimento de vantagem.  
-D) a condição de servidor do agente.  
-E) o dano patrimonial.
+A) resistência de desobediência.  
+B) desacato de falsa identidade.  
+C) corrupção ativa de peculato.  
+D) tráfico de influência de exploração de prestígio.  
+E) supressão de falsidade ideológica.
 
-**20.** Pessoa pede dinheiro afirmando que consegue influenciar ato de funcionário público. Em vez de oferecer a vantagem diretamente ao funcionário, vende sua suposta influência. O contraste central é:
-
-A) tráfico de influência.  
-B) corrupção ativa.  
-C) concussão.  
-D) desacato.  
-E) abandono de função.
-
-**21.** Oferecer vantagem indevida diretamente a funcionário público para determiná-lo a omitir ato de ofício corresponde, no recorte, a:
+**20.** Intermediário cobra dinheiro dizendo que consegue influenciar ato de funcionário público. Ele não oferece a vantagem ao servidor; vende sua suposta influência. O tipo central é:
 
 A) corrupção ativa.  
 B) tráfico de influência.  
-C) advocacia administrativa.  
-D) exploração de prestígio.  
+C) concussão.  
+D) prevaricação.  
+E) desacato.
+
+**21.** Particular oferece vantagem indevida diretamente a funcionário para determiná-lo a omitir ato de ofício. A figura é:
+
+A) exploração de prestígio.  
+B) tráfico de influência.  
+C) corrupção ativa.  
+D) advocacia administrativa.  
 E) denunciação caluniosa.
 
-## Questões 22–24 — DP-08
+## DP-08 — questões 22 a 24
 
-**22.** Rasgar edital afixado por ordem de funcionário público é conduta ligada ao:
+**22.** Pessoa rasga edital afixado por ordem de funcionário público. A figura do recorte é:
 
 A) art. 336.  
 B) art. 337.  
@@ -769,7 +848,15 @@ C) art. 305.
 D) art. 314.  
 E) art. 359.
 
-**23.** Subtrair processo confiado à custódia de funcionário em razão do ofício corresponde ao núcleo do:
+**23.** Pessoa inutiliza selo empregado por determinação legal para cerrar objeto. A conduta, no recorte estudado, é alcançada por:
+
+A) art. 336.  
+B) art. 337.  
+C) art. 339.  
+D) art. 343.  
+E) art. 357.
+
+**24.** Pessoa subtrai processo confiado à custódia de funcionário em razão do ofício. O objeto material direciona a análise para:
 
 A) art. 336.  
 B) art. 337.  
@@ -777,125 +864,118 @@ C) art. 330.
 D) art. 341.  
 E) art. 357.
 
-**24.** A fronteira mais útil entre os arts. 336 e 337 é identificar:
+## DP-09 — questões 25 a 27
 
-A) se existe vantagem econômica.  
-B) se o agente é reincidente.  
-C) o objeto material: edital/selo/sinal versus livro/processo/documento custodiado.  
-D) se há concurso de pessoas.  
-E) se a vítima é pessoa jurídica.
+**25.** Alguém provoca investigação contra pessoa determinada, imputando-lhe crime que sabe não ter sido praticado por ela. O elemento que distingue essa hipótese da comunicação falsa do art. 340 é:
 
-## Questões 25–27 — DP-09
+A) a imputação contra alguém que o agente sabe inocente, dando causa ao procedimento.  
+B) o simples contato com autoridade.  
+C) a existência de qualquer documento.  
+D) a qualidade de funcionário público do autor.  
+E) a ocorrência obrigatória de dano patrimonial.
 
-**25.** Alguém provoca investigação contra pessoa determinada, imputando-lhe crime que sabe que ela não praticou. O elemento que distingue a denunciação caluniosa da comunicação falsa é:
+**26.** Testemunha faz afirmação falsa em processo e, antes da sentença nesse mesmo processo, retrata-se e declara a verdade. A consequência expressa no art. 342 é:
 
-A) haver qualquer contato com autoridade.  
-B) a imputação contra alguém que o agente sabe inocente, dando causa ao procedimento.  
-C) existir documento público.  
-D) o agente ser funcionário público.  
-E) o fato ocorrer em processo civil.
+A) aumento de 1/3.  
+B) fato deixa de ser punível.  
+C) pena aplicada em dobro.  
+D) conversão em comunicação falsa.  
+E) irrelevância completa da retratação.
 
-**26.** Testemunha que mentiu em processo declara a verdade antes da sentença no processo em que ocorreu o ilícito. No art. 342, essa retratação tempestiva:
+**27.** Agente altera artificiosamente o estado de uma coisa para induzir a erro e produzir efeito em processo penal ainda não iniciado. No art. 347:
 
-A) não produz efeito.  
-B) aumenta a pena.  
-C) faz o fato deixar de ser punível.  
-D) converte o crime em comunicação falsa.  
-E) exige necessariamente reparação civil.
+A) as penas são aplicadas em dobro.  
+B) o fato é atípico porque o processo penal não começou.  
+C) a pena é reduzida pela metade.  
+D) exige-se que o agente seja perito.  
+E) aplica-se apenas multa.
 
-**27.** Inovação artificiosa destinada a produzir efeito em processo penal, ainda que não iniciado, recebe no art. 347:
+## DP-10 — questões 28 a 30
 
-A) redução pela metade.  
-B) duplicação das penas.  
-C) apenas multa.  
-D) causa de extinção da punibilidade.  
-E) tratamento idêntico ao processo civil sem qualquer regra especial.
+**28.** Intermediário solicita dinheiro a pretexto de influir em juiz. A figura específica do recorte é:
 
-## Questões 28–30 — DP-10
+A) tráfico de influência do art. 332, necessariamente.  
+B) exploração de prestígio do art. 357.  
+C) corrupção ativa.  
+D) concussão.  
+E) prevaricação.
 
-**28.** Solicitar dinheiro a pretexto de influir em juiz enquadra-se mais diretamente em:
+**29.** Decisão judicial suspende o exercício de determinada atividade privada. Mesmo ciente, a pessoa continua a exercê-la. Considerando o recorte estudado, a referência textual é:
 
-A) exploração de prestígio.  
-B) corrupção ativa.  
-C) concussão.  
-D) falsa identidade.  
-E) exercício arbitrário das próprias razões.
+A) art. 330.  
+B) art. 359.  
+C) art. 324.  
+D) art. 341.  
+E) art. 357.
 
-**29.** O art. 359 exige, como elemento específico, que o agente:
+**30.** Para distinguir tráfico de influência (art. 332) de exploração de prestígio (art. 357), o critério textual mais útil é:
 
-A) simplesmente descumpra qualquer ordem administrativa.  
-B) exerça função, atividade, direito, autoridade ou múnus de que foi suspenso ou privado por decisão judicial.  
-C) ofereça vantagem a funcionário público.  
-D) deixe de praticar ato de ofício por sentimento pessoal.  
-E) use documento de identidade alheio.
-
-**30.** Para diferenciar tráfico de influência do art. 332 e exploração de prestígio do art. 357, é especialmente útil observar:
-
-A) apenas o valor da vantagem.  
-B) o conjunto de pessoas sobre as quais o agente afirma poder influir e o contexto funcional/judicial.  
-C) a idade do agente.  
-D) se a vantagem é paga em dinheiro ou bem.  
-E) se houve prisão em flagrante.
+A) valor econômico da vantagem.  
+B) identidade do conjunto de pessoas sobre as quais se alega influência e o contexto funcional/judicial.  
+C) existência obrigatória de violência.  
+D) nacionalidade do agente.  
+E) momento do pagamento.
 
 ---
 
 # Gabarito comentado
 
 **1. B.** O art. 294 recai sobre objeto especialmente destinado à falsificação dos papéis do art. 293.  
-**2. C.** A majorante depende de funcionário público que pratica o crime prevalecendo-se do cargo.  
-**3. B.** O conhecimento posterior da falsidade antes do uso/recolocação é o elemento que altera a hipótese legal.
+**2. B.** O § 4º do art. 293 disciplina quem recebeu de boa-fé e usa/restitui à circulação depois de conhecer a falsidade.  
+**3. A.** O art. 295 aumenta em 1/6 a pena quando funcionário pratica o crime prevalecendo-se do cargo.
 
-**4. B.** Alteração física/documental é falsidade material; conteúdo falso em documento formalmente autêntico aponta para falsidade ideológica.  
-**5. B.** O art. 298 equipara cartão de crédito ou débito a documento particular.  
-**6. B.** No art. 305, o objeto é documento verdadeiro que o agente não podia dispor e destrói, suprime ou oculta.
+**4. B.** Alteração física é falsidade material; conteúdo falso em documento materialmente autêntico aponta para falsidade ideológica.  
+**5. C.** O art. 302 é específico para o médico que fornece atestado falso no exercício profissional.  
+**6. A.** O art. 305 trata de documento verdadeiro que o agente não podia dispor e destrói, suprime ou oculta.
 
-**7. A.** Atribuição de identidade falsa, sem documento alheio, é a estrutura do art. 307.  
-**8. C.** O art. 308 exige o objeto específico: documento de identidade alheio usado como próprio.  
-**9. B.** A cessão de documento dessa natureza para uso por outra pessoa também integra o art. 308.
+**7. A.** O art. 307 trabalha com atribuição de identidade falsa e finalidade típica.  
+**8. B.** O objeto específico do art. 308 é documento de identidade alheio usado como próprio.  
+**9. C.** O próprio art. 308 também alcança a cessão para que outro utilize documento dessa natureza.
 
-**10. B.** O caput exige finalidade de beneficiar alguém ou comprometer a credibilidade do certame.  
-**11. B.** O §1º alcança quem permite ou facilita acesso de não autorizado.  
-**12. A.** O resultado danoso à Administração leva à forma com pena mais grave.
+**10. A.** O art. 311-A combina conteúdo sigiloso, certame abrangido, verbo típico e finalidade específica.  
+**11. A.** O § 1º pune quem permite ou facilita acesso de pessoa não autorizada.  
+**12. A.** O § 2º prevê reclusão de 2 a 6 anos e multa quando da ação ou omissão resulta dano à Administração Pública.
 
-**13. C.** No peculato culposo, reparação anterior à sentença irrecorrível extingue a punibilidade.  
-**14. A.** O art. 313-A trata de inserção/alteração/exclusão indevida de dados por funcionário autorizado, com finalidade específica.  
-**15. B.** Concussão: exigir. Corrupção passiva: solicitar/receber/aceitar promessa.
+**13. B.** No peculato culposo, reparação anterior à sentença irrecorrível extingue a punibilidade.  
+**14. A.** O art. 313-A recai sobre dados e exige a finalidade legal; 313-B recai sobre sistema/programa e falta de autorização.  
+**15. C.** “Exigir” é o núcleo da concussão; corrupção passiva usa solicitar/receber/aceitar promessa.
 
-**16. B.** Interesse ou sentimento pessoal é a finalidade específica da prevaricação.  
-**17. A.** Indulgência diante da infração de subordinado é o sinal típico da condescendência criminosa.  
-**18. C.** O conceito penal inclui exercício transitório e sem remuneração.
+**16. B.** Interesse ou sentimento pessoal é elemento decisivo do art. 319.  
+**17. B.** Indulgência diante de infração do subordinado define a condescendência criminosa.  
+**18. B.** O § 1º do art. 327 contempla essa hipótese de equiparação funcional.
 
-**19. B.** Resistência exige oposição mediante violência ou ameaça à execução de ato legal.  
-**20. A.** Vender a suposta influência sobre funcionário, pedindo/obtendo vantagem, caracteriza o contraste do art. 332.  
-**21. A.** A oferta/promessa direta de vantagem ao funcionário para influenciar ato de ofício é corrupção ativa.
+**19. A.** Resistência exige oposição mediante violência ou ameaça à execução de ato legal; desobediência recai sobre ordem legal.  
+**20. B.** O art. 332 pune a vantagem cobrada/obtida a pretexto de influir em ato de funcionário.  
+**21. C.** A oferta/promessa direta de vantagem para determinar ato de ofício é corrupção ativa.
 
-**22. A.** Edital afixado, selo ou sinal estão no art. 336.  
-**23. B.** Livro oficial, processo ou documento confiado à custódia funcional estão no art. 337.  
-**24. C.** O objeto material é a chave mais rápida de separação entre as duas figuras.
+**22. A.** Edital afixado integra o art. 336.  
+**23. A.** Selo/sinal usado para identificar ou cerrar objeto integra o art. 336.  
+**24. B.** Livro oficial, processo ou documento sob custódia funcional integram o art. 337.
 
-**25. B.** O art. 339 exige imputação contra pessoa que o agente sabe inocente e instauração do procedimento correspondente.  
-**26. C.** Retratação ou declaração da verdade antes da sentença no processo em que ocorreu o ilícito torna o fato não punível.  
-**27. B.** A finalidade de produzir efeito em processo penal, ainda que não iniciado, dobra as penas da fraude processual.
+**25. A.** Denunciação caluniosa exige que se dê causa ao procedimento contra alguém mediante imputação de fato de que o agente o sabe inocente.  
+**26. B.** Retratação ou declaração da verdade antes da sentença no processo em que ocorreu o ilícito torna o fato não punível.  
+**27. A.** Para produzir efeito em processo penal, ainda que não iniciado, a fraude processual tem penas em dobro.
 
-**28. A.** Juiz está entre os sujeitos expressamente indicados no art. 357.  
-**29. B.** O tipo é específico: exercício da função/atividade/direito/autoridade/múnus do qual houve suspensão ou privação judicial.  
-**30. B.** O art. 357 está ligado aos sujeitos listados da Administração da Justiça; o art. 332 trabalha com influência sobre ato de funcionário público.
+**28. B.** Juiz está expressamente no elenco do art. 357.  
+**29. B.** O art. 359 alcança o exercício de atividade da qual houve suspensão ou privação por decisão judicial; o art. 324 trata especificamente de função pública nas hipóteses funcionais que enumera.  
+**30. B.** O art. 357 possui elenco específico de atores da Administração da Justiça; o art. 332 fala em ato de funcionário público.
 
 ---
 
 # Síntese final de recuperação
 
-Se você tiver poucos minutos para revisar, recupere estas chaves:
+Em revisão rápida, recupere estas chaves:
 
-1. **objeto** separa vários crimes de falsidade e os arts. 336/337;
-2. **materialidade x conteúdo** separa falsidade material da ideológica;
-3. **identidade declarada x documento alheio** separa 307/308;
-4. **dado x sistema** separa 313-A/313-B;
-5. **exigir x solicitar/receber/aceitar promessa** separa concussão/corrupção passiva;
-6. **interesse pessoal x indulgência com subordinado** separa prevaricação/condescendência;
-7. **violência ou ameaça x simples ordem legal descumprida** separa resistência/desobediência;
-8. **venda de influência x oferta direta ao funcionário** separa tráfico de influência/corrupção ativa;
-9. **imputar a inocente x comunicar ocorrência inexistente** separa denunciação caluniosa/comunicação falsa;
-10. **vender influência sobre atores da Justiça x exercer direito judicialmente suspenso** separa as duas figuras finais do recorte.
+1. papel especial do art. 293 x documento público geral do art. 297;
+2. falsidade material x ideológica;
+3. identidade declarada x documento de identidade alheio;
+4. dados x sistema/programa;
+5. exigir x solicitar/receber/aceitar promessa;
+6. interesse pessoal x indulgência com subordinado;
+7. estado funcional de função pública do art. 324 x suspensão/privação judicial do art. 359;
+8. violência/ameaça contra ato legal x desobediência a ordem legal;
+9. venda de influência x oferta direta ao funcionário;
+10. imputação a inocente x comunicação de ocorrência inexistente;
+11. influência sobre funcionário em geral x elenco específico da Administração da Justiça.
 
-Este texto ainda é draft. Antes de release, cada afirmação normativa e cada questão deve passar pelo QA específico do pack contra o Código Penal oficial e o baseline do edital.
+O conteúdo textual e as 30 questões autorais passaram pelo QA editorial/normativo deste draft `0.1.0-draft.3`, mas **ainda não constituem release final**: release candidate, publicação em PDF e validação de uso no NotebookLM pertencem aos gates posteriores.
