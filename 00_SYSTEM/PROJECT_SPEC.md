@@ -36,6 +36,29 @@ Assim:
 
 Arquivos de engenharia editorial (`ANALISE_BANCA.md`, `SOURCES.md`, `CHANGELOG.md`, `MANIFEST.md`, provas históricas, protocolo de autoria e registros de QA) não entram no notebook por padrão. Eles existem para o ChatGPT produzir uma apostila melhor, não para virar matéria de quiz.
 
+## Ciclo de prática
+
+A V0.1 passa a distinguir explicitamente **aquisição** de **transferência**.
+
+```text
+segunda–sábado
+→ microdrills
+→ muitas recuperações/aplicações curtas por hora
+→ feedback imediato
+
+domingo
+→ simulado objetivo integral
+→ distribuição e estilo da prova-alvo
+→ correção após encerramento
+→ erros alimentam a semana seguinte
+```
+
+Para TJSP Escrevente 2025, o simulado dominical padrão contém as **70 questões objetivas** do blueprint vigente. O `Teste` nativo do NotebookLM continua sendo ferramenta de aquisição/revisão e não é tratado como simulador fiel da VUNESP.
+
+Questões autorais reutilizáveis e simulados podem ser persistidos no GitHub quando isso melhorar rastreabilidade e QA. Isso **não** implica pré-gerar um banco gigantesco: a geração pode ser incremental e orientada por necessidade, com autoria em lotes e revisão antes da aplicação.
+
+Ver `00_SYSTEM/PRACTICE_PROTOCOL.md` e `00_SYSTEM/SIMULATION_PROTOCOL.md`.
+
 ## Processo canônico de autoria
 
 Para uma apostila major, o fluxo esperado é:
@@ -58,6 +81,26 @@ edital/syllabus + fontes + provas + análise da banca
 
 A análise de banca orienta silenciosamente profundidade, distinções, exemplos e tipos de aplicação. O estudante recebe o resultado didático, não a documentação de engenharia editorial.
 
+Para um simulado:
+
+```text
+blueprint + syllabus + fontes controladas + análise de banca
+                         ↓
+                 plano do conjunto
+                         ↓
+                 autoria em lotes
+                         ↓
+                 QA item a item
+                         ↓
+                  QA de conjunto
+                         ↓
+                      lock
+                         ↓
+                 aplicação/correção
+                         ↓
+            prioridade da semana seguinte
+```
+
 ## Não objetivos da V0.1
 
 - frontend ou aplicativo próprio;
@@ -66,7 +109,7 @@ A análise de banca orienta silenciosamente profundidade, distinções, exemplos
 - motor próprio de quiz;
 - rastreamento obrigatório questão a questão;
 - CI remoto durante produção;
-- geração massiva de banco de questões;
+- pré-gerar indiscriminadamente um banco massivo de questões sem uso/QA definido;
 - obrigar o estudante a administrar o backoffice do projeto;
 - fazer o NotebookLM inferir sozinho o papel de documentos misturados;
 - usar `Teste` nativo como simulador exato de banca quando ele se comporta como quiz sobre as fontes selecionadas;
@@ -83,7 +126,8 @@ Uma matéria está operacional quando:
 4. o estudante não recebe questões sobre a própria metodologia, manifest ou análise interna;
 5. o GitHub mantém rastreabilidade de por que o material foi escrito daquela forma;
 6. outro chat consegue continuar a autoria/QA pelo estado canônico;
-7. a rotina cotidiana não exige alternar fontes operacionais.
+7. a rotina cotidiana não exige alternar fontes operacionais;
+8. quando uma matéria entra em simulado de alta fidelidade, suas questões autorais passam pelo QA aplicável e respeitam o blueprint vigente.
 
 ## Stack canônica
 
