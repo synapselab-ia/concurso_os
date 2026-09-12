@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: content/direito-b2-gate4-matrices
+branch: main
 base_branch: main
-last_implementation_branch: research/direito-b2-gate3-banca
+last_implementation_branch: content/direito-b2-gate4-matrices
 current_task: authorize and start B2 Gate 5 authoring with direito-penal under coverage rows DP-01 through DP-10
 current_pack: direito-penal_authorized_not_started
 last_released_pack: portugues 2.0.0
@@ -37,7 +37,9 @@ completed:
   - all Gate 2 source_ids associated to coverage units and normative drift attached to affected rows
   - Gate 3 empirical signals converted into pedagogical forms, contrasts and practice/QA requirements without predictive weighting
   - duplicate NSCGJ Capitulo XI reference preserved in the coverage matrix without inferred correction
-  - B2 Gate 4 closed on current branch and Gate 5 authorized for direito-penal
+  - B2 Gate 4 closed and Gate 5 authorized for direito-penal
+  - PR 19 B2 Gate 4 coverage matrices reviewed and merged under DEC-0009
+  - B2 Gate 4 coverage matrices merged to main at 5784e8bb9d904c677cb655dfbb069146e688b4e3
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
@@ -133,7 +135,9 @@ last_subject_pack_pull_request: 12
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
-merge_status: b2_gate4_closure_in_progress_branch
+last_b2_matrix_pull_request: 19
+merge_status: b2_gate4_closed_gate5_authorized
+last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3
 last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
 last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
 last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
