@@ -136,11 +136,16 @@ Para TJSP Escrevente 2025:
 - total objetivo: 70;
 - distribuição deve permanecer coerente com `BLUEPRINT.json`;
 - autoria é original e calibrada pelas provas/análises históricas;
-- redação não faz parte automaticamente do simulado objetivo semanal.
+- redação não faz parte automaticamente do simulado objetivo semanal;
+- o ciclo semanal ali definido é um default da competição, não uma regra rígida por participante.
 
 ## PracticeCycle
 
-Regra operacional, não entidade de banco.
+Configuração operacional de cadência.
+
+A competição pode declarar um padrão, e cada `Enrollment` pode herdá-lo ou sobrescrevê-lo declarativamente em `CONFIG.json`. Comportamento específico não deve ser implementado por condicionais de identidade.
+
+Para TJSP Escrevente 2025, o default regular é:
 
 ```text
 segunda–sábado → microdrill
@@ -148,11 +153,17 @@ domingo → weekly_full_objective
 resultado do domingo → prioridade da semana seguinte
 ```
 
-O ciclo padrão está em `PRACTICE_PROTOCOL.md`.
+O ciclo está definido em `PRACTICE_PROTOCOL.md` e no `SIMULATION_BLUEPRINT.json` da competição.
 
 ## Participant
 
 Perfil público mínimo (`p001`, `p002`, ...), usado apenas quando a organização por participante for útil. O mesmo SubjectPack pode alimentar notebooks separados sem duplicar o material compartilhado.
+
+## Enrollment
+
+Vínculo entre participante e competição. Pode carregar configuração declarativa de estudo, inclusive `practice_cycle` quando houver necessidade de sobrescrever o default da competição.
+
+A ausência de override significa herança do padrão da competição. Isso preserva o kernel sem condicionais por pessoa estabelecido em DEC-0008.
 
 ## SessionFeedback
 
@@ -170,7 +181,7 @@ A persistência individual continua opcional; o sistema pode usar o resultado ap
 
 ## Telemetria experimental
 
-`Enrollment`, `Competency`, `EvidenceEvent` e `DerivedState` continuam compatíveis com experimentos futuros, mas **não fazem parte do caminho crítico da V0.1**.
+`Competency`, `EvidenceEvent` e `DerivedState` continuam compatíveis com experimentos futuros, mas **não fazem parte do caminho crítico da V0.1**.
 
 ## Separações obrigatórias
 
@@ -192,6 +203,13 @@ arquivo existente no SubjectPack
 ```
 
 E:
+
+```text
+instrução versionada no GitHub
+!= fonte estudável
+```
+
+Além disso:
 
 ```text
 microdrill
