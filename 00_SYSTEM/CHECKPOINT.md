@@ -3,11 +3,11 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: content/direito-penal-v0.1-draft
 base_branch: main
 last_implementation_branch: content/direito-b2-gate4-matrices
-current_task: authorize and start B2 Gate 5 authoring with direito-penal under coverage rows DP-01 through DP-10
-current_pack: direito-penal_authorized_not_started
+current_task: review and merge the first Direito Penal draft, then run pack-specific editorial and normative QA under DIREITO-006
+current_pack: direito-penal_0.1.0-draft.1
 last_released_pack: portugues 2.0.0
 completed:
   - repository foundation and chat-independent continuity active
@@ -40,6 +40,11 @@ completed:
   - B2 Gate 4 closed and Gate 5 authorized for direito-penal
   - PR 19 B2 Gate 4 coverage matrices reviewed and merged under DEC-0009
   - B2 Gate 4 coverage matrices merged to main at 5784e8bb9d904c677cb655dfbb069146e688b4e3
+  - direito-penal workspace created at materials/tjsp-escrevente-2025/direito-penal
+  - direito-penal MANIFEST.md, SOURCES.md and CHANGELOG.md created for 0.1.0-draft.1
+  - direito-penal APOSTILA.md first pass drafted for DP-01 through DP-10
+  - 30 original A-E Direito Penal practice questions added with separated commented answer key
+  - preliminary source spot-check performed against official Planalto text for key scoped provisions; full normative QA remains pending
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
@@ -100,16 +105,39 @@ b2_coverage_gate:
     - DP-08
     - DP-09
     - DP-10
+direito_penal_draft:
+  status: draft_implemented
+  version: 0.1.0-draft.1
+  path: materials/tjsp-escrevente-2025/direito-penal
+  files:
+    - APOSTILA.md
+    - SOURCES.md
+    - MANIFEST.md
+    - CHANGELOG.md
+  coverage_rows_drafted: 10
+  practice_questions: 30
+  pdf_status: not_created
+  notebooklm_status: not_tested
+  semantic_qa_status: pending
+  source_review_status: preliminary_spot_check_only
+  baseline: 2025-07-29
+  cp_scoped_drift: none_identified_by_gate2
 next_gate:
-  id: DIREITO-005
-  name: author_direito_penal
+  id: DIREITO-006
+  name: qa_direito_penal_draft
   pack: direito-penal
-  target_path: materials/tjsp-escrevente-2025/direito-penal
-  contract: competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md#direito-penal
+  qa_artifact: materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md
+  required:
+    - full DP-01 through DP-10 coverage audit
+    - full normative review against SRC-B2-CP
+    - didactic and contrast review
+    - semantic review of all 30 original questions
+    - corpus structure review before release candidate
 not_started:
-  - create direito-penal material workspace and source manifest
-  - draft direito-penal APOSTILA.md from DP-01 through DP-10
-  - execute pack-level editorial, normative, PDF and NotebookLM QA before release
+  - close DIREITO-006 semantic QA for direito-penal
+  - create a release candidate only if the semantic QA passes
+  - create and inspect APOSTILA.pdf only after content stabilization
+  - perform NotebookLM smoke before final release
   - continue remaining five B2 SubjectPacks only after the first pack pipeline is validated
 validation:
   portuguese_editorial_qa: pass
@@ -122,6 +150,9 @@ validation:
     bytes: 20824
     sha256: b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931
     git_blob: 640efaed13dd43cc83f6904c62fdb86131b9124a
+  direito_penal_semantic_qa:
+    result: not_executed_yet
+    policy: first-pass draft is not treated as semantic QA pass
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
@@ -136,7 +167,7 @@ last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
 last_b2_matrix_pull_request: 19
-merge_status: b2_gate4_closed_gate5_authorized
+merge_status: direito_penal_draft_ready_for_pr
 last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3
 last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
 last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
