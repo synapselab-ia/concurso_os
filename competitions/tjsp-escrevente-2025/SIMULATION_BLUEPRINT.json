@@ -6,6 +6,8 @@
     "source_ref": "SRC-TJSP-EDITAL-2025-02"
   },
   "weekly_cycle": {
+    "configuration_scope": "competition_default",
+    "enrollment_override": "participants/<participant_id>/enrollments/<competition_id>/CONFIG.json#practice_cycle",
     "regular_phase": {
       "monday_to_saturday": "microdrill",
       "sunday": "weekly_full_objective"
