@@ -1,118 +1,94 @@
 # NEXT_ACTION
 
-## DIREITO-006 — Executar QA editorial e normativo do draft `direito-penal`
+## DIREITO-007 — Preparar release candidate do SubjectPack `direito-penal`
 
-A primeira implementação de `direito-penal` foi criada em `materials/tjsp-escrevente-2025/direito-penal/` como `0.1.0-draft.1`. O workspace contém `APOSTILA.md`, `SOURCES.md`, `MANIFEST.md` e `CHANGELOG.md`; DP-01…DP-10 estão redigidos e há 30 questões autorais A–E com gabarito comentado separado.
+`DIREITO-006` fechou o QA editorial/normativo do Markdown. O estado aprovado para entrada neste gate é `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` `0.1.0-draft.3`.
 
-**O pack ainda é draft. Não gerar nem publicar `APOSTILA.pdf` como final e não promovê-lo a release antes deste QA.**
+O pack **ainda não é release**. Não marcar PDF, NotebookLM ou release como PASS antes da execução real dos respectivos gates.
 
-## Autoridade e entradas obrigatórias
+## Entradas obrigatórias
 
 Ler conjuntamente:
 
-- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` — objeto do QA;
-- `materials/tjsp-escrevente-2025/direito-penal/SOURCES.md` — proveniência do pack;
-- `materials/tjsp-escrevente-2025/direito-penal/MANIFEST.md` e `CHANGELOG.md` — estado/versionamento;
-- `competitions/tjsp-escrevente-2025/SYLLABUS.md` — autoridade de escopo;
-- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — baseline `2025-07-29`;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — contrato DP-01…DP-10 e requisitos Q-LIT/Q-CMP/Q-CAS;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — sinais empíricos, sem peso preditivo;
-- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, `SOURCE_POLICY.md` e `QA_PROTOCOL.md`.
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` — conteúdo semanticamente aprovado;
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md` — evidência de fechamento do DIREITO-006;
+- `materials/tjsp-escrevente-2025/direito-penal/MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md`;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, especialmente QA-7, QA-9 e QA-10;
+- `00_SYSTEM/QA_PROTOCOL.md`;
+- arquitetura NotebookLM em `00_SYSTEM/PROJECT_SPEC.md` e `00_SYSTEM/ARCHITECTURE.md`;
+- `materials/tjsp-escrevente-2025/portugues/METODOLOGIA_NOTEBOOKLM.md` apenas como referência de arquitetura/comportamento, sem copiar regras específicas de Português.
 
-Fonte normativa primária: `SRC-B2-CP`, Código Penal oficial no Planalto. O Gate 2 fechou o recorte como `cutoff_closed_no_scoped_drift`; o art. 338-A posterior permanece fora do syllabus.
+## 1. Congelar o conteúdo-base do candidato
 
-## QA-1 — cobertura e rastreabilidade
+Usar `0.1.0-draft.3` como base sem reabrir escopo ou alterar silenciosamente a matriz DP-01…DP-10.
 
-Conferir artigo por artigo o recorte:
+Se surgir erro material durante a preparação do candidato, voltar o estado para draft, corrigir e registrar nova passagem de QA. Não corrigir conteúdo silenciosamente dentro do PDF.
 
-`293–305; 307; 308; 311-A; 312–317; 319–333; 336; 337; 339–347; 357; 359`.
-
-Para cada `DP-01`…`DP-10`, verificar que:
-
-- todos os artigos e dispositivos relevantes do intervalo aparecem no ensino ou em remissão inequívoca;
-- nenhum artigo fora do recorte é ensinado como conteúdo obrigatório;
-- dispositivos intercalares que pertencem ao intervalo, como 313-A/313-B e 319-A, não desaparecem;
-- o art. 338-A não é absorvido por proximidade numérica;
-- a tabela/ledger de cobertura pode ser promovida de `drafted` para `qa` somente depois da conferência.
-
-## QA-2 — exatidão normativa
-
-Fazer revisão completa contra `SRC-B2-CP`, não apenas amostragem. Conferir especialmente:
-
-- sujeito ativo e vínculo funcional quando exigidos;
-- verbos nucleares;
-- objeto material;
-- finalidade específica;
-- penas e frações de aumento/diminuição quando o draft as informa;
-- formas equiparadas, qualificadas, privilegiadas e subsidiárias mencionadas;
-- condições temporais, como conhecimento posterior, reparação, retratação e momento processual;
-- diferenças entre documento público/particular, falsidade material/ideológica e tipos funcionais próximos.
-
-Não introduzir jurisprudência para corrigir ou ampliar silenciosamente a letra do recorte. Se uma observação jurisprudencial se mostrar pedagogicamente indispensável, ela exige decisão editorial e fonte própria, não inferência automática.
-
-## QA-3 — didática e distinções
-
-Revisar se cada unidade segue de forma suficiente:
-
-```text
-regra
-→ elementos
-→ hipótese
-→ consequência
-→ contraste
-→ caso aplicado
-→ síntese
-```
-
-Dar prioridade aos contrastes empiricamente sustentados no Gate 3: tipo vizinho, requisito, sujeito, objeto, modalidade/finalidade e consequência. Remover explicações vagas, atalhos que criem falsa regra e redundância que prejudique recuperação semântica.
-
-## QA-4 — prática autoral
-
-Revisar as 30 questões uma a uma. Cada item deve ter:
-
-- exatamente uma resposta defensável dentro do conteúdo/fonte;
-- cinco alternativas plausíveis;
-- nenhuma ambiguidade involuntária;
-- nenhum conteúdo fora do syllabus como requisito para resolver;
-- gabarito coerente com o comentário;
-- comentário que exponha o elemento decisivo, não apenas repita a alternativa.
-
-Conferir também os mínimos `Q-LIT`, `Q-CMP` e `Q-CAS` por linha DP da matriz. Se o conjunto atual não testar suficientemente um requisito da linha, adicionar ou substituir prática; não aumentar volume mecanicamente.
-
-## QA-5 — utilidade como corpus
-
-Verificar títulos, hierarquia, consistência terminológica, proximidade entre regra/contraste/exemplo e legibilidade das tabelas. O texto deve funcionar sem depender de contexto do projeto e sem metadiscurso da banca.
-
-Não fazer smoke do NotebookLM enquanto o conteúdo ainda tiver correções materiais abertas. Primeiro estabilizar o Markdown.
-
-## Artefato esperado
+## 2. Criar a configuração do tutor
 
 Criar:
 
-`materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md`
+`materials/tjsp-escrevente-2025/direito-penal/METODOLOGIA_NOTEBOOKLM.md`
 
-O arquivo deve registrar, no mínimo:
+O arquivo deve seguir DEC-0016/DEC-0017:
 
-- resultado separado de QA-1 a QA-5;
-- correções executadas e sua motivação;
-- pendências reais;
-- estado das 30 questões;
-- decisão explícita sobre prontidão para release candidate.
+```text
+fonte estudável → APOSTILA.pdf
+comportamento do tutor → configuração nativa da conversa
+backoffice → GitHub/ChatGPT
+```
 
-Se qualquer gate semântico falhar, manter o pack como `draft` e atualizar `APOSTILA.md`; não maquiar falha como PASS.
+A metodologia deve orientar dúvidas, treino interativo, correção e relatório de sessão, sem virar conteúdo da matéria e sem depender de metadados internos do projeto.
 
-## Critério de saída
+## 3. Promover para release candidate
 
-`DIREITO-006` só fecha quando:
+Depois de `METODOLOGIA_NOTEBOOKLM.md` e metadados coerentes, promover identidade de trabalho para `0.1.0-rc.1`.
 
-- DP-01…DP-10 estiverem integralmente rastreados;
-- a revisão normativa completa do recorte tiver sido realizada contra a fonte oficial;
-- os contrastes essenciais estiverem corretos e explícitos;
-- todas as 30 questões tiverem sido revisadas semanticamente;
-- `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` refletirem o estado real;
-- `APOSTILA_QA_0.1.0.md` registrar os resultados sem promover gates não executados.
+Atualizar conjuntamente:
 
-Se o draft ficar aprovado nesses gates, o próximo passo será preparar um release candidate do pack, incluindo a metodologia/configuração de tutor aplicável e o pipeline de PDF/NotebookLM previsto pelo protocolo. Isso ainda não equivale automaticamente a release final.
+- `APOSTILA.md` — apenas metadados de versão/status se o conteúdo não mudar;
+- `MANIFEST.md`;
+- `SOURCES.md`;
+- `CHANGELOG.md`;
+- documento de QA aplicável.
+
+`rc.1` significa candidato em teste, não release.
+
+## 4. Gerar `APOSTILA.pdf`
+
+Somente a partir do Markdown aprovado/RC:
+
+- gerar PDF pesquisável;
+- preservar hierarquia de títulos, tabelas e separação pergunta/gabarito;
+- registrar páginas, tamanho, SHA-256 e demais metadados úteis;
+- fazer readback textual do arquivo produzido;
+- renderizar e inspecionar visualmente todas as páginas para clipping, sobreposição, quebra inadequada de tabelas, acentos e símbolos.
+
+Registrar o resultado como QA-9. Uma geração bem-sucedida não equivale a PASS visual.
+
+## 5. QA do NotebookLM
+
+Executar o que for possível sem inventar interação externa:
+
+- QA estático de recuperabilidade do corpus;
+- quando houver acesso real à interface, carregar **somente** `APOSTILA.pdf` como fonte;
+- colocar `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa, não nas fontes;
+- inspecionar chat e artefatos úteis, conforme o protocolo.
+
+Se o smoke real depender de ação do usuário/interface indisponível no runtime, registrar `not_executed`/`pending_user_smoke`; não promover a release final como se o teste tivesse ocorrido.
+
+## 6. Critério de saída
+
+`DIREITO-007` só fecha quando existir um release candidate coerente com:
+
+- `METODOLOGIA_NOTEBOOKLM.md` criada e auditada;
+- versão/metadados sincronizados;
+- `APOSTILA.pdf` íntegro, pesquisável e com QA textual/visual realizado;
+- QA NotebookLM estático concluído e smoke real registrado quando executável;
+- `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e QA refletindo exatamente o estado;
+- nenhuma promoção a release final se algum gate obrigatório continuar pendente.
+
+A decisão de release final deve ser explícita e sustentada pelos gates realizados. Só depois do primeiro pipeline jurídico completo os demais cinco SubjectPacks avançam na ordem canônica.
 
 ## Gate canônico
 
@@ -122,4 +98,4 @@ Antes de encerrar a implementação:
 python tools/verify.py
 ```
 
-Em `2026-09-12`, nova tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` neste runtime falhou com `Could not resolve host: github.com`. Enquanto essa condição persistir, registrar a impossibilidade conforme DEC-0009; não tratá-la como `PASS`.
+Em `2026-09-12`, `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` continua falhando neste runtime com `Could not resolve host: github.com`. Enquanto essa condição persistir, registrar a impossibilidade conforme DEC-0009; não tratar como `PASS`.
