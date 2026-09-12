@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: research/direito-b2-gate2-state-tjsp
+branch: main
 base_branch: main
-last_implementation_branch: research/direito-b2-gate2-federal
+last_implementation_branch: research/direito-b2-gate2-state-tjsp
 current_task: start B2 Gate 3 by classifying Direito questions from the 2021, 2023, 2024 and 2025 TJSP/VUNESP exams reproducibly
 current_pack: none_in_progress
 last_released_pack: portugues 2.0.0
@@ -37,7 +37,6 @@ completed:
   - Lei 12.153/2009 closed with no direct post-cutoff textual drift identified
   - Constituicao post-cutoff drift mapped at art. 37 XVI b by EC 138/2025
   - Lei 8.429/1992 closed with no effective post-cutoff textual drift from Lei 15.269/2025 because the proposed provision was vetoed
-  - B2 Gate 2 state and TJSP source audit closed on current branch
   - Lei Estadual 10.261/1968 cutoff reconstructed; scoped post-cutoff drift mapped at art. 78 by Lei 18.473/2026; LC 1.437/2025 affects arts. 176-179 outside the syllabus recut
   - LC Estadual 1.111/2010 cutoff reconstructed with 16/07/2025 staffing acts included; post-cutoff Lei 18.373/2025 and LC 1.441/2026 mapped
   - Resolucao TJSP 850/2021 baseline closed using official compilation through Resolucao 864/2022; no later direct textual amendment located
@@ -47,6 +46,8 @@ completed:
   - duplicate Capitulo XI remains documented as unresolved official ambiguity; second literal recut subsumes the first without correcting the edital
   - DIREITO_SOURCES.md promoted to status closed
   - DIREITO_B2_AUTHORING_PLAN.md Gate 2 promoted to closed
+  - PR 15 reviewed and merged under DEC-0009
+  - B2 Gate 2 state and TJSP source audit merged to main at fa0fb7c66f6db2d83df98bedf75b2708f51baad3
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
@@ -117,9 +118,9 @@ validation:
 ci: disabled
 last_subject_pack_pull_request: 12
 last_b2_preparation_pull_request: 13
-last_b2_source_pull_request: 14
-merge_status: b2_gate2_state_tjsp_closure_in_progress_branch
-last_b2_source_merge_commit: 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
+last_b2_source_pull_request: 15
+merge_status: b2_gate2_closed_gate3_pending
+last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
 last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
 last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
 ```
