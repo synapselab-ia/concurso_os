@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: research/direito-b2-gate3-banca
+branch: main
 base_branch: main
-last_implementation_branch: research/direito-b2-gate2-state-tjsp
+last_implementation_branch: research/direito-b2-gate3-banca
 current_task: build B2 Gate 4 coverage and authoring matrices for all six Direito SubjectPacks
 current_pack: none_in_progress
 last_released_pack: portugues 2.0.0
@@ -33,6 +33,8 @@ completed:
   - Gate 3 preserves historical frequencies as descriptive evidence only and does not override current syllabus
   - BANCA_PROFILE.md updated to reference reproducible Direito evidence
   - DIREITO_B2_AUTHORING_PLAN.md Gate 3 promoted to closed
+  - PR 18 reviewed and merged under DEC-0009
+  - B2 Gate 3 historical banca analysis merged to main at c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
@@ -111,7 +113,9 @@ ci: disabled
 last_subject_pack_pull_request: 12
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
-merge_status: b2_gate3_closure_in_progress_branch
+last_b2_banca_pull_request: 18
+merge_status: b2_gate3_closed_gate4_pending
+last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
 last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
 last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
 last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
