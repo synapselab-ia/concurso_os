@@ -1,7 +1,7 @@
 # Direito Penal — TJSP Escrevente 2025
 
-**Versão:** `0.1.0-draft.3`  
-**Status:** draft com QA editorial/normativo concluído; release ainda depende dos gates de release candidate, PDF e NotebookLM  
+**Versão:** `0.1.0-rc.1`  
+**Status:** release candidate; conteúdo editorial/normativo aprovado; release final ainda depende dos gates aplicáveis de PDF e NotebookLM  
 **Base normativa:** Código Penal, recorte vigente em `2025-07-29`
 
 ## Como usar esta apostila
@@ -978,4 +978,4 @@ Em revisão rápida, recupere estas chaves:
 10. imputação a inocente x comunicação de ocorrência inexistente;
 11. influência sobre funcionário em geral x elenco específico da Administração da Justiça.
 
-O conteúdo textual e as 30 questões autorais passaram pelo QA editorial/normativo deste draft `0.1.0-draft.3`, mas **ainda não constituem release final**: release candidate, publicação em PDF e validação de uso no NotebookLM pertencem aos gates posteriores.
+O conteúdo textual e as 30 questões autorais passaram pelo QA editorial/normativo do `0.1.0-draft.3` e foram congelados para este release candidate `0.1.0-rc.1`. O candidato **ainda não constitui release final**: os gates de PDF e de uso no NotebookLM precisam refletir o estado real antes de qualquer promoção.
