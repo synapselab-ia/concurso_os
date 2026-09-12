@@ -1,7 +1,7 @@
 # Direito Penal — TJSP Escrevente 2025
 
-**Versão:** `0.1.0-draft.2`  
-**Status:** conteúdo corrigido após revisão normativa; release ainda bloqueado pelos gates de PDF/NotebookLM  
+**Versão:** `0.1.0-draft.3`  
+**Status:** draft com QA editorial/normativo concluído; release ainda depende dos gates de release candidate, PDF e NotebookLM  
 **Base normativa:** Código Penal, recorte vigente em `2025-07-29`
 
 ## Como usar esta apostila
@@ -248,7 +248,7 @@ Se o fato é cometido por funcionário público, aumento de **1/3**.
 
 **Caso 2.** Servidor apenas facilita o acesso de não autorizado, sem divulgar pessoalmente: forma equiparada do § 1º.
 
-**Caso 3.** A facilitação é praticada por funcionário público e resulta dano à Administração: devem ser examinadas a forma pelo resultado e a majorante funcional.
+**Caso 3.** A ação ou omissão causa dano à Administração. O § 2º prevê, para esse resultado, pena de reclusão de 2 a 6 anos e multa. A qualidade funcional, quando presente, é tratada separadamente pelo § 3º.
 
 ### Síntese DP-04
 
@@ -607,17 +607,26 @@ Exercer função, atividade, direito, autoridade ou múnus de que a pessoa foi *
 
 Não é qualquer descumprimento de ordem judicial. O tipo exige o exercício daquilo que foi objeto de suspensão/privação judicial.
 
+### Art. 324 x art. 359
+
+Os dois textos podem se aproximar quando o enunciado usa genericamente a ideia de “continuar exercendo função”. Para leitura segura do recorte:
+
+- **art. 324:** trata especificamente de **função pública**, seja pelo ingresso antes das exigências legais, seja pela continuação sem autorização após ciência oficial de exoneração, remoção, substituição ou suspensão;
+- **art. 359:** alcança função, atividade, direito, autoridade ou múnus de que houve suspensão ou privação **por decisão judicial**.
+
+A letra desses dois artigos, sozinha, não autoriza criar uma regra geral de concurso de normas para hipóteses que reúnam simultaneamente elementos de ambos. Por isso, os exemplos e as questões desta apostila isolam o elemento textual decisivo em vez de importar solução jurisprudencial não prevista no recorte.
+
 ### Três mini-casos
 
 **Caso 1.** Intermediário pede dinheiro afirmando que influenciará um juiz. Art. 357.
 
 **Caso 2.** Intermediário pede dinheiro alegando influência sobre ato de servidor público comum, fora do elenco especial do art. 357. O contraste relevante é o art. 332.
 
-**Caso 3.** Decisão judicial suspende o exercício de determinada função; mesmo ciente, a pessoa continua exercendo-a. O elemento específico aponta ao art. 359.
+**Caso 3.** Decisão judicial suspende o exercício de determinada atividade privada; mesmo ciente, a pessoa continua a exercê-la. O art. 359 é a referência textual do recorte. O art. 324, em contraste, trata da função pública nas hipóteses funcionais que enumera.
 
 ### Síntese DP-10
 
-Quem é o alvo da suposta influência e qual direito/função foi judicialmente suspenso são as perguntas centrais.
+Quem é o alvo da suposta influência, qual é a atividade/direito atingido e se a suspensão decorre de decisão judicial são as perguntas centrais.
 
 ---
 
@@ -633,6 +642,7 @@ Quem é o alvo da suposta influência e qual direito/função foi judicialmente 
 | 312 x 315 | apropriação/desvio de bem x aplicação legalmente diversa de verba/renda |
 | 316 x 317 | exigir x solicitar/receber/aceitar promessa |
 | 319 x 320 | interesse/sentimento pessoal x indulgência com subordinado |
+| 324 x 359 | estado funcional de função pública x suspensão/privação por decisão judicial de função/atividade/direito/autoridade/múnus |
 | 329 x 330 | violência/ameaça contra ato legal x desobediência a ordem legal |
 | 332 x 333 | venda de suposta influência x vantagem oferecida ao funcionário |
 | 336 x 337 | edital/selo/sinal x livro/processo/documento custodiado |
@@ -742,13 +752,13 @@ C) o dispositivo só alcança exames universitários.
 D) o crime exige dano efetivo à Administração em todas as formas.  
 E) funcionário público nunca pode ser sujeito do fato.
 
-**12.** Da fraude em certame resulta dano à Administração e o fato é cometido por funcionário público. O texto legal permite reconhecer:
+**12.** Da ação ou omissão descrita no art. 311-A resulta dano à Administração Pública. Segundo a consequência expressa no § 2º, a pena passa a ser:
 
-A) forma com pena mais grave pelo dano e aumento de 1/3 pela qualidade funcional.  
-B) apenas multa, sem pena privativa.  
-C) exclusão da forma equiparada.  
-D) diminuição obrigatória de metade.  
-E) conversão em peculato.
+A) reclusão de 2 a 6 anos e multa.  
+B) apenas multa, sem pena privativa de liberdade.  
+C) detenção de 15 dias a 1 mês, ou multa.  
+D) reclusão de 1 a 4 anos sem multa.  
+E) redução obrigatória da pena pela metade.
 
 ## DP-05 — questões 13 a 15
 
@@ -890,7 +900,7 @@ C) corrupção ativa.
 D) concussão.  
 E) prevaricação.
 
-**29.** Decisão judicial suspende o exercício de determinada função. Mesmo oficialmente ciente, a pessoa continua a exercê-la. O elemento específico conduz a:
+**29.** Decisão judicial suspende o exercício de determinada atividade privada. Mesmo ciente, a pessoa continua a exercê-la. Considerando o recorte estudado, a referência textual é:
 
 A) art. 330.  
 B) art. 359.  
@@ -924,7 +934,7 @@ E) momento do pagamento.
 
 **10. A.** O art. 311-A combina conteúdo sigiloso, certame abrangido, verbo típico e finalidade específica.  
 **11. A.** O § 1º pune quem permite ou facilita acesso de pessoa não autorizada.  
-**12. A.** O dano leva à forma de 2 a 6 anos e a qualidade de funcionário gera aumento de 1/3.
+**12. A.** O § 2º prevê reclusão de 2 a 6 anos e multa quando da ação ou omissão resulta dano à Administração Pública.
 
 **13. B.** No peculato culposo, reparação anterior à sentença irrecorrível extingue a punibilidade.  
 **14. A.** O art. 313-A recai sobre dados e exige a finalidade legal; 313-B recai sobre sistema/programa e falta de autorização.  
@@ -947,7 +957,7 @@ E) momento do pagamento.
 **27. A.** Para produzir efeito em processo penal, ainda que não iniciado, a fraude processual tem penas em dobro.
 
 **28. B.** Juiz está expressamente no elenco do art. 357.  
-**29. B.** O art. 359 pune exercer aquilo de que houve suspensão/privação por decisão judicial.  
+**29. B.** O art. 359 alcança o exercício de atividade da qual houve suspensão ou privação por decisão judicial; o art. 324 trata especificamente de função pública nas hipóteses funcionais que enumera.  
 **30. B.** O art. 357 possui elenco específico de atores da Administração da Justiça; o art. 332 fala em ato de funcionário público.
 
 ---
@@ -962,9 +972,10 @@ Em revisão rápida, recupere estas chaves:
 4. dados x sistema/programa;
 5. exigir x solicitar/receber/aceitar promessa;
 6. interesse pessoal x indulgência com subordinado;
-7. violência/ameaça contra ato legal x desobediência a ordem legal;
-8. venda de influência x oferta direta ao funcionário;
-9. imputação a inocente x comunicação de ocorrência inexistente;
-10. influência sobre funcionário em geral x elenco específico da Administração da Justiça.
+7. estado funcional de função pública do art. 324 x suspensão/privação judicial do art. 359;
+8. violência/ameaça contra ato legal x desobediência a ordem legal;
+9. venda de influência x oferta direta ao funcionário;
+10. imputação a inocente x comunicação de ocorrência inexistente;
+11. influência sobre funcionário em geral x elenco específico da Administração da Justiça.
 
-O conteúdo textual passou por revisão normativa completa do recorte nesta versão `draft.2`, mas **ainda não constitui release final**: publicação em PDF e validação de uso no NotebookLM pertencem a gates posteriores.
+O conteúdo textual e as 30 questões autorais passaram pelo QA editorial/normativo deste draft `0.1.0-draft.3`, mas **ainda não constituem release final**: release candidate, publicação em PDF e validação de uso no NotebookLM pertencem aos gates posteriores.
