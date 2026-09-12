@@ -3,10 +3,10 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: content/direito-b2-authoring-prep
 base_branch: main
 last_implementation_branch: content/apostila-portugues-2.0.0
-current_task: prepare next TJSP 2025 SubjectPack for Conhecimentos em Direito using canonical syllabus and authoring protocol
+current_task: close Gate 2 for B2 Conhecimentos em Direito by reconciling all normative sources and versions to the 2025-07-29 edital cutoff
 current_pack: none_in_progress
 last_released_pack: portugues 2.0.0
 completed:
@@ -37,23 +37,34 @@ completed:
   - Portuguese 2.0.0 manifest/changelog/QA promoted to final release
   - PR 12 reviewed, marked ready and merged under DEC-0009
   - Portuguese 2.0.0 release merged to main at e6ce9d2571e9c68a8947701c08187c07e986d567
-next_subject_evidence:
-  syllabus_block: B2
-  name: Conhecimentos em Direito
-  exam_questions: 30
-  reason: largest remaining exam block without a SubjectPack
-  internal_domains:
-    - Direito Penal
-    - Direito Processual Penal
-    - Direito Processual Civil
-    - Direito Constitucional
-    - Direito Administrativo
-    - Legislacao Interna
+  - B2 Gate 1 closed under DEC-0019
+  - B2 editorial boundary defined as six SubjectPacks: direito-penal, direito-processual-penal, direito-processual-civil, direito-constitucional, direito-administrativo and legislacao-interna
+  - exact Normas da Corregedoria recuts from the edital recorded in SYLLABUS.md
+  - duplicate Capitulo XI reference in the edital preserved as an official-source anomaly instead of being silently corrected
+  - DIREITO_B2_AUTHORING_PLAN.md created with gate order and production boundary
+  - DIREITO_SOURCES.md started with official federal, state and TJSP provenance and version-drift status
+b2_source_gate:
+  status: in_progress
+  edital_cutoff: 2025-07-29
+  inventory: competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md
+  drift_confirmed:
+    - Lei Estadual 10.261/1968 current ALESP compilation contains post-cutoff changes
+    - LC Estadual 1.111/2010 current ALESP compilation contains post-cutoff changes
+    - current Regimento Interno TJSP PDF is updated after the cutoff
+    - current NSCGJ Tomo I is updated after the cutoff
+  candidate_closed_pending_final_history_check:
+    - Resolucao TJSP 850/2021
+    - Resolucao TJSP 963/2025
+  pending:
+    - audit post-cutoff changes inside every scoped federal source
+    - reconstruct or validate 2025-07-29 snapshots for drift-confirmed state/TJSP sources
+    - confirm amendment history for Resolucoes 850/2021 and 963/2025
+    - preserve unresolved duplicate Capitulo XI unless an official source resolves it
 not_started:
-  - decide canonical SubjectPack boundary for B2 before authoring
-  - build source inventory/version map for all B2 normative sources
-  - create B2 coverage/authoring matrix
-  - author next SubjectPack
+  - close B2 Gate 2 source/version inventory
+  - complete Gate 3 reproducible classification of Direito questions from 2021/2023/2024/2025
+  - create Gate 4 coverage/authoring matrices for the six B2 SubjectPacks
+  - authorize Gate 5 drafting
 validation:
   portuguese_editorial_qa: pass
   portuguese_notebooklm_live: pass
@@ -75,6 +86,6 @@ validation:
     policy: impossibility documented under DEC-0009; not treated as pass
 ci: disabled
 last_subject_pack_pull_request: 12
-merge_status: portuguese_2_0_0_merged
-merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
+merge_status: b2_authoring_prep_in_progress
+last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
 ```
