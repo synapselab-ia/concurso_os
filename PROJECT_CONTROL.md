@@ -4,7 +4,7 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main`
+- **Current implementation branch:** `release/direito-penal-0.1.0-rc.1-pdf`
 - **Last implementation branch:** `release/direito-penal-0.1.0-rc.1`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–6 fechados no primeiro pipeline; `DIREITO-007` aberto no release candidate de Direito Penal
@@ -17,7 +17,8 @@
 - **B2 banca analysis:** `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — 150 questões classificadas; Gate 3 fechado em 2026-09-12
 - **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — seis matrizes completas; Gate 4 fechado em 2026-09-12
 - **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` — `APOSTILA.md` rc.1, `METODOLOGIA_NOTEBOOKLM.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md` e `APOSTILA_QA_0.1.0.md`; `APOSTILA.pdf` ainda não publicado no repositório
-- **Direito Penal local PDF candidate:** 18 páginas A4, 48593 bytes, SHA-256 `d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469`; QA textual/visual local passou, sem equivaler a gate canônico
+- **Direito Penal preferred local PDF candidate:** 17 páginas A4, 30167 bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob local esperado `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`; gerado da cópia local cujo Git blob coincide exatamente com o `APOSTILA.md` canônico `008c3ac439d8b7d4038fd0114e486c1daaf755b1`; QA textual/visual local passou em 17/17 páginas
+- **Direito Penal PDF publication blocker:** tentativas de transferência binária pelo conector GitHub retornaram blobs remotos diferentes do Git blob local esperado; nenhum blob divergente foi anexado à árvore/branch. Publicação permanece `not_published` até haver correspondência exata de integridade
 - **B2 boundary decision:** DEC-0019
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
