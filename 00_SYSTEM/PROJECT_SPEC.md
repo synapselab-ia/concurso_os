@@ -40,6 +40,8 @@ Arquivos de engenharia editorial (`ANALISE_BANCA.md`, `SOURCES.md`, `CHANGELOG.m
 
 A V0.1 passa a distinguir explicitamente **aquisição** de **transferência**.
 
+Para TJSP Escrevente 2025, o default da competição é:
+
 ```text
 segunda–sábado
 → microdrills
@@ -52,6 +54,8 @@ domingo
 → correção após encerramento
 → erros alimentam a semana seguinte
 ```
+
+Esse ciclo é configuração herdável: um `Enrollment` pode sobrescrevê-lo declarativamente sem condicional por identidade. Na ausência de override, vale o default da competição.
 
 Para TJSP Escrevente 2025, o simulado dominical padrão contém as **70 questões objetivas** do blueprint vigente. O `Teste` nativo do NotebookLM continua sendo ferramenta de aquisição/revisão e não é tratado como simulador fiel da VUNESP.
 
