@@ -3,11 +3,11 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: release/direito-penal-0.1.0-rc.1
 base_branch: main
 last_implementation_branch: qa/direito-penal-v0.1
-current_task: prepare direito-penal release candidate under DIREITO-007 without promoting pending PDF or NotebookLM gates
-current_pack: direito-penal_0.1.0-draft.3_semantic_qa_passed_release_candidate_pending
+current_task: complete DIREITO-007 after rc.1 preparation; canonical PDF publication, live NotebookLM smoke and deterministic gate remain pending
+current_pack: direito-penal_0.1.0-rc.1_release_candidate_incomplete
 last_released_pack: portugues 2.0.0
 
 completed:
@@ -41,6 +41,14 @@ completed:
   - DIREITO-006 semantic QA closed; Markdown authorized for release candidate preparation
   - PR 21 Direito Penal semantic QA reviewed and merged under DEC-0009
   - PR 21 merged to main at d89b7aefd69db3f3fc653807eb98f036755f6f2e
+  - DIREITO-007 working branch release/direito-penal-0.1.0-rc.1 created from main 42b52ec80649a75abdfe0319dd80b98e4206e90b
+  - direito-penal METODOLOGIA_NOTEBOOKLM.md created as ConversationInstruction and statically audited
+  - APOSTILA.md identity promoted to 0.1.0-rc.1 without semantic content changes
+  - MANIFEST.md SOURCES.md CHANGELOG.md and APOSTILA_QA_0.1.0.md synchronized to release candidate state
+  - static NotebookLM corpus QA passed for rc.1
+  - local searchable PDF candidate generated from frozen rc.1 Markdown
+  - local PDF candidate textual readback passed
+  - all 18 local PDF pages rendered and visually inspected without clipping overlap or broken glyphs
 
 b2_source_gate:
   status: closed
@@ -105,12 +113,15 @@ b2_coverage_gate:
     - DP-09
     - DP-10
 
-direito_penal_draft:
-  status: semantic_qa_passed_release_candidate_not_created
-  version: 0.1.0-draft.3
+direito_penal_release_candidate:
+  status: release_candidate_incomplete
+  version: 0.1.0-rc.1
   path: materials/tjsp-escrevente-2025/direito-penal
-  files:
+  content_base: 0.1.0-draft.3
+  content_semantic_change_in_rc: false
+  files_present_in_branch:
     - APOSTILA.md
+    - METODOLOGIA_NOTEBOOKLM.md
     - SOURCES.md
     - MANIFEST.md
     - CHANGELOG.md
@@ -124,32 +135,49 @@ direito_penal_draft:
   matrix_practice_contract: pass
   markdown_corpus_qa: pass_for_markdown
   banca_coherence: pass
-  pdf_status: not_created
-  notebooklm_status: not_tested
+  tutor_configuration: pass_static
+  notebooklm_static_qa: pass_static
+  notebooklm_live_qa: pending_user_smoke
+  repository_pdf_status: not_published
+  local_pdf_candidate:
+    result: pass_textual_visual_local_only
+    pages: 18
+    page_size: A4
+    bytes: 48593
+    pdf_version: 1.4
+    sha256: d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469
+    searchable: true
+    textual_readback: pass
+    visual_pages_inspected: 18
+    visual_result: pass
+    canonical_repository_artifact: false
   baseline: 2025-07-29
   cp_scoped_drift: none_identified_by_gate2
-  release_status: blocked_until_release_candidate_pdf_notebooklm_gates
-  qa_pull_request: 21
-  qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
+  release_status: blocked_until_canonical_pdf_live_notebooklm_and_applicable_repository_gate
+  previous_qa_pull_request: 21
+  previous_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 
 next_gate:
   id: DIREITO-007
-  name: prepare_direito_penal_release_candidate
+  name: complete_direito_penal_release_candidate
   pack: direito-penal
   target_version: 0.1.0-rc.1
-  required:
-    - create METODOLOGIA_NOTEBOOKLM.md as conversation configuration, not study source
+  completed_in_gate:
+    - create METODOLOGIA_NOTEBOOKLM.md as conversation configuration not study source
     - synchronize RC metadata without silently changing approved content
-    - generate searchable APOSTILA.pdf from approved Markdown
-    - run textual and visual PDF QA
-    - run static NotebookLM corpus QA and real smoke when interface access is available
-    - keep final release blocked if any applicable gate remains pending
+    - generate a searchable local PDF candidate from approved RC Markdown
+    - run textual and visual QA on local PDF candidate
+    - run static NotebookLM corpus QA
+  remaining:
+    - publish materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf as canonical GitHub artifact
+    - rerun or confirm textual and visual PDF QA on the exact versioned binary and record its hash and git blob
+    - execute real NotebookLM smoke with only APOSTILA.pdf as source and tutor methodology in native conversation configuration
+    - execute python tools/verify.py in an environment with a valid canonical checkout or re-document impossibility if still blocked under DEC-0009
+    - keep final release blocked while any required gate remains pending
 
 not_started:
-  - create direito-penal METODOLOGIA_NOTEBOOKLM.md
-  - promote coherent candidate metadata to 0.1.0-rc.1
-  - generate and inspect direito-penal APOSTILA.pdf
-  - execute NotebookLM smoke or record it as pending when external UI is unavailable
+  - publish direito-penal canonical APOSTILA.pdf
+  - execute direito-penal NotebookLM live smoke
   - release direito-penal
   - continue remaining five B2 SubjectPacks after first legal pipeline is fully validated
 
@@ -173,10 +201,18 @@ validation:
     questions: pass_30_of_30
     corpus_markdown: pass_for_markdown
     artifact: materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md
+  direito_penal_rc_qa:
+    material_version: 0.1.0-rc.1
+    semantic_content_frozen: true
+    tutor_configuration: pass_static
+    notebooklm_static: pass_static
+    notebooklm_live: pending_user_smoke
+    local_pdf: pass_textual_visual_local_only
+    canonical_pdf: not_published
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
-    reason: local runtime cannot resolve github.com, preventing a valid canonical checkout
+    reason: local runtime cannot resolve github.com preventing a valid canonical checkout
     attempted_at: 2026-09-12
     network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
     error: Could not resolve host github.com
@@ -190,7 +226,7 @@ last_b2_banca_pull_request: 18
 last_b2_matrix_pull_request: 19
 last_direito_penal_draft_pull_request: 20
 last_direito_penal_qa_pull_request: 21
-merge_status: direito_penal_semantic_qa_merged_release_candidate_pending
+merge_status: direito_penal_rc1_branch_prepared_pr_pending
 last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 last_direito_penal_draft_merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
 last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3

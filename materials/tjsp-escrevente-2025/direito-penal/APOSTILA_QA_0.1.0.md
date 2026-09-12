@@ -1,14 +1,14 @@
 # APOSTILA_QA_0.1.0 — Direito Penal — TJSP Escrevente 2025
 
 **QA date:** `2026-09-12`  
-**Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` → `0.1.0-draft.2` → `0.1.0-draft.3`  
+**Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` → `0.1.0-draft.2` → `0.1.0-draft.3` → `0.1.0-rc.1`  
 **Pack:** `direito-penal`  
 **Overall semantic result:** `PASS`  
-**Release candidate:** `authorized_not_created`
+**Release candidate:** `created_incomplete`
 
 ## 1. Escopo e método
 
-Este QA executa `DIREITO-006`. O edital e a matriz de cobertura controlam o escopo; `SRC-B2-CP`, Código Penal oficial no Planalto, controla as afirmações normativas; a análise histórica da banca calibra apenas contraste, forma e aplicação.
+Este QA executou `DIREITO-006` e foi estendido em `DIREITO-007` sem reabrir o conteúdo aprovado. O edital e a matriz de cobertura controlam o escopo; `SRC-B2-CP`, Código Penal oficial no Planalto, controla as afirmações normativas; a análise histórica da banca calibra apenas contraste, forma e aplicação.
 
 Recorte auditado artigo por artigo:
 
@@ -16,7 +16,7 @@ Recorte auditado artigo por artigo:
 
 Baseline autoral: `2025-07-29`. O Gate 2 classifica `SRC-B2-CP` como `cutoff_closed_no_scoped_drift`; o art. `338-A`, posterior e fora do recorte, permaneceu excluído.
 
-A revisão foi feita em duas passagens. A primeira promoveu `draft.1` a `draft.2`, aprofundando a cobertura literal e identificando duas pendências de prática, Q12 e Q29. A segunda reformulou esses itens, explicitou o contraste `art. 324 x art. 359` e produziu `draft.3`.
+A revisão semântica foi feita em duas passagens. A primeira promoveu `draft.1` a `draft.2`, aprofundando a cobertura literal e identificando duas pendências de prática, Q12 e Q29. A segunda reformulou esses itens, explicitou o contraste `art. 324 x art. 359` e produziu `draft.3`. O `rc.1` mantém o conteúdo aprovado e altera somente identidade/status, configuração do tutor e registros de QA do candidato.
 
 ---
 
@@ -37,7 +37,7 @@ A revisão foi feita em duas passagens. A primeira promoveu `draft.1` a `draft.2
 | DP-09 | 339–347 | PASS |
 | DP-10 | 357 e 359 | PASS |
 
-Nenhum intervalo do edital desapareceu. Artigos fora do recorte — inclusive `338-A` — não foram absorvidos como conteúdo obrigatório.
+Nenhum intervalo do edital desapareceu. Artigos fora do recorte, inclusive `338-A`, não foram absorvidos como conteúdo obrigatório.
 
 ---
 
@@ -58,7 +58,7 @@ A revisão completa contra `SRC-B2-CP` levou, entre outros, aos seguintes ajuste
 
 A fonte oficial foi reaberta na passagem final para os pontos que haviam gerado bloqueio de prática. O art. 311-A, § 2º, prevê reclusão de 2 a 6 anos e multa quando da ação ou omissão resulta dano à Administração; o § 3º trata separadamente do aumento de 1/3 para funcionário público. O art. 324 trata de função pública e continuação sem autorização após ciência oficial de exoneração, remoção, substituição ou suspensão. O art. 359 alcança função, atividade, direito, autoridade ou múnus de que houve suspensão ou privação por decisão judicial.
 
-Depois das correções de `draft.3`, não foi identificada incompatibilidade material entre as afirmações auditadas e a fonte normativa do recorte.
+Depois das correções de `draft.3`, não foi identificada incompatibilidade material entre as afirmações auditadas e a fonte normativa do recorte. O `rc.1` não modifica essas afirmações.
 
 ---
 
@@ -108,21 +108,19 @@ Os requisitos de prática `Q-LIT`, `Q-CMP` e `Q-CAS` do contrato DP-01…DP-10 e
 - o material funciona sem documentação interna do projeto;
 - não há metadiscurso de banca no corpo estudável.
 
-O PASS desta etapa não substitui o smoke real do NotebookLM. Esse teste pertence ao próximo pipeline, depois da preparação do release candidate e do PDF.
-
 ---
 
 ## 7. QA de banca e coerência interna
 
 **Resultado:** `PASS`
 
-Os formatos usados — literalidade controlada, distinção de requisito e mini-caso — são coerentes com os sinais empíricos do Gate 3, sem transformar frequência histórica em peso futuro. Não foi identificado overfitting às provas históricas.
+Os formatos usados, literalidade controlada, distinção de requisito e mini-caso, são coerentes com os sinais empíricos do Gate 3, sem transformar frequência histórica em peso futuro. Não foi identificado overfitting às provas históricas.
 
 A revisão final também não encontrou conflito interno material nas formulações dos contrastes que impeça a preparação do release candidate.
 
 ---
 
-## 8. Gate determinístico
+## 8. Gate determinístico de DIREITO-006
 
 Tentativa em `2026-09-12`:
 
@@ -135,7 +133,92 @@ Consequência: `python tools/verify.py` não pôde ser executado em checkout can
 
 ---
 
-## 9. Decisão de saída
+## 9. DIREITO-007 — QA-7 NotebookLM estático
+
+**Resultado:** `PASS_STATIC`
+
+Arquitetura auditada:
+
+```text
+fonte estudável
+→ APOSTILA.pdf
+
+configuração da conversa
+→ bloco operacional de METODOLOGIA_NOTEBOOKLM.md
+```
+
+Verificações estáticas:
+
+- `METODOLOGIA_NOTEBOOKLM.md` foi criada como `ConversationInstruction`, não como matéria;
+- a configuração orienta o tutor a usar somente as fontes selecionadas como base factual e didática;
+- texto legal/regra da fonte, explicação didática e aplicação hipotética são distinguidos;
+- jurisprudência e doutrina ausentes da fonte não podem ser inventadas para preencher lacunas;
+- treino interativo mantém uma questão por vez e veda antecipação de gabarito;
+- correção privilegia artigo, elemento textual decisivo e contraste entre tipos próximos;
+- a apostila contém definições, regras, exceções, contrastes, mini-casos, sínteses e prática suficientes para Teste, Cartões, Mapa mental e chat;
+- nenhum trecho estudável depende de `MANIFEST`, `SOURCES`, análise de banca ou outro documento de backoffice para fazer sentido.
+
+**Smoke real:** `PENDING_USER_SMOKE`. A interface do NotebookLM não está disponível neste runtime. Nenhuma interação externa foi presumida como executada.
+
+---
+
+## 10. DIREITO-007 — QA-9 PDF candidato local
+
+**Resultado:** `PASS_LOCAL_ONLY_CANONICAL_PENDING`
+
+Um candidato local foi gerado a partir do `APOSTILA.md` congelado do `rc.1`. O candidato preferido, produzido em A4, apresentou:
+
+- páginas: `18`;
+- tamanho: `48.593 bytes`;
+- SHA-256: `d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469`;
+- PDF 1.4;
+- texto pesquisável e extraível.
+
+### Readback textual
+
+Foram recuperados no arquivo, entre outros, os marcadores:
+
+- `Direito Penal`;
+- `Unidade 1` e `Unidade 10`;
+- `Gabarito comentado`;
+- `art. 359`;
+- `§`;
+- `Código Penal`;
+- `Síntese final de recuperação`.
+
+### Inspeção visual
+
+As 18 páginas foram renderizadas a 150 dpi e inspecionadas integralmente. Não foram observados:
+
+- clipping de texto;
+- sobreposição de elementos;
+- glifos quebrados;
+- acentos ou símbolos jurídicos corrompidos;
+- quebra visual impeditiva em tabelas;
+- mistura acidental entre questões e gabarito.
+
+O gabarito começa em página separada no candidato auditado.
+
+### Limite canônico
+
+`APOSTILA.pdf` **não está publicado no GitHub** nesta passagem. O conector disponível aceita gravação textual, mas não oferece caminho confiável para transferir o artefato binário local já auditado para o repositório. Por isso, o hash acima identifica somente o candidato local e **não fecha o gate do PDF canônico**. Quando o binário for efetivamente versionado, o QA textual/visual precisa ser confirmado sobre aquele arquivo exato ou sobre regeneração equivalente com novo hash registrado.
+
+---
+
+## 11. DIREITO-007 — gate determinístico
+
+Nova checagem no runtime continua bloqueada por DNS:
+
+```text
+git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
+fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
+```
+
+Sem checkout canônico, executar `python tools/verify.py` em diretório parcial seria falsa validação. Resultado mantido: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
+---
+
+## 12. Decisão de saída atual
 
 | Gate | Resultado |
 |---|---|
@@ -146,10 +229,15 @@ Consequência: `python tools/verify.py` não pôde ser executado em checkout can
 | requisitos Q-LIT/Q-CMP/Q-CAS | PASS |
 | QA-5 corpus Markdown | PASS_FOR_MARKDOWN |
 | coerência com banca | PASS |
+| configuração do tutor | PASS_STATIC |
+| QA-7 NotebookLM estático | PASS_STATIC |
+| QA-7 NotebookLM live | PENDING_USER_SMOKE |
+| QA-9 PDF candidato local | PASS_LOCAL_ONLY_CANONICAL_PENDING |
+| `APOSTILA.pdf` canônico | NOT_PUBLISHED |
 | gate determinístico | NOT_EXECUTED_CURRENT_ENVIRONMENT |
-| PDF | NOT_CREATED |
-| NotebookLM live | NOT_TESTED |
 
 **DIREITO-006: `closed`.**
 
-O conteúdo Markdown de `direito-penal` está semanticamente aprovado para avançar ao estágio de **release candidate**, mas ainda não é release. Os próximos gates devem criar a configuração do tutor, produzir e auditar o PDF pesquisável e executar o QA aplicável no NotebookLM. Nenhum desses gates posteriores é presumido como PASS.
+**DIREITO-007: `open`.**
+
+O `0.1.0-rc.1` existe como release candidate incompleto. O conteúdo jurídico permanece semanticamente aprovado, mas não pode ser promovido a release final enquanto o PDF canônico, o smoke real do NotebookLM e o gate determinístico aplicável não refletirem execução real.
