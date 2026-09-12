@@ -132,3 +132,19 @@ release da apostila
 ```
 
 `APOSTILA-002` é o primeiro uso obrigatório do protocolo e servirá como validação prática antes de replicar o padrão para as demais matérias.
+
+## DEC-0019 — B2 Conhecimentos em Direito dividido em seis SubjectPacks
+**Status:** accepted  
+O bloco B2 permanece uma única unidade estatística do edital, com 30 questões, mas a entrega editorial será dividida em seis SubjectPacks alinhados aos domínios expressos no conteúdo programático: `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo` e `legislacao-interna`.
+
+Motivos principais:
+
+- o conjunto normativo completo é grande demais para um único material de estudo/manutenção eficiente;
+- os seis domínios têm dependências, terminologia e estratégias didáticas próprias;
+- a separação melhora recuperação temática no NotebookLM;
+- códigos federais, legislação estadual e normas internas têm ciclos de atualização diferentes;
+- a divisão replica a fronteira semântica do próprio edital sem alterar a distribuição oficial de 30 questões.
+
+Fontes compartilhadas continuam referenciadas por proveniência, sem duplicação obrigatória de binários. A Lei n.º 9.099/1995, por exemplo, alimenta recortes distintos de Processual Penal e Processual Civil.
+
+O edital contém uma anomalia literal no recorte das Normas da Corregedoria: após listar `Tomo I — Capítulo XI: Seções I, IV e V`, lista novamente `Tomo I — Capítulo XI: Seção I a VII`. O repositório deve preservar essa redação até que evidência oficial permita resolver a duplicidade; não se deve inferir silenciosamente outro capítulo.

@@ -53,9 +53,15 @@ Lei Federal n.º 8.429/1992 — Lei de Improbidade Administrativa.
 - Resolução TJSP n.º 963/2025 — governança e utilização do eproc;
 - Lei Complementar Estadual n.º 1.111/2010 — Plano de Cargos e Carreiras;
 - Regimento Interno do Tribunal de Justiça de São Paulo;
-- Normas da Corregedoria Geral da Justiça nos recortes expressamente indicados no edital.
+- Normas da Corregedoria Geral da Justiça, nos seguintes recortes impressos no edital:
+  - Tomo I — Capítulo II: Seção I — subseções I e II;
+  - Tomo I — Capítulo III: Seções I, II, V, VI e VII;
+  - Tomo I — Capítulo III: Seção VIII — subseções I, II e III;
+  - Tomo I — Capítulo III: Seções IX a XIX;
+  - Tomo I — Capítulo XI: Seções I, IV e V;
+  - Tomo I — Capítulo XI: Seções I a VII.
 
-A decomposição fina das Normas da Corregedoria será feita somente com conferência direta do trecho integral do edital/normativo, para evitar transformar um resumo de fonte em escopo canônico incorreto.
+**Nota de autoridade:** o edital referencia o Capítulo XI duas vezes nas duas últimas linhas acima. Esta duplicidade é preservada literalmente; não inferir silenciosamente outro capítulo sem fonte oficial que resolva a anomalia.
 
 ## B3 — Conhecimentos Gerais — 24 questões
 

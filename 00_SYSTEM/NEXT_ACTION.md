@@ -1,130 +1,104 @@
 # NEXT_ACTION
 
-## DIREITO-001 — Definir o próximo SubjectPack de Conhecimentos em Direito e fechar sua base de autoria
+## DIREITO-002 — Fechar o Gate 2 de fontes e versões de Conhecimentos em Direito
 
-Português 2.0.0 está concluído e validado. O próximo domínio canônico é **B2 — Conhecimentos em Direito**, porque o syllabus vigente atribui **30 questões** a esse bloco, a maior parcela ainda sem SubjectPack.
+O Gate 1 foi concluído: B2 permanece um único bloco estatístico de 30 questões no edital, mas sua entrega editorial foi dividida, sob DEC-0019, em seis SubjectPacks: `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo` e `legislacao-interna`.
 
-Não começar redigindo a apostila. O primeiro objetivo é transformar B2 em um escopo autorável, versionado e verificável.
+**Não iniciar a redação de nenhuma apostila.** O próximo objetivo é tornar cada fonte normativa autorável, versionada e verificável para o corte do edital.
 
 ## Evidência canônica
 
-`competitions/tjsp-escrevente-2025/SYLLABUS.md` define B2 com:
+Usar conjuntamente:
 
-- Direito Penal;
-- Direito Processual Penal;
-- Direito Processual Civil;
-- Direito Constitucional;
-- Direito Administrativo;
-- Legislação Interna;
-- total de 30 questões no bloco.
+- `competitions/tjsp-escrevente-2025/SYLLABUS.md` para o recorte oficial;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md` para a fronteira editorial;
+- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` para o inventário em andamento;
+- `SRC-TJSP-EDITAL-2025-02` como autoridade de escopo;
+- `00_SYSTEM/SOURCE_POLICY.md` e DEC-0010/DEC-0011 para autoridade e proveniência.
 
-O edital vigente prevalece sobre provas históricas conforme DEC-0010. Legislação deve respeitar a versão/data relevante e o recorte expresso no edital.
+O cutoff-base registrado para o edital é **2025-07-29**. O próprio edital admite legislação superveniente ou complementar quando relacionada ou indispensável ao tópico, portanto qualquer atualização posterior deve ser analisada e não simplesmente ignorada ou absorvida pela versão atual.
 
-## Recuperação obrigatória
+## Gate 2 — Trabalho obrigatório
 
-Antes de mutar o repositório, ler:
+### 1. Auditar fontes federais
 
-1. `AGENTS.md`;
-2. `00_SYSTEM/START_HERE.md`;
-3. `PROJECT_CONTROL.md`;
-4. `00_SYSTEM/CHECKPOINT.md`;
-5. este `NEXT_ACTION.md`;
-6. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0009, DEC-0010, DEC-0011, DEC-0013, DEC-0016, DEC-0017 e DEC-0018;
-7. `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`;
-8. `00_SYSTEM/SOURCE_POLICY.md`;
-9. `00_SYSTEM/QA_PROTOCOL.md`;
-10. `competitions/tjsp-escrevente-2025/SYLLABUS.md`;
-11. o source registry/edital map do adapter TJSP 2025.
+Para cada recorte abaixo, comparar o texto aplicável no cutoff com a compilação oficial atual e identificar alterações posteriores que atinjam artigos exigidos:
 
-Conferir o estado real de `main` antes de criar branch.
+- Código Penal;
+- Código de Processo Penal;
+- Lei n.º 9.099/1995;
+- Código de Processo Civil;
+- Lei n.º 12.153/2009;
+- Constituição Federal;
+- Lei n.º 8.429/1992.
 
-## Gate 1 — Definir a fronteira do SubjectPack
+Registrar em `DIREITO_SOURCES.md` o resultado por fonte. Não basta apontar a URL atual.
 
-Antes de criar material, decidir com evidência se B2 deve ser:
+### 2. Reconstruir as fontes estaduais com drift confirmado
 
-- um SubjectPack único `direito`, com seis unidades/domínios; ou
-- mais de um SubjectPack, caso volume, fonte ou recuperação pedagógica tornem a divisão necessária.
+A compilação oficial atual já demonstra mudanças posteriores ao cutoff em pelo menos:
 
-A decisão deve considerar:
+- Lei Estadual n.º 10.261/1968;
+- LC Estadual n.º 1.111/2010.
 
-- os 30 itens do bloco como unidade de prova;
-- quantidade e extensão dos recortes normativos;
-- risco de um PDF excessivamente grande para NotebookLM/uso humano;
-- coerência pedagógica e de revisão;
-- manutenção/versionamento de legislação.
+Determinar, com histórico legislativo oficial, quais dispositivos do recorte do edital estavam vigentes em 2025-07-29 e quais alterações posteriores atingem esse recorte.
 
-Registrar a decisão canônica antes de redigir conteúdo substancial. Não inferir a divisão apenas por conveniência de diretório.
+### 3. Fechar fontes internas do TJSP
 
-## Gate 2 — Fechar fontes e versões
+- confirmar o histórico da Resolução TJSP n.º 850/2021 até o cutoff;
+- confirmar a versão da Resolução TJSP n.º 963/2025 em 2025-07-29 e atos posteriores relevantes;
+- localizar/validar a versão do Regimento Interno vigente em 2025-07-29;
+- localizar/validar o Tomo I das Normas da Corregedoria vigente em 2025-07-29.
 
-Construir inventário verificável de todas as fontes normativas exigidas pelo B2, incluindo no mínimo:
+### 4. Não resolver a duplicidade do Capítulo XI por inferência
 
-- Código Penal nos artigos indicados pelo syllabus;
-- Código de Processo Penal nos artigos indicados;
-- Lei 9.099/1995 nos recortes penal e cível;
-- Código de Processo Civil nos artigos indicados;
-- Lei 12.153/2009;
-- Constituição Federal nos títulos/capítulos/seções e art. 92 indicados;
-- Lei Estadual 10.261/1968 nos artigos indicados;
-- Lei 8.429/1992;
-- Resolução TJSP 850/2021;
-- Resolução TJSP 963/2025;
-- LC Estadual 1.111/2010;
-- Regimento Interno do TJSP;
-- Normas da Corregedoria nos recortes exatos do edital.
+O edital imprime dois recortes sucessivos como `Tomo I — Capítulo XI`. Essa anomalia já está registrada no syllabus e no plano de autoria.
 
-Para cada fonte, registrar autoridade, identificação, recorte, versão/data relevante, proveniência e hash/tamanho quando aplicável. Não publicar binários-fonte no repositório público, conforme DEC-0011.
+Somente corrigir ou reinterpretar essa referência se uma fonte oficial inequívoca permitir fazê-lo. Caso contrário, manter a ambiguidade documentada e tratá-la explicitamente no planejamento de cobertura.
 
-## Gate 3 — Análise silenciosa da banca
+### 5. Completar proveniência
 
-Usar as provas históricas já registradas para classificar as questões de Direito de 2021, 2023, 2024 e 2025 de forma reproduzível, sem deixar frequência histórica sobrescrever o edital.
+Para cada fonte fechada, registrar quando aplicável:
 
-Produzir análise suficiente para orientar:
+- `source_id`;
+- autoridade;
+- título/diploma;
+- recorte;
+- URL ou identificação oficial;
+- data/versão relevante;
+- histórico de alteração necessário;
+- data de verificação;
+- hash SHA-256 e tamanho quando um arquivo estável tiver sido obtido localmente para auditoria.
 
-- profundidade por domínio;
-- tipos de cobrança;
-- distinções e armadilhas recorrentes;
-- necessidade de literalidade legal versus compreensão sistemática;
-- desenho da prática autoral.
+Binários-fonte de terceiros não entram no repositório público, conforme DEC-0011.
 
-Essa análise é backoffice, não texto do estudante.
+## Critério de fechamento do Gate 2
 
-## Gate 4 — Matriz de cobertura/autoria
+Marcar o Gate 2 como `closed` somente quando todos os diplomas e recortes de B2 tiverem versão aplicável definida ou uma ambiguidade oficial explicitamente registrada sem falsa resolução.
 
-Somente após fechar fronteira e fontes, criar a matriz exigida por `APOSTILA_AUTHORING_PROTOCOL.md` com, para cada recorte:
+A existência de uma página oficial atual **não** equivale a fechar a versão do edital quando houver alteração posterior ao cutoff.
 
-- item do syllabus;
-- fonte normativa;
-- objetivo de aprendizagem;
-- conceitos/regras;
-- distinções e casos-limite;
-- aplicações/exemplos;
-- prática necessária;
-- status de cobertura.
+## Depois do Gate 2 — DIREITO-003
 
-Nenhum artigo ou diploma listado no edital pode desaparecer silenciosamente.
+Só então iniciar o Gate 3: classificar de forma reproduzível as questões de Direito das provas de 2021, 2023, 2024 e 2025, preservando o edital como autoridade de escopo.
 
-## Gate 5 — Autorizar redação
+A análise deverá registrar, por questão, ao menos:
 
-A redação da nova apostila só começa quando:
+- domínio;
+- fonte/dispositivo ou instituto principal;
+- operação cognitiva;
+- literalidade versus aplicação;
+- tipo de distractor/armadilha;
+- distinção jurídica relevante.
 
-- a fronteira do SubjectPack estiver decidida;
-- fontes e versões estiverem fechadas;
-- análise histórica estiver suficiente;
-- matriz de cobertura/autoria estiver criada e sem lacunas estruturais.
+A frequência histórica servirá à engenharia silenciosa da apostila e não poderá alterar o conteúdo programático vigente.
 
-Depois disso, seguir o protocolo de autoria, gerar PDF pesquisável, fazer QA textual/visual, publicar por readback e repetir smoke real no NotebookLM.
+## Gate canônico
 
-## Estado anterior fechado
+Antes de encerrar a próxima implementação:
 
-Português 2.0.0 foi concluído com:
+```bash
+python tools/verify.py
+```
 
-- QA editorial: PASS;
-- PDF: 16 páginas A4, 20824 bytes, SHA-256 `b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931`, Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`;
-- chat NotebookLM configurado: PASS após rc2;
-- Teste nativo: PASS;
-- Cartões: PASS;
-- Mapa mental: PASS;
-- `python tools/verify.py`: não executado por impossibilidade de resolução de `github.com`, explicitamente documentada sob DEC-0009.
-
-Não reabrir Português 2.0.0 sem evidência concreta de regressão ou nova decisão canônica.
+Se o runtime continuar incapaz de obter um checkout canônico por falha de resolução de `github.com`, registrar a tentativa e a impossibilidade; não tratar como `PASS`, conforme DEC-0009.
