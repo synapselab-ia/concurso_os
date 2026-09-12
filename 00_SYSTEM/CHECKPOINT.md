@@ -2,70 +2,77 @@
 
 ```yaml
 project_state: active
-phase: subject_pack_content_rebuild
+phase: subject_pack_authoring_prep
 branch: main
-last_implementation_branch: docs/apostila-authoring-protocol
-current_task: APOSTILA-002 rebuild Portuguese apostila using canonical authoring protocol
+base_branch: main
+last_implementation_branch: content/apostila-portugues-2.0.0
+current_task: prepare next TJSP 2025 SubjectPack for Conhecimentos em Direito using canonical syllabus and authoring protocol
+current_pack: none_in_progress
+last_released_pack: portugues 2.0.0
 completed:
-  - repository foundation merged
-  - chat-independent continuity active
-  - autonomous merge policy active
+  - repository foundation and chat-independent continuity active
+  - autonomous merge policy active under DEC-0009
   - TJSP 2025 adapter, edital map, blueprint and source registry created
   - historical exams 2021/2023/2024/2025 registered
   - GitHub + ChatGPT + NotebookLM stack established
-  - answer-level mastery/scheduler removed from V0.1 critical path
-  - Portuguese edital slice mapped across 13 content fronts
-  - 88 Portuguese questions from 2021/2023/2024/2025 classified reproducibly
-  - Portuguese banca analysis 1.0.0 produced
-  - Portuguese apostila/PDF 1.0.0 produced and QA reviewed
-  - Portuguese SubjectPack 1.0.0 merged in PR 7
-  - Studio-first usability patch 1.0.1 merged in PR 8
-  - real NotebookLM smoke test exposed source-role problem
-  - native Test with methodology selected generated question about methodology itself
-  - native Test without methodology generated quiz directly about apostila content
-  - NotebookLM chat followed operational methodology substantially better than native Test
-  - DEC-0015 superseded by DEC-0016
-  - content-first architecture merged in PR 9
-  - NotebookLM custom conversation configuration observed in real UI
-  - DEC-0017 adopted and conversation-config architecture merged in PR 10
-  - Portuguese MANIFEST/METODOLOGIA advanced to 1.0.3 without changing apostila/PDF bytes
-  - DEC-0018 adopted: canonical apostila authoring protocol required for major creation/rebuilds
-  - APOSTILA_AUTHORING_PROTOCOL created with coverage matrix, domain profiles, NotebookLM engineering and 10 QA gates
-  - AGENTS and START_HERE require/read the authoring protocol for apostila work
-  - PROJECT_SPEC and ARCHITECTURE aligned with protocol-driven authoring
-  - QA_PROTOCOL extended to require semantic editorial QA in addition to deterministic verify
-  - APOSTILA-002 rewritten to apply the protocol explicitly
-in_progress:
-  - hand off to next chat for Portuguese 2.0.0 reconstruction under APOSTILA_AUTHORING_PROTOCOL
+  - DEC-0016 and DEC-0017 clean-corpus + native conversation configuration architecture established
+  - DEC-0018 APOSTILA_AUTHORING_PROTOCOL adopted as mandatory
+  - Portuguese 1.0.0 audited
+  - Portuguese 2.0.0 authoring matrix closed with B1.1-B1.13 covered
+  - Portuguese 2.0.0 APOSTILA.md reconstructed across 9 pedagogical units
+  - 30 original A-E practice questions added with commented answer key
+  - Portuguese QA-1 through QA-6 passed
+  - Portuguese QA-7 static passed
+  - Portuguese QA-8 passed
+  - corrupt/truncated PDF upload detected and rejected by GitHub readback
+  - final compact Portuguese 2.0.0 PDF generated, validated and published byte-identical
+  - Portuguese QA-9 PDF publication gate passed
+  - NotebookLM first live chat smoke findings recorded and methodology hardened to rc2
+  - configured-chat rc2 retest passed
+  - NotebookLM native Teste passed
+  - NotebookLM Cartões passed
+  - NotebookLM Mapa mental passed
+  - Portuguese QA-7 live passed completely
+  - METODOLOGIA_NOTEBOOKLM promoted to 2.0.0 final
+  - Portuguese 2.0.0 manifest/changelog/QA promoted to final release
+  - PR 12 validated for merge
+next_subject_evidence:
+  syllabus_block: B2
+  name: Conhecimentos em Direito
+  exam_questions: 30
+  reason: largest remaining exam block without a SubjectPack
+  internal_domains:
+    - Direito Penal
+    - Direito Processual Penal
+    - Direito Processual Civil
+    - Direito Constitucional
+    - Direito Administrativo
+    - Legislacao Interna
 not_started:
-  - APOSTILA-002 audit of current Portuguese apostila
-  - Portuguese coverage/authoring matrix
-  - new pedagogical outline
-  - Portuguese 2.0.0 content rewrite
-  - semantic QA gates for Portuguese 2.0.0
-  - new Portuguese PDF release and PDF QA
-  - NotebookLM validation using rebuilt apostila as clean corpus
-  - SubjectPacks for remaining subjects
-blockers: []
+  - decide canonical SubjectPack boundary for B2 before authoring
+  - build source inventory/version map for all B2 normative sources
+  - create B2 coverage/authoring matrix
+  - author next SubjectPack
 validation:
-  command: python tools/verify.py
-  result: not_executed_current_environment
-  reason: local runtime cannot resolve github.com; clone of docs/apostila-authoring-protocol failed before gate execution
-  attempted_at: 2026-09-11
-  clone_error: Could not resolve host github.com
-  static_diff_review: pass
-  critical_readback: pass
-  changed_files_reviewed: 10
-  branch_base: b2bfd8248e744c61e77278e4c975192e86f4429c
-  change_scope: documentation_and_authoring_protocol_only
-  binary_changes: none
-  apostila_md_changed: false
-  apostila_pdf_changed: false
+  portuguese_editorial_qa: pass
+  portuguese_notebooklm_live: pass
+  portuguese_pdf_qa:
+    result: pass
+    material_version: 2.0.0
+    pages: 16
+    page_size: A4
+    bytes: 20824
+    sha256: b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931
+    git_blob: 640efaed13dd43cc83f6904c62fdb86131b9124a
+  canonical_gate:
+    command: python tools/verify.py
+    result: not_executed_current_environment
+    reason: local runtime cannot resolve github.com, preventing a valid canonical checkout
+    attempted_at: 2026-09-11
+    network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
+    error: Could not resolve host github.com
+    policy: impossibility documented under DEC-0009; not treated as pass
 ci: disabled
-last_adapter_pull_request: 4
-last_architecture_pull_request: 6
-last_subject_pack_pull_request: 7
-last_usability_pull_request: 8
-last_content_first_pull_request: 9
-last_conversation_config_pull_request: 10
+last_subject_pack_pull_request: 12
+merge_status: portuguese_2_0_0_validated_for_merge
 ```

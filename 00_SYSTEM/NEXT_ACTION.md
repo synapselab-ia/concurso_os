@@ -1,152 +1,130 @@
 # NEXT_ACTION
 
-## APOSTILA-002 — Reconstruir Português aplicando o protocolo canônico de autoria
+## DIREITO-001 — Definir o próximo SubjectPack de Conhecimentos em Direito e fechar sua base de autoria
 
-A arquitetura NotebookLM está definida por `DEC-0016`/`DEC-0017` e o processo editorial por `DEC-0018` + `APOSTILA_AUTHORING_PROTOCOL.md`.
+Português 2.0.0 está concluído e validado. O próximo domínio canônico é **B2 — Conhecimentos em Direito**, porque o syllabus vigente atribui **30 questões** a esse bloco, a maior parcela ainda sem SubjectPack.
 
-O próximo trabalho é **refazer a apostila de Português**, porque ela é o produto principal do estudante e o corpus que alimenta o NotebookLM.
+Não começar redigindo a apostila. O primeiro objetivo é transformar B2 em um escopo autorável, versionado e verificável.
 
-Target recomendado do release: `portugues 2.0.0`.
+## Evidência canônica
 
-## Recuperação obrigatória no próximo chat
+`competitions/tjsp-escrevente-2025/SYLLABUS.md` define B2 com:
 
-Antes de escrever, seguir `AGENTS.md` e ler pelo menos:
+- Direito Penal;
+- Direito Processual Penal;
+- Direito Processual Civil;
+- Direito Constitucional;
+- Direito Administrativo;
+- Legislação Interna;
+- total de 30 questões no bloco.
 
-1. `00_SYSTEM/START_HERE.md`;
-2. `PROJECT_CONTROL.md`;
-3. `00_SYSTEM/PROJECT_SPEC.md`;
-4. `00_SYSTEM/ARCHITECTURE.md`;
-5. `00_SYSTEM/DATA_MODEL.md`;
-6. `00_SYSTEM/CHECKPOINT.md`;
-7. este `NEXT_ACTION.md`;
-8. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0010, DEC-0013, DEC-0014, DEC-0016, DEC-0017 e DEC-0018;
-9. `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` **integralmente**;
-10. `00_SYSTEM/SOURCE_POLICY.md` e `00_SYSTEM/QA_PROTOCOL.md`;
-11. `competitions/tjsp-escrevente-2025/SYLLABUS.md`;
-12. `materials/tjsp-escrevente-2025/portugues/ANALISE_BANCA.md`;
-13. `materials/tjsp-escrevente-2025/portugues/SOURCES.md`;
-14. `materials/tjsp-escrevente-2025/portugues/APOSTILA.md` atual, somente como objeto de auditoria/reaproveitamento seletivo;
-15. `materials/tjsp-escrevente-2025/portugues/METODOLOGIA_NOTEBOOKLM.md`, somente para garantir compatibilidade do corpus com o tutor configurado.
+O edital vigente prevalece sobre provas históricas conforme DEC-0010. Legislação deve respeitar a versão/data relevante e o recorte expresso no edital.
 
-Verificar também o estado real da `main` e PRs abertos antes de escrever.
+## Recuperação obrigatória
 
-## Arquitetura NotebookLM a preservar
+Antes de mutar o repositório, ler:
 
-```text
-FONTES DO NOTEBOOKLM
-→ APOSTILA.pdf
+1. `AGENTS.md`;
+2. `00_SYSTEM/START_HERE.md`;
+3. `PROJECT_CONTROL.md`;
+4. `00_SYSTEM/CHECKPOINT.md`;
+5. este `NEXT_ACTION.md`;
+6. `00_SYSTEM/DECISION_LOG.md`, especialmente DEC-0009, DEC-0010, DEC-0011, DEC-0013, DEC-0016, DEC-0017 e DEC-0018;
+7. `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`;
+8. `00_SYSTEM/SOURCE_POLICY.md`;
+9. `00_SYSTEM/QA_PROTOCOL.md`;
+10. `competitions/tjsp-escrevente-2025/SYLLABUS.md`;
+11. o source registry/edital map do adapter TJSP 2025.
 
-CONFIGURAÇÃO DA CONVERSA
-→ Personalizado (ou equivalente)
-→ bloco operacional de METODOLOGIA_NOTEBOOKLM.md
-```
+Conferir o estado real de `main` antes de criar branch.
 
-A apostila deve funcionar como **corpus didático limpo**. `ANALISE_BANCA.md`, `SOURCES.md`, protocolo de autoria, manifest, changelog e documentação de QA permanecem no backoffice.
+## Gate 1 — Definir a fronteira do SubjectPack
 
-## Execução obrigatória pelo protocolo
+Antes de criar material, decidir com evidência se B2 deve ser:
 
-### Etapa 1 — Auditoria
+- um SubjectPack único `direito`, com seis unidades/domínios; ou
+- mais de um SubjectPack, caso volume, fonte ou recuperação pedagógica tornem a divisão necessária.
 
-Auditar a apostila atual e registrar lacunas concretas de:
+A decisão deve considerar:
 
-- cobertura;
-- profundidade;
-- precisão;
-- exemplos;
-- distinções;
-- exercícios;
-- sequência pedagógica;
-- utilidade para NotebookLM;
-- redundância/metadiscurso.
+- os 30 itens do bloco como unidade de prova;
+- quantidade e extensão dos recortes normativos;
+- risco de um PDF excessivamente grande para NotebookLM/uso humano;
+- coerência pedagógica e de revisão;
+- manutenção/versionamento de legislação.
 
-### Etapa 2 — Matriz de cobertura/autoria
+Registrar a decisão canônica antes de redigir conteúdo substancial. Não inferir a divisão apenas por conveniência de diretório.
 
-Antes da reescrita completa, mapear cada item do syllabus para:
+## Gate 2 — Fechar fontes e versões
 
-```text
-learning_goal
-concepts
-contrasts
-applications
-source_refs
-banca_signal
-depth
-status
-```
+Construir inventário verificável de todas as fontes normativas exigidas pelo B2, incluindo no mínimo:
 
-Nenhum item do edital pode desaparecer silenciosamente.
+- Código Penal nos artigos indicados pelo syllabus;
+- Código de Processo Penal nos artigos indicados;
+- Lei 9.099/1995 nos recortes penal e cível;
+- Código de Processo Civil nos artigos indicados;
+- Lei 12.153/2009;
+- Constituição Federal nos títulos/capítulos/seções e art. 92 indicados;
+- Lei Estadual 10.261/1968 nos artigos indicados;
+- Lei 8.429/1992;
+- Resolução TJSP 850/2021;
+- Resolução TJSP 963/2025;
+- LC Estadual 1.111/2010;
+- Regimento Interno do TJSP;
+- Normas da Corregedoria nos recortes exatos do edital.
 
-### Etapa 3 — Sumário pedagógico
+Para cada fonte, registrar autoridade, identificação, recorte, versão/data relevante, proveniência e hash/tamanho quando aplicável. Não publicar binários-fonte no repositório público, conforme DEC-0011.
 
-Desenhar o novo sumário a partir de dependências de aprendizado e da matriz, não apenas copiando a ordem do edital ou da apostila antiga.
+## Gate 3 — Análise silenciosa da banca
 
-### Etapa 4 — Reconstrução
+Usar as provas históricas já registradas para classificar as questões de Direito de 2021, 2023, 2024 e 2025 de forma reproduzível, sem deixar frequência histórica sobrescrever o edital.
 
-Reescrever `APOSTILA.md` segundo o perfil de Língua Portuguesa do protocolo:
+Produzir análise suficiente para orientar:
 
-```text
-conceito linguístico
-→ efeito/regra
-→ como reconhecer no contexto
-→ contraste
-→ exemplos/pares mínimos
-→ reescrita
-→ aplicação
-→ síntese/prática
-```
+- profundidade por domínio;
+- tipos de cobrança;
+- distinções e armadilhas recorrentes;
+- necessidade de literalidade legal versus compreensão sistemática;
+- desenho da prática autoral.
 
-A banca deve influenciar silenciosamente profundidade, distinções, tipos de erro e prática. Evitar transformar o material em relatório sobre TJSP/VUNESP.
+Essa análise é backoffice, não texto do estudante.
 
-### Etapa 5 — QA editorial
+## Gate 4 — Matriz de cobertura/autoria
 
-Executar e registrar os gates aplicáveis de `APOSTILA_AUTHORING_PROTOCOL.md`:
+Somente após fechar fronteira e fontes, criar a matriz exigida por `APOSTILA_AUTHORING_PROTOCOL.md` com, para cada recorte:
 
-1. cobertura;
-2. exatidão/fonte;
-3. didática;
-4. distinções/casos-limite;
-5. prática;
-6. coerência com banca sem overfitting;
-7. utilidade para NotebookLM;
-8. redundância/coerência.
+- item do syllabus;
+- fonte normativa;
+- objetivo de aprendizagem;
+- conceitos/regras;
+- distinções e casos-limite;
+- aplicações/exemplos;
+- prática necessária;
+- status de cobertura.
 
-### Etapa 6 — PDF
+Nenhum artigo ou diploma listado no edital pode desaparecer silenciosamente.
 
-Gerar novo `APOSTILA.pdf` pesquisável e executar QA textual/visual:
+## Gate 5 — Autorizar redação
 
-- extração de texto;
-- acentos/símbolos;
-- clipping/overlap;
-- tabelas;
-- hierarquia;
-- legibilidade;
-- separação de perguntas/gabaritos.
+A redação da nova apostila só começa quando:
 
-### Etapa 7 — Release e continuidade
+- a fronteira do SubjectPack estiver decidida;
+- fontes e versões estiverem fechadas;
+- análise histórica estiver suficiente;
+- matriz de cobertura/autoria estiver criada e sem lacunas estruturais.
 
-Atualizar:
+Depois disso, seguir o protocolo de autoria, gerar PDF pesquisável, fazer QA textual/visual, publicar por readback e repetir smoke real no NotebookLM.
 
-- `MANIFEST.md`;
-- `CHANGELOG.md`;
-- `PROJECT_CONTROL.md`;
-- `CHECKPOINT.md`;
-- `NEXT_ACTION.md`.
+## Estado anterior fechado
 
-Executar `python tools/verify.py` ou justificar explicitamente a impossibilidade. Revisar diff/readback, abrir PR e fazer merge quando couber sob `DEC-0009`.
+Português 2.0.0 foi concluído com:
 
-## Definition of Done
+- QA editorial: PASS;
+- PDF: 16 páginas A4, 20824 bytes, SHA-256 `b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931`, Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`;
+- chat NotebookLM configurado: PASS após rc2;
+- Teste nativo: PASS;
+- Cartões: PASS;
+- Mapa mental: PASS;
+- `python tools/verify.py`: não executado por impossibilidade de resolução de `github.com`, explicitamente documentada sob DEC-0009.
 
-`APOSTILA-002` só termina quando:
-
-- todos os itens de Português do syllabus estão cobertos de modo ensinável;
-- a apostila funciona para aprender do zero e revisar;
-- conceitos confundíveis estão explicitamente separados;
-- exemplos, contraexemplos e prática autoral são suficientes;
-- fatos/regras sensíveis estão source-grounded;
-- a apostila funciona como corpus do NotebookLM sem depender do backoffice;
-- o chat configurado consegue explicar/treinar usando esse corpus;
-- todos os gates aplicáveis do protocolo estão registrados como executados;
-- o novo PDF foi validado;
-- versão, continuidade e release foram atualizados no GitHub.
-
-Não iniciar os SubjectPacks das outras matérias antes de fechar e testar este padrão com Português, salvo nova decisão canônica explícita.
+Não reabrir Português 2.0.0 sem evidência concreta de regressão ou nova decisão canônica.
