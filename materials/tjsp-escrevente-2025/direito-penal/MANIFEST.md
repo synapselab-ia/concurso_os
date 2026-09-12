@@ -2,13 +2,13 @@
 
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `direito-penal`  
-**Pack version:** `0.1.0-draft.1`  
+**Pack version:** `0.1.0-draft.2`  
 **Status:** `draft`  
 **Draft date:** `2026-09-12`
 
 ## Objetivo
 
-Este SubjectPack inicia a primeira implementação jurídica de B2. O draft deve ser autocontido para aprendizado e revisão, manter rastreabilidade ao recorte oficial e servir como corpus potencial do NotebookLM depois dos gates editoriais, normativos, de PDF e de uso real.
+Este SubjectPack é a primeira implementação jurídica de B2. O Markdown deve ser autocontido para aprendizado e revisão, manter rastreabilidade ao recorte oficial e tornar-se corpus potencial do NotebookLM somente depois dos gates editoriais, normativos, de PDF e de uso real.
 
 A autoria segue `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e o contrato `DP-01`…`DP-10` de `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
 
@@ -26,53 +26,64 @@ Baseline autoral: texto vigente em `2025-07-29`. O Gate 2 classificou o recorte 
 
 ### StudentContent
 
-- `APOSTILA.md` — presente em `0.1.0-draft.1`; draft completo de primeira passagem cobrindo DP-01…DP-10.
-- `APOSTILA.pdf` — **não criado**; publicação binária bloqueada até QA editorial/normativo e preparação de release candidate.
+- `APOSTILA.md` — `0.1.0-draft.2`; cobertura DP-01…DP-10 revisada normativamente e didaticamente; prática ainda contém duas pendências de QA.
+- `APOSTILA.pdf` — **não criado**; publicação binária bloqueada enquanto o QA semântico não fechar.
 
 ### ConversationInstruction
 
-- `METODOLOGIA_NOTEBOOKLM.md` — ainda não criado neste pack. Quando necessário, deve registrar apenas a configuração do tutor e não integrar o corpus estudável.
+- `METODOLOGIA_NOTEBOOKLM.md` — ainda não criado. Quando necessário, deve registrar apenas a configuração do tutor e não integrar o corpus estudável.
 
 ### BackofficeArtifact
 
-- `SOURCES.md` — presente; proveniência e regra de versão.
-- `CHANGELOG.md` — presente; histórico do draft.
-- análise de banca — referenciada centralmente por `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`.
-- matriz de autoria — referenciada centralmente por `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
-- documento de QA específico — ainda não criado; é o próximo gate depois da primeira implementação.
+- `SOURCES.md` — proveniência e regra de versão.
+- `CHANGELOG.md` — histórico do draft.
+- `APOSTILA_QA_0.1.0.md` — QA semântico em andamento; QA-1/2/3/5 passaram, QA-4 falhou por Q12 e Q29.
+- análise de banca — `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`.
+- matriz de autoria — `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
+
+## Estado dos gates do pack
+
+| gate | resultado |
+|---|---|
+| cobertura/rastreabilidade DP-01…DP-10 | `pass` |
+| revisão normativa completa contra `SRC-B2-CP` | `pass_after_corrections` |
+| didática/contrastes | `pass` |
+| 30 questões autorais | `fail` — Q12 `review_required`, Q29 `ambiguous` |
+| estrutura do corpus Markdown | `pass_for_markdown_draft` |
+| `python tools/verify.py` | `not_executed_current_environment` — DNS do runtime não resolve github.com |
+| PDF | `not_created` |
+| NotebookLM | `not_tested` |
 
 ## Cobertura do draft
 
-| coverage_id | recorte | estado |
-|---|---|---|
-| DP-01 | arts. 293–295 | `drafted` |
-| DP-02 | arts. 296–305 | `drafted` |
-| DP-03 | arts. 307–308 | `drafted` |
-| DP-04 | art. 311-A | `drafted` |
-| DP-05 | arts. 312–317, incluindo dispositivos intercalares dentro do intervalo | `drafted` |
-| DP-06 | arts. 319–327, incluindo art. 319-A | `drafted` |
-| DP-07 | arts. 328–333 | `drafted` |
-| DP-08 | arts. 336 e 337 | `drafted` |
-| DP-09 | arts. 339–347 | `drafted` |
-| DP-10 | arts. 357 e 359 | `drafted` |
+| coverage_id | recorte | cobertura normativa | prática |
+|---|---|---|---|
+| DP-01 | arts. 293–295 | `qa_pass` | `qa_pass` |
+| DP-02 | arts. 296–305 | `qa_pass` | `qa_pass` |
+| DP-03 | arts. 307–308 | `qa_pass` | `qa_pass` |
+| DP-04 | art. 311-A | `qa_pass` | `qa_blocked_q12` |
+| DP-05 | arts. 312–317, incluindo dispositivos intercalares | `qa_pass` | `qa_pass` |
+| DP-06 | arts. 319–327, incluindo art. 319-A | `qa_pass` | `qa_pass` |
+| DP-07 | arts. 328–333 | `qa_pass` | `qa_pass` |
+| DP-08 | arts. 336 e 337 | `qa_pass` | `qa_pass` |
+| DP-09 | arts. 339–347 | `qa_pass` | `qa_pass` |
+| DP-10 | arts. 357 e 359 | `qa_pass` | `qa_blocked_q29` |
 
-O estado `drafted` não equivale a `qa` nem a `covered` de release. A promoção depende de revisão semântica e normativa registrada.
+O estado normativo `qa_pass` não autoriza release enquanto a prática do pack não estiver integralmente validada.
 
-## Engenharia pedagógica aplicada
+## Correções do `draft.2`
 
-O draft organiza cada bloco por regra, elementos, hipótese, consequência, contraste e caso aplicado. Falsidades, crimes funcionais e crimes contra a Administração/Justiça são apresentados por diferenças decisivas entre tipos próximos. A prática final usa questões autorais A–E, separadas do gabarito comentado.
+A revisão integral do recorte aprofundou pontos que estavam compactos no `draft.1`, incluindo formas do art. 293, §§ previdenciários do art. 297, penas dos arts. 300–301, peculato culposo, excesso de exação, corrupção passiva privilegiada, penas dos arts. 321–324, formas do art. 325, pena da resistência e aumentos dos arts. 342–344.
 
-A análise histórica da banca é usada apenas como engenharia silenciosa de profundidade e distractores. O material não apresenta contagens históricas nem afirma probabilidades futuras.
+O corpo didático passou a conter três mini-casos por DP e manteve quadros comparativos nos blocos que exigem Q-CMP.
 
-## Próximos gates
+## Pendências reais
 
-1. QA de cobertura DP-01…DP-10 e rastreabilidade artigo a artigo;
-2. QA normativo contra `SRC-B2-CP` e baseline `2025-07-29`;
-3. QA didático, contrastes, mini-casos e questões autorais;
-4. QA de redundância, terminologia e recuperação semântica;
-5. criação de release candidate e `APOSTILA.pdf` somente depois dos gates de conteúdo;
-6. smoke/QA de NotebookLM e QA textual/visual do PDF antes de release.
+1. reformular Q12 para não depender de combinação não explicada entre art. 311-A §§ 2º e 3º;
+2. reformular Q29 para evitar ambiguidade entre art. 324 e art. 359 e acrescentar contraste explícito `324 x 359` no corpo;
+3. revalidar as duas questões, gabaritos e comentários;
+4. somente depois disso encerrar o QA semântico e decidir sobre release candidate.
 
 ## Regra de distribuição
 
-Enquanto o status for `draft`, este pack não deve ser tratado como release final nem substituir material validado no NotebookLM.
+Enquanto o status for `draft`, este pack não deve ser tratado como release final nem substituir material validado no NotebookLM. PDF e smoke do NotebookLM permanecem bloqueados.
