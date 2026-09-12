@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 — Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** Gates 1–4 fechados; Gate 5 autorizado para `direito-penal`  
+**Status:** Gates 1–4 fechados; Gate 5 com primeiro draft de `direito-penal` implementado e QA pendente  
 
 ## Objetivo
 
@@ -82,6 +82,8 @@ Pontos de manutenção que não podem ser perdidos na autoria:
 - Regimento Interno: baseline inclui Assento n.º 591/2025 e exclui 592–596;
 - NSCGJ: baseline dos recortes literais exclui alterações posteriores identificadas, incluindo Provimentos CG n.º 30/2025 e 04/2026 no Capítulo XI.
 
+Para `direito-penal`, `SRC-B2-CP` está fechado como `cutoff_closed_no_scoped_drift`; o art. 338-A posterior não pertence ao recorte.
+
 ## Gate 3 — banca fechada
 
 `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` classifica de forma reproduzível **150 questões de Direito** das provas de 2021, 2023, 2024 e 2025.
@@ -112,13 +114,26 @@ O fechamento do Gate 4 confirma:
 
 Para `direito-penal`, o contrato de primeira autoria é `DP-01` a `DP-10`.
 
+## Gate 5 — primeira implementação de `direito-penal`
+
+A branch `content/direito-penal-v0.1-draft` estabeleceu o workspace `materials/tjsp-escrevente-2025/direito-penal/` com:
+
+- `APOSTILA.md` — `0.1.0-draft.1`, primeira passagem completa de DP-01…DP-10;
+- `SOURCES.md` — edital, `SRC-B2-CP`, baseline e corpus empírico;
+- `MANIFEST.md` — identidade, cobertura e estado do draft;
+- `CHANGELOG.md` — histórico inicial.
+
+A primeira passagem inclui quadros comparativos, mini-casos e 30 questões autorais A–E com gabarito comentado separado. Foi feita conferência preliminar das regras centrais contra a fonte oficial do Código Penal, mas isso **não** substitui o QA normativo completo.
+
+Não há `APOSTILA.pdf` nem release. O estado correto do pack é `draft`; o próximo gate é a revisão editorial/normativa específica.
+
 ## Ordem de produção
 
 1. **concluído** — inventário e versão de todas as fontes de B2;
 2. **concluído** — análise histórica reproduzível de 2021/2023/2024/2025;
 3. **concluído** — matriz de cobertura/autoria dos seis packs;
-4. **próximo** — iniciar autoria por `direito-penal`;
-5. seguir para `direito-processual-penal`;
+4. **draft implementado; QA pendente** — `direito-penal`;
+5. após validar o primeiro pipeline jurídico, seguir para `direito-processual-penal`;
 6. `direito-processual-civil`;
 7. `direito-constitucional`;
 8. `direito-administrativo`;
@@ -134,7 +149,8 @@ Cada pack deve usar a matriz como contrato e passar pelo fluxo de autoria/QA do 
 | 2 — fontes/versões | `closed` | inventário oficial, cutoff, proveniência e drift normativo fechados em `DIREITO_SOURCES.md` |
 | 3 — banca | `closed` | 150 questões de Direito classificadas em `DIREITO_B2_BANCA_ANALYSIS.md` |
 | 4 — matriz | `closed` | todos os recortes do syllabus rastreados sem lacunas em `DIREITO_B2_COVERAGE_MATRIX.md` |
-| 5 — autorização de redação | `authorized` | iniciar `direito-penal` por DP-01…DP-10, sem extrapolar syllabus/baseline |
+| 5 — primeira implementação | `draft_implemented` | workspace e primeira passagem DP-01…DP-10 criados; não é release |
+| 6 — QA do primeiro pack | `pending` | cobertura, exatidão normativa, didática, distinções, prática e corpus aprovados antes de PDF/release |
 
 ## Regra de autoridade
 

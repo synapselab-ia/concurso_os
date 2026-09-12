@@ -1,108 +1,125 @@
 # NEXT_ACTION
 
-## DIREITO-005 — Iniciar autoria do SubjectPack `direito-penal`
+## DIREITO-006 — Executar QA editorial e normativo do draft `direito-penal`
 
-Os Gates 1–4 de B2 estão fechados. O escopo editorial, o baseline normativo, a análise histórica da banca e a matriz de cobertura/autoria já estão definidos e rastreáveis.
+A primeira implementação de `direito-penal` foi criada em `materials/tjsp-escrevente-2025/direito-penal/` como `0.1.0-draft.1`. O workspace contém `APOSTILA.md`, `SOURCES.md`, `MANIFEST.md` e `CHANGELOG.md`; DP-01…DP-10 estão redigidos e há 30 questões autorais A–E com gabarito comentado separado.
 
-A redação substancial está agora **autorizada somente para o primeiro SubjectPack**, `direito-penal`, como validação do pipeline jurídico. Os demais cinco packs permanecem posteriores na ordem operacional.
+**O pack ainda é draft. Não gerar nem publicar `APOSTILA.pdf` como final e não promovê-lo a release antes deste QA.**
 
-## Contrato obrigatório
+## Autoridade e entradas obrigatórias
 
-Usar conjuntamente:
+Ler conjuntamente:
 
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` — objeto do QA;
+- `materials/tjsp-escrevente-2025/direito-penal/SOURCES.md` — proveniência do pack;
+- `materials/tjsp-escrevente-2025/direito-penal/MANIFEST.md` e `CHANGELOG.md` — estado/versionamento;
 - `competitions/tjsp-escrevente-2025/SYLLABUS.md` — autoridade de escopo;
-- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — baseline e proveniência;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — sinais empíricos de forma, sem peso preditivo;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — contrato DP-01…DP-10;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md` — fronteira e ordem de produção;
-- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` — processo obrigatório;
-- `00_SYSTEM/SOURCE_POLICY.md` e `00_SYSTEM/QA_PROTOCOL.md` — proveniência e gates de qualidade.
+- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — baseline `2025-07-29`;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — contrato DP-01…DP-10 e requisitos Q-LIT/Q-CMP/Q-CAS;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — sinais empíricos, sem peso preditivo;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, `SOURCE_POLICY.md` e `QA_PROTOCOL.md`.
 
-## Escopo exato
+Fonte normativa primária: `SRC-B2-CP`, Código Penal oficial no Planalto. O Gate 2 fechou o recorte como `cutoff_closed_no_scoped_drift`; o art. 338-A posterior permanece fora do syllabus.
 
-Código Penal:
+## QA-1 — cobertura e rastreabilidade
 
-`arts. 293–305; 307; 308; 311-A; 312–317; 319–333; 336–337; 339–347; 357; 359`.
+Conferir artigo por artigo o recorte:
 
-A versão-base autoral é a vigente em `2025-07-29`. O Gate 2 não identificou drift textual pós-cutoff dentro desse recorte. O art. 338-A, incluído posteriormente, está fora do recorte e não deve ser absorvido por proximidade numérica.
+`293–305; 307; 308; 311-A; 312–317; 319–333; 336; 337; 339–347; 357; 359`.
 
-## Unidade de autoria
+Para cada `DP-01`…`DP-10`, verificar que:
 
-Criar o workspace:
+- todos os artigos e dispositivos relevantes do intervalo aparecem no ensino ou em remissão inequívoca;
+- nenhum artigo fora do recorte é ensinado como conteúdo obrigatório;
+- dispositivos intercalares que pertencem ao intervalo, como 313-A/313-B e 319-A, não desaparecem;
+- o art. 338-A não é absorvido por proximidade numérica;
+- a tabela/ledger de cobertura pode ser promovida de `drafted` para `qa` somente depois da conferência.
 
-`materials/tjsp-escrevente-2025/direito-penal/`
+## QA-2 — exatidão normativa
 
-A primeira implementação deve estabelecer, no mínimo:
+Fazer revisão completa contra `SRC-B2-CP`, não apenas amostragem. Conferir especialmente:
 
-- `APOSTILA.md` — corpo didático em versão de trabalho;
-- `SOURCES.md` — referências do pack para `SRC-B2-CP`, edital e evidência empírica aplicável, sem copiar binário de terceiro;
-- `MANIFEST.md` — identidade, escopo, versão e estado do material;
-- `CHANGELOG.md` — histórico desde o primeiro draft.
+- sujeito ativo e vínculo funcional quando exigidos;
+- verbos nucleares;
+- objeto material;
+- finalidade específica;
+- penas e frações de aumento/diminuição quando o draft as informa;
+- formas equiparadas, qualificadas, privilegiadas e subsidiárias mencionadas;
+- condições temporais, como conhecimento posterior, reparação, retratação e momento processual;
+- diferenças entre documento público/particular, falsidade material/ideológica e tipos funcionais próximos.
 
-O documento de QA deve ser criado/atualizado quando houver uma versão suficientemente completa para os gates editoriais. Não publicar `APOSTILA.pdf` como final antes do fluxo de QA previsto no protocolo.
+Não introduzir jurisprudência para corrigir ou ampliar silenciosamente a letra do recorte. Se uma observação jurisprudencial se mostrar pedagogicamente indispensável, ela exige decisão editorial e fonte própria, não inferência automática.
 
-## Contrato DP-01…DP-10
+## QA-3 — didática e distinções
 
-A apostila deve tornar rastreáveis as dez unidades da matriz:
-
-1. `DP-01` — arts. 293–295: papéis públicos e petrechos;
-2. `DP-02` — arts. 296–305: falsidades documentais, atestados, uso e supressão;
-3. `DP-03` — arts. 307–308: falsa identidade x documento de identidade alheio;
-4. `DP-04` — art. 311-A: fraude em certame de interesse público;
-5. `DP-05` — arts. 312–317: crimes funcionais nucleares;
-6. `DP-06` — arts. 319–327: prevaricação e crimes funcionais do intervalo;
-7. `DP-07` — arts. 328–333: crimes de particular contra a Administração;
-8. `DP-08` — arts. 336–337: inutilização/subtração de edital, sinal, livro ou documento;
-9. `DP-09` — arts. 339–347: crimes contra a Administração da Justiça;
-10. `DP-10` — arts. 357 e 359: exploração de prestígio e desobediência a decisão judicial sobre perda/suspensão de direito.
-
-Nenhuma linha pode desaparecer na redação. Agrupamentos pedagógicos são permitidos se a rastreabilidade continuar explícita no QA.
-
-## Engenharia didática obrigatória
-
-Para Direito Penal, seguir a família jurídica do `APOSTILA_AUTHORING_PROTOCOL.md`:
+Revisar se cada unidade segue de forma suficiente:
 
 ```text
-regra/fonte normativa
-→ elementos/requisitos
-→ hipótese de incidência
+regra
+→ elementos
+→ hipótese
 → consequência
-→ exceção
-→ contraste com tipo próximo
+→ contraste
 → caso aplicado
 → síntese
 ```
 
-A evidência histórica do Gate 3 exige atenção especial a tipos vizinhos, sujeito ativo, objeto material, elemento subjetivo/finalidade, modalidade da conduta e consequência jurídica. Converter isso em explicação, quadros comparativos, pares mínimos e mini-casos; não inserir metadiscurso como “a VUNESP cobra”.
+Dar prioridade aos contrastes empiricamente sustentados no Gate 3: tipo vizinho, requisito, sujeito, objeto, modalidade/finalidade e consequência. Remover explicações vagas, atalhos que criem falsa regra e redundância que prejudique recuperação semântica.
 
-## Prática mínima
+## QA-4 — prática autoral
 
-Respeitar os requisitos `Q-LIT`, `Q-CMP` e `Q-CAS` definidos por linha na matriz. Questões autorais devem usar cinco alternativas plausíveis quando em formato objetivo, separar pergunta/gabarito e explicar o elemento decisivo.
+Revisar as 30 questões uma a uma. Cada item deve ter:
 
-Questões reais ficam no backoffice para calibração; não copiar extensamente conteúdo protegido para a apostila.
+- exatamente uma resposta defensável dentro do conteúdo/fonte;
+- cinco alternativas plausíveis;
+- nenhuma ambiguidade involuntária;
+- nenhum conteúdo fora do syllabus como requisito para resolver;
+- gabarito coerente com o comentário;
+- comentário que exponha o elemento decisivo, não apenas repita a alternativa.
 
-## Critério da primeira implementação
+Conferir também os mínimos `Q-LIT`, `Q-CMP` e `Q-CAS` por linha DP da matriz. Se o conjunto atual não testar suficientemente um requisito da linha, adicionar ou substituir prática; não aumentar volume mecanicamente.
 
-A primeira branch de autoria só deve ser considerada pronta para revisão quando:
+## QA-5 — utilidade como corpus
 
-- DP-01…DP-10 estiverem cobertos ou explicitamente rastreados no draft;
-- nenhuma afirmação normativa extrapolar `SRC-B2-CP`/baseline do cutoff;
-- os contrastes jurídicos essenciais estiverem explícitos;
-- houver exemplos e mini-casos suficientes para ligar regra a aplicação;
-- a estrutura funcionar como material de aprendizado e como corpus recuperável pelo NotebookLM;
-- `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` estiverem coerentes com o estado do draft;
-- o próximo QA estiver claramente indicado, sem promover draft a release prematuramente.
+Verificar títulos, hierarquia, consistência terminológica, proximidade entre regra/contraste/exemplo e legibilidade das tabelas. O texto deve funcionar sem depender de contexto do projeto e sem metadiscurso da banca.
 
-## Depois da primeira implementação
+Não fazer smoke do NotebookLM enquanto o conteúdo ainda tiver correções materiais abertas. Primeiro estabilizar o Markdown.
 
-Executar QA editorial/normativo e iterar o draft de `direito-penal`. Só após os gates de conteúdo, PDF e NotebookLM o pack pode ser promovido a release final. O resultado desse primeiro pipeline jurídico deve informar apenas ajustes operacionais; não pode alterar silenciosamente o syllabus ou a matriz dos demais packs.
+## Artefato esperado
+
+Criar:
+
+`materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md`
+
+O arquivo deve registrar, no mínimo:
+
+- resultado separado de QA-1 a QA-5;
+- correções executadas e sua motivação;
+- pendências reais;
+- estado das 30 questões;
+- decisão explícita sobre prontidão para release candidate.
+
+Se qualquer gate semântico falhar, manter o pack como `draft` e atualizar `APOSTILA.md`; não maquiar falha como PASS.
+
+## Critério de saída
+
+`DIREITO-006` só fecha quando:
+
+- DP-01…DP-10 estiverem integralmente rastreados;
+- a revisão normativa completa do recorte tiver sido realizada contra a fonte oficial;
+- os contrastes essenciais estiverem corretos e explícitos;
+- todas as 30 questões tiverem sido revisadas semanticamente;
+- `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` refletirem o estado real;
+- `APOSTILA_QA_0.1.0.md` registrar os resultados sem promover gates não executados.
+
+Se o draft ficar aprovado nesses gates, o próximo passo será preparar um release candidate do pack, incluindo a metodologia/configuração de tutor aplicável e o pipeline de PDF/NotebookLM previsto pelo protocolo. Isso ainda não equivale automaticamente a release final.
 
 ## Gate canônico
 
-Antes de encerrar cada implementação:
+Antes de encerrar a implementação:
 
 ```bash
 python tools/verify.py
 ```
 
-Neste runtime, nova tentativa em `2026-09-12` de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` falhou com `Could not resolve host: github.com`. Enquanto essa condição persistir, registrar a impossibilidade conforme DEC-0009; não tratá-la como `PASS`.
+Em `2026-09-12`, nova tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` neste runtime falhou com `Could not resolve host: github.com`. Enquanto essa condição persistir, registrar a impossibilidade conforme DEC-0009; não tratá-la como `PASS`.
