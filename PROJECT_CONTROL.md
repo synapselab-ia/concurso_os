@@ -4,19 +4,19 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main`
+- **Current implementation branch:** `qa/direito-penal-v0.1`
 - **Last implementation branch:** `content/direito-penal-v0.1-draft`
 - **Current competition:** `tjsp-escrevente-2025`
-- **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–4 fechados; primeiro draft de Direito Penal mergeado e em QA pendente
+- **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–6 fechados no primeiro pipeline; Direito Penal pronto para preparação de release candidate
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
-- **Current pack:** `direito-penal` — `0.1.0-draft.1`, DP-01…DP-10 redigidos; QA editorial/normativo é o próximo gate
+- **Current pack:** `direito-penal` — `0.1.0-draft.3`, QA editorial/normativo aprovado; PDF e NotebookLM ainda não executados
 - **Last released pack:** `portugues 2.0.0` — final, com QA editorial/PDF/NotebookLM concluídos
 - **Portuguese repository PDF:** 16 páginas A4, 20824 bytes, Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — Gate 2 fechado em 2026-09-11
 - **B2 banca analysis:** `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — 150 questões classificadas; Gate 3 fechado em 2026-09-12
 - **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — seis matrizes completas; Gate 4 fechado em 2026-09-12
-- **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` — `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e `APOSTILA.md` em draft; sem PDF de release
+- **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` — `APOSTILA.md` draft.3, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md` e `APOSTILA_QA_0.1.0.md`; sem PDF de release
 - **B2 boundary decision:** DEC-0019
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
@@ -27,8 +27,9 @@
 - **Gate 2:** `closed` — federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
 - **Gate 3:** `closed` — questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
 - **Gate 4:** `closed` — 100% dos recortes de B2 rastreados a `coverage_id`, fonte, estratégia pedagógica, risco de versão e QA
-- **Gate 5:** `draft_implemented` — DP-01…DP-10 presentes em `APOSTILA.md`; ainda não é release nem QA pass
-- **Next Gate:** `DIREITO-006` — QA editorial e normativo do draft `direito-penal`
+- **Gate 5:** `closed_as_draft` — DP-01…DP-10 implementados e mergeados
+- **Gate 6:** `closed` — cobertura, norma, didática, 30/30 questões e corpus Markdown aprovados; gate determinístico não executado por impossibilidade DNS documentada
+- **Next Gate:** `DIREITO-007` — preparar release candidate de `direito-penal`, incluindo configuração do tutor, PDF e QA aplicável antes de release
 - **Next subject evidence:** o syllabus vigente atribui **30 questões** a Conhecimentos em Direito; o bloco contém Direito Penal, Processual Penal, Processual Civil, Constitucional, Administrativo e Legislação Interna
 - **Study stack:** GitHub + ChatGPT + NotebookLM
 - **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte; instruções de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa
