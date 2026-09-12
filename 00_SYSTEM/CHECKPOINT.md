@@ -3,7 +3,7 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: release/direito-penal-0.1.0-rc.1-pdf
 base_branch: main
 last_implementation_branch: release/direito-penal-0.1.0-rc.1
 current_task: complete DIREITO-007 after rc.1 preparation; canonical PDF publication, live NotebookLM smoke and deterministic gate remain pending
@@ -51,6 +51,13 @@ completed:
   - all 18 local PDF pages rendered and visually inspected without clipping overlap or broken glyphs
   - PR 22 Direito Penal rc.1 preparation reviewed and merged under DEC-0009
   - PR 22 merged to main at 1972f0c6a6f984ecf363413810ccb7cf082f7e79
+  - continuation branch release/direito-penal-0.1.0-rc.1-pdf created from main 9d67c1320de16af176d9b57b4ace9611998de8af
+  - local rc.1 Markdown rechecked byte-for-byte by Git blob against canonical APOSTILA.md blob 008c3ac439d8b7d4038fd0114e486c1daaf755b1
+  - preferred publication PDF candidate regenerated from the exact frozen rc.1 source with 17 A4 pages and 30167 bytes
+  - preferred publication candidate textual readback passed including Direito Penal, Unidade 1, Unidade 10, Gabarito comentado, art. 359, section sign, Codigo Penal and Sintese final de recuperacao
+  - all 17 pages of the preferred publication candidate rendered at 150 dpi and visually inspected without clipping overlap broken glyphs or question-answer leakage
+  - Git binary publication was attempted through create_blob but remote blob integrity did not match the expected local Git blob; divergent blobs were not attached to any tree or branch
+  - DNS probe was rechecked and github.com resolution remains unavailable to the local runtime
 
 b2_source_gate:
   status: closed
@@ -121,6 +128,7 @@ direito_penal_release_candidate:
   path: materials/tjsp-escrevente-2025/direito-penal
   content_base: 0.1.0-draft.3
   content_semantic_change_in_rc: false
+  canonical_markdown_blob: 008c3ac439d8b7d4038fd0114e486c1daaf755b1
   files_present_in_main:
     - APOSTILA.md
     - METODOLOGIA_NOTEBOOKLM.md
@@ -142,17 +150,28 @@ direito_penal_release_candidate:
   notebooklm_live_qa: pending_user_smoke
   repository_pdf_status: not_published
   local_pdf_candidate:
+    role: preferred_publication_candidate
     result: pass_textual_visual_local_only
+    pages: 17
+    page_size: A4
+    bytes: 30167
+    pdf_version: 1.4
+    sha256: 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394
+    expected_git_blob: 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
+    source_git_blob: 008c3ac439d8b7d4038fd0114e486c1daaf755b1
+    searchable: true
+    textual_readback: pass
+    visual_pages_inspected: 17
+    visual_result: pass
+    canonical_repository_artifact: false
+    publication_transfer: blocked_integrity_mismatch
+    publication_rule: attach_only_if_remote_git_blob_matches_expected_git_blob
+  previous_local_pdf_candidate:
     pages: 18
     page_size: A4
     bytes: 48593
-    pdf_version: 1.4
     sha256: d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469
-    searchable: true
-    textual_readback: pass
-    visual_pages_inspected: 18
-    visual_result: pass
-    canonical_repository_artifact: false
+    result: pass_textual_visual_local_only
   baseline: 2025-07-29
   cp_scoped_drift: none_identified_by_gate2
   release_status: blocked_until_canonical_pdf_live_notebooklm_and_applicable_repository_gate
@@ -169,11 +188,13 @@ next_gate:
   completed_in_gate:
     - create METODOLOGIA_NOTEBOOKLM.md as conversation configuration not study source
     - synchronize RC metadata without silently changing approved content
-    - generate a searchable local PDF candidate from approved RC Markdown
-    - run textual and visual QA on local PDF candidate
+    - generate searchable local PDF candidates from approved RC Markdown
+    - run textual and visual QA on local PDF candidates
+    - verify preferred publication candidate source against canonical APOSTILA.md Git blob
     - run static NotebookLM corpus QA
+    - attempt binary publication without accepting integrity mismatch
   remaining:
-    - publish materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf as canonical GitHub artifact
+    - publish materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf as canonical GitHub artifact with exact binary integrity
     - rerun or confirm textual and visual PDF QA on the exact versioned binary and record its hash and git blob
     - execute real NotebookLM smoke with only APOSTILA.pdf as source and tutor methodology in native conversation configuration
     - execute python tools/verify.py in an environment with a valid canonical checkout or re-document impossibility if still blocked under DEC-0009
@@ -212,6 +233,8 @@ validation:
     notebooklm_static: pass_static
     notebooklm_live: pending_user_smoke
     local_pdf: pass_textual_visual_local_only
+    local_pdf_preferred_sha256: 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394
+    local_pdf_expected_git_blob: 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
     canonical_pdf: not_published
   canonical_gate:
     command: python tools/verify.py
@@ -220,6 +243,7 @@ validation:
     attempted_at: 2026-09-12
     network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
     error: Could not resolve host github.com
+    latest_recheck: still_blocked
     policy: impossibility documented under DEC-0009; not treated as pass
 
 ci: disabled
@@ -231,7 +255,7 @@ last_b2_matrix_pull_request: 19
 last_direito_penal_draft_pull_request: 20
 last_direito_penal_qa_pull_request: 21
 last_direito_penal_rc_pull_request: 22
-merge_status: direito_penal_rc1_merged_incomplete_gates_pending
+merge_status: direito_penal_rc1_pdf_publication_in_progress_integrity_blocked
 last_direito_penal_rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
 last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 last_direito_penal_draft_merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
