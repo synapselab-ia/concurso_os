@@ -3,7 +3,7 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: release/direito-penal-0.1.0-rc.1-pdf-publish
 base_branch: main
 last_implementation_branch: release/direito-penal-0.1.0-rc.1-pdf
 current_task: complete DIREITO-007 after rc.1 preparation; canonical PDF publication, live NotebookLM smoke and deterministic gate remain pending
@@ -60,6 +60,12 @@ completed:
   - DNS probe was rechecked and github.com resolution remains unavailable to the local runtime
   - PR 23 PDF publication continuity reviewed and merged under DEC-0009 without claiming canonical PDF publication
   - PR 23 merged to main at 737dc881f3eb91fed461d918bd026b86ce6bb210
+  - continuation branch release/direito-penal-0.1.0-rc.1-pdf-publish created from canonical main 1667464c688af04f8019cfc273f44f692ead00b0 on 2026-09-13
+  - preferred 17-page PDF candidate integrity rechecked locally on 2026-09-13 and still matches 30167 bytes SHA-256 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394 and Git blob 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
+  - GitHub write surface rechecked on 2026-09-13 and no direct local-file/source-reference input is available for create_blob; binary must cross as a content string
+  - aligned manual base64 chunk integrity test failed again: expected local chunk Git blob f7b4c7b3256a3a93dcbb473062214c6007c4c398 but remote create_blob returned d4d6c172421ca81eb40c825c44018e9ec4f421fd
+  - no mismatched test blob was attached to a tree or branch
+  - DNS probe was rechecked again on 2026-09-13 and github.com resolution remains unavailable to the local runtime
 
 b2_source_gate:
   status: closed
@@ -166,8 +172,13 @@ direito_penal_release_candidate:
     visual_pages_inspected: 17
     visual_result: pass
     canonical_repository_artifact: false
-    publication_transfer: blocked_integrity_mismatch
+    publication_transfer: blocked_no_direct_binary_input_and_manual_base64_integrity_mismatch
+    publication_transfer_rechecked_at: 2026-09-13
     publication_rule: attach_only_if_remote_git_blob_matches_expected_git_blob
+    latest_chunk_integrity_test:
+      expected_local_git_blob: f7b4c7b3256a3a93dcbb473062214c6007c4c398
+      remote_git_blob: d4d6c172421ca81eb40c825c44018e9ec4f421fd
+      result: mismatch_not_attached
   previous_local_pdf_candidate:
     pages: 18
     page_size: A4
@@ -198,8 +209,9 @@ next_gate:
     - run static NotebookLM corpus QA
     - attempt binary publication without accepting integrity mismatch
     - merge PR 23 recording the integrity blocker and exact remaining work
+    - recheck exact preferred PDF integrity and binary transfer path on 2026-09-13 without accepting a mismatched remote blob
   remaining:
-    - publish materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf as canonical GitHub artifact with exact binary integrity
+    - publish materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf as canonical GitHub artifact with exact binary integrity using a write path that accepts exact file bytes or otherwise proves exact remote blob identity
     - rerun or confirm textual and visual PDF QA on the exact versioned binary and record its hash and git blob
     - execute real NotebookLM smoke with only APOSTILA.pdf as source and tutor methodology in native conversation configuration
     - execute python tools/verify.py in an environment with a valid canonical checkout or re-document impossibility if still blocked under DEC-0009
@@ -245,7 +257,7 @@ validation:
     command: python tools/verify.py
     result: not_executed_current_environment
     reason: local runtime cannot resolve github.com preventing a valid canonical checkout
-    attempted_at: 2026-09-12
+    attempted_at: 2026-09-13
     network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
     error: Could not resolve host github.com
     latest_recheck: still_blocked
@@ -261,7 +273,7 @@ last_direito_penal_draft_pull_request: 20
 last_direito_penal_qa_pull_request: 21
 last_direito_penal_rc_pull_request: 22
 last_direito_penal_pdf_continuity_pull_request: 23
-merge_status: direito_penal_rc1_pdf_publication_blocked_integrity
+merge_status: direito_penal_rc1_pdf_publication_blocked_transport_integrity
 last_direito_penal_pdf_continuity_merge_commit: 737dc881f3eb91fed461d918bd026b86ce6bb210
 last_direito_penal_rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
 last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
