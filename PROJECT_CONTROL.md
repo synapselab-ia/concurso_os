@@ -4,7 +4,7 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main`
+- **Current implementation branch:** `release/direito-penal-0.1.0-rc.1-pdf-publish`
 - **Last implementation branch:** `release/direito-penal-0.1.0-rc.1-pdf`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–6 fechados no primeiro pipeline; `DIREITO-007` aberto no release candidate de Direito Penal
@@ -18,7 +18,7 @@
 - **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — seis matrizes completas; Gate 4 fechado em 2026-09-12
 - **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` — `APOSTILA.md` rc.1, `METODOLOGIA_NOTEBOOKLM.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md` e `APOSTILA_QA_0.1.0.md`; `APOSTILA.pdf` ainda não publicado no repositório
 - **Direito Penal preferred local PDF candidate:** 17 páginas A4, 30167 bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob local esperado `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`; gerado da cópia local cujo Git blob coincide exatamente com o `APOSTILA.md` canônico `008c3ac439d8b7d4038fd0114e486c1daaf755b1`; QA textual/visual local passou em 17/17 páginas
-- **Direito Penal PDF publication blocker:** tentativas de transferência binária pelo conector GitHub retornaram blobs remotos diferentes do Git blob local esperado; nenhum blob divergente foi anexado à árvore/branch. Publicação permanece `not_published` até haver correspondência exata de integridade
+- **Direito Penal PDF publication blocker:** nova tentativa em 2026-09-13 confirmou que o write surface do conector GitHub disponível recebe `content` textual/base64, mas não recebe referência direta ao arquivo binário local; transporte manual de base64, inclusive em teste alinhado de chunk, voltou a produzir Git blob remoto diferente do esperado. Nenhum blob divergente foi anexado à árvore/branch; `APOSTILA.pdf` continua `not_published`
 - **B2 boundary decision:** DEC-0019
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
