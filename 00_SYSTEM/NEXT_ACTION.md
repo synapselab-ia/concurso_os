@@ -18,6 +18,7 @@ Estado já comprovado:
 - em `2026-09-13`, o write surface GitHub disponível foi rechecado: `create_blob` recebe conteúdo textual/base64, mas não aceita referência direta ao arquivo binário local;
 - um teste de transporte base64 em chunk alinhado também falhou em preservar os bytes: Git blob local esperado `f7b4c7b3256a3a93dcbb473062214c6007c4c398`, blob remoto retornado `d4d6c172421ca81eb40c825c44018e9ec4f421fd`;
 - nenhum blob divergente foi anexado a árvore ou branch;
+- PR `#24` registrou a nova tentativa e foi mergeada em `main` no commit `5fa2d232bd0ebb9296e97d744f9d4622d618b9aa`;
 - `APOSTILA.pdf` continua `not_published`;
 - o probe de rede local em `2026-09-13` continua falhando em resolver `github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
 
@@ -43,7 +44,7 @@ Se surgir erro material no conteúdo jurídico, voltar o estado para draft, corr
 
 ## 2. Publicar `APOSTILA.pdf` somente por caminho binário confiável
 
-O estado canônico permanece em `main`. A branch de implementação desta tentativa é `release/direito-penal-0.1.0-rc.1-pdf-publish`.
+O estado canônico está em `main`. A última branch de implementação foi `release/direito-penal-0.1.0-rc.1-pdf-publish`. Ao retomar implementação, partir do HEAD canônico ou confirmar alinhamento da branch escolhida.
 
 O repositório ainda não contém `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`.
 
