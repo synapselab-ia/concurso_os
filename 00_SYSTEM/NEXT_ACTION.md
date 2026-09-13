@@ -10,12 +10,16 @@ Estado já comprovado:
 - `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e QA sincronizados para `0.1.0-rc.1`;
 - QA estático do corpus para NotebookLM concluído;
 - `APOSTILA.md` canônico possui Git blob `008c3ac439d8b7d4038fd0114e486c1daaf755b1`;
-- a cópia local usada para a nova geração do PDF foi verificada e possui o mesmo Git blob do Markdown canônico;
+- a cópia local usada para a geração do PDF foi verificada e possui o mesmo Git blob do Markdown canônico;
 - candidato local preferido para publicação: `17` páginas A4, `30.167` bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob local esperado `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
 - o candidato preferido passou readback textual e inspeção visual de `17/17` páginas a 150 dpi, sem clipping, sobreposição, glifos quebrados, quebra impeditiva de tabela ou mistura entre questões e gabarito;
-- tentativas de transferência binária pelo conector GitHub produziram blobs remotos diferentes do Git blob local esperado. Nenhum blob divergente foi anexado à árvore ou à branch;
-- PR `#23` registrou esse estado e foi mergeada em `main` no commit `737dc881f3eb91fed461d918bd026b86ce6bb210`;
-- o probe de rede local continua falhando em resolver `github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
+- PR `#23` registrou a primeira tentativa de publicação e foi mergeada em `main` no commit `737dc881f3eb91fed461d918bd026b86ce6bb210`;
+- em `2026-09-13`, a integridade do candidato preferido foi revalidada localmente e permaneceu idêntica;
+- em `2026-09-13`, o write surface GitHub disponível foi rechecado: `create_blob` recebe conteúdo textual/base64, mas não aceita referência direta ao arquivo binário local;
+- um teste de transporte base64 em chunk alinhado também falhou em preservar os bytes: Git blob local esperado `f7b4c7b3256a3a93dcbb473062214c6007c4c398`, blob remoto retornado `d4d6c172421ca81eb40c825c44018e9ec4f421fd`;
+- nenhum blob divergente foi anexado a árvore ou branch;
+- `APOSTILA.pdf` continua `not_published`;
+- o probe de rede local em `2026-09-13` continua falhando em resolver `github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
 
 O pack ainda não é release. O PDF auditado continua local, o smoke real do NotebookLM não foi executado e o gate determinístico continua pendente.
 
@@ -37,21 +41,21 @@ Não reabrir escopo nem alterar silenciosamente DP-01 a DP-10 ou as 30 questões
 
 Se surgir erro material no conteúdo jurídico, voltar o estado para draft, corrigir e registrar nova passagem semântica antes de qualquer PDF final.
 
-## 2. Publicar `APOSTILA.pdf` com integridade exata
+## 2. Publicar `APOSTILA.pdf` somente por caminho binário confiável
 
-O estado canônico está em `main`. A última branch de implementação foi `release/direito-penal-0.1.0-rc.1-pdf`; ao retomar implementação, confirmar que ela continua alinhada à `main` ou criar nova branch a partir do HEAD canônico.
+O estado canônico permanece em `main`. A branch de implementação desta tentativa é `release/direito-penal-0.1.0-rc.1-pdf-publish`.
 
 O repositório ainda não contém `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`.
 
 Prioridade técnica:
 
-1. transferir o candidato local auditado ou regenerar binário equivalente exclusivamente a partir do `APOSTILA.md` congelado;
-2. se for transferido o candidato preferido atual, aceitar a publicação somente se o Git blob remoto for exatamente `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
-3. se houver qualquer divergência de blob, não anexar o objeto à árvore e não tratar a publicação como concluída;
+1. usar um write path que aceite os bytes exatos do arquivo local, referência de arquivo equivalente ou outro mecanismo cuja identidade binária possa ser verificada antes de anexar o objeto à árvore;
+2. não repetir transporte manual de base64 pelo canal atual como se fosse confiável: o teste alinhado já demonstrou alteração de bytes;
+3. para o candidato preferido atual, aceitar publicação somente se o Git blob remoto for exatamente `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
 4. se for gerado outro binário válido, registrar novamente páginas, bytes, SHA-256, Git blob e executar QA-9 sobre esse arquivo exato;
 5. somente depois versionar o caminho canônico `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`.
 
-Não usar SHA-256 ou Git blob local como se fossem identificadores do repositório antes de existir correspondência real no GitHub.
+Não usar SHA-256 ou Git blob local como se fossem identificadores do repositório antes de existir correspondência real no GitHub. Não anexar blob cuja identidade divergir da origem auditada.
 
 ## 3. Fechar QA-9 somente sobre o binário versionado
 
