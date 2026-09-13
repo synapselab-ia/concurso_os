@@ -3,9 +3,9 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: release/direito-penal-0.1.0-rc.1-pdf-publish
+branch: main
 base_branch: main
-last_implementation_branch: release/direito-penal-0.1.0-rc.1-pdf
+last_implementation_branch: release/direito-penal-0.1.0-rc.1-pdf-publish
 current_task: complete DIREITO-007 after rc.1 preparation; canonical PDF publication, live NotebookLM smoke and deterministic gate remain pending
 current_pack: direito-penal_0.1.0-rc.1_release_candidate_incomplete
 last_released_pack: portugues 2.0.0
@@ -66,6 +66,8 @@ completed:
   - aligned manual base64 chunk integrity test failed again: expected local chunk Git blob f7b4c7b3256a3a93dcbb473062214c6007c4c398 but remote create_blob returned d4d6c172421ca81eb40c825c44018e9ec4f421fd
   - no mismatched test blob was attached to a tree or branch
   - DNS probe was rechecked again on 2026-09-13 and github.com resolution remains unavailable to the local runtime
+  - PR 24 exact PDF upload transport continuity reviewed and merged under DEC-0009 without claiming canonical PDF publication
+  - PR 24 merged to main at 5fa2d232bd0ebb9296e97d744f9d4622d618b9aa
 
 b2_source_gate:
   status: closed
@@ -192,6 +194,8 @@ direito_penal_release_candidate:
   rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
   pdf_continuity_pull_request: 23
   pdf_continuity_merge_commit: 737dc881f3eb91fed461d918bd026b86ce6bb210
+  pdf_transport_pull_request: 24
+  pdf_transport_merge_commit: 5fa2d232bd0ebb9296e97d744f9d4622d618b9aa
   previous_qa_pull_request: 21
   previous_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
 
@@ -210,6 +214,7 @@ next_gate:
     - attempt binary publication without accepting integrity mismatch
     - merge PR 23 recording the integrity blocker and exact remaining work
     - recheck exact preferred PDF integrity and binary transfer path on 2026-09-13 without accepting a mismatched remote blob
+    - merge PR 24 recording the confirmed transport-integrity blocker
   remaining:
     - publish materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf as canonical GitHub artifact with exact binary integrity using a write path that accepts exact file bytes or otherwise proves exact remote blob identity
     - rerun or confirm textual and visual PDF QA on the exact versioned binary and record its hash and git blob
@@ -264,7 +269,7 @@ validation:
     policy: impossibility documented under DEC-0009; not treated as pass
 
 ci: disabled
-last_subject_pack_pull_request: 23
+last_subject_pack_pull_request: 24
 last_b2_preparation_pull_request: 13
 last_b2_source_pull_request: 15
 last_b2_banca_pull_request: 18
@@ -273,7 +278,9 @@ last_direito_penal_draft_pull_request: 20
 last_direito_penal_qa_pull_request: 21
 last_direito_penal_rc_pull_request: 22
 last_direito_penal_pdf_continuity_pull_request: 23
+last_direito_penal_pdf_transport_pull_request: 24
 merge_status: direito_penal_rc1_pdf_publication_blocked_transport_integrity
+last_direito_penal_pdf_transport_merge_commit: 5fa2d232bd0ebb9296e97d744f9d4622d618b9aa
 last_direito_penal_pdf_continuity_merge_commit: 737dc881f3eb91fed461d918bd026b86ce6bb210
 last_direito_penal_rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
 last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
