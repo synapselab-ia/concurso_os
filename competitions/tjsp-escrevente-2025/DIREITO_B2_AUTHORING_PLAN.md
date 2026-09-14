@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** primeiro pipeline jurídico validado em `direito-penal 0.1.0-rc.1`; próximo pack: `direito-processual-penal`  
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-draft.1` implementado e pendente de QA semântico/normativo
 
 ## Objetivo
 
@@ -74,7 +74,7 @@ O último par de recortes das Normas da Corregedoria referencia o **Capítulo XI
 
 Pontos de manutenção que não podem ser perdidos na autoria:
 
-- CPP: art. 584, § 4º sofreu alteração posterior pela Lei n.º 15.358/2026;
+- CPP: art. 584, § 4º foi incluído posteriormente pela Lei n.º 15.358/2026 e não integra o baseline do edital;
 - CPC: alterações posteriores em arts. 196, 529-A e 998, com vigências distintas;
 - Constituição: EC n.º 138/2025 alterou art. 37, XVI, `b` após o cutoff;
 - Lei Estadual n.º 10.261/1968: Lei n.º 18.473/2026 atingiu o art. 78 dentro do recorte;
@@ -83,6 +83,8 @@ Pontos de manutenção que não podem ser perdidos na autoria:
 - NSCGJ: baseline dos recortes literais exclui alterações posteriores identificadas, incluindo Provimentos CG n.º 30/2025 e 04/2026 no Capítulo XI.
 
 Para `direito-penal`, `SRC-B2-CP` está fechado como `cutoff_closed_no_scoped_drift`; o art. 338-A posterior não pertence ao recorte.
+
+Para `direito-processual-penal`, o draft registra expressamente o cutoff do art. 584 e mantém a alteração de 2026 fora do StudentContent normativo da prova.
 
 ## Gate 3 - banca fechada
 
@@ -112,8 +114,6 @@ O fechamento do Gate 4 confirma:
 - duplicidade oficial das NSCGJ preservada sem correção inferida;
 - requisitos de prática e QA definidos por unidade.
 
-Para `direito-penal`, o contrato de primeira autoria é `DP-01` a `DP-10`.
-
 ## Gate 5 - primeira implementação de `direito-penal`
 
 A branch `content/direito-penal-v0.1-draft` estabeleceu o workspace `materials/tjsp-escrevente-2025/direito-penal/` com `APOSTILA.md`, `SOURCES.md`, `MANIFEST.md` e `CHANGELOG.md`. O `0.1.0-draft.1` cobriu DP-01...DP-10, incluiu contrastes, mini-casos e 30 questões autorais A-E, e foi mergeado através do PR 20.
@@ -132,8 +132,6 @@ Resultado registrado em `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_Q
 - corpus Markdown: `pass_for_markdown`;
 - coerência com banca sem overfitting: `pass`;
 - gate determinístico: `not_executed_current_environment`, por falha de DNS para `github.com` - não tratado como PASS.
-
-O QA corrigiu as duas pendências finais da prática: Q12 passou a isolar o art. 311-A, § 2º; Q29 passou a isolar o art. 359 por meio de atividade privada suspensa judicialmente, com contraste explícito `art. 324 x art. 359` no corpo.
 
 ## Gate 7 - release candidate do primeiro pipeline
 
@@ -157,6 +155,25 @@ As observações aceitas como não bloqueantes foram:
 
 Não será criado `rc.2` apenas para esses pontos. O primeiro pipeline jurídico é considerado validado em nível de release candidate e autoriza o avanço para o próximo SubjectPack.
 
+## Gate 8 - primeiro draft de `direito-processual-penal`
+
+A branch `content/direito-processual-penal-v0.1-draft` implementou o workspace `materials/tjsp-escrevente-2025/direito-processual-penal/` como `0.1.0-draft.1`.
+
+A primeira passagem contém:
+
+- `MANIFEST.md`, `SOURCES.md`, `APOSTILA.md` e `CHANGELOG.md`;
+- rastreabilidade de DPP-01...DPP-25 no backoffice;
+- StudentContent organizado em 25 unidades sem `DPP-*` em títulos ou subtítulos;
+- fluxos de citações, intimações, procedimento comum, júri, rito sumário, restauração, recursos, revisão criminal, carta testemunhável, habeas corpus e JECrim;
+- contrastes entre institutos e prazos próximos;
+- mini-casos autorais;
+- 52 questões autorais A-E com gabarito comentado separado;
+- nota explícita de versão que exclui do baseline o art. 584, § 4º, posterior ao cutoff.
+
+Estado: `closed_as_draft_pending_semantic_normative_qa`.
+
+O fechamento deste gate não significa aprovação semântica do conteúdo. O próximo gate deve revisar integralmente o recorte contra `SRC-B2-CPP` e `SRC-B2-L9099`, incluindo dispositivos revogados dentro dos intervalos e todas as 52 questões.
+
 ## Lições obrigatórias para os próximos SubjectPacks
 
 A partir de `direito-processual-penal`:
@@ -176,11 +193,12 @@ A partir de `direito-processual-penal`:
 4. **concluído como draft** - primeira implementação de `direito-penal`;
 5. **concluído** - QA editorial/normativo do Markdown de `direito-penal`;
 6. **concluído com observações** - release candidate, PDF e QA NotebookLM de `direito-penal`;
-7. **próximo** - `direito-processual-penal`;
-8. `direito-processual-civil`;
-9. `direito-constitucional`;
-10. `direito-administrativo`;
-11. `legislacao-interna`.
+7. **concluído como draft** - primeira implementação de `direito-processual-penal`;
+8. **próximo** - QA semântico/normativo de `direito-processual-penal`;
+9. `direito-processual-civil`;
+10. `direito-constitucional`;
+11. `direito-administrativo`;
+12. `legislacao-interna`.
 
 Cada pack deve usar a matriz como contrato e passar pelo fluxo de autoria/QA do `APOSTILA_AUTHORING_PROTOCOL.md` antes de release.
 
@@ -192,10 +210,11 @@ Cada pack deve usar a matriz como contrato e passar pelo fluxo de autoria/QA do 
 | 2 - fontes/versões | `closed` | inventário oficial, cutoff, proveniência e drift normativo fechados em `DIREITO_SOURCES.md` |
 | 3 - banca | `closed` | 150 questões de Direito classificadas em `DIREITO_B2_BANCA_ANALYSIS.md` |
 | 4 - matriz | `closed` | todos os recortes do syllabus rastreados sem lacunas em `DIREITO_B2_COVERAGE_MATRIX.md` |
-| 5 - primeira implementação | `closed_as_draft` | workspace e primeira passagem DP-01...DP-10 criados e mergeados |
-| 6 - QA do primeiro pack | `closed` | conteúdo, norma, didática, prática e corpus Markdown aprovados; gate determinístico documentado como não executável neste runtime |
-| 7 - release candidate | `closed_with_observations` | tutor, PDF e NotebookLM validados; observações não bloqueantes documentadas; impossibilidade do gate determinístico reavaliada sem falso PASS |
-| 8 - primeiro draft de processual penal | `next` | aplicar matriz DPP, fontes vigentes ao cutoff, análise de banca e lições do primeiro smoke |
+| 5 - primeira implementação penal | `closed_as_draft` | workspace e primeira passagem DP-01...DP-10 criados e mergeados |
+| 6 - QA penal | `closed` | conteúdo, norma, didática, prática e corpus Markdown aprovados; gate determinístico documentado como não executável neste runtime |
+| 7 - release candidate penal | `closed_with_observations` | tutor, PDF e NotebookLM validados; observações não bloqueantes documentadas; impossibilidade do gate determinístico reavaliada sem falso PASS |
+| 8 - primeiro draft processual penal | `closed_as_draft` | workspace DPP criado; DPP-01...DPP-25 implementados; 52 questões; baseline e lições de corpus registrados |
+| 9 - QA processual penal | `next` | revisão completa de cobertura, norma, didática, prática e corpus antes de qualquer PDF ou RC |
 
 ## Regra de autoridade
 

@@ -3,17 +3,19 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch: content/direito-processual-penal-v0.1-draft
 base_branch: main
 last_implementation_branch: docs/direito-penal-notebooklm-smoke
-current_task: start DIREITO-008 first draft of direito-processual-penal
-current_pack: direito-processual-penal_not_started
+current_task: review and merge DIREITO-008 first draft, then execute DIREITO-009 semantic and normative QA
+current_pack: direito-processual-penal_0.1.0-draft.1
 last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
 last_released_pack: portugues_2.0.0
 
-canonical_main:
-  head_after_pr26: dcc279a4e25d393036929fc7d640f544003ec436
-  open_pull_requests_expected: 0
+canonical_state_observed_before_direito_008:
+  main_head: 0249631f512fe76d6f34b7759532daf097e38a8e
+  observed_at: 2026-09-14
+  open_pull_requests: 0
+  note: this head is newer than the stale head_after_pr26 value previously recorded in this checkpoint; repository state was checked directly before starting the gate
 
 completed:
   - repository foundation and chat-independent continuity active
@@ -23,56 +25,34 @@ completed:
   - DEC-0018 APOSTILA_AUTHORING_PROTOCOL adopted as mandatory
   - Portuguese 2.0.0 fully released with editorial, PDF and NotebookLM QA passed
   - B2 Gate 1 closed under DEC-0019 with six SubjectPacks
-  - B2 Gate 2 source and version audit closed
+  - B2 Gate 2 source and version audit closed at cutoff 2025-07-29
   - B2 Gate 3 banca analysis closed with 150 legal questions classified
   - B2 Gate 4 coverage matrix closed with six pack matrices
-  - direito-penal Gate 5 first draft completed and merged through PR 20
-  - direito-penal Gate 6 semantic and normative QA completed and merged through PR 21
-  - direito-penal rc.1 tutor configuration and static NotebookLM QA prepared through PR 22
-  - direito-penal canonical PDF publication blocker documented through PRs 23 and 24
-  - exact audited APOSTILA.pdf manually uploaded and published through PR 25
-  - direito-penal QA-9 closed as PASS_CANONICAL_BINARY_IDENTITY
-  - direito-penal live NotebookLM smoke executed by user on 2026-09-14
-  - direito-penal live NotebookLM smoke accepted as PASS_WITH_OBSERVATIONS
+  - direito-penal first draft, semantic QA and rc.1 pipeline completed
+  - direito-penal canonical PDF QA-9 closed as PASS_CANONICAL_BINARY_IDENTITY
+  - direito-penal NotebookLM live smoke accepted as PASS_WITH_OBSERVATIONS
   - DIREITO-007 closed_with_observations
-  - PR 26 recorded smoke evidence, process lessons and advancement to direito-processual-penal
+  - DIREITO-008 first draft of direito-processual-penal implemented on content/direito-processual-penal-v0.1-draft
 
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
-  verified_at: 2026-09-11
   inventory: competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md
-  federal_points:
-    - CPP art. 584 paragraph 4 changed after cutoff by Lei 15.358/2026
-    - CPC art. 998 changed after cutoff by Lei 15.484/2026
-    - CPC arts. 196 and 529-A changed after cutoff by Lei 15.479/2026 with one-year vacatio
-    - CF art. 37 XVI b changed after cutoff by EC 138/2025
-    - Codigo Penal scoped text had no identified direct drift for direito-penal
-    - Lei 9.099/1995 baseline stable for the scoped B2 audit
-  state_tjsp_points:
-    - Lei Estadual 10.261/1968 art. 78 changed after cutoff by Lei 18.473/2026
-    - LC Estadual 1.111/2010 changed after cutoff by Lei 18.373/2025 and LC 1.441/2026
-    - Regimento Interno baseline excludes Assentos 592-596
-    - NSCGJ literal Capitulo XI recuts preserve the duplicated edital reference without inferred correction
+  relevant_processual_penal_points:
+    - SRC-B2-CPP is the primary CPP source
+    - SRC-B2-L9099 is the primary Lei 9.099/1995 source
+    - CPP art. 584 paragraph 4 was added after cutoff by Lei 15.358/2026 and must not contaminate the study baseline
+    - Lei 9.099/1995 remained cutoff_closed_no_scoped_drift in the Gate 2 audit
 
 b2_banca_gate:
   status: closed
-  verified_at: 2026-09-12
   artifact: competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md
   questions_classified: 150
-  by_year:
-    2021: 40
-    2023: 40
-    2024: 40
-    2025: 30
   authority_rule: syllabus controls scope; historical distribution is descriptive and non-predictive
 
 b2_coverage_gate:
   status: closed
-  verified_at: 2026-09-12
   artifact: competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md
-  packs: 6
-  coverage_result: complete
   next_pack_contract:
     pack: direito-processual-penal
     coverage_rows: 25
@@ -83,88 +63,79 @@ right_penal_validated_rc:
   status: validated_release_candidate
   version: 0.1.0-rc.1
   path: materials/tjsp-escrevente-2025/direito-penal
-  content_base: 0.1.0-draft.3
-  semantic_content_frozen: true
-  canonical_markdown_blob: 008c3ac439d8b7d4038fd0114e486c1daaf755b1
-  coverage_status: pass
-  normative_qa: pass_after_corrections
-  didactic_qa: pass
+  semantic_content: pass
   practice_questions: 30
-  practice_qa: pass_30_of_30
-  markdown_corpus_qa: pass_for_markdown
-  banca_coherence: pass
-  tutor_configuration: pass_static
+  canonical_pdf: pass_canonical_binary_identity
   notebooklm_static_qa: pass_static
   notebooklm_live_qa: pass_with_observations
-  notebooklm_smoke_artifact: materials/tjsp-escrevente-2025/direito-penal/NOTEBOOKLM_SMOKE_0.1.0.md
-  canonical_pdf:
-    result: pass_canonical_binary_identity
-    pages: 17
-    page_size: A4
-    bytes: 30167
-    pdf_version: 1.4
-    sha256: 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394
-    git_blob: 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
-    source_git_blob: 008c3ac439d8b7d4038fd0114e486c1daaf755b1
-    textual_readback: pass
-    visual_pages_inspected: 17
-    visual_result: pass
-    publication_method: manual_github_upload
-    upload_rename_commit: fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00
-    publication_pull_request: 25
-    publication_merge_commit: eaaad8982691b961cfd9a44a2b04326dba77c5e3
-  smoke_observations:
-    - map rendered DP coverage IDs because they were present in visible StudentContent headings
-    - jurisprudence limit response did not invent precedents but opened with a categorical negative before stating the corpus limit
-  smoke_acceptance:
-    result: pass_with_observations
-    blocking: false
-    rc2_required: false
-    decision: carry improvements into subsequent SubjectPacks instead of regenerating direito-penal solely for these observations
-  formal_final_promotion:
-    status: deferred_separate_from_b2_continuation
-    blocks_next_pack: false
+  formal_final_promotion: deferred_separate_from_b2_continuation
 
-notebooklm_process_lessons:
-  - do not expose coverage IDs, matrix IDs, gate labels or backoffice identifiers in visible StudentContent headings
-  - keep traceability in matrix, manifest and QA rather than study corpus headings
-  - when a source does not support an external-world claim, state the corpus limitation instead of asserting universal nonexistence
-  - future smoke must explicitly inspect Teste, Cartoes and Mapa mental for backoffice leakage
-  - future smoke must include at least one question whose answer is absent from the corpus to test epistemic discipline
+right_processual_penal_draft:
+  status: draft_pending_semantic_normative_qa
+  version: 0.1.0-draft.1
+  path: materials/tjsp-escrevente-2025/direito-processual-penal
+  branch: content/direito-processual-penal-v0.1-draft
+  workspace_files:
+    - MANIFEST.md
+    - SOURCES.md
+    - APOSTILA.md
+    - CHANGELOG.md
+  student_units: 25
+  coverage_rows: DPP-01_through_DPP-25
+  practice_questions: 52
+  practice_format: five_options_A_to_E_with_separate_commented_answer_key
+  visible_coverage_ids_in_student_headings: false_by_authoring_selfcheck
+  main_content_engineering:
+    - procedural flows
+    - rule_exception and contrast tables where useful
+    - deadlines subjects legitimacy competence admissibility and effects
+    - jury flow from first phase through plenary and sentence
+    - appeal and autonomous challenge contrasts
+    - JECrim flow from preliminary phase through appeals and conditional suspension
+  version_control:
+    baseline: 2025-07-29
+    cpp_584_paragraph_4_post_cutoff: excluded_from_baseline
+  pdf: not_created_by_design
+  notebooklm: not_started
+  semantic_normative_qa: not_started
+
+notebooklm_process_lessons_applied_to_draft:
+  - coverage IDs, matrix IDs and gate labels kept out of visible StudentContent headings
+  - traceability kept in manifest, matrix and future QA
+  - corpus limitation principle preserved for future tutor configuration
 
 next_gate:
-  id: DIREITO-008
-  name: first_draft_direito_processual_penal
+  id: DIREITO-009
+  name: semantic_normative_qa_direito_processual_penal
   pack: direito-processual-penal
-  target_state: draft
-  coverage_ids: DPP-01_through_DPP-25
-  official_scope:
-    cpp: arts_251_258_261_267_274_351_372_394_497_531_538_541_548_574_667
-    lei_9099_1995: arts_60_83_88_89
-  primary_sources:
+  target_state: qa_closed_or_draft_corrected
+  required_primary_sources:
     - SRC-B2-CPP
     - SRC-B2-L9099
-  critical_version_note:
-    - CPP art. 584 paragraph 4 must use cutoff 2025-07-29 text; Lei 15.358/2026 drift stays separate
-  required_first_artifacts:
-    - materials/tjsp-escrevente-2025/direito-processual-penal/MANIFEST.md
-    - materials/tjsp-escrevente-2025/direito-processual-penal/SOURCES.md
-    - materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.md
-    - materials/tjsp-escrevente-2025/direito-processual-penal/CHANGELOG.md
-  gate_rule:
-    - cover all DPP-01 through DPP-25
-    - do not expose DPP IDs in StudentContent headings
-    - do not generate PDF or release candidate before semantic and normative QA of the draft
+  required_qa_artifact: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md
+  mandatory_checks:
+    - full DPP-01 through DPP-25 traceability
+    - full article by article normative review
+    - explicit treatment of revoked CPP provisions inside the scoped intervals
+    - preserve cutoff and exclude 2026 CPP art. 584 paragraph 4
+    - individual semantic review of all 52 questions
+    - no PDF or release candidate before QA decision
 
 validation:
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
     attempted_at: 2026-09-14
-    reason: local runtime cannot resolve github.com for a valid canonical checkout
+    reason: no canonical local checkout can be obtained because the runtime cannot resolve github.com
     network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
-    error: Could not resolve host github.com
+    exit_code: 128
+    error: Could not resolve host: github.com
     policy: impossibility re-evaluated under DEC-0009 and not treated as pass
+  structural_review:
+    compare_base: main@0249631f512fe76d6f34b7759532daf097e38a8e
+    content_branch: content/direito-processual-penal-v0.1-draft
+    initial_content_diff_before_continuity_updates: 4 added files, 1963 added lines, 0 deletions
+    note: final diff must be re-read after continuity updates and before merge
 
 pull_request_lineage:
   b2_preparation_pr: 13
@@ -180,10 +151,10 @@ pull_request_lineage:
   direito_penal_notebooklm_smoke_pr: 26
   last_subject_pack_pull_request: 26
 
-merge_status: direito_penal_rc1_validated_with_observations_next_direito_processual_penal
+merge_status: DIREITO_008_ready_for_final_diff_review_then_pr
 
 not_started:
-  - direito-processual-penal first draft
+  - DIREITO-009 semantic and normative QA of direito-processual-penal
   - direito-processual-civil
   - direito-constitucional
   - direito-administrativo
