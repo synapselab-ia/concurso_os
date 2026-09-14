@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-draft.2` aprovado semanticamente e pronto para preparação de RC
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` preparado com QA estático, pendente de PDF canônico e smoke real
 
 ## Objetivo
 
@@ -62,7 +62,7 @@ Para Processual Penal, `SRC-B2-CPP` é `cutoff_closed_drift_mapped` e `SRC-B2-L9
 
 ## Gate 3 - banca
 
-`DIREITO_B2_BANCA_ANALYSIS.md` classifica 150 questões de Direito de 2021, 2023, 2024 e 2025. Os sinais históricos servem para engenharia silenciosa de literalidade, fluxo, prazo, competência, requisito, contraste e distractores. Não criam peso futuro nem alteram o syllabus.
+`DIREITO_B2_BANCA_ANALYSIS.md` classifica 150 questões de Direito de 2021, 2023, 2024 e 2025. Os sinais históricos servem para engenharia silenciosa de literalidade, fluxo, prazo, competência, requisito, contraste e distratores. Não criam peso futuro nem alteram o syllabus.
 
 ## Gate 4 - matriz
 
@@ -115,7 +115,30 @@ Resultado registrado em `materials/tjsp-escrevente-2025/direito-processual-penal
 
 Correções relevantes incluíram art. 262; arts. 363-365; arts. 394-A, 398 e 400-A; art. 537 revogado e art. 538; expansão de 574-603; tratamento artigo a artigo de 604-620, incluindo art. 611 revogado; tratamento de 632-646; art. 647-A e aprofundamento de 647-667; e completude dos arts. 60-83 da Lei 9.099/1995.
 
-Estado: `closed_ready_for_rc_preparation`.
+PR 28 foi mergeada em `main` no commit `70a5103d3f8ceb6132908d68963a2a55732665ec`.
+
+Estado: `closed`.
+
+## Gate 10 - release candidate estático de Direito Processual Penal
+
+`direito-processual-penal 0.1.0-rc.1` foi preparado a partir do conteúdo aprovado do `0.1.0-draft.2`, sem reabertura semântica.
+
+Executado:
+
+- identidade de `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` sincronizada para `0.1.0-rc.1`;
+- mudança no corpo de `APOSTILA.md` restrita aos metadados de versão/status;
+- `METODOLOGIA_NOTEBOOKLM.md` criada como configuração da conversa, não como fonte estudável;
+- tutor orientado a distinguir regra expressa, explicação e aplicação hipotética;
+- tutor proibido de inventar jurisprudência, doutrina ou atualização normativa ausente da fonte;
+- ausência de informação tratada como limite do corpus, não como negativa universal;
+- treino interativo configurado para uma questão por vez e sem antecipação de gabarito;
+- QA estático do corpus e tutor: `pass_static`;
+- baseline `2025-07-29` e isolamento do art. 584, § 4º, de 2026 preservados;
+- PDF canônico: ainda não criado;
+- NotebookLM live smoke: ainda não executado;
+- gate determinístico: `not_executed_current_environment` porque o checkout canônico continuou bloqueado por DNS, não tratado como PASS.
+
+Estado: `release_candidate_incomplete`, preparado para o pipeline de PDF.
 
 ## Lições obrigatórias para os próximos packs
 
@@ -135,11 +158,13 @@ Estado: `closed_ready_for_rc_preparation`.
 6. concluído com observações - RC/PDF/NotebookLM de Direito Penal;
 7. concluído como draft - Direito Processual Penal;
 8. concluído - QA de Direito Processual Penal;
-9. próximo - preparação de release candidate de Direito Processual Penal;
-10. Direito Processual Civil;
-11. Direito Constitucional;
-12. Direito Administrativo;
-13. Legislação Interna.
+9. concluído - preparação estática do RC de Direito Processual Penal;
+10. próximo - PDF canônico de Direito Processual Penal;
+11. smoke real do NotebookLM de Direito Processual Penal;
+12. Direito Processual Civil;
+13. Direito Constitucional;
+14. Direito Administrativo;
+15. Legislação Interna.
 
 ## Gates
 
@@ -154,7 +179,8 @@ Estado: `closed_ready_for_rc_preparation`.
 | 7 - RC penal | `closed_with_observations` | PDF e NotebookLM validados com observações não bloqueantes |
 | 8 - draft processual penal | `closed_as_draft` | DPP-01...DPP-25 e prática inicial implementados |
 | 9 - QA processual penal | `closed` | cobertura, norma, didática, prática e corpus Markdown aprovados após correções |
-| 10 - RC processual penal | `next` | preparar tutor, identidade de RC e QA estático antes do pipeline de PDF/NotebookLM |
+| 10 - RC processual penal | `closed_static_ready_for_pdf` | identidade rc.1, tutor e QA estático concluídos sem reabertura semântica |
+| 11 - PDF processual penal | `next` | gerar, auditar e provar identidade do `APOSTILA.pdf` canônico antes de smoke real |
 
 ## Regra de autoridade
 
