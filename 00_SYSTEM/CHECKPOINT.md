@@ -5,109 +5,55 @@ project_state: active
 phase: subject_pack_authoring_prep
 branch: main
 base_branch: main
-last_implementation_branch: upload/direito-penal-apostila-pdf
-current_task: complete DIREITO-007 after canonical PDF publication; live NotebookLM smoke and deterministic gate remain pending
-current_pack: direito-penal_0.1.0-rc.1_release_candidate_incomplete
-last_released_pack: portugues 2.0.0
+last_implementation_branch: docs/direito-penal-notebooklm-smoke
+current_task: start DIREITO-008 first draft of direito-processual-penal
+current_pack: direito-processual-penal_not_started
+last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
+last_released_pack: portugues_2.0.0
+
+canonical_main:
+  head_after_pr26: dcc279a4e25d393036929fc7d640f544003ec436
+  open_pull_requests_expected: 0
 
 completed:
   - repository foundation and chat-independent continuity active
   - autonomous merge policy active under DEC-0009
-  - TJSP 2025 adapter, edital map, blueprint and source registry created
-  - historical exams 2021/2023/2024/2025 registered
   - GitHub + ChatGPT + NotebookLM stack established
-  - DEC-0016 and DEC-0017 clean-corpus + native conversation configuration architecture established
+  - DEC-0016 and DEC-0017 clean-corpus plus native conversation configuration architecture established
   - DEC-0018 APOSTILA_AUTHORING_PROTOCOL adopted as mandatory
   - Portuguese 2.0.0 fully released with editorial, PDF and NotebookLM QA passed
-  - Portuguese 2.0.0 release merged to main at e6ce9d2571e9c68a8947701c08187c07e986d567
   - B2 Gate 1 closed under DEC-0019 with six SubjectPacks
-  - exact Normas da Corregedoria recuts preserved, including duplicate Capitulo XI anomaly
-  - PR 13 B2 Gate 1 preparation merged at 540765b17e224a319b90a4e9da5272dd4db0684e
-  - B2 Gate 2 federal source audit merged through PR 14 at 228f2225c3b7655d8fd47c325f7c5a2db40bf0a0
-  - B2 Gate 2 state/TJSP audit merged through PR 15 at fa0fb7c66f6db2d83df98bedf75b2708f51baad3
-  - B2 Gate 3 classified 150 legal questions and merged through PR 18 at c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
-  - B2 Gate 4 coverage matrices closed and merged through PR 19 at 5784e8bb9d904c677cb655dfbb069146e688b4e3
-  - direito-penal Gate 5 first draft implemented as 0.1.0-draft.1 with DP-01 through DP-10 and 30 original A-E questions
-  - direito-penal draft merged through PR 20 at c0208494c1acd343572254d4d8b991d97f6cf8fc
-  - DIREITO-006 full normative review against SRC-B2-CP completed
-  - direito-penal promoted internally to 0.1.0-draft.2 after normative/didactic corrections
-  - interim semantic QA found Q12 review requirement and Q29 ambiguity
-  - Q12 reformulated to isolate CP art. 311-A paragraph 2 consequence
-  - Q29 reformulated to isolate CP art. 359 using judicially suspended private activity
-  - explicit CP art. 324 x art. 359 contrast added without inventing jurisprudential concurrence rule
-  - direito-penal promoted to 0.1.0-draft.3
-  - 30 of 30 original practice questions passed final semantic review
-  - Q-LIT Q-CMP Q-CAS requirements satisfied across DP-01 through DP-10
-  - DIREITO-006 semantic QA closed; Markdown authorized for release candidate preparation
-  - PR 21 Direito Penal semantic QA reviewed and merged under DEC-0009
-  - PR 21 merged to main at d89b7aefd69db3f3fc653807eb98f036755f6f2e
-  - DIREITO-007 working branch release/direito-penal-0.1.0-rc.1 created from main 42b52ec80649a75abdfe0319dd80b98e4206e90b
-  - direito-penal METODOLOGIA_NOTEBOOKLM.md created as ConversationInstruction and statically audited
-  - APOSTILA.md identity promoted to 0.1.0-rc.1 without semantic content changes
-  - MANIFEST.md SOURCES.md CHANGELOG.md and APOSTILA_QA_0.1.0.md synchronized to release candidate state
-  - static NotebookLM corpus QA passed for rc.1
-  - local searchable PDF candidate generated from frozen rc.1 Markdown
-  - local PDF candidate textual readback passed
-  - all 18 initial local PDF pages rendered and visually inspected without clipping overlap or broken glyphs
-  - PR 22 Direito Penal rc.1 preparation reviewed and merged under DEC-0009
-  - PR 22 merged to main at 1972f0c6a6f984ecf363413810ccb7cf082f7e79
-  - continuation branch release/direito-penal-0.1.0-rc.1-pdf created from main 9d67c1320de16af176d9b57b4ace9611998de8af
-  - local rc.1 Markdown rechecked byte-for-byte by Git blob against canonical APOSTILA.md blob 008c3ac439d8b7d4038fd0114e486c1daaf755b1
-  - preferred publication PDF candidate regenerated from the exact frozen rc.1 source with 17 A4 pages and 30167 bytes
-  - preferred publication candidate textual readback passed including Direito Penal, Unidade 1, Unidade 10, Gabarito comentado, art. 359, section sign, Codigo Penal and Sintese final de recuperacao
-  - all 17 pages of the preferred publication candidate rendered at 150 dpi and visually inspected without clipping overlap broken glyphs or question-answer leakage
-  - Git binary publication was attempted through create_blob but remote blob integrity did not match the expected local Git blob; divergent blobs were not attached to any tree or branch
-  - DNS probe was rechecked and github.com resolution remains unavailable to the local runtime
-  - PR 23 PDF publication continuity reviewed and merged under DEC-0009 without claiming canonical PDF publication
-  - PR 23 merged to main at 737dc881f3eb91fed461d918bd026b86ce6bb210
-  - continuation branch release/direito-penal-0.1.0-rc.1-pdf-publish created from canonical main 1667464c688af04f8019cfc273f44f692ead00b0 on 2026-09-13
-  - preferred 17-page PDF candidate integrity rechecked locally on 2026-09-13 and still matches 30167 bytes SHA-256 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394 and Git blob 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
-  - GitHub write surface rechecked on 2026-09-13 and no direct local-file/source-reference input is available for create_blob; binary must cross as a content string
-  - aligned manual base64 chunk integrity test failed again: expected local chunk Git blob f7b4c7b3256a3a93dcbb473062214c6007c4c398 but remote create_blob returned d4d6c172421ca81eb40c825c44018e9ec4f421fd
-  - no mismatched test blob was attached to a tree or branch
-  - DNS probe was rechecked again on 2026-09-13 and github.com resolution remains unavailable to the local runtime
-  - PR 24 exact PDF upload transport continuity reviewed and merged under DEC-0009 without claiming canonical PDF publication
-  - PR 24 merged to main at 5fa2d232bd0ebb9296e97d744f9d4622d618b9aa
-  - upload/direito-penal-apostila-pdf created from canonical main for manual binary publication
-  - APOSTILA.pdf manually uploaded and renamed on that branch; observed upload/rename commit fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00
-  - GitHub confirmed APOSTILA.pdf Git blob 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e, exactly matching the fully audited local candidate
-  - post-upload local readback on 2026-09-14 passed all required markers
-  - post-upload local render on 2026-09-14 produced 17 pages and visual inspection passed 17 of 17 pages
-  - QA-9 closed as PASS_CANONICAL_BINARY_IDENTITY based on exact Git blob identity plus repeated textual and visual QA
-  - PR 25 canonical Direito Penal PDF publication reviewed and merged under DEC-0009
-  - PR 25 merged to main at eaaad8982691b961cfd9a44a2b04326dba77c5e3
-  - main rechecked after PR 25 and APOSTILA.pdf still has exact Git blob 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
-  - DNS probe rechecked on 2026-09-14 and github.com resolution remains unavailable to the local runtime
+  - B2 Gate 2 source and version audit closed
+  - B2 Gate 3 banca analysis closed with 150 legal questions classified
+  - B2 Gate 4 coverage matrix closed with six pack matrices
+  - direito-penal Gate 5 first draft completed and merged through PR 20
+  - direito-penal Gate 6 semantic and normative QA completed and merged through PR 21
+  - direito-penal rc.1 tutor configuration and static NotebookLM QA prepared through PR 22
+  - direito-penal canonical PDF publication blocker documented through PRs 23 and 24
+  - exact audited APOSTILA.pdf manually uploaded and published through PR 25
+  - direito-penal QA-9 closed as PASS_CANONICAL_BINARY_IDENTITY
+  - direito-penal live NotebookLM smoke executed by user on 2026-09-14
+  - direito-penal live NotebookLM smoke accepted as PASS_WITH_OBSERVATIONS
+  - DIREITO-007 closed_with_observations
+  - PR 26 recorded smoke evidence, process lessons and advancement to direito-processual-penal
 
 b2_source_gate:
   status: closed
   edital_cutoff: 2025-07-29
   verified_at: 2026-09-11
   inventory: competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md
-  federal_subgate:
-    status: closed
-    drift_mapped:
-      - CPP art. 584 paragraph 4 by Lei 15.358/2026
-      - CPC art. 998 by Lei 15.484/2026
-      - CPC art. 196 and art. 529-A by Lei 15.479/2026 with one-year vacatio
-      - CF art. 37 XVI b by EC 138/2025
-    no_scoped_textual_drift:
-      - Codigo Penal
-      - Lei 9.099/1995
-      - Lei 12.153/2009
-      - Lei 8.429/1992
-  state_tjsp_subgate:
-    status: closed
-    drift_mapped:
-      - Lei Estadual 10.261/1968 art. 78 by Lei 18.473/2026
-      - LC Estadual 1.111/2010 by Lei 18.373/2025 and LC 1.441/2026
-      - Regimento Interno by Assento 592/2025 and Assentos 593-596/2026
-      - NSCGJ literal Capitulo XI by Provimentos CG 30/2025 and 04/2026
-    no_direct_textual_drift_located:
-      - Resolucao TJSP 850/2021 after Resolucao 864/2022 compilation
-      - Resolucao TJSP 963/2025
-    official_ambiguity:
-      - edital repeats Tomo I Capitulo XI in final two NSCGJ recuts; preserved without inferred correction
+  federal_points:
+    - CPP art. 584 paragraph 4 changed after cutoff by Lei 15.358/2026
+    - CPC art. 998 changed after cutoff by Lei 15.484/2026
+    - CPC arts. 196 and 529-A changed after cutoff by Lei 15.479/2026 with one-year vacatio
+    - CF art. 37 XVI b changed after cutoff by EC 138/2025
+    - Codigo Penal scoped text had no identified direct drift for direito-penal
+    - Lei 9.099/1995 baseline stable for the scoped B2 audit
+  state_tjsp_points:
+    - Lei Estadual 10.261/1968 art. 78 changed after cutoff by Lei 18.473/2026
+    - LC Estadual 1.111/2010 changed after cutoff by Lei 18.373/2025 and LC 1.441/2026
+    - Regimento Interno baseline excludes Assentos 592-596
+    - NSCGJ literal Capitulo XI recuts preserve the duplicated edital reference without inferred correction
 
 b2_banca_gate:
   status: closed
@@ -119,8 +65,7 @@ b2_banca_gate:
     2023: 40
     2024: 40
     2025: 30
-  source_integrity: all four local exam PDFs matched SOURCES.json sha256 and byte size
-  authority_rule: current syllabus remains controlling; observed distributions are non-predictive
+  authority_rule: syllabus controls scope; historical distribution is descriptive and non-predictive
 
 b2_coverage_gate:
   status: closed
@@ -128,48 +73,30 @@ b2_coverage_gate:
   artifact: competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md
   packs: 6
   coverage_result: complete
-  authority_rule: syllabus controls scope; matrix rows are authoring and QA contracts, not new syllabus
-  first_authorized_pack: direito-penal
-  first_pack_contract:
-    - DP-01
-    - DP-02
-    - DP-03
-    - DP-04
-    - DP-05
-    - DP-06
-    - DP-07
-    - DP-08
-    - DP-09
-    - DP-10
+  next_pack_contract:
+    pack: direito-processual-penal
+    coverage_rows: 25
+    first_id: DPP-01
+    last_id: DPP-25
 
-direito_penal_release_candidate:
-  status: release_candidate_incomplete
+right_penal_validated_rc:
+  status: validated_release_candidate
   version: 0.1.0-rc.1
   path: materials/tjsp-escrevente-2025/direito-penal
   content_base: 0.1.0-draft.3
-  content_semantic_change_in_rc: false
+  semantic_content_frozen: true
   canonical_markdown_blob: 008c3ac439d8b7d4038fd0114e486c1daaf755b1
-  files_present_in_main:
-    - APOSTILA.md
-    - APOSTILA.pdf
-    - METODOLOGIA_NOTEBOOKLM.md
-    - SOURCES.md
-    - MANIFEST.md
-    - CHANGELOG.md
-    - APOSTILA_QA_0.1.0.md
-  coverage_rows: 10
   coverage_status: pass
   normative_qa: pass_after_corrections
   didactic_qa: pass
   practice_questions: 30
   practice_qa: pass_30_of_30
-  matrix_practice_contract: pass
   markdown_corpus_qa: pass_for_markdown
   banca_coherence: pass
   tutor_configuration: pass_static
   notebooklm_static_qa: pass_static
-  notebooklm_live_qa: pending_user_smoke
-  repository_pdf_status: published_exact
+  notebooklm_live_qa: pass_with_observations
+  notebooklm_smoke_artifact: materials/tjsp-escrevente-2025/direito-penal/NOTEBOOKLM_SMOKE_0.1.0.md
   canonical_pdf:
     result: pass_canonical_binary_identity
     pages: 17
@@ -179,140 +106,86 @@ direito_penal_release_candidate:
     sha256: 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394
     git_blob: 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
     source_git_blob: 008c3ac439d8b7d4038fd0114e486c1daaf755b1
-    searchable: true
     textual_readback: pass
     visual_pages_inspected: 17
     visual_result: pass
-    canonical_repository_artifact: true
     publication_method: manual_github_upload
     upload_rename_commit: fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00
     publication_pull_request: 25
     publication_merge_commit: eaaad8982691b961cfd9a44a2b04326dba77c5e3
-    verified_in_main: true
-    verified_at: 2026-09-14
-  previous_local_pdf_candidate:
-    pages: 18
-    page_size: A4
-    bytes: 48593
-    sha256: d190a2a73b6e6ad84d60d2a241ca8574ac4f34a75cfba1d8f643dbf95f9ea469
-    result: pass_textual_visual_local_only
-  historical_transport_failure:
-    rechecked_at: 2026-09-13
-    expected_local_chunk_git_blob: f7b4c7b3256a3a93dcbb473062214c6007c4c398
-    remote_chunk_git_blob: d4d6c172421ca81eb40c825c44018e9ec4f421fd
-    result: mismatch_not_attached
-    resolved_by: manual_github_upload_exact_git_blob
-  baseline: 2025-07-29
-  cp_scoped_drift: none_identified_by_gate2
-  release_status: blocked_until_notebooklm_live_and_applicable_repository_gate
-  rc_pull_request: 22
-  rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
-  pdf_continuity_pull_request: 23
-  pdf_continuity_merge_commit: 737dc881f3eb91fed461d918bd026b86ce6bb210
-  pdf_transport_pull_request: 24
-  pdf_transport_merge_commit: 5fa2d232bd0ebb9296e97d744f9d4622d618b9aa
-  pdf_publication_pull_request: 25
-  pdf_publication_merge_commit: eaaad8982691b961cfd9a44a2b04326dba77c5e3
-  previous_qa_pull_request: 21
-  previous_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
+  smoke_observations:
+    - map rendered DP coverage IDs because they were present in visible StudentContent headings
+    - jurisprudence limit response did not invent precedents but opened with a categorical negative before stating the corpus limit
+  smoke_acceptance:
+    result: pass_with_observations
+    blocking: false
+    rc2_required: false
+    decision: carry improvements into subsequent SubjectPacks instead of regenerating direito-penal solely for these observations
+  formal_final_promotion:
+    status: deferred_separate_from_b2_continuation
+    blocks_next_pack: false
+
+notebooklm_process_lessons:
+  - do not expose coverage IDs, matrix IDs, gate labels or backoffice identifiers in visible StudentContent headings
+  - keep traceability in matrix, manifest and QA rather than study corpus headings
+  - when a source does not support an external-world claim, state the corpus limitation instead of asserting universal nonexistence
+  - future smoke must explicitly inspect Teste, Cartoes and Mapa mental for backoffice leakage
+  - future smoke must include at least one question whose answer is absent from the corpus to test epistemic discipline
 
 next_gate:
-  id: DIREITO-007
-  name: complete_direito_penal_release_candidate
-  pack: direito-penal
-  target_version: 0.1.0-rc.1
-  completed_in_gate:
-    - create METODOLOGIA_NOTEBOOKLM.md as conversation configuration not study source
-    - synchronize RC metadata without silently changing approved content
-    - generate searchable local PDF candidates from approved RC Markdown
-    - run textual and visual QA on local PDF candidates
-    - verify preferred publication candidate source against canonical APOSTILA.md Git blob
-    - run static NotebookLM corpus QA
-    - attempt binary publication without accepting integrity mismatch
-    - merge PR 23 recording the integrity blocker and exact remaining work
-    - recheck exact preferred PDF integrity and binary transfer path on 2026-09-13 without accepting a mismatched remote blob
-    - merge PR 24 recording the confirmed transport-integrity blocker
-    - manually publish exact APOSTILA.pdf to GitHub with remote Git blob matching the audited local candidate
-    - rerun textual readback and 17-page visual inspection on 2026-09-14
-    - close QA-9 as pass_canonical_binary_identity
-    - merge PR 25 publishing the canonical PDF to main
-  remaining:
-    - execute real NotebookLM smoke with only APOSTILA.pdf as source and tutor methodology in native conversation configuration
-    - execute python tools/verify.py in an environment with a valid canonical checkout or re-document impossibility if still blocked under DEC-0009
-    - synchronize final continuity and release decision after the remaining gates
-    - keep final release blocked while any required gate remains pending
-
-not_started:
-  - execute direito-penal NotebookLM live smoke
-  - release direito-penal
-  - continue remaining five B2 SubjectPacks after first legal pipeline is fully validated
+  id: DIREITO-008
+  name: first_draft_direito_processual_penal
+  pack: direito-processual-penal
+  target_state: draft
+  coverage_ids: DPP-01_through_DPP-25
+  official_scope:
+    cpp: arts_251_258_261_267_274_351_372_394_497_531_538_541_548_574_667
+    lei_9099_1995: arts_60_83_88_89
+  primary_sources:
+    - SRC-B2-CPP
+    - SRC-B2-L9099
+  critical_version_note:
+    - CPP art. 584 paragraph 4 must use cutoff 2025-07-29 text; Lei 15.358/2026 drift stays separate
+  required_first_artifacts:
+    - materials/tjsp-escrevente-2025/direito-processual-penal/MANIFEST.md
+    - materials/tjsp-escrevente-2025/direito-processual-penal/SOURCES.md
+    - materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.md
+    - materials/tjsp-escrevente-2025/direito-processual-penal/CHANGELOG.md
+  gate_rule:
+    - cover all DPP-01 through DPP-25
+    - do not expose DPP IDs in StudentContent headings
+    - do not generate PDF or release candidate before semantic and normative QA of the draft
 
 validation:
-  portuguese_editorial_qa: pass
-  portuguese_notebooklm_live: pass
-  portuguese_pdf_qa:
-    result: pass
-    material_version: 2.0.0
-    pages: 16
-    page_size: A4
-    bytes: 20824
-    sha256: b4d9035d0bcfacc88f8bc44100edadca8bf49a5eca47609e633d620dbabb9931
-    git_blob: 640efaed13dd43cc83f6904c62fdb86131b9124a
-  direito_penal_semantic_qa:
-    result: pass
-    material_version: 0.1.0-draft.3
-    coverage: pass
-    normative: pass_after_corrections
-    didactic: pass
-    questions: pass_30_of_30
-    corpus_markdown: pass_for_markdown
-    artifact: materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md
-  direito_penal_rc_qa:
-    material_version: 0.1.0-rc.1
-    semantic_content_frozen: true
-    tutor_configuration: pass_static
-    notebooklm_static: pass_static
-    notebooklm_live: pending_user_smoke
-    canonical_pdf: pass_canonical_binary_identity
-    canonical_pdf_pages: 17
-    canonical_pdf_bytes: 30167
-    canonical_pdf_sha256: 42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394
-    canonical_pdf_git_blob: 5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e
-    canonical_pdf_textual_readback: pass
-    canonical_pdf_visual_pages_inspected: 17
-    canonical_pdf_visual_result: pass
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
-    reason: local runtime cannot resolve github.com preventing a valid canonical checkout
     attempted_at: 2026-09-14
+    reason: local runtime cannot resolve github.com for a valid canonical checkout
     network_probe: git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
     error: Could not resolve host github.com
-    latest_recheck: still_blocked
-    policy: impossibility documented under DEC-0009; not treated as pass
+    policy: impossibility re-evaluated under DEC-0009 and not treated as pass
 
-ci: disabled
-last_subject_pack_pull_request: 25
-last_b2_preparation_pull_request: 13
-last_b2_source_pull_request: 15
-last_b2_banca_pull_request: 18
-last_b2_matrix_pull_request: 19
-last_direito_penal_draft_pull_request: 20
-last_direito_penal_qa_pull_request: 21
-last_direito_penal_rc_pull_request: 22
-last_direito_penal_pdf_continuity_pull_request: 23
-last_direito_penal_pdf_transport_pull_request: 24
-last_direito_penal_pdf_publication_pull_request: 25
-merge_status: direito_penal_rc1_pdf_published_notebooklm_gate_pending
-last_direito_penal_pdf_publication_merge_commit: eaaad8982691b961cfd9a44a2b04326dba77c5e3
-last_direito_penal_pdf_transport_merge_commit: 5fa2d232bd0ebb9296e97d744f9d4622d618b9aa
-last_direito_penal_pdf_continuity_merge_commit: 737dc881f3eb91fed461d918bd026b86ce6bb210
-last_direito_penal_rc_merge_commit: 1972f0c6a6f984ecf363413810ccb7cf082f7e79
-last_direito_penal_qa_merge_commit: d89b7aefd69db3f3fc653807eb98f036755f6f2e
-last_direito_penal_draft_merge_commit: c0208494c1acd343572254d4d8b991d97f6cf8fc
-last_b2_matrix_merge_commit: 5784e8bb9d904c677cb655dfbb069146e688b4e3
-last_b2_banca_merge_commit: c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008
-last_b2_source_merge_commit: fa0fb7c66f6db2d83df98bedf75b2708f51baad3
-last_b2_preparation_merge_commit: 540765b17e224a319b90a4e9da5272dd4db0684e
-last_release_merge_commit: e6ce9d2571e9c68a8947701c08187c07e986d567
+pull_request_lineage:
+  b2_preparation_pr: 13
+  b2_source_prs: [14, 15]
+  b2_banca_pr: 18
+  b2_matrix_pr: 19
+  direito_penal_draft_pr: 20
+  direito_penal_qa_pr: 21
+  direito_penal_rc_pr: 22
+  direito_penal_pdf_continuity_pr: 23
+  direito_penal_pdf_transport_pr: 24
+  direito_penal_pdf_publication_pr: 25
+  direito_penal_notebooklm_smoke_pr: 26
+  last_subject_pack_pull_request: 26
+
+merge_status: direito_penal_rc1_validated_with_observations_next_direito_processual_penal
+
+not_started:
+  - direito-processual-penal first draft
+  - direito-processual-civil
+  - direito-constitucional
+  - direito-administrativo
+  - legislacao-interna
 ```
