@@ -4,21 +4,21 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main`
+- **Current implementation branch:** `upload/direito-penal-apostila-pdf`
 - **Last implementation branch:** `release/direito-penal-0.1.0-rc.1-pdf-publish`
 - **Current competition:** `tjsp-escrevente-2025`
-- **Current subject:** `B2 — Conhecimentos em Direito` — Gates 1–6 fechados no primeiro pipeline; `DIREITO-007` aberto no release candidate de Direito Penal
+- **Current subject:** `B2 - Conhecimentos em Direito` - Gates 1-6 fechados no primeiro pipeline; `DIREITO-007` aberto no release candidate de Direito Penal
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
-- **Current pack:** `direito-penal` — `0.1.0-rc.1`, status `release_candidate_incomplete`; conteúdo semântico aprovado, tutor/QA estático concluídos, PDF local auditado mas binário canônico ausente, smoke real do NotebookLM pendente
-- **Last released pack:** `portugues 2.0.0` — final, com QA editorial/PDF/NotebookLM concluídos
+- **Current pack:** `direito-penal` - `0.1.0-rc.1`, status `release_candidate_incomplete`; conteúdo semântico aprovado, tutor/QA estático concluídos, PDF versionado com QA-9 fechado por identidade binária exata, smoke real do NotebookLM pendente
+- **Last released pack:** `portugues 2.0.0` - final, com QA editorial/PDF/NotebookLM concluídos
 - **Portuguese repository PDF:** 16 páginas A4, 20824 bytes, Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
-- **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` — Gate 2 fechado em 2026-09-11
-- **B2 banca analysis:** `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` — 150 questões classificadas; Gate 3 fechado em 2026-09-12
-- **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` — seis matrizes completas; Gate 4 fechado em 2026-09-12
-- **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` — `APOSTILA.md` rc.1, `METODOLOGIA_NOTEBOOKLM.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md` e `APOSTILA_QA_0.1.0.md`; `APOSTILA.pdf` ainda não publicado no repositório
-- **Direito Penal preferred local PDF candidate:** 17 páginas A4, 30167 bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob local esperado `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`; gerado da cópia local cujo Git blob coincide exatamente com o `APOSTILA.md` canônico `008c3ac439d8b7d4038fd0114e486c1daaf755b1`; QA textual/visual local passou em 17/17 páginas
-- **Direito Penal PDF publication blocker:** nova tentativa em 2026-09-13 confirmou que o write surface do conector GitHub disponível recebe `content` textual/base64, mas não recebe referência direta ao arquivo binário local; transporte manual de base64, inclusive em teste alinhado de chunk, voltou a produzir Git blob remoto diferente do esperado. Nenhum blob divergente foi anexado à árvore/branch; `APOSTILA.pdf` continua `not_published`
+- **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` - Gate 2 fechado em 2026-09-11
+- **B2 banca analysis:** `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` - 150 questões classificadas; Gate 3 fechado em 2026-09-12
+- **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` - seis matrizes completas; Gate 4 fechado em 2026-09-12
+- **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` - `APOSTILA.md` rc.1, `APOSTILA.pdf`, `METODOLOGIA_NOTEBOOKLM.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md` e `APOSTILA_QA_0.1.0.md`
+- **Direito Penal canonical PDF:** 17 páginas A4, 30167 bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`; GitHub confirmou exatamente o mesmo blob do candidato local auditado; QA textual/visual passou em 17/17 páginas e foi reexecutado em 2026-09-14
+- **Direito Penal PDF publication resolution:** upload manual na branch `upload/direito-penal-apostila-pdf` resolveu o bloqueio de transporte das PRs #23/#24; o commit observado de upload/rename foi `fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00`; nenhum blob divergente foi aceito como canônico
 - **B2 boundary decision:** DEC-0019
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
@@ -30,12 +30,12 @@
 - **Direito Penal RC PR:** `#22`, merged to `main` at `1972f0c6a6f984ecf363413810ccb7cf082f7e79`
 - **Direito Penal PDF continuity PR:** `#23`, merged to `main` at `737dc881f3eb91fed461d918bd026b86ce6bb210`; registra candidato local validado e bloqueio de integridade sem alegar publicação canônica
 - **Direito Penal PDF transport PR:** `#24`, merged to `main` at `5fa2d232bd0ebb9296e97d744f9d4622d618b9aa`; registra nova tentativa e confirma bloqueio do transporte binário sem alegar publicação canônica
-- **Gate 2:** `closed` — federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
-- **Gate 3:** `closed` — questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
-- **Gate 4:** `closed` — 100% dos recortes de B2 rastreados a `coverage_id`, fonte, estratégia pedagógica, risco de versão e QA
-- **Gate 5:** `closed_as_draft` — DP-01…DP-10 implementados e mergeados
-- **Gate 6:** `closed` — cobertura, norma, didática, 30/30 questões e corpus Markdown aprovados; gate determinístico não executado por impossibilidade DNS documentada
-- **Next Gate:** `DIREITO-007` permanece `open` — concluir o release candidate com `APOSTILA.pdf` canônico + QA do binário efetivamente versionado + smoke real do NotebookLM + gate determinístico quando o ambiente permitir
+- **Gate 2:** `closed` - federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
+- **Gate 3:** `closed` - questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
+- **Gate 4:** `closed` - 100% dos recortes de B2 rastreados a `coverage_id`, fonte, estratégia pedagógica, risco de versão e QA
+- **Gate 5:** `closed_as_draft` - DP-01...DP-10 implementados e mergeados
+- **Gate 6:** `closed` - cobertura, norma, didática, 30/30 questões e corpus Markdown aprovados; gate determinístico não executado por impossibilidade DNS documentada
+- **Next Gate:** `DIREITO-007` permanece `open` - PDF canônico e QA-9 agora concluídos; restam smoke real do NotebookLM, sincronização final e gate determinístico quando o ambiente permitir
 - **Release rule:** não promover `direito-penal` a release final enquanto qualquer gate obrigatório estiver pendente
 - **Next subject evidence:** o syllabus vigente atribui **30 questões** a Conhecimentos em Direito; o bloco contém Direito Penal, Processual Penal, Processual Civil, Constitucional, Administrativo e Legislação Interna
 - **Study stack:** GitHub + ChatGPT + NotebookLM
