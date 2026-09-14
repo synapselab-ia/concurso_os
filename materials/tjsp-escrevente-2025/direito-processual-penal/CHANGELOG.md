@@ -1,5 +1,57 @@
 # CHANGELOG - Direito Processual Penal - TJSP Escrevente 2025
 
+## `0.1.0-draft.2` - 2026-09-14
+
+Fechamento do QA semântico/normativo de `DIREITO-009`.
+
+### Corrigido e aprofundado
+
+- cobertura literal do art. 262;
+- arts. 363-365, distinguindo regra atual de citação por edital das referências residuais a incisos revogados;
+- art. 394-A e art. 400-A;
+- identificação expressa do art. 398 como revogado;
+- procedimento sumário com art. 537 revogado e art. 538 explicitado;
+- regras gerais de recursos, RESE e apelação aprofundadas;
+- intervalo `604-620` refeito para identificar `604-608` e `611` como revogados e rastrear `609-610` e `612-620`;
+- intervalo `632-646` refeito para identificar `632-636` como revogados e explicitar `637-646`, inclusive prazos da carta testemunhável;
+- art. 647-A e fluxo do habeas corpus incorporados;
+- Lei n.º 9.099/1995, arts. 60-83, aprofundada em comunicação, fase preliminar, audiência, recursos e art. 81, § 1º-A.
+
+### Controle de versão
+
+- baseline mantido em `2025-07-29`;
+- art. 584, § 4º, incluído em 2026, permanece excluído do StudentContent;
+- `SRC-B2-L9099` permanece `cutoff_closed_no_scoped_drift` no inventário canônico.
+
+### Prática
+
+- as 52 questões do `draft.1` foram revisadas individualmente;
+- foram adicionadas 8 questões para fechar pontos literais e de Q-FULL/Q-VER;
+- total final: `60` questões A-E com gabarito comentado separado;
+- QA final da prática: `60/60 PASS`.
+
+### QA
+
+- DPP-01...DPP-25: `pass_after_corrections`;
+- normativo: `pass_after_corrections`;
+- didática/fluxos/contrastes: `pass`;
+- prática: `pass_60_of_60`;
+- requisitos `Q-LIT`, `Q-CMP`, `Q-CAS`, `Q-FLX`, `Q-VER` e `Q-FULL`: `pass`;
+- corpus Markdown: `pass_for_markdown`;
+- IDs de backoffice em títulos estudáveis: `pass_absent`;
+- PDF: `not_created_by_design`;
+- NotebookLM: `not_started`.
+
+### Gate determinístico
+
+Nova tentativa de obter checkout canônico por `git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git` falhou com `Could not resolve host: github.com`, exit code `128`. `python tools/verify.py` permaneceu `not_executed_current_environment`, não `PASS`.
+
+### Saída de DIREITO-009
+
+O `0.1.0-draft.2` está semanticamente aprovado para preparação de release candidate em etapa separada. Não foi promovido a RC neste gate.
+
+---
+
 ## `0.1.0-draft.1` - 2026-09-14
 
 Primeira implementação completa do SubjectPack `direito-processual-penal` sob `DIREITO-008`.
@@ -17,32 +69,19 @@ Primeira implementação completa do SubjectPack `direito-processual-penal` sob 
 
 ### Engenharia de corpus
 
-As lições do smoke de Direito Penal foram aplicadas desde a primeira autoria:
-
 - nenhum `DPP-*` foi usado em título ou subtítulo estudável;
-- coverage IDs e rótulos de gate permanecem no `MANIFEST` e na matriz, fora do StudentContent;
-- a redação evita tratar ausência de conteúdo externo na lei como prova de inexistência externa;
-- a futura configuração do tutor e o smoke final deverão testar explicitamente disciplina epistemológica e vazamento de metadados.
+- coverage IDs e rótulos de gate ficaram no backoffice;
+- a redação evitou transformar ausência de conteúdo externo na lei em negativa universal.
 
 ### Versão normativa
 
-- baseline do pack: `2025-07-29`;
-- CPP oficial e Lei n.º 9.099/1995 oficial foram reabertos durante a autoria em `2026-09-14`;
-- o art. 584, § 4º, do CPP, incluído pela Lei n.º 15.358/2026, foi mantido fora da apostila por ser posterior ao cutoff;
-- a Lei n.º 9.099/1995 permanece `cutoff_closed_no_scoped_drift` no inventário canônico.
+- baseline: `2025-07-29`;
+- CPP e Lei n.º 9.099/1995 oficiais reabertos durante a autoria;
+- art. 584, § 4º, de 2026 mantido fora da apostila.
 
-### Estado de QA
+### Estado de QA no draft.1
 
 - implementação das 25 coverage rows: `complete_first_pass_pending_semantic_qa`;
-- fontes e baseline: `recorded`;
-- contrastes e fluxos: `implemented_pending_qa`;
-- prática autoral: `implemented_pending_qa`;
-- cobertura IDs em títulos estudáveis: `selfcheck_pass`;
 - QA semântico/normativo específico: `not_started`;
 - PDF: `not_created_by_design`;
-- NotebookLM: `not_started`;
-- `python tools/verify.py`: `not_executed_current_environment`, pois o runtime continua sem resolução DNS de `github.com` para checkout canônico; a impossibilidade não é tratada como PASS.
-
-### Limites desta versão
-
-Este draft não está aprovado como release nem como release candidate. A próxima etapa deve revisar integralmente conteúdo e questões contra as fontes primárias e a matriz, corrigir eventuais ambiguidades, registrar QA e somente depois considerar PDF ou NotebookLM.
+- NotebookLM: `not_started`.
