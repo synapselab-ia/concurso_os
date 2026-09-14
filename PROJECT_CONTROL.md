@@ -4,54 +4,42 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main`
-- **Last implementation branch:** `docs/direito-penal-notebooklm-smoke`
+- **Current implementation branch:** `content/direito-processual-penal-v0.1-draft`
+- **Base branch:** `main`
 - **Current competition:** `tjsp-escrevente-2025`
-- **Current subject:** `B2 - Conhecimentos em Direito` - primeiro pipeline jurídico de `direito-penal` validado; próximo SubjectPack: `direito-processual-penal`
+- **Current subject:** `B2 - Conhecimentos em Direito`
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
-- **Current pack:** `direito-penal` - `0.1.0-rc.1`, status `validated_release_candidate`; conteúdo semântico aprovado, PDF canônico com QA-9 fechado, NotebookLM live smoke `pass_with_observations`; promoção formal para versão final sem sufixo fica separada e não bloqueia o próximo pack
-- **Next pack:** `direito-processual-penal` - `not_started`; deve aplicar matriz DPP, fontes do cutoff e lições do smoke de Direito Penal desde a primeira autoria
-- **Last released pack:** `portugues 2.0.0` - final, com QA editorial/PDF/NotebookLM concluídos
-- **Portuguese repository PDF:** 16 páginas A4, 20824 bytes, Git blob `640efaed13dd43cc83f6904c62fdb86131b9124a`
+- **Last released pack:** `portugues 2.0.0`, final, com QA editorial, PDF e NotebookLM concluídos
+- **Last validated legal pack:** `direito-penal 0.1.0-rc.1`, `validated_release_candidate`; conteúdo semântico aprovado, PDF canônico validado e NotebookLM live smoke `pass_with_observations`; promoção formal sem sufixo segue separada e não bloqueia B2
+- **Current pack:** `direito-processual-penal 0.1.0-draft.1`, primeira implementação completa em Markdown, pendente de QA semântico/normativo
+- **Current gate:** `DIREITO-008`, first draft de `direito-processual-penal`, implementado e em revisão final de diff antes de PR/merge
+- **Next gate:** `DIREITO-009`, QA semântico/normativo completo de `direito-processual-penal`
+- **Direito Processual Penal workspace:** `materials/tjsp-escrevente-2025/direito-processual-penal/`
+- **Direito Processual Penal first artifacts:** `MANIFEST.md`, `SOURCES.md`, `APOSTILA.md`, `CHANGELOG.md`
+- **Coverage contract:** `DPP-01...DPP-25`, 25 rows em `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`
+- **StudentContent:** 25 unidades de estudo; nenhum `DPP-*` usado em título ou subtítulo visível por regra de autoria
+- **Practice:** 52 questões autorais A-E com gabarito comentado separado
+- **Primary normative sources:** `SRC-B2-CPP` e `SRC-B2-L9099`
+- **Normative baseline:** `2025-07-29`
+- **Critical version rule:** CPP art. 584, § 4º, incluído pela Lei n.º 15.358/2026, permanece fora do baseline estudável
+- **PDF for current pack:** não criado por desenho de `DIREITO-008`
+- **NotebookLM for current pack:** não iniciado; somente depois do QA semântico/normativo e preparação de release candidate
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
-- **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md` - Gate 2 fechado em 2026-09-11
-- **B2 banca analysis:** `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md` - 150 questões classificadas; Gate 3 fechado em 2026-09-12
-- **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md` - seis matrizes completas; Gate 4 fechado em 2026-09-12
-- **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/` - `APOSTILA.md` rc.1, `APOSTILA.pdf`, `METODOLOGIA_NOTEBOOKLM.md`, `SOURCES.md`, `MANIFEST.md`, `CHANGELOG.md`, `APOSTILA_QA_0.1.0.md` e `NOTEBOOKLM_SMOKE_0.1.0.md`
-- **Direito Penal canonical PDF:** 17 páginas A4, 30167 bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`; GitHub confirmou em `main` exatamente o mesmo blob do candidato local auditado; QA textual/visual passou em 17/17 páginas e foi reexecutado em 2026-09-14
-- **Direito Penal NotebookLM live smoke:** `pass_with_observations` em 2026-09-14; chat, treino, Teste e Cartões passaram na amostra; Mapa mental exibiu IDs `DP-*` presentes nos títulos do StudentContent; resposta sobre jurisprudência respeitou o corpus mas começou categórica demais; ambos registrados como melhorias não bloqueantes
-- **NotebookLM lessons for next packs:** não expor coverage IDs/backoffice em títulos visíveis do StudentContent; ausência na fonte deve ser expressa como limite do corpus, não como negativa universal; testar vazamento de metadados e pergunta fora do corpus no smoke
-- **Direito Penal PDF publication resolution:** upload manual na branch `upload/direito-penal-apostila-pdf` resolveu o bloqueio de transporte das PRs #23/#24; o commit observado de upload/rename foi `fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00`; PR `#25` foi mergeada em `main` no commit `eaaad8982691b961cfd9a44a2b04326dba77c5e3`; nenhum blob divergente foi aceito como canônico
-- **Direito Penal NotebookLM smoke PR:** `#26`, merged to `main` at `dcc279a4e25d393036929fc7d640f544003ec436`; registra `PASS_WITH_OBSERVATIONS` e avança a continuidade para `direito-processual-penal`
-- **B2 boundary decision:** DEC-0019
-- **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
-- **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
-- **B2 state/TJSP source PR:** `#15`, merged to `main` at `fa0fb7c66f6db2d83df98bedf75b2708f51baad3`
-- **B2 banca PR:** `#18`, merged to `main` at `c3e7e75c65ab612cd05c86cfe9c0bcadb8d66008`
-- **B2 coverage PR:** `#19`, merged to `main` at `5784e8bb9d904c677cb655dfbb069146e688b4e3`
-- **Direito Penal draft PR:** `#20`, merged to `main` at `c0208494c1acd343572254d4d8b991d97f6cf8fc`
-- **Direito Penal QA PR:** `#21`, merged to `main` at `d89b7aefd69db3f3fc653807eb98f036755f6f2e`
-- **Direito Penal RC PR:** `#22`, merged to `main` at `1972f0c6a6f984ecf363413810ccb7cf082f7e79`
-- **Direito Penal PDF continuity PR:** `#23`, merged to `main` at `737dc881f3eb91fed461d918bd026b86ce6bb210`
-- **Direito Penal PDF transport PR:** `#24`, merged to `main` at `5fa2d232bd0ebb9296e97d744f9d4622d618b9aa`
-- **Direito Penal PDF publication PR:** `#25`, merged to `main` at `eaaad8982691b961cfd9a44a2b04326dba77c5e3`; publica o blob exato e fecha QA-9
-- **Gate 2:** `closed` - federal, state and TJSP sources reconciled to cutoff `2025-07-29`, with post-cutoff drift separately mapped
-- **Gate 3:** `closed` - questões jurídicas de 2021/2023/2024/2025 classificadas de forma reproduzível
-- **Gate 4:** `closed` - 100% dos recortes de B2 rastreados a `coverage_id`, fonte, estratégia pedagógica, risco de versão e QA
-- **Gate 5:** `closed_as_draft` - DP-01...DP-10 implementados e mergeados
-- **Gate 6:** `closed` - cobertura, norma, didática, 30/30 questões e corpus Markdown aprovados; gate determinístico não executado por impossibilidade DNS documentada
-- **Gate 7 / DIREITO-007:** `closed_with_observations` - PDF canônico, QA-9, NotebookLM estático e live smoke concluídos; impossibilidade do gate determinístico reavaliada conforme DEC-0009 sem falso PASS
-- **Next Gate:** `DIREITO-008` - iniciar primeira implementação de `direito-processual-penal` usando a matriz DPP e as lições do primeiro pipeline
-- **Release rule:** `direito-penal 0.1.0-rc.1` está validado como release candidate; promoção formal para versão final sem sufixo pode ser tratada separadamente e não bloqueia a continuação dos demais SubjectPacks de B2
-- **Next subject evidence:** o syllabus vigente atribui **30 questões** a Conhecimentos em Direito; o bloco contém Direito Penal, Processual Penal, Processual Civil, Constitucional, Administrativo e Legislação Interna
-- **Study stack:** GitHub + ChatGPT + NotebookLM
-- **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte; instruções de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa
-- **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` obrigatório para criação/reconstrução substancial
-- **Backoffice:** edital, provas, análise de banca, fontes, QA e histórico ficam no GitHub/ChatGPT por padrão
-- **Stack specification:** `docs/STACK_NOTEBOOKLM.md`
+- **B2 source inventory:** `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`, Gate 2 fechado no cutoff
+- **B2 banca analysis:** `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`, 150 questões históricas classificadas; uso descritivo e não preditivo
+- **B2 coverage matrix:** `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`, seis matrizes completas
+- **Direito Penal workspace:** `materials/tjsp-escrevente-2025/direito-penal/`
+- **Direito Penal NotebookLM live smoke:** `pass_with_observations` em 2026-09-14; lições obrigatórias aplicadas ao novo draft: sem coverage IDs visíveis e sem transformar ausência no corpus em negativa universal
+- **Canonical main observed before DIREITO-008:** `0249631f512fe76d6f34b7759532daf097e38a8e`; esse commit é posterior ao valor antigo `head_after_pr26` que estava no checkpoint e foi tratado como estado real do repo no início desta execução
+- **Open PRs observed before DIREITO-008:** 0
 - **Validation gate:** `python tools/verify.py`
+- **Validation status in current runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` falhou em 2026-09-14 com `Could not resolve host: github.com`, exit 128; impossibilidade documentada conforme DEC-0009 e não tratada como PASS
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
-- **Merge policy:** validated development PRs may be merged autonomously; see `00_SYSTEM/DECISION_LOG.md` DEC-0009
+- **Merge policy:** validated development PRs may be merged autonomously under DEC-0009 after diff review, absence of unintended destructive change and canonical gate execution or documented impossibility
+- **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` obrigatório para criação ou reconstrução substancial
+- **Backoffice:** edital, provas, análise de banca, fontes, coverage IDs, QA e histórico permanecem no GitHub/ChatGPT por padrão
+- **Primary NotebookLM UX:** `APOSTILA.pdf` como fonte estudável somente após pipeline de PDF; instruções de tutor ficam fora do corpus quando houver camada nativa equivalente
+- **Pull request lineage:** B2 preparação `#13`; fontes `#14/#15`; banca `#18`; matriz `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; continuidade/PDF `#23/#24`; publicação PDF `#25`; smoke NotebookLM `#26`
 
-Este arquivo é um índice executivo. Não duplicar arquitetura, histórico ou protocolos aqui.
+Este arquivo é um índice executivo. O estado detalhado fica em `00_SYSTEM/CHECKPOINT.md` e a instrução operacional seguinte em `00_SYSTEM/NEXT_ACTION.md`.
