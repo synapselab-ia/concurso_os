@@ -2,12 +2,13 @@
 
 ## `0.1.0-rc.1` - 2026-09-12
 
-Preparação de release candidate sob `DIREITO-007`, sem promoção a release final.
+Preparação e validação do primeiro release candidate jurídico sob `DIREITO-007`, sem promoção formal para versão final sem sufixo.
 
 ### Adicionado
 
 - `METODOLOGIA_NOTEBOOKLM.md` específica de Direito Penal, destinada à configuração nativa da conversa e não ao corpus estudável;
-- regras de tutoria para distinguir texto legal, explicação didática e aplicação hipotética, sem inventar jurisprudência ou doutrina ausente da fonte.
+- regras de tutoria para distinguir texto legal, explicação didática e aplicação hipotética, sem inventar jurisprudência ou doutrina ausente da fonte;
+- `NOTEBOOKLM_SMOKE_0.1.0.md` com o resultado do smoke real de 2026-09-14 e duas melhorias de processo para os próximos SubjectPacks.
 
 ### Sincronizado
 
@@ -33,10 +34,34 @@ Preparação de release candidate sob `DIREITO-007`, sem promoção a release fi
 - QA-9 foi fechado por identidade binária exata;
 - readback textual e renderização visual de `17/17` páginas foram novamente executados em `2026-09-14` sobre o binário local de identidade idêntica e permaneceram `PASS`.
 
-### Bloqueios mantidos
+### Smoke real do NotebookLM - 2026-09-14
 
-- smoke real do NotebookLM: `pending_user_smoke`;
-- `python tools/verify.py`: não executado por impossibilidade de obter checkout canônico neste runtime; nova tentativa de resolução de `github.com` em `2026-09-14` continuou falhando.
+- chat explicativo: `pass`;
+- treino interativo A-E, uma questão por vez e sem gabarito antecipado: `pass`;
+- Teste do Estúdio: `pass` na amostra inspecionada;
+- Cartões: `pass` na amostra inspecionada;
+- Mapa mental: `pass_with_observation`, pois exibiu IDs `DP-*` presentes nos títulos do StudentContent;
+- limite epistemológico sobre jurisprudência: `pass_with_observation`, pois não houve invenção de precedentes, mas a resposta começou com negativa categórica antes de explicitar o limite da fonte;
+- resultado consolidado: `pass_with_observations`;
+- decisão: não criar `rc.2` apenas por essas observações; registrá-las como melhoria obrigatória de processo para os próximos SubjectPacks.
+
+### Melhorias de processo capturadas
+
+- não inserir coverage IDs ou outros identificadores de backoffice em títulos visíveis do StudentContent;
+- quando a fonte não sustentar afirmação sobre conteúdo externo, explicitar `a fonte não traz / com base apenas nela não posso afirmar`, sem converter ausência no corpus em negativa universal.
+
+### Gate determinístico
+
+- `python tools/verify.py` continua `not_executed_current_environment` por impossibilidade de obter checkout canônico neste runtime;
+- nova tentativa de resolução de `github.com` em `2026-09-14` continuou falhando;
+- a impossibilidade foi reavaliada conforme DEC-0009 e não é tratada como `PASS`.
+
+### Saída de DIREITO-007
+
+- `DIREITO-007`: `closed_with_observations`;
+- `0.1.0-rc.1`: `validated_release_candidate`;
+- o primeiro pipeline jurídico está validado o suficiente para iniciar `direito-processual-penal`;
+- promoção formal para versão final sem sufixo fica separada e não bloqueia a continuação dos demais packs de B2.
 
 Nenhuma alteração semântica de Direito Penal foi introduzida no `rc.1`.
 
