@@ -1,104 +1,116 @@
 # NEXT_ACTION
 
-## DIREITO-007: Concluir release candidate do SubjectPack `direito-penal`
+## DIREITO-008: Iniciar o SubjectPack `direito-processual-penal`
 
-O conteúdo jurídico de `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md` foi aprovado em `0.1.0-draft.3` e congelado no release candidate `0.1.0-rc.1`.
+O primeiro pipeline jurídico foi validado em `direito-penal 0.1.0-rc.1`.
 
-Estado já comprovado:
+Estado fechado de Direito Penal:
 
-- `METODOLOGIA_NOTEBOOKLM.md` criada e auditada estaticamente;
-- `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md` e QA sincronizados para `0.1.0-rc.1`;
-- QA estático do corpus para NotebookLM concluído;
-- `APOSTILA.md` canônico possui Git blob `008c3ac439d8b7d4038fd0114e486c1daaf755b1`;
-- o candidato preferido de PDF foi gerado a partir de cópia local com esse mesmo Git blob do Markdown congelado;
-- PDF canônico: `17` páginas A4, `30.167` bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
-- o PDF passou readback textual e inspeção visual de `17/17` páginas a 150 dpi, sem clipping, sobreposição, glifos quebrados, quebra impeditiva de tabela ou mistura entre questões e gabarito;
-- PR `#23` e PR `#24` registraram as tentativas anteriores de transporte binário sem aceitar blobs divergentes;
-- em `2026-09-14`, o arquivo foi enviado manualmente para `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf` na branch `upload/direito-penal-apostila-pdf`;
-- GitHub retornou para esse arquivo exatamente o Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`, provando identidade binária com o candidato integralmente auditado;
-- o commit de upload/rename observado foi `fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00`;
-- em `2026-09-14`, readback textual e renderização/inspeção de `17/17` páginas foram executados novamente sobre o binário local de identidade idêntica e permaneceram `PASS`;
-- QA-9 do PDF está fechado como `PASS_CANONICAL_BINARY_IDENTITY`;
-- PR `#25` publicou o PDF canônico e os registros de QA em `main` no commit `eaaad8982691b961cfd9a44a2b04326dba77c5e3`;
-- o PDF foi rechecado já em `main` e manteve exatamente o Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
-- nova tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` em `2026-09-14` continua falhando com `Could not resolve host: github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
+- conteúdo semântico: `PASS`;
+- 30/30 questões autorais: `PASS`;
+- PDF canônico: `PASS_CANONICAL_BINARY_IDENTITY`;
+- NotebookLM estático: `PASS_STATIC`;
+- NotebookLM live smoke: `PASS_WITH_OBSERVATIONS`;
+- `DIREITO-007`: `closed_with_observations`;
+- `python tools/verify.py`: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, com impossibilidade DNS reavaliada em `2026-09-14` conforme DEC-0009 e sem falso PASS;
+- não será criado `rc.2` apenas pelas observações do smoke;
+- promoção formal de `direito-penal` para versão final sem sufixo fica separada e não bloqueia a continuação de B2.
 
-O pack ainda não é release. O PDF deixou de ser bloqueio técnico. Restam o smoke real do NotebookLM, a reavaliação do gate determinístico e a decisão final de promoção.
+O smoke real está documentado em:
+
+`materials/tjsp-escrevente-2025/direito-penal/NOTEBOOKLM_SMOKE_0.1.0.md`
 
 ## Entradas obrigatórias
 
-Ler conjuntamente:
+Antes de escrever `direito-processual-penal`, ler conjuntamente:
 
-- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.md`;
-- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`;
-- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md`;
-- `materials/tjsp-escrevente-2025/direito-penal/METODOLOGIA_NOTEBOOKLM.md`;
-- `materials/tjsp-escrevente-2025/direito-penal/MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md`;
-- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, especialmente QA-7, QA-9 e QA-10;
+- `AGENTS.md`;
+- `00_SYSTEM/START_HERE.md`;
+- `PROJECT_CONTROL.md`;
+- `00_SYSTEM/CHECKPOINT.md`;
+- este arquivo;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`;
 - `00_SYSTEM/QA_PROTOCOL.md`;
-- `00_SYSTEM/PROJECT_SPEC.md` e `00_SYSTEM/ARCHITECTURE.md`.
+- `00_SYSTEM/SOURCE_POLICY.md`;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`, seção `direito-processual-penal`;
+- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`;
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`;
+- `materials/tjsp-escrevente-2025/direito-penal/NOTEBOOKLM_SMOKE_0.1.0.md` como lição de processo, não como fonte jurídica;
+- fontes primárias `SRC-B2-CPP` e `SRC-B2-L9099` na versão controlada do cutoff `2025-07-29`.
 
-## 1. Preservar o conteúdo congelado
+## 1. Contrato de cobertura
 
-Não reabrir escopo nem alterar silenciosamente DP-01 a DP-10 ou as 30 questões.
+`direito-processual-penal` tem `25` coverage rows, `DPP-01` a `DPP-25`.
 
-Se surgir erro material no conteúdo jurídico, voltar o estado para draft, corrigir e registrar nova passagem semântica antes de qualquer release final.
+Recorte oficial:
 
-## 2. Preservar a identidade do PDF canônico
+- Código de Processo Penal: arts. `251-258; 261-267; 274; 351-372; 394-497; 531-538; 541-548; 574-667`;
+- Lei n.º 9.099/1995: arts. `60-83; 88-89`.
 
-O PDF aprovado é:
+A matriz canônica é o contrato de cobertura, profundidade, contraste, forma e prática. Não omitir nenhuma row e não transformar a matriz em conteúdo visível do estudante.
 
-- caminho: `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf`;
-- páginas: `17`;
-- bytes: `30.167`;
-- PDF: `1.4`;
-- SHA-256: `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`;
-- Git blob: `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`.
+## 2. Controle de versão obrigatório
 
-Não substituir silenciosamente esse binário. Qualquer regeneração ou alteração do PDF exige novo registro de páginas, bytes, SHA-256, Git blob e nova execução de QA-9.
+Preservar o baseline `2025-07-29`.
 
-## 3. Executar smoke real do NotebookLM
+Ponto de atenção já mapeado:
 
-Esta é a próxima ação funcional:
+- CPP art. `584, § 4º`: usar o texto do cutoff; a alteração posterior pela Lei n.º `15.358/2026` deve permanecer separada e não pode contaminar a apostila do edital.
 
-```text
-FONTES
--> somente APOSTILA.pdf canônico
+Reabrir a fonte oficial para qualquer ponto normativo sensível antes de fechar redação ou questão.
 
-CONFIGURAÇÃO DA CONVERSA
--> bloco operacional de METODOLOGIA_NOTEBOOKLM.md
-```
+## 3. Lições obrigatórias do smoke de Direito Penal
 
-Inspecionar no mínimo:
+Aplicar desde a primeira linha do novo StudentContent:
 
-- chat configurado para dúvida jurídica e correção;
-- Teste ou artefato de recuperação equivalente;
-- Cartões;
-- Mapa mental ou artefato hierárquico equivalente.
+1. não colocar `DPP-01`, `DPP-02` etc. em títulos ou subtítulos visíveis da apostila;
+2. coverage IDs, labels de gate e metadados de autoria ficam apenas no backoffice;
+3. a rastreabilidade deve ser preservada em `MANIFEST`, matriz e QA, não no corpus estudável;
+4. a futura configuração do tutor deve tratar informação ausente da fonte como limite do corpus, e não como prova de inexistência externa;
+5. no smoke final, verificar explicitamente se Mapa mental, Teste e Cartões vazam metadados internos;
+6. no smoke final, fazer ao menos uma pergunta sobre informação externa ao corpus para testar a disciplina epistemológica.
 
-Confirmar que metodologia e backoffice não viram conteúdo estudável e que o tutor não inventa jurisprudência ou doutrina ausente da fonte.
+## 4. Primeira implementação
 
-Enquanto a interface estiver indisponível ou o usuário ainda não executar o smoke, manter `pending_user_smoke`.
+Criar workspace canônico:
 
-## 4. Gate canônico do repositório
+`materials/tjsp-escrevente-2025/direito-processual-penal/`
 
-Antes de encerrar `DIREITO-007`:
+Primeiros artefatos esperados:
 
-```bash
-python tools/verify.py
-```
+- `MANIFEST.md`;
+- `SOURCES.md`;
+- `APOSTILA.md`;
+- `CHANGELOG.md`.
 
-O runtime local continua sem resolução DNS para `github.com`, impedindo checkout canônico. A última rechecagem ocorreu em `2026-09-14`. Enquanto isso persistir, registrar `not_executed_current_environment`; não tratar como `PASS`.
+A primeira passagem deve cobrir integralmente `DPP-01...DPP-25`, mas os identificadores `DPP-*` não devem aparecer no StudentContent visível.
 
-## 5. Critério de saída
+A engenharia pedagógica deve privilegiar, conforme a matriz:
 
-`DIREITO-007` só fecha quando houver evidência real de:
+- fluxos procedimentais;
+- tabelas regra/exceção quando genuinamente úteis;
+- contrastes entre institutos e recursos próximos;
+- prazos, sujeitos, legitimidade, competência, cabimento e efeitos;
+- mini-casos autorais;
+- prática de literalidade, fluxo, contraste e aplicação.
 
-- configuração de tutor auditada;
-- metadados coerentes do `0.1.0-rc.1`;
-- `APOSTILA.pdf` versionado com Git blob exato `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e` e QA-9 fechado;
-- QA NotebookLM estático concluído e smoke real registrado;
-- `MANIFEST.md`, `SOURCES.md`, `CHANGELOG.md`, QA e continuidade refletindo exatamente o estado;
-- `python tools/verify.py` executado ou impossibilidade atual explicitamente reavaliada conforme DEC-0009.
+## 5. Regra de banca
 
-Somente depois disso decidir explicitamente se o candidato pode ser promovido a release final. Os outros cinco SubjectPacks de B2 permanecem aguardando a validação completa deste primeiro pipeline jurídico.
+Usar `DIREITO_B2_BANCA_ANALYSIS.md` apenas para engenharia silenciosa.
+
+Não transformar frequência histórica em previsão de cobrança nem inserir metadiscurso como `a VUNESP cobra` no StudentContent sem valor pedagógico deliberado.
+
+## 6. Gate desta etapa
+
+A meta de `DIREITO-008` é produzir a primeira implementação completa de `direito-processual-penal` em estado `draft`, com:
+
+- 100% de `DPP-01...DPP-25` coberto;
+- fontes e baseline registrados;
+- contrastes e fluxos implementados;
+- prática autoral suficiente conforme a matriz;
+- nenhum coverage ID exposto como título estudável;
+- continuidade atualizada;
+- revisão de diff/readback antes de merge.
+
+Não gerar PDF nem promover a release candidate nesta etapa. Primeiro concluir o draft e então abrir o QA semântico/normativo específico do pack.

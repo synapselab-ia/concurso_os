@@ -4,7 +4,7 @@
 **Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2` -> `0.1.0-draft.3` -> `0.1.0-rc.1`  
 **Pack:** `direito-penal`  
 **Overall semantic result:** `PASS`  
-**Release candidate:** `created_incomplete`
+**Release candidate:** `validated_with_observations`
 
 ## 1. Escopo e método
 
@@ -133,7 +133,9 @@ Consequência: `python tools/verify.py` não pôde ser executado em checkout can
 
 ---
 
-## 9. DIREITO-007 - QA-7 NotebookLM estático
+## 9. DIREITO-007 - QA-7 NotebookLM
+
+### QA estático
 
 **Resultado:** `PASS_STATIC`
 
@@ -158,7 +160,27 @@ Verificações estáticas:
 - a apostila contém definições, regras, exceções, contrastes, mini-casos, sínteses e prática suficientes para Teste, Cartões, Mapa mental e chat;
 - nenhum trecho estudável depende de `MANIFEST`, `SOURCES`, análise de banca ou outro documento de backoffice para fazer sentido.
 
-**Smoke real:** `PENDING_USER_SMOKE`. A interface do NotebookLM não está disponível neste runtime. Nenhuma interação externa foi presumida como executada.
+### Smoke real
+
+**Resultado:** `PASS_WITH_OBSERVATIONS`
+
+O usuário executou o smoke real em `2026-09-14` com somente o `APOSTILA.pdf` canônico como fonte e o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` na configuração personalizada da conversa.
+
+Foram observados:
+
+- chat explicativo sobre concussão x corrupção passiva: `PASS`;
+- treino interativo A-E, uma questão por vez e sem antecipação de gabarito: `PASS`;
+- Teste do Estúdio: `PASS` na amostra inspecionada;
+- Cartões: `PASS` na amostra inspecionada;
+- Mapa mental: `PASS_WITH_OBSERVATION`;
+- pergunta de limite epistemológico sobre jurisprudência: `PASS_WITH_OBSERVATION`.
+
+As duas observações não foram classificadas como bloqueantes:
+
+1. o Mapa mental exibiu `DP-01`, `DP-02` etc. porque esses IDs internos aparecem nos títulos do próprio StudentContent. A hierarquia jurídica e o conteúdo permaneceram corretos. Para os próximos SubjectPacks, coverage IDs e outros identificadores de backoffice não devem aparecer em títulos visíveis do StudentContent;
+2. diante de pergunta sobre jurisprudência externa, o tutor não inventou precedentes, mas iniciou com uma negativa categórica antes de esclarecer que a fonte não traz jurisprudência. Para os próximos packs/configurações, ausência no corpus deve ser formulada como limite da fonte, não como afirmação universal sobre inexistência externa.
+
+A decisão detalhada está em `NOTEBOOKLM_SMOKE_0.1.0.md`. Não será criado `rc.2` apenas para esses dois pontos.
 
 ---
 
@@ -226,7 +248,7 @@ git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD
 fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
 ```
 
-Sem checkout canônico, executar `python tools/verify.py` em diretório parcial seria falsa validação. Resultado mantido: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+Sem checkout canônico, executar `python tools/verify.py` em diretório parcial seria falsa validação. Resultado mantido: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`. A impossibilidade foi reavaliada e permanece documentada conforme DEC-0009.
 
 ---
 
@@ -243,13 +265,13 @@ Sem checkout canônico, executar `python tools/verify.py` em diretório parcial 
 | coerência com banca | PASS |
 | configuração do tutor | PASS_STATIC |
 | QA-7 NotebookLM estático | PASS_STATIC |
-| QA-7 NotebookLM live | PENDING_USER_SMOKE |
+| QA-7 NotebookLM live | PASS_WITH_OBSERVATIONS |
 | QA-9 PDF versionado | PASS_CANONICAL_BINARY_IDENTITY |
 | `APOSTILA.pdf` | VERSIONED_EXACT_BINARY |
-| gate determinístico | NOT_EXECUTED_CURRENT_ENVIRONMENT |
+| gate determinístico | NOT_EXECUTED_CURRENT_ENVIRONMENT - IMPOSSIBILITY_REEVALUATED |
 
 **DIREITO-006: `closed`.**
 
-**DIREITO-007: `open`.**
+**DIREITO-007: `closed_with_observations`.**
 
-O `0.1.0-rc.1` continua como release candidate incompleto. O conteúdo jurídico e o PDF versionado passaram seus gates aplicáveis. A promoção a release final continua bloqueada pelo smoke real do NotebookLM e pela reavaliação do gate determinístico conforme DEC-0009.
+O `0.1.0-rc.1` é aceito como release candidate validado do primeiro pipeline jurídico. As duas observações do smoke são melhorias de processo para os próximos SubjectPacks e não justificam um `rc.2`. A impossibilidade atual do gate determinístico permanece registrada e não é tratada como `PASS`.

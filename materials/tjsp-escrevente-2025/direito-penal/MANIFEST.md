@@ -3,12 +3,12 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `direito-penal`  
 **Pack version:** `0.1.0-rc.1`  
-**Status:** `release_candidate_incomplete`  
+**Status:** `validated_release_candidate`  
 **RC date:** `2026-09-12`
 
 ## Objetivo
 
-Este SubjectPack é a primeira implementação jurídica de B2. O conteúdo Markdown foi aprovado no QA editorial/normativo em `0.1.0-draft.3` e congelado para o release candidate. A identidade `0.1.0-rc.1` não representa release final: o PDF canônico já foi publicado e auditado, mas o smoke real no NotebookLM e a reavaliação do gate determinístico continuam bloqueantes.
+Este SubjectPack é a primeira implementação jurídica de B2. O conteúdo Markdown foi aprovado no QA editorial/normativo em `0.1.0-draft.3` e congelado para o release candidate. O `0.1.0-rc.1` foi validado como primeiro pipeline jurídico completo: PDF canônico e QA-9 concluídos, smoke real do NotebookLM aprovado com observações não bloqueantes e impossibilidade atual do gate determinístico reavaliada conforme DEC-0009.
 
 A autoria segue `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e o contrato `DP-01`...`DP-10` de `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
 
@@ -37,7 +37,8 @@ Baseline autoral: texto vigente em `2025-07-29`. O Gate 2 classificou o recorte 
 
 - `SOURCES.md` - proveniência e regra de versão.
 - `CHANGELOG.md` - histórico do draft e do RC.
-- `APOSTILA_QA_0.1.0.md` - QA semântico fechado; QA-9 do PDF canônico fechado; NotebookLM estático concluído; smoke real e gate determinístico ainda pendentes.
+- `APOSTILA_QA_0.1.0.md` - QA semântico fechado; QA-9 do PDF canônico fechado; NotebookLM estático e live smoke concluídos.
+- `NOTEBOOKLM_SMOKE_0.1.0.md` - evidência do smoke real, resultado `PASS_WITH_OBSERVATIONS` e melhorias de processo para os próximos SubjectPacks.
 - análise de banca - `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`.
 - matriz de autoria - `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
 
@@ -54,8 +55,8 @@ Baseline autoral: texto vigente em `2025-07-29`. O Gate 2 classificou o recorte 
 | coerência com banca sem overfitting | `pass` |
 | configuração do tutor `METODOLOGIA_NOTEBOOKLM.md` | `pass_static` |
 | NotebookLM corpus QA estático | `pass_static` |
-| NotebookLM smoke real | `pending_user_smoke` |
-| `python tools/verify.py` | `not_executed_current_environment` - DNS do runtime não resolve github.com |
+| NotebookLM smoke real | `pass_with_observations` |
+| `python tools/verify.py` | `not_executed_current_environment` - impossibilidade DNS reavaliada em 2026-09-14 e não tratada como PASS |
 | `APOSTILA.pdf` canônico | `pass_canonical_binary_identity` |
 
 ## Cobertura do release candidate
@@ -81,15 +82,19 @@ O `draft.3` resolveu as duas pendências semânticas restantes: Q12 passou a tes
 
 O `rc.1` não reabriu o conteúdo aprovado. Criou a configuração do tutor jurídico, sincronizou a identidade do pack e executou os QAs estáticos possíveis no runtime. O candidato preferido de PDF foi regenerado do Markdown congelado, reduzido a 17 páginas e auditado integralmente. Em `2026-09-14`, o upload manual no GitHub produziu o Git blob exato `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`, idêntico ao candidato local de SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`. A inspeção textual e visual foi novamente confirmada sobre o binário de identidade idêntica.
 
+O smoke real do NotebookLM foi executado pelo usuário em `2026-09-14` e aprovado como `PASS_WITH_OBSERVATIONS`. Teste, Cartões, chat explicativo e treino interativo funcionaram adequadamente na amostra observada. O Mapa mental expôs IDs `DP-*` presentes nos próprios títulos do StudentContent, e a resposta sobre jurisprudência foi mais categórica do que o ideal antes de declarar o limite da fonte. Nenhum dos dois pontos foi classificado como erro jurídico ou bloqueio.
+
 ## Próximo estágio
 
-`DIREITO-007` permanece aberto. Para fechá-lo:
+`DIREITO-007` está `closed_with_observations`. O primeiro pipeline jurídico é considerado validado em nível de release candidate, sem necessidade de `rc.2` para as duas observações do smoke.
 
-1. executar o smoke real no NotebookLM com somente `APOSTILA.pdf` como fonte e `METODOLOGIA_NOTEBOOKLM.md` na configuração nativa da conversa;
-2. executar `python tools/verify.py` em ambiente com checkout/rede funcional ou reavaliar formalmente a impossibilidade conforme DEC-0009;
-3. sincronizar os registros finais de QA e continuidade;
-4. somente depois decidir promoção a release final.
+A produção pode seguir para `direito-processual-penal`, aplicando desde a primeira autoria duas melhorias aprendidas neste smoke:
+
+1. não colocar coverage IDs ou outros identificadores de backoffice em títulos visíveis do StudentContent;
+2. quando a fonte não sustentar afirmação sobre conteúdo externo, formular explicitamente o limite do corpus em vez de converter ausência na fonte em negativa universal.
+
+A promoção formal de `direito-penal` de `0.1.0-rc.1` para uma versão final pode ser tratada separadamente, sem bloquear a continuação de B2. O gate determinístico continua `not_executed_current_environment` e não deve ser chamado de PASS.
 
 ## Regra de distribuição
 
-Enquanto o status for `release_candidate_incomplete`, este pack não deve ser tratado como release final nem substituir material validado no NotebookLM.
+Este pack está validado como release candidate, não como versão final sem sufixo. Pode ser usado no fluxo de estudo e serve como pipeline de referência para os próximos SubjectPacks, preservadas as observações registradas em `NOTEBOOKLM_SMOKE_0.1.0.md`.
