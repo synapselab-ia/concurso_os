@@ -1,5 +1,45 @@
 # CHANGELOG - Direito Processual Penal - TJSP Escrevente 2025
 
+## `0.1.0-rc.1` - 2026-09-14
+
+Preparação do primeiro release candidate sob `DIREITO-010`, sem promoção a release final.
+
+### Adicionado
+
+- `METODOLOGIA_NOTEBOOKLM.md` específica de Direito Processual Penal como `ConversationInstruction`, destinada à configuração nativa da conversa e não ao corpus estudável;
+- regras de tutoria para fluxo processual, sujeito, legitimidade, prazo, competência, cabimento, efeito, contraste e correção;
+- regra epistemológica explícita: ausência de informação na fonte deve ser tratada como limite do corpus, nunca como negativa universal;
+- controle comportamental para não incorporar jurisprudência, doutrina ou atualização normativa ausente da fonte.
+
+### Sincronizado
+
+- `APOSTILA.md` promovida para identidade `0.1.0-rc.1`, mantendo congelado o conteúdo jurídico aprovado no `0.1.0-draft.2`;
+- `MANIFEST.md` e `SOURCES.md` alinhados ao release candidate;
+- `APOSTILA_QA_0.1.0.md` estendido para registrar o QA estático de `DIREITO-010`.
+
+### QA estático
+
+- identidade do candidato: `pass`;
+- mudança semântica do corpo jurídico no RC: `false`;
+- configuração do tutor: `pass_static`;
+- corpus/tutor NotebookLM estático: `pass_static`;
+- ausência de `DPP-*` em títulos estudáveis: preservada;
+- separação entre questões e gabarito: preservada;
+- backoffice mantido fora das fontes do NotebookLM;
+- baseline `2025-07-29` preservado;
+- art. 584, § 4º, de 2026 permanece fora do baseline estudável.
+
+### Pendências do candidato
+
+- `APOSTILA.pdf` canônico: ainda não criado/versionado;
+- QA textual/visual do PDF canônico: ainda não executado;
+- NotebookLM live smoke: ainda não executado;
+- `python tools/verify.py`: não executado neste runtime porque nova tentativa de checkout canônico falhou por DNS; a impossibilidade não é tratada como PASS.
+
+Nenhuma correção semântica de Direito Processual Penal foi introduzida no `rc.1`.
+
+---
+
 ## `0.1.0-draft.2` - 2026-09-14
 
 Fechamento do QA semântico/normativo de `DIREITO-009`.
