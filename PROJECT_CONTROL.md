@@ -4,8 +4,8 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `docs/direito-penal-notebooklm-smoke`
-- **Last implementation branch:** `upload/direito-penal-apostila-pdf`
+- **Current implementation branch:** `main`
+- **Last implementation branch:** `docs/direito-penal-notebooklm-smoke`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 - Conhecimentos em Direito` - primeiro pipeline jurídico de `direito-penal` validado; próximo SubjectPack: `direito-processual-penal`
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
@@ -22,6 +22,7 @@
 - **Direito Penal NotebookLM live smoke:** `pass_with_observations` em 2026-09-14; chat, treino, Teste e Cartões passaram na amostra; Mapa mental exibiu IDs `DP-*` presentes nos títulos do StudentContent; resposta sobre jurisprudência respeitou o corpus mas começou categórica demais; ambos registrados como melhorias não bloqueantes
 - **NotebookLM lessons for next packs:** não expor coverage IDs/backoffice em títulos visíveis do StudentContent; ausência na fonte deve ser expressa como limite do corpus, não como negativa universal; testar vazamento de metadados e pergunta fora do corpus no smoke
 - **Direito Penal PDF publication resolution:** upload manual na branch `upload/direito-penal-apostila-pdf` resolveu o bloqueio de transporte das PRs #23/#24; o commit observado de upload/rename foi `fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00`; PR `#25` foi mergeada em `main` no commit `eaaad8982691b961cfd9a44a2b04326dba77c5e3`; nenhum blob divergente foi aceito como canônico
+- **Direito Penal NotebookLM smoke PR:** `#26`, merged to `main` at `dcc279a4e25d393036929fc7d640f544003ec436`; registra `PASS_WITH_OBSERVATIONS` e avança a continuidade para `direito-processual-penal`
 - **B2 boundary decision:** DEC-0019
 - **Last B2 preparation PR:** `#13`, merged to `main` at `540765b17e224a319b90a4e9da5272dd4db0684e`
 - **B2 federal source PR:** `#14`, merged to `main` at `228f2225c3b7655d8fd47c325f7c5a2db40bf0a0`
