@@ -1,7 +1,7 @@
 # Direito Processual Penal - TJSP Escrevente 2025
 
-**Versão:** `0.1.0-draft.2`  
-**Status:** draft revisado semanticamente, ainda sem PDF e sem release candidate  
+**Versão:** `0.1.0-rc.1`  
+**Status:** release candidate; conteúdo semântico/normativo aprovado no `0.1.0-draft.2`; release final ainda depende dos gates aplicáveis de PDF e NotebookLM  
 **Base normativa:** Código de Processo Penal e Lei n.º 9.099/1995, recorte vigente em `2025-07-29`
 
 ## Como usar esta apostila
