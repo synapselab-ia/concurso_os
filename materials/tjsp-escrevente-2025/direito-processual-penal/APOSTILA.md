@@ -1,314 +1,294 @@
 # Direito Processual Penal - TJSP Escrevente 2025
 
-**Versão:** `0.1.0-draft.1`  
-**Status:** primeira implementação completa, pendente de QA semântico e normativo  
+**Versão:** `0.1.0-draft.2`  
+**Status:** draft revisado semanticamente, ainda sem PDF e sem release candidate  
 **Base normativa:** Código de Processo Penal e Lei n.º 9.099/1995, recorte vigente em `2025-07-29`
 
 ## Como usar esta apostila
 
-Direito Processual Penal exige menos memorização isolada do que domínio de uma sequência de decisões. Em cada questão, procure responder, nesta ordem:
+Direito Processual Penal é uma matéria de fluxo, competência, momento, prazo, legitimidade, cabimento e efeito. Em cada questão, procure responder, nesta ordem:
 
 ```text
 1. qual procedimento ou instituto está em jogo;
 2. quem pratica o ato ou pode requerê-lo;
-3. qual é o momento processual;
-4. qual prazo, requisito ou hipótese legal decide o caso;
+3. em que momento processual o ato ocorre;
+4. qual requisito, prazo ou hipótese legal decide o caso;
 5. qual consequência decorre do ato;
 6. qual instituto vizinho precisa ser descartado.
 ```
-
-Os principais erros aparecem quando se troca uma etapa por outra, um recurso por outro, um prazo por prazo semelhante ou uma hipótese de impedimento por uma de suspeição.
 
 O escopo desta apostila é exclusivamente:
 
 - CPP: arts. `251-258; 261-267; 274; 351-372; 394-497; 531-538; 541-548; 574-667`;
 - Lei n.º 9.099/1995: arts. `60-83; 88-89`.
 
+A versão normativa usada é a vigente no cutoff do edital, `2025-07-29`. Alterações posteriores não são absorvidas silenciosamente.
+
 ---
 
-# Unidade 1 - Juiz, impedimento e suspeição
+# Unidade 1 - Juiz, impedimento, suspeição e Ministério Público
 
 ## Função do juiz
 
-O CPP atribui ao juiz o dever de prover a regularidade do processo e manter a ordem no curso dos atos, podendo requisitar força pública quando necessário.
+O art. 251 do CPP atribui ao juiz o dever de prover a regularidade do processo e manter a ordem no curso dos atos, podendo requisitar força pública quando necessário.
 
 ## Impedimento
 
-O impedimento decorre de vínculos objetivos com o processo. O juiz não pode exercer jurisdição, entre outras hipóteses, quando:
+O impedimento decorre de vínculos objetivos com o processo. Entre as hipóteses do art. 252, o juiz não pode exercer jurisdição quando:
 
-- seu cônjuge ou parente, consanguíneo ou afim, em linha reta ou colateral até o terceiro grau, tiver atuado no processo como defensor, advogado, membro do Ministério Público, autoridade policial, auxiliar da justiça ou perito;
+- cônjuge ou parente, consanguíneo ou afim, em linha reta ou colateral até o terceiro grau, tiver atuado no processo como defensor, advogado, membro do Ministério Público, autoridade policial, auxiliar da justiça ou perito;
 - ele próprio tiver desempenhado alguma dessas funções ou servido como testemunha;
 - tiver funcionado como juiz em outra instância e se pronunciado, de fato ou de direito, sobre a questão;
 - ele próprio, seu cônjuge ou parente até o terceiro grau for parte ou diretamente interessado no feito.
 
-Também não podem atuar no mesmo processo, em órgão colegiado, juízes parentes entre si até o terceiro grau.
+O art. 253 impede que juízes parentes entre si, nos graus ali previstos, atuem no mesmo processo em órgão colegiado.
 
 ## Suspeição
 
-A suspeição se liga a relações ou circunstâncias que comprometem a imparcialidade subjetiva. O juiz deve declarar-se suspeito, por exemplo, se:
+O art. 254 trata de relações ou circunstâncias que põem em dúvida a imparcialidade subjetiva. O juiz deve declarar-se suspeito, por exemplo, se:
 
 - for amigo íntimo ou inimigo capital de qualquer das partes;
-- ele, seu cônjuge, ascendente ou descendente estiver respondendo a processo por fato análogo, sobre cujo caráter criminoso haja controvérsia;
+- ele, seu cônjuge, ascendente ou descendente responder a processo por fato análogo, sobre cujo caráter criminoso haja controvérsia;
 - ele, seu cônjuge ou parente até o terceiro grau sustentar demanda ou responder a processo a ser julgado por qualquer das partes;
 - tiver aconselhado qualquer das partes;
 - for credor ou devedor, tutor ou curador de qualquer das partes;
 - for sócio, acionista ou administrador de sociedade interessada no processo.
 
-A parte não pode criar artificialmente a suspeição por injúria ao juiz ou por provocação deliberada.
+O art. 256 impede que a parte produza artificialmente a suspeição por injúria ao juiz ou por provocação deliberada.
 
 ### Impedimento x suspeição
 
 | Impedimento | Suspeição |
 |---|---|
-| vínculo objetivo com o processo | relação subjetiva ou circunstancial com parte/interesse |
-| exemplos: atuação anterior, interesse direto, parentesco com participante do processo | exemplos: amizade íntima, inimizade capital, aconselhamento, relação de crédito |
-| o critério central é a incompatibilidade objetiva | o critério central é a dúvida sobre imparcialidade subjetiva |
+| vínculo objetivo com o processo | relação subjetiva ou circunstancial |
+| atuação anterior, interesse direto, parentesco em hipótese legal | amizade, inimizade, aconselhamento, relação de crédito e hipóteses afins |
+| foco na incompatibilidade objetiva | foco na imparcialidade subjetiva |
 
-### Afinidade após dissolução do casamento
+## Afinidade após dissolução do casamento
 
-A afinidade, em regra, cessa com a dissolução do casamento que a originou, salvo se houver descendentes. Ainda assim, o CPP mantém impedimento em relação a sogro, padrasto, cunhado, genro ou enteado de pessoa que seja parte no processo.
-
-### Mini-caso
-
-Um magistrado, antes de assumir o feito, aconselhou uma das partes sobre a estratégia a adotar. O dado decisivo não é atuação funcional anterior no processo, mas o aconselhamento. A hipótese é de suspeição.
-
----
-
-# Unidade 2 - Ministério Público, acusado e defensor
+O art. 255 disciplina os efeitos da dissolução do casamento sobre a afinidade e preserva, nas hipóteses legais, o impedimento relacionado a sogro, padrasto, cunhado, genro ou enteado de pessoa que seja parte no processo.
 
 ## Ministério Público
 
-Ao Ministério Público cabe promover a ação penal pública e fiscalizar a execução da lei. Aplicam-se aos membros do Ministério Público, no que couber, as regras de impedimento e suspeição previstas para os juízes.
+Nos arts. 257 e 258, o CPP atribui ao Ministério Público a promoção da ação penal pública e a fiscalização da execução da lei, estendendo aos seus membros, no que couber, as regras de impedimento e suspeição dos juízes.
+
+### Mini-casos
+
+**Caso 1.** O magistrado atuou anteriormente no mesmo processo como membro do Ministério Público. O problema é objetivo: impedimento.
+
+**Caso 2.** O magistrado aconselhou previamente uma das partes. O dado decisivo é o aconselhamento: suspeição.
+
+**Caso 3.** A parte passa a injuriar deliberadamente o juiz para criar motivo de suspeição. A provocação artificial não produz o efeito pretendido.
+
+---
+
+# Unidade 2 - Acusado e defensor
 
 ## Defesa técnica é indispensável
 
-Nenhum acusado, ainda que ausente ou foragido, será processado ou julgado sem defensor.
+O art. 261 estabelece que nenhum acusado, ainda que ausente ou foragido, será processado ou julgado sem defensor. A defesa técnica realizada por defensor público ou dativo deve ser fundamentada.
 
-A defesa técnica deve ser fundamentada. Se o acusado não tiver defensor, o juiz lhe nomeará um, sem impedir que posteriormente constitua outro de sua confiança. Se não for pobre, o acusado deverá pagar os honorários do defensor nomeado.
+## Curador do acusado menor no texto do CPP
 
-O acusado pode defender-se pessoalmente somente quando tiver habilitação legal para isso.
+O art. 262 contém regra literal segundo a qual ao acusado menor será dado curador. Esta apostila registra a literalidade do dispositivo porque ele integra o recorte. Não se acrescentam aqui conclusões jurisprudenciais ou doutrinárias externas ao corpus normativo selecionado.
 
-## Nomeação, recusa e abandono
+## Nomeação e escolha do defensor
 
-O advogado nomeado pelo juiz é obrigado a aceitar a defesa, salvo motivo relevante.
+Se o acusado não tiver defensor, o juiz nomeará um, sem impedir que posteriormente constitua outro de sua confiança. O acusado pode defender-se pessoalmente apenas se tiver habilitação legal. Se não for pobre, deve arcar com os honorários do defensor nomeado, conforme o art. 263.
 
-O defensor não pode abandonar o processo sem justo motivo previamente comunicado ao juiz. Se não puder comparecer a ato processual, deve justificar o impedimento e, quando exigido, comprová-lo. Na falta de justificativa idônea, o juiz pode providenciar substituto para o ato.
+O advogado nomeado é obrigado a aceitar a defesa, salvo motivo relevante. O defensor não pode abandonar o processo sem justo motivo previamente comunicado ao juiz. A ausência a ato processual exige justificativa na forma legal, conforme os arts. 264 e 265.
 
-Se houver abandono, o acusado deve ser intimado para constituir novo defensor. Não sendo localizado, deve ser nomeado defensor público ou dativo, conforme o caso.
+A constituição de defensor independe de instrumento de mandato quando o acusado o indicar por ocasião do interrogatório, na forma do art. 266.
 
-## Procuração
+O art. 267 impede a atuação como defensor de pessoas ligadas ao juiz pelos vínculos ali previstos.
 
-A constituição de defensor independe de instrumento de mandato quando o acusado o indicar por ocasião do interrogatório.
+### Defesa pessoal x defesa técnica
 
-## Parentes do juiz como defensor
+A possibilidade de o acusado praticar atos de autodefesa não elimina a exigência de defesa técnica. Ausência ou fuga também não dispensam defensor.
 
-Não pode atuar como defensor a pessoa que, por parentesco, se enquadre nas hipóteses legais de impedimento relacionadas ao juiz.
+### Mini-casos
 
-### Mini-caso
+**Caso 1.** O réu está foragido e não constituiu advogado. O processo não pode seguir sem defesa técnica.
 
-O réu está foragido e não constituiu advogado. O processo não pode seguir sem defesa técnica. A fuga não elimina a garantia de defensor.
+**Caso 2.** No interrogatório, o acusado indica advogado para defendê-lo. O art. 266 dispensa instrumento de mandato nessa situação.
+
+**Caso 3.** Defensor abandona o processo sem justo motivo e sem comunicação prévia. A conduta contraria a disciplina do art. 265 e exige providência para preservar a defesa do acusado.
 
 ---
 
 # Unidade 3 - Serventuários e funcionários da justiça
 
-O art. 274 do CPP estende aos serventuários e funcionários da justiça, no que lhes for aplicável, as prescrições relativas à suspeição dos juízes.
+O art. 274 estende aos serventuários e funcionários da justiça, no que lhes for aplicável, as prescrições relativas à suspeição dos juízes.
 
-A leitura literal é importante: o dispositivo menciona as prescrições sobre **suspeição**. Não transforme automaticamente a regra em uma reprodução integral de todos os dispositivos de impedimento do juiz.
+A literalidade importa: o dispositivo menciona **suspeição**. Não transforme o art. 274 em uma reprodução automática de todo o regime de impedimento do juiz.
 
-### Critério de prova
+### Contraste rápido
 
-Quando a alternativa disser que todas as causas de impedimento e suspeição do juiz se aplicam, sem qualquer qualificação, aos serventuários, desconfie. O art. 274 usa formulação específica.
+- juiz: regime próprio dos arts. 252-256;
+- Ministério Público: extensão pelo art. 258, no que couber;
+- serventuários e funcionários: art. 274 menciona as prescrições sobre suspeição, no que lhes for aplicável.
 
 ---
 
-# Unidade 4 - Citação: finalidade, modalidades e efeitos
+# Unidade 4 - Citação: finalidade, modalidades, edital e efeitos
 
-A citação chama o acusado ao processo. No processo penal, a escolha da modalidade depende principalmente de onde o acusado está e se está sendo localizado normalmente.
+A citação chama o acusado ao processo. A modalidade depende principalmente de onde ele se encontra e de como se comporta diante da diligência.
 
 ## Fluxo básico
 
 ```text
-acusado na jurisdição do juiz
--> mandado
-
-acusado fora da jurisdição, em território nacional
--> carta precatória
-
-acusado não encontrado
--> edital
-
-acusado se oculta para não ser citado
--> hora certa
-
-acusado no estrangeiro, em lugar sabido
--> carta rogatória
+na jurisdição do juiz -> mandado
+fora da jurisdição, em território nacional -> precatória
+não encontrado -> edital
+ocultação para evitar a citação -> hora certa
+estrangeiro em lugar sabido -> rogatória
+preso -> citação pessoal
+militar -> por intermédio do chefe do serviço
 ```
 
-## Citação por mandado
+## Mandado e precatória
 
-Se o réu estiver no território sujeito à jurisdição do juiz que ordenou a citação, ela será feita por mandado.
+Os arts. 351-357 disciplinam a citação por mandado e por carta precatória. O mandado contém os elementos legais de identificação, finalidade, juízo e comparecimento. Na execução, o oficial lê o mandado, entrega a contrafé e certifica o cumprimento.
 
-O mandado deve conter os elementos exigidos em lei, como identificação do juízo, nome do querelante nas ações iniciadas por queixa, nome do réu ou sinais identificadores, finalidade da citação, juízo, lugar, dia e hora em que deverá comparecer, além da assinatura competente.
-
-Na execução, o oficial lê o mandado ao citando, entrega a contrafé e certifica a aceitação ou a recusa.
-
-## Carta precatória
-
-Se o acusado estiver fora da jurisdição do juiz processante, em território nacional, a citação será feita por precatória.
-
-Se o juízo deprecado verificar que o réu se encontra em território sujeito à jurisdição de outro juiz, poderá encaminhar a precatória a esse juízo, desde que haja tempo para cumprir a diligência.
-
-Se houver indícios de ocultação, a situação se conecta ao procedimento de hora certa.
+Se o acusado estiver fora da jurisdição do juiz processante, em território nacional, a citação será feita por precatória. Se o juízo deprecado verificar que ele se encontra em outra jurisdição, a carta pode ser encaminhada ao juízo competente quando houver tempo para o cumprimento.
 
 ## Situações especiais
 
-- militar: citado por intermédio do chefe do respectivo serviço;
-- funcionário público acusado: a citação é dirigida ao próprio acusado, com comunicação também ao chefe da repartição nos termos legais;
-- réu preso: deve ser citado pessoalmente;
-- acusado no estrangeiro em lugar sabido: citação por carta rogatória, com suspensão do curso do prazo prescricional até o cumprimento;
-- acusado em legação estrangeira: aplica-se a via rogatória prevista em lei.
+- art. 358: militar, por intermédio do chefe do respectivo serviço;
+- art. 359: funcionário público acusado, com notificação a ele e ao chefe da repartição na forma legal;
+- art. 360: réu preso, citação pessoal;
+- art. 368: acusado no estrangeiro, em lugar sabido, por rogatória, com suspensão do prazo prescricional até o cumprimento;
+- art. 369: citações em legações estrangeiras por rogatória.
 
-## Edital
+## Edital e hora certa
 
-Se o acusado não for encontrado, será citado por edital, em regra com prazo de 15 dias.
+O art. 361 prevê edital, com prazo de 15 dias, quando o réu não for encontrado. Se houver ocultação deliberada para evitar a citação, aplica-se a hora certa do art. 362. Concluída a hora certa, se o acusado não comparecer, será nomeado defensor dativo.
 
-Se, citado por edital, não comparecer nem constituir advogado, ficam suspensos o processo e o curso do prazo prescricional. O juiz pode determinar a produção antecipada de provas consideradas urgentes e, se presentes os requisitos legais, decretar prisão preventiva.
+O art. 363 afirma que a formação do processo se completa com a citação do acusado. Seus incisos I e II estão revogados; o § 1º preserva a citação por edital do acusado não encontrado e o § 4º disciplina o comparecimento posterior de quem foi citado por edital.
 
-## Hora certa
+O art. 364 permanece na compilação com referências aos antigos incisos I e II do art. 363, hoje revogados. Por isso, não use o art. 364 para substituir a regra atual do art. 361 sobre o réu não encontrado.
 
-Quando se verificar que o réu se oculta para não ser citado, procede-se à citação com hora certa, observando-se, no que couber, a disciplina civil indicada pelo CPP.
+O art. 365 enumera os elementos do edital, como juiz, identificação do réu quando possível, finalidade, juízo, data, hora, local de comparecimento e prazo, além das formalidades de afixação e publicação.
 
-Concluída a citação com hora certa, se o acusado não comparecer, será nomeado defensor dativo.
+## Não comparecimento
 
-## Comparecimento e revelia processual
+Se o acusado citado por edital não comparecer nem constituir advogado, o art. 366 suspende o processo e o curso do prazo prescricional. O juiz pode determinar produção antecipada de prova urgente e, presentes os requisitos legais, prisão preventiva.
 
-O processo pode prosseguir sem a presença do acusado que, citado ou intimado pessoalmente, deixa de comparecer sem motivo justificado, ou muda de residência sem comunicar o novo endereço ao juízo.
+O art. 367 permite que o processo siga sem a presença do acusado que, citado ou intimado pessoalmente, não comparece sem motivo justificado ou muda de residência sem comunicar o novo endereço.
 
-### Citação por edital x hora certa
+### Edital x hora certa
 
-| Situação | Consequência central |
+| Situação | Regra central |
 |---|---|
-| não encontrado | edital |
-| ocultação deliberada | hora certa |
+| réu simplesmente não encontrado | edital |
+| réu se oculta para evitar citação | hora certa |
 | edital + não comparece + não constitui advogado | suspensão do processo e da prescrição |
-| pessoalmente citado/intimado e ausente sem justificativa | processo pode seguir sem sua presença |
+| pessoalmente citado ou intimado e ausente sem justificativa | processo pode prosseguir sem sua presença |
 
-### Mini-caso
+### Mini-casos
 
-O oficial de justiça comparece repetidamente ao endereço e colhe elementos concretos de que o acusado está se escondendo para evitar o ato. Não é situação de paradeiro simplesmente desconhecido. O caminho é a hora certa, não o edital automático.
+**Caso 1.** O endereço é desconhecido e não há sinal de ocultação. A via é edital, não hora certa.
+
+**Caso 2.** O oficial reúne elementos concretos de ocultação deliberada. A via é hora certa.
+
+**Caso 3.** Citado por edital, o acusado aparece posteriormente. A marcha processual segue a disciplina indicada pelo art. 363, § 4º.
 
 ---
 
 # Unidade 5 - Intimações
 
-A intimação comunica atos e decisões processuais.
+Os arts. 370-372 tratam das intimações.
 
-Aplicam-se às intimações, no que couber, regras do capítulo das citações.
-
-## Formas relevantes
-
-O defensor constituído, o advogado do querelante e o assistente são intimados pela publicação no órgão incumbido da publicidade dos atos judiciais, devendo a publicação conter o nome do acusado, sob pena de nulidade.
-
-Se não houver órgão de publicação, a intimação pode ocorrer diretamente pelo escrivão, por mandado, via postal com comprovante de recebimento ou outro meio idôneo.
-
-A intimação pessoal feita pelo escrivão dispensa a publicação.
+O art. 370 manda observar, no que for aplicável, a disciplina do capítulo das citações. O defensor constituído, o advogado do querelante e o assistente são intimados pela publicação no órgão competente, com os requisitos legais. Na falta de órgão de publicação, admitem-se as formas previstas no CPP.
 
 A intimação do Ministério Público e do defensor nomeado é pessoal.
 
-Quando a audiência de instrução é adiada, o juiz pode designar imediatamente nova data e hora na presença das partes e testemunhas, registrando-se o ato nos autos.
+O art. 371 considera intimadas em audiência as pessoas cuja ciência decorra do ato, e o art. 372 permite que, adiada a audiência, o juiz fixe imediatamente nova data e hora na presença das partes e testemunhas, registrando-se a ciência.
 
 ### Citação x intimação
 
-A citação integra o acusado à relação processual e o chama para se defender. A intimação dá ciência de ato, decisão ou diligência no processo já em curso.
+- citação: integra o acusado à relação processual e o chama para se defender;
+- intimação: dá ciência de ato, decisão ou diligência no processo já em curso.
 
 ---
 
 # Unidade 6 - Procedimento comum: rito e fase inicial
 
-## Espécies do procedimento comum
+## Espécies
 
-O procedimento comum divide-se em:
+O art. 394 divide o procedimento comum em:
 
 - ordinário: crime cuja sanção máxima cominada seja igual ou superior a 4 anos de pena privativa de liberdade;
-- sumário: crime cuja sanção máxima cominada seja inferior a 4 anos, salvo incidência do procedimento sumaríssimo;
-- sumaríssimo: infrações de menor potencial ofensivo, na forma da legislação específica.
+- sumário: sanção máxima inferior a 4 anos, salvo incidência do sumaríssimo;
+- sumaríssimo: infração de menor potencial ofensivo, na forma da legislação específica.
 
-O procedimento do Tribunal do Júri tem disciplina própria nos arts. 406 a 497.
+O procedimento do Tribunal do Júri segue os arts. 406-497.
 
-## Rejeição da denúncia ou queixa
+## Prioridade do art. 394-A
 
-A denúncia ou queixa será rejeitada quando:
+No baseline do edital, o art. 394-A já previa prioridade de tramitação, em todas as instâncias, para processos que apurem crime hediondo ou violência contra a mulher. O dispositivo também contém regras de isenção ligadas aos processos de violência contra a mulher, nos limites de seus parágrafos.
 
-1. for manifestamente inepta;
-2. faltar pressuposto processual ou condição para o exercício da ação penal;
-3. faltar justa causa para o exercício da ação penal.
+## Rejeição, resposta e absolvição sumária
 
-Essa decisão ocorre antes da fase de resposta à acusação.
+O art. 395 determina a rejeição da denúncia ou queixa quando ela for manifestamente inepta, faltar pressuposto processual ou condição para a ação, ou faltar justa causa.
 
-## Recebimento e resposta à acusação
+Não rejeitada a acusação, o art. 396 prevê recebimento e citação para resposta escrita em 10 dias. O art. 396-A permite preliminares, alegações defensivas, documentos, justificações, especificação de provas e rol de testemunhas. Se não houver resposta ou defensor constituído, nomeia-se defensor com prazo legal para apresentá-la.
 
-Nos procedimentos ordinário e sumário, não rejeitada liminarmente a acusação, o juiz a recebe e ordena a citação do acusado para responder por escrito em 10 dias.
+Após a resposta, o art. 397 prevê absolvição sumária quando houver:
 
-Na resposta, o acusado pode arguir preliminares, alegar tudo que interesse à defesa, oferecer documentos e justificações, especificar provas e arrolar testemunhas.
-
-Se a resposta não for apresentada ou o acusado não constituir defensor, o juiz nomeará defensor para oferecê-la em 10 dias.
-
-## Absolvição sumária
-
-Após a resposta, o juiz deve absolver sumariamente o acusado quando verificar:
-
-- existência manifesta de causa excludente da ilicitude;
-- existência manifesta de causa excludente da culpabilidade, salvo inimputabilidade;
-- que o fato narrado evidentemente não constitui crime;
+- excludente manifesta de ilicitude;
+- excludente manifesta de culpabilidade, salvo inimputabilidade;
+- fato narrado evidentemente não criminoso;
 - extinção da punibilidade.
+
+O art. 398 está revogado. Não atribua a ele conteúdo atual.
 
 ### Rejeição x absolvição sumária
 
 | Rejeição | Absolvição sumária |
 |---|---|
 | art. 395 | art. 397 |
-| antes da resposta à acusação | depois da resposta |
-| vícios da acusação, pressupostos/condições ou justa causa | mérito antecipado em hipóteses expressas |
+| antes da resposta | depois da resposta |
+| vício da acusação, pressuposto, condição ou justa causa | hipótese de mérito antecipado expressamente prevista |
 
-## Audiência de instrução e julgamento
+## Audiência
 
-No rito ordinário, a audiência deve ocorrer, em regra, em até 60 dias. A sequência legal concentra, em uma audiência, os atos probatórios e deixa o interrogatório do acusado para depois da colheita das demais provas.
+O art. 399 disciplina a designação da audiência, as intimações e a apresentação do acusado preso. O juiz que presidiu a instrução deve proferir a sentença nos termos do dispositivo.
 
-Ordem essencial:
+No rito ordinário, o art. 400 fixa audiência em regra até 60 dias e concentra a prova. A ordem essencial é:
 
 ```text
 ofendido
--> testemunhas de acusação
--> testemunhas de defesa
--> esclarecimentos de peritos, acareações e reconhecimentos, se cabíveis
--> interrogatório do acusado
--> requerimentos de diligências decorrentes da instrução
+-> testemunhas da acusação
+-> testemunhas da defesa
+-> peritos, acareações e reconhecimentos, quando cabíveis
+-> interrogatório
+-> diligências decorrentes da instrução
 -> alegações finais
--> sentença ou memoriais, quando a lei autorizar
+-> sentença ou memoriais, quando autorizados
 ```
 
-No rito ordinário podem ser arroladas até 8 testemunhas por parte. Pessoas ouvidas sem compromisso e testemunhas referidas não entram nesse limite.
+O art. 400-A, vigente no cutoff, protege a integridade física e psicológica da vítima durante a audiência e veda manifestações sobre circunstâncias alheias aos fatos e o uso de linguagem, informação ou material que ofenda a dignidade da vítima ou de testemunhas.
 
-Em regra, as alegações finais são orais, por 20 minutos para acusação e defesa, prorrogáveis por mais 10. Em hipóteses de complexidade ou pluralidade de acusados, o juiz pode converter as alegações em memoriais escritos, observados os prazos legais.
+O art. 401 admite até 8 testemunhas de acusação e 8 de defesa, sem contar, nos termos legais, pessoas sem compromisso e testemunhas referidas.
 
-### Mini-caso
+O art. 402 permite requerer diligências cuja necessidade surja da instrução. O art. 403 prevê alegações finais orais por 20 minutos para acusação e defesa, prorrogáveis por 10, e admite memoriais nas hipóteses legais. O art. 404 disciplina a situação em que diligência imprescindível é determinada antes das alegações finais. O art. 405 trata do termo de audiência e do registro dos depoimentos.
 
-Um crime possui pena máxima de 3 anos e não está sujeito ao Juizado Especial. O rito comum adequado é o sumário, não o ordinário.
+### Mini-casos
+
+**Caso 1.** Crime com pena máxima de 3 anos, fora do JECrim. O procedimento comum é sumário.
+
+**Caso 2.** Denúncia manifestamente inepta. O problema é de rejeição do art. 395, não absolvição sumária.
+
+**Caso 3.** Depois da resposta, fica evidente que o fato narrado não constitui crime. A hipótese é de absolvição sumária do art. 397.
 
 ---
 
 # Unidade 7 - Tribunal do Júri: primeira fase
 
-A primeira fase do procedimento do júri verifica se a acusação deve chegar ao julgamento pelo Conselho de Sentença.
+Os arts. 406-421 estruturam a fase de formação da culpa no júri.
 
-## Resposta e instrução preliminar
-
-Recebida a denúncia ou queixa, o acusado é citado para responder por escrito em 10 dias, podendo arrolar até 8 testemunhas.
-
-Se não apresentar resposta, será nomeado defensor para fazê-lo no prazo legal.
-
-Apresentada a defesa, o Ministério Público ou querelante é ouvido sobre preliminares e documentos, seguindo-se as diligências e a audiência de instrução.
+Recebida a denúncia ou queixa, o acusado é citado para responder por escrito em 10 dias e pode arrolar até 8 testemunhas. Apresentada a defesa, acusação e defesa seguem pelas etapas legais de manifestação, diligências e audiência.
 
 A primeira fase deve ser concluída, em regra, em 90 dias.
 
@@ -316,215 +296,148 @@ A primeira fase deve ser concluída, em regra, em 90 dias.
 
 ### Pronúncia
 
-O juiz pronuncia o acusado quando estiver convencido da materialidade do fato e da existência de indícios suficientes de autoria ou participação.
-
-A pronúncia é decisão de admissibilidade da acusação para julgamento pelo júri. Não é condenação.
+O juiz pronuncia o acusado quando estiver convencido da materialidade do fato e da existência de indícios suficientes de autoria ou participação. Pronúncia é juízo de admissibilidade para o plenário, não condenação.
 
 ### Impronúncia
 
-Se o juiz não se convencer da materialidade ou da existência de indícios suficientes de autoria ou participação, impronuncia o acusado.
-
-Enquanto não ocorrer extinção da punibilidade, pode ser formulada nova acusação se surgir prova nova.
+Sem materialidade ou indícios suficientes de autoria ou participação, o acusado é impronunciado. Enquanto não extinta a punibilidade, nova acusação pode ser formulada se surgir prova nova.
 
 ### Absolvição sumária
 
-O juiz absolve desde logo quando estiver demonstrada uma das hipóteses legais, como inexistência do fato, ausência comprovada de autoria ou participação, atipicidade ou causa de isenção/exclusão do crime.
-
-A inimputabilidade não conduz automaticamente à absolvição sumária quando não for a única tese defensiva.
+A absolvição sumária ocorre nas hipóteses expressas do art. 415, como inexistência do fato, prova de não autoria ou participação, atipicidade ou causa de isenção de pena/exclusão do crime. A inimputabilidade possui a ressalva legal própria.
 
 ### Desclassificação
 
 Se o juiz se convencer de que o fato não é crime doloso contra a vida sujeito ao júri, remete os autos ao juízo competente.
 
-## Recurso
+Da impronúncia e da absolvição sumária cabe apelação. Da pronúncia, o recurso cabível é o RESE.
 
-Da impronúncia e da absolvição sumária cabe apelação.
+### Mini-casos
 
-### Quadro decisivo
+**Caso 1.** Há materialidade e indícios suficientes de participação, mas a defesa sustenta tese controvertida. A pronúncia não exige certeza condenatória.
 
-| Decisão | Critério |
-|---|---|
-| pronúncia | materialidade + indícios suficientes de autoria/participação |
-| impronúncia | falta de suporte suficiente para pronunciar |
-| absolvição sumária | uma das hipóteses legais de absolvição antecipada está demonstrada |
-| desclassificação | fato não pertence à competência do júri |
+**Caso 2.** A prova mostra que o acusado definitivamente não foi autor nem partícipe. Se presentes os requisitos do art. 415, cabe absolvição sumária.
 
-### Mini-caso
-
-Há prova segura da materialidade e indícios suficientes de que o acusado participou do homicídio, mas a defesa sustenta negativa de autoria ainda controvertida. A primeira fase não exige certeza condenatória. Havendo o suporte do art. 413, a decisão adequada é a pronúncia.
+**Caso 3.** O fato descrito não é crime doloso contra a vida. A solução é desclassificação e remessa ao juízo competente.
 
 ---
 
 # Unidade 8 - Tribunal do Júri: preparação, desaforamento e pauta
 
-## Preparação para plenário
+Os arts. 422-431 tratam da preparação do julgamento em plenário.
 
-Após a preclusão da pronúncia, acusação e defesa são intimadas para apresentar rol de testemunhas que deporão em plenário, até o máximo de 5 por parte, e podem juntar documentos e requerer diligências.
-
-O juiz-presidente delibera sobre as provas a produzir, sana nulidades quando cabível, elabora relatório sucinto e inclui o processo em pauta.
+Após a preclusão da pronúncia, acusação e defesa apresentam rol de testemunhas para plenário, até 5 por parte, e podem juntar documentos e requerer diligências. O juiz-presidente delibera sobre as provas, resolve providências preparatórias, elabora relatório sucinto e inclui o processo em pauta.
 
 ## Desaforamento
 
-O julgamento pode ser transferido para outra comarca da mesma região, preferencialmente mais próxima, quando houver interesse da ordem pública, dúvida sobre a imparcialidade do júri ou risco à segurança pessoal do acusado.
+O julgamento pode ser transferido para outra comarca da mesma região, preferencialmente mais próxima, quando presentes os motivos legais, como:
 
-A medida pode ser provocada pelas pessoas legitimadas em lei ou por representação do juiz competente.
-
-Também pode haver desaforamento por comprovado excesso de serviço quando o julgamento não puder ser realizado no prazo legal contado do trânsito em julgado da pronúncia, descontados retardamentos provocados pela defesa.
+- interesse da ordem pública;
+- dúvida sobre a imparcialidade do júri;
+- risco à segurança pessoal do acusado;
+- excesso de serviço que impeça o julgamento dentro do prazo legal, observadas as condições previstas no CPP.
 
 O pedido não serve para contornar recurso pendente contra a pronúncia.
 
-## Preferência de julgamento
+## Pauta
 
-Na organização da pauta, a lei estabelece prioridades, com atenção especial à situação dos acusados presos e ao tempo de prisão.
+A lei disciplina preferência de julgamento, com atenção à prisão e ao tempo de encarceramento nas hipóteses previstas.
 
 ---
 
 # Unidade 9 - Jurados e Conselho de Sentença
 
-## Lista, sorteio e convocação
+Os arts. 432-452 tratam do sorteio, convocação, função, impedimentos e composição do júri.
 
-A lista geral de jurados é publicada anualmente nos prazos legais. Para cada reunião periódica, são sorteados 25 jurados.
+Para cada reunião, são sorteados 25 jurados. O serviço do júri é obrigatório para cidadãos maiores de 18 anos de notória idoneidade, ressalvadas as isenções e escusas legais.
 
-O sorteio ocorre em audiência pública, com possibilidade de acompanhamento pelos órgãos e instituições previstos na lei.
+O Tribunal do Júri é formado por 1 juiz-presidente e 25 jurados sorteados para a reunião; em cada julgamento, 7 jurados formam o Conselho de Sentença.
 
-## Serviço do júri
+Há impedimentos e incompatibilidades decorrentes de vínculos familiares, conjugais e de atuação prévia no mesmo processo. Se dois jurados forem incompatíveis entre si, serve o que tiver sido sorteado primeiro.
 
-O serviço do júri é obrigatório para cidadãos maiores de 18 anos de notória idoneidade. A recusa injustificada pode gerar multa.
+Para instalação dos trabalhos, devem estar presentes pelo menos 15 jurados. Na formação do Conselho, acusação e defesa podem recusar imotivadamente até 3 jurados cada uma.
 
-A lei prevê hipóteses de isenção, inclusive para determinadas autoridades, agentes públicos, militares em serviço ativo, pessoas com mais de 70 anos que requeiram dispensa e quem demonstrar justo impedimento.
+### Mini-casos
 
-O exercício efetivo da função de jurado constitui serviço público relevante e gera os efeitos legais correspondentes.
+**Caso 1.** Comparecem somente 14 jurados. O número mínimo para instalar a sessão não foi atingido.
 
-## Composição do Tribunal do Júri
+**Caso 2.** Jurado já integrou Conselho de Sentença em julgamento anterior do mesmo processo. Deve ser observado o impedimento legal.
 
-O Tribunal do Júri é composto por:
-
-- 1 juiz togado, seu presidente;
-- 25 jurados sorteados para a reunião;
-- 7 jurados que formam o Conselho de Sentença em cada julgamento.
-
-## Impedimentos entre jurados
-
-Há impedimentos decorrentes de vínculos familiares e conjugais, inclusive casamento e união estável, além das hipóteses de incompatibilidade previstas em lei.
-
-Também não pode servir no mesmo processo quem já tiver integrado Conselho de Sentença em julgamento anterior do mesmo feito, nem determinadas pessoas ligadas ao julgamento de corréus ou que já tenham manifestado disposição de condenar ou absolver.
-
-Se dois jurados forem incompatíveis entre si, serve o que tiver sido sorteado primeiro.
-
-### Conselho de Sentença
-
-Para instalar a sessão, deve haver pelo menos 15 jurados presentes. Formado o conselho, acusação e defesa podem recusar imotivadamente até 3 jurados cada uma.
-
-### Mini-caso
-
-Comparecem 14 dos 25 jurados convocados. O número mínimo para instalação não foi atingido. Não se forma o Conselho de Sentença naquela sessão.
+**Caso 3.** A defesa já usou três recusas imotivadas e pretende uma quarta sem causa. O limite legal foi atingido.
 
 ---
 
 # Unidade 10 - Sessão plenária e instrução no júri
 
-## Ausências e adiamento
+Os arts. 453-474 disciplinam a reunião, a sessão e a instrução em plenário.
 
-A ausência injustificada do Ministério Público ou do defensor possui disciplina própria e pode levar ao adiamento, com comunicação aos órgãos competentes. A falta do acusado solto, do assistente ou do advogado do querelante, quando regularmente intimados, não produz sempre o mesmo efeito.
+A ausência de sujeitos processuais produz efeitos distintos conforme quem falta e as condições legais. O acusado preso deve ser conduzido, salvo manifestação válida de dispensa. A ausência de testemunha só provoca adiamento nas hipóteses legais, especialmente quando a parte tiver requerido intimação na forma própria e declarado imprescindibilidade.
 
-O acusado preso deve ser conduzido ao plenário, salvo manifestação válida de dispensa nos termos legais.
+Havendo pelo menos 15 jurados presentes, instala-se a sessão. Antes do sorteio do Conselho, o juiz-presidente adverte sobre impedimentos, suspeições, incompatibilidades e incomunicabilidade. Formado o Conselho, os jurados prestam compromisso.
 
-A ausência de testemunha só provoca adiamento nas hipóteses legais, especialmente quando a parte tiver requerido sua intimação nos moldes próprios e declarado sua imprescindibilidade.
+Na prova oral, a ordem das perguntas varia conforme a testemunha seja de acusação ou de defesa. Os jurados formulam perguntas por intermédio do juiz-presidente. O interrogatório do acusado ocorre depois da prova oral.
 
-## Instalação e formação do conselho
+O uso de algemas em plenário só se admite quando absolutamente necessário à ordem dos trabalhos, à segurança das testemunhas ou à integridade física dos presentes.
 
-Havendo pelo menos 15 jurados presentes, a sessão é instalada. Antes do sorteio, o juiz-presidente adverte os jurados sobre impedimentos, suspeições e incompatibilidades, além da proibição de comunicação sobre o processo.
+### Mini-casos
 
-Formado o Conselho de Sentença, os jurados prestam compromisso.
+**Caso 1.** Testemunha não intimada na forma exigida deixa de comparecer. A ausência não gera automaticamente adiamento.
 
-## Instrução em plenário
+**Caso 2.** Há 15 jurados presentes. O número mínimo para instalação foi atingido.
 
-Na inquirição de testemunhas de acusação, o juiz-presidente pergunta primeiro, seguido pelo Ministério Público, assistente, querelante e defesa. Nas testemunhas de defesa, a ordem entre as partes se altera para assegurar a precedência defensiva prevista em lei.
-
-Os jurados formulam perguntas por intermédio do juiz-presidente.
-
-O interrogatório do acusado ocorre depois da prova oral, respeitada a ordem legal de perguntas.
-
-O uso de algemas durante o período em plenário somente se admite quando absolutamente necessário à ordem dos trabalhos, à segurança das testemunhas ou à garantia da integridade física dos presentes.
+**Caso 3.** Pretende-se algemar o acusado apenas por rotina. A lei exige necessidade concreta nas hipóteses previstas.
 
 ---
 
 # Unidade 11 - Debates, quesitos e votação no júri
 
+Os arts. 475-491 tratam dos registros, debates, quesitação e votação.
+
 ## Debates
 
-Encerrada a instrução, o Ministério Público faz a acusação. O assistente pode falar em seguida. Na ação penal privada, há disciplina própria para querelante e Ministério Público. Depois fala a defesa.
+Encerrada a instrução, fala a acusação e depois a defesa, observada a disciplina própria para assistente e ação privada. O tempo ordinário é de 1 hora e 30 minutos para cada lado. Havendo réplica, a acusação dispõe de 1 hora e a defesa do mesmo tempo para tréplica, com ajustes legais em caso de pluralidade de acusados.
 
-O tempo ordinário é de 1 hora e 30 minutos para acusação e para defesa. Havendo réplica, a acusação dispõe de 1 hora, e a defesa tem o mesmo tempo para tréplica. A pluralidade de acusados altera os tempos na forma prevista em lei.
+Durante os debates, não podem ser usados como argumento de autoridade, em prejuízo do acusado, os elementos vedados pelo art. 478, como a pronúncia, o uso de algemas e o silêncio ou ausência de interrogatório nas condições legais.
 
-## Referências proibidas
-
-Durante os debates, as partes não podem usar como argumento de autoridade, em prejuízo do acusado, determinadas circunstâncias indicadas pelo CPP, entre elas a decisão de pronúncia, o uso de algemas e o silêncio ou ausência de interrogatório nos termos legalmente vedados.
-
-## Documento novo em plenário
-
-Não se admite leitura ou exibição de documento, objeto ou material que não tenha sido juntado aos autos com antecedência mínima de 3 dias úteis, dando-se ciência à outra parte.
+Documento, objeto ou material só pode ser lido ou exibido em plenário se juntado com antecedência mínima de 3 dias úteis, com ciência à parte contrária.
 
 ## Quesitação
 
-Os quesitos devem ser formulados em proposições afirmativas, simples, distintas e suficientemente claras.
+Os quesitos devem ser afirmativos, simples, distintos e claros. A ordem básica do art. 483 é:
 
-A ordem básica é:
-
-1. materialidade do fato;
+1. materialidade;
 2. autoria ou participação;
-3. se o acusado deve ser absolvido;
+3. absolvição;
 4. causa de diminuição alegada pela defesa, quando houver;
-5. qualificadora ou causa de aumento reconhecida na pronúncia ou em decisão posterior que admitiu a acusação.
+5. qualificadora ou causa de aumento admitida para julgamento.
 
-A resposta negativa, por maioria, a quesito essencial pode prejudicar os seguintes. As decisões são tomadas por maioria de votos.
-
-## Votação
-
-A votação ocorre em ambiente que preserve o sigilo. As cédulas são preparadas de forma a permitir respostas simples, como "sim" e "não". O juiz-presidente encerra a apuração de cada quesito quando alcançada a maioria, evitando exposição desnecessária da votação.
-
-### Mini-caso
-
-A defesa pretende exibir em plenário um vídeo jamais juntado aos autos e do qual a acusação não foi cientificada com antecedência de 3 dias úteis. O material não pode ser introduzido de surpresa.
+As decisões são tomadas por maioria. A apuração deve preservar o sigilo e evitar exposição desnecessária do placar.
 
 ---
 
 # Unidade 12 - Sentença, ata e atribuições do juiz-presidente
 
-## Sentença após o veredicto
+Os arts. 492-497 fecham o procedimento do júri.
 
-Encerrada a votação, o juiz-presidente profere a sentença de acordo com as respostas do Conselho de Sentença.
+Após o veredicto, o juiz-presidente profere a sentença conforme as respostas do Conselho. Em caso de condenação, individualiza a pena e adota as providências legais. Em caso de absolvição, determina as consequências compatíveis com o resultado, inclusive soltura quando não houver outro motivo legítimo para prisão.
 
-Em caso de condenação, cabe ao juiz-presidente realizar a individualização da pena e adotar as demais providências legais. Em caso de absolvição, determina a colocação do acusado em liberdade quando não houver outro motivo legítimo para prisão e revoga medidas incompatíveis com o resultado, sem prejuízo das hipóteses legalmente previstas.
+Se houver desclassificação para infração de competência singular, o juiz-presidente decide o fato, aplicando, quando cabível, a disciplina dos Juizados Especiais à infração de menor potencial ofensivo.
 
-Se houver desclassificação para infração de competência do juiz singular, o juiz-presidente passa a julgar o fato, aplicando-se, quando cabível, a disciplina dos Juizados Especiais às infrações de menor potencial ofensivo.
-
-A sentença é lida em plenário antes do encerramento da sessão.
-
-## Ata
-
-O escrivão lavra ata dos trabalhos, assinada pelo juiz-presidente e pelas partes nos termos legais. A ata deve registrar as ocorrências relevantes previstas no CPP. A omissão ou deficiência imputável ao escrivão pode gerar responsabilidade funcional.
-
-## Atribuições do presidente
-
-O juiz-presidente dirige os trabalhos, mantém a ordem, resolve questões incidentais, regula a intervenção das partes, pode requisitar força pública e exerce outras atribuições expressamente previstas no art. 497.
+O escrivão lavra ata dos trabalhos. O art. 497 reúne atribuições do juiz-presidente para dirigir a sessão, manter a ordem, resolver incidentes, regular intervenções e praticar os demais atos expressamente previstos.
 
 ---
 
 # Unidade 13 - Procedimento sumário
 
-O procedimento sumário mantém a lógica do procedimento comum, mas comprime etapas e limites.
+Os arts. 531-538 disciplinam o procedimento sumário.
 
-## Pontos centrais
+A audiência de instrução e julgamento deve ocorrer, em regra, no prazo máximo de 30 dias. A sequência concentra declarações do ofendido, testemunhas de acusação e defesa, peritos, acareações, reconhecimentos, interrogatório e debates.
 
-- audiência de instrução e julgamento em prazo máximo legal de 30 dias;
-- até 5 testemunhas por parte;
-- concentração dos atos em audiência;
-- alegações finais orais, em regra, por 20 minutos para cada parte, prorrogáveis por mais 10;
-- adiamento da audiência somente quando faltar prova imprescindível;
-- testemunha que comparecer é ouvida mesmo que haja suspensão de outro ato, quando possível.
+Podem ser inquiridas até 5 testemunhas de acusação e 5 de defesa. Aplicam-se ao rito sumário os parágrafos do art. 400 na forma indicada pelo art. 533.
 
-Se o Juizado Especial Criminal remeter as peças ao juízo comum por necessidade de outro procedimento, aplica-se o rito sumário na hipótese prevista em lei.
+As alegações finais são orais, em regra por 20 minutos para acusação e defesa, prorrogáveis por 10. Nenhum ato deve ser adiado salvo quando faltar prova imprescindível, e a testemunha que comparecer será ouvida mesmo que outro ato precise ser suspenso, conforme os arts. 535 e 536.
+
+O art. 537 está revogado. O art. 538 determina que, se o JECrim encaminhar ao juízo comum as peças de infração de menor potencial ofensivo para adoção de outro procedimento, será observado o rito sumário.
 
 ### Ordinário x sumário
 
@@ -534,445 +447,378 @@ Se o Juizado Especial Criminal remeter as peças ao juízo comum por necessidade
 | testemunhas por parte | até 8 | até 5 |
 | audiência | regra de até 60 dias | regra de até 30 dias |
 
+### Mini-casos
+
+**Caso 1.** Crime com pena máxima de 3 anos, fora do JECrim: rito sumário.
+
+**Caso 2.** Prova faltante não é imprescindível. A regra é não adiar o ato.
+
+**Caso 3.** O JECrim remete as peças ao juízo comum na hipótese legal. Aplica-se o procedimento sumário do art. 538.
+
 ---
 
 # Unidade 14 - Restauração de autos extraviados ou destruídos
 
-Quando autos originais de processo penal são extraviados ou destruídos, procede-se à restauração.
-
-## Fluxo
+Os arts. 541-548 disciplinam a restauração.
 
 ```text
-constatação do extravio/destruição
--> uso de cópia autêntica ou certidão, se disponível
--> na falta, restauração perante o juízo de primeiro grau
--> intimação/citação das partes para colaborar
--> reprodução de peças, depoimentos e diligências possíveis
+extravio ou destruição
+-> verificar cópia autêntica ou certidão
+-> na falta, reconstrução perante o juízo de primeiro grau
+-> citação das partes e coleta das reproduções disponíveis
+-> diligências de reconstrução
 -> decisão sobre a restauração
 -> autos restaurados passam a valer como originais
 ```
 
-A restauração compete ao juízo de primeira instância ainda que o desaparecimento tenha ocorrido no tribunal.
+A restauração é feita em primeira instância ainda que o desaparecimento tenha ocorrido na segunda. As partes são ouvidas e o juiz determina diligências para reproduzir depoimentos, perícias e documentos quando possível.
 
-Se os autos originais forem encontrados depois, o processo continua neles, apensando-se os restaurados.
+Selos e taxas já pagos não são cobrados novamente. Quem der causa ao extravio responde pelas custas em dobro, sem prejuízo da responsabilidade criminal.
 
-Quem tiver dado causa ao extravio pode suportar consequências processuais, patrimoniais e, quando couber, penais.
-
-A execução da condenação pode prosseguir quando houver elementos documentais suficientes previstos em lei.
+Julgada a restauração, os autos restaurados valem pelos originais. Se os originais reaparecerem, o processo prossegue neles, com os restaurados apensados. A execução da condenação pode continuar nas condições documentais previstas no art. 548.
 
 ---
 
 # Unidade 15 - Recursos: regras gerais
 
-## Voluntariedade e exceções legais
+Os arts. 574-580 estabelecem regras gerais.
 
-Os recursos, em regra, são voluntários. O CPP prevê hipóteses específicas de recurso de ofício, que não devem ser generalizadas.
+Os recursos são, em regra, voluntários, ressalvadas as hipóteses de recurso de ofício que ainda constam do texto legal. Erro, falta ou omissão de funcionário não deve prejudicar recurso que, por isso, não tenha seguido ou sido apresentado no prazo, conforme o art. 575.
 
-## Legitimidade e interesse
+O Ministério Público não pode desistir de recurso que tenha interposto. Podem recorrer, conforme o caso, Ministério Público, querelante, réu, procurador ou defensor, desde que haja interesse na reforma ou modificação.
 
-Podem recorrer, conforme o caso, o Ministério Público, o querelante, o réu, seu procurador ou defensor. Não se admite recurso da parte que não tenha interesse na reforma ou modificação da decisão.
+O recurso é interposto por petição ou termo nos autos na forma do art. 578.
 
-O Ministério Público não pode desistir de recurso que tenha interposto.
+## Fungibilidade
 
-## Forma e fungibilidade
-
-O recurso pode ser interposto por petição ou por termo nos autos, conforme a disciplina legal.
-
-A parte não será prejudicada pela interposição de um recurso por outro, salvo hipótese de má-fé. Essa é a regra de fungibilidade do art. 579.
+Salvo má-fé, a parte não será prejudicada pela interposição de um recurso por outro. Reconhecida a impropriedade, o recurso será processado pelo rito cabível.
 
 ## Extensão aos corréus
 
-No concurso de agentes, a decisão favorável a um réu pode aproveitar aos demais quando fundada em motivo que não seja de caráter exclusivamente pessoal.
-
-### Mini-caso
-
-Uma decisão recursal reconhece nulidade objetiva comum a todos os corréus. O fundamento não é pessoal. A regra do art. 580 permite que o resultado favorável alcance os demais.
+No concurso de agentes, decisão favorável a um réu aproveita aos demais quando fundada em motivo não exclusivamente pessoal.
 
 ---
 
 # Unidade 16 - Recurso em sentido estrito
 
-O recurso em sentido estrito, RESE, só cabe nas hipóteses previstas em lei. Não se escolhe o RESE porque a decisão é "interlocutória" em sentido genérico.
-
-## Hipóteses recorrentes de prova
-
-Entre as hipóteses do art. 581 estão decisões que:
+O RESE cabe nas hipóteses taxativamente previstas no art. 581. Entre as situações expressamente listadas estão decisões que:
 
 - não recebem denúncia ou queixa;
 - concluem pela incompetência do juízo;
-- julgam procedentes exceções, salvo a de suspeição nos termos legais;
+- julgam procedente exceção, salvo suspeição;
 - pronunciam o réu;
-- tratam de prisão, liberdade provisória e fiança nas hipóteses enumeradas;
-- declaram extinta a punibilidade ou indeferem pedido de reconhecimento dessa extinção;
+- tratam de fiança, prisão, liberdade provisória e relaxamento nas hipóteses do inciso V;
+- julgam quebrada a fiança ou perdido seu valor;
+- decretam prescrição ou outra causa extintiva da punibilidade, ou indeferem seu reconhecimento;
 - concedem ou negam habeas corpus na hipótese legal;
 - denegam apelação ou a julgam deserta;
-- decidem incidente de falsidade;
-- resolvem outras situações taxativamente listadas no artigo.
+- suspendem o processo por questão prejudicial;
+- decidem unificação de penas ou incidente de falsidade;
+- abrangem as demais hipóteses que permanecem descritas no artigo.
 
-## Prazo
-
-O prazo geral para interposição do RESE é de 5 dias. Há exceção legal específica para a impugnação da lista geral de jurados, com prazo próprio.
+Há incisos revogados no próprio art. 581. Não preencha lacuna revogada com regra inventada.
 
 ## Processamento
 
-O recurso pode subir nos próprios autos ou por instrumento, conforme a hipótese. Em regra, o recorrente apresenta razões e o recorrido contrarrazões em prazos legais curtos. O juiz pode reformar ou sustentar a decisão antes da remessa ao tribunal.
+Os arts. 582-592 disciplinam destino, formação do instrumento, efeitos, prazo, razões, contrarrazões e juízo de retratação.
 
-## Efeitos
+O prazo geral de interposição é de 5 dias. Para impugnação da lista geral de jurados, o art. 586 prevê prazo próprio de 20 dias. Se o recurso subir por instrumento, o recorrente indica as peças e o traslado contém os elementos obrigatórios. Razões e contrarrazões são apresentadas nos prazos do art. 588, e o juiz pode reformar ou sustentar a decisão segundo o art. 589.
 
-Os efeitos variam conforme a hipótese legal. Não atribua efeito suspensivo geral ao RESE.
+Não existe efeito suspensivo geral. O art. 584 contém hipóteses específicas. No baseline `2025-07-29`, o art. 584 termina no § 3º.
 
-### Nota de versão do edital
+### Controle de versão
 
-Para o recorte normativo vigente em `2025-07-29`, o art. 584 termina no § 3º. O § 4º existente em compilação posterior decorre de alteração legislativa de 2026 e não integra a base desta prova.
+O atual § 4º do art. 584 foi incluído pela Lei n.º 15.358/2026. Ele é posterior ao cutoff e **não integra** a base desta apostila.
 
 ### RESE x apelação no júri
 
 - pronúncia: RESE;
 - impronúncia: apelação;
-- absolvição sumária no júri: apelação.
-
-Essa fronteira é um ponto clássico de confusão.
+- absolvição sumária: apelação.
 
 ---
 
 # Unidade 17 - Apelação
 
-## Cabimento básico
+O art. 593 prevê, em regra, apelação no prazo de 5 dias contra sentenças definitivas de condenação ou absolvição de juiz singular, decisões definitivas ou com força de definitivas não cobertas pelo capítulo anterior e decisões do júri nos fundamentos legais.
 
-A apelação é cabível, em regra, no prazo de 5 dias:
+No júri, a apelação pode fundar-se em nulidade posterior à pronúncia, sentença do juiz-presidente contrária à lei ou ao veredicto, erro na aplicação da pena ou medida de segurança e decisão dos jurados manifestamente contrária à prova dos autos. Nesta última hipótese, o provimento leva a novo julgamento e não se admite segunda apelação pelo mesmo motivo.
 
-- contra sentenças definitivas de condenação ou absolvição proferidas por juiz singular;
-- contra decisões definitivas, ou com força de definitivas, nas hipóteses legais;
-- contra decisões do Tribunal do Júri nos fundamentos taxativamente previstos no art. 593, III.
+Quando for cabível apelação, não se usa RESE, ainda que o recurso ataque apenas parte da decisão.
 
-## Júri
+Os arts. 594 e 595 estão revogados. O art. 596 disciplina o efeito da apelação contra sentença absolutória; o art. 597 trata do efeito da apelação condenatória no texto compilado; o art. 598 confere apelação subsidiária ao ofendido ou pessoas indicadas na lei nas condições ali previstas.
 
-A apelação contra decisão do júri pode fundar-se, entre outras hipóteses legais, em:
+A apelação pode ser total ou parcial. O art. 600 disciplina razões e contrarrazões, em regra com prazo de 8 dias, e traz disciplina específica para contravenções e para apresentação de razões na instância superior. Os arts. 601-603 completam a remessa e a subida do recurso.
 
-- nulidade posterior à pronúncia;
-- sentença do juiz-presidente contrária à lei expressa ou à decisão dos jurados;
-- erro ou injustiça na aplicação da pena ou medida de segurança;
-- decisão dos jurados manifestamente contrária à prova dos autos.
+### Reformatio in pejus
 
-Se o tribunal reconhecer que a decisão dos jurados é manifestamente contrária à prova dos autos, determina novo julgamento. Não se admite segunda apelação pelo mesmo motivo.
+Quando somente o réu apela, o tribunal não pode agravar sua pena na forma do art. 617.
 
-## Razões e contrarrazões
+### Mini-casos
 
-A lei disciplina prazo próprio para razões e contrarrazões. A apelação pode abranger todo o julgado ou apenas parte dele.
+**Caso 1.** Somente a defesa apela buscando redução de pena. O tribunal não pode usar esse recurso exclusivo para agravá-la.
 
-## Vedação à reformatio in pejus
+**Caso 2.** A decisão do júri é reconhecida como manifestamente contrária à prova. O tribunal determina novo julgamento, sem substituir diretamente o veredicto.
 
-Quando somente o réu apela, o tribunal não pode agravar a pena ou situação processual nos termos do art. 617.
-
-### Mini-caso
-
-Somente a defesa interpõe apelação buscando reduzir a pena. O tribunal não pode aproveitar o recurso exclusivo do réu para aumentar a reprimenda.
+**Caso 3.** A parte pretende RESE contra hipótese em que a lei prevê apelação. O art. 593, § 4º, impede essa substituição.
 
 ---
 
-# Unidade 18 - Julgamento recursal no tribunal
+# Unidade 18 - Processamento e julgamento recursal nos arts. 604-620
 
-Os arts. 604 a 608 estão revogados. A presença de números dentro do intervalo do edital não autoriza inventar conteúdo para dispositivos revogados.
+## Dispositivos revogados
 
-## Pontos ainda vigentes no intervalo
+Os arts. 604, 605 e 606 estão revogados. Os arts. 607 e 608, que integravam o antigo protesto por novo júri, também estão revogados. O art. 611 está revogado pelo Decreto-Lei n.º 552/1969. Esses números pertencem ao intervalo do edital, mas não contêm regra vigente a ser reconstruída.
 
-O CPP disciplina, entre outros pontos:
+## Dispositivos vigentes do intervalo
 
-- julgamento de apelações e recursos em sentido estrito pelos órgãos colegiados competentes;
-- embargos infringentes e de nulidade nas hipóteses legais de decisão não unânime desfavorável ao réu;
-- ordem e prazos internos de julgamento;
-- possibilidade de o tribunal proceder a novo interrogatório, reinquirir testemunhas ou determinar diligências;
-- proibição de agravar a pena quando somente o réu tiver apelado;
-- embargos de declaração contra acórdão, no prazo de 2 dias, quando houver ambiguidade, obscuridade, contradição ou omissão.
+O art. 609 atribui o julgamento de recursos, apelações e embargos aos órgãos criminais competentes dos tribunais e prevê embargos infringentes e de nulidade contra decisão de segunda instância não unânime e desfavorável ao réu, nos limites da divergência.
 
-O empate em julgamento penal colegiado deve ser resolvido de forma favorável ao acusado na disciplina vigente no cutoff.
+O art. 610 disciplina o processamento de RESE e de determinadas apelações, com vista ao procurador-geral e ao relator e regra de debates. O art. 612 estabelece julgamento do recurso de habeas corpus na primeira sessão depois de designado o relator.
 
-### Embargos de declaração do CPP x JECrim
+O art. 613 traz modificações para apelações em crimes punidos com reclusão. O art. 614 exige que eventual impossibilidade de cumprir os prazos legais seja justificada nos autos.
 
-Não misture os prazos:
+O art. 615 estabelece decisão por maioria. No baseline, seu § 1º já continha a regra favorável ao imputado em caso de empate nos julgamentos penais e processuais penais colegiados. O art. 616 permite novo interrogatório, reinquirição de testemunhas ou outras diligências no julgamento da apelação. O art. 617 contém a vedação de agravamento da pena no recurso exclusivo do réu. O art. 618 remete aos regimentos dos tribunais para normas complementares.
 
-- CPP, art. 619: 2 dias;
-- Lei n.º 9.099/1995, art. 83: 5 dias.
+O art. 619 prevê embargos de declaração contra acórdão no prazo de 2 dias em caso de ambiguidade, obscuridade, contradição ou omissão. O art. 620 disciplina o requerimento e o julgamento desses embargos.
+
+### Fluxo de recuperação
+
+```text
+604-608 -> revogados
+609-610 -> competência e processamento colegiado
+611 -> revogado
+612-618 -> julgamento, prazos internos, maioria, diligências, reformatio e complemento regimental
+619-620 -> embargos de declaração, prazo de 2 dias
+```
 
 ---
 
 # Unidade 19 - Revisão criminal
 
-A revisão criminal não é recurso ordinário. É ação autônoma de impugnação de condenação transitada em julgado nas hipóteses legais.
+A revisão criminal dos arts. 621-631 não é recurso ordinário. É meio autônomo de impugnação de condenação transitada em julgado.
 
-## Hipóteses principais
+Pode ser admitida quando a condenação contrariar texto expresso da lei penal ou a evidência dos autos, fundar-se em prova comprovadamente falsa ou quando surgirem novas provas de inocência ou de circunstância que autorize diminuição especial da pena.
 
-A revisão pode ser admitida quando:
+Pode ser requerida a qualquer tempo, antes ou depois da extinção da pena. Não se admite reiteração sem novas provas.
 
-- a sentença condenatória contrariar texto expresso da lei penal ou a evidência dos autos;
-- a condenação se fundar em depoimentos, exames ou documentos comprovadamente falsos;
-- surgirem novas provas de inocência ou de circunstância que determine ou autorize diminuição especial da pena.
+Pode requerê-la o próprio réu ou procurador habilitado e, em caso de morte, as pessoas indicadas no CPP. Julgada procedente, o tribunal pode alterar a classificação, absolver, modificar a pena ou anular o processo. A pena jamais pode ser agravada pela revisão.
 
-## Momento
+O intervalo também disciplina efeitos da absolvição, cumprimento da decisão, indenização por erro judiciário nas condições legais e a nomeação de curador se o condenado morrer durante a revisão.
 
-Pode ser requerida a qualquer tempo, antes ou depois da extinção da pena.
+### Mini-casos
 
-Não se admite reiteração do pedido sem novas provas.
+**Caso 1.** Surge documento novo capaz de demonstrar inocência depois do trânsito em julgado. A via pode ser revisão criminal.
 
-## Legitimidade
+**Caso 2.** A revisão é proposta após a extinção da pena. O momento, por si só, não impede o pedido.
 
-Pode ser requerida pelo próprio réu ou por procurador legalmente habilitado. Se o condenado morrer, a lei atribui legitimidade aos familiares indicados no CPP.
-
-## Resultado
-
-Julgada procedente, o tribunal pode alterar a classificação da infração, absolver o réu, modificar a pena ou anular o processo.
-
-A revisão nunca pode agravar a pena imposta pela decisão revista.
-
-### Revisão x apelação
-
-| Revisão criminal | Apelação |
-|---|---|
-| após trânsito em julgado | antes do trânsito, dentro da fase recursal |
-| hipóteses legais próprias | cabimento recursal ordinário |
-| nunca pode agravar a condenação revista | segue regras recursais, inclusive vedação de reformatio em prejuízo no recurso exclusivo da defesa |
+**Caso 3.** O tribunal identifica erro na condenação, mas pretende aumentar a pena. Isso é vedado no julgamento da revisão.
 
 ---
 
-# Unidade 20 - Dispositivos revogados, recursos excepcionais e carta testemunhável
+# Unidade 20 - Arts. 632-646: dispositivos revogados, recursos excepcionais e carta testemunhável
 
-## Dispositivos revogados
+Os arts. 632-636 estão revogados. Não se deve completar esses dispositivos por analogia.
 
-Os arts. 632 a 636 estão revogados. Eles pertencem numericamente ao recorte, mas não contêm regra vigente a memorizar.
-
-## Recurso extraordinário e especial
-
-O CPP preserva referências ao processamento dos recursos extraordinário e especial conforme a legislação e disciplina processual aplicáveis. O art. 637 estabelece que o recurso extraordinário não tem efeito suspensivo, sem impedir os efeitos da decisão nas condições legais.
-
-A apostila não amplia esse bloco com regras externas não previstas no corpus do edital.
+O art. 637 estabelece que o recurso extraordinário não tem efeito suspensivo, nos termos de sua redação. O art. 638 determina que recurso extraordinário e recurso especial sejam processados e julgados nos tribunais superiores conforme as leis especiais, a disciplina processual civil e os respectivos regimentos.
 
 ## Carta testemunhável
 
-A carta testemunhável é cabível quando:
+O art. 639 prevê carta testemunhável quando:
 
-- for denegado recurso;
-- admitido o recurso, houver obstáculo à sua expedição e seguimento para o juízo ad quem.
+- o recurso for denegado;
+- embora admitido, houver obstáculo à sua expedição e seguimento ao juízo ad quem.
 
-O pedido é dirigido ao escrivão ou secretário, nos prazos e forma legais. Seu processamento segue, no que couber, regras do recurso em sentido estrito.
+O art. 640 fixa prazo de 48 horas, contado do despacho que denegar o recurso, para requerer a carta ao escrivão ou secretário, indicando as peças a trasladar.
 
-A carta testemunhável não tem efeito suspensivo.
+O art. 641 exige recibo e fixa prazo máximo para entrega do instrumento: 5 dias quando se tratar de RESE e 60 dias quando se tratar de recurso extraordinário.
 
-### Contraste
+O art. 642 prevê sanção e mecanismo de reação quando escrivão ou secretário se recusa a dar recibo ou entregar o instrumento. Os arts. 643-645 conectam o processamento da carta ao recurso denegado e permitem ao órgão julgador mandar processar o recurso ou, estando suficientemente instruída, decidir logo o mérito. O art. 646 afirma que a carta testemunhável não tem efeito suspensivo.
 
-A carta testemunhável não substitui o recurso que a parte queria interpor. Ela serve para destravar o recurso indevidamente negado ou retido.
+### Carta testemunhável x recurso denegado
+
+A carta não substitui o mérito do recurso escolhido. Ela existe para destravar recurso denegado ou cujo seguimento foi obstado.
 
 ---
 
 # Unidade 21 - Habeas corpus
 
-O habeas corpus protege a liberdade de locomoção contra violência ou coação ilegal, atual ou iminente.
+Os arts. 647-667 disciplinam o habeas corpus e seu processo.
 
-## Quando há coação ilegal
+O art. 647 protege a liberdade de ir e vir contra violência ou coação ilegal, atual ou iminente, ressalvada a hipótese textual de punição disciplinar. O art. 647-A, vigente no cutoff, permite expedição de ofício de habeas corpus individual ou coletivo, dentro da competência jurisdicional, quando a autoridade judicial verifica coação ilegal no curso de processo judicial. O parágrafo único também disciplina concessão de ofício em processo de competência originária ou recursal nas condições legais.
 
-O art. 648 apresenta hipóteses, como:
+## Coação ilegal
 
-- inexistência de justa causa;
-- prisão por tempo superior ao permitido em lei;
+O art. 648 lista hipóteses como:
+
+- falta de justa causa;
+- prisão por tempo superior ao permitido;
 - ordem de autoridade incompetente;
-- cessação do motivo que autorizou a coação;
-- negativa indevida de fiança admitida em lei;
+- cessação do motivo da coação;
+- negativa indevida de fiança;
 - processo manifestamente nulo;
 - extinção da punibilidade.
 
-## Legitimidade
+Os arts. 649-653 tratam de competência, efeitos da concessão, nulidade e responsabilidade da autoridade em hipóteses específicas.
 
-Qualquer pessoa pode impetrar habeas corpus em favor próprio ou de terceiro. O Ministério Público também pode impetrá-lo.
+## Legitimidade e petição
 
-Não é exigida capacidade postulatória nos mesmos moldes de uma ação comum para a formulação do pedido por qualquer pessoa.
+O art. 654 permite impetração por qualquer pessoa, em favor próprio ou de terceiro, e pelo Ministério Público. A petição deve identificar paciente e coator, descrever a coação ou ameaça e conter a assinatura e residências nos termos legais. O CPP também preserva a possibilidade de concessão de ofício.
 
-## Preventivo x liberatório
+## Procedimento
+
+Os arts. 655-660 disciplinam deveres das autoridades, apresentação do paciente, exceções, informações e decisão. Efetuadas as diligências e interrogado o paciente, o juiz decide fundamentadamente em 24 horas. Concedida ordem preventiva, expede-se salvo-conduto.
+
+Os arts. 661-667 tratam do processamento originário nos tribunais, informações, julgamento, expedição da ordem e normas complementares.
+
+### Preventivo x liberatório
 
 - ameaça concreta de coação ilegal: habeas corpus preventivo;
 - coação já efetivada: habeas corpus liberatório.
 
-## Procedimento
+### Mini-casos
 
-A petição deve identificar a pessoa que sofre ou está ameaçada de sofrer violência ou coação, a autoridade responsável e os fatos relevantes. O tribunal ou juiz pode requisitar informações e adotar providências urgentes.
+**Caso 1.** Há ameaça concreta e imediata de prisão ilegal. A tutela adequada é preventiva.
 
-O CPP determina julgamento célere, inclusive com prazo específico de 24 horas após as diligências ou interrogatório previstos na disciplina legal.
+**Caso 2.** O paciente já sofre coação ilegal à locomoção. A tutela busca cessar a coação já efetivada.
 
-### Habeas corpus x revisão criminal
-
-O habeas corpus protege a liberdade de locomoção contra ilegalidade. A revisão criminal reabre, nas hipóteses legais, condenação transitada em julgado. Não são institutos intercambiáveis.
+**Caso 3.** No curso de processo, autoridade judicial identifica coação ilegal mesmo sem pedido autônomo de habeas corpus. O art. 647-A e a disciplina de concessão de ofício devem ser examinados.
 
 ---
 
-# Unidade 22 - Juizado Especial Criminal: competência e princípios
+# Unidade 22 - Juizado Especial Criminal: competência, princípios e comunicação
 
-## Competência
+Os arts. 60-68 da Lei n.º 9.099/1995 estruturam competência, princípios e atos iniciais.
 
-O Juizado Especial Criminal tem competência para conciliação, julgamento e execução das infrações penais de menor potencial ofensivo, respeitadas as regras de conexão e continência.
+O JECrim tem competência para conciliação, julgamento e execução das infrações de menor potencial ofensivo, respeitadas conexão e continência. Mesmo quando processos se reúnem no juízo comum ou no júri por conexão ou continência, o art. 60 preserva a observância da transação penal e da composição dos danos civis nos termos legais.
 
-Consideram-se infrações de menor potencial ofensivo as contravenções penais e os crimes a que a lei comine pena máxima não superior a 2 anos, cumulada ou não com multa.
+Consideram-se infrações de menor potencial ofensivo as contravenções penais e os crimes com pena máxima não superior a 2 anos, cumulada ou não com multa.
 
-## Princípios
+O processo é orientado por oralidade, simplicidade, informalidade, economia processual e celeridade, buscando reparação do dano e, quando possível, pena não privativa de liberdade.
 
-O processo perante o Juizado orienta-se pelos critérios da:
+A competência territorial é definida pelo lugar da prática da infração. Os atos são públicos e podem ocorrer à noite e em qualquer dia, conforme a organização judiciária. O art. 65 valoriza finalidade e prejuízo: não se pronuncia nulidade sem prejuízo. Atos em outras comarcas podem ser solicitados por meio hábil, e só os atos essenciais exigem registro escrito.
 
-- oralidade;
-- simplicidade;
-- informalidade;
-- economia processual;
-- celeridade.
+A citação é pessoal, no próprio Juizado sempre que possível ou por mandado. Não encontrado o acusado, as peças são remetidas ao juízo comum, em vez de prosseguir com edital no JECrim.
 
-Busca-se, sempre que possível, reparação dos danos sofridos pela vítima e aplicação de pena não privativa de liberdade.
+A intimação pode ocorrer por correspondência com aviso de recebimento, oficial de justiça ou outro meio idôneo. Quem participa de audiência é considerado cientificado dos atos ali praticados. A comunicação ao autor do fato e a citação do acusado devem advertir sobre comparecimento com advogado e designação de defensor público na falta dele.
 
-## Competência territorial
+### Mini-casos
 
-A competência é determinada pelo lugar em que foi praticada a infração penal.
+**Caso 1.** Crime tem pena máxima de 2 anos, cumulada com multa. Em tese, enquadra-se no conceito legal de menor potencial ofensivo.
 
-## Atos e comunicação
+**Caso 2.** Acusado não é localizado para citação pessoal no JECrim. As peças seguem ao juízo comum.
 
-Os atos processuais podem ocorrer em horário noturno e em qualquer dia da semana, conforme organização judiciária. São válidos quando atingem a finalidade para a qual foram realizados, desde que respeitadas as garantias fundamentais.
-
-A citação é pessoal e, quando o acusado não é encontrado para ser citado, as peças são encaminhadas ao juízo comum para adoção do procedimento previsto em lei.
-
-Não há citação por edital no procedimento do JECrim.
-
-### Mini-caso
-
-O autor do fato não é encontrado para citação pessoal no Juizado. O caso não segue com edital dentro do JECrim. As peças são remetidas ao juízo comum.
+**Caso 3.** A parte alega nulidade sem demonstrar prejuízo. O art. 65 contém regra contrária à nulidade sem prejuízo.
 
 ---
 
 # Unidade 23 - Fase preliminar, composição civil e transação penal
 
-## Termo circunstanciado
+A autoridade policial lavra termo circunstanciado e o encaminha imediatamente ao Juizado com autor do fato e vítima, providenciando as requisições periciais necessárias. Se o autor for imediatamente encaminhado ou assumir compromisso de comparecer, não se impõe prisão em flagrante nem se exige fiança, sem prejuízo da medida cautelar específica prevista no art. 69 para violência doméstica.
 
-A autoridade policial que tomar conhecimento da ocorrência lavra termo circunstanciado e o encaminha imediatamente ao Juizado com o autor do fato e a vítima, providenciando as requisições necessárias.
+Se não for possível audiência preliminar imediata, designa-se data próxima. A ausência de envolvido gera intimação na forma legal. Na audiência, juiz ou conciliador conduz a tentativa consensual, com participação dos sujeitos previstos nos arts. 72 e 73.
 
-Ao autor do fato que, depois da lavratura do termo, for imediatamente encaminhado ao Juizado ou assumir compromisso de comparecimento, não se impõe prisão em flagrante nem se exige fiança, observada a disciplina legal.
+## Composição civil
 
-## Audiência preliminar
+O acordo é reduzido a escrito e homologado por sentença irrecorrível, com eficácia de título executivo no juízo civil. Na ação privada ou pública condicionada, a homologação acarreta renúncia ao direito de queixa ou representação.
 
-Presentes Ministério Público, autor do fato, vítima e, quando necessário, responsáveis civis, acompanhados por advogados, o juiz esclarece sobre composição dos danos e possível proposta de aplicação imediata de pena não privativa de liberdade.
-
-## Composição civil dos danos
-
-O acordo de composição civil é reduzido a escrito e homologado por sentença irrecorrível, com eficácia de título executivo no juízo civil competente.
-
-Em ação penal de iniciativa privada ou pública condicionada à representação, a homologação do acordo acarreta renúncia ao direito de queixa ou representação.
-
-## Representação
-
-Não obtida a composição, o ofendido pode exercer imediatamente o direito de representação verbal, que será reduzida a termo.
-
-A falta de representação na audiência preliminar não implica decadência automática, desde que o direito seja exercido dentro do prazo legal.
+Não obtida a composição, o ofendido pode exercer imediatamente representação verbal. A falta de representação na audiência não causa decadência automática se o direito ainda estiver dentro do prazo legal.
 
 ## Transação penal
 
-Nas hipóteses legais, o Ministério Público pode propor aplicação imediata de pena restritiva de direitos ou multa.
+Havendo representação ou ação pública incondicionada, não sendo caso de arquivamento, o Ministério Público pode propor aplicação imediata de pena restritiva de direitos ou multa.
 
-A proposta não é admitida, entre outras hipóteses, quando:
+A proposta não é admitida, entre outras hipóteses, se houver condenação anterior definitiva por crime a pena privativa de liberdade, benefício anterior por transação nos últimos 5 anos ou se as condições pessoais e circunstâncias indicadas no art. 76 mostrarem a medida inadequada.
 
-- houver condenação anterior definitiva por crime a pena privativa de liberdade;
-- o agente tiver sido beneficiado anteriormente, no prazo legal de 5 anos, com aplicação de pena restritiva ou multa mediante transação;
-- antecedentes, conduta social, personalidade, motivos e circunstâncias indicarem que a medida não é necessária e suficiente.
+Aceita a proposta pelo autor e seu defensor, ela é submetida ao juiz. A sanção aplicada não gera reincidência, fica registrada apenas para impedir novo benefício dentro do prazo legal e não produz os efeitos civis indicados no § 6º.
 
-Aceita a proposta pelo autor e seu defensor, ela é submetida ao juiz. A aplicação da sanção não importa reincidência e não consta de certidão de antecedentes criminais, salvo para impedir novo benefício dentro do prazo legal.
-
-### Composição civil x transação penal
+### Composição x transação
 
 | Composição civil | Transação penal |
 |---|---|
-| foco na reparação do dano entre envolvidos | proposta do Ministério Público de aplicação imediata de pena não privativa de liberdade ou multa |
-| pode repercutir no direito de queixa/representação | produz efeitos penais específicos sem gerar reincidência |
-| fase consensual reparatória | solução consensual penal |
+| foco na reparação do dano | proposta penal do Ministério Público |
+| pode repercutir em queixa ou representação | pena restritiva de direitos ou multa, sem reincidência |
+| acordo civil homologado | solução consensual penal |
+
+### Mini-casos
+
+**Caso 1.** Em ação condicionada, composição civil é homologada. Há renúncia ao direito de representação.
+
+**Caso 2.** O autor recebeu transação penal há 3 anos. O novo benefício é impedido pela regra de 5 anos.
+
+**Caso 3.** Não houve composição e a vítima não representa na própria audiência, mas o prazo legal ainda não terminou. Não ocorre decadência automática apenas por essa ausência.
 
 ---
 
 # Unidade 24 - Procedimento sumaríssimo e recursos no JECrim
 
-## Denúncia ou queixa
+Não havendo transação penal, o Ministério Público oferece denúncia oral se não forem necessárias diligências imprescindíveis. O art. 77 permite, nas condições legais, dispensa de inquérito e até do exame de corpo de delito quando a materialidade estiver demonstrada por boletim médico ou prova equivalente. Complexidade pode levar ao encaminhamento ao juízo comum. Na ação privada, admite-se queixa oral.
 
-Não havendo aplicação imediata de pena pela transação penal, o Ministério Público oferece denúncia oral se não houver necessidade de diligências imprescindíveis. Na ação privada, pode ser oferecida queixa oral.
+Oferecida a acusação, ela é reduzida a termo. O acusado recebe cópia e, estando presente, fica citado e cientificado da audiência. Se ausente, aplica-se a disciplina dos arts. 66 e 68. Pedido de intimação de testemunhas deve respeitar a antecedência legal.
 
-A acusação é reduzida a termo, com dispensa do inquérito policial nas condições da lei.
+Na audiência, se ainda não houve tentativa consensual, ela é renovada na forma legal. Nenhum ato deve ser adiado, salvo necessidade imprescindível. O defensor responde à acusação antes de o juiz decidir sobre seu recebimento. Recebida a acusação, ouvem-se vítima e testemunhas, interroga-se o acusado, seguem-se debates e sentença.
 
-## Audiência de instrução e julgamento
+O art. 81, § 1º-A, vigente no cutoff, protege a dignidade da vítima durante a audiência e veda manifestações alheias aos fatos e linguagem, informação ou material ofensivo à dignidade da vítima ou de testemunhas.
 
-Na audiência, o juiz dá às partes oportunidade de composição quando cabível e de resposta à acusação antes de decidir sobre o recebimento. Recebida a acusação, são ouvidas vítima e testemunhas, interroga-se o acusado e seguem-se debates e sentença, conforme a sequência legal.
-
-Todas as provas são produzidas na audiência, podendo o juiz limitar ou excluir as consideradas excessivas, impertinentes ou protelatórias.
-
-## Sentença
-
-A sentença dispensa relatório formal e deve mencionar os elementos de convicção do juiz.
+A sentença dispensa relatório e deve indicar os elementos de convicção.
 
 ## Apelação
 
-Da sentença e da rejeição da denúncia ou queixa cabe apelação, interposta no prazo de 10 dias por petição escrita, da qual constarão razões e pedido do recorrente.
-
-A parte recorrida tem prazo de 10 dias para resposta escrita.
-
-O recurso pode ser julgado por turma composta de 3 juízes em exercício no primeiro grau de jurisdição, reunidos na sede do Juizado.
+Da rejeição da denúncia ou queixa e da sentença cabe apelação. O prazo é de 10 dias por petição escrita com razões e pedido. O recorrido tem 10 dias para resposta. O recurso pode ser julgado por turma de 3 juízes de primeiro grau reunidos na sede do Juizado.
 
 ## Embargos de declaração
 
-Cabem embargos de declaração quando houver obscuridade, contradição ou omissão na sentença ou acórdão.
+Cabem em caso de obscuridade, contradição ou omissão, no prazo de 5 dias. Podem ser opostos por escrito ou oralmente e interrompem o prazo para recurso. Erros materiais podem ser corrigidos de ofício.
 
-O prazo é de 5 dias, contado da ciência da decisão. Os embargos interrompem o prazo para recurso.
-
-Erros materiais podem ser corrigidos de ofício.
-
-### Atenção aos prazos
+### Prazos que não devem ser confundidos
 
 ```text
 JECrim - apelação: 10 dias
 JECrim - resposta à apelação: 10 dias
 JECrim - embargos de declaração: 5 dias
-CPP - embargos de declaração de acórdão do art. 619: 2 dias
+CPP - embargos de declaração do art. 619: 2 dias
 ```
 
 ---
 
 # Unidade 25 - Representação e suspensão condicional do processo
 
-## Representação nos crimes indicados pela lei
-
-Além das hipóteses previstas no Código Penal e em legislação especial, as lesões corporais leves e culposas dependem de representação, conforme art. 88 da Lei n.º 9.099/1995.
+O art. 88 determina, além das hipóteses do Código Penal e legislação especial, que a ação relativa a lesões corporais leves e culposas depende de representação.
 
 ## Suspensão condicional do processo
 
-Nos crimes em que a pena mínima cominada for igual ou inferior a 1 ano, abrangidos ou não pela competência do Juizado, o Ministério Público, ao oferecer a denúncia, pode propor a suspensão do processo por 2 a 4 anos, desde que o acusado:
+Nos crimes em que a pena mínima cominada seja igual ou inferior a 1 ano, abrangidos ou não pela Lei n.º 9.099/1995, o Ministério Público, ao oferecer a denúncia, pode propor suspensão do processo por 2 a 4 anos, desde que o acusado não esteja sendo processado nem tenha sido condenado por outro crime e preencha os demais requisitos legais aplicáveis.
 
-- não esteja sendo processado;
-- não tenha sido condenado por outro crime;
-- preencha os demais requisitos que autorizariam a suspensão condicional da pena, no que couber.
+Aceita a proposta pelo acusado e seu defensor, na presença do juiz, e recebida a denúncia, o processo pode ser suspenso sob condições como:
 
-Aceita a proposta pelo acusado e seu defensor, na presença do juiz, o processo fica suspenso mediante condições legais.
-
-Entre as condições obrigatórias estão:
-
-- reparação do dano, salvo impossibilidade de fazê-lo;
+- reparação do dano, salvo impossibilidade;
 - proibição de frequentar determinados lugares;
-- proibição de ausentar-se da comarca onde reside sem autorização judicial;
-- comparecimento pessoal e obrigatório a juízo, mensalmente, para informar e justificar atividades.
+- proibição de ausentar-se da comarca sem autorização;
+- comparecimento mensal a juízo para informar e justificar atividades.
 
-O juiz pode especificar outras condições adequadas ao fato e à situação pessoal do acusado.
+O juiz pode fixar outras condições adequadas ao fato e à situação pessoal. A lei distingue hipóteses de revogação obrigatória e facultativa. Expirado o período de prova sem revogação, declara-se extinta a punibilidade. Durante a suspensão, não corre a prescrição.
 
-Durante o prazo de suspensão, não corre a prescrição.
-
-A suspensão pode ser revogada obrigatória ou facultativamente nas hipóteses previstas na lei. Expirado o período de prova sem revogação, o juiz declara extinta a punibilidade.
-
-## Transação penal x suspensão condicional do processo
+### Transação penal x suspensão condicional do processo
 
 | Transação penal | Suspensão condicional do processo |
 |---|---|
-| ocorre antes do desenvolvimento da ação penal, na fase consensual | proposta ao oferecer a denúncia |
-| pressupõe infração de menor potencial ofensivo | aplica-se a crime com pena mínima igual ou inferior a 1 ano, mesmo fora da competência do JECrim |
-| aplicação imediata de pena restritiva ou multa | processo fica suspenso por 2 a 4 anos, sob condições |
+| fase consensual anterior ao desenvolvimento normal da ação | proposta ao oferecer a denúncia |
+| vinculada ao microssistema das infrações de menor potencial ofensivo | critério de pena mínima igual ou inferior a 1 ano, mesmo fora da competência do JECrim |
+| aplicação imediata de restritiva de direitos ou multa | processo suspenso por 2 a 4 anos sob condições |
+
+### Mini-casos
+
+**Caso 1.** Crime tem pena mínima de 1 ano e preenche os demais requisitos. O critério objetivo do art. 89 está satisfeito.
+
+**Caso 2.** Beneficiário deixa injustificadamente de reparar dano que podia reparar. Deve ser examinada a hipótese legal de revogação obrigatória.
+
+**Caso 3.** Termina o período de prova sem revogação. O juiz declara extinta a punibilidade.
 
 ---
 
 # Síntese de recuperação
 
-## Comunicação dos atos
+## Comunicação
 
 ```text
 na jurisdição -> mandado
@@ -980,8 +826,8 @@ fora da jurisdição -> precatória
 não encontrado -> edital
 ocultação -> hora certa
 estrangeiro em lugar sabido -> rogatória
-preso -> citação pessoal
-militar -> por intermédio do chefe do serviço
+preso -> pessoal
+militar -> chefe do serviço
 ```
 
 ## Procedimentos
@@ -989,15 +835,15 @@ militar -> por intermédio do chefe do serviço
 ```text
 pena máxima >= 4 anos -> ordinário
 pena máxima < 4 anos -> sumário, salvo sumaríssimo
-infração de menor potencial ofensivo -> JECrim
-crime doloso contra a vida -> procedimento do júri
+menor potencial ofensivo -> JECrim
+crime doloso contra a vida -> júri
 ```
 
 ## Júri, primeira fase
 
 ```text
 materialidade + indícios suficientes -> pronúncia
-sem suporte suficiente -> impronúncia
+suporte insuficiente -> impronúncia
 hipótese legal demonstrada -> absolvição sumária
 fora da competência do júri -> desclassificação
 ```
@@ -1009,18 +855,21 @@ pronúncia -> RESE
 impronúncia -> apelação
 absolvição sumária no júri -> apelação
 sentença singular -> apelação
-recurso negado ou obstado -> carta testemunhável, se cabível
+recurso denegado ou obstado -> carta testemunhável, se cabível
 condenação transitada em julgado nas hipóteses legais -> revisão criminal
 coação ilegal à liberdade -> habeas corpus
 ```
 
-## Prazos que não devem ser confundidos
+## Prazos de alto risco de confusão
 
 ```text
 resposta à acusação comum -> 10 dias
 resposta na primeira fase do júri -> 10 dias
 RESE, regra geral -> 5 dias
+razões e contrarrazões do RESE -> 2 dias para cada
 apelação no CPP, regra do art. 593 -> 5 dias
+razões e contrarrazões da apelação no CPP, regra -> 8 dias para cada
+carta testemunhável -> requerimento em 48 horas
 apelação no JECrim -> 10 dias
 embargos de declaração no CPP art. 619 -> 2 dias
 embargos de declaração no JECrim -> 5 dias
@@ -1031,103 +880,93 @@ suspensão condicional do processo -> 2 a 4 anos
 
 # Prática autoral
 
-As questões seguintes são inéditas e foram construídas para treinar literalidade, fluxo, contraste e aplicação. O gabarito comentado aparece somente depois da bateria completa.
+As questões seguintes são inéditas. O gabarito comentado aparece apenas depois da bateria completa.
 
 ## Questões 1 a 10 - sujeitos, citação e procedimento comum
 
 ### 1.
+Um juiz aconselhou previamente uma das partes sobre a estratégia a adotar no processo que depois lhe foi distribuído. Isso caracteriza
 
-Um juiz aconselhou previamente uma das partes sobre a estratégia a adotar no processo penal que depois lhe foi distribuído. De acordo com o CPP, essa circunstância caracteriza
-
-(A) impedimento, porque houve atuação anterior como autoridade pública.
-(B) impedimento, porque todo aconselhamento gera interesse direto.
-(C) suspeição, porque o aconselhamento a qualquer das partes é causa legal.
-(D) incompatibilidade restrita aos julgamentos colegiados.
-(E) mera irregularidade sem reflexo sobre a jurisdição.
+(A) impedimento por atuação como autoridade pública.
+(B) impedimento por interesse direto presumido.
+(C) suspeição por aconselhamento a uma das partes.
+(D) incompatibilidade apenas colegiada.
+(E) irregularidade sem reflexo processual.
 
 ### 2.
+Quanto aos serventuários e funcionários da justiça, o art. 274 determina que
 
-Quanto aos serventuários e funcionários da justiça, o CPP determina que
-
-(A) todas as causas de impedimento e suspeição dos juízes se aplicam integralmente e sem adaptação.
-(B) as prescrições sobre suspeição dos juízes lhes são aplicáveis, no que couber.
-(C) apenas as causas de impedimento ligadas a parentesco são aplicáveis.
-(D) não se aplicam causas de suspeição, porque não exercem jurisdição.
-(E) somente o Ministério Público pode arguir sua suspeição.
+(A) todo impedimento e toda suspeição do juiz se aplicam sem adaptação.
+(B) as prescrições sobre suspeição se aplicam, no que couber.
+(C) apenas parentesco gera afastamento.
+(D) nunca se aplica suspeição.
+(E) somente o Ministério Público pode alegá-la.
 
 ### 3.
+A indicação de defensor pelo acusado no interrogatório
 
-A constituição de defensor pelo acusado
-
-(A) exige sempre instrumento público de mandato.
-(B) exige procuração escrita ainda que o defensor seja indicado no interrogatório.
-(C) independe de instrumento de mandato se o acusado o indicar por ocasião do interrogatório.
-(D) só pode ocorrer antes do recebimento da denúncia.
-(E) impede posterior substituição do advogado.
+(A) exige mandato público.
+(B) exige procuração particular escrita.
+(C) dispensa instrumento de mandato.
+(D) só é possível antes da denúncia.
+(E) impede substituição posterior.
 
 ### 4.
+O militar acusado será citado
 
-O militar acusado em processo penal será citado
-
-(A) exclusivamente por edital.
+(A) por edital.
 (B) por intermédio do chefe do respectivo serviço.
-(C) por carta rogatória.
-(D) por comunicação ao Ministério da Defesa, dispensada ciência pessoal.
-(E) por publicação no órgão oficial.
+(C) por rogatória.
+(D) exclusivamente por meio eletrônico.
+(E) por publicação oficial.
 
 ### 5.
+Réu se oculta deliberadamente para evitar a citação. A providência adequada é
 
-Verificado que o réu se oculta deliberadamente para não ser citado, a providência adequada é
-
-(A) edital de 15 dias, necessariamente.
-(B) suspensão imediata do processo e da prescrição.
-(C) citação com hora certa, observada a disciplina legal.
-(D) carta precatória ao último endereço conhecido.
-(E) prosseguimento sem qualquer citação.
+(A) edital automático.
+(B) suspensão imediata do processo.
+(C) citação com hora certa.
+(D) precatória ao último endereço.
+(E) prosseguimento sem citação.
 
 ### 6.
+Citado por edital, o acusado não comparece nem constitui advogado. Em regra,
 
-Citado por edital, o acusado não compareceu nem constituiu advogado. Nessa hipótese, em regra,
-
-(A) o processo segue normalmente, mas a prescrição fica suspensa.
-(B) o processo e o curso do prazo prescricional ficam suspensos.
-(C) apenas o processo fica suspenso.
-(D) ocorre revelia com presunção de veracidade da acusação.
-(E) a denúncia é rejeitada por falta de pressuposto processual.
+(A) só a prescrição é suspensa.
+(B) processo e prazo prescricional são suspensos.
+(C) só o processo é suspenso.
+(D) há presunção de veracidade da acusação.
+(E) a denúncia é rejeitada.
 
 ### 7.
+A intimação do Ministério Público e do defensor nomeado é
 
-A intimação do defensor nomeado pelo juiz é
-
-(A) sempre feita exclusivamente por publicação.
+(A) exclusivamente por publicação.
 (B) pessoal.
-(C) dispensável quando houver defensor constituído anterior.
-(D) feita somente por correio eletrônico.
-(E) equivalente à citação do acusado.
+(C) dispensável.
+(D) apenas por e-mail.
+(E) equivalente à citação.
 
 ### 8.
-
-O procedimento comum ordinário é aplicável, segundo o critério legal básico, ao crime cuja sanção máxima cominada seja
+O procedimento comum ordinário usa, como critério básico, sanção máxima
 
 (A) superior a 2 anos.
 (B) igual ou superior a 3 anos.
 (C) igual ou superior a 4 anos de pena privativa de liberdade.
-(D) superior a 4 anos, sem incluir o limite exato.
+(D) superior a 4 anos, sem incluir 4.
 (E) inferior a 4 anos.
 
 ### 9.
+A diferença correta entre rejeição e absolvição sumária é:
 
-Assinale a alternativa que apresenta corretamente a diferença entre rejeição da acusação e absolvição sumária no procedimento comum.
-
-(A) Ambas ocorrem necessariamente depois da instrução.
-(B) A rejeição do art. 395 precede a resposta à acusação; a absolvição do art. 397 ocorre após a resposta, nas hipóteses legais.
-(C) A rejeição exige prova de inocência; a absolvição sumária exige inépcia.
-(D) A rejeição só existe no júri; a absolvição sumária só existe no rito ordinário.
-(E) São expressões equivalentes para a mesma decisão.
+(A) ambas vêm depois da instrução.
+(B) rejeição do art. 395 precede a resposta; absolvição do art. 397 ocorre depois da resposta.
+(C) rejeição exige prova de inocência; absolvição exige inépcia.
+(D) rejeição só existe no júri.
+(E) são a mesma decisão.
 
 ### 10.
-
-No procedimento comum ordinário e no sumário, o número máximo de testemunhas por parte é, respectivamente,
+O número máximo de testemunhas por parte no ordinário e no sumário é, respectivamente,
 
 (A) 8 e 5.
 (B) 5 e 8.
@@ -1135,61 +974,55 @@ No procedimento comum ordinário e no sumário, o número máximo de testemunhas
 (D) 5 e 5.
 (E) 10 e 5.
 
-## Questões 11 a 24 - Tribunal do Júri e procedimento sumário
+## Questões 11 a 24 - júri e procedimento sumário
 
 ### 11.
+Na primeira fase do júri, o prazo de resposta e o máximo de testemunhas são
 
-Na primeira fase do procedimento do júri, citado o acusado, o prazo para resposta escrita e o número máximo de testemunhas que pode arrolar são, respectivamente,
-
-(A) 5 dias e 5 testemunhas.
-(B) 10 dias e 5 testemunhas.
-(C) 10 dias e 8 testemunhas.
-(D) 15 dias e 8 testemunhas.
-(E) 15 dias e 5 testemunhas.
+(A) 5 dias e 5.
+(B) 10 dias e 5.
+(C) 10 dias e 8.
+(D) 15 dias e 8.
+(E) 15 dias e 5.
 
 ### 12.
+A pronúncia exige convencimento sobre
 
-A pronúncia exige que o juiz esteja convencido
-
-(A) da culpa definitiva do acusado, sem qualquer dúvida.
-(B) apenas da materialidade, sendo irrelevante qualquer indício de autoria.
-(C) da materialidade e da existência de indícios suficientes de autoria ou participação.
-(D) da inexistência de qualquer causa defensiva.
-(E) de que a pena concreta superará 4 anos.
+(A) culpa definitiva.
+(B) apenas materialidade.
+(C) materialidade e indícios suficientes de autoria ou participação.
+(D) inexistência de qualquer tese defensiva.
+(E) pena concreta acima de 4 anos.
 
 ### 13.
-
 A impronúncia
 
-(A) equivale a absolvição definitiva de mérito em qualquer hipótese.
-(B) impede nova acusação, mesmo que surja prova nova.
-(C) permite nova acusação, enquanto não extinta a punibilidade, se houver prova nova.
-(D) somente pode ser proferida pelo Tribunal de Justiça.
-(E) deve ser impugnada por recurso em sentido estrito.
+(A) sempre equivale a absolvição definitiva.
+(B) impede nova acusação mesmo com prova nova.
+(C) admite nova acusação com prova nova enquanto não extinta a punibilidade.
+(D) só pode ser proferida pelo tribunal.
+(E) é atacada sempre por RESE.
 
 ### 14.
+Após a preclusão da pronúncia, o rol de plenário admite até
 
-Após a preclusão da pronúncia, acusação e defesa podem apresentar rol de testemunhas para plenário no prazo legal, até o máximo de
-
-(A) 3 por parte.
+(A) 3 testemunhas por parte.
 (B) 5 por parte.
 (C) 8 por parte.
 (D) 10 por parte.
 (E) 15 por parte.
 
 ### 15.
+O desaforamento pode ocorrer, observados os requisitos legais, por
 
-O desaforamento do julgamento pelo Tribunal do Júri pode ser determinado, observados os requisitos legais, por motivo de
-
-(A) mera conveniência da defesa, sem fundamentação.
-(B) interesse da ordem pública, dúvida sobre a imparcialidade do júri ou segurança pessoal do acusado.
-(C) qualquer recurso pendente contra a pronúncia.
-(D) preferência do Ministério Público por comarca mais próxima da capital.
-(E) necessidade de ampliar o número de jurados para 30.
+(A) mera conveniência da defesa.
+(B) ordem pública, dúvida sobre imparcialidade do júri ou segurança do acusado.
+(C) qualquer recurso pendente.
+(D) preferência do Ministério Público.
+(E) necessidade de ampliar jurados para 30.
 
 ### 16.
-
-O Tribunal do Júri é composto por 1 juiz-presidente e por 25 jurados sorteados, dos quais formam o Conselho de Sentença
+Dos 25 jurados sorteados, formam o Conselho de Sentença
 
 (A) 5.
 (B) 6.
@@ -1198,332 +1031,299 @@ O Tribunal do Júri é composto por 1 juiz-presidente e por 25 jurados sorteados
 (E) 9.
 
 ### 17.
-
-Para a instalação dos trabalhos do júri, devem estar presentes pelo menos
+Para instalar os trabalhos do júri, devem estar presentes pelo menos
 
 (A) 7 jurados.
-(B) 10 jurados.
-(C) 12 jurados.
-(D) 15 jurados.
-(E) 18 jurados.
+(B) 10.
+(C) 12.
+(D) 15.
+(E) 18.
 
 ### 18.
-
-Na formação do Conselho de Sentença, defesa e acusação podem recusar imotivadamente, cada uma,
+Acusação e defesa podem recusar imotivadamente, cada uma,
 
 (A) 1 jurado.
-(B) 2 jurados.
-(C) 3 jurados.
-(D) 5 jurados.
-(E) número ilimitado de jurados.
+(B) 2.
+(C) 3.
+(D) 5.
+(E) número ilimitado.
 
 ### 19.
+O tempo básico dos debates em plenário é de
 
-No debate ordinário em plenário do júri, o tempo básico destinado à acusação e à defesa é de
-
-(A) 30 minutos para cada uma.
-(B) 45 minutos para cada uma.
-(C) 1 hora para cada uma.
-(D) 1 hora e 30 minutos para cada uma.
-(E) 2 horas para cada uma.
+(A) 30 minutos para cada lado.
+(B) 45 minutos.
+(C) 1 hora.
+(D) 1 hora e 30 minutos.
+(E) 2 horas.
 
 ### 20.
+Usar o silêncio do acusado como argumento de autoridade em seu prejuízo, nas condições do art. 478,
 
-Durante os debates do júri, a parte pretende explorar o silêncio do acusado como argumento para convencê-lo a ser condenado. Segundo o CPP, essa utilização
-
-(A) é livre, por integrar a estratégia retórica da acusação.
-(B) é vedada nas condições previstas pela lei.
-(C) só é vedada se houver mais de um acusado.
+(A) é livre.
+(B) é vedado.
+(C) só é vedado com dois acusados.
 (D) depende de autorização da defesa.
-(E) é obrigatória na réplica.
+(E) é obrigatório na réplica.
 
 ### 21.
+A ordem básica dos quesitos começa por
 
-Na formulação dos quesitos, a ordem legal básica começa por
-
-(A) qualificadoras e causas de aumento.
-(B) materialidade e, depois, autoria ou participação.
-(C) pena e regime inicial.
-(D) absolvição e, depois, materialidade.
-(E) agravantes e atenuantes.
+(A) qualificadoras.
+(B) materialidade e autoria ou participação.
+(C) pena e regime.
+(D) absolvição e materialidade.
+(E) agravantes.
 
 ### 22.
+Desclassificada a infração para crime de competência singular, compete
 
-Se os jurados desclassificarem a infração para crime de competência do juiz singular, compete
-
-(A) necessariamente ao tribunal julgar imediatamente o mérito.
-(B) ao juiz-presidente proferir a decisão correspondente, observadas as regras aplicáveis.
-(C) ao Ministério Público escolher novo juízo.
+(A) ao tribunal decidir diretamente.
+(B) ao juiz-presidente decidir conforme as regras aplicáveis.
+(C) ao Ministério Público escolher o juízo.
 (D) ao Conselho de Sentença fixar a pena.
-(E) ao escrivão remeter o processo ao juízo de origem sem decisão.
+(E) ao escrivão remeter sem decisão.
 
 ### 23.
-
-No procedimento sumário, a audiência de instrução e julgamento deve ser realizada, em regra, no prazo máximo de
+No procedimento sumário, a audiência deve ocorrer, em regra, em até
 
 (A) 15 dias.
-(B) 20 dias.
-(C) 30 dias.
-(D) 45 dias.
-(E) 60 dias.
+(B) 20.
+(C) 30.
+(D) 45.
+(E) 60.
 
 ### 24.
-
 No procedimento sumário, cada parte pode arrolar até
 
 (A) 3 testemunhas.
-(B) 4 testemunhas.
-(C) 5 testemunhas.
-(D) 8 testemunhas.
-(E) 10 testemunhas.
+(B) 4.
+(C) 5.
+(D) 8.
+(E) 10.
 
-## Questões 25 a 40 - recursos, revisão, carta testemunhável e habeas corpus
+## Questões 25 a 40 - recursos e impugnações
 
 ### 25.
-
 O Ministério Público, depois de interpor recurso,
 
-(A) pode desistir livremente antes das contrarrazões.
-(B) pode desistir apenas com concordância do réu.
-(C) não pode desistir do recurso interposto.
-(D) pode desistir apenas de recurso em sentido estrito.
-(E) pode desistir apenas de apelação.
+(A) pode desistir livremente.
+(B) depende de concordância do réu para desistir.
+(C) não pode desistir.
+(D) só pode desistir do RESE.
+(E) só pode desistir da apelação.
 
 ### 26.
+A fungibilidade recursal significa, em síntese, que
 
-A regra de fungibilidade recursal do CPP estabelece, em síntese, que
-
-(A) qualquer recurso errado é automaticamente convertido, inclusive se houver má-fé.
-(B) a parte não será prejudicada pela interposição de um recurso por outro, salvo hipótese de má-fé.
-(C) só existe fungibilidade entre apelação e embargos de declaração.
-(D) a fungibilidade depende sempre de autorização da parte contrária.
-(E) o recurso inadequado deve ser sempre rejeitado sem exame.
+(A) qualquer erro é convertido, inclusive com má-fé.
+(B) salvo má-fé, a parte não será prejudicada pela interposição de um recurso por outro.
+(C) só existe entre apelação e embargos.
+(D) depende da parte contrária.
+(E) recurso inadequado sempre é rejeitado.
 
 ### 27.
-
-Contra a pronúncia e contra a impronúncia cabem, respectivamente,
+Contra pronúncia e impronúncia cabem, respectivamente,
 
 (A) apelação e RESE.
 (B) RESE e apelação.
 (C) RESE e RESE.
 (D) apelação e apelação.
-(E) habeas corpus e revisão criminal.
+(E) habeas corpus e revisão.
 
 ### 28.
-
-O prazo geral de interposição do recurso em sentido estrito é de
+O prazo geral de interposição do RESE é de
 
 (A) 2 dias.
-(B) 3 dias.
-(C) 5 dias.
-(D) 8 dias.
-(E) 10 dias.
+(B) 3.
+(C) 5.
+(D) 8.
+(E) 10.
 
 ### 29.
+Para o baseline de 2025-07-29, o art. 584 do CPP
 
-Considerando o baseline normativo desta apostila, vigente em 2025-07-29, o art. 584 do CPP
-
-(A) deve ser estudado com um § 4º introduzido em 2026.
-(B) termina no § 3º para fins deste recorte, sem absorver a alteração legislativa posterior.
+(A) deve incluir o § 4º de 2026.
+(B) termina no § 3º para este recorte.
 (C) estava integralmente revogado.
-(D) não pertence ao intervalo previsto no edital.
-(E) disciplina apenas apelação.
+(D) está fora do edital.
+(E) trata apenas de apelação.
 
 ### 30.
+Se a decisão dos jurados for manifestamente contrária à prova dos autos, a apelação provida leva a
 
-Reconhecendo o tribunal que a decisão dos jurados é manifestamente contrária à prova dos autos, a consequência prevista para a apelação é
-
-(A) substituição direta do veredicto por condenação ou absolvição do tribunal.
-(B) realização de novo julgamento, não se admitindo segunda apelação pelo mesmo motivo.
-(C) extinção automática da punibilidade.
-(D) conversão do recurso em revisão criminal.
-(E) retorno obrigatório à fase de pronúncia.
+(A) substituição direta do veredicto pelo tribunal.
+(B) novo julgamento, sem segunda apelação pelo mesmo fundamento.
+(C) extinção da punibilidade.
+(D) revisão criminal automática.
+(E) retorno obrigatório à pronúncia.
 
 ### 31.
+Se somente o réu apela,
 
-Se somente o réu interpõe apelação,
-
-(A) o tribunal pode agravar livremente a pena.
-(B) a pena só pode ser agravada se o Ministério Público apresentar contrarrazões.
-(C) aplica-se a vedação à reformatio in pejus nos termos legais.
+(A) a pena pode ser agravada livremente.
+(B) contrarrazões do MP autorizam agravamento.
+(C) aplica-se a vedação à reformatio in pejus.
 (D) o recurso é inadmissível.
-(E) o tribunal deve anular a sentença.
+(E) a sentença deve ser anulada.
 
 ### 32.
-
 A revisão criminal
 
-(A) só pode ser requerida durante o cumprimento da pena.
-(B) pode ser requerida a qualquer tempo e não pode agravar a pena da decisão revista.
-(C) é recurso com prazo de 5 dias.
-(D) somente pode ser proposta pelo Ministério Público.
-(E) exige que o condenado esteja preso.
+(A) só cabe durante o cumprimento da pena.
+(B) pode ser requerida a qualquer tempo e não pode agravar a pena revista.
+(C) é recurso de 5 dias.
+(D) só pode ser proposta pelo MP.
+(E) exige prisão do condenado.
 
 ### 33.
+A carta testemunhável cabe quando
 
-A carta testemunhável
-
-(A) tem efeito suspensivo automático.
-(B) substitui a apelação e julga diretamente o mérito da condenação.
-(C) pode ser utilizada quando recurso é denegado ou, admitido, tem sua expedição e seguimento obstados.
-(D) somente existe para decisões do Tribunal do Júri.
-(E) exige trânsito em julgado.
+(A) há efeito suspensivo automático.
+(B) se pretende substituir qualquer apelação.
+(C) o recurso é denegado ou, admitido, tem expedição e seguimento obstados.
+(D) somente há decisão do júri.
+(E) existe trânsito em julgado.
 
 ### 34.
-
 O habeas corpus pode ser impetrado
 
-(A) somente por advogado inscrito na OAB.
-(B) somente pelo próprio paciente.
-(C) por qualquer pessoa, em favor próprio ou de terceiro, e também pelo Ministério Público.
-(D) apenas pela Defensoria Pública.
-(E) apenas depois do trânsito em julgado.
+(A) só por advogado.
+(B) só pelo paciente.
+(C) por qualquer pessoa em favor próprio ou de terceiro e também pelo MP.
+(D) só pela Defensoria.
+(E) só após trânsito em julgado.
 
 ### 35.
+Habeas corpus preventivo é adequado quando
 
-O habeas corpus preventivo é adequado, em termos gerais, quando
-
-(A) já houve condenação definitiva e se pretende produzir prova nova.
-(B) há ameaça concreta de coação ilegal à liberdade de locomoção.
-(C) se discute exclusivamente indenização civil.
-(D) se pretende corrigir erro material de sentença.
-(E) se busca substituir apelação sobre qualquer matéria.
+(A) há condenação definitiva e prova nova.
+(B) existe ameaça concreta de coação ilegal à locomoção.
+(C) há apenas indenização civil.
+(D) se corrige erro material.
+(E) se substitui qualquer apelação.
 
 ### 36.
-
-Nos embargos de declaração previstos no art. 619 do CPP, o prazo é de
+O prazo dos embargos de declaração do art. 619 do CPP é de
 
 (A) 2 dias.
-(B) 3 dias.
-(C) 5 dias.
-(D) 8 dias.
-(E) 10 dias.
+(B) 3.
+(C) 5.
+(D) 8.
+(E) 10.
 
 ### 37.
-
-Os arts. 604 a 608 e 632 a 636 do CPP, dentro dos intervalos numéricos cobrados,
+Os arts. 604-608 e 632-636 do CPP
 
 (A) devem ser reconstruídos por analogia.
-(B) contêm regras atuais de apelação e revisão.
-(C) estão revogados e não autorizam criação de conteúdo normativo inexistente.
-(D) foram deslocados para a Lei n.º 9.099/1995.
+(B) contêm regras atuais de apelação.
+(C) estão revogados e não autorizam criar conteúdo normativo inexistente.
+(D) foram transferidos à Lei n.º 9.099/1995.
 (E) tratam todos de habeas corpus.
 
 ### 38.
-
 A restauração de autos extraviados em segunda instância
 
-(A) necessariamente tramita originariamente no tribunal.
-(B) é feita no juízo de primeira instância, conforme a disciplina do CPP.
-(C) é dispensada quando houver sentença.
-(D) depende sempre de concordância do Ministério Público.
-(E) extingue o processo original.
+(A) tramita necessariamente no tribunal.
+(B) é feita em primeira instância.
+(C) é dispensada se houver sentença.
+(D) depende de concordância do MP.
+(E) extingue o processo.
 
 ### 39.
+Se os autos originais reaparecem depois da restauração,
 
-Se os autos originais aparecem depois de concluída a restauração,
-
-(A) os autos restaurados permanecem exclusivos e os originais são destruídos.
-(B) o processo prossegue nos originais, apensando-se os restaurados.
-(C) ambos são descartados e o processo reinicia.
-(D) é obrigatória nova denúncia.
-(E) ocorre nulidade absoluta de todos os atos anteriores.
+(A) os originais são destruídos.
+(B) o processo prossegue nos originais, com os restaurados apensados.
+(C) o processo reinicia.
+(D) exige nova denúncia.
+(E) todos os atos se tornam nulos.
 
 ### 40.
+Decisão favorável a corréu por motivo não exclusivamente pessoal
 
-No CPP, a decisão favorável a um corréu fundada em motivo não exclusivamente pessoal
-
-(A) jamais aproveita aos demais.
-(B) pode aproveitar aos demais corréus, nos termos do art. 580.
+(A) nunca aproveita aos demais.
+(B) pode aproveitar aos demais, nos termos do art. 580.
 (C) depende de nova denúncia.
-(D) transforma-se em revisão criminal.
-(E) só se estende se todos tiverem recorrido conjuntamente.
+(D) vira revisão criminal.
+(E) só se estende se todos recorreram juntos.
 
 ## Questões 41 a 52 - Juizado Especial Criminal
 
 ### 41.
+É infração de menor potencial ofensivo, para a Lei n.º 9.099/1995,
 
-Considera-se infração penal de menor potencial ofensivo, para a Lei n.º 9.099/1995,
-
-(A) apenas contravenção penal.
-(B) crime cuja pena mínima seja inferior a 2 anos.
-(C) contravenção e crime cuja pena máxima não seja superior a 2 anos, cumulada ou não com multa.
-(D) qualquer crime sem violência.
-(E) todo crime de ação penal condicionada.
+(A) apenas contravenção.
+(B) crime com pena mínima inferior a 2 anos.
+(C) contravenção e crime com pena máxima não superior a 2 anos, cumulada ou não com multa.
+(D) todo crime sem violência.
+(E) todo crime condicionado.
 
 ### 42.
+Não encontrado o acusado para citação pessoal no JECrim,
 
-Não encontrado o acusado para citação pessoal no Juizado Especial Criminal,
-
-(A) realiza-se citação por edital no próprio Juizado.
+(A) usa-se edital no próprio Juizado.
 (B) suspende-se o processo por 1 ano.
-(C) as peças são encaminhadas ao juízo comum para adoção do procedimento previsto em lei.
+(C) as peças são remetidas ao juízo comum.
 (D) extingue-se a punibilidade.
-(E) considera-se o acusado automaticamente revel.
+(E) há revelia automática.
 
 ### 43.
+Composição civil homologada em ação privada ou pública condicionada
 
-A composição civil dos danos homologada, em ação penal privada ou pública condicionada à representação,
-
-(A) não produz qualquer efeito sobre o direito de queixa ou representação.
+(A) não afeta queixa ou representação.
 (B) acarreta renúncia ao direito de queixa ou representação.
 (C) gera reincidência.
-(D) equivale a condenação penal.
+(D) equivale a condenação.
 (E) impede execução civil.
 
 ### 44.
-
-Entre as causas legais que impedem nova transação penal está o fato de o agente ter sido beneficiado anteriormente com transação dentro do prazo de
+Benefício anterior por transação impede nova proposta, segundo o art. 76, quando ocorrido nos últimos
 
 (A) 1 ano.
-(B) 2 anos.
-(C) 3 anos.
-(D) 5 anos.
-(E) 10 anos.
+(B) 2.
+(C) 3.
+(D) 5.
+(E) 10.
 
 ### 45.
+A sanção aplicada em transação penal
 
-A aplicação de pena em transação penal
-
-(A) gera reincidência automaticamente.
-(B) equivale a sentença condenatória comum.
-(C) não importa reincidência, preservados os efeitos legais específicos do benefício.
-(D) só pode consistir em prisão.
-(E) exige confissão formal de culpa como requisito expresso da lei.
+(A) gera reincidência.
+(B) é condenação comum.
+(C) não gera reincidência, preservados os efeitos legais específicos.
+(D) só pode ser prisão.
+(E) exige confissão como requisito expresso.
 
 ### 46.
-
-Da sentença no Juizado Especial Criminal cabe apelação no prazo de
+Da sentença no JECrim cabe apelação no prazo de
 
 (A) 2 dias.
-(B) 5 dias.
-(C) 8 dias.
-(D) 10 dias.
-(E) 15 dias.
+(B) 5.
+(C) 8.
+(D) 10.
+(E) 15.
 
 ### 47.
+No JECrim, embargos de declaração
 
-No JECrim, os embargos de declaração são opostos no prazo de
-
-(A) 2 dias e suspendem o prazo recursal.
-(B) 3 dias e não afetam o prazo recursal.
-(C) 5 dias e interrompem o prazo para recurso.
-(D) 8 dias e interrompem apenas a apelação.
-(E) 10 dias e substituem a apelação.
+(A) têm 2 dias e suspendem o prazo.
+(B) têm 3 dias.
+(C) têm 5 dias e interrompem o prazo recursal.
+(D) têm 8 dias.
+(E) têm 10 dias.
 
 ### 48.
+Segundo o art. 88, depende de representação a ação relativa a
 
-Além das hipóteses previstas no Código Penal e em legislação especial, depende de representação, segundo o art. 88 da Lei n.º 9.099/1995,
-
-(A) qualquer lesão corporal grave.
-(B) lesão corporal leve e lesão culposa.
+(A) qualquer lesão grave.
+(B) lesão leve e lesão culposa.
 (C) homicídio culposo.
-(D) contravenção de vias de fato em qualquer hipótese.
+(D) toda via de fato.
 (E) todo crime com pena máxima inferior a 4 anos.
 
 ### 49.
-
-A suspensão condicional do processo pode ser proposta, presentes os demais requisitos, nos crimes em que a pena mínima cominada seja
+A suspensão condicional do processo usa como critério objetivo pena mínima
 
 (A) inferior a 2 anos.
 (B) igual ou inferior a 1 ano.
@@ -1532,7 +1332,6 @@ A suspensão condicional do processo pode ser proposta, presentes os demais requ
 (E) igual ou inferior a 4 anos.
 
 ### 50.
-
 O período de prova da suspensão condicional do processo é de
 
 (A) 6 meses a 1 ano.
@@ -1542,87 +1341,167 @@ O período de prova da suspensão condicional do processo é de
 (E) 4 a 6 anos.
 
 ### 51.
+Durante a suspensão condicional do processo,
 
-Durante o prazo de suspensão condicional do processo,
-
-(A) a prescrição continua correndo normalmente.
+(A) a prescrição corre normalmente.
 (B) não corre a prescrição.
-(C) a prescrição é reduzida à metade.
-(D) corre apenas para crimes conexos.
-(E) a prescrição é substituída por decadência.
+(C) a prescrição cai pela metade.
+(D) corre apenas para conexos.
+(E) vira decadência.
 
 ### 52.
+Expirado o período de prova sem revogação,
 
-Expirado o prazo da suspensão condicional do processo sem revogação,
+(A) a instrução reinicia automaticamente.
+(B) declara-se extinta a punibilidade.
+(C) oferece-se nova denúncia.
+(D) converte-se a pena em multa.
+(E) há condenação sem sentença.
 
-(A) o processo retorna automaticamente à instrução.
-(B) o juiz declara extinta a punibilidade.
-(C) o Ministério Público deve oferecer nova denúncia.
-(D) a pena é convertida em multa.
-(E) ocorre condenação sem sentença.
+## Questões 53 a 60 - fechamento de lacunas e literalidade de alto risco
+
+### 53.
+Segundo a literalidade do art. 262 do CPP, ao acusado menor
+
+(A) será dada apenas defesa dativa.
+(B) será dado curador.
+(C) será obrigatoriamente concedido habeas corpus.
+(D) será aplicado o procedimento sumaríssimo.
+(E) será dispensado defensor.
+
+### 54.
+No baseline do edital, o art. 394-A estabelece prioridade de tramitação para processos que apurem
+
+(A) apenas contravenções.
+(B) crime hediondo ou violência contra a mulher.
+(C) somente crimes dolosos contra a vida.
+(D) qualquer crime com pena mínima de 1 ano.
+(E) apenas crimes julgados pelo júri.
+
+### 55.
+O art. 400-A do CPP, vigente no cutoff, busca proteger durante a audiência
+
+(A) apenas a autoridade policial.
+(B) a integridade física e psicológica da vítima, vedando condutas ofensivas nas hipóteses legais.
+(C) exclusivamente o sigilo do jurado.
+(D) apenas a testemunha de defesa.
+(E) somente o acusado preso.
+
+### 56.
+Dentro do recorte dos arts. 531-538, é correto afirmar que
+
+(A) o art. 537 contém hoje o prazo da audiência sumária.
+(B) o art. 537 está revogado e o art. 538 manda aplicar o rito sumário quando o JECrim remete as peças ao juízo comum na hipótese legal.
+(C) o art. 538 está revogado integralmente.
+(D) o art. 537 regula apelação.
+(E) ambos regulam habeas corpus.
+
+### 57.
+No intervalo dos arts. 604-620, o art. 611
+
+(A) permanece vigente com prazo de 5 dias.
+(B) está revogado.
+(C) regula a apelação do júri.
+(D) fixa o prazo do RESE.
+(E) criou a carta testemunhável.
+
+### 58.
+A carta testemunhável deve ser requerida, segundo o art. 640, nas
+
+(A) 24 horas seguintes.
+(B) 48 horas seguintes ao despacho que denegar o recurso.
+(C) 5 dias seguintes.
+(D) 8 dias seguintes.
+(E) 10 dias seguintes.
+
+### 59.
+O art. 647-A do CPP permite, dentro da competência jurisdicional e nas condições legais,
+
+(A) somente revisão criminal de ofício.
+(B) expedição de ofício de ordem de habeas corpus quando constatada coação ilegal.
+(C) apelação de ofício em todo processo.
+(D) carta testemunhável sem recurso prévio.
+(E) transação penal pelo tribunal.
+
+### 60.
+Na audiência do JECrim, o art. 81, § 1º-A,
+
+(A) autoriza perguntas sobre qualquer aspecto da vida da vítima.
+(B) impõe respeito à dignidade da vítima e veda manifestações e materiais ofensivos nas hipóteses legais.
+(C) extingue o interrogatório do acusado.
+(D) substitui a defesa técnica.
+(E) revoga a oralidade.
 
 ---
 
 # Gabarito comentado
 
-**1. C.** Aconselhar qualquer das partes é causa expressa de suspeição.  
-**2. B.** O art. 274 estende aos serventuários e funcionários as prescrições sobre suspeição, no que couber.  
-**3. C.** A indicação do defensor por ocasião do interrogatório dispensa instrumento de mandato.  
-**4. B.** O militar é citado por intermédio do chefe do respectivo serviço.  
-**5. C.** Ocultação deliberada conduz à citação com hora certa; simples não localização conduz ao edital.  
-**6. B.** Edital sem comparecimento e sem advogado suspende processo e prazo prescricional, sem impedir medidas urgentes legalmente cabíveis.  
-**7. B.** Ministério Público e defensor nomeado recebem intimação pessoal.  
-**8. C.** O ordinário adota como critério pena máxima igual ou superior a 4 anos.  
-**9. B.** A rejeição do art. 395 antecede a resposta; a absolvição sumária do art. 397 vem depois dela.  
-**10. A.** Até 8 testemunhas por parte no ordinário e até 5 no sumário.  
-**11. C.** Na primeira fase do júri, resposta em 10 dias e até 8 testemunhas.  
-**12. C.** Pronúncia exige materialidade e indícios suficientes de autoria ou participação, não certeza condenatória.  
-**13. C.** A impronúncia admite nova acusação com prova nova enquanto não extinta a punibilidade.  
-**14. B.** Após a pronúncia, o rol de plenário é limitado a 5 testemunhas por parte.  
-**15. B.** São fundamentos legais do desaforamento ordem pública, dúvida sobre imparcialidade e segurança do acusado, além da hipótese legal de excesso de serviço.  
-**16. C.** Dos 25 jurados sorteados, 7 formam o Conselho de Sentença.  
-**17. D.** A sessão exige pelo menos 15 jurados presentes para instalação.  
-**18. C.** Cada lado dispõe de até 3 recusas imotivadas.  
-**19. D.** O tempo básico é de 1 hora e 30 minutos para cada lado.  
-**20. B.** A lei proíbe usar o silêncio ou a ausência de interrogatório como argumento prejudicial nas condições do art. 478.  
-**21. B.** A quesitação inicia com materialidade e autoria/participação.  
-**22. B.** Desclassificado o fato para competência singular, o juiz-presidente decide conforme as regras aplicáveis.  
-**23. C.** O prazo de referência para a audiência do rito sumário é 30 dias.  
-**24. C.** O sumário admite até 5 testemunhas por parte.  
-**25. C.** O Ministério Público não pode desistir de recurso que interpôs.  
-**26. B.** A fungibilidade protege a parte do erro na escolha do recurso, salvo má-fé.  
-**27. B.** Pronúncia é atacável por RESE; impronúncia, por apelação.  
-**28. C.** O prazo geral do RESE é de 5 dias, ressalvadas exceções legais.  
-**29. B.** Para o cutoff de 2025-07-29, o art. 584 é estudado sem o § 4º introduzido em 2026.  
-**30. B.** Reconhecida decisão manifestamente contrária à prova, determina-se novo julgamento, vedada segunda apelação pelo mesmo fundamento.  
-**31. C.** Recurso exclusivo da defesa não autoriza agravamento da situação do réu.  
-**32. B.** A revisão pode ser requerida a qualquer tempo e jamais pode agravar a pena revista.  
-**33. C.** A carta testemunhável destrava recurso denegado ou cujo seguimento foi obstado.  
-**34. C.** O CPP confere ampla legitimidade para impetração de habeas corpus, inclusive a qualquer pessoa e ao Ministério Público.  
-**35. B.** A modalidade preventiva protege contra ameaça concreta de coação ilegal à locomoção.  
-**36. A.** O art. 619 fixa prazo de 2 dias para embargos de declaração contra acórdão.  
-**37. C.** Dispositivo revogado não pode ser preenchido por analogia como se houvesse regra vigente.  
-**38. B.** A restauração tramita em primeiro grau mesmo se o desaparecimento ocorreu na segunda instância.  
-**39. B.** Reaparecendo os originais, o processo neles prossegue e os restaurados são apensados.  
-**40. B.** Fundamento não exclusivamente pessoal pode beneficiar corréus pelo art. 580.  
-**41. C.** Menor potencial ofensivo abrange contravenções e crimes com pena máxima não superior a 2 anos, cumulada ou não com multa.  
-**42. C.** O JECrim não usa edital para acusado não encontrado; as peças seguem ao juízo comum.  
-**43. B.** Na ação privada ou pública condicionada, a homologação da composição acarreta renúncia ao direito de queixa ou representação.  
-**44. D.** Benefício anterior por transação dentro de 5 anos impede nova proposta.  
-**45. C.** A transação não gera reincidência, embora produza efeitos próprios previstos na lei.  
-**46. D.** A apelação do JECrim é interposta em 10 dias, com razões e pedido na petição.  
-**47. C.** Embargos de declaração no JECrim têm prazo de 5 dias e interrompem o prazo recursal.  
-**48. B.** O art. 88 torna dependentes de representação as lesões corporais leves e culposas.  
-**49. B.** A suspensão condicional do processo tem como critério pena mínima igual ou inferior a 1 ano, além dos demais requisitos.  
+**1. C.** Aconselhamento a uma das partes é causa legal de suspeição.  
+**2. B.** O art. 274 menciona as prescrições sobre suspeição, no que couber.  
+**3. C.** A indicação no interrogatório dispensa instrumento de mandato.  
+**4. B.** O militar é citado por intermédio do chefe do serviço.  
+**5. C.** Ocultação deliberada conduz à hora certa.  
+**6. B.** Edital sem comparecimento e sem advogado suspende processo e prescrição.  
+**7. B.** MP e defensor nomeado recebem intimação pessoal.  
+**8. C.** O ordinário usa sanção máxima igual ou superior a 4 anos.  
+**9. B.** Rejeição vem antes da resposta; absolvição sumária, depois dela.  
+**10. A.** Ordinário admite até 8 e sumário até 5 testemunhas por parte.  
+**11. C.** No júri, resposta em 10 dias e até 8 testemunhas.  
+**12. C.** Pronúncia exige materialidade e indícios suficientes de autoria ou participação.  
+**13. C.** Impronúncia admite nova acusação com prova nova enquanto não extinta a punibilidade.  
+**14. B.** O rol de plenário é limitado a 5 por parte.  
+**15. B.** Esses são motivos legais centrais do desaforamento.  
+**16. C.** Sete jurados formam o Conselho de Sentença.  
+**17. D.** São necessários pelo menos 15 jurados presentes.  
+**18. C.** Cada lado possui até 3 recusas imotivadas.  
+**19. D.** O tempo ordinário é 1 hora e 30 minutos para cada lado.  
+**20. B.** O art. 478 veda essa exploração prejudicial nas condições legais.  
+**21. B.** Quesitação começa por materialidade e autoria ou participação.  
+**22. B.** Desclassificado o fato, o juiz-presidente decide conforme o regime aplicável.  
+**23. C.** O rito sumário usa prazo máximo de 30 dias para a audiência.  
+**24. C.** São até 5 testemunhas de cada lado.  
+**25. C.** O MP não pode desistir de recurso que interpôs.  
+**26. B.** A fungibilidade é afastada em caso de má-fé.  
+**27. B.** Pronúncia admite RESE; impronúncia, apelação.  
+**28. C.** O prazo geral do RESE é 5 dias.  
+**29. B.** O § 4º do art. 584 foi incluído em 2026 e não integra o cutoff.  
+**30. B.** O efeito é novo julgamento, sem segunda apelação pelo mesmo fundamento.  
+**31. C.** Recurso exclusivo da defesa não autoriza agravamento da pena.  
+**32. B.** A revisão pode ser requerida a qualquer tempo e nunca agrava a pena revista.  
+**33. C.** Carta testemunhável destrava recurso denegado ou obstado.  
+**34. C.** A legitimidade para habeas corpus é ampla no CPP.  
+**35. B.** A modalidade preventiva atua diante de ameaça concreta.  
+**36. A.** O art. 619 fixa 2 dias.  
+**37. C.** Dispositivos revogados não podem receber conteúdo inventado.  
+**38. B.** A restauração é feita no primeiro grau ainda que o extravio ocorra no segundo.  
+**39. B.** Reaparecendo os originais, o processo prossegue neles.  
+**40. B.** Motivo não exclusivamente pessoal pode aproveitar aos corréus.  
+**41. C.** Menor potencial ofensivo inclui contravenções e crimes com máxima até 2 anos, com ou sem multa.  
+**42. C.** O JECrim remete as peças ao juízo comum se o acusado não for encontrado para citação.  
+**43. B.** A composição homologada produz renúncia nas ações indicadas no art. 74.  
+**44. D.** Benefício anterior nos últimos 5 anos impede nova transação.  
+**45. C.** A transação não gera reincidência e tem efeitos específicos.  
+**46. D.** A apelação do JECrim é de 10 dias.  
+**47. C.** Embargos no JECrim têm 5 dias e interrompem o prazo recursal.  
+**48. B.** O art. 88 alcança lesões leves e culposas.  
+**49. B.** O critério objetivo do art. 89 é pena mínima igual ou inferior a 1 ano.  
 **50. C.** O período de prova é de 2 a 4 anos.  
-**51. B.** Durante a suspensão do processo não corre a prescrição.  
-**52. B.** Cumprido o período sem revogação, declara-se extinta a punibilidade.
+**51. B.** A prescrição não corre durante a suspensão.  
+**52. B.** Sem revogação, declara-se extinta a punibilidade.  
+**53. B.** Essa é a literalidade do art. 262.  
+**54. B.** O art. 394-A já abrangia crime hediondo e violência contra a mulher no cutoff.  
+**55. B.** O art. 400-A protege a dignidade da vítima e testemunhas durante a audiência.  
+**56. B.** O art. 537 está revogado; o art. 538 preserva a remessa do JECrim ao rito sumário.  
+**57. B.** O art. 611 foi revogado pelo Decreto-Lei n.º 552/1969.  
+**58. B.** O art. 640 fixa 48 horas.  
+**59. B.** O art. 647-A disciplina habeas corpus de ofício nas condições legais.  
+**60. B.** O § 1º-A do art. 81 protege a dignidade da vítima na audiência do JECrim.
 
 ---
 
 ## Fechamento
 
-O núcleo desta matéria não é decorar listas soltas. É saber localizar a questão em um fluxo:
+O núcleo desta matéria é localizar o problema dentro de um fluxo e então identificar o elemento legal decisivo:
 
 ```text
 sujeito e imparcialidade
@@ -1630,8 +1509,8 @@ sujeito e imparcialidade
 -> escolha do procedimento
 -> sequência da instrução
 -> decisão adequada
--> recurso ou meio de impugnação
--> efeito
+-> recurso ou impugnação
+-> efeito e prazo
 ```
 
-Quando duas alternativas parecerem corretas, compare o elemento que a lei torna decisivo: sujeito, momento, prazo, competência, requisito, cabimento ou efeito. Essa comparação elimina grande parte dos distratores plausíveis do bloco processual penal.
+Quando duas alternativas parecerem próximas, compare sujeito, momento, prazo, competência, requisito, cabimento e efeito. Essa disciplina elimina grande parte dos distratores plausíveis em Direito Processual Penal.
