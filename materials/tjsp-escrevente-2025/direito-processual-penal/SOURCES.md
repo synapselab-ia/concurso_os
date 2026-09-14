@@ -1,6 +1,6 @@
 # SOURCES - Direito Processual Penal - TJSP Escrevente 2025
 
-**Pack version:** `0.1.0-draft.2`  
+**Pack version:** `0.1.0-rc.1`  
 **Full source review:** `2026-09-14`
 
 ## Regra de autoridade
@@ -49,11 +49,11 @@ art. 584 no baseline = §§ 1º a 3º
 art. 584, § 4º de 2026 = drift de backoffice
 ```
 
-Nenhum outro drift pós-cutoff foi promovido a conteúdo estudável neste QA.
+Nenhum outro drift pós-cutoff foi promovido a conteúdo estudável no QA semântico.
 
 ### Pontos de completude corrigidos no QA
 
-A revisão integral levou à explicitação de pontos que estavam ausentes ou superficiais no `draft.1`, entre eles:
+A revisão integral de `DIREITO-009` explicitou, entre outros:
 
 - art. 262;
 - arts. 363-365;
@@ -92,14 +92,14 @@ As provas históricas permanecem exclusivamente como backoffice de engenharia ed
 - `SRC-TJSP-PROVA-2023`, SHA-256 `ae203c145c68766c83aa4c4b35dbb2778854481f9d89fb752de28b649f3bfc4d`;
 - `SRC-TJSP-PROVA-2021`, SHA-256 `4368240090841eab1de84d20cfbfd0d8a86579a081136308f2409051f4e12d90`.
 
-O Gate 3 sustenta engenharia silenciosa de literalidade, fluxo, prazo, competência, recurso e distractores próximos. Não altera o syllabus.
+O Gate 3 sustenta engenharia silenciosa de literalidade, fluxo, prazo, competência, recurso e distratores próximos. Não altera o syllabus.
 
 ## Artefatos canônicos de engenharia
 
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`: análise empírica;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`: contrato `DPP-01...DPP-25`;
 - `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`: inventário de versão de B2;
-- `APOSTILA_QA_0.1.0.md`: resultado de `DIREITO-009`;
+- `APOSTILA_QA_0.1.0.md`: resultado de `DIREITO-009` e QA estático de `DIREITO-010`;
 - `materials/tjsp-escrevente-2025/direito-penal/NOTEBOOKLM_SMOKE_0.1.0.md`: lição de processo, não fonte jurídica.
 
 ## Política de redação
@@ -111,6 +111,18 @@ O Gate 3 sustenta engenharia silenciosa de literalidade, fluxo, prazo, competên
 - questões e mini-casos são autorais;
 - revogações no intervalo são identificadas explicitamente quando relevantes.
 
-## Estado desta revisão
+## Relação entre `draft.2` e `rc.1`
 
-O `0.1.0-draft.2` passou pelo QA semântico/normativo registrado em `APOSTILA_QA_0.1.0.md` como `PASS_AFTER_CORRECTIONS` no eixo normativo. Está apto a avançar para preparação de release candidate, mas ainda não é RC e não possui PDF ou QA NotebookLM.
+O `0.1.0-rc.1` não altera o conteúdo jurídico aprovado no `0.1.0-draft.2`. `DIREITO-010` promove a identidade do candidato, acrescenta `METODOLOGIA_NOTEBOOKLM.md` e registra QA estático. A revisão normativa permanece a executada em `DIREITO-009`.
+
+## Política para NotebookLM
+
+A arquitetura do release candidate é:
+
+```text
+fonte estudável -> APOSTILA.pdf validado e versionado
+configuração do tutor -> METODOLOGIA_NOTEBOOKLM.md na camada nativa da conversa
+backoffice -> GitHub/ChatGPT
+```
+
+`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. Enquanto o PDF canônico e o smoke real permanecerem pendentes, o pack continua `release_candidate_incomplete`.

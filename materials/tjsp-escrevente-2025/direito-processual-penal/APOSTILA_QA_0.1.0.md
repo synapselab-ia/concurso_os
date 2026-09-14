@@ -1,16 +1,18 @@
 # APOSTILA_QA_0.1.0 - Direito Processual Penal - TJSP Escrevente 2025
 
 **QA date:** `2026-09-14`  
-**Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2`  
+**Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2` -> `0.1.0-rc.1`  
 **Pack:** `direito-processual-penal`  
-**Gate:** `DIREITO-009`  
+**Semantic gate:** `DIREITO-009`  
+**RC preparation gate:** `DIREITO-010`  
 **Overall semantic result:** `PASS`  
 **Normative result:** `PASS_AFTER_CORRECTIONS`  
-**Release-candidate readiness:** `READY_FOR_RC_PREPARATION`
+**Release candidate:** `0.1.0-rc.1_incomplete`  
+**Static NotebookLM result:** `PASS_STATIC`
 
 ## 1. Escopo e método
 
-O QA foi executado contra o syllabus canônico, a matriz `DPP-01...DPP-25`, o inventário de versões de B2 e as fontes normativas primárias `SRC-B2-CPP` e `SRC-B2-L9099`.
+O QA semântico foi executado contra o syllabus canônico, a matriz `DPP-01...DPP-25`, o inventário de versões de B2 e as fontes normativas primárias `SRC-B2-CPP` e `SRC-B2-L9099`.
 
 Recorte auditado:
 
@@ -21,7 +23,7 @@ Baseline: `2025-07-29`.
 
 A revisão não tratou provas históricas como fonte de direito. `DIREITO_B2_BANCA_ANALYSIS.md` foi usado apenas para calibrar contraste, fluxo, prazo e formato de prática, sem inferência de frequência futura.
 
-O `draft.1` apresentava cobertura estrutural completa pelas 25 unidades, mas a revisão artigo por artigo encontrou pontos literais e de completude que precisavam ser explicitados antes de um PASS. O `draft.2` incorpora essas correções e continua sendo draft: nenhum PDF, release candidate ou smoke de NotebookLM foi produzido neste gate.
+O `draft.1` apresentava cobertura estrutural completa pelas 25 unidades, mas a revisão artigo por artigo encontrou pontos literais e de completude que precisavam ser explicitados. O `draft.2` incorporou essas correções e fechou `DIREITO-009`. Em `DIREITO-010`, o conteúdo jurídico do `draft.2` foi congelado e promovido para identidade `0.1.0-rc.1` sem reabertura semântica; foram criados a configuração do tutor e o QA estático do candidato.
 
 ---
 
@@ -57,9 +59,9 @@ O `draft.1` apresentava cobertura estrutural completa pelas 25 unidades, mas a r
 | DPP-24 | Lei 9.099, 77-83 | PASS | PASS |
 | DPP-25 | Lei 9.099, 88-89 | PASS | PASS |
 
-Os identificadores `DPP-*` permanecem no backoffice. O readback do `draft.2` não encontrou `DPP-` no StudentContent visível.
+Os identificadores `DPP-*` permanecem no backoffice. O readback do `draft.2` não encontrou `DPP-` no StudentContent visível. A promoção para `rc.1` alterou apenas metadados de identidade/status no `APOSTILA.md`, portanto não introduziu IDs internos no corpo estudável.
 
-### Lacunas de completude corrigidas
+### Lacunas de completude corrigidas em DIREITO-009
 
 A revisão integral levou às seguintes correções materiais ou de explicitação:
 
@@ -83,13 +85,13 @@ A revisão integral levou às seguintes correções materiais ou de explicitaç�
 
 **Resultado:** `PASS_AFTER_CORRECTIONS`
 
-As duas fontes primárias foram reabertas durante o gate e o conteúdo foi rechecado por intervalo. Foram conferidos sujeitos, legitimidade, prazos, hipóteses, cabimento, efeitos, sequência procedimental e dispositivos revogados.
+As duas fontes primárias foram reabertas durante `DIREITO-009` e o conteúdo foi rechecado por intervalo. Foram conferidos sujeitos, legitimidade, prazos, hipóteses, cabimento, efeitos, sequência procedimental e dispositivos revogados.
 
 ### Controle do cutoff
 
 O inventário canônico classifica `SRC-B2-CPP` como `cutoff_closed_drift_mapped`. O drift conhecido dentro do recorte é o art. `584, § 4º`, incluído pela Lei n.º `15.358/2026`.
 
-O `draft.2` preserva:
+O conteúdo congelado preserva:
 
 ```text
 baseline estudável = 2025-07-29
@@ -99,11 +101,11 @@ art. 584 no baseline = §§ 1º a 3º
 
 `SRC-B2-L9099` permanece `cutoff_closed_no_scoped_drift` no inventário canônico para os arts. `60-83; 88-89`.
 
-Não foi promovido outro drift pós-cutoff a conteúdo estudável neste QA.
+Não foi promovido outro drift pós-cutoff a conteúdo estudável. O `rc.1` não altera afirmações jurídicas do `draft.2`.
 
 ### Dispositivos revogados dentro do recorte
 
-O `draft.2` passou a identificar explicitamente, onde necessário ao contrato de cobertura:
+O conteúdo identifica explicitamente, onde necessário ao contrato de cobertura:
 
 - CPP art. 398: revogado;
 - CPP art. 537: revogado;
@@ -113,8 +115,6 @@ O `draft.2` passou a identificar explicitamente, onde necessário ao contrato de
 - CPP arts. 632-636: revogados.
 
 Também registra os incisos revogados do art. 363 sem reconstruí-los por analogia.
-
-Depois das correções, não foi identificada incompatibilidade material aberta entre o conteúdo auditado e as fontes controladas que impeça a preparação do próximo estágio.
 
 ---
 
@@ -158,15 +158,7 @@ Fluxos de comunicação, procedimento comum, júri, recursos, carta testemunháv
 
 **Resultado:** `PASS`
 
-As `52` questões do `draft.1` foram revisadas individualmente quanto a:
-
-- alinhamento ao syllabus e ao baseline;
-- cinco alternativas;
-- resposta única defensável;
-- ausência de ambiguidade involuntária;
-- coerência entre alternativa, gabarito e comentário;
-- ausência de dependência de jurisprudência ou doutrina externa;
-- ausência de contaminação pelo art. 584, § 4º, de 2026.
+As `52` questões do `draft.1` foram revisadas individualmente quanto a alinhamento ao syllabus e baseline, cinco alternativas, resposta única defensável, ausência de ambiguidade involuntária, coerência entre alternativa/gabarito/comentário, ausência de dependência de jurisprudência ou doutrina externa e ausência de contaminação pelo art. 584, § 4º, de 2026.
 
 Resultado dos 52 itens originais:
 
@@ -185,20 +177,16 @@ A revisão de cobertura mostrou que oito pontos mereciam prática literal própr
 - Q59: art. 647-A;
 - Q60: Lei 9.099, art. 81, § 1º-A.
 
-Contagem final do `draft.2`:
-
-- `60/60` questões com resultado `PASS` neste gate.
+Contagem final do conteúdo congelado: `60/60 PASS`.
 
 ### Requisitos de prática da matriz
-
-Os requisitos `Q-LIT`, `Q-CMP`, `Q-CAS`, `Q-FLX`, `Q-VER` e `Q-FULL` aplicáveis às 25 rows foram rechecados contra a combinação de corpo didático, tabelas, fluxos, mini-casos e bateria objetiva.
 
 - `Q-LIT`: atendido por regras e microitens literais;
 - `Q-CMP`: atendido por quadros/contrastes e alternativas próximas;
 - `Q-CAS`: atendido por mini-casos nas rows que o exigem;
 - `Q-FLX`: atendido por fluxos e armadilhas de etapa, prazo e recurso;
 - `Q-VER`: DPP-16 preserva explicitamente o cutoff do art. 584;
-- `Q-FULL`: DPP-18 e DPP-20 passaram a tratar os dispositivos revogados e vigentes do intervalo sem preencher lacunas normativas.
+- `Q-FULL`: DPP-18 e DPP-20 tratam os dispositivos revogados e vigentes do intervalo sem preencher lacunas normativas.
 
 ---
 
@@ -208,14 +196,12 @@ Os requisitos `Q-LIT`, `Q-CMP`, `Q-CAS`, `Q-FLX`, `Q-VER` e `Q-FULL` aplicáveis
 
 - 25 unidades com títulos sem coverage IDs;
 - terminologia processual consistente;
-- regras, exceções, contrastes e exemplos ficam próximos;
+- regras, exceções, contrastes e exemplos próximos;
 - tabelas e blocos de fluxo preservam significado em texto simples;
-- questões e gabarito estão separados;
-- não há metadiscurso de frequência da banca;
-- o corpus não depende de `MANIFEST`, matriz ou análise histórica para ser compreendido;
+- questões e gabarito separados;
+- sem metadiscurso de frequência da banca;
+- corpus compreensível sem `MANIFEST`, matriz ou análise histórica;
 - ausência de informação externa não é apresentada como prova de inexistência no mundo externo.
-
-A lição do smoke de Direito Penal foi aplicada: rastreabilidade fica no backoffice, não nos títulos do estudante.
 
 ---
 
@@ -227,7 +213,7 @@ O material usa os sinais empíricos do Gate 3 para privilegiar literalidade, seq
 
 ---
 
-## 8. Gate determinístico
+## 8. Gate determinístico de DIREITO-009
 
 Em `2026-09-14`, foi reavaliada a possibilidade de executar o gate canônico a partir de checkout real:
 
@@ -236,9 +222,9 @@ git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concur
 fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
 ```
 
-O clone terminou com exit code `128`. Sem checkout canônico local, `python tools/verify.py` não pode ser executado de forma válida neste runtime.
+O clone terminou com exit code `128`. Sem checkout canônico local, `python tools/verify.py` não pôde ser executado de forma válida.
 
-Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, **não** `PASS`, conforme DEC-0009.
+Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`, conforme DEC-0009.
 
 ---
 
@@ -256,6 +242,90 @@ Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, **não** `PASS`, conforme DEC-000
 | PDF | NOT_CREATED_BY_DESIGN |
 | NotebookLM | NOT_STARTED |
 
-`DIREITO-009` pode ser fechado. O `0.1.0-draft.2` está semanticamente aprovado para **preparação de release candidate**, mas ainda não é RC nem release.
+`DIREITO-009` está fechado. O `0.1.0-draft.2` foi semanticamente aprovado para preparação de release candidate.
 
-A etapa seguinte deve criar a configuração do tutor jurídico, sincronizar identidade/versionamento e executar o QA estático necessário antes de gerar e auditar o PDF candidato e realizar smoke real do NotebookLM. Nenhum resultado futuro é presumido por este documento.
+---
+
+## 10. DIREITO-010 - identidade do release candidate
+
+**Resultado:** `PASS`
+
+O `0.1.0-rc.1` foi preparado a partir do conteúdo semanticamente aprovado do `0.1.0-draft.2`.
+
+Verificações:
+
+- `APOSTILA.md` foi promovida para identidade `0.1.0-rc.1`;
+- a mudança no `APOSTILA.md` ficou restrita a metadados de versão/status;
+- nenhuma regra, artigo, prazo, exemplo, questão ou gabarito foi alterado durante a promoção;
+- `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` foram sincronizados para o candidato;
+- o conteúdo normativo continua sendo o conteúdo aprovado em `DIREITO-009`.
+
+Se surgir correção jurídica futura, o RC deve voltar a draft e o QA semântico correspondente deve ser reaberto. Correção semântica não pode ser escondida em mudança de versão.
+
+---
+
+## 11. DIREITO-010 - configuração do tutor e QA estático
+
+**Resultado:** `PASS_STATIC`
+
+Foi criado `METODOLOGIA_NOTEBOOKLM.md` como `ConversationInstruction`, não como StudentContent.
+
+Arquitetura auditada:
+
+```text
+fonte estudável -> APOSTILA.pdf validado
+configuração da conversa -> METODOLOGIA_NOTEBOOKLM.md
+backoffice -> GitHub/ChatGPT
+```
+
+Verificações estáticas:
+
+- a configuração usa somente as fontes selecionadas como base factual e didática;
+- distingue texto legal/regra expressa, explicação didática e aplicação hipotética;
+- proíbe inventar jurisprudência, doutrina ou atualização normativa ausente do corpus;
+- quando a fonte não sustenta conclusão externa, exige formulação de limite do corpus em vez de negativa universal;
+- treino interativo apresenta uma questão por vez e não antecipa o gabarito;
+- correção privilegia artigo/regra e elemento decisivo, incluindo sujeito, etapa, prazo, competência, requisito, cabimento, efeito e exceção;
+- reteste só ocorre depois da correção quando útil;
+- a metodologia não é tratada como matéria e não exige `MANIFEST`, `SOURCES`, QA, matriz ou análise de banca como fontes do notebook;
+- a apostila permanece autocontida como corpus Markdown;
+- coverage IDs e labels internos permanecem fora dos títulos estudáveis;
+- perguntas e gabarito permanecem separados;
+- tabelas e fluxos têm significado textual e não dependem exclusivamente de layout visual;
+- o baseline `2025-07-29` e o isolamento do art. 584, § 4º, de 2026 permanecem registrados no backoffice e no conteúdo onde pedagogicamente necessário.
+
+**NotebookLM live smoke:** `NOT_STARTED`. Nenhuma interação externa foi presumida.
+
+---
+
+## 12. DIREITO-010 - gate determinístico
+
+Nova tentativa de obter checkout canônico em `2026-09-14`:
+
+```text
+git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d010
+fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
+```
+
+Exit code: `128`.
+
+Sem checkout canônico, `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`, conforme DEC-0009.
+
+---
+
+## 13. Estado do release candidate após DIREITO-010
+
+| Gate | Resultado |
+|---|---|
+| conteúdo semântico/normativo | PASS_AFTER_CORRECTIONS, congelado do draft.2 |
+| prática | PASS, 60/60 |
+| corpus Markdown | PASS_FOR_MARKDOWN |
+| identidade `0.1.0-rc.1` | PASS |
+| configuração do tutor | PASS_STATIC |
+| NotebookLM corpus/tutor estático | PASS_STATIC |
+| `APOSTILA.pdf` canônico | NOT_CREATED |
+| QA textual/visual de PDF | NOT_STARTED |
+| NotebookLM live smoke | NOT_STARTED |
+| `python tools/verify.py` | NOT_EXECUTED_CURRENT_ENVIRONMENT |
+
+`DIREITO-010` prepara o `0.1.0-rc.1` como **release candidate incompleto**, apto a avançar ao pipeline de PDF. Isso não equivale a release final e não presume gates ainda não executados.

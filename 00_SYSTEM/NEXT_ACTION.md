@@ -1,147 +1,171 @@
 # NEXT_ACTION
 
-## DIREITO-010: Preparar o release candidate de `direito-processual-penal`
+## DIREITO-011: Gerar e validar o PDF canônico de `direito-processual-penal`
 
-`DIREITO-009` aprovou semanticamente o Markdown de Direito Processual Penal após correções.
+`DIREITO-010` preparou o release candidate `0.1.0-rc.1` de Direito Processual Penal sem alterar semanticamente o conteúdo jurídico aprovado no `0.1.0-draft.2`.
 
-Estado de entrada esperado após merge do QA:
+Estado de entrada esperado após merge do RC:
 
 - pack: `direito-processual-penal`;
-- versão de conteúdo: `0.1.0-draft.2`;
+- versão: `0.1.0-rc.1`;
+- conteúdo-base: `0.1.0-draft.2` semanticamente congelado;
 - cobertura `DPP-01...DPP-25`: `PASS_AFTER_CORRECTIONS`;
 - revisão normativa: `PASS_AFTER_CORRECTIONS`;
-- didática/fluxos/contrastes: `PASS`;
 - prática: `60/60 PASS`;
 - corpus Markdown: `PASS_FOR_MARKDOWN`;
+- configuração do tutor: `PASS_STATIC`;
+- NotebookLM corpus/tutor estático: `PASS_STATIC`;
 - baseline: `2025-07-29`;
 - CPP art. 584, § 4º, de 2026: fora do baseline estudável;
-- PDF: ainda não criado;
-- NotebookLM: ainda não iniciado;
-- gate determinístico: `NOT_EXECUTED_CURRENT_ENVIRONMENT` no runtime de DIREITO-009 por impossibilidade DNS, sem falso PASS.
+- `APOSTILA.pdf`: ainda não criado/versionado;
+- NotebookLM live smoke: ainda não executado;
+- gate determinístico: `NOT_EXECUTED_CURRENT_ENVIRONMENT` no runtime de `DIREITO-010`, porque o checkout canônico falhou por DNS; não é PASS.
 
-O QA detalhado está em:
+O QA acumulado está em:
 
 `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`
 
 ## Entradas obrigatórias
 
-Antes de preparar o RC, ler conjuntamente:
+Antes de gerar o PDF, ler conjuntamente:
 
 - `AGENTS.md`;
 - `00_SYSTEM/START_HERE.md`;
 - `PROJECT_CONTROL.md`;
 - `00_SYSTEM/CHECKPOINT.md`;
 - este arquivo;
-- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, especialmente o gate de PDF;
 - `00_SYSTEM/QA_PROTOCOL.md`;
-- `00_SYSTEM/SOURCE_POLICY.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/MANIFEST.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/SOURCES.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/CHANGELOG.md`;
-- `materials/tjsp-escrevente-2025/direito-penal/METODOLOGIA_NOTEBOOKLM.md` como referência de arquitetura de tutor, não como fonte jurídica;
-- `materials/tjsp-escrevente-2025/direito-penal/NOTEBOOKLM_SMOKE_0.1.0.md` como lição de processo;
-- `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`;
-- `competitions/tjsp-escrevente-2025/DIREITO_SOURCES.md`.
+- `materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md` somente para compatibilidade de corpus;
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md` somente como referência do procedimento de identidade binária, não como fonte jurídica.
 
 Antes de escrever, confirmar `main`, PRs abertas e estado real do GitHub.
 
-## 1. Identidade do release candidate
+## 1. Congelar a fonte do PDF
 
-Preparar o primeiro RC de Processo Penal sem reabrir silenciosamente o conteúdo aprovado.
+O PDF deve derivar exclusivamente do `APOSTILA.md` do `0.1.0-rc.1`.
 
-Se nenhuma correção semântica nova for necessária:
+Antes da geração:
+
+- registrar o Git blob do Markdown congelado;
+- confirmar que a versão é `0.1.0-rc.1`;
+- confirmar que a promoção do RC não alterou o corpo jurídico do `draft.2`;
+- não fazer correção jurídica durante a diagramação.
+
+Se for encontrado erro semântico ou normativo, interromper o pipeline de PDF, retornar o pack a draft e reabrir o QA. Não corrigir silenciosamente o conteúdo apenas no PDF.
+
+## 2. Gerar o candidato de PDF
+
+Produzir `APOSTILA.pdf` pesquisável, preferencialmente A4, preservando:
+
+- hierarquia de títulos;
+- tabelas e fluxos;
+- acentos e símbolos jurídicos;
+- distinção visual entre corpo didático e prática;
+- separação estrutural entre bateria de questões e gabarito comentado;
+- legibilidade sem depender de elementos gráficos frágeis.
+
+Registrar no candidato local:
+
+- número de páginas;
+- tamanho em bytes;
+- versão/formato do PDF quando disponível;
+- SHA-256;
+- pesquisabilidade.
+
+## 3. Readback textual
+
+Extrair texto do candidato e confirmar, no mínimo:
+
+- título `Direito Processual Penal`;
+- `Unidade 1` e `Unidade 25`;
+- `Gabarito comentado`;
+- referências críticas como `art. 584`, `§`, `JECrim`, `habeas corpus` e `carta testemunhável`;
+- presença da questão `60` e do respectivo gabarito;
+- ausência de corrupção de caracteres jurídicos.
+
+A geração do arquivo, sozinha, não é PASS.
+
+## 4. Inspeção visual integral
+
+Renderizar e inspecionar todas as páginas do mesmo candidato auditado.
+
+Verificar:
+
+- clipping;
+- sobreposição;
+- páginas vazias indevidas;
+- cabeçalhos ou títulos órfãos em posição impeditiva;
+- tabelas quebradas de forma que altere significado;
+- fluxos ilegíveis;
+- acentos, `§`, números de artigos e caracteres especiais;
+- separação clara entre questões e gabarito;
+- continuidade visual da numeração de questões 1-60.
+
+Registrar quantidade de páginas efetivamente inspecionadas e resultado.
+
+## 5. Publicar o binário exato no GitHub
+
+Versionar em:
+
+`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
+
+A publicação precisa preservar a identidade do candidato auditado. Depois do upload/versionamento:
+
+- ler o Git blob do arquivo remoto;
+- calcular ou registrar o Git blob esperado do candidato local quando possível;
+- confirmar identidade binária entre remoto e candidato auditado;
+- registrar SHA-256, páginas e tamanho do arquivo canônico.
+
+Não declarar `PASS_CANONICAL_BINARY_IDENTITY` se o binário versionado não puder ser provado como o mesmo candidato auditado.
+
+Se o ambiente não oferecer transporte binário confiável, registrar `canonical_pdf_transport_blocked` e manter o gate aberto. Não usar hash de arquivo local como se fosse hash do repositório.
+
+## 6. Atualizar QA e continuidade
+
+Atualizar, conforme o estado real:
+
+- `APOSTILA_QA_0.1.0.md`;
+- `MANIFEST.md`;
+- `CHANGELOG.md`;
+- `PROJECT_CONTROL.md`;
+- `CHECKPOINT.md`;
+- este arquivo.
+
+O PDF não altera a versão semântica do pack. `0.1.0-rc.1` permanece release candidate.
+
+## 7. Próximo estágio após PDF canônico
+
+Somente depois de `PASS_CANONICAL_BINARY_IDENTITY`, avançar para o smoke real do NotebookLM usando:
 
 ```text
-content base -> 0.1.0-draft.2
-candidate identity -> 0.1.0-rc.1
+FONTES
+-> somente APOSTILA.pdf canônico
+
+CONFIGURAÇÃO DA CONVERSA
+-> bloco operacional de METODOLOGIA_NOTEBOOKLM.md
 ```
 
-Sincronizar `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` para a identidade do candidato, registrando explicitamente que o conteúdo normativo deriva do `draft.2` aprovado.
+O smoke deverá testar chat explicativo, treino interativo, Teste, Cartões, Mapa mental, ausência de IDs internos e ao menos uma pergunta fora do corpus para verificar disciplina epistemológica.
 
-Se surgir erro jurídico durante a preparação, interromper a promoção, corrigir como novo draft e reabrir o QA correspondente. Não esconder correção semântica dentro de mudança de versão.
-
-## 2. Configuração do tutor
-
-Criar:
-
-`materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md`
-
-O arquivo é `ConversationInstruction`, não StudentContent.
-
-A configuração deve:
-
-- usar somente a fonte selecionada como base factual/didática da conversa;
-- distinguir texto legal, explicação didática e aplicação hipotética;
-- não inventar jurisprudência, doutrina ou atualização normativa ausente do corpus;
-- quando a informação não estiver na fonte, declarar o limite do corpus em vez de afirmar inexistência externa;
-- permitir dúvida explicativa e treino A-E;
-- no treino, apresentar uma questão por vez e não antecipar o gabarito;
-- corrigir pela regra, requisito, prazo, competência, cabimento ou efeito decisivo;
-- oferecer reteste depois da correção quando útil.
-
-## 3. QA estático de corpus e tutor
-
-Antes de gerar PDF, verificar:
-
-- a apostila funciona isoladamente como fonte estudável;
-- `DPP-*`, IDs de matriz, gate labels e outros metadados de backoffice continuam fora dos títulos estudáveis;
-- o tutor não exige `MANIFEST`, `SOURCES`, QA ou análise da banca como fontes do NotebookLM;
-- perguntas e gabarito permanecem separados;
-- tabelas e fluxos preservam sentido fora do layout específico do Markdown;
-- nenhuma formulação do tutor transforma ausência no corpus em negativa universal;
-- o baseline `2025-07-29` e o isolamento do art. 584, § 4º, de 2026 permanecem explícitos no backoffice.
-
-Registrar o resultado estático no artefato de QA existente ou em seção claramente identificada de continuidade.
-
-## 4. Pipeline de PDF
-
-Somente depois do RC e do QA estático, gerar `APOSTILA.pdf` a partir do Markdown congelado do candidato.
-
-O PDF deve passar por:
-
-- identidade entre fonte Markdown congelada e candidato gerado;
-- readback textual;
-- inspeção visual de todas as páginas;
-- conferência de títulos, símbolos jurídicos, tabelas, questões e gabarito;
-- registro de tamanho, páginas, SHA-256 e Git blob quando versionado.
-
-Não declarar `PASS_CANONICAL_BINARY_IDENTITY` até o binário versionado no GitHub ser comprovadamente idêntico ao candidato auditado.
-
-## 5. NotebookLM
-
-Arquitetura operacional esperada:
-
-```text
-fonte estudável -> APOSTILA.pdf
-configuração da conversa -> METODOLOGIA_NOTEBOOKLM.md na camada nativa
-backoffice -> GitHub/ChatGPT, fora do notebook por padrão
-```
-
-Depois que o PDF canônico estiver validado, o smoke real deve testar:
-
-- chat explicativo;
-- treino interativo;
-- Teste;
-- Cartões;
-- Mapa mental;
-- ausência de vazamento de IDs internos;
-- ao menos uma pergunta cuja resposta não esteja no corpus, para testar disciplina epistemológica.
-
-Não presumir resultado de smoke não executado.
+Não presumir resultado de interação externa não executada.
 
 ## Critério de saída
 
-`DIREITO-010` deve deixar explicitamente registrado o que efetivamente foi concluído. O gate só pode marcar um RC como preparado quando:
+`DIREITO-011` só fecha como PDF validado quando:
 
-- identidade do candidato estiver sincronizada;
-- configuração do tutor existir e passar QA estático;
-- conteúdo semântico aprovado do `draft.2` permanecer congelado ou qualquer reabertura estiver registrada;
-- continuidade estiver atualizada;
-- gate determinístico tiver sido executado ou sua impossibilidade atual tiver sido documentada conforme DEC-0009.
-
-PDF e smoke real podem exigir etapas subsequentes se houver bloqueio de transporte ou interação externa. Não promover a release final apenas por criar `rc.1`.
+- o candidato derivar do Markdown congelado do RC;
+- readback textual passar;
+- todas as páginas forem inspecionadas visualmente;
+- o binário auditado estiver versionado no GitHub;
+- a identidade binária do artefato canônico estiver comprovada;
+- QA e continuidade refletirem os metadados exatos;
+- `python tools/verify.py` tiver sido executado ou a impossibilidade atual tiver sido explicitamente reavaliada conforme DEC-0009.
 
 ## Gate canônico
 

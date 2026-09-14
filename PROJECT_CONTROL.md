@@ -4,41 +4,42 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `qa/direito-processual-penal-v0.1`
+- **Current implementation branch:** `main` after merge of the current release-candidate preparation PR
 - **Base branch:** `main`
-- **Base main for DIREITO-009:** `fedd24f8607b6d2b68d4aa9352ff949529680f1e`
+- **Base main for DIREITO-010:** `70a5103d3f8ceb6132908d68963a2a55732665ec`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 - Conhecimentos em Direito`
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
 - **Last released pack:** `portugues 2.0.0`, final
 - **Last validated legal pack:** `direito-penal 0.1.0-rc.1`, validated release candidate
-- **Current pack:** `direito-processual-penal 0.1.0-draft.2`, semantic/normative QA passed after corrections; still draft
-- **Current gate:** `DIREITO-009`, completed on implementation branch and pending final diff/PR/merge
-- **Next gate:** `DIREITO-010`, prepare release candidate for `direito-processual-penal`
+- **Current pack:** `direito-processual-penal 0.1.0-rc.1`, release candidate incomplete; semantic content frozen from approved `0.1.0-draft.2`
+- **DIREITO-009:** closed and merged in PR `#28`, merge commit `70a5103d3f8ceb6132908d68963a2a55732665ec`
+- **Current gate:** `DIREITO-010`, release-candidate identity, tutor configuration and static corpus QA completed; merge of this preparation branch closes the gate
+- **Next gate:** `DIREITO-011`, generate and validate canonical `APOSTILA.pdf` for `direito-processual-penal`
 - **Workspace:** `materials/tjsp-escrevente-2025/direito-processual-penal/`
 - **Coverage contract:** `DPP-01...DPP-25`
 - **StudentContent:** 25 units, no `DPP-*` in visible headings
 - **Practice:** 60 authorial A-E questions with separate commented answer key; QA `60/60 PASS`
 - **Semantic QA artifact:** `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`
+- **ConversationInstruction:** `materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md`, static QA `PASS_STATIC`
 - **Primary normative sources:** `SRC-B2-CPP` and `SRC-B2-L9099`
 - **Normative baseline:** `2025-07-29`
 - **Critical version rule:** CPP art. 584, § 4º, added by Lei n.º 15.358/2026, stays outside the study baseline
-- **QA result:** coverage `pass_after_corrections`; normative `pass_after_corrections`; didactics `pass`; practice `pass_60_of_60`; Markdown corpus `pass_for_markdown`
-- **PDF for current pack:** not created by design in DIREITO-009
-- **NotebookLM for current pack:** not started
+- **Semantic QA:** coverage `pass_after_corrections`; normative `pass_after_corrections`; didactics `pass`; practice `pass_60_of_60`; Markdown corpus `pass_for_markdown`
+- **RC QA:** identity `pass`; semantic content changed in RC `false`; tutor `pass_static`; NotebookLM corpus/tutor static `pass_static`
+- **PDF for current pack:** not created/versioned yet
+- **NotebookLM live smoke:** not started; only after canonical PDF validation
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** Gate 2 closed at cutoff `2025-07-29`
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
 - **B2 coverage matrix:** six complete matrices
-- **Direito Penal NotebookLM lesson applied:** backoffice IDs stay outside StudentContent headings and corpus limits are not universal negatives
-- **DIREITO-008 PR:** `#27`, merged to `main` at `fedd24f8607b6d2b68d4aa9352ff949529680f1e`
 - **Validation gate:** `python tools/verify.py`
-- **Validation status in current runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; canonical checkout attempt failed on 2026-09-14 with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
+- **Validation status in DIREITO-010 runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; `git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d010` failed on `2026-09-14` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
 - **Merge policy:** validated development PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` mandatory
 - **Primary NotebookLM UX:** `APOSTILA.pdf` as study source after PDF QA; tutor instructions outside the corpus when native conversation configuration is available
-- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`
+- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`
 
 This file is an executive index. Detailed state is in `00_SYSTEM/CHECKPOINT.md`; operational next action is in `00_SYSTEM/NEXT_ACTION.md`.

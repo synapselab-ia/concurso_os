@@ -3,20 +3,19 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: qa/direito-processual-penal-v0.1
+branch: main
 base_branch: main
-base_main_sha: fedd24f8607b6d2b68d4aa9352ff949529680f1e
-current_task: review and merge DIREITO-009, then prepare DIREITO-010 release candidate work
-current_pack: direito-processual-penal_0.1.0-draft.2_semantic_qa_passed
+current_task: execute DIREITO-011 canonical PDF pipeline for direito-processual-penal rc.1
+current_pack: direito-processual-penal_0.1.0-rc.1_release_candidate_incomplete
 last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
 last_released_pack: portugues_2.0.0
 
-canonical_state_before_direito_009:
-  main_head: fedd24f8607b6d2b68d4aa9352ff949529680f1e
+canonical_state_before_direito_010:
+  main_head: 70a5103d3f8ceb6132908d68963a2a55732665ec
   source: GitHub branch main
   open_pull_requests: 0
-  direito_008_pr: 27
-  direito_008_state: merged
+  direito_009_pr: 28
+  direito_009_state: merged
 
 completed:
   - repository foundation and chat-independent continuity active
@@ -28,9 +27,12 @@ completed:
   - B2 Gate 2 source/version inventory closed at cutoff 2025-07-29
   - B2 Gate 3 banca analysis closed with 150 classified legal questions
   - B2 Gate 4 coverage matrix closed
-  - Direito Penal draft, QA, canonical PDF and NotebookLM smoke completed through DIREITO-007
+  - Direito Penal draft QA canonical PDF and NotebookLM smoke completed through DIREITO-007
   - DIREITO-008 first Direito Processual Penal draft merged through PR 27
-  - DIREITO-009 semantic and normative QA executed on qa/direito-processual-penal-v0.1
+  - DIREITO-009 semantic and normative QA merged through PR 28
+  - DIREITO-010 release candidate identity synchronized from approved draft.2
+  - DIREITO-010 METODOLOGIA_NOTEBOOKLM.md created as ConversationInstruction
+  - DIREITO-010 static NotebookLM corpus and tutor QA passed
 
 b2_source_gate:
   status: closed
@@ -61,65 +63,67 @@ right_penal_validated_rc:
   final_promotion: deferred_nonblocking
 
 right_processual_penal:
-  version: 0.1.0-draft.2
-  status: draft_semantic_qa_passed_ready_for_rc_preparation
+  version: 0.1.0-rc.1
+  status: release_candidate_incomplete
+  content_base: 0.1.0-draft.2
+  semantic_content_changed_in_rc: false
   path: materials/tjsp-escrevente-2025/direito-processual-penal
-  implementation_branch: qa/direito-processual-penal-v0.1
   units: 25
   coverage: DPP-01_through_DPP-25
   coverage_qa: pass_after_corrections
   normative_qa: pass_after_corrections
   didactic_qa: pass
-  practice_questions_original: 52
-  practice_questions_added_in_qa: 8
   practice_questions_total: 60
   practice_qa: pass_60_of_60
   practice_requirements: pass_Q_LIT_Q_CMP_Q_CAS_Q_FLX_Q_VER_Q_FULL
   markdown_corpus_qa: pass_for_markdown
   visible_backoffice_ids_in_headings: false
+  tutor_configuration:
+    artifact: materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md
+    role: ConversationInstruction
+    static_qa: pass_static
+    corpus_limit_rule: absence_in_source_is_not_universal_negative
+  notebooklm_static_qa: pass_static
+  notebooklm_live_qa: not_started
   qa_artifact: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md
-  material_corrections:
-    - CPP art 262 literal rule added
-    - CPP arts 363 to 365 clarified including revoked references
-    - CPP art 394-A added
-    - CPP art 398 identified revoked
-    - CPP art 400-A added
-    - CPP art 537 identified revoked and art 538 clarified
-    - CPP arts 574 to 603 deepened
-    - CPP arts 604 to 620 fully reconciled including art 611 revoked
-    - CPP arts 632 to 646 fully reconciled
-    - CPP art 647-A and HC flow added
-    - Lei 9099 arts 60 to 83 deepened including art 81 paragraph 1-A
-  pdf: not_created_by_design
-  notebooklm: not_started
+  pdf:
+    status: not_created
+    canonical_qa: not_started
+  baseline: 2025-07-29
+  cpp_584_paragraph_4_post_cutoff: excluded_from_baseline
 
 validation:
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
     attempted_at: 2026-09-14
-    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_verify
+    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d010
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
-  branch_readback:
-    apostila_version: 0.1.0-draft.2
-    visible_DPP_ids_in_studentcontent: none_found
-    final_question_number: 60
+  rc_identity_review:
+    apostila_change_from_draft_2: metadata_only
+    semantic_content_frozen: true
+    tutor_configuration: pass_static
+    notebooklm_static: pass_static
 
 next_gate:
-  id: DIREITO-010
-  name: prepare_release_candidate_direito_processual_penal
+  id: DIREITO-011
+  name: canonical_pdf_direito_processual_penal
   pack: direito-processual-penal
-  prerequisite: DIREITO-009 merged
-  target_state: release_candidate_prepared_not_final_release
+  target_version: 0.1.0-rc.1
+  prerequisite: DIREITO-010 merged
+  target_state: canonical_pdf_validated_or_block_explicitly_documented
   required_work:
-    - create and QA tutor configuration for legal corpus
-    - preserve epistemic limit lesson from Direito Penal smoke
-    - synchronize APOSTILA, MANIFEST, SOURCES and CHANGELOG identity
-    - perform static NotebookLM corpus and tutor QA
-    - only then enter PDF candidate generation and PDF QA
-    - later run live NotebookLM smoke before final release decision
+    - generate APOSTILA.pdf exclusively from frozen rc.1 APOSTILA.md
+    - prove source to PDF identity
+    - textual readback of exact candidate
+    - render and inspect every page
+    - verify titles legal symbols tables questions and answer key separation
+    - version exact audited binary in GitHub
+    - record pages bytes sha256 and Git blob
+    - do not mark canonical PDF pass until repository binary identity is proven
+    - only after canonical PDF validation advance to live NotebookLM smoke
 
 pull_request_lineage:
   b2_preparation_pr: 13
@@ -134,11 +138,13 @@ pull_request_lineage:
   direito_penal_pdf_publication_pr: 25
   direito_penal_notebooklm_smoke_pr: 26
   direito_processual_penal_draft_pr: 27
+  direito_processual_penal_qa_pr: 28
 
-merge_status: DIREITO_009_ready_for_final_diff_review_and_pr
+merge_status: DIREITO_010_release_candidate_prepared_pending_pdf_pipeline
 
 not_started:
-  - DIREITO-010 release candidate preparation for direito-processual-penal
+  - DIREITO-011 canonical PDF pipeline for direito-processual-penal
+  - direito-processual-penal live NotebookLM smoke
   - direito-processual-civil
   - direito-constitucional
   - direito-administrativo
