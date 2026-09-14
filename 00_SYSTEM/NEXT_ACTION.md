@@ -11,17 +11,19 @@ Estado já comprovado:
 - QA estático do corpus para NotebookLM concluído;
 - `APOSTILA.md` canônico possui Git blob `008c3ac439d8b7d4038fd0114e486c1daaf755b1`;
 - o candidato preferido de PDF foi gerado a partir de cópia local com esse mesmo Git blob do Markdown congelado;
-- PDF preferido: `17` páginas A4, `30.167` bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
-- o candidato preferido passou readback textual e inspeção visual de `17/17` páginas a 150 dpi, sem clipping, sobreposição, glifos quebrados, quebra impeditiva de tabela ou mistura entre questões e gabarito;
+- PDF canônico: `17` páginas A4, `30.167` bytes, PDF 1.4, SHA-256 `42b1aae4b5614a2e381373ecbae8a766090cee68a035ec8749208f4879687394`, Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
+- o PDF passou readback textual e inspeção visual de `17/17` páginas a 150 dpi, sem clipping, sobreposição, glifos quebrados, quebra impeditiva de tabela ou mistura entre questões e gabarito;
 - PR `#23` e PR `#24` registraram as tentativas anteriores de transporte binário sem aceitar blobs divergentes;
 - em `2026-09-14`, o arquivo foi enviado manualmente para `materials/tjsp-escrevente-2025/direito-penal/APOSTILA.pdf` na branch `upload/direito-penal-apostila-pdf`;
 - GitHub retornou para esse arquivo exatamente o Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`, provando identidade binária com o candidato integralmente auditado;
 - o commit de upload/rename observado foi `fd7f0f78b16f85d06979ab1e6cc86762c1bd1d00`;
 - em `2026-09-14`, readback textual e renderização/inspeção de `17/17` páginas foram executados novamente sobre o binário local de identidade idêntica e permaneceram `PASS`;
-- QA-9 do PDF está fechado como `PASS_CANONICAL_BINARY_IDENTITY` para o artefato que será incorporado a `main` por esta branch;
+- QA-9 do PDF está fechado como `PASS_CANONICAL_BINARY_IDENTITY`;
+- PR `#25` publicou o PDF canônico e os registros de QA em `main` no commit `eaaad8982691b961cfd9a44a2b04326dba77c5e3`;
+- o PDF foi rechecado já em `main` e manteve exatamente o Git blob `5bf149e5a5d23c3b9ee08c7c3716431dd8aa210e`;
 - nova tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` em `2026-09-14` continua falhando com `Could not resolve host: github.com`, portanto `python tools/verify.py` permanece `not_executed_current_environment`, não `PASS`.
 
-O pack ainda não é release. O PDF deixou de ser bloqueio técnico. Restam o smoke real do NotebookLM, a reavaliação do gate determinístico e a sincronização final de continuidade/release.
+O pack ainda não é release. O PDF deixou de ser bloqueio técnico. Restam o smoke real do NotebookLM, a reavaliação do gate determinístico e a decisão final de promoção.
 
 ## Entradas obrigatórias
 
@@ -57,7 +59,7 @@ Não substituir silenciosamente esse binário. Qualquer regeneração ou altera�
 
 ## 3. Executar smoke real do NotebookLM
 
-Próxima ação funcional após o merge do PDF:
+Esta é a próxima ação funcional:
 
 ```text
 FONTES
