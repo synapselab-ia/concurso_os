@@ -162,6 +162,7 @@ pull_request_lineage:
   direito_processual_penal_rc_pr: 29
   direito_processual_penal_pdf_status_pr: 30
   direito_processual_penal_pdf_publication_pr: 31
+  direito_processual_penal_notebooklm_status_pr: 32
 
 merge_status: DIREITO_012_open_external_smoke_not_executed
 
