@@ -11,7 +11,7 @@
 
 Este SubjectPack cobre Direito Processual Penal no recorte do Edital de Abertura n.º 02/2025 e segue `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e o contrato `DPP-01...DPP-25` de `DIREITO_B2_COVERAGE_MATRIX.md`.
 
-`DIREITO-009` aprovou semanticamente o conteúdo em `0.1.0-draft.2`. `DIREITO-010` promoveu somente a identidade do conteúdo congelado para `0.1.0-rc.1`, criou a configuração do tutor e executou QA estático. `DIREITO-011` gerou e auditou localmente um candidato de PDF, mas a publicação do binário exato no GitHub permanece bloqueada; por isso o pack continua incompleto e não é release final.
+`DIREITO-009` aprovou semanticamente o conteúdo em `0.1.0-draft.2`. `DIREITO-010` promoveu somente a identidade do conteúdo congelado para `0.1.0-rc.1`, criou a configuração do tutor e executou QA estático. Não houve reabertura semântica do conteúdo jurídico. Em `DIREITO-011`, um candidato local de PDF passou pelo QA textual/visual, mas a publicação do binário exato no GitHub permanece bloqueada. O pack ainda não é release final e não presume PDF canônico nem smoke real do NotebookLM.
 
 ## Escopo oficial
 
@@ -33,19 +33,19 @@ O art. 584, § 4º, do CPP, incluído pela Lei n.º 15.358/2026, permanece fora 
 
 ### StudentContent
 
-- `APOSTILA.md`: `0.1.0-rc.1`, conteúdo jurídico congelado do `0.1.0-draft.2`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado;
-- `APOSTILA.pdf`: **não versionado no GitHub**. Existe candidato local auditado, mas ele não é canônico enquanto a identidade binária remota não for comprovada.
+- `APOSTILA.md`: `0.1.0-rc.1`, conteúdo jurídico congelado do `0.1.0-draft.2`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado.
+- `APOSTILA.pdf`: **não versionado no GitHub**. Existe candidato local auditado em `DIREITO-011`, mas ele não é canônico enquanto a identidade binária remota não for comprovada.
 
 ### ConversationInstruction
 
-- `METODOLOGIA_NOTEBOOKLM.md`: `0.1.0-rc.1`, configuração persistente do tutor; não integra o corpus estudável.
+- `METODOLOGIA_NOTEBOOKLM.md`: `0.1.0-rc.1`, criada como configuração persistente do tutor; não integra o corpus estudável.
 
 ### BackofficeArtifact
 
 - `MANIFEST.md`: identidade, escopo e estado dos gates;
 - `SOURCES.md`: proveniência e controle de versão;
 - `CHANGELOG.md`: histórico editorial;
-- `APOSTILA_QA_0.1.0.md`: QA semântico/normativo, QA estático do RC e estado de `DIREITO-011`;
+- `APOSTILA_QA_0.1.0.md`: QA semântico/normativo de `DIREITO-009`, QA estático de `DIREITO-010` e estado do PDF em `DIREITO-011`;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
 
@@ -53,7 +53,7 @@ O art. 584, § 4º, do CPP, incluído pela Lei n.º 15.358/2026, permanece fora 
 
 Os IDs abaixo são backoffice e não aparecem como rótulos estudáveis.
 
-| coverage_id | recorte | estado semântico |
+| coverage_id | recorte | estado semântico do conteúdo congelado |
 |---|---|---|
 | DPP-01 | CPP 251-258 | qa_pass |
 | DPP-02 | CPP 261-267 | qa_pass |
@@ -91,34 +91,57 @@ Os IDs abaixo são backoffice e não aparecem como rótulos estudáveis.
 | prática autoral | `pass_60_of_60` |
 | requisitos Q-LIT/Q-CMP/Q-CAS/Q-FLX/Q-VER/Q-FULL | `pass` |
 | corpus Markdown | `pass_for_markdown` |
+| coerência com banca sem overfitting | `pass` |
+| ausência de IDs de backoffice em títulos | `pass` |
 | configuração do tutor | `pass_static` |
 | corpus/tutor NotebookLM estático | `pass_static` |
-| identidade Markdown usada para o PDF | `pass_source_markdown_identity` |
-| candidato local PDF - textual | `pass_text_readback` |
+| identidade da fonte Markdown usada para o PDF | `pass_source_markdown_identity` |
+| candidato local PDF - readback textual | `pass_text_readback` |
 | candidato local PDF - visual | `pass_visual_28_of_28` |
 | candidato local PDF - formato/metadados | `pass_local_candidate` |
+| NotebookLM smoke real | `not_started` |
+| `python tools/verify.py` | `not_executed_current_environment` por falha DNS ao obter checkout canônico, não tratado como PASS |
 | `APOSTILA.pdf` canônico | `blocked_not_versioned` |
 | identidade binária GitHub | `not_proven` |
-| NotebookLM smoke real | `not_started` |
-| `python tools/verify.py` | `not_executed_current_environment`, não tratado como PASS |
 
-## Candidato local de DIREITO-011
+## QA estático de DIREITO-010
+
+O release candidate foi revisado estaticamente sob a arquitetura de corpus limpo:
+
+```text
+fonte estudável -> APOSTILA.pdf, quando validado
+configuração da conversa -> METODOLOGIA_NOTEBOOKLM.md
+backoffice -> GitHub/ChatGPT
+```
+
+Foi confirmado que:
+
+- a promoção de `draft.2` para `rc.1` altera identidade/status, sem mudança jurídica do corpo aprovado;
+- `METODOLOGIA_NOTEBOOKLM.md` orienta uso exclusivo das fontes selecionadas como base factual/didática;
+- a configuração distingue regra expressa, explicação didática e aplicação hipotética;
+- jurisprudência, doutrina e atualização normativa ausentes do corpus não podem ser inventadas;
+- ausência de informação é formulada como limite do corpus, não como negativa universal;
+- treino interativo usa uma questão por vez e não antecipa gabarito;
+- correção privilegia sujeito, etapa, prazo, competência, requisito, cabimento, efeito e exceção;
+- a configuração não exige `MANIFEST`, `SOURCES`, QA, matriz ou análise de banca como fontes do NotebookLM;
+- o StudentContent continua sem `DPP-*` em títulos ou subtítulos;
+- perguntas e gabarito permanecem estruturalmente separados.
+
+## DIREITO-011 - candidato local e bloqueio canônico
 
 O candidato preferido auditado em `2026-09-15` possui:
 
+- fonte Markdown: Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`, com identidade local/GitHub comprovada;
 - páginas: `28`;
 - formato: `PDF 1.4`;
 - página: `A4`;
 - tamanho: `37.894 bytes`;
 - SHA-256: `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
 - Git blob esperado: `4eabdacec7858120792cf792ca227335e41730b6`;
-- fonte Markdown: Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`;
 - readback textual: `PASS`;
 - inspeção visual: `28/28 PASS`.
 
-Esses metadados descrevem **um candidato local auditado**, não um artefato canônico do repositório.
-
-## Bloqueio de transporte
+Esses metadados descrevem um candidato local auditado, não um artefato canônico do repositório.
 
 O conector GitHub disponível neste runtime não expõe upload binário por referência de arquivo local. Uma tentativa anterior de transporte com outro candidato produziu blob remoto diferente do esperado e foi rejeitada; esse blob não foi ligado a tree, commit, branch ou PR.
 
