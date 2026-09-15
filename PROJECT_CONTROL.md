@@ -4,21 +4,21 @@
 - **Phase:** SUBJECT_PACK_AUTHORING_PREP
 - **Canonical checkpoint:** `00_SYSTEM/CHECKPOINT.md`
 - **Canonical next action:** `00_SYSTEM/NEXT_ACTION.md`
-- **Current implementation branch:** `main` after merge of the current release-candidate preparation PR
+- **Current implementation branch after merge of this status update:** `main`
 - **Base branch:** `main`
-- **Base main for DIREITO-010:** `70a5103d3f8ceb6132908d68963a2a55732665ec`
 - **Current competition:** `tjsp-escrevente-2025`
 - **Current subject:** `B2 - Conhecimentos em Direito`
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
 - **Last released pack:** `portugues 2.0.0`, final
 - **Last validated legal pack:** `direito-penal 0.1.0-rc.1`, validated release candidate
-- **Current pack:** `direito-processual-penal 0.1.0-rc.1`, release candidate incomplete; semantic content frozen from approved `0.1.0-draft.2`
+- **Current pack:** `direito-processual-penal 0.1.0-rc.1`, release candidate incomplete
 - **DIREITO-009:** closed and merged in PR `#28`, merge commit `70a5103d3f8ceb6132908d68963a2a55732665ec`
-- **Current gate:** `DIREITO-010`, release-candidate identity, tutor configuration and static corpus QA completed; merge of this preparation branch closes the gate
-- **Next gate:** `DIREITO-011`, generate and validate canonical `APOSTILA.pdf` for `direito-processual-penal`
+- **DIREITO-010:** closed and merged in PR `#29`, merge commit `947ea624d7abfa3b1db4481064aa4abf9743be19`
+- **Current gate:** `DIREITO-011`, canonical PDF pipeline; local candidate passed source/textual/visual QA, but canonical binary transport is blocked and the gate remains open
+- **Next operation:** publish the exact audited PDF candidate at `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`, prove Git blob identity, then advance to NotebookLM live smoke
 - **Workspace:** `materials/tjsp-escrevente-2025/direito-processual-penal/`
 - **Coverage contract:** `DPP-01...DPP-25`
-- **StudentContent:** 25 units, no `DPP-*` in visible headings
+- **StudentContent Markdown:** 25 units, no `DPP-*` in visible headings
 - **Practice:** 60 authorial A-E questions with separate commented answer key; QA `60/60 PASS`
 - **Semantic QA artifact:** `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`
 - **ConversationInstruction:** `materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md`, static QA `PASS_STATIC`
@@ -27,19 +27,21 @@
 - **Critical version rule:** CPP art. 584, § 4º, added by Lei n.º 15.358/2026, stays outside the study baseline
 - **Semantic QA:** coverage `pass_after_corrections`; normative `pass_after_corrections`; didactics `pass`; practice `pass_60_of_60`; Markdown corpus `pass_for_markdown`
 - **RC QA:** identity `pass`; semantic content changed in RC `false`; tutor `pass_static`; NotebookLM corpus/tutor static `pass_static`
-- **PDF for current pack:** not created/versioned yet
-- **NotebookLM live smoke:** not started; only after canonical PDF validation
+- **Frozen Markdown Git blob:** `11a41d18ff3a8b03150923ec68d44087bded7267`
+- **Local PDF candidate QA:** `PASS_LOCAL_CANDIDATE`; 28 A4 pages; PDF 1.4; 37,894 bytes; SHA-256 `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`; expected Git blob `4eabdacec7858120792cf792ca227335e41730b6`; textual readback `PASS`; visual `28/28 PASS`
+- **Canonical PDF for current pack:** `NOT_VERSIONED`; `CANONICAL_PDF_TRANSPORT_BLOCKED`; no `PASS_CANONICAL_BINARY_IDENTITY`
+- **NotebookLM live smoke:** `NOT_STARTED`; blocked until canonical PDF identity is proven
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** Gate 2 closed at cutoff `2025-07-29`
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
 - **B2 coverage matrix:** six complete matrices
 - **Validation gate:** `python tools/verify.py`
-- **Validation status in DIREITO-010 runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; `git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d010` failed on `2026-09-14` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
+- **Validation status in DIREITO-011 runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; `git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d011` failed on `2026-09-15` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
-- **Merge policy:** validated development PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
+- **Merge policy:** validated development/status PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` mandatory
-- **Primary NotebookLM UX:** `APOSTILA.pdf` as study source after PDF QA; tutor instructions outside the corpus when native conversation configuration is available
-- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`
+- **Primary NotebookLM UX:** canonical `APOSTILA.pdf` as study source after PDF QA; tutor instructions outside the corpus when native conversation configuration is available
+- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`
 
 This file is an executive index. Detailed state is in `00_SYSTEM/CHECKPOINT.md`; operational next action is in `00_SYSTEM/NEXT_ACTION.md`.

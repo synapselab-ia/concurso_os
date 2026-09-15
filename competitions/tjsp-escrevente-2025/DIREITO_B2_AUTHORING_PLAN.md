@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` preparado com QA estático, pendente de PDF canônico e smoke real
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com candidato local de PDF auditado, mas publicação binária canônica bloqueada
 
 ## Objetivo
 
@@ -138,7 +138,40 @@ Executado:
 - NotebookLM live smoke: ainda não executado;
 - gate determinístico: `not_executed_current_environment` porque o checkout canônico continuou bloqueado por DNS, não tratado como PASS.
 
-Estado: `release_candidate_incomplete`, preparado para o pipeline de PDF.
+PR 29 foi mergeada em `main` no commit `947ea624d7abfa3b1db4481064aa4abf9743be19`.
+
+Estado: `closed_static_ready_for_pdf`.
+
+## Gate 11 - PDF canônico de Direito Processual Penal
+
+Em `2026-09-15`, a fonte Markdown usada na geração foi comprovada idêntica ao `APOSTILA.md` canônico pelo Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`.
+
+O candidato local preferido passou por QA integral:
+
+- 28 páginas A4;
+- PDF 1.4 pesquisável;
+- 37.894 bytes;
+- SHA-256 `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
+- Git blob esperado `4eabdacec7858120792cf792ca227335e41730b6`;
+- readback textual `pass`;
+- inspeção visual `28/28 pass`;
+- questões e gabarito estruturalmente separados.
+
+A etapa canônica continua bloqueada porque o runtime atual não dispõe de transporte binário confiável para publicar exatamente o arquivo auditado no GitHub. Não há `APOSTILA.pdf` versionado no pack e não há prova de identidade binária remota.
+
+Estado: `open_transport_blocked`.
+
+Critério pendente:
+
+```text
+publicar exatamente o candidato auditado
+-> ler Git blob remoto
+-> exigir 4eabdacec7858120792cf792ca227335e41730b6
+-> somente então PASS_CANONICAL_BINARY_IDENTITY
+-> somente depois smoke real do NotebookLM
+```
+
+O gate determinístico continua `not_executed_current_environment` porque o checkout por `git clone` falhou novamente por DNS em `2026-09-15`; isso não é PASS.
 
 ## Lições obrigatórias para os próximos packs
 
@@ -146,7 +179,8 @@ Estado: `release_candidate_incomplete`, preparado para o pipeline de PDF.
 - rastreabilidade fica em matriz, manifest e QA;
 - ausência na fonte é limite do corpus, não prova de inexistência externa;
 - smoke final deve verificar vazamento de metadados em Teste, Cartões e Mapa mental;
-- smoke final deve incluir pergunta cuja resposta dependa de informação ausente do corpus.
+- smoke final deve incluir pergunta cuja resposta dependa de informação ausente do corpus;
+- hash local de PDF não substitui prova de identidade binária do arquivo versionado.
 
 ## Ordem de produção
 
@@ -159,7 +193,7 @@ Estado: `release_candidate_incomplete`, preparado para o pipeline de PDF.
 7. concluído como draft - Direito Processual Penal;
 8. concluído - QA de Direito Processual Penal;
 9. concluído - preparação estática do RC de Direito Processual Penal;
-10. próximo - PDF canônico de Direito Processual Penal;
+10. em andamento/bloqueado no transporte - PDF canônico de Direito Processual Penal;
 11. smoke real do NotebookLM de Direito Processual Penal;
 12. Direito Processual Civil;
 13. Direito Constitucional;
@@ -180,7 +214,7 @@ Estado: `release_candidate_incomplete`, preparado para o pipeline de PDF.
 | 8 - draft processual penal | `closed_as_draft` | DPP-01...DPP-25 e prática inicial implementados |
 | 9 - QA processual penal | `closed` | cobertura, norma, didática, prática e corpus Markdown aprovados após correções |
 | 10 - RC processual penal | `closed_static_ready_for_pdf` | identidade rc.1, tutor e QA estático concluídos sem reabertura semântica |
-| 11 - PDF processual penal | `next` | gerar, auditar e provar identidade do `APOSTILA.pdf` canônico antes de smoke real |
+| 11 - PDF processual penal | `open_transport_blocked` | QA local do candidato passou; falta versionar binário exato e provar Git blob remoto |
 
 ## Regra de autoridade
 

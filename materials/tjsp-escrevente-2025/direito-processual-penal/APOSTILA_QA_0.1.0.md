@@ -329,3 +329,163 @@ Sem checkout canônico, `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT
 | `python tools/verify.py` | NOT_EXECUTED_CURRENT_ENVIRONMENT |
 
 `DIREITO-010` prepara o `0.1.0-rc.1` como **release candidate incompleto**, apto a avançar ao pipeline de PDF. Isso não equivale a release final e não presume gates ainda não executados.
+
+---
+
+## 14. DIREITO-011 - congelamento e identidade da fonte do PDF
+
+**QA update:** `2026-09-15`  
+**Resultado:** `PASS_SOURCE_MARKDOWN_IDENTITY`
+
+O `main` canônico observado no início de `DIREITO-011` estava em:
+
+`947ea624d7abfa3b1db4481064aa4abf9743be19`
+
+A cópia local usada para gerar o PDF foi conferida contra o GitHub:
+
+- caminho: `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.md`;
+- versão: `0.1.0-rc.1`;
+- bytes locais: `69.109`;
+- SHA-256 local: `da3f1b0c75e4300d22584d2393cab3a3ee4d88f0bd5199ec5a0761a2d2f62fa1`;
+- Git blob calculado localmente: `11a41d18ff3a8b03150923ec68d44087bded7267`;
+- Git blob retornado pelo GitHub: `11a41d18ff3a8b03150923ec68d44087bded7267`.
+
+A identidade da fonte Markdown está provada. Nenhuma correção jurídica foi feita durante a diagramação.
+
+---
+
+## 15. DIREITO-011 - candidato local de PDF
+
+**Resultado:** `PASS_LOCAL_CANDIDATE`
+
+Foi gerado um candidato A4 pesquisável exclusivamente a partir do Markdown congelado. O candidato preferido para publicação foi produzido em PDF 1.4 usando fontes básicas do PDF e streams comprimidos, sem conteúdo externo.
+
+### Identidade do candidato preferido
+
+- arquivo local de trabalho: `APOSTILA_ascii_compact.pdf`;
+- páginas: `28`;
+- página: `A4`, `595.28 x 841.89 pt`;
+- formato: `PDF 1.4`;
+- tamanho: `37.894 bytes`;
+- SHA-256: `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
+- Git blob esperado: `4eabdacec7858120792cf792ca227335e41730b6`;
+- pesquisável: `sim`;
+- criptografia: `não`;
+- JavaScript: `não`;
+- conteúdo externo: `não`.
+
+A geração normaliza apenas glifos de diagramação indisponíveis em WinAnsi por equivalentes textuais seguros quando necessário, como seta por `->`; o conteúdo jurídico não foi alterado.
+
+---
+
+## 16. DIREITO-011 - readback textual do candidato
+
+**Resultado:** `PASS_TEXT_READBACK`
+
+`pdftotext -layout` foi executado sobre o candidato identificado acima. Foram confirmados:
+
+- `Direito Processual Penal`;
+- `Unidade 1`;
+- `Unidade 25`;
+- `Gabarito comentado`;
+- `art. 584`;
+- `§`;
+- `JECrim`;
+- `habeas corpus`;
+- `carta testemunhável`;
+- questão `60`;
+- gabarito `60. B.`;
+- acentos e símbolos jurídicos no readback.
+
+Trecho de controle recuperado do PDF:
+
+```text
+60.
+Na audiência do JECrim, o art. 81, § 1º-A,
+...
+60. B. O § 1º-A do art. 81 protege a dignidade da vítima na audiência do JECrim.
+```
+
+---
+
+## 17. DIREITO-011 - inspeção visual integral
+
+**Resultado:** `PASS_VISUAL_28_OF_28`
+
+As `28/28` páginas do mesmo candidato foram renderizadas a `150 dpi` e inspecionadas integralmente.
+
+Não foram observados:
+
+- clipping de texto;
+- sobreposição de elementos;
+- páginas vazias indevidas;
+- glifos quebrados;
+- corrupção de acentos ou `§`;
+- quebra impeditiva de tabelas ou fluxos;
+- mistura acidental entre bateria e gabarito.
+
+A seção `Prática autoral` inicia em página própria na página `17`. O `Gabarito comentado` inicia em página própria na página `27` e continua na página `28` com o fechamento da apostila.
+
+---
+
+## 18. DIREITO-011 - transporte e identidade canônica
+
+**Resultado:** `CANONICAL_PDF_TRANSPORT_BLOCKED`
+
+O critério canônico exige versionar exatamente o candidato auditado em:
+
+`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
+
+Neste runtime, o conector GitHub disponível não expõe uma operação de upload de arquivo binário por referência do arquivo local. As operações de conteúdo disponíveis recebem texto; portanto não é seguro tratá-las como transporte do PDF auditado.
+
+Uma tentativa anterior com outro candidato local (`56.319 bytes`, SHA-256 `946bac9ce3206ad97009e0f23c641945a61b345e754c89a1ce342194069d59e8`, Git blob esperado `97426cc526c542de6f07ed7e07698984a629ceb5`) produziu um blob remoto órfão com SHA `dd10a124a6226cf1bd63e7fa5104033c00d52788`, diferente do Git blob esperado. Esse blob nunca foi referenciado por tree, commit, branch ou PR e foi rejeitado como candidato canônico.
+
+Para o candidato preferido atual, nenhum upload remoto foi declarado como válido. Não existe `APOSTILA.pdf` versionado no pack e não há prova de identidade binária remota.
+
+Consequências:
+
+- `PASS_CANONICAL_BINARY_IDENTITY`: **não**;
+- `APOSTILA.pdf` canônico: **não versionado**;
+- NotebookLM live smoke: continua bloqueado;
+- `DIREITO-011`: permanece aberto.
+
+---
+
+## 19. DIREITO-011 - gate determinístico
+
+Nova tentativa em `2026-09-15`:
+
+```text
+git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d011
+fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
+```
+
+Exit code: `128`.
+
+Sem checkout canônico, `python tools/verify.py` não foi executado. Resultado:
+
+`NOT_EXECUTED_CURRENT_ENVIRONMENT`
+
+Isso não é `PASS` e permanece documentado conforme DEC-0009.
+
+---
+
+## 20. Estado atual após o avanço parcial de DIREITO-011
+
+| Gate | Resultado |
+|---|---|
+| conteúdo semântico/normativo | PASS_AFTER_CORRECTIONS |
+| prática | PASS, 60/60 |
+| corpus Markdown | PASS_FOR_MARKDOWN |
+| identidade `0.1.0-rc.1` | PASS |
+| tutor/NotebookLM estático | PASS_STATIC |
+| identidade da fonte Markdown usada no PDF | PASS_SOURCE_MARKDOWN_IDENTITY |
+| PDF local - readback | PASS_TEXT_READBACK |
+| PDF local - visual | PASS_VISUAL_28_OF_28 |
+| PDF local - metadados | PASS_LOCAL_CANDIDATE |
+| PDF canônico versionado | BLOCKED_NOT_VERSIONED |
+| identidade binária GitHub | NOT_PROVEN |
+| NotebookLM live smoke | NOT_STARTED |
+| `python tools/verify.py` | NOT_EXECUTED_CURRENT_ENVIRONMENT |
+
+`DIREITO-011` não está fechado como PDF validado. A próxima operação continua sendo transportar **exatamente** o candidato auditado para o caminho canônico e provar o Git blob remoto `4eabdacec7858120792cf792ca227335e41730b6` antes de avançar ao NotebookLM live smoke.
