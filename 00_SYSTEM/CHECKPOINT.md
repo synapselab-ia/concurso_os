@@ -3,21 +3,21 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch_after_release_pr_merge: main
+branch_after_status_pr_merge: main
 base_branch: main
-current_task: execute DIREITO-012 live NotebookLM smoke for direito-processual-penal 0.1.0-rc.1
-current_pack: direito-processual-penal_0.1.0-rc.1_pdf_validated_pending_notebooklm_smoke
+current_task: execute DIREITO-012 live NotebookLM smoke for direito-processual-penal 0.1.0-rc.1 when external access is available
+current_pack: direito-processual-penal_0.1.0-rc.1_pdf_validated_notebooklm_smoke_blocked_external_access
 last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
 last_released_pack: portugues_2.0.0
 
-canonical_state_at_direito_011_resume:
-  main_head: 89f0c44056c798a13addd44ad41d14a41bd16f8f
+canonical_state_at_direito_012_resume:
+  main_head: b63f9a8f4b51894bf37e070eee3feeb481781855
   source: GitHub branch main
-  open_pull_requests_before_release_pr: 0
-  direito_011_status_pr: 30
-  direito_011_status_pr_state: merged
-  release_branch: release/direito-processual-penal-0.1.0-rc.1-pdf
-  release_pr: 31
+  open_pull_requests: 0
+  direito_011_pr: 31
+  direito_011_state: merged
+  direito_011_merge: b63f9a8f4b51894bf37e070eee3feeb481781855
+  canonical_pdf_git_blob: 4eabdacec7858120792cf792ca227335e41730b6
 
 completed:
   - repository foundation and chat-independent continuity active
@@ -33,13 +33,8 @@ completed:
   - DIREITO-008 first Direito Processual Penal draft merged through PR 27
   - DIREITO-009 semantic and normative QA merged through PR 28
   - DIREITO-010 release candidate identity tutor configuration and static corpus QA merged through PR 29
-  - DIREITO-011 source Markdown identity proven
-  - DIREITO-011 searchable PDF candidate generated from frozen rc.1 Markdown
-  - DIREITO-011 textual readback passed
-  - DIREITO-011 visual inspection passed on 28 of 28 pages
-  - DIREITO-011 exact binary versioned at canonical APOSTILA.pdf path
-  - DIREITO-011 remote Git blob matched expected Git blob exactly
-  - DIREITO-011 PASS_CANONICAL_BINARY_IDENTITY
+  - DIREITO-011 canonical PDF source identity textual readback visual inspection and binary identity completed
+  - DIREITO-011 merged through PR 31
 
 b2_source_gate:
   status: closed
@@ -71,7 +66,7 @@ right_penal_validated_rc:
 
 right_processual_penal:
   version: 0.1.0-rc.1
-  status: pdf_validated_pending_notebooklm_smoke
+  status: pdf_validated_notebooklm_smoke_blocked_external_access
   content_base: 0.1.0-draft.2
   semantic_content_changed_in_rc: false
   path: materials/tjsp-escrevente-2025/direito-processual-penal
@@ -88,9 +83,6 @@ right_processual_penal:
   frozen_markdown:
     version: 0.1.0-rc.1
     git_blob_github: 11a41d18ff3a8b03150923ec68d44087bded7267
-    git_blob_local: 11a41d18ff3a8b03150923ec68d44087bded7267
-    sha256_local: da3f1b0c75e4300d22584d2393cab3a3ee4d88f0bd5199ec5a0761a2d2f62fa1
-    bytes_local: 69109
     identity: pass_source_markdown_identity
   tutor_configuration:
     artifact: materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md
@@ -98,7 +90,8 @@ right_processual_penal:
     static_qa: pass_static
     corpus_limit_rule: absence_in_source_is_not_universal_negative
   notebooklm_static_qa: pass_static
-  notebooklm_live_qa: not_started
+  notebooklm_live_qa: external_smoke_not_executed_current_environment
+  notebooklm_smoke_artifact: materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md
   qa_artifact: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md
   pdf:
     path: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf
@@ -115,8 +108,6 @@ right_processual_penal:
     text_readback: pass
     visual_inspection: pass_28_of_28
     canonical_binary_identity: pass
-    practice_start_page: 17
-    answer_key_start_page: 27
   baseline: 2025-07-29
   cpp_584_paragraph_4_post_cutoff: excluded_from_baseline
 
@@ -125,24 +116,24 @@ validation:
     command: python tools/verify.py
     result: not_executed_current_environment
     attempted_at: 2026-09-15
-    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d011_cont
+    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d012
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
-  pdf_qa:
-    source_markdown_identity: pass
-    text_readback: pass
-    visual_inspection: pass_28_of_28
-    canonical_binary_identity: pass
+  notebooklm_live_smoke:
+    result: external_smoke_not_executed
+    reason: no_authenticated_notebooklm_session_or_connected_interactive_channel_in_current_runtime
+    policy: no_external_behavior_presumed
 
 next_gate:
   id: DIREITO-012
   name: notebooklm_live_smoke_direito_processual_penal
   pack: direito-processual-penal
   target_version: 0.1.0-rc.1
-  state: not_started
+  state: blocked_external_access
   prerequisite: DIREITO-011 merged with PASS_CANONICAL_BINARY_IDENTITY
   required_work:
+    - obtain effective access to NotebookLM without changing the canonical corpus
     - load only canonical APOSTILA.pdf as NotebookLM source
     - place METODOLOGIA_NOTEBOOKLM operational block in native conversation configuration
     - test explanatory chat and one-question-at-a-time A-E training
@@ -151,7 +142,7 @@ next_gate:
     - verify no DPP coverage IDs or backoffice metadata leak into study artifacts
     - ask at least one out-of-corpus question and require corpus-limit language rather than universal negative
     - record exact observations without presuming external interactions not performed
-    - update QA manifest changelog checkpoint and next action
+    - classify only as PASS PASS_WITH_OBSERVATIONS or FAIL after real evidence
     - rerun python tools/verify.py or document current impossibility
 
 pull_request_lineage:
@@ -172,10 +163,10 @@ pull_request_lineage:
   direito_processual_penal_pdf_status_pr: 30
   direito_processual_penal_pdf_publication_pr: 31
 
-merge_status: DIREITO_011_merged_next_DIREITO_012
+merge_status: DIREITO_012_open_external_smoke_not_executed
 
 not_started:
-  - direito-processual-penal live NotebookLM smoke
+  - successful direito-processual-penal live NotebookLM smoke
   - direito-processual-civil
   - direito-constitucional
   - direito-administrativo
