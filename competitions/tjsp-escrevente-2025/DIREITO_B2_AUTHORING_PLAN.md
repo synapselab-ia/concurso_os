@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com conteúdo/tutor estáticos aprovados e candidato local de PDF auditado, mas publicação binária canônica bloqueada
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com candidato local de PDF auditado, mas publicação binária canônica bloqueada
 
 ## Objetivo
 
@@ -81,25 +81,41 @@ O QA produziu `0.1.0-draft.3` com cobertura, norma, didática e 30/30 questões 
 
 ## Gate 8 - primeiro draft de Direito Processual Penal
 
-`0.1.0-draft.1` implementou `DPP-01...DPP-25` em 25 unidades, com 52 questões autorais, nenhum `DPP-*` em título estudável e controle do cutoff. PR 27, merge `fedd24f8607b6d2b68d4aa9352ff949529680f1e`.
+A branch `content/direito-processual-penal-v0.1-draft` criou `0.1.0-draft.1` com:
+
+- workspace canônico;
+- DPP-01...DPP-25 implementados em 25 unidades;
+- 52 questões autorais;
+- nenhum `DPP-*` em título ou subtítulo estudável;
+- baseline `2025-07-29` e exclusão explícita do art. 584, § 4º, de 2026.
+
+PR 27 foi mergeada em `main` no commit `fedd24f8607b6d2b68d4aa9352ff949529680f1e`.
 
 Estado: `closed_as_draft`.
 
 ## Gate 9 - QA semântico/normativo de Direito Processual Penal
 
-A revisão integral produziu `0.1.0-draft.2` com:
+A branch `qa/direito-processual-penal-v0.1` revisou integralmente `SRC-B2-CPP`, `SRC-B2-L9099`, o contrato DPP e a prática.
 
+Resultado registrado em `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`:
+
+- versão resultante: `0.1.0-draft.2`;
 - DPP-01...DPP-25: `pass_after_corrections`;
-- revisão normativa: `pass_after_corrections`;
-- didática/fluxos/contrastes: `pass`;
+- revisão normativa integral: `pass_after_corrections`;
+- didática, fluxos e contrastes: `pass`;
+- 52 questões originais revisadas individualmente;
+- 8 questões adicionadas para fechar pontos de literalidade/completude;
 - prática final: `60/60 pass`;
 - requisitos `Q-LIT`, `Q-CMP`, `Q-CAS`, `Q-FLX`, `Q-VER` e `Q-FULL`: `pass`;
 - corpus Markdown: `pass_for_markdown`;
-- IDs de backoffice em títulos: `pass_absent`.
+- IDs de backoffice em títulos: `pass_absent`;
+- gate determinístico: `not_executed_current_environment`, por falha DNS ao obter checkout canônico, não tratado como PASS;
+- PDF: não criado;
+- NotebookLM: não iniciado.
 
-Correções relevantes incluíram art. 262; arts. 363-365; arts. 394-A, 398 e 400-A; art. 537 revogado e art. 538; expansão de 574-603; tratamento artigo a artigo de 604-620, incluindo art. 611 revogado; tratamento de 632-646; art. 647-A; e completude dos arts. 60-83 da Lei 9.099/1995.
+Correções relevantes incluíram art. 262; arts. 363-365; arts. 394-A, 398 e 400-A; art. 537 revogado e art. 538; expansão de 574-603; tratamento artigo a artigo de 604-620, incluindo art. 611 revogado; tratamento de 632-646; art. 647-A e aprofundamento de 647-667; e completude dos arts. 60-83 da Lei 9.099/1995.
 
-PR 28, merge `70a5103d3f8ceb6132908d68963a2a55732665ec`.
+PR 28 foi mergeada em `main` no commit `70a5103d3f8ceb6132908d68963a2a55732665ec`.
 
 Estado: `closed`.
 
@@ -110,20 +126,25 @@ Estado: `closed`.
 Executado:
 
 - identidade de `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` sincronizada para `0.1.0-rc.1`;
-- mudança no corpo de `APOSTILA.md` restrita a metadados de versão/status;
+- mudança no corpo de `APOSTILA.md` restrita aos metadados de versão/status;
 - `METODOLOGIA_NOTEBOOKLM.md` criada como configuração da conversa, não como fonte estudável;
+- tutor orientado a distinguir regra expressa, explicação e aplicação hipotética;
+- tutor proibido de inventar jurisprudência, doutrina ou atualização normativa ausente da fonte;
+- ausência de informação tratada como limite do corpus, não como negativa universal;
+- treino interativo configurado para uma questão por vez e sem antecipação de gabarito;
 - QA estático do corpus e tutor: `pass_static`;
-- baseline `2025-07-29` e isolamento do art. 584, § 4º, de 2026 preservados.
+- baseline `2025-07-29` e isolamento do art. 584, § 4º, de 2026 preservados;
+- PDF canônico: ainda não criado;
+- NotebookLM live smoke: ainda não executado;
+- gate determinístico: `not_executed_current_environment` porque o checkout canônico continuou bloqueado por DNS, não tratado como PASS.
 
-PR 29, merge `947ea624d7abfa3b1db4481064aa4abf9743be19`.
+PR 29 foi mergeada em `main` no commit `947ea624d7abfa3b1db4481064aa4abf9743be19`.
 
 Estado: `closed_static_ready_for_pdf`.
 
 ## Gate 11 - PDF canônico de Direito Processual Penal
 
-Em `2026-09-15`, a fonte Markdown usada para geração foi provada idêntica ao `APOSTILA.md` canônico pelo Git blob:
-
-`11a41d18ff3a8b03150923ec68d44087bded7267`
+Em `2026-09-15`, a fonte Markdown usada na geração foi comprovada idêntica ao `APOSTILA.md` canônico pelo Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`.
 
 O candidato local preferido passou por QA integral:
 
