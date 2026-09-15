@@ -3,15 +3,16 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `direito-processual-penal`  
 **Pack version:** `0.1.0-rc.1`  
-**Status:** `release_candidate_pdf_validated_pending_notebooklm_smoke`  
+**Status:** `release_candidate_pdf_validated_notebooklm_smoke_blocked_external_access`  
 **RC date:** `2026-09-14`  
-**PDF QA update:** `2026-09-15`
+**PDF QA update:** `2026-09-15`  
+**NotebookLM smoke attempt:** `2026-09-15`
 
 ## Objetivo
 
 Este SubjectPack cobre Direito Processual Penal no recorte do Edital de Abertura n.º 02/2025 e segue `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e o contrato `DPP-01...DPP-25` de `DIREITO_B2_COVERAGE_MATRIX.md`.
 
-`DIREITO-009` aprovou semanticamente o conteúdo em `0.1.0-draft.2`. `DIREITO-010` promoveu somente a identidade do conteúdo congelado para `0.1.0-rc.1`, criou a configuração do tutor e executou QA estático. `DIREITO-011` gerou, auditou e publicou o `APOSTILA.pdf` exato, com identidade binária canônica comprovada. O pack ainda não é release final porque o smoke real do NotebookLM permanece pendente.
+`DIREITO-009` aprovou semanticamente o conteúdo em `0.1.0-draft.2`. `DIREITO-010` promoveu somente a identidade do conteúdo congelado para `0.1.0-rc.1`, criou a configuração do tutor e executou QA estático. `DIREITO-011` gerou, auditou e publicou o `APOSTILA.pdf` exato, com identidade binária canônica comprovada. `DIREITO-012` permanece aberto: a tentativa atual não executou o smoke real porque o runtime não forneceu acesso autenticado/interativo ao NotebookLM.
 
 ## Escopo oficial
 
@@ -60,6 +61,7 @@ Identidade do PDF canônico:
 - `SOURCES.md`: proveniência e controle de versão;
 - `CHANGELOG.md`: histórico editorial;
 - `APOSTILA_QA_0.1.0.md`: QA semântico/normativo, QA estático do RC e QA do PDF;
+- `NOTEBOOKLM_SMOKE_0.1.0.md`: estado e evidência do gate externo `DIREITO-012`;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
 
@@ -114,7 +116,7 @@ Os IDs abaixo são backoffice e não aparecem como rótulos estudáveis.
 | PDF - visual | `pass_visual_28_of_28` |
 | `APOSTILA.pdf` canônico | `pass_canonical_binary_identity` |
 | identidade binária GitHub | `pass` |
-| NotebookLM smoke real | `not_started` |
+| NotebookLM smoke real | `external_smoke_not_executed_current_environment` |
 | `python tools/verify.py` | `not_executed_current_environment` por falha DNS ao obter checkout canônico, não tratado como PASS |
 
 ## DIREITO-011 - fechamento do PDF
@@ -123,8 +125,12 @@ O PDF foi produzido exclusivamente a partir do Markdown congelado cujo Git blob 
 
 Na publicação final, o GitHub criou o blob `4eabdacec7858120792cf792ca227335e41730b6`, exatamente igual ao Git blob calculado para o candidato auditado. O mesmo SHA foi observado no caminho remoto versionado. Nenhuma alteração jurídica foi introduzida durante geração ou transporte.
 
-Uma tentativa anterior com outro candidato havia produzido blob divergente e foi rejeitada; ela permanece apenas como histórico de QA e nunca foi ligada a tree, commit, branch ou PR canônico.
+## DIREITO-012 - smoke externo
+
+A tentativa de `2026-09-15` não executou interação real com o NotebookLM porque o runtime não disponibilizou sessão autenticada nem canal interativo já conectado. Nenhum comportamento externo foi presumido. O resultado é `EXTERNAL_SMOKE_NOT_EXECUTED`, e o gate permanece aberto.
+
+Detalhes: `NOTEBOOKLM_SMOKE_0.1.0.md`.
 
 ## Próximo estágio
 
-O próximo gate é `DIREITO-012`, smoke real do NotebookLM. O corpus deve conter somente o `APOSTILA.pdf` canônico, enquanto o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` deve ir para a configuração nativa da conversa. Nenhum resultado de interação externa pode ser presumido.
+Retomar `DIREITO-012` quando houver acesso efetivo ao NotebookLM. Usar somente o `APOSTILA.pdf` canônico como fonte e o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` na configuração nativa da conversa. Somente evidência observada pode fechar o gate.
