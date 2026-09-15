@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com PDF canônico validado e smoke real do NotebookLM pendente
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com PDF canônico validado e smoke real do NotebookLM bloqueado por acesso externo nesta execução
 
 ## Objetivo
 
@@ -137,15 +137,13 @@ Resultado:
 
 `PASS_CANONICAL_BINARY_IDENTITY`
 
-PR 30 preservou o bloqueio intermediário real. PR 31 publica o binário exato e fecha o gate após revisão/merge.
+PR 30 preservou o bloqueio intermediário real. PR 31 publicou o binário exato e foi mergeada em `b63f9a8f4b51894bf37e070eee3feeb481781855`.
 
 O gate determinístico continua `not_executed_current_environment`: nova tentativa de `git clone` em `2026-09-15` falhou com `Could not resolve host: github.com`, exit 128. Isso não é PASS.
 
-Estado: `closed_pdf_validated` após merge da PR 31.
+Estado: `closed_pdf_validated`.
 
 ## Gate 12 - smoke real do NotebookLM de Direito Processual Penal
-
-Próximo gate.
 
 Usar somente o `APOSTILA.pdf` canônico como fonte estudável e o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` na configuração nativa da conversa.
 
@@ -158,9 +156,15 @@ O smoke deve verificar:
 - `Teste`, `Cartões` e `Mapa mental` úteis;
 - ausência de IDs `DPP-*`, gate labels e metadados de backoffice nos artefatos estudáveis.
 
-Não presumir interação externa não executada.
+Na tentativa de `2026-09-15`, o runtime disponível não forneceu sessão autenticada do NotebookLM nem canal interativo já conectado para operar a interface. Nenhuma interação externa foi presumida.
 
-Estado: `not_started`.
+Resultado da tentativa:
+
+`EXTERNAL_SMOKE_NOT_EXECUTED`
+
+Registro: `materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md`.
+
+Estado: `blocked_external_access`.
 
 ## Lições obrigatórias para os próximos packs
 
@@ -183,7 +187,7 @@ Estado: `not_started`.
 8. concluído - QA de Direito Processual Penal;
 9. concluído - preparação estática do RC de Direito Processual Penal;
 10. concluído - PDF canônico de Direito Processual Penal;
-11. próximo - smoke real do NotebookLM de Direito Processual Penal;
+11. bloqueado por acesso externo - smoke real do NotebookLM de Direito Processual Penal;
 12. Direito Processual Civil;
 13. Direito Constitucional;
 14. Direito Administrativo;
@@ -204,7 +208,7 @@ Estado: `not_started`.
 | 9 - QA processual penal | `closed` | cobertura, norma, didática, prática e corpus Markdown aprovados após correções |
 | 10 - RC processual penal | `closed_static_ready_for_pdf` | identidade rc.1, tutor e QA estático concluídos sem reabertura semântica |
 | 11 - PDF processual penal | `closed_pdf_validated` | PDF canônico versionado e Git blob remoto idêntico ao candidato auditado |
-| 12 - NotebookLM processual penal | `next` | smoke real do corpus/tutor e artefatos do Estúdio |
+| 12 - NotebookLM processual penal | `blocked_external_access` | smoke real ainda não executado; exige sessão efetiva do produto e evidência observada |
 
 ## Regra de autoridade
 
