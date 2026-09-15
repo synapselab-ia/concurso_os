@@ -3,19 +3,19 @@
 ```yaml
 project_state: active
 phase: subject_pack_authoring_prep
-branch: main
+branch_after_status_pr_merge: main
 base_branch: main
-current_task: execute DIREITO-011 canonical PDF pipeline for direito-processual-penal rc.1
-current_pack: direito-processual-penal_0.1.0-rc.1_release_candidate_incomplete
+current_task: resume DIREITO-011 by publishing the exact audited direito-processual-penal rc.1 PDF and proving canonical binary identity
+current_pack: direito-processual-penal_0.1.0-rc.1_release_candidate_incomplete_pdf_transport_blocked
 last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
 last_released_pack: portugues_2.0.0
 
-canonical_state_before_direito_010:
-  main_head: 70a5103d3f8ceb6132908d68963a2a55732665ec
+canonical_state_at_direito_011_start:
+  main_head: 947ea624d7abfa3b1db4481064aa4abf9743be19
   source: GitHub branch main
   open_pull_requests: 0
-  direito_009_pr: 28
-  direito_009_state: merged
+  direito_010_pr: 29
+  direito_010_state: merged
 
 completed:
   - repository foundation and chat-independent continuity active
@@ -27,12 +27,14 @@ completed:
   - B2 Gate 2 source/version inventory closed at cutoff 2025-07-29
   - B2 Gate 3 banca analysis closed with 150 classified legal questions
   - B2 Gate 4 coverage matrix closed
-  - Direito Penal draft QA canonical PDF and NotebookLM smoke completed through DIREITO-007
+  - Direito Penal pipeline validated through canonical PDF and NotebookLM smoke
   - DIREITO-008 first Direito Processual Penal draft merged through PR 27
   - DIREITO-009 semantic and normative QA merged through PR 28
-  - DIREITO-010 release candidate identity synchronized from approved draft.2
-  - DIREITO-010 METODOLOGIA_NOTEBOOKLM.md created as ConversationInstruction
-  - DIREITO-010 static NotebookLM corpus and tutor QA passed
+  - DIREITO-010 release candidate identity tutor configuration and static corpus QA merged through PR 29
+  - DIREITO-011 frozen Markdown source identity proven against GitHub
+  - DIREITO-011 local searchable PDF candidate generated from frozen rc.1 Markdown
+  - DIREITO-011 textual readback passed on exact preferred local candidate
+  - DIREITO-011 visual inspection passed on 28 of 28 pages of exact preferred local candidate
 
 b2_source_gate:
   status: closed
@@ -64,7 +66,7 @@ right_penal_validated_rc:
 
 right_processual_penal:
   version: 0.1.0-rc.1
-  status: release_candidate_incomplete
+  status: release_candidate_incomplete_pdf_transport_blocked
   content_base: 0.1.0-draft.2
   semantic_content_changed_in_rc: false
   path: materials/tjsp-escrevente-2025/direito-processual-penal
@@ -78,17 +80,46 @@ right_processual_penal:
   practice_requirements: pass_Q_LIT_Q_CMP_Q_CAS_Q_FLX_Q_VER_Q_FULL
   markdown_corpus_qa: pass_for_markdown
   visible_backoffice_ids_in_headings: false
+  frozen_markdown:
+    version: 0.1.0-rc.1
+    git_blob_github: 11a41d18ff3a8b03150923ec68d44087bded7267
+    git_blob_local: 11a41d18ff3a8b03150923ec68d44087bded7267
+    sha256_local: da3f1b0c75e4300d22584d2393cab3a3ee4d88f0bd5199ec5a0761a2d2f62fa1
+    bytes_local: 69109
+    identity: pass_source_markdown_identity
   tutor_configuration:
     artifact: materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md
     role: ConversationInstruction
     static_qa: pass_static
     corpus_limit_rule: absence_in_source_is_not_universal_negative
   notebooklm_static_qa: pass_static
-  notebooklm_live_qa: not_started
+  notebooklm_live_qa: not_started_blocked_until_canonical_pdf
   qa_artifact: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md
   pdf:
-    status: not_created
-    canonical_qa: not_started
+    local_candidate:
+      status: pass_local_candidate
+      pages: 28
+      page_size: A4
+      format: PDF_1.4
+      bytes: 37894
+      sha256: 608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0
+      expected_git_blob: 4eabdacec7858120792cf792ca227335e41730b6
+      searchable: true
+      text_readback: pass
+      visual_inspection: pass_28_of_28
+      practice_start_page: 17
+      answer_key_start_page: 27
+    canonical:
+      path: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf
+      status: blocked_not_versioned
+      remote_git_blob: not_proven
+      canonical_binary_identity: not_proven
+    prior_rejected_transport_attempt:
+      candidate_bytes: 56319
+      candidate_sha256: 946bac9ce3206ad97009e0f23c641945a61b345e754c89a1ce342194069d59e8
+      expected_git_blob: 97426cc526c542de6f07ed7e07698984a629ceb5
+      orphan_remote_blob: dd10a124a6226cf1bd63e7fa5104033c00d52788
+      outcome: rejected_mismatch_never_referenced_by_tree_commit_branch_or_pr
   baseline: 2025-07-29
   cpp_584_paragraph_4_post_cutoff: excluded_from_baseline
 
@@ -96,34 +127,32 @@ validation:
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
-    attempted_at: 2026-09-14
-    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d010
+    attempted_at: 2026-09-15
+    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d011
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
-  rc_identity_review:
-    apostila_change_from_draft_2: metadata_only
-    semantic_content_frozen: true
-    tutor_configuration: pass_static
-    notebooklm_static: pass_static
+  pdf_local_qa:
+    source_markdown_identity: pass
+    text_readback: pass
+    visual_inspection: pass_28_of_28
+    canonical_binary_identity: not_proven
 
 next_gate:
   id: DIREITO-011
   name: canonical_pdf_direito_processual_penal
   pack: direito-processual-penal
   target_version: 0.1.0-rc.1
-  prerequisite: DIREITO-010 merged
+  state: open_transport_blocked
   target_state: canonical_pdf_validated_or_block_explicitly_documented
   required_work:
-    - generate APOSTILA.pdf exclusively from frozen rc.1 APOSTILA.md
-    - prove source to PDF identity
-    - textual readback of exact candidate
-    - render and inspect every page
-    - verify titles legal symbols tables questions and answer key separation
-    - version exact audited binary in GitHub
-    - record pages bytes sha256 and Git blob
-    - do not mark canonical PDF pass until repository binary identity is proven
+    - transport exact audited candidate bytes to canonical APOSTILA.pdf path using a binary-safe mechanism
+    - read remote Git blob after publication
+    - require remote Git blob equals 4eabdacec7858120792cf792ca227335e41730b6
+    - reject any mismatch and keep gate open
+    - only after exact identity update QA manifest changelog and continuity to PASS_CANONICAL_BINARY_IDENTITY
     - only after canonical PDF validation advance to live NotebookLM smoke
+    - rerun python tools/verify.py or re-document current impossibility
 
 pull_request_lineage:
   b2_preparation_pr: 13
@@ -139,11 +168,12 @@ pull_request_lineage:
   direito_penal_notebooklm_smoke_pr: 26
   direito_processual_penal_draft_pr: 27
   direito_processual_penal_qa_pr: 28
+  direito_processual_penal_rc_pr: 29
 
-merge_status: DIREITO_010_release_candidate_prepared_pending_pdf_pipeline
+merge_status: DIREITO_011_local_pdf_qa_pass_canonical_transport_blocked
 
 not_started:
-  - DIREITO-011 canonical PDF pipeline for direito-processual-penal
+  - successful canonical binary publication for direito-processual-penal
   - direito-processual-penal live NotebookLM smoke
   - direito-processual-civil
   - direito-constitucional
