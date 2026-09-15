@@ -1,16 +1,13 @@
 # NEXT_ACTION
 
-## DIREITO-011: Publicar o PDF auditado de `direito-processual-penal` e provar a identidade canônica
+## DIREITO-012: Executar o smoke real do NotebookLM de `direito-processual-penal`
 
-O release candidate `0.1.0-rc.1` de Direito Processual Penal permanece semanticamente congelado a partir do `0.1.0-draft.2`.
+`DIREITO-011` fechou o gate de PDF de `direito-processual-penal 0.1.0-rc.1` com identidade binária canônica comprovada. O conteúdo jurídico permanece congelado a partir do `0.1.0-draft.2`.
 
-Em `2026-09-15`, o pipeline local de PDF avançou até o QA completo do candidato, mas **não** até a publicação canônica. O gate continua aberto por bloqueio de transporte binário.
-
-## Estado de entrada canônico
+## Estado de entrada esperado após merge da PR 31
 
 - pack: `direito-processual-penal`;
 - versão: `0.1.0-rc.1`;
-- conteúdo-base: `0.1.0-draft.2` semanticamente congelado;
 - cobertura `DPP-01...DPP-25`: `PASS_AFTER_CORRECTIONS`;
 - revisão normativa: `PASS_AFTER_CORRECTIONS`;
 - prática: `60/60 PASS`;
@@ -19,109 +16,116 @@ Em `2026-09-15`, o pipeline local de PDF avançou até o QA completo do candidat
 - NotebookLM corpus/tutor estático: `PASS_STATIC`;
 - baseline: `2025-07-29`;
 - CPP art. 584, § 4º, de 2026: fora do baseline estudável;
-- Git blob do Markdown congelado: `11a41d18ff3a8b03150923ec68d44087bded7267`;
-- identidade entre a cópia local usada na geração e o Markdown do GitHub: `PASS_SOURCE_MARKDOWN_IDENTITY`;
+- Markdown congelado: Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`;
+- `APOSTILA.pdf`: 28 páginas A4, PDF 1.4, 37.894 bytes;
+- SHA-256 do PDF: `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
+- Git blob canônico do PDF: `4eabdacec7858120792cf792ca227335e41730b6`;
+- PDF textual: `PASS_TEXT_READBACK`;
+- PDF visual: `PASS_VISUAL_28_OF_28`;
+- identidade binária: `PASS_CANONICAL_BINARY_IDENTITY`;
 - NotebookLM live smoke: `NOT_STARTED`;
-- gate determinístico: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, por falha DNS ao obter checkout canônico; não é PASS.
+- `python tools/verify.py`: `NOT_EXECUTED_CURRENT_ENVIRONMENT` por falha DNS ao obter checkout canônico; isso não é PASS.
 
-## Candidato local já auditado
+## Entradas obrigatórias
 
-O candidato preferido gerado exclusivamente do Markdown congelado possui:
-
-- páginas: `28`;
-- página: `A4`;
-- formato: `PDF 1.4`;
-- tamanho: `37.894 bytes`;
-- SHA-256: `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
-- Git blob esperado: `4eabdacec7858120792cf792ca227335e41730b6`;
-- pesquisabilidade: `PASS`;
-- readback textual: `PASS`;
-- inspeção visual: `28/28 PASS`;
-- `Prática autoral`: inicia em página própria na página `17`;
-- `Gabarito comentado`: inicia em página própria na página `27`.
-
-O QA detalhado está em:
-
-`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`
-
-Esses metadados descrevem um **candidato local auditado**. Eles não provam que existe um PDF canônico no GitHub.
-
-## Bloqueio atual
-
-O caminho canônico continua sem um binário validado:
-
-`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
-
-O runtime atual não expõe no conector GitHub um transporte binário que aceite a referência do arquivo local auditado. Uma tentativa anterior com outro candidato produziu um blob remoto diferente do Git blob esperado e foi rejeitada. O blob divergente não foi ligado a tree, commit, branch ou PR.
-
-Estado do gate:
-
-```text
-local candidate QA -> PASS
-canonical PDF versioned -> NO
-remote Git blob identity -> NOT_PROVEN
-PASS_CANONICAL_BINARY_IDENTITY -> NO
-NotebookLM live smoke -> BLOCKED
-```
-
-## Entradas obrigatórias ao retomar
-
-Ler conjuntamente:
+Antes do smoke, ler:
 
 - `AGENTS.md`;
 - `00_SYSTEM/START_HERE.md`;
 - `PROJECT_CONTROL.md`;
 - `00_SYSTEM/CHECKPOINT.md`;
 - este arquivo;
-- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, especialmente QA-9/QA-10;
+- `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md`, especialmente QA-7/QA-10;
 - `00_SYSTEM/QA_PROTOCOL.md`;
-- `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`;
 - `materials/tjsp-escrevente-2025/direito-processual-penal/MANIFEST.md`;
-- `materials/tjsp-escrevente-2025/direito-processual-penal/CHANGELOG.md`;
-- `materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md` somente para o estágio posterior de smoke.
+- `materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md`;
+- `materials/tjsp-escrevente-2025/direito-penal/APOSTILA_QA_0.1.0.md` somente como referência metodológica do smoke anterior.
 
-Antes de escrever, confirmar novamente `main`, PRs abertas e o estado real do caminho do PDF.
+Confirmar novamente `main`, PRs abertas, existência do PDF canônico e Git blob antes de registrar qualquer resultado.
 
-## 1. Transportar exatamente o binário auditado
+## 1. Configurar o notebook com corpus limpo
 
-Usar mecanismo que preserve bytes binários, como upload binário confiável no GitHub ou outro meio que permita versionar **exatamente** o candidato auditado.
+Usar:
 
-Não regenerar silenciosamente o PDF para contornar o transporte. Se um novo binário for gerado, ele vira novo candidato e precisa repetir readback textual e inspeção visual integral antes de qualquer publicação.
+```text
+FONTES DO NOTEBOOKLM
+-> somente o APOSTILA.pdf canônico de direito-processual-penal
 
-O alvo é:
+CONFIGURAÇÃO DA CONVERSA
+-> Personalizado ou mecanismo equivalente
+-> colar somente o bloco entre INICIO_CONFIG e FIM_CONFIG de METODOLOGIA_NOTEBOOKLM.md
+-> tamanho de resposta Padrão, salvo necessidade concreta
+```
 
-`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
+Não carregar como fontes `METODOLOGIA_NOTEBOOKLM.md`, `MANIFEST.md`, `SOURCES.md`, QA, matriz, análise de banca, edital ou outros artefatos de backoffice apenas para controlar o comportamento do tutor.
 
-## 2. Provar identidade depois da publicação
+## 2. Smoke do chat
 
-Após o upload:
+Executar interações reais suficientes para verificar:
 
-1. ler do GitHub o Git blob do `APOSTILA.pdf` versionado;
-2. exigir igualdade exata com:
+1. explicação de um contraste processual, por exemplo `citação por edital x hora certa` ou `RESE x apelação`;
+2. treino objetivo A-E com uma questão por vez;
+3. ausência de dica ou gabarito antes da tentativa;
+4. correção com artigo/regra e elemento decisivo após a resposta;
+5. manutenção do fluxo sem avançar automaticamente antes de concluir a correção;
+6. respeito ao baseline e à separação entre regra expressa, explicação e caso hipotético.
 
-`4eabdacec7858120792cf792ca227335e41730b6`
+## 3. Smoke epistemológico fora do corpus
 
-3. se houver igualdade, registrar `PASS_CANONICAL_BINARY_IDENTITY`;
-4. se houver divergência, rejeitar o upload, não declarar PASS e manter `DIREITO-011` aberto.
+Fazer pelo menos uma pergunta cuja resposta dependa de informação que o PDF não fornece, preferencialmente jurisprudência, doutrina ou atualização normativa posterior não documentada.
 
-O SHA-256 local, sozinho, não substitui o Git blob remoto.
+O comportamento esperado é equivalente a:
 
-## 3. Fechar QA-9 e atualizar continuidade somente após identidade exata
+`a fonte selecionada não traz essa informação; com base apenas nela, não posso afirmar isso`
 
-Se a identidade remota passar, atualizar:
+Não aceitar silêncio do corpus convertido em negativa universal ou conteúdo externo inventado como se estivesse na apostila.
 
-- `APOSTILA_QA_0.1.0.md`;
+## 4. Smoke dos artefatos do Estúdio
+
+Gerar amostras reais de:
+
+- `Teste`;
+- `Cartões`;
+- `Mapa mental`.
+
+Verificar:
+
+- utilidade sobre o conteúdo da apostila;
+- ausência de perguntas sobre metodologia, manifest, QA ou engenharia editorial;
+- ausência de IDs `DPP-*`, gate labels ou outros metadados internos;
+- conceitos, regras, prazos, contrastes e fluxos recuperados de forma coerente com o corpus.
+
+Se a interface oferecer outros artefatos e eles forem testados, registrar apenas resultados realmente observados.
+
+## 5. Registrar o smoke
+
+Atualizar `APOSTILA_QA_0.1.0.md` com:
+
+- data;
+- corpus efetivamente carregado;
+- configuração efetivamente usada;
+- interações e artefatos realmente testados;
+- resultado de cada verificação;
+- observações bloqueantes e não bloqueantes;
+- classificação final `PASS`, `PASS_WITH_OBSERVATIONS` ou `FAIL` somente conforme evidência real.
+
+Não presumir interação externa, artefato ou comportamento não observado.
+
+## 6. Atualizar continuidade
+
+Depois do smoke, atualizar conforme o estado real:
+
 - `MANIFEST.md`;
 - `CHANGELOG.md`;
 - `PROJECT_CONTROL.md`;
 - `00_SYSTEM/CHECKPOINT.md`;
 - este arquivo;
-- plano B2, quando necessário.
+- `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`, quando necessário.
 
-Registrar no estado canônico páginas, bytes, SHA-256, Git blob remoto e resultado de identidade.
+Se o smoke passar sem bloqueio, o próximo pack na ordem canônica é `direito-processual-civil`. Se houver falha bloqueante de conteúdo, retornar ao gate adequado em vez de promover silenciosamente o RC.
 
-## 4. Gate determinístico
+## 7. Gate determinístico
 
 Reexecutar ou reavaliar:
 
@@ -129,38 +133,14 @@ Reexecutar ou reavaliar:
 python tools/verify.py
 ```
 
-Na tentativa de `2026-09-15`, o checkout falhou com:
+Na tentativa mais recente de `2026-09-15`, o clone falhou com:
 
 ```text
 Could not resolve host: github.com
 ```
 
-Exit code `128`. A impossibilidade continua sendo `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`.
+Exit code `128`. A impossibilidade é `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`.
 
-## 5. Estágio seguinte somente após PDF canônico
+## Critério de saída de DIREITO-012
 
-Somente depois de `PASS_CANONICAL_BINARY_IDENTITY`, avançar para o smoke real do NotebookLM usando:
-
-```text
-FONTES
--> somente APOSTILA.pdf canônico
-
-CONFIGURAÇÃO DA CONVERSA
--> bloco operacional de METODOLOGIA_NOTEBOOKLM.md
-```
-
-O smoke deverá testar chat explicativo, treino A-E uma questão por vez, Teste, Cartões, Mapa mental, ausência de IDs internos e pelo menos uma pergunta fora do corpus para verificar disciplina epistemológica.
-
-Não presumir nenhuma interação externa não executada.
-
-## Critério de saída de DIREITO-011
-
-O gate só fecha quando:
-
-- o arquivo canônico existir no GitHub;
-- seu Git blob for exatamente `4eabdacec7858120792cf792ca227335e41730b6`;
-- a identidade binária com o candidato auditado estiver comprovada;
-- QA e continuidade registrarem os metadados exatos;
-- `python tools/verify.py` tiver sido executado ou a impossibilidade atual tiver sido novamente documentada conforme DEC-0009.
-
-Até lá, `DIREITO-011` permanece aberto como `CANONICAL_PDF_TRANSPORT_BLOCKED`.
+O gate fecha somente quando o smoke real tiver sido executado e registrado com evidência suficiente. Se este ambiente não tiver acesso efetivo ao NotebookLM, registrar `EXTERNAL_SMOKE_NOT_EXECUTED`, manter `DIREITO-012` aberto e não inventar resultado.

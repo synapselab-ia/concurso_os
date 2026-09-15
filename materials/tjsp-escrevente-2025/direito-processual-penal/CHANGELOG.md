@@ -4,20 +4,20 @@
 
 Preparação do primeiro release candidate sob `DIREITO-010`, sem promoção a release final.
 
-### Adicionado
+### Adicionado em DIREITO-010
 
-- `METODOLOGIA_NOTEBOOKLM.md` específica de Direito Processual Penal como `ConversationInstruction`, destinada à configuração nativa da conversa e não ao corpus estudável;
+- `METODOLOGIA_NOTEBOOKLM.md` como `ConversationInstruction`, destinada à configuração nativa da conversa e não ao corpus estudável;
 - regras de tutoria para fluxo processual, sujeito, legitimidade, prazo, competência, cabimento, efeito, contraste e correção;
 - regra epistemológica explícita: ausência de informação na fonte deve ser tratada como limite do corpus, nunca como negativa universal;
 - controle comportamental para não incorporar jurisprudência, doutrina ou atualização normativa ausente da fonte.
 
-### Sincronizado
+### Sincronizado em DIREITO-010
 
 - `APOSTILA.md` promovida para identidade `0.1.0-rc.1`, mantendo congelado o conteúdo jurídico aprovado no `0.1.0-draft.2`;
 - `MANIFEST.md` e `SOURCES.md` alinhados ao release candidate;
-- `APOSTILA_QA_0.1.0.md` estendido para registrar o QA estático de `DIREITO-010`.
+- `APOSTILA_QA_0.1.0.md` estendido para registrar o QA estático do RC.
 
-### QA estático
+### QA estático de DIREITO-010
 
 - identidade do candidato: `pass`;
 - mudança semântica do corpo jurídico no RC: `false`;
@@ -29,46 +29,44 @@ Preparação do primeiro release candidate sob `DIREITO-010`, sem promoção a r
 - baseline `2025-07-29` preservado;
 - art. 584, § 4º, de 2026 permanece fora do baseline estudável.
 
-### Pendências do candidato após DIREITO-010
-
-- `APOSTILA.pdf` canônico: ainda não criado/versionado;
-- QA textual/visual do PDF canônico: ainda não executado;
-- NotebookLM live smoke: ainda não executado;
-- `python tools/verify.py`: não executado neste runtime porque nova tentativa de checkout canônico falhou por DNS; a impossibilidade não é tratada como PASS.
-
-Nenhuma correção semântica de Direito Processual Penal foi introduzida no `rc.1`.
-
 ### DIREITO-011 - 2026-09-15
 
-O pipeline de PDF avançou até o QA integral do candidato local, sem alteração semântica da apostila.
+O pipeline de PDF foi concluído sem alteração semântica da apostila.
 
-#### Candidato local auditado
+#### Fonte e candidato auditado
 
 - fonte Markdown confirmada contra o GitHub: Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`;
-- candidato preferido: 28 páginas A4, PDF 1.4, pesquisável;
+- candidato final: 28 páginas A4, PDF 1.4, pesquisável;
 - tamanho: `37.894 bytes`;
 - SHA-256: `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
 - Git blob esperado: `4eabdacec7858120792cf792ca227335e41730b6`;
-- readback textual: `PASS`;
-- inspeção visual: `28/28 PASS`;
-- `Prática autoral` inicia em página própria na página 17;
-- `Gabarito comentado` inicia em página própria na página 27.
+- readback textual: `PASS_TEXT_READBACK`;
+- inspeção visual: `PASS_VISUAL_28_OF_28`;
+- `Prática autoral` inicia na página 17;
+- `Gabarito comentado` inicia na página 27.
 
-#### Bloqueio canônico
+#### Publicação canônica
 
-O binário auditado **não foi versionado** como `APOSTILA.pdf`. O conector GitHub disponível não expõe transporte binário por referência de arquivo local, e uma tentativa anterior com outro candidato produziu um blob remoto diferente do Git blob esperado. O blob divergente permaneceu órfão e nunca foi ligado a tree, commit, branch ou PR.
+O binário auditado foi transportado por Git Data API com conteúdo base64 e versionado exatamente em:
 
-Resultado atual:
+`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
+
+O GitHub criou o blob `4eabdacec7858120792cf792ca227335e41730b6`, idêntico ao Git blob esperado do candidato local. O readback do caminho remoto retornou o mesmo SHA.
+
+Resultado final de DIREITO-011:
 
 - `PASS_SOURCE_MARKDOWN_IDENTITY`;
-- `PASS_LOCAL_CANDIDATE`;
 - `PASS_TEXT_READBACK`;
 - `PASS_VISUAL_28_OF_28`;
-- `CANONICAL_PDF_TRANSPORT_BLOCKED`;
-- `PASS_CANONICAL_BINARY_IDENTITY`: não declarado;
-- NotebookLM live smoke: continua bloqueado.
+- `PASS_CANONICAL_BINARY_IDENTITY`;
+- PDF canônico: `VERSIONED_EXACT_BINARY`;
+- NotebookLM live smoke: `NOT_STARTED`.
 
-O gate determinístico foi reavaliado em `2026-09-15`; o clone canônico voltou a falhar com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+A tentativa anterior com outro candidato, que produziu blob remoto divergente, permanece registrada apenas como histórico de QA; o blob foi rejeitado e nunca referenciado por tree, commit, branch ou PR canônico.
+
+O gate determinístico foi reavaliado em `2026-09-15`; nova tentativa de clone falhou com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
+Nenhuma correção semântica de Direito Processual Penal foi introduzida no `rc.1` durante `DIREITO-010` ou `DIREITO-011`.
 
 ---
 
@@ -120,7 +118,7 @@ Nova tentativa de obter checkout canônico por `git clone --depth 1 https://gith
 
 ### Saída de DIREITO-009
 
-O `0.1.0-draft.2` está semanticamente aprovado para preparação de release candidate em etapa separada. Não foi promovido a RC neste gate.
+O `0.1.0-draft.2` foi semanticamente aprovado para preparação de release candidate em etapa separada.
 
 ---
 
