@@ -1,14 +1,17 @@
 # APOSTILA_QA_0.1.0 - Direito Processual Penal - TJSP Escrevente 2025
 
 **QA date:** `2026-09-14`  
+**PDF QA final update:** `2026-09-15`  
 **Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2` -> `0.1.0-rc.1`  
 **Pack:** `direito-processual-penal`  
 **Semantic gate:** `DIREITO-009`  
 **RC preparation gate:** `DIREITO-010`  
+**PDF gate:** `DIREITO-011`  
 **Overall semantic result:** `PASS`  
 **Normative result:** `PASS_AFTER_CORRECTIONS`  
-**Release candidate:** `0.1.0-rc.1_incomplete`  
-**Static NotebookLM result:** `PASS_STATIC`
+**Release candidate:** `0.1.0-rc.1_pdf_validated_pending_notebooklm_live`  
+**Static NotebookLM result:** `PASS_STATIC`  
+**Canonical PDF result:** `PASS_CANONICAL_BINARY_IDENTITY`
 
 ## 1. Escopo e método
 
@@ -23,7 +26,7 @@ Baseline: `2025-07-29`.
 
 A revisão não tratou provas históricas como fonte de direito. `DIREITO_B2_BANCA_ANALYSIS.md` foi usado apenas para calibrar contraste, fluxo, prazo e formato de prática, sem inferência de frequência futura.
 
-O `draft.1` apresentava cobertura estrutural completa pelas 25 unidades, mas a revisão artigo por artigo encontrou pontos literais e de completude que precisavam ser explicitados. O `draft.2` incorporou essas correções e fechou `DIREITO-009`. Em `DIREITO-010`, o conteúdo jurídico do `draft.2` foi congelado e promovido para identidade `0.1.0-rc.1` sem reabertura semântica; foram criados a configuração do tutor e o QA estático do candidato.
+O `draft.1` apresentava cobertura estrutural completa pelas 25 unidades, mas a revisão artigo por artigo encontrou pontos literais e de completude que precisavam ser explicitados. O `draft.2` incorporou essas correções e fechou `DIREITO-009`. Em `DIREITO-010`, o conteúdo jurídico do `draft.2` foi congelado e promovido para identidade `0.1.0-rc.1` sem reabertura semântica; foram criados a configuração do tutor e o QA estático do candidato. Em `DIREITO-011`, o PDF foi gerado exclusivamente do Markdown congelado, auditado textual e visualmente e versionado com identidade binária exata no GitHub.
 
 ---
 
@@ -428,26 +431,13 @@ A seção `Prática autoral` inicia em página própria na página `17`. O `Gaba
 
 ---
 
-## 18. DIREITO-011 - transporte e identidade canônica
+## 18. DIREITO-011 - primeiro bloqueio de transporte
 
-**Resultado:** `CANONICAL_PDF_TRANSPORT_BLOCKED`
+**Resultado histórico:** `CANONICAL_PDF_TRANSPORT_BLOCKED`
 
-O critério canônico exige versionar exatamente o candidato auditado em:
+A primeira passagem do gate não conseguiu versionar exatamente o candidato auditado. Uma tentativa com outro candidato local (`56.319 bytes`, SHA-256 `946bac9ce3206ad97009e0f23c641945a61b345e754c89a1ce342194069d59e8`, Git blob esperado `97426cc526c542de6f07ed7e07698984a629ceb5`) produziu um blob remoto órfão com SHA `dd10a124a6226cf1bd63e7fa5104033c00d52788`, diferente do esperado. Esse blob nunca foi referenciado por tree, commit, branch ou PR e foi rejeitado.
 
-`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
-
-Neste runtime, o conector GitHub disponível não expõe uma operação de upload de arquivo binário por referência do arquivo local. As operações de conteúdo disponíveis recebem texto; portanto não é seguro tratá-las como transporte do PDF auditado.
-
-Uma tentativa anterior com outro candidato local (`56.319 bytes`, SHA-256 `946bac9ce3206ad97009e0f23c641945a61b345e754c89a1ce342194069d59e8`, Git blob esperado `97426cc526c542de6f07ed7e07698984a629ceb5`) produziu um blob remoto órfão com SHA `dd10a124a6226cf1bd63e7fa5104033c00d52788`, diferente do Git blob esperado. Esse blob nunca foi referenciado por tree, commit, branch ou PR e foi rejeitado como candidato canônico.
-
-Para o candidato preferido atual, nenhum upload remoto foi declarado como válido. Não existe `APOSTILA.pdf` versionado no pack e não há prova de identidade binária remota.
-
-Consequências:
-
-- `PASS_CANONICAL_BINARY_IDENTITY`: **não**;
-- `APOSTILA.pdf` canônico: **não versionado**;
-- NotebookLM live smoke: continua bloqueado;
-- `DIREITO-011`: permanece aberto.
+A situação de bloqueio registrada na PR 30 foi real naquele momento e permanece preservada como histórico. Ela foi superada posteriormente no mesmo `DIREITO-011`, conforme a seção de fechamento abaixo.
 
 ---
 
@@ -470,7 +460,47 @@ Isso não é `PASS` e permanece documentado conforme DEC-0009.
 
 ---
 
-## 20. Estado atual após o avanço parcial de DIREITO-011
+## 20. DIREITO-011 - publicação canônica e prova de identidade binária
+
+**Resultado final:** `PASS_CANONICAL_BINARY_IDENTITY`
+
+Em `2026-09-15`, o transporte binário foi refeito de forma controlada usando o Git Data API com conteúdo base64 do candidato previamente auditado. O GitHub criou o blob:
+
+`4eabdacec7858120792cf792ca227335e41730b6`
+
+Esse valor é exatamente igual ao Git blob calculado sobre o candidato local auditado antes da publicação.
+
+O blob exato foi ligado ao caminho canônico na branch `release/direito-processual-penal-0.1.0-rc.1-pdf`:
+
+`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`
+
+Commit de publicação binária:
+
+`a9bac764c0e68035a10f609b8de1a4e896602059`
+
+O readback do caminho remoto na própria branch retornou o mesmo SHA de blob `4eabdacec7858120792cf792ca227335e41730b6`. Assim, a identidade entre o artefato versionado e o candidato local integralmente auditado está comprovada.
+
+### Identidade canônica do PDF
+
+- caminho: `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`;
+- versão do pack: `0.1.0-rc.1`;
+- fonte Markdown: Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`;
+- páginas: `28`;
+- página: `A4`;
+- formato: `PDF 1.4`;
+- tamanho: `37.894 bytes`;
+- SHA-256: `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`;
+- Git blob local esperado: `4eabdacec7858120792cf792ca227335e41730b6`;
+- Git blob remoto observado: `4eabdacec7858120792cf792ca227335e41730b6`;
+- readback textual: `PASS_TEXT_READBACK`;
+- inspeção visual: `PASS_VISUAL_28_OF_28`;
+- identidade binária: `PASS_CANONICAL_BINARY_IDENTITY`.
+
+Nenhuma alteração jurídica foi introduzida no PDF ou no `APOSTILA.md` durante a publicação.
+
+---
+
+## 21. Estado de saída de DIREITO-011
 
 | Gate | Resultado |
 |---|---|
@@ -480,12 +510,11 @@ Isso não é `PASS` e permanece documentado conforme DEC-0009.
 | identidade `0.1.0-rc.1` | PASS |
 | tutor/NotebookLM estático | PASS_STATIC |
 | identidade da fonte Markdown usada no PDF | PASS_SOURCE_MARKDOWN_IDENTITY |
-| PDF local - readback | PASS_TEXT_READBACK |
-| PDF local - visual | PASS_VISUAL_28_OF_28 |
-| PDF local - metadados | PASS_LOCAL_CANDIDATE |
-| PDF canônico versionado | BLOCKED_NOT_VERSIONED |
-| identidade binária GitHub | NOT_PROVEN |
+| PDF - readback | PASS_TEXT_READBACK |
+| PDF - visual | PASS_VISUAL_28_OF_28 |
+| PDF - identidade canônica | PASS_CANONICAL_BINARY_IDENTITY |
+| `APOSTILA.pdf` | VERSIONED_EXACT_BINARY |
 | NotebookLM live smoke | NOT_STARTED |
-| `python tools/verify.py` | NOT_EXECUTED_CURRENT_ENVIRONMENT |
+| `python tools/verify.py` | NOT_EXECUTED_CURRENT_ENVIRONMENT - IMPOSSIBILITY_REEVALUATED |
 
-`DIREITO-011` não está fechado como PDF validado. A próxima operação continua sendo transportar **exatamente** o candidato auditado para o caminho canônico e provar o Git blob remoto `4eabdacec7858120792cf792ca227335e41730b6` antes de avançar ao NotebookLM live smoke.
+`DIREITO-011` está tecnicamente concluído na branch de release e pode ser fechado após revisão do diff e merge. O estágio seguinte é o smoke real do NotebookLM. Nenhum resultado de interação externa foi presumido.
