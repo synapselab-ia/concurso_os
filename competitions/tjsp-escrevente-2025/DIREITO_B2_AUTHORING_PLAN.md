@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com candidato local de PDF auditado, mas publicação binária canônica bloqueada
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com PDF canônico validado e smoke real do NotebookLM pendente
 
 ## Objetivo
 
@@ -68,85 +68,59 @@ Para Processual Penal, `SRC-B2-CPP` é `cutoff_closed_drift_mapped` e `SRC-B2-L9
 
 `DIREITO_B2_COVERAGE_MATRIX.md` fecha o contrato de cobertura, profundidade, contraste, prática e QA para os seis packs. Nenhuma row pode ser omitida por baixa frequência histórica.
 
-## Gates 5 a 7 - primeiro pipeline jurídico
+## Gates 5 a 7 - Direito Penal
 
-### Gate 5 - draft de Direito Penal
-`direito-penal 0.1.0-draft.1` implementou DP-01...DP-10 e 30 questões autorais. PR 20.
-
-### Gate 6 - QA de Direito Penal
-O QA produziu `0.1.0-draft.3` com cobertura, norma, didática e 30/30 questões aprovadas. PR 21. O gate determinístico não foi executado por impossibilidade DNS documentada e não foi tratado como PASS.
-
-### Gate 7 - release candidate de Direito Penal
-`direito-penal 0.1.0-rc.1` foi validado em `2026-09-14` com PDF canônico, QA estático e smoke real do NotebookLM `pass_with_observations`. As observações não bloqueantes foram vazamento de IDs `DP-*` nos títulos e formulação epistemológica excessivamente categórica sobre conteúdo ausente do corpus. PRs 22-26.
+- Gate 5: `0.1.0-draft.1`, DP-01...DP-10 e 30 questões autorais, PR 20.
+- Gate 6: QA resultou em `0.1.0-draft.3`, conteúdo/prática aprovados, PR 21.
+- Gate 7: `0.1.0-rc.1` validado com PDF canônico e smoke real do NotebookLM `pass_with_observations`, PRs 22-26. As observações não bloqueantes foram vazamento de IDs `DP-*` nos títulos e formulação epistemológica excessivamente categórica sobre conteúdo ausente do corpus.
 
 ## Gate 8 - primeiro draft de Direito Processual Penal
 
-A branch `content/direito-processual-penal-v0.1-draft` criou `0.1.0-draft.1` com:
-
-- workspace canônico;
-- DPP-01...DPP-25 implementados em 25 unidades;
-- 52 questões autorais;
-- nenhum `DPP-*` em título ou subtítulo estudável;
-- baseline `2025-07-29` e exclusão explícita do art. 584, § 4º, de 2026.
-
-PR 27 foi mergeada em `main` no commit `fedd24f8607b6d2b68d4aa9352ff949529680f1e`.
+`0.1.0-draft.1` implementou DPP-01...DPP-25 em 25 unidades, 52 questões autorais, nenhum `DPP-*` em título estudável e controle do cutoff. PR 27, merge `fedd24f8607b6d2b68d4aa9352ff949529680f1e`.
 
 Estado: `closed_as_draft`.
 
 ## Gate 9 - QA semântico/normativo de Direito Processual Penal
 
-A branch `qa/direito-processual-penal-v0.1` revisou integralmente `SRC-B2-CPP`, `SRC-B2-L9099`, o contrato DPP e a prática.
+A revisão integral produziu `0.1.0-draft.2` com:
 
-Resultado registrado em `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md`:
-
-- versão resultante: `0.1.0-draft.2`;
 - DPP-01...DPP-25: `pass_after_corrections`;
-- revisão normativa integral: `pass_after_corrections`;
-- didática, fluxos e contrastes: `pass`;
-- 52 questões originais revisadas individualmente;
-- 8 questões adicionadas para fechar pontos de literalidade/completude;
+- revisão normativa: `pass_after_corrections`;
+- didática/fluxos/contrastes: `pass`;
 - prática final: `60/60 pass`;
 - requisitos `Q-LIT`, `Q-CMP`, `Q-CAS`, `Q-FLX`, `Q-VER` e `Q-FULL`: `pass`;
 - corpus Markdown: `pass_for_markdown`;
-- IDs de backoffice em títulos: `pass_absent`;
-- gate determinístico: `not_executed_current_environment`, por falha DNS ao obter checkout canônico, não tratado como PASS;
-- PDF: não criado;
-- NotebookLM: não iniciado.
+- IDs de backoffice em títulos: `pass_absent`.
 
-Correções relevantes incluíram art. 262; arts. 363-365; arts. 394-A, 398 e 400-A; art. 537 revogado e art. 538; expansão de 574-603; tratamento artigo a artigo de 604-620, incluindo art. 611 revogado; tratamento de 632-646; art. 647-A e aprofundamento de 647-667; e completude dos arts. 60-83 da Lei 9.099/1995.
+Correções relevantes incluíram art. 262; arts. 363-365; arts. 394-A, 398 e 400-A; art. 537 revogado e art. 538; expansão de 574-603; tratamento artigo a artigo de 604-620, incluindo art. 611 revogado; tratamento de 632-646; art. 647-A; e completude dos arts. 60-83 da Lei 9.099/1995.
 
-PR 28 foi mergeada em `main` no commit `70a5103d3f8ceb6132908d68963a2a55732665ec`.
+PR 28, merge `70a5103d3f8ceb6132908d68963a2a55732665ec`.
 
 Estado: `closed`.
 
 ## Gate 10 - release candidate estático de Direito Processual Penal
 
-`direito-processual-penal 0.1.0-rc.1` foi preparado a partir do conteúdo aprovado do `0.1.0-draft.2`, sem reabertura semântica.
+`0.1.0-rc.1` foi preparado a partir do conteúdo aprovado do `draft.2`, sem reabertura semântica.
 
 Executado:
 
 - identidade de `APOSTILA.md`, `MANIFEST.md`, `SOURCES.md` e `CHANGELOG.md` sincronizada para `0.1.0-rc.1`;
-- mudança no corpo de `APOSTILA.md` restrita aos metadados de versão/status;
+- mudança no corpo de `APOSTILA.md` restrita a metadados de versão/status;
 - `METODOLOGIA_NOTEBOOKLM.md` criada como configuração da conversa, não como fonte estudável;
-- tutor orientado a distinguir regra expressa, explicação e aplicação hipotética;
-- tutor proibido de inventar jurisprudência, doutrina ou atualização normativa ausente da fonte;
-- ausência de informação tratada como limite do corpus, não como negativa universal;
-- treino interativo configurado para uma questão por vez e sem antecipação de gabarito;
 - QA estático do corpus e tutor: `pass_static`;
-- baseline `2025-07-29` e isolamento do art. 584, § 4º, de 2026 preservados;
-- PDF canônico: ainda não criado;
-- NotebookLM live smoke: ainda não executado;
-- gate determinístico: `not_executed_current_environment` porque o checkout canônico continuou bloqueado por DNS, não tratado como PASS.
+- baseline `2025-07-29` e isolamento do art. 584, § 4º, de 2026 preservados.
 
-PR 29 foi mergeada em `main` no commit `947ea624d7abfa3b1db4481064aa4abf9743be19`.
+PR 29, merge `947ea624d7abfa3b1db4481064aa4abf9743be19`.
 
 Estado: `closed_static_ready_for_pdf`.
 
 ## Gate 11 - PDF canônico de Direito Processual Penal
 
-Em `2026-09-15`, a fonte Markdown usada na geração foi comprovada idêntica ao `APOSTILA.md` canônico pelo Git blob `11a41d18ff3a8b03150923ec68d44087bded7267`.
+Em `2026-09-15`, a fonte Markdown usada na geração foi comprovada idêntica ao `APOSTILA.md` canônico pelo Git blob:
 
-O candidato local preferido passou por QA integral:
+`11a41d18ff3a8b03150923ec68d44087bded7267`
+
+O PDF final possui:
 
 - 28 páginas A4;
 - PDF 1.4 pesquisável;
@@ -157,21 +131,36 @@ O candidato local preferido passou por QA integral:
 - inspeção visual `28/28 pass`;
 - questões e gabarito estruturalmente separados.
 
-A etapa canônica continua bloqueada porque o runtime atual não dispõe de transporte binário confiável para publicar exatamente o arquivo auditado no GitHub. Não há `APOSTILA.pdf` versionado no pack e não há prova de identidade binária remota.
+O transporte binário final foi feito por Git Data API com conteúdo base64. O GitHub criou o blob `4eabdacec7858120792cf792ca227335e41730b6`, exatamente igual ao Git blob esperado do candidato auditado. O mesmo SHA foi confirmado no caminho remoto versionado.
 
-Estado: `open_transport_blocked`.
+Resultado:
 
-Critério pendente:
+`PASS_CANONICAL_BINARY_IDENTITY`
 
-```text
-publicar exatamente o candidato auditado
--> ler Git blob remoto
--> exigir 4eabdacec7858120792cf792ca227335e41730b6
--> somente então PASS_CANONICAL_BINARY_IDENTITY
--> somente depois smoke real do NotebookLM
-```
+PR 30 preservou o bloqueio intermediário real. PR 31 publica o binário exato e fecha o gate após revisão/merge.
 
-O gate determinístico continua `not_executed_current_environment` porque o checkout por `git clone` falhou novamente por DNS em `2026-09-15`; isso não é PASS.
+O gate determinístico continua `not_executed_current_environment`: nova tentativa de `git clone` em `2026-09-15` falhou com `Could not resolve host: github.com`, exit 128. Isso não é PASS.
+
+Estado: `closed_pdf_validated` após merge da PR 31.
+
+## Gate 12 - smoke real do NotebookLM de Direito Processual Penal
+
+Próximo gate.
+
+Usar somente o `APOSTILA.pdf` canônico como fonte estudável e o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` na configuração nativa da conversa.
+
+O smoke deve verificar:
+
+- chat explicativo;
+- treino A-E uma questão por vez, sem vazamento de gabarito;
+- correção ancorada na fonte;
+- disciplina epistemológica em pergunta fora do corpus;
+- `Teste`, `Cartões` e `Mapa mental` úteis;
+- ausência de IDs `DPP-*`, gate labels e metadados de backoffice nos artefatos estudáveis.
+
+Não presumir interação externa não executada.
+
+Estado: `not_started`.
 
 ## Lições obrigatórias para os próximos packs
 
@@ -193,8 +182,8 @@ O gate determinístico continua `not_executed_current_environment` porque o chec
 7. concluído como draft - Direito Processual Penal;
 8. concluído - QA de Direito Processual Penal;
 9. concluído - preparação estática do RC de Direito Processual Penal;
-10. em andamento/bloqueado no transporte - PDF canônico de Direito Processual Penal;
-11. smoke real do NotebookLM de Direito Processual Penal;
+10. concluído - PDF canônico de Direito Processual Penal;
+11. próximo - smoke real do NotebookLM de Direito Processual Penal;
 12. Direito Processual Civil;
 13. Direito Constitucional;
 14. Direito Administrativo;
@@ -214,7 +203,8 @@ O gate determinístico continua `not_executed_current_environment` porque o chec
 | 8 - draft processual penal | `closed_as_draft` | DPP-01...DPP-25 e prática inicial implementados |
 | 9 - QA processual penal | `closed` | cobertura, norma, didática, prática e corpus Markdown aprovados após correções |
 | 10 - RC processual penal | `closed_static_ready_for_pdf` | identidade rc.1, tutor e QA estático concluídos sem reabertura semântica |
-| 11 - PDF processual penal | `open_transport_blocked` | QA local do candidato passou; falta versionar binário exato e provar Git blob remoto |
+| 11 - PDF processual penal | `closed_pdf_validated` | PDF canônico versionado e Git blob remoto idêntico ao candidato auditado |
+| 12 - NotebookLM processual penal | `next` | smoke real do corpus/tutor e artefatos do Estúdio |
 
 ## Regra de autoridade
 
