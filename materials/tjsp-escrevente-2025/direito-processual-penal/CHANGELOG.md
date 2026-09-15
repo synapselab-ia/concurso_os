@@ -68,6 +68,22 @@ O gate determinístico foi reavaliado em `2026-09-15`; nova tentativa de clone f
 
 Nenhuma correção semântica de Direito Processual Penal foi introduzida no `rc.1` durante `DIREITO-010` ou `DIREITO-011`.
 
+### DIREITO-012 - tentativa de smoke externo - 2026-09-15
+
+O estado canônico foi revalidado antes do smoke: `main` em `b63f9a8f4b51894bf37e070eee3feeb481781855`, zero PRs abertas e `APOSTILA.pdf` remoto com Git blob `4eabdacec7858120792cf792ca227335e41730b6`.
+
+O runtime desta execução não forneceu sessão autenticada do NotebookLM nem canal interativo já conectado para operar a interface. Nenhuma conversa, Teste, Cartão, Mapa mental ou outro artefato externo foi criado ou inspecionado.
+
+Resultado correto:
+
+- NotebookLM live smoke: `EXTERNAL_SMOKE_NOT_EXECUTED`;
+- `DIREITO-012`: permanece aberto como `blocked_external_access`;
+- registro: `NOTEBOOKLM_SMOKE_0.1.0.md`.
+
+O gate determinístico também foi reavaliado: o clone para `/tmp/concurso_os_d012` falhou com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
+Nenhum resultado externo foi presumido e nenhuma alteração semântica foi feita no StudentContent.
+
 ---
 
 ## `0.1.0-draft.2` - 2026-09-14
