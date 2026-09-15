@@ -4,9 +4,43 @@
 
 Preparação do primeiro release candidate sob `DIREITO-010`, sem promoção a release final.
 
+### Adicionado
+
+- `METODOLOGIA_NOTEBOOKLM.md` específica de Direito Processual Penal como `ConversationInstruction`, destinada à configuração nativa da conversa e não ao corpus estudável;
+- regras de tutoria para fluxo processual, sujeito, legitimidade, prazo, competência, cabimento, efeito, contraste e correção;
+- regra epistemológica explícita: ausência de informação na fonte deve ser tratada como limite do corpus, nunca como negativa universal;
+- controle comportamental para não incorporar jurisprudência, doutrina ou atualização normativa ausente da fonte.
+
+### Sincronizado
+
+- `APOSTILA.md` promovida para identidade `0.1.0-rc.1`, mantendo congelado o conteúdo jurídico aprovado no `0.1.0-draft.2`;
+- `MANIFEST.md` e `SOURCES.md` alinhados ao release candidate;
+- `APOSTILA_QA_0.1.0.md` estendido para registrar o QA estático de `DIREITO-010`.
+
+### QA estático
+
+- identidade do candidato: `pass`;
+- mudança semântica do corpo jurídico no RC: `false`;
+- configuração do tutor: `pass_static`;
+- corpus/tutor NotebookLM estático: `pass_static`;
+- ausência de `DPP-*` em títulos estudáveis: preservada;
+- separação entre questões e gabarito: preservada;
+- backoffice mantido fora das fontes do NotebookLM;
+- baseline `2025-07-29` preservado;
+- art. 584, § 4º, de 2026 permanece fora do baseline estudável.
+
+### Pendências do candidato após DIREITO-010
+
+- `APOSTILA.pdf` canônico: ainda não criado/versionado;
+- QA textual/visual do PDF canônico: ainda não executado;
+- NotebookLM live smoke: ainda não executado;
+- `python tools/verify.py`: não executado neste runtime porque nova tentativa de checkout canônico falhou por DNS; a impossibilidade não é tratada como PASS.
+
+Nenhuma correção semântica de Direito Processual Penal foi introduzida no `rc.1`.
+
 ### DIREITO-011 - 2026-09-15
 
-O pipeline de PDF foi executado até o limite do runtime atual, sem alterar semanticamente a apostila.
+O pipeline de PDF avançou até o QA integral do candidato local, sem alteração semântica da apostila.
 
 #### Candidato local auditado
 
@@ -20,45 +54,21 @@ O pipeline de PDF foi executado até o limite do runtime atual, sem alterar sema
 - `Prática autoral` inicia em página própria na página 17;
 - `Gabarito comentado` inicia em página própria na página 27.
 
-#### Bloqueio
+#### Bloqueio canônico
 
 O binário auditado **não foi versionado** como `APOSTILA.pdf`. O conector GitHub disponível não expõe transporte binário por referência de arquivo local, e uma tentativa anterior com outro candidato produziu um blob remoto diferente do Git blob esperado. O blob divergente permaneceu órfão e nunca foi ligado a tree, commit, branch ou PR.
 
 Resultado atual:
 
+- `PASS_SOURCE_MARKDOWN_IDENTITY`;
 - `PASS_LOCAL_CANDIDATE`;
+- `PASS_TEXT_READBACK`;
+- `PASS_VISUAL_28_OF_28`;
 - `CANONICAL_PDF_TRANSPORT_BLOCKED`;
 - `PASS_CANONICAL_BINARY_IDENTITY`: não declarado;
 - NotebookLM live smoke: continua bloqueado.
 
-O gate determinístico também foi reavaliado em `2026-09-15`; o clone canônico voltou a falhar com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
-
-### Adicionado em DIREITO-010
-
-- `METODOLOGIA_NOTEBOOKLM.md` específica de Direito Processual Penal como `ConversationInstruction`, destinada à configuração nativa da conversa e não ao corpus estudável;
-- regras de tutoria para fluxo processual, sujeito, legitimidade, prazo, competência, cabimento, efeito, contraste e correção;
-- regra epistemológica explícita: ausência de informação na fonte deve ser tratada como limite do corpus, nunca como negativa universal;
-- controle comportamental para não incorporar jurisprudência, doutrina ou atualização normativa ausente da fonte.
-
-### Sincronizado em DIREITO-010
-
-- `APOSTILA.md` promovida para identidade `0.1.0-rc.1`, mantendo congelado o conteúdo jurídico aprovado no `0.1.0-draft.2`;
-- `MANIFEST.md` e `SOURCES.md` alinhados ao release candidate;
-- `APOSTILA_QA_0.1.0.md` estendido para registrar o QA estático de `DIREITO-010`.
-
-### QA estático de DIREITO-010
-
-- identidade do candidato: `pass`;
-- mudança semântica do corpo jurídico no RC: `false`;
-- configuração do tutor: `pass_static`;
-- corpus/tutor NotebookLM estático: `pass_static`;
-- ausência de `DPP-*` em títulos estudáveis: preservada;
-- separação entre questões e gabarito: preservada;
-- backoffice mantido fora das fontes do NotebookLM;
-- baseline `2025-07-29` preservado;
-- art. 584, § 4º, de 2026 permanece fora do baseline estudável.
-
-Nenhuma correção semântica de Direito Processual Penal foi introduzida no `rc.1` durante `DIREITO-010` ou `DIREITO-011`.
+O gate determinístico foi reavaliado em `2026-09-15`; o clone canônico voltou a falhar com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
 
 ---
 
