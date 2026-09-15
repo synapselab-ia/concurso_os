@@ -11,11 +11,13 @@
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
 - **Last released pack:** `portugues 2.0.0`, final
 - **Last validated legal pack:** `direito-penal 0.1.0-rc.1`, validated release candidate
-- **Current pack:** `direito-processual-penal 0.1.0-rc.1`, release candidate with canonical PDF validated; live NotebookLM smoke pending
+- **Current pack:** `direito-processual-penal 0.1.0-rc.1`, canonical PDF validated; live NotebookLM smoke pending external access
 - **DIREITO-009:** semantic/normative QA closed in PR `#28`, merge `70a5103d3f8ceb6132908d68963a2a55732665ec`
 - **DIREITO-010:** RC identity, tutor configuration and static corpus QA closed in PR `#29`, merge `947ea624d7abfa3b1db4481064aa4abf9743be19`
-- **DIREITO-011:** canonical PDF publication and binary identity closed by PR `#31`
-- **Current gate:** `DIREITO-012`, execute the live NotebookLM smoke for `direito-processual-penal 0.1.0-rc.1`
+- **DIREITO-011:** canonical PDF publication and binary identity closed in PR `#31`, merge `b63f9a8f4b51894bf37e070eee3feeb481781855`
+- **Current gate:** `DIREITO-012`, live NotebookLM smoke for `direito-processual-penal 0.1.0-rc.1`; current runtime result `EXTERNAL_SMOKE_NOT_EXECUTED`
+- **Current blocker:** this runtime has no authenticated NotebookLM session or already-connected interactive channel capable of operating the product; no external smoke result may be presumed
+- **Smoke status artifact:** `materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md`
 - **Workspace:** `materials/tjsp-escrevente-2025/direito-processual-penal/`
 - **Coverage contract:** `DPP-01...DPP-25`
 - **StudentContent Markdown:** 25 units, no `DPP-*` in visible headings
@@ -29,13 +31,13 @@
 - **RC QA:** identity `pass`; semantic content changed in RC `false`; tutor `pass_static`; NotebookLM corpus/tutor static `pass_static`
 - **Frozen Markdown Git blob:** `11a41d18ff3a8b03150923ec68d44087bded7267`
 - **Canonical PDF:** `PASS_CANONICAL_BINARY_IDENTITY`; 28 A4 pages; PDF 1.4; 37,894 bytes; SHA-256 `608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0`; Git blob `4eabdacec7858120792cf792ca227335e41730b6`; textual readback `PASS`; visual `28/28 PASS`
-- **NotebookLM live smoke:** `NOT_STARTED`; it is the next gate and must not be presumed
+- **NotebookLM live smoke:** `EXTERNAL_SMOKE_NOT_EXECUTED_CURRENT_ENVIRONMENT`; `DIREITO-012` remains open
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** Gate 2 closed at cutoff `2025-07-29`
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
 - **B2 coverage matrix:** six complete matrices
 - **Validation gate:** `python tools/verify.py`
-- **Validation status in DIREITO-011 runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; a fresh clone attempt on `2026-09-15` failed with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
+- **Validation status in DIREITO-012 runtime:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; `git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d012` failed on `2026-09-15` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
 - **Merge policy:** validated development/status PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
