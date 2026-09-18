@@ -43,6 +43,18 @@ b2_source_gate:
     cpp_source: SRC-B2-CPP
     l9099_source: SRC-B2-L9099
     cpp_584_paragraph_4_2026: excluded_from_baseline
+    l9099_scoped_drift: none_identified_in_gate_2
+
+b2_banca_gate:
+  status: closed
+  questions_classified: 150
+  authority_rule: syllabus_controls_scope_history_is_descriptive_non_predictive
+
+b2_coverage_gate:
+  status: closed
+  processual_penal_rows: 25
+  first_id: DPP-01
+  last_id: DPP-25
 
 right_penal_validated_rc:
   version: 0.1.0-rc.1
@@ -55,6 +67,7 @@ right_penal_validated_rc:
 right_processual_penal:
   version: 0.1.0-draft.3
   status: targeted_semantic_qa_pass_pending_new_rc
+  content_base: 0.1.0-draft.3
   path: materials/tjsp-escrevente-2025/direito-processual-penal
   units: 25
   coverage: DPP-01_through_DPP-25
@@ -78,6 +91,7 @@ right_processual_penal:
     role: ConversationInstruction
     static_qa: pass_static
     corpus_limit_rule: absence_in_source_is_not_universal_negative
+  notebooklm_static_qa: pass_static
   notebooklm_smoke:
     artifact: materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md
     result_on_rc1: pass_behavioral_on_rc1_corpus_invalidated
