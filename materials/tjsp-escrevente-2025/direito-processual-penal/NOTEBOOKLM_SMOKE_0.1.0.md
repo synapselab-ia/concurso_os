@@ -109,3 +109,18 @@ Estado de saída:
 `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`
 
 Próxima verificação externa necessária: smoke curto de regressão sobre o novo PDF derivado do `0.1.0-draft.3` corrigido.
+
+
+---
+
+## Estado após DIREITO-015 - 2026-09-18
+
+O PDF corrigido de `0.1.0-rc.2` foi publicado com `PASS_CANONICAL_BINARY_IDENTITY`, Git blob `6374969ba722451dd6740364e24c41f25e730b54`.
+
+A evidência comportamental ampla anterior continua útil, mas foi executada sobre o rc.1 invalidado. Falta somente uma regressão curta, executada manualmente pelo usuário, sobre o PDF rc.2:
+
+1. confirmar a resposta correta sobre arts. 371-372;
+2. confirmar uma questão A-E sem gabarito antes da tentativa;
+3. confirmar ausência de IDs `DPP-*` e metadados internos.
+
+Estado: `PENDING_SHORT_REGRESSION_ON_RC2`.
