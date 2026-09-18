@@ -2,14 +2,14 @@
 
 **QA date:** `2026-09-14`  
 **PDF QA final update:** `2026-09-15`  
-**Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2` -> `0.1.0-rc.1`  
+**Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2` -> `0.1.0-rc.1` -> `0.1.0-draft.3`  
 **Pack:** `direito-processual-penal`  
 **Semantic gate:** `DIREITO-009`  
 **RC preparation gate:** `DIREITO-010`  
 **PDF gate:** `DIREITO-011`  
 **Overall semantic result:** `PASS`  
 **Normative result:** `PASS_AFTER_CORRECTIONS`  
-**Release candidate:** `0.1.0-rc.1_pdf_validated_pending_notebooklm_live`  
+**Release candidate:** `0.1.0-rc.1_invalidated_by_semantic_defect`; current source `0.1.0-draft.3`  
 **Static NotebookLM result:** `PASS_STATIC`  
 **Canonical PDF result:** `PASS_CANONICAL_BINARY_IDENTITY`
 
@@ -40,7 +40,7 @@ O `draft.1` apresentava cobertura estrutural completa pelas 25 unidades, mas a r
 | DPP-02 | CPP 261-267 | PASS | PASS |
 | DPP-03 | CPP 274 | PASS | PASS |
 | DPP-04 | CPP 351-369 | PASS | PASS |
-| DPP-05 | CPP 370-372 | PASS | PASS |
+| DPP-05 | CPP 370-372 | PASS_AFTER_CORRECTION | PASS_AFTER_CORRECTION |
 | DPP-06 | CPP 394-405 | PASS | PASS |
 | DPP-07 | CPP 406-421 | PASS | PASS |
 | DPP-08 | CPP 422-431 | PASS | PASS |
@@ -518,3 +518,40 @@ Nenhuma alteração jurídica foi introduzida no PDF ou no `APOSTILA.md` durante
 | `python tools/verify.py` | NOT_EXECUTED_CURRENT_ENVIRONMENT - IMPOSSIBILITY_REEVALUATED |
 
 `DIREITO-011` está tecnicamente concluído na branch de release e pode ser fechado após revisão do diff e merge. O estágio seguinte é o smoke real do NotebookLM. Nenhum resultado de interação externa foi presumido.
+
+
+---
+
+## 22. DIREITO-013 - recuperação semântica após smoke
+
+**Data do registro:** `2026-09-18`  
+**Resultado:** `PASS_TARGETED_AFTER_CORRECTION` para DPP-05; `0.1.0-rc.1` invalidado para release/corpus.
+
+Durante a revisão final associada a `DIREITO-012`, foi reaberto o trecho da Unidade 5 referente aos arts. 370-372 do CPP. O `0.1.0-rc.1` afirmava incorretamente que o art. 371 consideraria intimadas em audiência as pessoas cuja ciência decorresse do ato.
+
+A fonte oficial compilada do CPP foi reaberta. A conferência mostrou:
+
+- art. 370: disciplina geral das intimações e formas dos §§ 1º-4º;
+- art. 371: admite intimação por despacho na petição em que for requerida, observado o art. 357;
+- art. 372: adiada por qualquer motivo a instrução criminal, o juiz marca desde logo, na presença das partes e testemunhas, dia e hora para prosseguimento, lavrando termo nos autos.
+
+A Unidade 5 foi corrigida em `0.1.0-draft.3`. Busca dirigida no StudentContent confirmou que a formulação incorreta estava concentrada nesse trecho; não foi encontrada questão autoral dependente da atribuição errada do art. 371. A questão de prática sobre intimação pessoal de Ministério Público e defensor nomeado permanece coerente com o art. 370, § 4º.
+
+### Consequência sobre o PDF anterior
+
+O resultado histórico `PASS_CANONICAL_BINARY_IDENTITY` de `DIREITO-011` continua verdadeiro exclusivamente quanto à identidade entre o binário versionado e o candidato auditado. Ele não prova correção semântica da fonte.
+
+Como o PDF foi gerado do Markdown `0.1.0-rc.1` que contém o erro acima, o artefato fica `INVALIDATED_SEMANTICALLY` e não pode ser usado como corpus vigente do NotebookLM ou como release. Um novo PDF deve ser gerado somente depois de novo congelamento do `0.1.0-draft.3` em RC posterior.
+
+### Evidência do smoke real já executado pelo usuário
+
+O usuário forneceu evidência real do NotebookLM nesta etapa:
+
+- chat explicativo sobre edital x hora certa: comportamento adequado;
+- treino A-E sobre recursos: uma questão por vez, sem gabarito antes da tentativa e com correção ancorada na fonte;
+- pergunta fora do corpus sobre jurisprudência do STJ: o tutor declarou limite da fonte sem inventar conteúdo;
+- Teste do Estúdio: amostra visual coerente com o corpus;
+- Cartões: amostra visual coerente com o corpus;
+- Mapa mental: hierarquia útil, sem IDs `DPP-*`, QA, gates ou metadados de backoffice visíveis.
+
+Essa evidência é `PASS_BEHAVIORAL_ON_RC1`, mas não fecha `DIREITO-012`, porque o corpus usado foi posteriormente invalidado por defeito semântico. Após novo PDF, basta um smoke final curto de regressão para confirmar que a correção não degradou o comportamento.
