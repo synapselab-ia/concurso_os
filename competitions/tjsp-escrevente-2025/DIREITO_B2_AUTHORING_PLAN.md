@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.1` com PDF canônico validado e smoke real do NotebookLM bloqueado por acesso externo nesta execução
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-draft.3` corrigido após reabertura semântica de DPP-05; novo RC/PDF pendentes
 
 ## Objetivo
 
@@ -145,26 +145,37 @@ Estado: `closed_pdf_validated`.
 
 ## Gate 12 - smoke real do NotebookLM de Direito Processual Penal
 
-Usar somente o `APOSTILA.pdf` canônico como fonte estudável e o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` na configuração nativa da conversa.
+O usuário executou manualmente o smoke real sobre o PDF de `0.1.0-rc.1` e forneceu evidência de:
 
-O smoke deve verificar:
+- chat explicativo coerente;
+- treino A-E uma questão por vez e sem gabarito antes da tentativa;
+- correção ancorada no corpus;
+- disciplina epistemológica em pergunta sobre jurisprudência externa;
+- amostras úteis de `Teste`, `Cartões` e `Mapa mental`;
+- ausência observada de IDs `DPP-*`, QA, gates ou metadados de backoffice.
 
-- chat explicativo;
-- treino A-E uma questão por vez, sem vazamento de gabarito;
-- correção ancorada na fonte;
-- disciplina epistemológica em pergunta fora do corpus;
-- `Teste`, `Cartões` e `Mapa mental` úteis;
-- ausência de IDs `DPP-*`, gate labels e metadados de backoffice nos artefatos estudáveis.
+Resultado comportamental: `PASS_BEHAVIORAL_ON_RC1`.
 
-Na tentativa de `2026-09-15`, o runtime disponível não forneceu sessão autenticada do NotebookLM nem canal interativo já conectado para operar a interface. Nenhuma interação externa foi presumida.
+O gate de release não foi fechado porque, na revisão final, foi confirmado defeito semântico no próprio corpus: atribuição incorreta ao art. 371 do CPP. O PDF usado no smoke foi invalidado.
 
-Resultado da tentativa:
+Estado: `interrupted_by_semantic_defect`.
 
-`EXTERNAL_SMOKE_NOT_EXECUTED`
+## Gate 13 - recuperação semântica de Direito Processual Penal
 
-Registro: `materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md`.
+Em `2026-09-18`, a fonte oficial do CPP foi reaberta para os arts. 370-372. Confirmou-se que:
 
-Estado: `blocked_external_access`.
+- art. 371 admite intimação por despacho na petição em que for requerida, observado o art. 357;
+- art. 372 trata do adiamento da instrução criminal e da marcação imediata de dia e hora para prosseguimento na presença de partes e testemunhas, com termo nos autos.
+
+A Unidade 5 foi corrigida em `0.1.0-draft.3`. DPP-05 passou em QA direcionado após a correção. O PDF de `0.1.0-rc.1` mantém seu histórico de identidade binária, mas foi invalidado semanticamente e removido do caminho canônico.
+
+Estado: `closed_targeted_semantic_recovery` após merge da PR de DIREITO-013.
+
+## Gate 14 - novo RC de Direito Processual Penal
+
+Próximo gate. Promover `0.1.0-draft.3` para novo RC sem nova mudança jurídica, ressincronizar metadados/tutor, congelar identidade do Markdown corrigido e repetir QA estático antes de regenerar o PDF.
+
+Estado: `next`.
 
 ## Lições obrigatórias para os próximos packs
 
@@ -187,8 +198,11 @@ Estado: `blocked_external_access`.
 8. concluído - QA de Direito Processual Penal;
 9. concluído - preparação estática do RC de Direito Processual Penal;
 10. concluído - PDF canônico de Direito Processual Penal;
-11. bloqueado por acesso externo - smoke real do NotebookLM de Direito Processual Penal;
-12. Direito Processual Civil;
+11. interrompido por defeito semântico após evidência comportamental - smoke de Direito Processual Penal;
+12. concluído após merge de DIREITO-013 - recuperação semântica DPP-05 e retorno a draft.3;
+13. próximo - novo RC corrigido de Direito Processual Penal;
+14. novo PDF corrigido e smoke regressivo curto;
+15. Direito Processual Civil;
 13. Direito Constitucional;
 14. Direito Administrativo;
 15. Legislação Interna.
@@ -208,7 +222,9 @@ Estado: `blocked_external_access`.
 | 9 - QA processual penal | `closed` | cobertura, norma, didática, prática e corpus Markdown aprovados após correções |
 | 10 - RC processual penal | `closed_static_ready_for_pdf` | identidade rc.1, tutor e QA estático concluídos sem reabertura semântica |
 | 11 - PDF processual penal | `closed_pdf_validated` | PDF canônico versionado e Git blob remoto idêntico ao candidato auditado |
-| 12 - NotebookLM processual penal | `blocked_external_access` | smoke real ainda não executado; exige sessão efetiva do produto e evidência observada |
+| 12 - NotebookLM processual penal | `interrupted_by_semantic_defect` | comportamento real observado como pass no rc.1, mas corpus posteriormente invalidado |
+| 13 - recuperação DPP-05 | `closed_targeted_semantic_recovery` | arts. 370-372 rechecados; art. 371 corrigido em draft.3; PDF rc.1 invalidado |
+| 14 - novo RC processual penal | `next` | promover draft.3 corrigido sem nova mudança semântica |
 
 ## Regra de autoridade
 
