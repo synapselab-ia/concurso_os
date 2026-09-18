@@ -1,5 +1,21 @@
 # CHANGELOG - Direito Processual Penal - TJSP Escrevente 2025
 
+## `0.1.0-rc.2` - DIREITO-015 PDF corrigido - 2026-09-18
+
+- novo `APOSTILA.pdf` gerado exclusivamente do Markdown rc.2 congelado, Git blob de fonte `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`;
+- 28 páginas A4, PDF 1.4, 37.917 bytes, pesquisável;
+- SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`;
+- Git blob do PDF `6374969ba722451dd6740364e24c41f25e730b54`;
+- readback textual `PASS`, incluindo arts. 371-372 corrigidos;
+- inspeção visual `PASS_VISUAL_28_OF_28`;
+- identidade binária remota `PASS_CANONICAL_BINARY_IDENTITY`;
+- PDF rc.1 permanece somente como histórico semanticamente invalidado;
+- gate determinístico: `NOT_EXECUTED_CURRENT_ENVIRONMENT` por falha DNS no clone, exit `128`.
+
+Próximo gate: smoke curto de regressão no NotebookLM sobre o PDF rc.2 corrigido.
+
+---
+
 ## `0.1.0-rc.2` - 2026-09-18
 
 Preparação do release candidate corrigido em `DIREITO-014`.

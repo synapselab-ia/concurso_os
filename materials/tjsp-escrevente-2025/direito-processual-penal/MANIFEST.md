@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `direito-processual-penal`  
 **Pack version:** `0.1.0-rc.2`  
-**Status:** `release_candidate_corrected_static_ready_pending_pdf`  
+**Status:** `release_candidate_corrected_pdf_validated_pending_notebooklm_regression`  
 **RC date:** `2026-09-14`  
 **PDF QA update:** `2026-09-15`  
 **NotebookLM smoke evidence:** `real_user_smoke_recorded_2026-09-18_on_invalidated_rc1`  
@@ -37,7 +37,7 @@ O art. 584, § 4º, do CPP, incluído pela Lei n.º 15.358/2026, permanece fora 
 ### StudentContent
 
 - `APOSTILA.md`: `0.1.0-rc.2`, conteúdo jurídico congelado do `0.1.0-draft.3`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado; DPP-05 corrigido contra a fonte oficial.
-- `APOSTILA.pdf`: removido do caminho canônico nesta recuperação. O binário de `0.1.0-rc.1` mantém histórico de identidade exata, mas está `INVALIDATED_SEMANTICALLY` e não pode ser usado como corpus vigente.
+- `APOSTILA.pdf`: PDF corrigido de `0.1.0-rc.2`, publicado no caminho canônico e aprovado em `DIREITO-015` com `PASS_CANONICAL_BINARY_IDENTITY`.
 
 Identidade histórica do PDF `0.1.0-rc.1` invalidado semanticamente:
 
@@ -117,7 +117,7 @@ Os IDs abaixo são backoffice e não aparecem como rótulos estudáveis.
 | PDF rc.1 - readback textual | `historical_pass_text_readback` |
 | PDF rc.1 - visual | `historical_pass_visual_28_of_28` |
 | PDF rc.1 - identidade binária | `historical_pass_canonical_binary_identity_but_semantically_invalidated` |
-| `APOSTILA.pdf` vigente | `absent_pending_new_rc_pdf` |
+| `APOSTILA.pdf` vigente | `pass_canonical_binary_identity_rc2` |
 | NotebookLM smoke real | `pass_behavioral_on_rc1_corpus_invalidated` |
 | `python tools/verify.py` | `not_executed_current_environment` por falha DNS ao obter checkout canônico, não tratado como PASS |
 
@@ -153,3 +153,27 @@ Preparar novo release candidate a partir do `0.1.0-draft.3`, sem nova mudança s
 Estado de saída: `STATIC_READY_FOR_NEW_PDF`. O caminho canônico `APOSTILA.pdf` permanece ausente até que um novo binário seja gerado e auditado a partir deste RC.
 
 Gate determinístico em DIREITO-014: `NOT_EXECUTED_CURRENT_ENVIRONMENT` por falha DNS no clone da branch rc.2, exit `128`; não tratado como PASS.
+
+
+## DIREITO-015 - PDF corrigido
+
+O PDF canônico de `0.1.0-rc.2` foi gerado exclusivamente do Markdown congelado de Git blob `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18` e auditado antes da publicação.
+
+Identidade do artefato atual:
+
+- caminho: `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`;
+- 28 páginas A4, PDF 1.4, pesquisável;
+- 37.917 bytes;
+- SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`;
+- Git blob `6374969ba722451dd6740364e24c41f25e730b54`;
+- readback textual: `PASS`;
+- inspeção visual: `PASS_VISUAL_28_OF_28`;
+- identidade binária remota: `PASS_CANONICAL_BINARY_IDENTITY`.
+
+O rc.1 continua historicamente registrado, mas semanticamente invalidado. O artefato vigente é somente o rc.2 acima.
+
+Gate determinístico: `NOT_EXECUTED_CURRENT_ENVIRONMENT`; o clone da branch falhou por DNS em `2026-09-18`, exit `128`.
+
+## Próximo estágio após DIREITO-015
+
+Executar smoke curto de regressão no NotebookLM com somente o PDF rc.2 corrigido como fonte. A bateria comportamental completa não precisa ser repetida.

@@ -147,4 +147,9 @@ O PDF de `0.1.0-rc.1` permanece apenas como artefato histórico de identidade bi
 
 `DIREITO-014` promove `0.1.0-draft.3` para `0.1.0-rc.2` sem nova alteração jurídica. A mudança no `APOSTILA.md` fica restrita aos metadados de versão/status; a correção normativa dos arts. 371-372 permanece exatamente a aprovada em `DIREITO-013`.
 
-O próximo passo é gerar novo `APOSTILA.pdf` exclusivamente a partir do Markdown congelado de `0.1.0-rc.2` e repetir QA textual, visual e de identidade binária.
+O `APOSTILA.pdf` de `0.1.0-rc.2` foi gerado exclusivamente a partir do Markdown congelado e passou em QA textual, visual e de identidade binária em `DIREITO-015`. Próximo passo: smoke curto de regressão no NotebookLM.
+
+
+## PDF corrigido rc.2
+
+Em `2026-09-18`, `DIREITO-015` publicou o PDF corrigido derivado da fonte congelada rc.2. Identidade: SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`, Git blob `6374969ba722451dd6740364e24c41f25e730b54`, 28 páginas A4, 37.917 bytes. O rc.1 continua invalidado semanticamente.
