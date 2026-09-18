@@ -2,17 +2,18 @@
 
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `direito-processual-penal`  
-**Pack version:** `0.1.0-rc.1`  
-**Status:** `release_candidate_pdf_validated_notebooklm_smoke_blocked_external_access`  
+**Pack version:** `0.1.0-draft.3`  
+**Status:** `draft3_corrected_semantic_qa_targeted_pass_rc1_pdf_invalidated`  
 **RC date:** `2026-09-14`  
 **PDF QA update:** `2026-09-15`  
-**NotebookLM smoke attempt:** `2026-09-15`
+**NotebookLM smoke evidence:** `real_user_smoke_recorded_2026-09-18_on_invalidated_rc1`  
+**Semantic recovery:** `2026-09-18`
 
 ## Objetivo
 
 Este SubjectPack cobre Direito Processual Penal no recorte do Edital de Abertura n.º 02/2025 e segue `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` e o contrato `DPP-01...DPP-25` de `DIREITO_B2_COVERAGE_MATRIX.md`.
 
-`DIREITO-009` aprovou semanticamente o conteúdo em `0.1.0-draft.2`. `DIREITO-010` promoveu somente a identidade do conteúdo congelado para `0.1.0-rc.1`, criou a configuração do tutor e executou QA estático. `DIREITO-011` gerou, auditou e publicou o `APOSTILA.pdf` exato, com identidade binária canônica comprovada. `DIREITO-012` permanece aberto: a tentativa atual não executou o smoke real porque o runtime não forneceu acesso autenticado/interativo ao NotebookLM.
+`DIREITO-009` aprovou o conteúdo em `0.1.0-draft.2`; `DIREITO-010/011` promoveram `0.1.0-rc.1` e publicaram PDF com identidade binária exata. Em `DIREITO-012`, o usuário executou smoke real com evidência comportamental satisfatória. Antes do fechamento do gate, porém, foi confirmado erro normativo na atribuição do art. 371 do CPP. `DIREITO-013` reabriu o QA direcionado de DPP-05, corrigiu a fonte em `0.1.0-draft.3` e invalidou o PDF anterior para uso corrente.
 
 ## Escopo oficial
 
@@ -34,10 +35,10 @@ O art. 584, § 4º, do CPP, incluído pela Lei n.º 15.358/2026, permanece fora 
 
 ### StudentContent
 
-- `APOSTILA.md`: `0.1.0-rc.1`, conteúdo jurídico congelado do `0.1.0-draft.2`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado.
-- `APOSTILA.pdf`: versionado no caminho canônico e aprovado em `DIREITO-011` com `PASS_CANONICAL_BINARY_IDENTITY`.
+- `APOSTILA.md`: `0.1.0-draft.3`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado; DPP-05 corrigido contra a fonte oficial.
+- `APOSTILA.pdf`: removido do caminho canônico nesta recuperação. O binário de `0.1.0-rc.1` mantém histórico de identidade exata, mas está `INVALIDATED_SEMANTICALLY` e não pode ser usado como corpus vigente.
 
-Identidade do PDF canônico:
+Identidade histórica do PDF `0.1.0-rc.1` invalidado semanticamente:
 
 - caminho: `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`;
 - páginas: `28`;
@@ -75,7 +76,7 @@ Os IDs abaixo são backoffice e não aparecem como rótulos estudáveis.
 | DPP-02 | CPP 261-267 | qa_pass |
 | DPP-03 | CPP 274 | qa_pass |
 | DPP-04 | CPP 351-369 | qa_pass |
-| DPP-05 | CPP 370-372 | qa_pass |
+| DPP-05 | CPP 370-372 | qa_pass_after_correction |
 | DPP-06 | CPP 394-405 | qa_pass_after_corrections |
 | DPP-07 | CPP 406-421 | qa_pass |
 | DPP-08 | CPP 422-431 | qa_pass |
@@ -102,21 +103,21 @@ Os IDs abaixo são backoffice e não aparecem como rótulos estudáveis.
 | gate | resultado |
 |---|---|
 | cobertura DPP-01...DPP-25 | `pass_after_corrections` |
-| revisão normativa integral | `pass_after_corrections` |
+| revisão normativa integral | `targeted_reopen_dpp05_pass_after_correction` |
 | didática/fluxos/contrastes | `pass` |
 | prática autoral | `pass_60_of_60` |
 | requisitos Q-LIT/Q-CMP/Q-CAS/Q-FLX/Q-VER/Q-FULL | `pass` |
-| corpus Markdown | `pass_for_markdown` |
+| corpus Markdown | `pass_for_markdown_after_targeted_correction` |
 | coerência com banca sem overfitting | `pass` |
 | ausência de IDs de backoffice em títulos | `pass` |
 | configuração do tutor | `pass_static` |
 | corpus/tutor NotebookLM estático | `pass_static` |
-| identidade da fonte Markdown usada para o PDF | `pass_source_markdown_identity` |
-| PDF - readback textual | `pass_text_readback` |
-| PDF - visual | `pass_visual_28_of_28` |
-| `APOSTILA.pdf` canônico | `pass_canonical_binary_identity` |
-| identidade binária GitHub | `pass` |
-| NotebookLM smoke real | `external_smoke_not_executed_current_environment` |
+| identidade da fonte Markdown usada para o PDF rc.1 | `historical_pass_source_markdown_identity` |
+| PDF rc.1 - readback textual | `historical_pass_text_readback` |
+| PDF rc.1 - visual | `historical_pass_visual_28_of_28` |
+| PDF rc.1 - identidade binária | `historical_pass_canonical_binary_identity_but_semantically_invalidated` |
+| `APOSTILA.pdf` vigente | `absent_pending_new_rc_pdf` |
+| NotebookLM smoke real | `pass_behavioral_on_rc1_corpus_invalidated` |
 | `python tools/verify.py` | `not_executed_current_environment` por falha DNS ao obter checkout canônico, não tratado como PASS |
 
 ## DIREITO-011 - fechamento do PDF
@@ -125,12 +126,20 @@ O PDF foi produzido exclusivamente a partir do Markdown congelado cujo Git blob 
 
 Na publicação final, o GitHub criou o blob `4eabdacec7858120792cf792ca227335e41730b6`, exatamente igual ao Git blob calculado para o candidato auditado. O mesmo SHA foi observado no caminho remoto versionado. Nenhuma alteração jurídica foi introduzida durante geração ou transporte.
 
-## DIREITO-012 - smoke externo
+## DIREITO-012 - smoke real e interrupção do release
 
-A tentativa de `2026-09-15` não executou interação real com o NotebookLM porque o runtime não disponibilizou sessão autenticada nem canal interativo já conectado. Nenhum comportamento externo foi presumido. O resultado é `EXTERNAL_SMOKE_NOT_EXECUTED`, e o gate permanece aberto.
+O usuário executou o smoke real e forneceu evidência de chat explicativo, treino A-E, correção após tentativa, disciplina fora do corpus, Teste, Cartões e Mapa mental. O comportamento foi satisfatório nas amostras e não houve vazamento observado de IDs `DPP-*` ou metadados internos.
+
+Esse resultado é registrado como `PASS_BEHAVIORAL_ON_RC1`, mas não fecha o release porque o corpus `rc.1` foi posteriormente invalidado pelo erro do art. 371.
 
 Detalhes: `NOTEBOOKLM_SMOKE_0.1.0.md`.
 
+## DIREITO-013 - recuperação semântica
+
+A Unidade 5 foi corrigida em `0.1.0-draft.3` contra `SRC-B2-CPP`. DPP-05 está `qa_pass_after_correction`. O PDF antigo foi invalidado e removido do caminho canônico para evitar uso acidental.
+
+A tentativa de executar o gate determinístico em `2026-09-18` não chegou a `python tools/verify.py`: o clone da branch falhou por DNS, exit `128`. Estado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`.
+
 ## Próximo estágio
 
-Retomar `DIREITO-012` quando houver acesso efetivo ao NotebookLM. Usar somente o `APOSTILA.pdf` canônico como fonte e o bloco operacional de `METODOLOGIA_NOTEBOOKLM.md` na configuração nativa da conversa. Somente evidência observada pode fechar o gate.
+Preparar novo release candidate a partir do `0.1.0-draft.3`, sem nova mudança semântica. Depois, gerar e auditar novo PDF. O smoke final pode ser curto e regressivo, pois o comportamento geral do NotebookLM já foi efetivamente observado no RC anterior.

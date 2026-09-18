@@ -1,5 +1,28 @@
 # CHANGELOG - Direito Processual Penal - TJSP Escrevente 2025
 
+## `0.1.0-draft.3` - 2026-09-18
+
+Reabertura semântica direcionada após identificação de erro normativo no `0.1.0-rc.1` durante o fechamento de `DIREITO-012`.
+
+### Corrigido
+
+- Unidade 5: removida a atribuição incorreta de que o art. 371 do CPP consideraria intimadas em audiência as pessoas presentes;
+- art. 371 alinhado à fonte oficial: intimação por despacho na petição em que for requerida, observado o art. 357;
+- art. 372 alinhado à literalidade oficial: adiamento da instrução criminal, marcação imediata de dia e hora para prosseguimento na presença de partes e testemunhas e lavratura de termo nos autos;
+- QA direcionado de DPP-05 reaberto e reexecutado contra `SRC-B2-CPP`.
+
+### Invalidado para uso corrente
+
+- o `APOSTILA.pdf` de `0.1.0-rc.1` mantém verdadeiro o histórico `PASS_CANONICAL_BINARY_IDENTITY`, mas deixa de ser elegível como corpus/release por ter sido gerado de fonte Markdown semanticamente defeituosa;
+- o binário foi removido do caminho canônico durante a correção para impedir uso acidental;
+- `DIREITO-012` registrou evidência comportamental real do NotebookLM fornecida pelo usuário, mas não pode fechar o release sobre corpus invalidado.
+
+Próximo passo: preparar novo RC a partir de `0.1.0-draft.3`, gerar novo PDF e executar smoke final curto sobre o corpus corrigido.
+
+Gate determinístico: nova tentativa de clone da branch de correção em `2026-09-18` falhou por DNS (`Could not resolve host: github.com`, exit `128`); `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
+---
+
 ## `0.1.0-rc.1` - 2026-09-14
 
 Preparação do primeiro release candidate sob `DIREITO-010`, sem promoção a release final.

@@ -2,8 +2,9 @@
 
 **Gate:** `DIREITO-012`  
 **Pack:** `direito-processual-penal 0.1.0-rc.1`  
-**Date:** `2026-09-15`  
-**Result:** `EXTERNAL_SMOKE_NOT_EXECUTED`
+**Initial attempt date:** `2026-09-15`  
+**Real user evidence recorded:** `2026-09-18`  
+**Result:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`
 
 ## Estado canônico revalidado
 
@@ -65,6 +66,46 @@ A impossibilidade não é tratada como `PASS`, conforme `DEC-0009`.
 
 ## Estado de saída
 
-`DIREITO-012` permanece aberto como `blocked_external_access`.
+Na tentativa inicial de `2026-09-15`, `DIREITO-012` permaneceu `blocked_external_access`. Esse estado foi superado pela execução manual do usuário registrada abaixo; não representa o estado atual do gate.
 
-Próxima operação: obter acesso efetivo a uma sessão do NotebookLM, executar o smoke real conforme `00_SYSTEM/NEXT_ACTION.md`, registrar somente evidência observada e então classificar o gate como `PASS`, `PASS_WITH_OBSERVATIONS` ou `FAIL`.
+
+---
+
+## Evidência real fornecida pelo usuário - registrada em 2026-09-18
+
+Após o bloqueio de acesso do runtime, o usuário executou manualmente o smoke no NotebookLM com o PDF de `0.1.0-rc.1` e forneceu transcrições e capturas da interface.
+
+### Chat explicativo
+
+Consulta sobre citação por edital x hora certa: `PASS`. O tutor distinguiu não localização de ocultação deliberada, apontou arts. 361/362 e tratou os efeitos de modo coerente com o corpus.
+
+### Treino interativo
+
+Treino A-E sobre recursos: `PASS`.
+
+- uma questão por vez;
+- nenhuma dica ou gabarito antes da tentativa;
+- correção somente após a resposta;
+- correção distinguiu apelação de RESE e os prazos de CPP/JECrim;
+- reteste curto ocorreu somente após a correção completa.
+
+### Disciplina epistemológica
+
+Pergunta sobre jurisprudência mais recente do STJ: `PASS`. O tutor respondeu que a fonte selecionada não trazia a informação e não fabricou jurisprudência.
+
+### Estúdio
+
+- Teste: `PASS_SAMPLE` em amostra visual de questões sobre impedimento, defesa técnica, hora certa e absolvição sumária;
+- Cartões: `PASS_SAMPLE` em amostra visual;
+- Mapa mental: `PASS_SAMPLE`, com hierarquia processual útil;
+- vazamento de `DPP-*`, QA, gates ou metadados internos nas amostras: `NOT_OBSERVED`.
+
+## Interrupção por defeito do corpus
+
+Depois da coleta do smoke, a revisão semântica final identificou erro autoral no art. 371 da Unidade 5. Por isso, o comportamento observado é aceito como evidência de funcionamento do tutor/Estúdio sobre o RC antigo, mas o gate de release não fecha sobre esse corpus.
+
+Estado de saída:
+
+`PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`
+
+Próxima verificação externa necessária: smoke curto de regressão sobre o novo PDF derivado do `0.1.0-draft.3` corrigido.

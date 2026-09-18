@@ -1,7 +1,7 @@
 # Direito Processual Penal - TJSP Escrevente 2025
 
-**Versão:** `0.1.0-rc.1`  
-**Status:** release candidate; conteúdo semântico/normativo aprovado no `0.1.0-draft.2`; release final ainda depende dos gates aplicáveis de PDF e NotebookLM  
+**Versão:** `0.1.0-draft.3`  
+**Status:** draft corrigido; QA semântico/normativo reaberto e revalidado de forma direcionada após correção do art. 371; novo RC/PDF ainda necessário  
 **Base normativa:** Código de Processo Penal e Lei n.º 9.099/1995, recorte vigente em `2025-07-29`
 
 ## Como usar esta apostila
@@ -203,7 +203,7 @@ O art. 370 manda observar, no que for aplicável, a disciplina do capítulo das 
 
 A intimação do Ministério Público e do defensor nomeado é pessoal.
 
-O art. 371 considera intimadas em audiência as pessoas cuja ciência decorra do ato, e o art. 372 permite que, adiada a audiência, o juiz fixe imediatamente nova data e hora na presença das partes e testemunhas, registrando-se a ciência.
+O art. 371 admite a intimação por despacho na própria petição em que for requerida, observado o art. 357. O art. 372 estabelece que, adiada por qualquer motivo a instrução criminal, o juiz marque desde logo, na presença das partes e testemunhas, dia e hora para seu prosseguimento, lavrando-se termo nos autos.
 
 ### Citação x intimação
 
