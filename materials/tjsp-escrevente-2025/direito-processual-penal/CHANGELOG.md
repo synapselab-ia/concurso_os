@@ -15,6 +15,8 @@ Preparação do release candidate corrigido em `DIREITO-014`.
 
 Próximo gate: gerar e auditar o PDF exclusivamente a partir do Markdown rc.2 congelado.
 
+Gate determinístico: clone da branch rc.2 falhou por DNS em `2026-09-18`, exit `128`; `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`.
+
 ---
 
 ## `0.1.0-draft.3` - 2026-09-18
