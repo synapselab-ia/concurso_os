@@ -169,8 +169,9 @@ pull_request_lineage:
   direito_processual_penal_notebooklm_status_pr: 32
   direito_processual_penal_semantic_recovery_pr: 33
   direito_processual_penal_corrected_rc_pr: 34
+  direito_processual_penal_corrected_pdf_pr: 35
 
-merge_status: DIREITO_015_pdf_branch_pending_PR_merge
+merge_status: DIREITO_015_corrected_pdf_tracked_in_PR_35
 
 not_started:
   - direito-processual-penal short regression NotebookLM smoke
