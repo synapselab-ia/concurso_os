@@ -5,8 +5,8 @@ project_state: active
 phase: subject_pack_authoring_prep
 branch_after_recovery_pr_merge: main
 base_branch: main
-current_task: execute DIREITO-015 corrected PDF generation and QA for direito-processual-penal 0.1.0-rc.2
-current_pack: direito-processual-penal_0.1.0-rc.2_static_ready_pending_new_pdf
+current_task: execute DIREITO-016 short NotebookLM regression for direito-processual-penal 0.1.0-rc.2 corrected PDF
+current_pack: direito-processual-penal_0.1.0-rc.2_pdf_validated_pending_notebooklm_regression
 last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
 last_released_pack: portugues_2.0.0
 
@@ -36,6 +36,7 @@ completed:
   - DIREITO-013 DPP-05 corrected and targeted QA passed in draft.3
   - DIREITO-013 rc1 PDF invalidated for semantic use and removed from canonical path
   - DIREITO-014 corrected rc2 prepared from draft.3 with metadata-only StudentContent promotion
+  - DIREITO-015 corrected rc2 PDF generated audited and published with exact remote binary identity
 
 b2_source_gate:
   status: closed
@@ -67,7 +68,7 @@ right_penal_validated_rc:
 
 right_processual_penal:
   version: 0.1.0-rc.2
-  status: corrected_rc_static_ready_pending_pdf
+  status: corrected_rc_pdf_validated_pending_notebooklm_regression
   content_base: 0.1.0-draft.3
   path: materials/tjsp-escrevente-2025/direito-processual-penal
   units: 25
@@ -102,7 +103,16 @@ right_processual_penal:
   qa_artifact: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA_QA_0.1.0.md
   current_pdf:
     path: materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf
-    status: absent_pending_new_rc_pdf
+    status: pass_canonical_binary_identity
+    pages: 28
+    page_size: A4
+    format: PDF_1.4
+    bytes: 37917
+    sha256: aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe
+    git_blob: 6374969ba722451dd6740364e24c41f25e730b54
+    searchable: true
+    text_readback: pass
+    visual_inspection: pass_28_of_28
   historical_pdf_rc1:
     git_blob: 4eabdacec7858120792cf792ca227335e41730b6
     sha256: 608ce1a5fd08eaa76b5b7f6677ae71ab2d5ae2f3aeeb4df135b81083500d28b0
@@ -118,29 +128,26 @@ validation:
     command: python tools/verify.py
     result: not_executed_current_environment
     attempted_at: 2026-09-18
-    checkout_attempt: git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d014
+    checkout_attempt: git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2-pdf https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d015
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
 
 next_gate:
-  id: DIREITO-015
-  name: generate_and_validate_corrected_pdf_direito_processual_penal
+  id: DIREITO-016
+  name: notebooklm_short_regression_direito_processual_penal
   pack: direito-processual-penal
-  source_version: 0.1.0-rc.2
-  source_git_blob: 8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18
+  target_version: 0.1.0-rc.2
   state: next
+  prerequisite: DIREITO-015 corrected PDF with PASS_CANONICAL_BINARY_IDENTITY
   required_work:
-    - generate searchable A4 PDF exclusively from frozen rc2 Markdown
-    - run text readback and confirm corrected arts 371 and 372
-    - render and visually inspect all pages
-    - compute SHA256 and Git blob identity
-    - publish exact audited binary to canonical APOSTILA.pdf path
-    - prove remote binary identity
-    - execute python tools/verify.py or document impossibility
-    - review diff open PR and merge under DEC-0009 if clean
-  following_gate:
-    - run short NotebookLM regression smoke on corrected PDF
+    - user loads only corrected canonical APOSTILA.pdf as study source
+    - keep METODOLOGIA_NOTEBOOKLM rc2 in native conversation configuration
+    - ask a direct question about CPP arts 371 and 372 and confirm corrected behavior
+    - run one A-E training question and verify no answer leak before attempt
+    - verify no DPP coverage IDs QA gates or backoffice metadata leak
+    - record exact observed evidence
+    - if regression passes advance to direito-processual-civil
 
 pull_request_lineage:
   b2_preparation_pr: 13
@@ -163,10 +170,9 @@ pull_request_lineage:
   direito_processual_penal_semantic_recovery_pr: 33
   direito_processual_penal_corrected_rc_pr: 34
 
-merge_status: DIREITO_014_corrected_rc_tracked_in_PR_34
+merge_status: DIREITO_015_pdf_branch_pending_PR_merge
 
 not_started:
-  - direito-processual-penal corrected PDF
   - direito-processual-penal short regression NotebookLM smoke
   - direito-processual-civil
   - direito-constitucional
