@@ -2,7 +2,8 @@
 
 **Gate:** `DIREITO-012`  
 **Pack:** `direito-processual-penal 0.1.0-rc.1`  
-**Date:** `2026-09-15`  
+**Initial attempt date:** `2026-09-15`  
+**Real user evidence recorded:** `2026-09-18`  
 **Result:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`
 
 ## Estado canônico revalidado
@@ -65,9 +66,7 @@ A impossibilidade não é tratada como `PASS`, conforme `DEC-0009`.
 
 ## Estado de saída
 
-`DIREITO-012` permanece aberto como `blocked_external_access`.
-
-Próxima operação: obter acesso efetivo a uma sessão do NotebookLM, executar o smoke real conforme `00_SYSTEM/NEXT_ACTION.md`, registrar somente evidência observada e então classificar o gate como `PASS`, `PASS_WITH_OBSERVATIONS` ou `FAIL`.
+Na tentativa inicial de `2026-09-15`, `DIREITO-012` permaneceu `blocked_external_access`. Esse estado foi superado pela execução manual do usuário registrada abaixo; não representa o estado atual do gate.
 
 
 ---
