@@ -138,6 +138,8 @@ Detalhes: `NOTEBOOKLM_SMOKE_0.1.0.md`.
 
 A Unidade 5 foi corrigida em `0.1.0-draft.3` contra `SRC-B2-CPP`. DPP-05 está `qa_pass_after_correction`. O PDF antigo foi invalidado e removido do caminho canônico para evitar uso acidental.
 
+A tentativa de executar o gate determinístico em `2026-09-18` não chegou a `python tools/verify.py`: o clone da branch falhou por DNS, exit `128`. Estado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`.
+
 ## Próximo estágio
 
 Preparar novo release candidate a partir do `0.1.0-draft.3`, sem nova mudança semântica. Depois, gerar e auditar novo PDF. O smoke final pode ser curto e regressivo, pois o comportamento geral do NotebookLM já foi efetivamente observado no RC anterior.
