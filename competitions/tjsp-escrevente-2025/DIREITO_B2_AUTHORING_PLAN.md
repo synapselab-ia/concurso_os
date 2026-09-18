@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.2` corrigido e static-ready; novo PDF pendente
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.2` com PDF corrigido validado; smoke regressivo curto pendente
 
 ## Objetivo
 
@@ -179,7 +179,24 @@ PR 34 registra a promoção. Estado: `closed_static_ready_for_pdf` após o merge
 
 ## Gate 15 - novo PDF corrigido
 
-Próximo gate. Gerar PDF pesquisável exclusivamente do rc.2 congelado, repetir readback/inspeção visual, provar identidade binária e publicar no caminho canônico.
+O PDF rc.2 foi gerado exclusivamente do Markdown congelado de Git blob `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`.
+
+Resultado:
+
+- 28 páginas A4;
+- PDF 1.4 pesquisável;
+- 37.917 bytes;
+- SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`;
+- Git blob `6374969ba722451dd6740364e24c41f25e730b54`;
+- readback textual `pass`;
+- inspeção visual `28/28 pass`;
+- identidade binária remota `PASS_CANONICAL_BINARY_IDENTITY`.
+
+Estado: `closed_pdf_validated` após merge de DIREITO-015.
+
+## Gate 16 - smoke regressivo curto
+
+O usuário deve carregar somente o PDF rc.2 corrigido no NotebookLM e confirmar a correção dos arts. 371-372, um treino A-E sem vazamento antecipado e ausência de metadados internos. Não é necessário repetir a bateria completa já observada no rc.1.
 
 Estado: `next`.
 
@@ -231,7 +248,8 @@ Estado: `next`.
 | 12 - NotebookLM processual penal | `interrupted_by_semantic_defect` | comportamento real observado como pass no rc.1, mas corpus posteriormente invalidado |
 | 13 - recuperação DPP-05 | `closed_targeted_semantic_recovery` | arts. 370-372 rechecados; art. 371 corrigido em draft.3; PDF rc.1 invalidado |
 | 14 - novo RC processual penal | `closed_static_ready_for_pdf` | rc.2 congelado a partir do draft.3 corrigido, sem nova mudança semântica |
-| 15 - novo PDF processual penal | `next` | gerar, auditar e publicar PDF exato a partir do rc.2 |
+| 15 - novo PDF processual penal | `closed_pdf_validated` | PDF rc.2 auditado e publicado com identidade binária exata |
+| 16 - regressão NotebookLM processual penal | `next` | smoke curto sobre o PDF corrigido; depois avançar para processo civil se passar |
 
 ## Regra de autoridade
 
