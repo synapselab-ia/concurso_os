@@ -1,5 +1,22 @@
 # CHANGELOG - Direito Processual Penal - TJSP Escrevente 2025
 
+## `0.1.0-rc.2` - 2026-09-18
+
+Preparação do release candidate corrigido em `DIREITO-014`.
+
+### Promoção de identidade
+
+- `APOSTILA.md` promovida de `0.1.0-draft.3` para `0.1.0-rc.2`;
+- nenhuma alteração jurídica no corpo da apostila, prática ou gabarito;
+- correção dos arts. 371-372 permanece exatamente a aprovada em `DIREITO-013`;
+- `SOURCES.md`, `MANIFEST.md` e `METODOLOGIA_NOTEBOOKLM.md` sincronizados para rc.2;
+- tutor sem alteração comportamental;
+- novo `APOSTILA.pdf` ainda não criado por design.
+
+Próximo gate: gerar e auditar o PDF exclusivamente a partir do Markdown rc.2 congelado.
+
+---
+
 ## `0.1.0-draft.3` - 2026-09-18
 
 Reabertura semântica direcionada após identificação de erro normativo no `0.1.0-rc.1` durante o fechamento de `DIREITO-012`.
