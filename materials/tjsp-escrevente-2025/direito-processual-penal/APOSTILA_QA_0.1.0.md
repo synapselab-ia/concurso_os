@@ -591,3 +591,8 @@ Verificações estáticas:
 - `APOSTILA.pdf` continua ausente por design até o próximo gate.
 
 O próximo estágio é gerar e auditar um novo PDF a partir do Markdown congelado deste rc.2. O PDF rc.1 invalidado não pode ser reutilizado.
+
+
+### Gate determinístico em DIREITO-014
+
+Tentativa de clone da branch `release/direito-processual-penal-0.1.0-rc.2` em `2026-09-18` falhou com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
