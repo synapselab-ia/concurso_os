@@ -40,7 +40,7 @@
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
 - **B2 coverage matrix:** six complete matrices
 - **Validation gate:** `python tools/verify.py`
-- **Validation status in DIREITO-013:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; clone of the correction branch failed on `2026-09-18` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
+- **Validation status in DIREITO-014:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; clone of the rc.2 branch failed on `2026-09-18` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
 - **Merge policy:** validated development/status PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
