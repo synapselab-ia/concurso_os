@@ -169,7 +169,7 @@ Em `2026-09-18`, a fonte oficial do CPP foi reaberta para os arts. 370-372. Conf
 
 A Unidade 5 foi corrigida em `0.1.0-draft.3`. DPP-05 passou em QA direcionado após a correção. O PDF de `0.1.0-rc.1` mantém seu histórico de identidade binária, mas foi invalidado semanticamente e removido do caminho canônico.
 
-Estado: `closed_targeted_semantic_recovery` após merge da PR de DIREITO-013.
+PR 33 registra a recuperação. Estado: `closed_targeted_semantic_recovery` após o merge.
 
 ## Gate 14 - novo RC de Direito Processual Penal
 
