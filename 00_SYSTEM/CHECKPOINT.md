@@ -99,8 +99,12 @@ right_processual_penal:
 validation:
   canonical_gate:
     command: python tools/verify.py
-    result: pending_direito_013_recheck
-    policy: never_treat_unexecuted_as_pass
+    result: not_executed_current_environment
+    attempted_at: 2026-09-18
+    checkout_attempt: git clone --depth 1 --branch fix/direito-processual-penal-art371 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d013
+    exit_code: 128
+    error: Could not resolve host: github.com
+    policy: documented_under_DEC_0009_not_a_pass
 
 next_gate:
   id: DIREITO-014
