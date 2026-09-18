@@ -11,14 +11,15 @@
 - **Planned B2 SubjectPacks:** `direito-penal`, `direito-processual-penal`, `direito-processual-civil`, `direito-constitucional`, `direito-administrativo`, `legislacao-interna`
 - **Last released pack:** `portugues 2.0.0`, final
 - **Last validated legal pack:** `direito-penal 0.1.0-rc.1`, validated release candidate
-- **Current pack:** `direito-processual-penal 0.1.0-draft.3`, targeted semantic correction passed; rc.1 PDF invalidated and removed; new RC/PDF required
+- **Current pack:** `direito-processual-penal 0.1.0-rc.2`, corrected release candidate static-ready; new PDF required
 - **DIREITO-009:** semantic/normative QA closed in PR `#28`, merge `70a5103d3f8ceb6132908d68963a2a55732665ec`
 - **DIREITO-010:** RC identity, tutor configuration and static corpus QA closed in PR `#29`, merge `947ea624d7abfa3b1db4481064aa4abf9743be19`
 - **DIREITO-011:** canonical PDF publication and binary identity closed in PR `#31`, merge `b63f9a8f4b51894bf37e070eee3feeb481781855`
 - **DIREITO-012:** real user smoke produced `PASS_BEHAVIORAL_ON_RC1`, but release closure was interrupted by a semantic defect in CPP art. 371
 - **DIREITO-013:** targeted semantic recovery to `0.1.0-draft.3`; DPP-05 revalidated after correction
-- **Current gate:** `DIREITO-014`, prepare a new release candidate from corrected `0.1.0-draft.3`
-- **Current blocker:** none external; the next work is repository-side RC preparation. The prior rc.1 binary must not be reused.
+- **DIREITO-014:** corrected `0.1.0-rc.2` prepared with metadata-only promotion from draft.3
+- **Current gate:** `DIREITO-015`, generate and audit a new PDF from corrected rc.2
+- **Current blocker:** none; generate a new PDF from rc.2. The prior rc.1 binary must not be reused.
 - **Smoke status artifact:** `materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md`
 - **Workspace:** `materials/tjsp-escrevente-2025/direito-processual-penal/`
 - **Coverage contract:** `DPP-01...DPP-25`
@@ -30,7 +31,7 @@
 - **Normative baseline:** `2025-07-29`
 - **Critical version rule:** CPP art. 584, § 4º, added by Lei n.º 15.358/2026, stays outside the study baseline
 - **Semantic QA:** coverage `pass_after_corrections`; normative `pass_after_corrections`; didactics `pass`; practice `pass_60_of_60`; Markdown corpus `pass_for_markdown`
-- **RC QA:** historical rc.1 identity `pass` but release eligibility `invalidated_semantically`; corrected current source is `0.1.0-draft.3`
+- **RC QA:** corrected rc.2 static identity `pass`; semantic body inherited unchanged from draft.3; tutor `pass_static`; PDF pending
 - **Frozen Markdown Git blob:** `11a41d18ff3a8b03150923ec68d44087bded7267`
 - **Historical rc.1 PDF:** binary identity remains `PASS_CANONICAL_BINARY_IDENTITY`, but semantic eligibility is `INVALIDATED`; canonical path removed pending regenerated PDF from corrected source
 - **NotebookLM live smoke:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`; final regression smoke deferred until regenerated corrected PDF
@@ -39,12 +40,12 @@
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
 - **B2 coverage matrix:** six complete matrices
 - **Validation gate:** `python tools/verify.py`
-- **Validation status in DIREITO-013:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; clone of the correction branch failed on `2026-09-18` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
+- **Validation status in DIREITO-014:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; clone of the rc.2 branch failed on `2026-09-18` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
 - **Merge policy:** validated development/status PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` mandatory
 - **Primary NotebookLM UX:** canonical `APOSTILA.pdf` as the study source; tutor instructions from `METODOLOGIA_NOTEBOOKLM.md` in the native conversation configuration when available
-- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`; DPP PDF status `#30`; DPP canonical PDF publication `#31`; DPP NotebookLM external-block status `#32`; DPP semantic recovery `#33`
+- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`; DPP PDF status `#30`; DPP canonical PDF publication `#31`; DPP NotebookLM external-block status `#32`; DPP semantic recovery `#33`; DPP corrected rc.2 `#34`
 
 This file is an executive index. Detailed state is in `00_SYSTEM/CHECKPOINT.md`; operational next action is in `00_SYSTEM/NEXT_ACTION.md`.

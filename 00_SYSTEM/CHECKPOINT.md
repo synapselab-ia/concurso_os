@@ -5,8 +5,8 @@ project_state: active
 phase: subject_pack_authoring_prep
 branch_after_recovery_pr_merge: main
 base_branch: main
-current_task: prepare DIREITO-014 corrected release candidate for direito-processual-penal 0.1.0-draft.3
-current_pack: direito-processual-penal_0.1.0-draft.3_targeted_semantic_qa_pass_pending_new_rc
+current_task: execute DIREITO-015 corrected PDF generation and QA for direito-processual-penal 0.1.0-rc.2
+current_pack: direito-processual-penal_0.1.0-rc.2_static_ready_pending_new_pdf
 last_validated_pack: direito-penal_0.1.0-rc.1_validated_release_candidate
 last_released_pack: portugues_2.0.0
 
@@ -35,6 +35,7 @@ completed:
   - DIREITO-013 semantic defect in CPP art 371 confirmed against official source
   - DIREITO-013 DPP-05 corrected and targeted QA passed in draft.3
   - DIREITO-013 rc1 PDF invalidated for semantic use and removed from canonical path
+  - DIREITO-014 corrected rc2 prepared from draft.3 with metadata-only StudentContent promotion
 
 b2_source_gate:
   status: closed
@@ -65,8 +66,8 @@ right_penal_validated_rc:
   final_promotion: deferred_nonblocking
 
 right_processual_penal:
-  version: 0.1.0-draft.3
-  status: targeted_semantic_qa_pass_pending_new_rc
+  version: 0.1.0-rc.2
+  status: corrected_rc_static_ready_pending_pdf
   content_base: 0.1.0-draft.3
   path: materials/tjsp-escrevente-2025/direito-processual-penal
   units: 25
@@ -80,14 +81,16 @@ right_processual_penal:
   practice_requirements: pass_Q_LIT_Q_CMP_Q_CAS_Q_FLX_Q_VER_Q_FULL
   markdown_corpus_qa: pass_for_markdown_after_targeted_correction
   visible_backoffice_ids_in_headings: false
-  corrected_markdown:
-    version: 0.1.0-draft.3
-    git_blob_github: 135592d9762b8f639a199ebe795ffcca71e747bd
+  frozen_markdown:
+    version: 0.1.0-rc.2
+    git_blob_github: 8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18
+    content_base_blob: 135592d9762b8f639a199ebe795ffcca71e747bd
+    semantic_delta_from_draft3: false
     correction: CPP_art_371_and_372
     source_recheck_date: 2026-09-18
   tutor_configuration:
     artifact: materials/tjsp-escrevente-2025/direito-processual-penal/METODOLOGIA_NOTEBOOKLM.md
-    current_identity: 0.1.0-rc.1_historical_pending_resync_at_new_rc
+    current_identity: 0.1.0-rc.2
     role: ConversationInstruction
     static_qa: pass_static
     corpus_limit_rule: absence_in_source_is_not_universal_negative
@@ -115,30 +118,29 @@ validation:
     command: python tools/verify.py
     result: not_executed_current_environment
     attempted_at: 2026-09-18
-    checkout_attempt: git clone --depth 1 --branch fix/direito-processual-penal-art371 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d013
+    checkout_attempt: git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d014
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
 
 next_gate:
-  id: DIREITO-014
-  name: prepare_corrected_release_candidate_direito_processual_penal
+  id: DIREITO-015
+  name: generate_and_validate_corrected_pdf_direito_processual_penal
   pack: direito-processual-penal
-  source_version: 0.1.0-draft.3
-  preferred_target_version: 0.1.0-rc.2
+  source_version: 0.1.0-rc.2
+  source_git_blob: 8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18
   state: next
   required_work:
-    - confirm corrected arts 371 and 372 remain present
-    - promote metadata only to new RC
-    - resync SOURCES MANIFEST METODOLOGIA_NOTEBOOKLM CHANGELOG
-    - freeze corrected Markdown identity
-    - run static corpus tutor QA
+    - generate searchable A4 PDF exclusively from frozen rc2 Markdown
+    - run text readback and confirm corrected arts 371 and 372
+    - render and visually inspect all pages
+    - compute SHA256 and Git blob identity
+    - publish exact audited binary to canonical APOSTILA.pdf path
+    - prove remote binary identity
     - execute python tools/verify.py or document impossibility
     - review diff open PR and merge under DEC-0009 if clean
   following_gate:
-    - regenerate searchable PDF from corrected RC
-    - repeat text readback visual QA and binary identity proof
-    - run short NotebookLM regression smoke
+    - run short NotebookLM regression smoke on corrected PDF
 
 pull_request_lineage:
   b2_preparation_pr: 13
@@ -159,11 +161,11 @@ pull_request_lineage:
   direito_processual_penal_pdf_publication_pr: 31
   direito_processual_penal_notebooklm_status_pr: 32
   direito_processual_penal_semantic_recovery_pr: 33
+  direito_processual_penal_corrected_rc_pr: 34
 
-merge_status: DIREITO_013_recovery_tracked_in_PR_33
+merge_status: DIREITO_014_corrected_rc_tracked_in_PR_34
 
 not_started:
-  - direito-processual-penal corrected rc2
   - direito-processual-penal corrected PDF
   - direito-processual-penal short regression NotebookLM smoke
   - direito-processual-civil

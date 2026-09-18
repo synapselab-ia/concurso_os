@@ -1,6 +1,6 @@
 # SOURCES - Direito Processual Penal - TJSP Escrevente 2025
 
-**Pack version:** `0.1.0-draft.3`  
+**Pack version:** `0.1.0-rc.2`  
 **Full source review:** `2026-09-14`
 
 ## Regra de autoridade
@@ -125,7 +125,7 @@ configuração do tutor -> METODOLOGIA_NOTEBOOKLM.md na camada nativa da convers
 backoffice -> GitHub/ChatGPT
 ```
 
-`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. Após a correção de `0.1.0-draft.3`, o uso do NotebookLM fica suspenso até a geração de novo PDF a partir de um RC corrigido; o pack não é release candidate vigente.
+`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. O `0.1.0-rc.2` congela o conteúdo corrigido do `draft.3`; o uso do NotebookLM permanece suspenso até a geração e validação do novo PDF.
 
 
 ## Revalidação direcionada de 2026-09-18 - CPP arts. 370-372
@@ -141,3 +141,10 @@ Resultado da conferência:
 - a correção de `0.1.0-draft.3` repara erro de atribuição do conteúdo anterior, sem alterar o baseline `2025-07-29`.
 
 O PDF de `0.1.0-rc.1` permanece apenas como artefato histórico de identidade binária e não pode ser usado como corpus vigente após esta correção.
+
+
+## Relação entre `draft.3` e `rc.2`
+
+`DIREITO-014` promove `0.1.0-draft.3` para `0.1.0-rc.2` sem nova alteração jurídica. A mudança no `APOSTILA.md` fica restrita aos metadados de versão/status; a correção normativa dos arts. 371-372 permanece exatamente a aprovada em `DIREITO-013`.
+
+O próximo passo é gerar novo `APOSTILA.pdf` exclusivamente a partir do Markdown congelado de `0.1.0-rc.2` e repetir QA textual, visual e de identidade binária.

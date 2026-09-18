@@ -10,7 +10,7 @@
 **PDF gate:** `DIREITO-011`  
 **Overall semantic result:** `PASS_AFTER_TARGETED_CORRECTION`  
 **Normative result:** `PASS_AFTER_TARGETED_CORRECTION`  
-**Release candidate:** `0.1.0-rc.1_invalidated_by_semantic_defect`; current source `0.1.0-draft.3`  
+**Release candidate:** `0.1.0-rc.2_static_ready_pending_pdf`; source corrected in `0.1.0-draft.3`  
 **Static NotebookLM result:** `PASS_STATIC`  
 **Historical rc.1 PDF result:** `PASS_CANONICAL_BINARY_IDENTITY`; current eligibility `INVALIDATED_SEMANTICALLY`
 
@@ -568,3 +568,31 @@ fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Cou
 ```
 
 Exit code: `128`. Sem checkout canônico, `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`.
+
+
+---
+
+## 23. DIREITO-014 - promoção estática para rc.2
+
+**Data:** `2026-09-18`  
+**Resultado:** `PASS_STATIC_READY_FOR_NEW_PDF`.
+
+O `0.1.0-draft.3` corrigido foi promovido para `0.1.0-rc.2`. No `APOSTILA.md`, a alteração foi limitada aos metadados de versão/status. Não houve modificação adicional no corpo jurídico, nas 60 questões ou no gabarito.
+
+Verificações estáticas:
+
+- redação corrigida do art. 371 preservada;
+- redação corrigida do art. 372 preservada;
+- formulação defeituosa do rc.1 ausente;
+- 25 unidades preservadas;
+- 60 questões preservadas;
+- ausência de `DPP-*` em headings preservada;
+- `METODOLOGIA_NOTEBOOKLM.md` sincronizada para rc.2 sem mudança comportamental;
+- `APOSTILA.pdf` continua ausente por design até o próximo gate.
+
+O próximo estágio é gerar e auditar um novo PDF a partir do Markdown congelado deste rc.2. O PDF rc.1 invalidado não pode ser reutilizado.
+
+
+### Gate determinístico em DIREITO-014
+
+Tentativa de clone da branch `release/direito-processual-penal-0.1.0-rc.2` em `2026-09-18` falhou com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.

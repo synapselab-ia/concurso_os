@@ -1,7 +1,7 @@
 # METODOLOGIA NOTEBOOKLM - Configuração do chat de Direito Processual Penal
 
 **Pack:** `tjsp-escrevente-2025/direito-processual-penal`  
-**Versão:** `0.1.0-rc.1`
+**Versão:** `0.1.0-rc.2`
 
 ## 1. Função deste arquivo
 
@@ -152,7 +152,7 @@ Esta metodologia não controla Teste, Cartões, Mapa mental, Relatórios ou outr
 
 ## 6. Estado desta versão
 
-A versão `0.1.0-rc.1` foi preparada para a arquitetura de corpus limpo: `APOSTILA.pdf` como fonte estudável e este bloco na configuração nativa da conversa. O QA estático pode ser executado no repositório; o smoke real depende de acesso efetivo à interface do NotebookLM e não deve ser presumido.
+A versão `0.1.0-rc.2` mantém a arquitetura de corpus limpo: `APOSTILA.pdf` como fonte estudável e este bloco na configuração nativa da conversa. O comportamento do tutor não foi alterado em relação ao rc.1; o rc.2 apenas acompanha o corpus jurídico corrigido. O smoke regressivo final depende do novo PDF validado.
 
 Prioridade permanente:
 

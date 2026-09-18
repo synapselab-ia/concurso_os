@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-draft.3` corrigido após reabertura semântica de DPP-05; novo RC/PDF pendentes
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.2` corrigido e static-ready; novo PDF pendente
 
 ## Objetivo
 
@@ -173,7 +173,13 @@ PR 33 registra a recuperação. Estado: `closed_targeted_semantic_recovery` apó
 
 ## Gate 14 - novo RC de Direito Processual Penal
 
-Próximo gate. Promover `0.1.0-draft.3` para novo RC sem nova mudança jurídica, ressincronizar metadados/tutor, congelar identidade do Markdown corrigido e repetir QA estático antes de regenerar o PDF.
+`0.1.0-draft.3` foi promovido para `0.1.0-rc.2` sem nova mudança jurídica. `APOSTILA.md` mudou somente em metadados de versão/status; `SOURCES`, `MANIFEST`, `METODOLOGIA_NOTEBOOKLM` e `CHANGELOG` foram sincronizados. O Markdown rc.2 ficou congelado no Git blob `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`.
+
+PR 34 registra a promoção. Estado: `closed_static_ready_for_pdf` após o merge.
+
+## Gate 15 - novo PDF corrigido
+
+Próximo gate. Gerar PDF pesquisável exclusivamente do rc.2 congelado, repetir readback/inspeção visual, provar identidade binária e publicar no caminho canônico.
 
 Estado: `next`.
 
@@ -224,7 +230,8 @@ Estado: `next`.
 | 11 - PDF processual penal | `closed_pdf_validated` | PDF canônico versionado e Git blob remoto idêntico ao candidato auditado |
 | 12 - NotebookLM processual penal | `interrupted_by_semantic_defect` | comportamento real observado como pass no rc.1, mas corpus posteriormente invalidado |
 | 13 - recuperação DPP-05 | `closed_targeted_semantic_recovery` | arts. 370-372 rechecados; art. 371 corrigido em draft.3; PDF rc.1 invalidado |
-| 14 - novo RC processual penal | `next` | promover draft.3 corrigido sem nova mudança semântica |
+| 14 - novo RC processual penal | `closed_static_ready_for_pdf` | rc.2 congelado a partir do draft.3 corrigido, sem nova mudança semântica |
+| 15 - novo PDF processual penal | `next` | gerar, auditar e publicar PDF exato a partir do rc.2 |
 
 ## Regra de autoridade
 
