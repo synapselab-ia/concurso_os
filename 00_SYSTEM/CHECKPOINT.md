@@ -144,8 +144,9 @@ pull_request_lineage:
   direito_processual_penal_pdf_status_pr: 30
   direito_processual_penal_pdf_publication_pr: 31
   direito_processual_penal_notebooklm_status_pr: 32
+  direito_processual_penal_semantic_recovery_pr: 33
 
-merge_status: DIREITO_013_recovery_branch_pending_review_merge
+merge_status: DIREITO_013_recovery_tracked_in_PR_33
 
 not_started:
   - direito-processual-penal corrected rc2
