@@ -2,6 +2,7 @@
 
 **QA date:** `2026-09-14`  
 **PDF QA final update:** `2026-09-15`  
+**Semantic recovery update:** `2026-09-18`  
 **Object reviewed:** `APOSTILA.md` `0.1.0-draft.1` -> `0.1.0-draft.2` -> `0.1.0-rc.1` -> `0.1.0-draft.3`  
 **Pack:** `direito-processual-penal`  
 **Semantic gate:** `DIREITO-009`  
@@ -555,3 +556,15 @@ O usuário forneceu evidência real do NotebookLM nesta etapa:
 - Mapa mental: hierarquia útil, sem IDs `DPP-*`, QA, gates ou metadados de backoffice visíveis.
 
 Essa evidência é `PASS_BEHAVIORAL_ON_RC1`, mas não fecha `DIREITO-012`, porque o corpus usado foi posteriormente invalidado por defeito semântico. Após novo PDF, basta um smoke final curto de regressão para confirmar que a correção não degradou o comportamento.
+
+
+### Gate determinístico em DIREITO-013
+
+Nova tentativa em `2026-09-18`:
+
+```text
+git clone --depth 1 --branch fix/direito-processual-penal-art371 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d013
+fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
+```
+
+Exit code: `128`. Sem checkout canônico, `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`.
