@@ -151,3 +151,5 @@ Preparar novo release candidate a partir do `0.1.0-draft.3`, sem nova mudança s
 `0.1.0-rc.2` foi preparado exclusivamente a partir do `0.1.0-draft.3` corrigido. No `APOSTILA.md`, a promoção alterou apenas metadados de versão/status; o corpo jurídico, a prática e o gabarito não foram reabertos.
 
 Estado de saída: `STATIC_READY_FOR_NEW_PDF`. O caminho canônico `APOSTILA.pdf` permanece ausente até que um novo binário seja gerado e auditado a partir deste RC.
+
+Gate determinístico em DIREITO-014: `NOT_EXECUTED_CURRENT_ENVIRONMENT` por falha DNS no clone da branch rc.2, exit `128`; não tratado como PASS.
