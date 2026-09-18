@@ -192,7 +192,7 @@ Resultado:
 - inspeção visual `28/28 pass`;
 - identidade binária remota `PASS_CANONICAL_BINARY_IDENTITY`.
 
-Estado: `closed_pdf_validated` após merge de DIREITO-015.
+PR 35 registra o PDF corrigido. Estado: `closed_pdf_validated` após o merge.
 
 ## Gate 16 - smoke regressivo curto
 
