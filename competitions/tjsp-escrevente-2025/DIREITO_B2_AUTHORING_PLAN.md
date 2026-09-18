@@ -175,7 +175,7 @@ PR 33 registra a recuperação. Estado: `closed_targeted_semantic_recovery` apó
 
 `0.1.0-draft.3` foi promovido para `0.1.0-rc.2` sem nova mudança jurídica. `APOSTILA.md` mudou somente em metadados de versão/status; `SOURCES`, `MANIFEST`, `METODOLOGIA_NOTEBOOKLM` e `CHANGELOG` foram sincronizados. O Markdown rc.2 ficou congelado no Git blob `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`.
 
-Estado: `closed_static_ready_for_pdf` após merge de DIREITO-014.
+PR 34 registra a promoção. Estado: `closed_static_ready_for_pdf` após o merge.
 
 ## Gate 15 - novo PDF corrigido
 
