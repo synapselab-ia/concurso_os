@@ -118,7 +118,7 @@ validation:
     command: python tools/verify.py
     result: not_executed_current_environment
     attempted_at: 2026-09-18
-    checkout_attempt: git clone --depth 1 --branch fix/direito-processual-penal-art371 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d013
+    checkout_attempt: git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d014
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
