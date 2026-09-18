@@ -8,11 +8,11 @@
 **Semantic gate:** `DIREITO-009`  
 **RC preparation gate:** `DIREITO-010`  
 **PDF gate:** `DIREITO-011`  
-**Overall semantic result:** `PASS`  
-**Normative result:** `PASS_AFTER_CORRECTIONS`  
+**Overall semantic result:** `PASS_AFTER_TARGETED_CORRECTION`  
+**Normative result:** `PASS_AFTER_TARGETED_CORRECTION`  
 **Release candidate:** `0.1.0-rc.1_invalidated_by_semantic_defect`; current source `0.1.0-draft.3`  
 **Static NotebookLM result:** `PASS_STATIC`  
-**Canonical PDF result:** `PASS_CANONICAL_BINARY_IDENTITY`
+**Historical rc.1 PDF result:** `PASS_CANONICAL_BINARY_IDENTITY`; current eligibility `INVALIDATED_SEMANTICALLY`
 
 ## 1. Escopo e método
 
