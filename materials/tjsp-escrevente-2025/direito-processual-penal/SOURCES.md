@@ -125,7 +125,7 @@ configuração do tutor -> METODOLOGIA_NOTEBOOKLM.md na camada nativa da convers
 backoffice -> GitHub/ChatGPT
 ```
 
-`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. Enquanto o PDF canônico e o smoke real permanecerem pendentes, o pack continua `release_candidate_incomplete`.
+`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. Após a correção de `0.1.0-draft.3`, o uso do NotebookLM fica suspenso até a geração de novo PDF a partir de um RC corrigido; o pack não é release candidate vigente.
 
 
 ## Revalidação direcionada de 2026-09-18 - CPP arts. 370-372
