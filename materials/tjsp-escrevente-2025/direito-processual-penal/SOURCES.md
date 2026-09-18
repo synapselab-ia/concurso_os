@@ -1,6 +1,6 @@
 # SOURCES - Direito Processual Penal - TJSP Escrevente 2025
 
-**Pack version:** `0.1.0-rc.1`  
+**Pack version:** `0.1.0-draft.3`  
 **Full source review:** `2026-09-14`
 
 ## Regra de autoridade
@@ -113,7 +113,7 @@ O Gate 3 sustenta engenharia silenciosa de literalidade, fluxo, prazo, competên
 
 ## Relação entre `draft.2` e `rc.1`
 
-O `0.1.0-rc.1` não altera o conteúdo jurídico aprovado no `0.1.0-draft.2`. `DIREITO-010` promove a identidade do candidato, acrescenta `METODOLOGIA_NOTEBOOKLM.md` e registra QA estático. A revisão normativa permanece a executada em `DIREITO-009`.
+O `0.1.0-rc.1` preservou o conteúdo jurídico aprovado no `0.1.0-draft.2`, mas uma revisão posterior identificou erro autoral na atribuição do art. 371 do CPP. Em `0.1.0-draft.3`, o art. 371 foi corrigido contra a fonte oficial e os arts. 370-372 foram reabertos para QA direcionado. O erro era de autoria, não drift normativo.
 
 ## Política para NotebookLM
 
@@ -126,3 +126,18 @@ backoffice -> GitHub/ChatGPT
 ```
 
 `METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. Enquanto o PDF canônico e o smoke real permanecerem pendentes, o pack continua `release_candidate_incomplete`.
+
+
+## Revalidação direcionada de 2026-09-18 - CPP arts. 370-372
+
+Fonte oficial reaberta: `SRC-B2-CPP`, texto compilado do Código de Processo Penal no Planalto.
+
+Resultado da conferência:
+
+- art. 370: preservada a disciplina das intimações e dos §§ 1º-4º;
+- art. 371: a redação correta admite intimação por despacho na petição em que for requerida, observado o art. 357;
+- art. 372: adiada a instrução criminal, o juiz marca desde logo, na presença das partes e testemunhas, dia e hora para prosseguimento, lavrando termo nos autos;
+- não foi identificado marcador de alteração pós-cutoff nesses dispositivos na compilação oficial consultada;
+- a correção de `0.1.0-draft.3` repara erro de atribuição do conteúdo anterior, sem alterar o baseline `2025-07-29`.
+
+O PDF de `0.1.0-rc.1` permanece apenas como artefato histórico de identidade binária e não pode ser usado como corpus vigente após esta correção.
