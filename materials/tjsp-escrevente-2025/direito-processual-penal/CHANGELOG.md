@@ -19,6 +19,8 @@ Reabertura semântica direcionada após identificação de erro normativo no `0.
 
 Próximo passo: preparar novo RC a partir de `0.1.0-draft.3`, gerar novo PDF e executar smoke final curto sobre o corpus corrigido.
 
+Gate determinístico: nova tentativa de clone da branch de correção em `2026-09-18` falhou por DNS (`Could not resolve host: github.com`, exit `128`); `python tools/verify.py` permanece `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
 ---
 
 ## `0.1.0-rc.1` - 2026-09-14
