@@ -2,12 +2,13 @@
 
 **Competition:** `tjsp-escrevente-2025`  
 **Subject:** `direito-processual-penal`  
-**Pack version:** `0.1.0-draft.3`  
-**Status:** `draft3_corrected_semantic_qa_targeted_pass_rc1_pdf_invalidated`  
+**Pack version:** `0.1.0-rc.2`  
+**Status:** `release_candidate_corrected_static_ready_pending_pdf`  
 **RC date:** `2026-09-14`  
 **PDF QA update:** `2026-09-15`  
 **NotebookLM smoke evidence:** `real_user_smoke_recorded_2026-09-18_on_invalidated_rc1`  
-**Semantic recovery:** `2026-09-18`
+**Semantic recovery:** `2026-09-18`  
+**RC2 preparation:** `2026-09-18`
 
 ## Objetivo
 
@@ -35,7 +36,7 @@ O art. 584, § 4º, do CPP, incluído pela Lei n.º 15.358/2026, permanece fora 
 
 ### StudentContent
 
-- `APOSTILA.md`: `0.1.0-draft.3`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado; DPP-05 corrigido contra a fonte oficial.
+- `APOSTILA.md`: `0.1.0-rc.2`, conteúdo jurídico congelado do `0.1.0-draft.3`, 25 unidades, sem coverage IDs em títulos ou subtítulos, com 60 questões autorais A-E e gabarito comentado separado; DPP-05 corrigido contra a fonte oficial.
 - `APOSTILA.pdf`: removido do caminho canônico nesta recuperação. O binário de `0.1.0-rc.1` mantém histórico de identidade exata, mas está `INVALIDATED_SEMANTICALLY` e não pode ser usado como corpus vigente.
 
 Identidade histórica do PDF `0.1.0-rc.1` invalidado semanticamente:
@@ -54,7 +55,7 @@ Identidade histórica do PDF `0.1.0-rc.1` invalidado semanticamente:
 
 ### ConversationInstruction
 
-- `METODOLOGIA_NOTEBOOKLM.md`: `0.1.0-rc.1`, configuração persistente do tutor; não integra o corpus estudável.
+- `METODOLOGIA_NOTEBOOKLM.md`: `0.1.0-rc.2`, configuração persistente do tutor; não integra o corpus estudável; comportamento inalterado em relação ao rc.1.
 
 ### BackofficeArtifact
 
@@ -143,3 +144,10 @@ A tentativa de executar o gate determinístico em `2026-09-18` não chegou a `py
 ## Próximo estágio
 
 Preparar novo release candidate a partir do `0.1.0-draft.3`, sem nova mudança semântica. Depois, gerar e auditar novo PDF. O smoke final pode ser curto e regressivo, pois o comportamento geral do NotebookLM já foi efetivamente observado no RC anterior.
+
+
+## DIREITO-014 - novo release candidate corrigido
+
+`0.1.0-rc.2` foi preparado exclusivamente a partir do `0.1.0-draft.3` corrigido. No `APOSTILA.md`, a promoção alterou apenas metadados de versão/status; o corpo jurídico, a prática e o gabarito não foram reabertos.
+
+Estado de saída: `STATIC_READY_FOR_NEW_PDF`. O caminho canônico `APOSTILA.pdf` permanece ausente até que um novo binário seja gerado e auditado a partir deste RC.
