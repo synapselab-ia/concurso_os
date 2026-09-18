@@ -10,7 +10,7 @@
 **PDF gate:** `DIREITO-011`  
 **Overall semantic result:** `PASS_AFTER_TARGETED_CORRECTION`  
 **Normative result:** `PASS_AFTER_TARGETED_CORRECTION`  
-**Release candidate:** `0.1.0-rc.2_static_ready_pending_pdf`; source corrected in `0.1.0-draft.3`  
+**Release candidate:** `0.1.0-rc.2_pdf_validated_pending_notebooklm_regression`; source corrected in `0.1.0-draft.3`  
 **Static NotebookLM result:** `PASS_STATIC`  
 **Historical rc.1 PDF result:** `PASS_CANONICAL_BINARY_IDENTITY`; current eligibility `INVALIDATED_SEMANTICALLY`
 
@@ -596,3 +596,67 @@ O próximo estágio é gerar e auditar um novo PDF a partir do Markdown congelad
 ### Gate determinístico em DIREITO-014
 
 Tentativa de clone da branch `release/direito-processual-penal-0.1.0-rc.2` em `2026-09-18` falhou com `Could not resolve host: github.com`, exit `128`. `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
+
+---
+
+## 24. DIREITO-015 - PDF corrigido rc.2
+
+**Data:** `2026-09-18`  
+**Resultado:** `PASS_CANONICAL_BINARY_IDENTITY` para o PDF corrigido de `0.1.0-rc.2`.
+
+### Fonte congelada
+
+- `APOSTILA.md` rc.2: Git blob `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`;
+- base semântica corrigida: draft.3 blob `135592d9762b8f639a199ebe795ffcca71e747bd`;
+- nenhuma alteração jurídica introduzida durante a geração do PDF.
+
+### Candidato auditado e publicado
+
+- caminho canônico: `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`;
+- páginas: `28`;
+- tamanho: `37.917 bytes`;
+- formato: `PDF 1.4`;
+- página: A4 `595.28 x 841.89 pt`;
+- pesquisável: `PASS`;
+- SHA-256: `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`;
+- Git blob esperado: `6374969ba722451dd6740364e24c41f25e730b54`;
+- Git blob observado no caminho remoto da branch: `6374969ba722451dd6740364e24c41f25e730b54`.
+
+### Readback textual
+
+`PASS_TEXT_READBACK`.
+
+O texto extraído confirmou:
+
+- título e identidade `0.1.0-rc.2`;
+- Unidade 5 presente;
+- art. 371 com intimação por despacho na própria petição, observado o art. 357;
+- art. 372 com adiamento da instrução criminal e marcação de dia/hora para prosseguimento;
+- Prática autoral presente;
+- Gabarito comentado presente.
+
+### Inspeção visual
+
+`PASS_VISUAL_28_OF_28`.
+
+As 28 páginas foram renderizadas e inspecionadas. Não foram observados clipping, sobreposição, glifos quebrados ou perda de legibilidade. A separação entre prática e gabarito foi preservada.
+
+Como controle de regressão, a comparação visual entre o rc.1 histórico e o rc.2 mostrou mudança somente nas páginas 1 e 4, coerente com metadados e correção da Unidade 5. A comparação entre o candidato ASCII auditado e o binário final limpo mostrou `0/28` páginas visualmente divergentes.
+
+### Identidade binária
+
+O binário auditado foi criado no GitHub com Git blob `6374969ba722451dd6740364e24c41f25e730b54` e publicado no caminho canônico da branch. O readback remoto retornou o mesmo blob. Resultado: `PASS_CANONICAL_BINARY_IDENTITY`.
+
+O PDF rc.1 permanece apenas como histórico invalidado semanticamente e não deve ser reutilizado.
+
+### Gate determinístico
+
+Nova tentativa em `2026-09-18`:
+
+```text
+git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2-pdf https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d015
+fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
+```
+
+Exit code: `128`. `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
