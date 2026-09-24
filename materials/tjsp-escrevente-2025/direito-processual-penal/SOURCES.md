@@ -125,7 +125,7 @@ configuração do tutor -> METODOLOGIA_NOTEBOOKLM.md na camada nativa da convers
 backoffice -> GitHub/ChatGPT
 ```
 
-`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. O `0.1.0-rc.2` congela o conteúdo corrigido do `draft.3`; o uso do NotebookLM permanece suspenso até a geração e validação do novo PDF.
+`METODOLOGIA_NOTEBOOKLM.md` não deve ser carregado como fonte estudável. O `0.1.0-rc.2` congela o conteúdo corrigido do `draft.3`; o smoke regressivo do NotebookLM permanece pendente até que o PDF corrigido esteja presente no caminho canônico, vínculo recuperado em `DIREITO-015R`.
 
 
 ## Revalidação direcionada de 2026-09-18 - CPP arts. 370-372
@@ -152,4 +152,4 @@ O `APOSTILA.pdf` de `0.1.0-rc.2` foi gerado exclusivamente a partir do Markdown 
 
 ## PDF corrigido rc.2
 
-Em `2026-09-18`, `DIREITO-015` publicou o PDF corrigido derivado da fonte congelada rc.2. Identidade: SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`, Git blob `6374969ba722451dd6740364e24c41f25e730b54`, 28 páginas A4, 37.917 bytes. O rc.1 continua invalidado semanticamente.
+Em `2026-09-18`, `DIREITO-015` gerou e auditou o PDF corrigido derivado da fonte congelada rc.2. Identidade: SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`, Git blob `6374969ba722451dd6740364e24c41f25e730b54`, 28 páginas A4, 37.917 bytes. A auditoria de `2026-09-24` mostrou que o caminho não havia sido ligado ao tree final da PR #35; `DIREITO-015R` recupera esse vínculo usando o mesmo blob, sem regeneração. O rc.1 continua invalidado semanticamente.
