@@ -660,3 +660,42 @@ fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Cou
 ```
 
 Exit code: `128`. `python tools/verify.py` não foi executado. Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`.
+
+
+---
+
+## 25. DIREITO-015R - recuperação do vínculo canônico do PDF
+
+**Data:** `2026-09-24`  
+**Resultado de integridade do vínculo:** `PASS_EXACT_BLOB_LINKAGE`  
+**Gate determinístico:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`
+
+A recuperação partiu do estado real do GitHub, não da documentação de continuidade. O `main` em `ad004ba538c0e34b2c3739f563d4f09230d1f6f5` não continha `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf` no tree, embora a PR #35 e os artefatos de status afirmassem a publicação.
+
+O objeto Git previamente auditado permaneceu disponível:
+
+- Git blob: `6374969ba722451dd6740364e24c41f25e730b54`;
+- tamanho observado: `37.917` bytes;
+- conteúdo inicia como PDF 1.4;
+- identidade é a mesma registrada no QA de DIREITO-015.
+
+A recuperação não regenerou o documento e não alterou o StudentContent. Foi criado um novo tree a partir do `main` e o mesmo blob foi ligado ao caminho canônico. A conferência do tree da branch de recuperação retornou exatamente:
+
+`materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf -> 6374969ba722451dd6740364e24c41f25e730b54`, tamanho `37.917` bytes.
+
+A comparação inicial com `main` mostrou um único arquivo adicionado, o PDF canônico, antes das atualizações documentais desta recuperação.
+
+### Gate determinístico
+
+Nova tentativa:
+
+```text
+git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_current
+fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
+```
+
+Exit code: `128`.
+
+`python tools/verify.py` não foi executado. O resultado continua `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não `PASS`, conforme `DEC-0009`.
+
+Após o merge desta recuperação, o próximo gate permanece o smoke curto de regressão `DIREITO-016`.
