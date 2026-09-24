@@ -37,7 +37,7 @@
 - **Frozen Markdown Git blob:** `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`
 - **Canonical rc.2 PDF:** `PASS_CANONICAL_BINARY_IDENTITY`; 28 A4 pages; PDF 1.4; 37,917 bytes; SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`; Git blob `6374969ba722451dd6740364e24c41f25e730b54`; textual readback `PASS`; visual `28/28 PASS`
 - **Historical rc.1 PDF:** binary identity history remains true, but semantic eligibility is `INVALIDATED`; do not reuse
-- **NotebookLM live smoke:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`; final regression smoke deferred until regenerated corrected PDF
+- **NotebookLM live smoke:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`; short regression on the corrected rc.2 PDF is pending
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** Gate 2 closed at cutoff `2025-07-29`
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
