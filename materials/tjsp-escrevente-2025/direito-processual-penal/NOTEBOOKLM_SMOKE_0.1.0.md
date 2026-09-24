@@ -124,3 +124,14 @@ A evidência comportamental ampla anterior continua útil, mas foi executada sob
 3. confirmar ausência de IDs `DPP-*` e metadados internos.
 
 Estado: `PENDING_SHORT_REGRESSION_ON_RC2`.
+
+
+---
+
+## Correção de continuidade do repositório - 2026-09-24
+
+A auditoria do `main` real mostrou que o tree mesclado da PR #35 não continha o caminho canônico `APOSTILA.pdf`, apesar do registro de `DIREITO-015`. O blob auditado `6374969ba722451dd6740364e24c41f25e730b54` permaneceu existente e foi relinkado ao caminho canônico em `DIREITO-015R`, sem regeneração ou alteração do PDF.
+
+Esta correção é exclusivamente de vínculo no repositório. **Não constitui evidência de execução do NotebookLM** e não altera a classificação do gate externo.
+
+Estado do smoke: `PENDING_SHORT_REGRESSION_ON_RC2`.
