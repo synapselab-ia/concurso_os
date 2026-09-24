@@ -4,7 +4,7 @@
 
 `DIREITO-015` gerou e auditou o PDF corrigido de `0.1.0-rc.2` com identidade binária exata. Uma auditoria do estado real do GitHub em `2026-09-24` detectou que o blob auditado não havia sido ligado ao tree final da PR #35. `DIREITO-015R` corrige somente esse vínculo de repositório, reutilizando o mesmo blob `6374969ba722451dd6740364e24c41f25e730b54`, sem regenerar ou alterar o PDF. Após o merge da recuperação, `DIREITO-016` continua sendo a próxima ação.
 
-## Estado de entrada esperado após merge de DIREITO-015
+## Estado de entrada esperado após merge de DIREITO-015R
 
 - pack: `direito-processual-penal`;
 - versão: `0.1.0-rc.2`;
