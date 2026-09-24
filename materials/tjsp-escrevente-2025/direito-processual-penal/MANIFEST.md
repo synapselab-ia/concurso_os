@@ -5,7 +5,7 @@
 **Pack version:** `0.1.0-rc.2`  
 **Status:** `release_candidate_corrected_pdf_validated_pending_notebooklm_regression`  
 **RC date:** `2026-09-14`  
-**PDF QA update:** `2026-09-15`  
+**PDF QA update:** `2026-09-18`  
 **NotebookLM smoke evidence:** `real_user_smoke_recorded_2026-09-18_on_invalidated_rc1`  
 **Semantic recovery:** `2026-09-18`  
 **RC2 preparation:** `2026-09-18`  
