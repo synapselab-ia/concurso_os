@@ -49,6 +49,6 @@
 - **Merge policy:** validated development/status PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` mandatory
 - **Primary NotebookLM UX:** canonical `APOSTILA.pdf` as the study source; tutor instructions from `METODOLOGIA_NOTEBOOKLM.md` in the native conversation configuration when available
-- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`; DPP PDF status `#30`; DPP canonical PDF publication `#31`; DPP NotebookLM external-block status `#32`; DPP semantic recovery `#33`; DPP corrected rc.2 `#34`; DPP corrected PDF `#35`
+- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`; DPP PDF status `#30`; DPP canonical PDF publication `#31`; DPP NotebookLM external-block status `#32`; DPP semantic recovery `#33`; DPP corrected rc.2 `#34`; DPP corrected PDF audit/status `#35`; DPP PDF linkage recovery `#36`
 
 This file is an executive index. Detailed state is in `00_SYSTEM/CHECKPOINT.md`; operational next action is in `00_SYSTEM/NEXT_ACTION.md`.
