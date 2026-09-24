@@ -200,7 +200,7 @@ Em `2026-09-24`, a auditoria do tree real de `main` mostrou que a PR #35 havia m
 
 A recuperação religa exatamente esse blob ao caminho canônico, sem regenerar o PDF e sem mudança semântica.
 
-Estado: `closed_repository_linkage_recovery` após o merge da PR de recuperação.
+PR 36 registra a recuperação. Estado: `closed_repository_linkage_recovery` após o merge.
 
 ## Gate 16 - smoke regressivo curto
 
