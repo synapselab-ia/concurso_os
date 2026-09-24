@@ -5,10 +5,11 @@
 **Pack version:** `0.1.0-rc.2`  
 **Status:** `release_candidate_corrected_pdf_validated_pending_notebooklm_regression`  
 **RC date:** `2026-09-14`  
-**PDF QA update:** `2026-09-15`  
+**PDF QA update:** `2026-09-18`  
 **NotebookLM smoke evidence:** `real_user_smoke_recorded_2026-09-18_on_invalidated_rc1`  
 **Semantic recovery:** `2026-09-18`  
-**RC2 preparation:** `2026-09-18`
+**RC2 preparation:** `2026-09-18`  
+**Repository linkage recovery:** `2026-09-24`
 
 ## Objetivo
 
@@ -66,6 +67,14 @@ Identidade histórica do PDF `0.1.0-rc.1` invalidado semanticamente:
 - `NOTEBOOKLM_SMOKE_0.1.0.md`: estado e evidência do gate externo `DIREITO-012`;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_BANCA_ANALYSIS.md`;
 - `competitions/tjsp-escrevente-2025/DIREITO_B2_COVERAGE_MATRIX.md`.
+
+## Recuperação de vínculo do PDF em DIREITO-015R
+
+A auditoria do estado real do GitHub em `2026-09-24` encontrou uma divergência entre a documentação de fechamento de `DIREITO-015` e o tree efetivamente mesclado: `APOSTILA.pdf` não estava presente no `main` de head `ad004ba538c0e34b2c3739f563d4f09230d1f6f5`.
+
+O blob previamente auditado `6374969ba722451dd6740364e24c41f25e730b54`, com `37.917` bytes, permanecia existente no repositório. `DIREITO-015R` apenas o religa ao caminho canônico. Não há regeneração do PDF nem mudança em seu conteúdo.
+
+Depois do merge dessa recuperação, o estado declarado acima volta a corresponder ao tree real e o gate seguinte permanece `DIREITO-016`.
 
 ## Rastreabilidade de cobertura
 

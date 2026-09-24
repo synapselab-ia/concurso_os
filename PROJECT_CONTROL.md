@@ -19,6 +19,7 @@
 - **DIREITO-013:** targeted semantic recovery to `0.1.0-draft.3`; DPP-05 revalidated after correction
 - **DIREITO-014:** corrected `0.1.0-rc.2` prepared with metadata-only promotion from draft.3
 - **DIREITO-015:** corrected rc.2 PDF generated, text/visual QA passed and remote binary identity proven
+- **DIREITO-015R:** repository audit on 2026-09-24 found that PR #35 merged the status documentation without linking `APOSTILA.pdf` into the branch tree; the recovery re-links the already audited blob `6374969ba722451dd6740364e24c41f25e730b54` to the canonical path without changing the binary
 - **Current gate:** `DIREITO-016`, short NotebookLM regression smoke on corrected rc.2 PDF
 - **Current blocker:** user-run NotebookLM regression still pending; rc.1 must not be reused.
 - **Smoke status artifact:** `materials/tjsp-escrevente-2025/direito-processual-penal/NOTEBOOKLM_SMOKE_0.1.0.md`
@@ -33,21 +34,21 @@
 - **Critical version rule:** CPP art. 584, § 4º, added by Lei n.º 15.358/2026, stays outside the study baseline
 - **Semantic QA:** coverage `pass_after_corrections`; normative `pass_after_corrections`; didactics `pass`; practice `pass_60_of_60`; Markdown corpus `pass_for_markdown`
 - **RC QA:** corrected rc.2 static identity `pass`; semantic body inherited unchanged from draft.3; tutor `pass_static`; PDF `PASS_CANONICAL_BINARY_IDENTITY`
-- **Frozen Markdown Git blob:** `11a41d18ff3a8b03150923ec68d44087bded7267`
+- **Frozen Markdown Git blob:** `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`
 - **Canonical rc.2 PDF:** `PASS_CANONICAL_BINARY_IDENTITY`; 28 A4 pages; PDF 1.4; 37,917 bytes; SHA-256 `aeaa44ac6a275623d79098d0699c18899f83d6ade75be8661f71a3ad9dfc36fe`; Git blob `6374969ba722451dd6740364e24c41f25e730b54`; textual readback `PASS`; visual `28/28 PASS`
 - **Historical rc.1 PDF:** binary identity history remains true, but semantic eligibility is `INVALIDATED`; do not reuse
-- **NotebookLM live smoke:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`; final regression smoke deferred until regenerated corrected PDF
+- **NotebookLM live smoke:** `PASS_BEHAVIORAL_ON_RC1_CORPUS_INVALIDATED`; short regression on the corrected rc.2 PDF is pending
 - **B2 authoring plan:** `competitions/tjsp-escrevente-2025/DIREITO_B2_AUTHORING_PLAN.md`
 - **B2 source inventory:** Gate 2 closed at cutoff `2025-07-29`
 - **B2 banca analysis:** 150 historical legal questions classified; descriptive and non-predictive
 - **B2 coverage matrix:** six complete matrices
 - **Validation gate:** `python tools/verify.py`
-- **Validation status in DIREITO-015:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; clone of the rc.2 PDF branch failed on `2026-09-18` with `Could not resolve host: github.com`, exit 128; not treated as PASS under DEC-0009
+- **Validation status in DIREITO-015R:** `NOT_EXECUTED_CURRENT_ENVIRONMENT`; fresh clone of `main` failed again on `2026-09-24` with `Could not resolve host: github.com`, exit 128, before `python tools/verify.py`; not treated as PASS under DEC-0009
 - **CI:** disabled during production
 - **Repository visibility assumption:** public
 - **Merge policy:** validated development/status PRs may be merged autonomously under DEC-0009 after diff review and gate execution or documented impossibility
 - **Apostila authoring:** `00_SYSTEM/APOSTILA_AUTHORING_PROTOCOL.md` mandatory
 - **Primary NotebookLM UX:** canonical `APOSTILA.pdf` as the study source; tutor instructions from `METODOLOGIA_NOTEBOOKLM.md` in the native conversation configuration when available
-- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`; DPP PDF status `#30`; DPP canonical PDF publication `#31`; DPP NotebookLM external-block status `#32`; DPP semantic recovery `#33`; DPP corrected rc.2 `#34`; DPP corrected PDF `#35`
+- **Pull request lineage:** B2 preparation `#13`; sources `#14/#15`; banca `#18`; matrix `#19`; Direito Penal draft `#20`; QA `#21`; RC `#22`; PDF continuity/transport `#23/#24`; PDF publication `#25`; NotebookLM smoke `#26`; DPP draft `#27`; DPP semantic QA `#28`; DPP RC preparation `#29`; DPP PDF status `#30`; DPP canonical PDF publication `#31`; DPP NotebookLM external-block status `#32`; DPP semantic recovery `#33`; DPP corrected rc.2 `#34`; DPP corrected PDF audit/status `#35`; DPP PDF linkage recovery `#36`
 
 This file is an executive index. Detailed state is in `00_SYSTEM/CHECKPOINT.md`; operational next action is in `00_SYSTEM/NEXT_ACTION.md`.

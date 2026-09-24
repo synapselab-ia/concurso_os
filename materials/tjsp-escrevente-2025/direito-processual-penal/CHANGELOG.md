@@ -1,5 +1,18 @@
 # CHANGELOG - Direito Processual Penal - TJSP Escrevente 2025
 
+## `0.1.0-rc.2` - DIREITO-015R recuperação de vínculo do PDF - 2026-09-24
+
+- auditoria do `main` real em `ad004ba538c0e34b2c3739f563d4f09230d1f6f5` encontrou o caminho canônico `APOSTILA.pdf` ausente do tree, apesar da documentação de fechamento da PR #35;
+- o objeto Git auditado `6374969ba722451dd6740364e24c41f25e730b54` continuava existente e com `37.917` bytes;
+- a recuperação apenas liga esse mesmo blob ao caminho `materials/tjsp-escrevente-2025/direito-processual-penal/APOSTILA.pdf`;
+- não houve regeneração, alteração semântica ou mudança binária do PDF;
+- verificação do tree da branch de recuperação confirmou exatamente o blob e o tamanho esperados;
+- nova tentativa de `python tools/verify.py` não chegou a executar porque o clone falhou por DNS em `2026-09-24`, exit `128`; resultado `NOT_EXECUTED_CURRENT_ENVIRONMENT`.
+
+Após o merge da recuperação, o próximo gate permanece `DIREITO-016`, smoke curto de regressão no NotebookLM.
+
+---
+
 ## `0.1.0-rc.2` - DIREITO-015 PDF corrigido - 2026-09-18
 
 - novo `APOSTILA.pdf` gerado exclusivamente do Markdown rc.2 congelado, Git blob de fonte `8e68fe2ec3e79ade50b9c3c4cecb53ae8049bd18`;

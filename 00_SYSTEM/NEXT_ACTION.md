@@ -2,9 +2,9 @@
 
 ## DIREITO-016: Executar smoke curto de regressão no NotebookLM para `direito-processual-penal 0.1.0-rc.2`
 
-`DIREITO-015` gerou, auditou e publicou o PDF corrigido de `0.1.0-rc.2` com identidade binária exata.
+`DIREITO-015` gerou e auditou o PDF corrigido de `0.1.0-rc.2` com identidade binária exata. Uma auditoria do estado real do GitHub em `2026-09-24` detectou que o blob auditado não havia sido ligado ao tree final da PR #35. `DIREITO-015R` corrige somente esse vínculo de repositório, reutilizando o mesmo blob `6374969ba722451dd6740364e24c41f25e730b54`, sem regenerar ou alterar o PDF. Após o merge da recuperação, `DIREITO-016` continua sendo a próxima ação.
 
-## Estado de entrada esperado após merge de DIREITO-015
+## Estado de entrada esperado após merge de DIREITO-015R
 
 - pack: `direito-processual-penal`;
 - versão: `0.1.0-rc.2`;
@@ -55,15 +55,15 @@ Depois da evidência real do usuário:
 
 Se a regressão passar, encerrar o pipeline deste SubjectPack como release candidate validado e iniciar o próximo pack canônico: `direito-processual-civil`.
 
-## Gate determinístico de DIREITO-015
+## Gate determinístico mais recente
 
-A última tentativa de checkout falhou antes de `python tools/verify.py`:
+Em `2026-09-24`, durante `DIREITO-015R`, foi feita nova tentativa antes de `python tools/verify.py`:
 
 ```text
-git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2-pdf https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d015
+git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_current
 fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Could not resolve host: github.com
 ```
 
 Exit code: `128`.
 
-Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`.
+Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`, conforme `DEC-0009`.

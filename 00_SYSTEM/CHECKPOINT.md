@@ -36,7 +36,8 @@ completed:
   - DIREITO-013 DPP-05 corrected and targeted QA passed in draft.3
   - DIREITO-013 rc1 PDF invalidated for semantic use and removed from canonical path
   - DIREITO-014 corrected rc2 prepared from draft.3 with metadata-only StudentContent promotion
-  - DIREITO-015 corrected rc2 PDF generated audited and published with exact remote binary identity
+  - DIREITO-015 corrected rc2 PDF generated and audited; later repository audit found the audited blob had not been linked into the merged tree
+  - DIREITO-015R recovery re-links audited rc2 PDF blob 6374969ba722451dd6740364e24c41f25e730b54 to canonical APOSTILA.pdf path without regenerating content
 
 b2_source_gate:
   status: closed
@@ -123,12 +124,24 @@ right_processual_penal:
   baseline: 2025-07-29
   cpp_584_paragraph_4_post_cutoff: excluded_from_baseline
 
+recovery_audit_2026_09_24:
+  observed_main_head_before_fix: ad004ba538c0e34b2c3739f563d4f09230d1f6f5
+  observed_main_tree_before_fix: c33b75d0f8176c30e15f1d128b9e2901442bcc0f
+  discrepancy: canonical APOSTILA.pdf absent from main tree despite PR 35 status documentation
+  audited_blob_rechecked:
+    git_blob: 6374969ba722451dd6740364e24c41f25e730b54
+    bytes: 37917
+    object_exists: true
+  recovery_branch: fix/direito-processual-penal-rc2-pdf-link
+  repair: link the pre-existing audited blob to the canonical path; no PDF regeneration and no semantic change
+  branch_tree_check: pass_exact_blob_and_size
+
 validation:
   canonical_gate:
     command: python tools/verify.py
     result: not_executed_current_environment
-    attempted_at: 2026-09-18
-    checkout_attempt: git clone --depth 1 --branch release/direito-processual-penal-0.1.0-rc.2-pdf https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_d015
+    attempted_at: 2026-09-24
+    checkout_attempt: git clone --depth 1 https://github.com/synapselab-ia/concurso_os.git /tmp/concurso_os_current
     exit_code: 128
     error: Could not resolve host: github.com
     policy: documented_under_DEC_0009_not_a_pass
@@ -170,8 +183,9 @@ pull_request_lineage:
   direito_processual_penal_semantic_recovery_pr: 33
   direito_processual_penal_corrected_rc_pr: 34
   direito_processual_penal_corrected_pdf_pr: 35
+  direito_processual_penal_pdf_linkage_recovery_pr: 36
 
-merge_status: DIREITO_015_corrected_pdf_tracked_in_PR_35
+merge_status: DIREITO_015R_repository_linkage_recovery_tracked_in_PR_36
 
 not_started:
   - direito-processual-penal short regression NotebookLM smoke
