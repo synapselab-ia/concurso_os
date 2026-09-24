@@ -3,7 +3,7 @@
 **Competition:** `tjsp-escrevente-2025`  
 **Syllabus block:** `B2 - Conhecimentos em Direito`  
 **Authority:** `SRC-TJSP-EDITAL-2025-02`  
-**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.2` com PDF corrigido validado; smoke regressivo curto pendente
+**Status:** `direito-penal 0.1.0-rc.1` validado; `direito-processual-penal 0.1.0-rc.2` com PDF corrigido validado e vínculo canônico recuperado; smoke regressivo curto pendente
 
 ## Objetivo
 
@@ -194,6 +194,14 @@ Resultado:
 
 PR 35 registra o PDF corrigido. Estado: `closed_pdf_validated` após o merge.
 
+## Gate 15R - recuperação do vínculo canônico do PDF
+
+Em `2026-09-24`, a auditoria do tree real de `main` mostrou que a PR #35 havia mesclado a documentação de `DIREITO-015`, mas não o caminho `APOSTILA.pdf`. O blob auditado `6374969ba722451dd6740364e24c41f25e730b54` continuava existente com `37.917` bytes.
+
+A recuperação religa exatamente esse blob ao caminho canônico, sem regenerar o PDF e sem mudança semântica.
+
+Estado: `closed_repository_linkage_recovery` após o merge da PR de recuperação.
+
 ## Gate 16 - smoke regressivo curto
 
 O usuário deve carregar somente o PDF rc.2 corrigido no NotebookLM e confirmar a correção dos arts. 371-372, um treino A-E sem vazamento antecipado e ausência de metadados internos. Não é necessário repetir a bateria completa já observada no rc.1.
@@ -248,7 +256,8 @@ Estado: `next`.
 | 12 - NotebookLM processual penal | `interrupted_by_semantic_defect` | comportamento real observado como pass no rc.1, mas corpus posteriormente invalidado |
 | 13 - recuperação DPP-05 | `closed_targeted_semantic_recovery` | arts. 370-372 rechecados; art. 371 corrigido em draft.3; PDF rc.1 invalidado |
 | 14 - novo RC processual penal | `closed_static_ready_for_pdf` | rc.2 congelado a partir do draft.3 corrigido, sem nova mudança semântica |
-| 15 - novo PDF processual penal | `closed_pdf_validated` | PDF rc.2 auditado e publicado com identidade binária exata |
+| 15 - novo PDF processual penal | `closed_pdf_validated` | PDF rc.2 auditado com identidade binária exata; publicação documental da PR #35 precisou de recuperação de vínculo |
+| 15R - recuperação de vínculo do PDF | `closed_repository_linkage_recovery` | mesmo blob auditado relinkado ao caminho canônico sem regeneração |
 | 16 - regressão NotebookLM processual penal | `next` | smoke curto sobre o PDF corrigido; depois avançar para processo civil se passar |
 
 ## Regra de autoridade
