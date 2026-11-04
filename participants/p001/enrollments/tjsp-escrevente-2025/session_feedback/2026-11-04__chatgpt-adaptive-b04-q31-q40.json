@@ -1,0 +1,420 @@
+{
+  "schema_version": "0.1",
+  "feedback_id": "p001-tjsp-2025-chatgpt-adaptive-b04-q31-q40",
+  "session_id": "chatgpt-20261009-p001-tjsp-adaptive-01",
+  "block_id": "b04-q31-q40",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-04",
+  "recorded_at": "2026-11-04",
+  "timing_note": "Data da sessao derivada do contexto temporal da conversa; tempos de resposta nao foram medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Respostas, niveis de confianca e autoavaliacao pos-correcao informados na conversa.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false
+  },
+  "scope": {
+    "first_main_question": 31,
+    "last_main_question": 40,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "miniquestoes_de_reforco",
+    "outside_scope": "Q01-Q30 registrados nos tres blocos anteriores; Q41 ainda nao apresentada ou respondida no momento deste registro."
+  },
+  "score": {
+    "correct": 9,
+    "incorrect": 1,
+    "total": 10,
+    "computed_percent": 90
+  },
+  "confidence": {
+    "firm": 10,
+    "firm_correct": 9,
+    "firm_incorrect": 1,
+    "uncertain": 0,
+    "uncertain_correct": 0,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 9,
+    "correct_uncertain": 0,
+    "correct_by_guess": 0,
+    "incorrect_high_confidence": 1,
+    "incorrect_low_confidence": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      36
+    ],
+    "high_confidence_error_question_ids": [
+      36
+    ],
+    "confirmed_content_rule_errors": [
+      36
+    ],
+    "confirmed_reading_errors": 0,
+    "self_reported_false_knowledge_question_ids": [
+      36
+    ],
+    "error_pattern": "Aplicacao equivocada de regra sobre defesa tecnica / prosseguimento processual a situacao de citacao por edital, sem comparecimento nem constituicao de advogado."
+  },
+  "subjects": [
+    {
+      "subject": "raciocinio-logico",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        31,
+        39
+      ]
+    },
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        32,
+        40
+      ]
+    },
+    {
+      "subject": "direito-administrativo",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        33
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        34
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        35
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        36
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        37
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        38
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 31,
+      "display_id": "31",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_de_quantificador_universal",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 32,
+      "display_id": "32",
+      "subject": "portugues",
+      "subtopic": "interpretacao_de_texto_relacao_adversativa_inferencia",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 33,
+      "display_id": "33",
+      "subject": "direito-administrativo",
+      "subtopic": "cf_37_v_funcao_de_confianca_vs_cargo_em_comissao",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 34,
+      "display_id": "34",
+      "subject": "matematica",
+      "subtopic": "media_aritmetica_ponderada",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 35,
+      "display_id": "35",
+      "subject": "direito-penal",
+      "subtopic": "cp_312_paragrafo_3_reparacao_do_peculato_culposo",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 36,
+      "display_id": "36",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_366_citacao_edital_suspensao_processo_prazo",
+      "selected": "C",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "incorrect_high_confidence",
+      "error_type": "content_rule",
+      "error_signal": "Confusao entre regra do art. 366 (citado por edital, nao comparece nem constitui advogado: suspensao do processo e da prescricao) e art. 367 (citado pessoalmente e ausente injustificadamente: processo pode prosseguir).",
+      "post_explanation_doubt": "falso_conhecimento_self_reported_after_reinforcement"
+    },
+    {
+      "question_number": 37,
+      "display_id": "37",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_335_i_termo_inicial_contestacao_ultima_conciliacao",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 38,
+      "display_id": "38",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_5_lxx_ms_coletivo_associacao_sumulas_629_630_stf",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 39,
+      "display_id": "39",
+      "subject": "raciocinio-logico",
+      "subtopic": "conjuntos_principio_inclusao_exclusao",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "question_number": 40,
+      "display_id": "40",
+      "subject": "portugues",
+      "subtopic": "oracoes_subordinadas_adjetivas_restritivas_explicativas_virgulas",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "not_reported"
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 1,
+    "valid": 1,
+    "valid_correct": 1,
+    "ambiguous_excluded": 0,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 36,
+        "display_id": "reforco_Q36",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": "firm",
+        "self_reported_post_explanation": "falso_conhecimento",
+        "subtopic": "cpp_366_vs_367_citacao_edital_vs_pessoal",
+        "interpretation": "Ajuste conceitual imediato apos erro firme; nao comprova retencao em momento futuro."
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "raciocinio_logico_negacao_quantificadores",
+      "evidence": "Q31 correta firme sobre negação de 'todos'",
+      "interpretation": "Evidencia positiva em estrutura diferente da Q15/Q22R"
+    },
+    {
+      "topic": "portugues_interpretacao_textual",
+      "evidence": "Q32 correta firme sobre ganhos de digitalizacao e ressalva de validacao",
+      "interpretation": "Evidencia positiva em texto curto"
+    },
+    {
+      "topic": "cf_37_v_funcoes_cargos",
+      "evidence": "Q33 correta firme para funcao de confianca exclusiva de ocupante de cargo efetivo e cargo em comissao",
+      "interpretation": "Evidencia positiva inicial"
+    },
+    {
+      "topic": "matematica_media_ponderada",
+      "evidence": "Q34 correta firme: (12x18+8x23)/(12+8)=20",
+      "interpretation": "Evidencia positiva em novo subtema matematico"
+    },
+    {
+      "topic": "cp_peculato_culposo_reparacao",
+      "evidence": "Q35 correta firme em cenario antes/depois de transito em julgado, apos erro Q24 e reforco anterior",
+      "interpretation": "Transferencia local favoravel; revisao espacada recomendada"
+    },
+    {
+      "topic": "cpp_366_367",
+      "evidence": "Q36 errada firme: marcou prosseguimento normal com defensor em citacao editalicia; reforco acertado firme e autodeclaracao falso conhecimento",
+      "interpretation": "PRIORIDADE ALTA; testar retencao e separar citação edital vs pessoal"
+    },
+    {
+      "topic": "cpc_335_prazo_contestacao",
+      "evidence": "Q37 correta firme sobre ultima sessao de conciliacao como marco inicial; Q27 anterior correta com duvida",
+      "interpretation": "Evidencia positiva com confianca maior"
+    },
+    {
+      "topic": "cf_ms_coletivo_associacao",
+      "evidence": "Q38 correta firme para legitimidade de associacao, sumulas 629/630 STF, apos erro anterior Q26 sobre sindicatos",
+      "interpretation": "Transferencia local favoravel, sem certeza de dominio definitivo"
+    },
+    {
+      "topic": "raciocinio_logico_conjuntos",
+      "evidence": "Q39 correta firme para inclusao-exclusao: 80-12=68, 48+35-68=15",
+      "interpretation": "Evidencia positiva inicial"
+    },
+    {
+      "topic": "portugues_pontuacao_sentido",
+      "evidence": "Q40 correta firme: restritiva sem virgulas vs explicativa com virgulas",
+      "interpretation": "Evidencia positiva inicial"
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "cpp_art_366_vs_367",
+        "citacao_por_edital_vs_citacao_pessoal",
+        "suspensao_processo_e_prazo_prescricional",
+        "prova_urgente_antecipada"
+      ],
+      "retest": "Novo caso com variacao de forma de citacao e representacao processual, sem repetir redação do reforco."
+    },
+    {
+      "priority": "medium",
+      "targets": [
+        "cp_312_paragrafo_3_antes_depois_transito",
+        "ms_coletivo_sindicato_associacao",
+        "cpc_prazo_contestacao_conciliacao"
+      ],
+      "retest": "Revisao espacada de erros e duvidas de blocos anteriores."
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "rlm_negacao_quantificadores",
+        "rlm_inclusao_exclusao",
+        "portugues_interpretacao",
+        "portugues_adjetivas_e_virgulas",
+        "matematica_media_ponderada",
+        "cf_37_cargos_funcoes"
+      ],
+      "retest": "Variar forma e dificuldade, com progressao gradual e verificação de transferencia."
+    }
+  ],
+  "legal_review_refs": [
+    "CF_37_V",
+    "CP_312_paragraph_3",
+    "CPP_366_367",
+    "CPC_335_I",
+    "CF_5_LXX",
+    "STF_SUM_629_630"
+  ],
+  "grammar_review_rules": [
+    "oracao_adjetiva_restritiva_sem_virgulas",
+    "oracao_adjetiva_explicativa_entre_virgulas"
+  ],
+  "evidence_limits": [
+    "Resultados observados em microdrills; nao representam simulado de prova real ou mastery consolidado.",
+    "Todas as respostas principais foram declaradas Sem duvida, inclusive o unico erro Q36.",
+    "Q36 gerou um reforco separado acertado; erro com alta confianca nao deve ser apagado por reforco imediato.",
+    "Autodeclaracao de falso conhecimento refere-se a Q36 apos a correcao e reforco.",
+    "Nao ha tempos individuais de resolucao ou evidencia do raciocinio interno para cada acerto.",
+    "Nenhum item Q41 ou posterior foi respondido/incluido.",
+    "Nao publicar dados pessoais nem transcricao integral."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
