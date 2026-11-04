@@ -1,0 +1,439 @@
+{
+  "schema_version": "0.1",
+  "feedback_id": "p001-tjsp-2025-chatgpt-adaptive-b02-q11-q20",
+  "session_id": "chatgpt-20261009-p001-tjsp-adaptive-01",
+  "block_id": "b02-q11-q20",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-04",
+  "recorded_at": "2026-11-04",
+  "timing_note": "A data calendario do registro corresponde ao treino em andamento; horarios individuais, duracoes e ritmo nao foram medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "alternativas e confiancas efetivamente declaradas, correcoes e feedback pos-explicacao visiveis na sessao",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false
+  },
+  "scope": {
+    "first_main_question": 11,
+    "last_main_question": 20,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "miniquestoes_de_reforco",
+    "outside_scope": "Q01-Q10 persistidas no primeiro bloco; Q21 apresentada e ainda nao respondida"
+  },
+  "score": {
+    "correct": 8,
+    "incorrect": 2,
+    "total": 10,
+    "computed_percent": 80
+  },
+  "confidence": {
+    "firm": 10,
+    "firm_correct": 8,
+    "firm_incorrect": 2,
+    "uncertain": 0,
+    "guess": 0,
+    "not_reported": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 8,
+    "correct_uncertain": 0,
+    "correct_by_guess": 0,
+    "incorrect_high_confidence": 2,
+    "incorrect_low_confidence": 0,
+    "correct_by_elimination_or_inference": "not_verified"
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      15,
+      17
+    ],
+    "high_confidence_error_question_ids": [
+      15,
+      17
+    ],
+    "reading_errors_confirmed": 0,
+    "content_errors_supported": [
+      15,
+      17
+    ],
+    "self_reported_false_knowledge_question_ids": [
+      15,
+      17
+    ],
+    "unverified_causality": "As respostas permitem identificar a regra violada, mas nao provam todo o processo mental do estudante."
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        11,
+        17
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        12
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        13
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        14
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        15
+      ]
+    },
+    {
+      "subject": "direito-administrativo",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        16
+      ]
+    },
+    {
+      "subject": "atualidades_pcd",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        18
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        19
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        20
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "q": 11,
+      "subject": "portugues",
+      "subtopic": "concordancia_verbal_haver_existir_se",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 12,
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_219_220_prazo_suspensao",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 13,
+      "subject": "informatica",
+      "subtopic": "ms_word_quebras_secao_orientacao_pagina",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 14,
+      "subject": "direito-constitucional",
+      "subtopic": "cf_art5_lxxii_habeas_data",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 15,
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_condicional_e_de_morgan_ou",
+      "selected": "C",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "firm",
+      "response_class": "incorrect_high_confidence",
+      "error_type": "content_rule",
+      "error_signal": "P->(Q ou R) exige P e nao Q e nao R; resposta trocou conjuncao das negacoes por disjuncao",
+      "considered_alternatives": [],
+      "post_explanation_doubt": "falso_conhecimento_self_reported_after_first_reinforcement"
+    },
+    {
+      "q": 16,
+      "subject": "direito-administrativo",
+      "subtopic": "lei_8429_1992_dolo_vs_culpa",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 17,
+      "subject": "portugues",
+      "subtopic": "regencia_verbal_obedecer_pronome_relativo",
+      "selected": "A",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "firm",
+      "response_class": "incorrect_high_confidence",
+      "error_type": "content_rule",
+      "error_signal": "omissao da preposicao a exigida pela regencia de obedecer antes do relativo que",
+      "considered_alternatives": [],
+      "post_explanation_doubt": "falso_conhecimento_self_reported"
+    },
+    {
+      "q": 18,
+      "subject": "atualidades_pcd",
+      "subtopic": "lbi_13146_art3_iv_e_barreira_atitudinal",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 19,
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_261_263_defesa_tecnica_acusado_ausente",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    },
+    {
+      "q": 20,
+      "subject": "matematica",
+      "subtopic": "razao_proporcao_transferencia_quantidades",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "response_class": "correct_firm",
+      "error_type": null,
+      "considered_alternatives": [],
+      "post_explanation_doubt": "not_reported"
+    }
+  ],
+  "reinforcements": {
+    "attempted": 3,
+    "valid": 2,
+    "valid_correct": 2,
+    "ambiguous_excluded": 1,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 15,
+        "type": "initial",
+        "selected": "A",
+        "confidence": "firm",
+        "self_reported_post_explanation": "falso_conhecimento",
+        "validity": "ambiguous_excluded",
+        "counted_in_valid_reinforcements": false,
+        "qa_note": "O gabarito pretendido D foi formulado sem agrupamento claro de operadores; a resposta A representa um caso suficiente, mas nao equivalencia completa. A propria correcao do chat marcou o item defeituoso."
+      },
+      {
+        "origin_main_question": 15,
+        "type": "control",
+        "selected": "A",
+        "confidence": "uncertain",
+        "self_reported_post_explanation": "not_reported",
+        "validity": "valid",
+        "correct": true,
+        "counted_in_valid_reinforcements": true
+      },
+      {
+        "origin_main_question": 17,
+        "type": "immediate",
+        "selected": "B",
+        "confidence": "firm",
+        "self_reported_post_explanation": "falso_conhecimento",
+        "validity": "valid",
+        "correct": true,
+        "counted_in_valid_reinforcements": true
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "portugues_concordancia_verbal",
+      "evidence": "Q11 firme em haver impessoal; Q01/Q05 de bloco anterior foram erros",
+      "interpretation": "melhora pontual em concordancia; revisar retencao"
+    },
+    {
+      "topic": "cpc_suspensao_prazos",
+      "evidence": "Q12 correta firme, apos Q02 do bloco anterior ter sido correta por chute",
+      "interpretation": "recuperacao local mais segura; dominio nao estabelecido"
+    },
+    {
+      "topic": "ms_word_secao_paisagem",
+      "evidence": "Q13 correta firme",
+      "interpretation": "evidencia positiva unica"
+    },
+    {
+      "topic": "cf_habeas_data",
+      "evidence": "Q14 correta firme",
+      "interpretation": "evidencia positiva unica"
+    },
+    {
+      "topic": "raciocinio_logico_de_morgan",
+      "evidence": "Q15 errada com alta confianca; primeiro reforco excluido por ambiguidade; controle acertado com duvida; autoavaliacao de falso conhecimento",
+      "interpretation": "prioridade alta e reteste com enunciado inequívoco"
+    },
+    {
+      "topic": "lei_improbidade",
+      "evidence": "Q16 correta firme para dolo e culpa",
+      "interpretation": "evidencia positiva unica"
+    },
+    {
+      "topic": "portugues_regencia_relativos",
+      "evidence": "Q17 errada com alta confianca; reforco imediato correto firme e autodeclaracao de falso conhecimento",
+      "interpretation": "prioridade alta e reteste com outro verbo"
+    },
+    {
+      "topic": "lbi_barreiras",
+      "evidence": "Q18 correta firme para barreira atitudinal",
+      "interpretation": "evidencia positiva unica"
+    },
+    {
+      "topic": "cpp_defesa_tecnica",
+      "evidence": "Q19 correta firme para arts. 261 e 263",
+      "interpretation": "evidencia positiva unica"
+    },
+    {
+      "topic": "matematica_razao",
+      "evidence": "Q20 correta firme para razao 2:3:5 e transferencia de 12",
+      "interpretation": "evidencia positiva unica"
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "rlm_negacao_condicional_com_conectivos",
+        "rlm_leis_de_morgan_e_ou"
+      ],
+      "retest": "questao nova de estrutura diferente, sem ambiguidade de escopo"
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "portugues_regencia_verbal",
+        "portugues_preposicao_antes_de_pronome_relativo"
+      ],
+      "retest": "verbo diferente de obedecer e distinguir regencia de construcoes vizinhas"
+    },
+    {
+      "priority": "medium",
+      "targets": [
+        "portugues_concordancia_verbal",
+        "cpc_prazos_uteis_e_suspensao"
+      ],
+      "retest": "revisao espacada"
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "word_quebras_secao",
+        "cf_habeas_data",
+        "lei_improbidade_dolo",
+        "lbi_barreiras",
+        "cpp_defesa_tecnica",
+        "matematica_razao"
+      ],
+      "retest": "cobertura proporcional ao edital"
+    }
+  ],
+  "legal_review_refs": [
+    "CPC_219_220",
+    "CF_5_LXXII",
+    "Lei_8429_1992_1_9_10_11",
+    "Lei_13146_2015_3_IV_e",
+    "CPP_261_263"
+  ],
+  "grammar_review_rules": [
+    "obedecer_a",
+    "se_referir_a",
+    "concordar_com",
+    "discordar_de",
+    "aspirar_a_quando_almejar"
+  ],
+  "evidence_limits": [
+    "Ausencia de tempos por questao e justificativas de resolucao.",
+    "Nao presumir inferencia, eliminacao, chute ou processo mental nao verbalizado.",
+    "Autodeclaracoes de falso conhecimento referem-se aos momentos pos-explicacao de Q15 e Q17.",
+    "Primeiro reforco de Q15 foi sinalizado como ambiguo pela propria sessao e excluido da avaliacao.",
+    "Nao registrar Q21 como respondida: foi somente apresentada.",
+    "Nao inferir dominio definitivo com base em um bloco de microdrills.",
+    "Transcricao integral, enunciados completos e dados pessoais nao foram publicados."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
