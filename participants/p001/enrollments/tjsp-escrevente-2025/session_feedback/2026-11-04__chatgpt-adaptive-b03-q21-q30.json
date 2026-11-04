@@ -1,0 +1,475 @@
+{
+  "schema_version": "0.1",
+  "feedback_id": "p001-tjsp-2025-chatgpt-adaptive-b03-q21-q30",
+  "session_id": "chatgpt-20261009-p001-tjsp-adaptive-01",
+  "block_id": "b03-q21-q30",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-04",
+  "recorded_at": "2026-11-04",
+  "timing_note": "Data de sessao inferida do contexto temporal desta conversa; nao foram medidos tempo total ou tempo por questao.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Respostas, confianca, alternativas consideradas e feedback pos-correcao declarados na propria sessao.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false
+  },
+  "scope": {
+    "first_main_question": 21,
+    "last_main_question": 30,
+    "valid_main_questions": 10,
+    "question_22_counted_as": "22R",
+    "excluded_from_main_score": "Q22 original defeituosa e miniquestoes de reforco",
+    "outside_scope": "Q01-Q10 e Q11-Q20 persistidas separadamente; Q31 nao foi apresentada nem respondida."
+  },
+  "score": {
+    "correct": 8,
+    "incorrect": 2,
+    "total": 10,
+    "computed_percent": 80
+  },
+  "confidence": {
+    "firm": 8,
+    "firm_correct": 6,
+    "firm_incorrect": 2,
+    "uncertain": 2,
+    "uncertain_correct": 2,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 6,
+    "correct_uncertain": 2,
+    "correct_by_guess": 0,
+    "incorrect_high_confidence": 2,
+    "incorrect_low_confidence": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      24,
+      26
+    ],
+    "high_confidence_error_question_ids": [
+      24,
+      26
+    ],
+    "confirmed_reading_errors": 0,
+    "confirmed_content_rule_errors": [
+      24,
+      26
+    ],
+    "self_reported_false_knowledge_question_ids": [],
+    "risk_of_false_knowledge": "Two wrong answers given with 'Sem duvida'; the user did not self-report 'Falso conhecimento' for this block."
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        21,
+        25
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        22
+      ],
+      "display_ids": [
+        "22R"
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        23,
+        30
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        24
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        26
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        27
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        28
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        29
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 21,
+      "display_id": "21",
+      "subject": "portugues",
+      "subtopic": "regencia_verbal_pronomes_relativos",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "notes": null
+    },
+    {
+      "question_number": 22,
+      "display_id": "22R",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_condicional_de_morgan_consequente_e",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "notes": "Replacement question 22R counted; original Q22 excluded for ambiguous connective grouping."
+    },
+    {
+      "question_number": 23,
+      "display_id": "23",
+      "subject": "informatica",
+      "subtopic": "excel_referencias_mistas_copia",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "notes": "Original rendering questioned by student; problem restated in plain text before answer; valid item."
+    },
+    {
+      "question_number": 24,
+      "display_id": "24",
+      "subject": "direito-penal",
+      "subtopic": "cp_312_paragrafos_2_3_peculato_culposo_reparacao",
+      "selected": "E",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "incorrect_high_confidence",
+      "error_type": "content_rule",
+      "error_signal": "ignorou efeito penal de reparacao do dano antes da sentenca irrecorrivel, previsto no art. 312 paragrafo 3",
+      "notes": null
+    },
+    {
+      "question_number": 25,
+      "display_id": "25",
+      "subject": "portugues",
+      "subtopic": "crase_comparecer_a_reuniao",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "notes": null
+    },
+    {
+      "question_number": 26,
+      "display_id": "26",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_art5_lxx_mandado_seguranca_coletivo_legitimidade_sindicato",
+      "selected": "D",
+      "correct_answer": "E",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "incorrect_high_confidence",
+      "error_type": "content_rule",
+      "error_signal": "aplicou indevidamente requisito de um ano de funcionamento a organizacao sindical",
+      "notes": null
+    },
+    {
+      "question_number": 27,
+      "display_id": "27",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_334_audiencia_conciliacao_dispensa",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "uncertain_between_3",
+      "considered_alternatives": [
+        "D",
+        "E"
+      ],
+      "response_class": "correct_uncertain",
+      "error_type": null,
+      "error_signal": null,
+      "notes": null
+    },
+    {
+      "question_number": 28,
+      "display_id": "28",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_252_254_impedimento_vs_suspeicao",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "notes": null
+    },
+    {
+      "question_number": 29,
+      "display_id": "29",
+      "subject": "matematica",
+      "subtopic": "porcentagens_sucessivas_remanescentes",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "notes": null
+    },
+    {
+      "question_number": 30,
+      "display_id": "30",
+      "subject": "informatica",
+      "subtopic": "email_para_cc_cco_visibilidade",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "uncertain_between_2",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_uncertain",
+      "error_type": null,
+      "error_signal": null,
+      "notes": null
+    }
+  ],
+  "qa_exclusions": [
+    {
+      "display_id": "22",
+      "subject": "raciocinio-logico",
+      "selected": "E",
+      "confidence": "firm",
+      "intended_answer": "E",
+      "validity": "excluded_defective_item",
+      "reason": "Escopo da expressao 'e ... ou ...' sem parenteses ou reformulacao inequívoca; no calculo principal consta apenas a substituta 22R."
+    }
+  ],
+  "reinforcements": {
+    "attempted": 3,
+    "valid": 3,
+    "valid_correct": 3,
+    "ambiguous_excluded": 0,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 24,
+        "display_id": "reforco_Q24",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": "firm",
+        "self_reported_post_explanation": "diminuiu",
+        "subtopic": "peculato_culposo_reparacao_apos_sentenca_irrecorrivel"
+      },
+      {
+        "origin_main_question": 26,
+        "display_id": "reforco_Q26",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": "firm",
+        "self_reported_post_explanation": "diminuiu",
+        "subtopic": "ms_coletivo_sindicato_menos_de_um_ano"
+      },
+      {
+        "origin_main_question": 27,
+        "display_id": "reforco_Q27",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm",
+        "self_reported_post_explanation": "mudou",
+        "new_doubt_text": "not_supplied",
+        "subtopic": "cpc_334_paragrafo_6_litisconsortes"
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "portugues_regencia_relativos",
+      "evidence": "Q21 correta firme, reteste com verbos diferentes apos erro firme em Q17",
+      "interpretation": "evidencia positiva de transferencia local; revisar em intervalo"
+    },
+    {
+      "topic": "rlm_negacao_condicional_de_morgan",
+      "evidence": "Q22 original excluida; substituta inequívoca Q22R correta firme apos erro firme em Q15",
+      "interpretation": "recuperacao promissora, ainda requer reteste diferido"
+    },
+    {
+      "topic": "excel_referencias_mistas",
+      "evidence": "Q23 correta firme, retomando habilidade da Q03; problema de exibicao resolvido com texto plano",
+      "interpretation": "evidencia positiva repetida"
+    },
+    {
+      "topic": "peculato_culposo_reparacao",
+      "evidence": "Q24 errada firme, reforco correto firme; duvida diminuiu",
+      "interpretation": "prioridade alta de revisao: antes da sentenca irrecorrivel extingue punibilidade, depois reduz metade"
+    },
+    {
+      "topic": "portugues_crase",
+      "evidence": "Q25 correta firme",
+      "interpretation": "evidencia positiva inicial"
+    },
+    {
+      "topic": "ms_coletivo_legitimidade",
+      "evidence": "Q26 errada firme, reforco correto firme; duvida diminuiu",
+      "interpretation": "prioridade alta de revisao, especialmente sindicato vs associacao"
+    },
+    {
+      "topic": "cpc_334_conciliacao",
+      "evidence": "Q27 correta entre B,D,E, reforco correto firme, duvida mudou, nova duvida nao especificada",
+      "interpretation": "acerto inseguro; manter follow-up conceitual"
+    },
+    {
+      "topic": "cpp_impedimento_suspeicao",
+      "evidence": "Q28 correta firme, reforca desempenho apos Q06/Q07",
+      "interpretation": "evidencia positiva repetida"
+    },
+    {
+      "topic": "matematica_porcentagens",
+      "evidence": "Q29 correta firme, coerente com Q08/Q20 em matematica",
+      "interpretation": "evidencia positiva repetida"
+    },
+    {
+      "topic": "email_cco",
+      "evidence": "Q30 correta entre C,D; duvida sobre visibilidade dos campos Para/Cc para destinatario Cco",
+      "interpretation": "acerto inseguro; reteste discriminativo"
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "direito_penal_peculato_culposo",
+        "cp_312_paragrafo_3_reparacao_dano_momento"
+      ],
+      "retest": "novo caso com marco temporal do transito em julgado"
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "direito_constitucional_ms_coletivo_legitimados",
+        "sindicato_vs_associacao_um_ano"
+      ],
+      "retest": "comparar entidades e autorizacao para substituicao processual"
+    },
+    {
+      "priority": "medium",
+      "targets": [
+        "cpc_334_conciliacao_hipoteses_dispensa_prazo_litisconsorcio",
+        "email_cco_visibilidade_destinatarios"
+      ],
+      "retest": "questoes novas, verificar duvida diferente da Q27 se expressa"
+    },
+    {
+      "priority": "spaced_review",
+      "targets": [
+        "portugues_regencia_relativo",
+        "raciocinio_logico_negacao_condicional_de_morgan"
+      ],
+      "retest": "verificacao diferida de transferencia"
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "excel_referencias_mistas",
+        "portugues_crase",
+        "cpp_252_254",
+        "matematica_porcentagens_sucessivas"
+      ],
+      "retest": "manutencao breve com variacao do formato"
+    }
+  ],
+  "legal_review_refs": [
+    "CP_312_paragraphs_2_3",
+    "CF_5_LXX",
+    "CPC_334_paragraphs_4_5_6",
+    "CPP_252_254"
+  ],
+  "grammar_review_rules": [
+    "concordar_com",
+    "referir_se_a",
+    "obedecer_a",
+    "discordar_de",
+    "aspirar_a_quando_almejar",
+    "crase_comparecer_a_reuniao"
+  ],
+  "evidence_limits": [
+    "Bloco de microdrill, nao simulado integral, nao mede prontidao em condicoes de prova.",
+    "Sem tempos por questao nem justificativas detalhadas da resolucao declaradas pelo estudante.",
+    "Q22 original nao possui pontuacao valida: ambiguidade de escopo de conectivos; 22R e sua substituta unica.",
+    "Q23 foi restatada em texto plano antes da resposta devido a relato de problema de renderizacao, e permanece valida.",
+    "Q27 e Q30 foram respondidas com incerteza, considerando explicitamente outras alternativas.",
+    "Duvida pos-correcao de Q27 mudou, mas a nova duvida nao foi especificada; nao inferir sua natureza.",
+    "Reforcos corretos nao entram na pontuacao principal.",
+    "Acerto em revisao local nao prova mastery consolidado.",
+    "Sem transcricao integral, dados pessoais ou detalhes de fonte nao observados."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
