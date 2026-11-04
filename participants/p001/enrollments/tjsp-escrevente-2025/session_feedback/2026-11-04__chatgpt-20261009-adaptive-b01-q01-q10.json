@@ -1,0 +1,448 @@
+{
+  "schema_version": "0.1",
+  "feedback_id": "p001-tjsp-2025-chatgpt-20261009-adaptive-b01-q01-q10",
+  "session_id": "chatgpt-20261009-p001-tjsp-adaptive-01",
+  "block_id": "b01-q01-q10",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-10-09",
+  "recorded_at": "2026-11-04",
+  "timing_note": "Data inicial observada na sessao; datas e duracoes individuais das respostas nao verificadas.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "observed_answers_corrections_and_post_explanation_self_reports",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false
+  },
+  "scope": {
+    "first_main_question": 1,
+    "last_main_question": 10,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "miniquestoes_de_reforco",
+    "outside_scope": "questoes_11_e_posteriores"
+  },
+  "score": {
+    "correct": 6,
+    "incorrect": 4,
+    "total": 10,
+    "computed_percent": 60
+  },
+  "confidence": {
+    "firm": 4,
+    "between_2": 3,
+    "between_3": 1,
+    "guess_5": 2,
+    "other": 0,
+    "firm_correct": 4,
+    "firm_incorrect": 0,
+    "nonfirm_correct": 2,
+    "nonfirm_incorrect": 4,
+    "firm_correct_percent_of_total": 40
+  },
+  "response_outcomes": {
+    "correct_firm": 4,
+    "correct_uncertain": 1,
+    "correct_by_guess": 1,
+    "incorrect_uncertain": 3,
+    "incorrect_guess": 1,
+    "correct_by_elimination_or_inference": "not_verified",
+    "confirmed_reading_errors": 0,
+    "confirmed_high_confidence_errors": 0
+  },
+  "guesses": {
+    "total": 2,
+    "correct": 1,
+    "incorrect": 1,
+    "question_ids": [
+      2,
+      6
+    ]
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      1,
+      5,
+      6,
+      9
+    ],
+    "content_rule_errors_observed_or_inferred": [
+      1,
+      5,
+      9
+    ],
+    "incorrect_guess": [
+      6
+    ],
+    "repeated_topic_error": "portugues_concordancia_verbal_q01_q05",
+    "self_reported_false_knowledge": [
+      6
+    ],
+    "unverified_causal_attributions": "A resposta errada ou a hesitacao nao comprova, por si, a estrategia mental usada."
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 0,
+      "question_ids": [
+        1,
+        5
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        2
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        4,
+        10
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        3
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        8
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        9
+      ]
+    },
+    {
+      "subject": "atualidades",
+      "total": 0,
+      "correct": 0,
+      "question_ids": []
+    }
+  ],
+  "questions": [
+    {
+      "q": 1,
+      "subject": "portugues",
+      "subtopic": "concordancia_verbal_se_e_impessoais",
+      "selected": "E",
+      "key": "C",
+      "correct": false,
+      "confidence": "between_3",
+      "considered": [
+        "A",
+        "D",
+        "E"
+      ],
+      "classification": "incorrect_uncertain",
+      "error_signal": "grammatical_rule_not_consolidated",
+      "post_explanation": "diminuiu",
+      "reinforcement": {
+        "selected": "B",
+        "assessed_correct": true,
+        "validity": "valid",
+        "confidence": "not_reported"
+      }
+    },
+    {
+      "q": 2,
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_219_220_224_prazos",
+      "selected": "B",
+      "key": "B",
+      "correct": true,
+      "confidence": "guess_5",
+      "considered": null,
+      "classification": "correct_by_guess",
+      "error_signal": null,
+      "post_explanation": "diminuiu",
+      "reinforcement": {
+        "selected": "D",
+        "assessed_correct": true,
+        "validity": "ambiguous_excluded",
+        "confidence": "not_reported",
+        "note": "Enunciado nao definiu inequivocamente se sexta-feira era o primeiro dia computado ou o dia do inicio excluido. O gabarito dado na sessao adotou a segunda leitura; nao usar como evidencia de acerto confiavel."
+      }
+    },
+    {
+      "q": 3,
+      "subject": "informatica",
+      "subtopic": "excel_referencias_mistas",
+      "selected": "B",
+      "key": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered": null,
+      "classification": "correct_firm",
+      "error_signal": null,
+      "post_explanation": "not_reported",
+      "reinforcement": null
+    },
+    {
+      "q": 4,
+      "subject": "direito-penal",
+      "subtopic": "cp_313a_vs_313b_dados_e_sistema",
+      "selected": "C",
+      "key": "C",
+      "correct": true,
+      "confidence": "between_2",
+      "considered": [
+        "C",
+        "D"
+      ],
+      "classification": "correct_uncertain",
+      "error_signal": "uncertainty_between_neighboring_crimes",
+      "post_explanation": "diminuiu",
+      "reinforcement": {
+        "selected": "B",
+        "assessed_correct": true,
+        "validity": "valid",
+        "confidence": "not_reported"
+      }
+    },
+    {
+      "q": 5,
+      "subject": "portugues",
+      "subtopic": "concordancia_verbal_se_e_impessoais",
+      "selected": "D",
+      "key": "C",
+      "correct": false,
+      "confidence": "between_2",
+      "considered": [
+        "A",
+        "D"
+      ],
+      "classification": "incorrect_uncertain",
+      "error_signal": "repeated_grammar_error_after_initial_reinforcement",
+      "post_explanation": "diminuiu",
+      "reinforcement": {
+        "selected": "C",
+        "assessed_correct": true,
+        "validity": "valid",
+        "confidence": "firm"
+      }
+    },
+    {
+      "q": 6,
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_252_254_impedimento_e_suspeicao",
+      "selected": "E",
+      "key": "C",
+      "correct": false,
+      "confidence": "guess_5",
+      "considered": null,
+      "classification": "incorrect_guess",
+      "error_signal": "lack_of_verified_rule_knowledge",
+      "post_explanation": "falso_conhecimento_self_report",
+      "reinforcement": {
+        "selected": "B",
+        "assessed_correct": true,
+        "validity": "valid",
+        "confidence": "firm"
+      }
+    },
+    {
+      "q": 7,
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_252_254_impedimento_e_suspeicao",
+      "selected": "C",
+      "key": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered": null,
+      "classification": "correct_firm",
+      "error_signal": null,
+      "post_explanation": "not_reported",
+      "reinforcement": null
+    },
+    {
+      "q": 8,
+      "subject": "matematica",
+      "subtopic": "porcentagens_sucessivas",
+      "selected": "D",
+      "key": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered": null,
+      "classification": "correct_firm",
+      "error_signal": null,
+      "post_explanation": "not_reported",
+      "reinforcement": null
+    },
+    {
+      "q": 9,
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_de_condicional_vs_equivalencias",
+      "selected": "E",
+      "key": "C",
+      "correct": false,
+      "confidence": "between_2",
+      "considered": [
+        "D",
+        "E"
+      ],
+      "classification": "incorrect_uncertain",
+      "error_signal": "confusion_negation_vs_equivalence_contrapositive",
+      "post_explanation": "diminuiu",
+      "reinforcement": {
+        "selected": "C",
+        "assessed_correct": true,
+        "validity": "valid",
+        "confidence": "firm"
+      }
+    },
+    {
+      "q": 10,
+      "subject": "direito-penal",
+      "subtopic": "cp_313a_vs_313b_dados_e_sistema",
+      "selected": "D",
+      "key": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered": null,
+      "classification": "correct_firm",
+      "error_signal": null,
+      "post_explanation": "not_reported",
+      "reinforcement": null
+    }
+  ],
+  "reinforcements": {
+    "attempted": 6,
+    "valid": 5,
+    "valid_correct": 5,
+    "ambiguous_excluded": 1,
+    "ambiguous_question_ids": [
+      2
+    ],
+    "included_in_main_score": false,
+    "reported_outcome": "5 acertos validos em 5 reforcos avaliaveis; um reforco assinalado como correto na conversa tinha enunciado ambiguo e nao constitui evidencia confiavel."
+  },
+  "learning_signals": [
+    {
+      "topic": "portugues_concordancia_verbal",
+      "evidence": "Q01 e Q05 erradas; reforcos imediatos corretos; reteste Q11 fora deste bloco",
+      "interpretation": "fragilidade e dificuldade de generalizacao no bloco 1"
+    },
+    {
+      "topic": "cpc_prazos_processuais",
+      "evidence": "Q02 correta por chute entre cinco; reforco com enunciado ambiguo",
+      "interpretation": "dominio nao verificado"
+    },
+    {
+      "topic": "cpp_impedimento_vs_suspeicao",
+      "evidence": "Q06 errada por chute; autodeclaracao posterior de falso conhecimento; Q07 firme",
+      "interpretation": "recuperacao inicial observada, retencao futura nao verificada"
+    },
+    {
+      "topic": "cp_313a_313b",
+      "evidence": "Q04 correta com duvida C/D; Q10 correta sem duvida",
+      "interpretation": "melhora intrabloco; manter revisao espacada"
+    },
+    {
+      "topic": "rlm_negacao_condicional",
+      "evidence": "Q09 errada com duvida D/E, ambas equivalentes a original; reforco correto e firme",
+      "interpretation": "reteste requerido"
+    },
+    {
+      "topic": "excel_referencias_mistas",
+      "evidence": "Q03 correta firme",
+      "interpretation": "sinal positivo unico, nao mastery"
+    },
+    {
+      "topic": "matematica_porcentagens_sucessivas",
+      "evidence": "Q08 correta firme",
+      "interpretation": "sinal positivo unico, nao mastery"
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "portugues_se_apassivador_vs_indeterminador",
+        "portugues_haver_existir_fazer_impessoais",
+        "rlm_negacao_condicional_vs_contraposicao"
+      ]
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "cpp_252_254_distincao_impedimento_suspeicao",
+        "cpc_219_220_224_contagem_e_suspensao"
+      ]
+    },
+    {
+      "priority": "medium",
+      "targets": [
+        "cp_313a_313b_distincao_dados_vs_programa"
+      ]
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "excel_referencias_mistas",
+        "matematica_porcentagem_sucessiva"
+      ]
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "manter_proporcao_do_edital_e_inserir_atualidades_nos_blocos_sequentes"
+      ]
+    }
+  ],
+  "legal_review_refs": [
+    "CP_art_313-A",
+    "CP_art_313-B",
+    "CPP_art_252",
+    "CPP_art_254",
+    "CPC_art_219",
+    "CPC_art_220",
+    "CPC_art_224"
+  ],
+  "grammar_review_rules": [
+    "concordancia_verbal_se_apassivador",
+    "se_indeterminador_com_transitivo_indireto",
+    "haver_exister",
+    "fazer_tempo_decorrido"
+  ],
+  "evidence_limits": [
+    "Sem tempos de resposta verificados.",
+    "Sem justificativas de resolucao para classificar acerto por inferencia ou eliminacao.",
+    "Reforco da Q02 e ambiguo e excluido das estatisticas de reforco validas.",
+    "Relatorio nao inclui transcricao de enunciados nem respostas completas do chat.",
+    "Nao inferir dominio definitivo de um unico bloco ou de reforcos imediatos."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
