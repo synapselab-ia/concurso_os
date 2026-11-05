@@ -1,0 +1,449 @@
+{
+  "schema_version": "0.1",
+  "feedback_id": "p001-tjsp-2025-chatgpt-adaptive-b05-q41-q50",
+  "session_id": "chatgpt-20261009-p001-tjsp-adaptive-01",
+  "block_id": "b05-q41-q50",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-05",
+  "recorded_at": "2026-11-05",
+  "timing_note": "Data do fechamento com base na conversa. Tempos individuais de resposta nao foram medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Respostas A-E, declaracoes de confianca, alternativas consideradas, autoavaliacoes apos as correcoes e reforco Q44-R1 observados na conversa.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false
+  },
+  "scope": {
+    "first_main_question": 41,
+    "last_main_question": 50,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "miniquestoes_de_reforco",
+    "outside_scope": "Q01-Q40 permanecem nos quatro reviews historicos; Q51 nao foi apresentada nem respondida neste fechamento."
+  },
+  "score": {
+    "correct": 10,
+    "incorrect": 0,
+    "total": 10,
+    "computed_percent": 100
+  },
+  "cumulative_after_block": {
+    "correct": 41,
+    "incorrect": 9,
+    "total": 50,
+    "computed_percent": 82
+  },
+  "confidence": {
+    "firm": 9,
+    "firm_correct": 9,
+    "firm_incorrect": 0,
+    "uncertain": 1,
+    "uncertain_correct": 1,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 9,
+    "correct_uncertain": 1,
+    "correct_by_guess": 0,
+    "incorrect_high_confidence": 0,
+    "incorrect_low_confidence": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "elimination_or_inference": {
+    "observed": 0,
+    "not_reported": 10,
+    "interpretation": "Nenhuma estrategia de eliminacao ou inferencia foi informada. Nao inferir metodo a partir de acertos ou da incerteza da Q44."
+  },
+  "error_signals": {
+    "wrong_question_ids": [],
+    "high_confidence_error_question_ids": [],
+    "confirmed_content_rule_errors": [],
+    "confirmed_reading_errors": 0,
+    "self_reported_false_knowledge_question_ids": [],
+    "error_pattern": "Nenhum erro em Q41-Q50. Uma hesitacao conceitual em Q44, com posterior reforco correto, nao deve ser registrada como erro."
+  },
+  "subjects": [
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        41
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        42
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        43,
+        49
+      ]
+    },
+    {
+      "subject": "portugues",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        44
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        45
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        46,
+        50
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        47
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        48
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 41,
+      "display_id": "41",
+      "subject": "informatica",
+      "subtopic": "excel_somase_intervalo_criterio_intervalo_soma",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 42,
+      "display_id": "42",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_366_vs_367_citacao_edital_e_pessoal",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 43,
+      "display_id": "43",
+      "subject": "direito-penal",
+      "subtopic": "cp_313a_vs_313b_dados_e_sistema_crime_formal",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 44,
+      "display_id": "44",
+      "subject": "portugues",
+      "subtopic": "concordancia_haver_existir_se_apassivador",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "uncertain_between_3",
+      "considered_alternatives": [
+        "B",
+        "D"
+      ],
+      "response_class": "correct_uncertain",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_diminuiu_apos_explicacao_e_reforco"
+    },
+    {
+      "question_number": 45,
+      "display_id": "45",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_335_i_219_224_prazo_contestacao_ultima_sessao_conciliacao",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 46,
+      "display_id": "46",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_5_lxx_lei_12016_art21_ms_coletivo_sindicato_sumulas_629_630",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 47,
+      "display_id": "47",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_quantificador_universal_conjuncao_de_morgan",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 48,
+      "display_id": "48",
+      "subject": "matematica",
+      "subtopic": "media_aritmetica_ponderada_frequencias",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 49,
+      "display_id": "49",
+      "subject": "direito-penal",
+      "subtopic": "cp_312_paragrafo_3_peculato_culposo_reparacao_transito_julgado",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 50,
+      "display_id": "50",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_37_ii_v_funcoes_confianca_cargos_em_comissao",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 1,
+    "valid": 1,
+    "valid_correct": 1,
+    "ambiguous_excluded": 0,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 44,
+        "display_id": "Q44-R1",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": null,
+        "confidence_note": "Nao foi solicitado nem informado nivel de certeza especifico no reforco; nao presumir confianca firme.",
+        "considered_alternatives": [],
+        "self_reported_post_explanation": "diminuiu",
+        "subtopic": "portugues_concordancia_haver_impessoal_fazer_tempo_existir_pessoal_e_se_apassivador",
+        "interpretation": "Resposta correta em reteste imediato; a duvida diminuiu conforme relato do participante. Nao contabilizar no escore principal nem assumir retencao duradoura."
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "excel_somase",
+      "evidence": "Q41 correta firme: SOMASE(intervalo_criterio; criterio; intervalo_soma), resultado 25",
+      "interpretation": "Recuperacao local positiva; fazer manutencao futura."
+    },
+    {
+      "topic": "cpp_366_367",
+      "evidence": "Q42 correta firme, reteste em casos de citacao por edital versus pessoal apos erro firme com falso conhecimento Q36 registrado no b04",
+      "interpretation": "Evidencia favoravel de correcao conceitual; requer reteste espacado porque havia erro firme historico."
+    },
+    {
+      "topic": "cp_313a_313b",
+      "evidence": "Q43 correta firme para exclusao indevida de dados corretos por funcionario autorizado com finalidade especial",
+      "interpretation": "Discriminacao positiva entre adulteracao de dados e alteracao de sistema."
+    },
+    {
+      "topic": "portugues_concordancia",
+      "evidence": "Q44 correta com duvida entre B, C e D; reforco Q44-R1 correto D, com relato de que a duvida diminuiu",
+      "interpretation": "Priorizar consolidacao de haver impessoal, existir pessoal e se apassivador em contexto variado."
+    },
+    {
+      "topic": "cpc_335_contestacao",
+      "evidence": "Q45 correta firme com duas sessoes de conciliacao, termo inicial na ultima e prazo de 15 dias uteis",
+      "interpretation": "Revisao de ponto historico com confianca firme."
+    },
+    {
+      "topic": "cf_ms_coletivo",
+      "evidence": "Q46 correta firme sobre sindicato, legitimidade e dispensa de autorizacao; erro Q26 e acerto Q38 constam de reviews historicos",
+      "interpretation": "Evolucao positiva, revisao espacada recomendada."
+    },
+    {
+      "topic": "raciocinio_logico",
+      "evidence": "Q47 correta firme ao negar todo e a conjuncao por ao menos um contraexemplo",
+      "interpretation": "Evidencia positiva em nova variacao de negacao logica."
+    },
+    {
+      "topic": "matematica_media_ponderada",
+      "evidence": "Q48 correta firme: (12x8+18x13+10x20)/40=13,25",
+      "interpretation": "Evidencia positiva de ponderacao por frequencia."
+    },
+    {
+      "topic": "cp_peculato_culposo",
+      "evidence": "Q49 correta firme para efeito de reparacao antes/depois da sentenca irrecorrivel; Q24 erro anterior e Q35 acerto firme no historico",
+      "interpretation": "Evolucao positiva; retestar de modo espacado."
+    },
+    {
+      "topic": "cf_37_v",
+      "evidence": "Q50 correta firme para funcao de confianca exclusiva de ocupante de cargo efetivo e cargo em comissao",
+      "interpretation": "Evidencia repetida em relacao a Q33; manter sem afirmar mastery permanente."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "portugues_haver_impessoal_auxiliar",
+        "portugues_existir_concordancia",
+        "portugues_particula_apassivadora_se",
+        "portugues_fazer_tempo"
+      ],
+      "retest": "Nova questao de concordancia com variacao da ordem do sujeito e verbos em locucao, depois de intervalo, sem repetir Q44-R1."
+    },
+    {
+      "priority": "medium_spaced",
+      "targets": [
+        "cpp_366_vs_367",
+        "citacao_por_edital_vs_pessoal",
+        "suspensao_processo_prescricao_provas_urgentes"
+      ],
+      "retest": "Novo caso apos intervalo para verificar retencao de erro firme historico Q36 apesar de acerto Q42."
+    },
+    {
+      "priority": "spaced_review",
+      "targets": [
+        "cp_312_paragrafo_3_peculato_culposo",
+        "cf_5_lxx_ms_coletivo",
+        "cpc_335_conciliacao_contestacao"
+      ],
+      "retest": "Usar situacoes distintas e alternativas mais densas para avaliar transferencia, preservando historico Q24 Q26 Q27."
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "excel_somase",
+        "cp_313a_313b",
+        "rlm_negacao_quantificadores_de_morgan",
+        "matematica_media_ponderada",
+        "cf_37_cargos_funcoes"
+      ],
+      "retest": "Variar superficie e dificuldade, mantendo distribuicao por edital."
+    },
+    {
+      "priority": "assessment",
+      "targets": [
+        "simulacao_fiel_formato_vunesp",
+        "tempo_resolucao_nao_medido"
+      ],
+      "retest": "Validar transferencia em simulado separado; nao projetar mastery por 10/10 em microdrill."
+    }
+  ],
+  "legal_review_refs": [
+    "CPP_366_367",
+    "CP_313_A_313_B",
+    "CPC_219_224_334_335_I",
+    "CF_5_LXX",
+    "LEI_12016_2009_21",
+    "STF_SUM_629_630",
+    "CP_312_paragraph_2_3",
+    "CF_37_II_V"
+  ],
+  "grammar_review_rules": [
+    "haver_impessoal_existir",
+    "fazer_indicacao_de_tempo",
+    "particula_apassivadora_se",
+    "concordancia_verbal_com_sujeito_posposto"
+  ],
+  "evidence_limits": [
+    "Resultado observado em microdrills interativos, nao em simulado integral de prova; 10/10 nao constitui dominio definitivo.",
+    "Q41, Q42, Q43, Q45, Q46, Q47, Q48, Q49 e Q50 foram respondidas sem duvida e tiveram certeza mantida apos explicacao.",
+    "Q44 correta com incerteza entre tres alternativas (B,C,D); a incerteza nao e classificacao de erro.",
+    "Reforco Q44-R1 correto D e autorrelato de duvida diminuida; confianca especifica do reforco nao reportada.",
+    "Nao foram informados tempos de resolucao, passo a passo mental, eliminacao ou inferencia; nao os deduzir.",
+    "Nenhuma alegacao de falsa certeza ou falso conhecimento atual foi relatada na Q50.",
+    "Q01-Q40 preservadas como fatos historicos; nenhuma reescrita de review anterior.",
+    "Nenhuma transcricao integral ou dado pessoal deve ser publicado no repositorio publico."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
