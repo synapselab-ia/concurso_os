@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "enrollment_id": "p002__tjsp-escrevente-2025",
+  "participant_id": "p002",
+  "competition_id": "tjsp-escrevente-2025",
+  "status": "active",
+  "started_at": "2026-11-05",
+  "study_mode": "adaptive",
+  "relationship_to_official_contest": "study_reference",
+  "official_candidate_status": "unknown",
+  "practice_cycle": {
+    "inherit_competition_default": true
+  },
+  "chatgpt_training": {
+    "question_delivery": "one_at_a_time",
+    "alternatives_per_main_question": 5,
+    "block_review_every_valid_main_questions": 10,
+    "active_review_every_valid_main_questions": 20,
+    "session_end_report": true,
+    "excluded_from_main_question_count": [
+      "reinforcement_microquestions",
+      "active_review_questions"
+    ],
+    "feedback_directory": "session_feedback",
+    "instructions": "session_feedback/README.md"
+  },
+  "privacy": "public_minimal"
+}
