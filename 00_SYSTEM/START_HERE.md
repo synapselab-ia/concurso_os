@@ -38,3 +38,7 @@ Ao criar microquestões em escala ou qualquer simulado que pretenda medir pronti
 ## Sessões de estudo simultâneas
 
 Se dois ou mais chats atuarem sobre o mesmo enrollment, ler `PARALLEL_STUDY_PROTOCOL.md` antes de publicar feedback. A numeração de questões é local ao chat; cada chat usa `session_id` próprio e grava somente arquivos append-only exclusivos.
+
+## Evolução do agendador de estudos (ainda não ativa)
+
+Consultar `STUDY_SCHEDULER_ROLLOUT.md` ao planejar implementação de seleção de temas/cobertura. É proposta em implantação segura; não substituir automaticamente prompts nem filas de questões de sessões existentes. Seguir `PARALLEL_STUDY_PROTOCOL.md` para gravações.
