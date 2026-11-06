@@ -34,3 +34,7 @@ Antes de qualquer alteração, confirme no GitHub a branch real, PRs abertos e o
 Ao criar ou reconstruir substancialmente uma `APOSTILA.md`/`APOSTILA.pdf`, ler `APOSTILA_AUTHORING_PROTOCOL.md` **antes de começar a redação**.
 
 Ao criar microquestões em escala ou qualquer simulado que pretenda medir prontidão para a prova, ler `PRACTICE_PROTOCOL.md` e, para simulados, `SIMULATION_PROTOCOL.md` antes da autoria.
+
+## Sessões de estudo simultâneas
+
+Se dois ou mais chats atuarem sobre o mesmo enrollment, ler `PARALLEL_STUDY_PROTOCOL.md` antes de publicar feedback. A numeração de questões é local ao chat; cada chat usa `session_id` próprio e grava somente arquivos append-only exclusivos.
