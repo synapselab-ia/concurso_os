@@ -138,16 +138,17 @@ def load_feedback(root: Path, participant_id: str, competition_id: str) -> tuple
     result.sort(key=lambda r: (r["session_id"],
                                r.get("scope", {}).get("first_main_question", 0), r["block_id"]))
     # Reject duplicate question keys *within* a session; a new chat's Q01 is independent.
-    question_keys, bad_blocks = set(), set()
+    question_keys, bad_blocks = {}, set()
     for record in result:
         for q in record["questions"]:
             number = q.get("question_number")
             if number is not None:
                 key = record["session_id"], str(number)
                 if key in question_keys:
-                    bad_blocks.add(record["feedback_id"])
+                    bad_blocks.update((record["feedback_id"], question_keys[key]))
                     warnings.append(f"Overlapping local question in {record['feedback_id']}")
-                question_keys.add(key)
+                else:
+                    question_keys[key] = record["feedback_id"]
     return [r for r in result if r["feedback_id"] not in bad_blocks], warnings
 
 
