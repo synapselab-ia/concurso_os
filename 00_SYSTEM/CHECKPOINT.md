@@ -205,3 +205,14 @@ not_started:
 - Limite de entrega: convenção operacional; sem motor automático de consolidação nem teste de concorrência executado.
 - Validação: execução de `python tools/verify.py` exige checkout íntegro. Tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` falhou em 2026-11-06 com `Could not resolve host: github.com`. Status `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não PASS.
 - Próxima etapa editorial `DIREITO-016` permanece intacta e aguarda smoke manual do usuário no NotebookLM.
+
+
+## Trilha independente: controle de cobertura e agendamento de estudos (2026-11-06)
+
+- Proposta: DEC-0022 e `00_SYSTEM/STUDY_SCHEDULER_ROLLOUT.md`.
+- Motivação: repetição concentrada observada em 60 questões principais detalhadas de p001; cobertura incompleta de outros ramos do edital.
+- Política-alvo de microdrill: 60% exploração, 30% recuperação, 10% retenção; rodízio ponderado por pesos oficiais; review de prioridades a cada 50 questões consolidadas.
+- Fase atual: DESIGN_SHADOW_ONLY. Nenhum scheduler ativo, nenhuma reserva entre chats, nenhuma alteração nos enrollments, reviews ou prompts de sessões abertas.
+- Branch de implementação documental: `feat/study-coverage-scheduler-shadow-v1`, baseada em `1be6347ebc06eddd5ac5e91f0868cb45c86a0153`.
+- Gate determinístico: `python tools/verify.py` NOT_EXECUTED_CURRENT_ENVIRONMENT, porque o container falhou no `git ls-remote` com `Could not resolve host: github.com` (exit 128). Revisão do diff e readback por API são gates distintos.
+- Próxima etapa transversal: protótipo em shadow, catálogo de cobertura e testes; a próxima etapa editorial continua `DIREITO-016`.
