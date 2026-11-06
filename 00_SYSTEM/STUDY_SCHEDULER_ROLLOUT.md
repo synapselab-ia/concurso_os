@@ -50,3 +50,17 @@ Após dois acertos firmes em variações independentes, rebaixar a prioridade de
 ## Estado de entrega nesta fase
 
 Esta especificação é apenas a **porta de segurança e os critérios de aceitação**. A implementação computacional, testes de integração e ativação serão tarefas separadas, não presumidas concluídas pelo merge documental.
+
+## Estado técnico após implementação shadow em 2026-11-06
+
+A Fase A tem um **protótipo Python read-only** em `tools/study_scheduler.py`, catálogo em `competitions/tjsp-escrevente-2025/STUDY_TOPIC_CATALOG.json` e testes em `tests/test_study_scheduler.py`. A auditoria de entrada real está em `STUDY_SHADOW_BASELINE_2026-11-06.md`. O catálogo representa categorias amplas, não domínio integral de artigos; rótulos sem correspondência permanecem `UNMAPPED`.
+
+Exemplo de execução em checkout completo e consistente de um único commit:
+
+```bash
+python tools/study_scheduler.py --participant-id p001 --competition-id tjsp-escrevente-2025 --as-of 2026-11-06 --source-commit-sha <SHA_VERIFICADO>
+```
+
+A saída JSON é apenas **projeção efêmera em stdout**. Não há escrita, reserva, autenticação, agendamento automático, alteração do prompt de um chat aberto nem distribuição entre chats simultâneos. O `source_commit_sha` é rótulo informado por quem executa, e não verificação criptográfica realizada pelo script. Não executar sobre diretório que misture commits diferentes e não interpretar a saída como evento de evidência. Os testes de reprodutibilidade e concorrência real ainda devem ser verificados em checkout completo.
+
+**Gate de ativação continua fechado.** Nem o sucesso dos testes do protótipo nem o merge de código em main autorizam ativação. Fase B exige `python tools/verify.py` no repositório íntegro e revisão das evidências. Fase C exige que os dois blocos ativos terminem e tenham readback confirmado, além de coordenação efetiva de reservas, rollback e adesão explícita de novas sessões. `DIREITO-016` editorial permanece independente.
