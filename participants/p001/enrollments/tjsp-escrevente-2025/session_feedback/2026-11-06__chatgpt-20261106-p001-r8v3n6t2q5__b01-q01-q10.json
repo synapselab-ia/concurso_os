@@ -1,0 +1,422 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261106-p001-r8v3n6t2q5__block_review__b01-q01-q10",
+  "session_id": "chatgpt-20261106-p001-r8v3n6t2q5",
+  "block_id": "b01-q01-q10",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-06",
+  "recorded_at": "2026-11-06",
+  "timing_note": "Data da sessao observada; tempos individuais de resposta e duracao nao medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "10 respostas A-E, confianca, alternativas consideradas, autocorrecoes e autorrelatos pos-explicacao, mais um reforco nao pontuavel Q08-R1.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false
+  },
+  "scope": {
+    "first_main_question": 1,
+    "last_main_question": 10,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "Q08-R1, microquestao de reforco; outras sessoes",
+    "outside_scope": "Demais blocos e chats com session_id distinto"
+  },
+  "score": {
+    "correct": 9,
+    "incorrect": 1,
+    "total": 10,
+    "computed_percent": 90
+  },
+  "confidence": {
+    "firm": 9,
+    "firm_correct": 9,
+    "firm_incorrect": 0,
+    "uncertain_between_2": 1,
+    "uncertain_correct": 0,
+    "uncertain_incorrect": 1,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 9,
+    "correct_uncertain": 0,
+    "incorrect_high_confidence": 0,
+    "incorrect_low_confidence": 1,
+    "correct_by_guess": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      8
+    ],
+    "high_confidence_error_question_ids": [],
+    "self_reported_false_knowledge_question_ids": [
+      8
+    ],
+    "wrong_answer_but_key_considered_question_ids": [
+      8
+    ],
+    "confirmed_reading_errors": 0,
+    "unverified_causal_attributions": "Nao inferir estrategia para questoes sem autorrelato; Q08 causa explicitada pelo participante."
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        2,
+        8
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        1,
+        10
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        3
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        5
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        6
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        7
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        4
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        9
+      ]
+    },
+    {
+      "subject": "atualidades",
+      "total": 0,
+      "correct": 0,
+      "question_ids": []
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 1,
+      "display_id": "Q01",
+      "subject": "raciocinio-logico",
+      "subtopic": "contrapositiva_condicional_com_conjuncao_e_de_morgan",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 2,
+      "display_id": "Q02",
+      "subject": "portugues",
+      "subtopic": "concordancia_haver_fazer_existir_e_se_apassivador",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 3,
+      "display_id": "Q03",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_334_335_litisconsorcio_e_prazo_contestacao",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 4,
+      "display_id": "Q04",
+      "subject": "informatica",
+      "subtopic": "excel_referencias_mistas_copia_E4_para_G7",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "regra_dos_cifroes_aplicada_mentalmente"
+    },
+    {
+      "question_number": 5,
+      "display_id": "Q05",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_366_367_citacao_edital_vs_pessoal",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "recuperacao_das_regras_cpp_366_367"
+    },
+    {
+      "question_number": 6,
+      "display_id": "Q06",
+      "subject": "direito-penal",
+      "subtopic": "cp_312_paragrafo_3_peculato_culposo_reparacao_pos_transito",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "recuperacao_exata_da_regra_cp_312_paragrafo_3"
+    },
+    {
+      "question_number": 7,
+      "display_id": "Q07",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_5_lxx_lei_12016_art_21_mandado_seguranca_coletivo",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "recuperacao_da_regra_lei_12016_art_21"
+    },
+    {
+      "question_number": 8,
+      "display_id": "Q08",
+      "subject": "portugues",
+      "subtopic": "regencia_pronomes_relativos_cujo_sem_artigo",
+      "selected": "B",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "C"
+      ],
+      "response_class": "incorrect_low_confidence",
+      "error_type": "self_reported_false_knowledge_cujo_requires_article",
+      "error_signal": "Participante afirmou que achava que 'cujo' exigia artigo; alternativa C constava entre as duas consideradas.",
+      "post_explanation_doubt": "duvida_resolvida_apos_reforco",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 9,
+      "display_id": "Q09",
+      "subject": "matematica",
+      "subtopic": "porcentagem_sucessiva_processos_40_porcento_e_35_porcento_do_saldo",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "equacao_234_igual_x_vezes_0_60_vezes_0_65"
+    },
+    {
+      "question_number": 10,
+      "display_id": "Q10",
+      "subject": "raciocinio-logico",
+      "subtopic": "contrapositiva_condicional_com_disjuncao_e_de_morgan",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "contrapositiva_e_de_morgan_mentalmente"
+    }
+  ],
+  "reinforcements": {
+    "attempted": 1,
+    "valid": 1,
+    "valid_correct": 1,
+    "valid_incorrect": 0,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 8,
+        "display_id": "Q08-R1",
+        "subject": "portugues",
+        "subtopic": "regencia_de_necessitar_e_cujo_sem_artigo",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": null,
+        "post_explanation_self_report": "duvida_resolvida",
+        "self_reported_error_cause": "achava_que_cujo_exigia_artigo",
+        "interpretation": "Refoco imediato correto; nao constitui prova de retencao apos intervalo."
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "portugues_cujo_regencia_relativos",
+      "evidence": "Q08 B incorreta; C considerada; confianca entre 2; relatou crenca incorreta de artigo apos cujo; Q08-R1 D correta e duvida resolvida.",
+      "interpretation": "Falso conhecimento pontual autorrelatado; corrigido no reforco imediato, retencao posterior ainda nao verificada."
+    },
+    {
+      "topic": "rlm_contraposicao_de_morgan",
+      "evidence": "Q01 C correta firme e Q10 D correta firme com conectivos distintos; Q10 resolvida mentalmente.",
+      "interpretation": "Duas recuperacoes positivas nesta sessao apos fragilidade historica; nao declarar dominio definitivo."
+    },
+    {
+      "topic": "direito_cpc_cpp_cp_constitucional",
+      "evidence": "Q03 Q05 Q06 Q07 corretas firmes; recuperacao literal autorrelatada em Q05 Q06 Q07.",
+      "interpretation": "Transferencia positiva em microdrills; manter revisao espacada."
+    },
+    {
+      "topic": "matematica_porcentagens_sucessivas",
+      "evidence": "Q09 C correta firme, metodo declarado 234=(x*0,6)*0,65.",
+      "interpretation": "Processo matematico explicitamente verificado na resposta; sinal de dominio operacional nesta tarefa."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "portugues_cujo_sem_artigo",
+        "portugues_relativos_com_regencia_e_crase"
+      ],
+      "retest": "Variar contexto apos intervalo de questoes principais; preservar Q08 como erro apesar do reforco correto."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "rlm_condicional_contrapositiva_de_morgan"
+      ],
+      "retest": "Nova forma para avaliar retencao e generalizacao sem dica."
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "atualidades",
+        "direito_administrativo",
+        "legislacao_interna",
+        "outros_topicos_nao_cobertos"
+      ],
+      "retest": "Abrir exploracao dos conteudos do edital em blocos seguintes sem monopolizar a pratica."
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "portugues_concordancia",
+        "cpc_334_335",
+        "cpp_366_367",
+        "cp_312_3",
+        "cf_mandado_seguranca_coletivo",
+        "excel_referencias_mistas",
+        "matematica_porcentagem_sucessiva"
+      ],
+      "retest": "Revisao espacada em novos contextos."
+    }
+  ],
+  "evidence_limits": [
+    "Sem tempo individual de resposta medido.",
+    "Estrategias apenas quando autorrelatadas; ausencia de relato mantida como null.",
+    "Reforco Q08-R1 correto sem pontuacao principal.",
+    "Microdrill nao equivale a simulacao integral nem a mastery definitivo.",
+    "Nenhum cumulativo global de chats paralelos foi calculado ou gravado."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
