@@ -79,3 +79,10 @@ Próxima tarefa técnica opcional para automatização: implementar validador/co
 ## Trilha transversal: cobertura do edital e rodízio adaptativo (DEC-0022)
 
 Projeto em fase DESIGN_SHADOW_ONLY, sem efeito nos chats de estudo em andamento. Ler `00_SYSTEM/STUDY_SCHEDULER_ROLLOUT.md`. Próxima tarefa técnica: implementar catálogo e ferramenta determinística apenas de leitura, testar os registros Q01-Q60, o rodízio 60/30/10 e, separadamente, reservas de tópicos entre sessões. Não alterar CONFIG ou feedback ativo nesta fase. Somente ativar em novos blocos/sessões depois de gates e decisão específica, com avaliações a cada 50 questões principais consolidadas. `DIREITO-016` permanece a NEXT_ACTION editorial.
+
+
+## Status da implementação transversal do scheduler em modo shadow (2026-11-06)
+
+Arquivos entregues: `tools/study_scheduler.py`, `tests/test_study_scheduler.py`, `competitions/tjsp-escrevente-2025/STUDY_TOPIC_CATALOG.json` e `00_SYSTEM/STUDY_SHADOW_BASELINE_2026-11-06.md`. O protótipo **somente lê** feedback já persistido e sugere plano 60/30/10 com rodízio ponderado; não grava resultados, não reserva assuntos e não é ativo para chats. Auditoria real do snapshot p001 Q01-Q60: 60 principais, 48 acertos, 59 itens mapeáveis e 1 `UNMAPPED` em 56 categorias gerais (31 sem ocorrência). A base GitHub dessa auditoria é `121fe5318ec280a8281847a0c82ffd6ab064f638`.
+
+**Próximo gate transversal:** executar `python tools/verify.py` no checkout completo, confrontar o output efetivo do script com a auditoria real, implementar/testar reserva de tópicos entre chats e confirmar readback dos dois blocos ativos. **Não ativar** por este merge e não mexer nas sessões abertas. `DIREITO-016` continua NEXT_ACTION editorial.
