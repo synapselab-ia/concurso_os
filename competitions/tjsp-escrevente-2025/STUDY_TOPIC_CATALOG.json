@@ -1,0 +1,710 @@
+{
+  "schema_version": "0.1",
+  "competition_id": "tjsp-escrevente-2025",
+  "source_ref": "SRC-TJSP-EDITAL-2025-02",
+  "coverage_granularity": "broad_operational_categories_not_full_article_coverage",
+  "notes": "Categorias amplas derivadas de SYLLABUS.md e BLUEPRINT.json. Aliases classificam rótulos históricos, não inferem domínio do conteúdo inteiro nem frequências VUNESP por tópico. UNMAPPED não significa desconhecido.",
+  "topics": [
+    {
+      "id": "pt.interpretacao",
+      "subject": "portugues",
+      "label": "Interpretação, inferência, coesão e relações de sentido",
+      "aliases": [
+        "interpretacao",
+        "inferencia",
+        "coesao",
+        "relacao_adversativa"
+      ]
+    },
+    {
+      "id": "pt.lexico",
+      "subject": "portugues",
+      "label": "Significação, sinônimos, antônimos e sentido figurado",
+      "aliases": [
+        "significacao",
+        "sinonimo",
+        "antonimo",
+        "sentido_figurado",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "pt.classes",
+      "subject": "portugues",
+      "label": "Classes de palavras",
+      "aliases": [
+        "classes_de_palavras",
+        "classe_gramatical",
+        "adverbio",
+        "pronome_possessivo"
+      ]
+    },
+    {
+      "id": "pt.concordancia",
+      "subject": "portugues",
+      "label": "Concordância verbal e nominal",
+      "aliases": [
+        "concordancia",
+        "haver_existir"
+      ]
+    },
+    {
+      "id": "pt.regencia",
+      "subject": "portugues",
+      "label": "Regência verbal e nominal",
+      "aliases": [
+        "regencia"
+      ]
+    },
+    {
+      "id": "pt.colocacao",
+      "subject": "portugues",
+      "label": "Colocação pronominal",
+      "aliases": [
+        "colocacao_pronominal",
+        "proclise",
+        "enclise",
+        "mesoclise"
+      ]
+    },
+    {
+      "id": "pt.crase",
+      "subject": "portugues",
+      "label": "Crase",
+      "aliases": [
+        "crase"
+      ]
+    },
+    {
+      "id": "pt.pontuacao",
+      "subject": "portugues",
+      "label": "Pontuação, orações e vírgulas",
+      "aliases": [
+        "pontuacao",
+        "oracoes_subordinadas",
+        "virgulas"
+      ]
+    },
+    {
+      "id": "dp.fe_publica",
+      "subject": "direito-penal",
+      "label": "Fé pública e falsidades, CP 293 a 311-A",
+      "aliases": [
+        "cp_293",
+        "cp_294",
+        "cp_297",
+        "cp_298",
+        "cp_299",
+        "cp_304",
+        "cp_305",
+        "cp_307",
+        "cp_308",
+        "cp_311a",
+        "falsa_identidade",
+        "falsificacao"
+      ]
+    },
+    {
+      "id": "dp.peculato",
+      "subject": "direito-penal",
+      "label": "Peculato, CP 312",
+      "aliases": [
+        "cp_312",
+        "peculato"
+      ]
+    },
+    {
+      "id": "dp.sistemas",
+      "subject": "direito-penal",
+      "label": "Dados e sistemas, CP 313-A e 313-B",
+      "aliases": [
+        "cp_313a",
+        "cp_313b"
+      ]
+    },
+    {
+      "id": "dp.administracao",
+      "subject": "direito-penal",
+      "label": "Demais crimes contra a administração pública",
+      "aliases": [
+        "cp_314",
+        "cp_315",
+        "cp_316",
+        "cp_317",
+        "cp_319",
+        "cp_320",
+        "cp_321",
+        "cp_322",
+        "cp_323",
+        "cp_325",
+        "cp_328",
+        "cp_329",
+        "cp_330",
+        "cp_331",
+        "cp_332",
+        "cp_333",
+        "cp_336",
+        "cp_337",
+        "cp_339",
+        "cp_340",
+        "cp_342",
+        "cp_347",
+        "cp_357",
+        "cp_359",
+        "prevaricacao",
+        "condescendencia"
+      ]
+    },
+    {
+      "id": "dpp.juiz",
+      "subject": "direito-processual-penal",
+      "label": "Juiz, impedimento e suspeição, CPP 251-258",
+      "aliases": [
+        "cpp_251",
+        "cpp_252",
+        "cpp_253",
+        "cpp_254",
+        "cpp_255",
+        "cpp_256",
+        "cpp_257",
+        "cpp_258",
+        "impedimento_vs_suspeicao"
+      ]
+    },
+    {
+      "id": "dpp.defesa",
+      "subject": "direito-processual-penal",
+      "label": "Defesa e sujeitos, CPP 261-274",
+      "aliases": [
+        "cpp_261",
+        "cpp_262",
+        "cpp_263",
+        "cpp_264",
+        "cpp_265",
+        "cpp_266",
+        "cpp_267",
+        "cpp_274"
+      ]
+    },
+    {
+      "id": "dpp.citacao",
+      "subject": "direito-processual-penal",
+      "label": "Citação e intimação, CPP 351-372",
+      "aliases": [
+        "cpp_351",
+        "cpp_352",
+        "cpp_353",
+        "cpp_354",
+        "cpp_355",
+        "cpp_356",
+        "cpp_357",
+        "cpp_358",
+        "cpp_359",
+        "cpp_360",
+        "cpp_361",
+        "cpp_362",
+        "cpp_363",
+        "cpp_364",
+        "cpp_365",
+        "cpp_366",
+        "cpp_367",
+        "cpp_368",
+        "cpp_369",
+        "cpp_370",
+        "cpp_371",
+        "cpp_372"
+      ]
+    },
+    {
+      "id": "dpp.procedimento",
+      "subject": "direito-processual-penal",
+      "label": "Procedimentos e júri, CPP 394-497",
+      "aliases": [
+        "cpp_394",
+        "cpp_395",
+        "cpp_396",
+        "cpp_397",
+        "cpp_399",
+        "cpp_400",
+        "cpp_406",
+        "cpp_413",
+        "cpp_422",
+        "cpp_447",
+        "cpp_483",
+        "tribunal_do_juri"
+      ]
+    },
+    {
+      "id": "dpp.especiais",
+      "subject": "direito-processual-penal",
+      "label": "Procedimentos especiais, CPP 531-548",
+      "aliases": [
+        "cpp_531",
+        "cpp_532",
+        "cpp_533",
+        "cpp_534",
+        "cpp_535",
+        "cpp_536",
+        "cpp_537",
+        "cpp_538",
+        "cpp_541",
+        "cpp_548"
+      ]
+    },
+    {
+      "id": "dpp.recursos",
+      "subject": "direito-processual-penal",
+      "label": "Recursos e habeas corpus, CPP 574-667",
+      "aliases": [
+        "cpp_574",
+        "cpp_581",
+        "cpp_593",
+        "cpp_619",
+        "cpp_621",
+        "cpp_647",
+        "cpp_660"
+      ]
+    },
+    {
+      "id": "dpp.jecrim",
+      "subject": "direito-processual-penal",
+      "label": "Lei 9.099/1995: juizados criminais",
+      "aliases": [
+        "l9099_penal",
+        "lei_9099_penal",
+        "jecrim"
+      ]
+    },
+    {
+      "id": "dpc.juiz",
+      "subject": "direito-processual-civil",
+      "label": "Juiz e auxiliares, CPC 144-155",
+      "aliases": [
+        "cpc_144",
+        "cpc_145",
+        "cpc_146",
+        "cpc_147",
+        "cpc_148",
+        "cpc_149",
+        "cpc_150",
+        "cpc_151",
+        "cpc_152",
+        "cpc_153",
+        "cpc_154",
+        "cpc_155"
+      ]
+    },
+    {
+      "id": "dpc.prazos",
+      "subject": "direito-processual-civil",
+      "label": "Atos processuais e prazos, CPC 188-275",
+      "aliases": [
+        "cpc_188",
+        "cpc_219",
+        "cpc_220",
+        "cpc_221",
+        "cpc_222",
+        "cpc_223",
+        "cpc_224",
+        "cpc_225",
+        "cpc_226",
+        "cpc_231"
+      ]
+    },
+    {
+      "id": "dpc.tutela",
+      "subject": "direito-processual-civil",
+      "label": "Tutela provisória, CPC 294-311",
+      "aliases": [
+        "cpc_294",
+        "cpc_295",
+        "cpc_296",
+        "cpc_297",
+        "cpc_298",
+        "cpc_299",
+        "cpc_300",
+        "cpc_301",
+        "cpc_302",
+        "cpc_303",
+        "cpc_304",
+        "cpc_305",
+        "cpc_306",
+        "cpc_307",
+        "cpc_308",
+        "cpc_309",
+        "cpc_310",
+        "cpc_311"
+      ]
+    },
+    {
+      "id": "dpc.conciliacao",
+      "subject": "direito-processual-civil",
+      "label": "Audiência de conciliação e contestação, CPC 334-335",
+      "aliases": [
+        "cpc_334",
+        "cpc_335",
+        "litisconsorcio_desinteresse"
+      ]
+    },
+    {
+      "id": "dpc.procedimento",
+      "subject": "direito-processual-civil",
+      "label": "Procedimento comum e cumprimento, CPC 318-538",
+      "aliases": [
+        "cpc_318",
+        "cpc_319",
+        "cpc_320",
+        "cpc_321",
+        "cpc_323",
+        "cpc_336",
+        "cpc_337",
+        "cpc_338",
+        "cpc_339",
+        "cpc_340",
+        "cpc_513",
+        "cpc_523"
+      ]
+    },
+    {
+      "id": "dpc.recursos",
+      "subject": "direito-processual-civil",
+      "label": "Recursos, CPC 994-1026",
+      "aliases": [
+        "cpc_994",
+        "cpc_1003",
+        "cpc_1009",
+        "cpc_1015",
+        "cpc_1022",
+        "cpc_1023",
+        "cpc_1026"
+      ]
+    },
+    {
+      "id": "dpc.je_civel",
+      "subject": "direito-processual-civil",
+      "label": "Lei 9.099/1995: juizados cíveis",
+      "aliases": [
+        "l9099_civel",
+        "lei_9099_civel"
+      ]
+    },
+    {
+      "id": "dpc.fazenda",
+      "subject": "direito-processual-civil",
+      "label": "Lei 12.153/2009: fazenda pública",
+      "aliases": [
+        "lei_12153",
+        "l12153"
+      ]
+    },
+    {
+      "id": "dc.fundamentais",
+      "subject": "direito-constitucional",
+      "label": "Direitos e garantias fundamentais",
+      "aliases": [
+        "cf_5",
+        "cf_art5",
+        "cf_6",
+        "cf_7",
+        "cf_8",
+        "cf_9",
+        "cf_10",
+        "cf_11",
+        "cf_12",
+        "cf_13",
+        "habeas_data",
+        "mandado_seguranca"
+      ]
+    },
+    {
+      "id": "dc.administracao",
+      "subject": "direito-constitucional",
+      "label": "Administração pública e organização do Estado",
+      "aliases": [
+        "cf_18",
+        "cf_19",
+        "cf_20",
+        "cf_21",
+        "cf_22",
+        "cf_23",
+        "cf_24",
+        "cf_25",
+        "cf_26",
+        "cf_27",
+        "cf_28",
+        "cf_29",
+        "cf_30",
+        "cf_31",
+        "cf_37",
+        "cf_38",
+        "cf_39",
+        "cf_40",
+        "cf_41"
+      ]
+    },
+    {
+      "id": "dc.judiciario",
+      "subject": "direito-constitucional",
+      "label": "Poder Judiciário, CF art. 92",
+      "aliases": [
+        "cf_92",
+        "judiciario"
+      ]
+    },
+    {
+      "id": "da.estatuto",
+      "subject": "direito-administrativo",
+      "label": "Estatuto paulista, Lei 10.261/1968",
+      "aliases": [
+        "lei_10261",
+        "estatuto_paulis"
+      ]
+    },
+    {
+      "id": "da.improbidade",
+      "subject": "direito-administrativo",
+      "label": "Improbidade administrativa, Lei 8.429/1992",
+      "aliases": [
+        "lei_8429",
+        "improbidade"
+      ]
+    },
+    {
+      "id": "li.teletrabalho",
+      "subject": "legislacao-interna",
+      "label": "Resolução TJSP 850/2021: teletrabalho",
+      "aliases": [
+        "res_850",
+        "teletrabalho"
+      ]
+    },
+    {
+      "id": "li.eproc",
+      "subject": "legislacao-interna",
+      "label": "Resolução TJSP 963/2025: eproc",
+      "aliases": [
+        "res_963",
+        "eproc"
+      ]
+    },
+    {
+      "id": "li.carreiras",
+      "subject": "legislacao-interna",
+      "label": "LC 1.111/2010: cargos e carreiras",
+      "aliases": [
+        "lc_1111",
+        "carreiras"
+      ]
+    },
+    {
+      "id": "li.regimento",
+      "subject": "legislacao-interna",
+      "label": "Regimento Interno do TJSP",
+      "aliases": [
+        "regimento_interno",
+        "ritjsp"
+      ]
+    },
+    {
+      "id": "li.corregedoria",
+      "subject": "legislacao-interna",
+      "label": "Normas da Corregedoria Geral de Justiça",
+      "aliases": [
+        "nscgj",
+        "normas_corregedoria",
+        "cgj_"
+      ]
+    },
+    {
+      "id": "ac.atualidades",
+      "subject": "atualidades_pcd",
+      "label": "Atualidades desde o primeiro semestre de 2025",
+      "aliases": [
+        "atualidades_",
+        "politica_",
+        "economia_",
+        "noticias_"
+      ]
+    },
+    {
+      "id": "ac.pcd",
+      "subject": "atualidades_pcd",
+      "label": "Lei Brasileira de Inclusão, arts. 1-13 e 34-38",
+      "aliases": [
+        "lbi_",
+        "lei_13146",
+        "pcd_"
+      ]
+    },
+    {
+      "id": "mat.porcentagem",
+      "subject": "matematica",
+      "label": "Porcentagem e juros simples",
+      "aliases": [
+        "porcentagens",
+        "porcentagem",
+        "juros_simples"
+      ]
+    },
+    {
+      "id": "mat.proporcao",
+      "subject": "matematica",
+      "label": "Razão, proporção e regra de três",
+      "aliases": [
+        "razao_",
+        "proporcao",
+        "regra_de_tres"
+      ]
+    },
+    {
+      "id": "mat.medias",
+      "subject": "matematica",
+      "label": "Médias simples e ponderadas",
+      "aliases": [
+        "media_",
+        "medias_"
+      ]
+    },
+    {
+      "id": "mat.algebra",
+      "subject": "matematica",
+      "label": "Operações, equações, sistemas, MMC e MDC",
+      "aliases": [
+        "equacao_",
+        "sistemas_",
+        "mmc_",
+        "mdc_",
+        "numeros_reais"
+      ]
+    },
+    {
+      "id": "mat.geometria",
+      "subject": "matematica",
+      "label": "Geometria, medidas e Pitágoras",
+      "aliases": [
+        "geometria",
+        "perimetro",
+        "area_",
+        "volume_",
+        "pitagoras",
+        "sistemas_de_medidas"
+      ]
+    },
+    {
+      "id": "mat.graficos",
+      "subject": "matematica",
+      "label": "Tabelas e gráficos",
+      "aliases": [
+        "grafico",
+        "tabelas_"
+      ]
+    },
+    {
+      "id": "inf.excel",
+      "subject": "informatica",
+      "label": "Excel e planilhas Microsoft 365",
+      "aliases": [
+        "excel_",
+        "cont_ses",
+        "somase"
+      ]
+    },
+    {
+      "id": "inf.word",
+      "subject": "informatica",
+      "label": "Word Microsoft 365",
+      "aliases": [
+        "word_",
+        "ms_word"
+      ]
+    },
+    {
+      "id": "inf.email",
+      "subject": "informatica",
+      "label": "Correio eletrônico e Outlook",
+      "aliases": [
+        "email_",
+        "outlook_",
+        "cc_cco"
+      ]
+    },
+    {
+      "id": "inf.windows",
+      "subject": "informatica",
+      "label": "Windows e gerenciamento de arquivos",
+      "aliases": [
+        "windows_",
+        "arquivos_",
+        "pastas_",
+        "atalhos_"
+      ]
+    },
+    {
+      "id": "inf.internet",
+      "subject": "informatica",
+      "label": "Internet, URL e navegação",
+      "aliases": [
+        "internet_",
+        "url_",
+        "links_",
+        "navegador_"
+      ]
+    },
+    {
+      "id": "inf.teams",
+      "subject": "informatica",
+      "label": "Microsoft Teams",
+      "aliases": [
+        "teams_"
+      ]
+    },
+    {
+      "id": "inf.onedrive",
+      "subject": "informatica",
+      "label": "OneDrive",
+      "aliases": [
+        "onedrive_"
+      ]
+    },
+    {
+      "id": "rlm.logica",
+      "subject": "raciocinio-logico",
+      "label": "Estruturas lógicas, condicionais e negações",
+      "aliases": [
+        "negacao_",
+        "condicional",
+        "contraposicao",
+        "de_morgan",
+        "equivalencia"
+      ]
+    },
+    {
+      "id": "rlm.conjuntos",
+      "subject": "raciocinio-logico",
+      "label": "Conjuntos e diagramas lógicos",
+      "aliases": [
+        "conjuntos",
+        "diagramas"
+      ]
+    },
+    {
+      "id": "rlm.argumentacao",
+      "subject": "raciocinio-logico",
+      "label": "Argumentação, dedução e relações arbitrárias",
+      "aliases": [
+        "argumentacao",
+        "deducao",
+        "relacoes_arbitrarias"
+      ]
+    },
+    {
+      "id": "rlm.sequencias",
+      "subject": "raciocinio-logico",
+      "label": "Sequências e regularidades",
+      "aliases": [
+        "sequencias",
+        "regularidades"
+      ]
+    }
+  ]
+}
