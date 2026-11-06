@@ -216,3 +216,14 @@ not_started:
 - Branch de implementação documental: `feat/study-coverage-scheduler-shadow-v1`, baseada em `1be6347ebc06eddd5ac5e91f0868cb45c86a0153`.
 - Gate determinístico: `python tools/verify.py` NOT_EXECUTED_CURRENT_ENVIRONMENT, porque o container falhou no `git ls-remote` com `Could not resolve host: github.com` (exit 128). Revisão do diff e readback por API são gates distintos.
 - Próxima etapa transversal: protótipo em shadow, catálogo de cobertura e testes; a próxima etapa editorial continua `DIREITO-016`.
+
+
+## Complemento de engenharia: shadow scheduler executável (2026-11-06)
+
+- Fase transversal: `SHADOW_READ_ONLY_IMPLEMENTED_PENDING_FULL_GATE`; status de ativação: `DISABLED`.
+- Arquivos: `tools/study_scheduler.py`; `tests/test_study_scheduler.py`; `competitions/tjsp-escrevente-2025/STUDY_TOPIC_CATALOG.json`; `00_SYSTEM/STUDY_SHADOW_BASELINE_2026-11-06.md`.
+- Histórico real auditado via API: `p001` Q01-Q60, 60/48, 59 categorias atribuídas aos itens, um item UNMAPPED, 31 das 56 categorias sem ocorrência. Snapshot original `main` `121fe5318ec280a8281847a0c82ffd6ab064f638`.
+- Execução local de testes de protótipo equivalente: 15 testes unitários PASS no diretório de desenvolvimento isolado; os testes remotos exatos e `python tools/verify.py` no checkout íntegro não executados neste ambiente, por DNS `Could not resolve host: github.com`. Não confundir análise via API, testes de desenvolvimento ou readback com gate canônico PASS.
+- Nenhum arquivo em `participants/`, nenhum `CONFIG.json`, nenhum prompt vivo, nenhum SubjectPack e nenhum registro de questão alterados.
+- Riscos pendentes: classificação ampla não demonstra cobertura integral; retificações ficam fora do cálculo automático; ordenação temporal entre chats não é inferida; sugestões não são reservas; não há garantia de desduplicação pedagógica entre chats até implementar coordenação.
+- NEXT_ACTION editorial continua `DIREITO-016`; ativação aguarda conclusão e gravação confirmada de ambos blocos de estudo.
