@@ -67,3 +67,10 @@ fatal: unable to access 'https://github.com/synapselab-ia/concurso_os.git/': Cou
 Exit code: `128`.
 
 Resultado: `NOT_EXECUTED_CURRENT_ENVIRONMENT`, nunca `PASS`, conforme `DEC-0009`.
+
+
+## Trilha transversal, independente de DIREITO-016: chats paralelos
+
+Em 2026-11-06 foi preparada a especificação `00_SYSTEM/PARALLEL_STUDY_PROTOCOL.md` para isolamento por sessão, escrita append-only e consolidação baseada em snapshot. Ela **não** executa o smoke NotebookLM e não substitui o `DIREITO-016` acima.
+
+Próxima tarefa técnica opcional para automatização: implementar validador/consolidador determinístico e testes de corrida/idempotência no repositório completo; rodar `python tools/verify.py` antes de declarar essa automação operacional. Até lá, agentes executam a gravação condicional e reconciliação descritas no protocolo, sem alegar garantias transacionais inexistentes.

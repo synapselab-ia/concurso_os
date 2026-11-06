@@ -33,3 +33,7 @@ Nenhuma decisão, avanço, bloqueio ou próxima ação pode existir exclusivamen
 ## Definition of Done de continuidade
 
 Ao abrir um chat novo e pedir "continue o projeto concurso_os a partir do estado canônico do GitHub", um agente deve conseguir determinar: fase atual, trabalho concluído, trabalho em andamento, próximo passo, branch/PR esperados, validação conhecida e decisões pendentes.
+
+## Gravações concorrentes de estudo
+
+Para dois ou mais chats simultâneos, aplicar `00_SYSTEM/PARALLEL_STUDY_PROTOCOL.md`: isolamento por enrollment e session_id, feedback imutável com idempotência, readback obrigatório e nenhum overwrite de evidência. Não tratar respostas de chats diferentes como sequência global automática.

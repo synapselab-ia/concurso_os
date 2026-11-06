@@ -194,3 +194,14 @@ not_started:
   - direito-administrativo
   - legislacao-interna
 ```
+
+
+## Trilha independente: sessões paralelas (2026-11-06)
+
+- Escopo: implementação documental do protocolo para chats simultâneos de treino, separada da autoria de SubjectPacks.
+- Branch de implementação: `feat/parallel-study-sessions-protocol`, base observada `9f5ad564eff4cd694c5d158d7def6b7b40ea83e9`.
+- Protocolo novo: `00_SYSTEM/PARALLEL_STUDY_PROTOCOL.md`; decisão: `DEC-0021`.
+- Invariantes: session_id distinto por chat; feedback_id idempotente; criação condicional de arquivo novo; retificação append-only; readback; projeção por enrollment e snapshot Git; nenhum cumulativo global escrito por chat.
+- Limite de entrega: convenção operacional; sem motor automático de consolidação nem teste de concorrência executado.
+- Validação: execução de `python tools/verify.py` exige checkout íntegro. Tentativa de `git ls-remote https://github.com/synapselab-ia/concurso_os.git HEAD` falhou em 2026-11-06 com `Could not resolve host: github.com`. Status `NOT_EXECUTED_CURRENT_ENVIRONMENT`, não PASS.
+- Próxima etapa editorial `DIREITO-016` permanece intacta e aguarda smoke manual do usuário no NotebookLM.
