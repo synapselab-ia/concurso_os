@@ -120,6 +120,22 @@ class ShadowSchedulerTests(unittest.TestCase):
             finally:
                 t.cleanup()
 
+    def test_same_session_duplicate_question_excludes_both_blocks(self):
+        t, root = self.make_root()
+        try:
+            q = {"question_number": 8, "subject": "portugues",
+                 "subtopic": "concordancia_verbal", "correct": True}
+            self.write(root, "p001", "a.json",
+                       self.block("p001", "b01", [q]))
+            self.write(root, "p001", "b.json",
+                       self.block("p001", "b02", [q]))
+            report = self.report(root)
+            self.assertEqual(0, report["question_level_records"])
+            self.assertTrue(any("Overlapping local question" in x
+                                for x in report["warnings"]))
+        finally:
+            t.cleanup()
+
     def test_score_inconsistency_fails_closed(self):
         t, root = self.make_root()
         try:
