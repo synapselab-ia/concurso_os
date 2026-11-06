@@ -42,3 +42,7 @@ Se dois ou mais chats atuarem sobre o mesmo enrollment, ler `PARALLEL_STUDY_PROT
 ## Evolução do agendador de estudos (ainda não ativa)
 
 Consultar `STUDY_SCHEDULER_ROLLOUT.md` ao planejar implementação de seleção de temas/cobertura. É proposta em implantação segura; não substituir automaticamente prompts nem filas de questões de sessões existentes. Seguir `PARALLEL_STUDY_PROTOCOL.md` para gravações.
+
+## Execução do analisador shadow (somente leitura)
+
+Para gerar diagnóstico de cobertura, consultar `STUDY_SCHEDULER_ROLLOUT.md` e `STUDY_SHADOW_BASELINE_2026-11-06.md`. A ferramenta `tools/study_scheduler.py` só emite projeções em stdout. Não usar suas recomendações para trocar questões já apresentadas nem como reserva automática entre chats.
