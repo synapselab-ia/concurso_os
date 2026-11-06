@@ -54,7 +54,8 @@ def classify(subtopic: object, subject: object, catalog: dict) -> str | None:
         if entry["subject"] != subject:
             continue
         matches = [a for a in entry["aliases"]
-                   if re.search(r"(?<![a-z0-9])" + re.escape(a.lower()) + r"(?=$|[_-])", source)]
+                   if (source.startswith(a.lower()) if a.endswith("_") else
+                       re.search(r"(?<![a-z0-9])" + re.escape(a.lower()) + r"(?=$|[_-])", source))]
         if matches:
             longest = max(matches, key=len)
             candidates.append((int(source.startswith(longest)), len(longest), entry["id"]))
