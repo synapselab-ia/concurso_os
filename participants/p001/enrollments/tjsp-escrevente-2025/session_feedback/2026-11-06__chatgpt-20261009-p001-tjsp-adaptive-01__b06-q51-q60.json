@@ -1,0 +1,523 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261009-p001-tjsp-adaptive-01__block_review__b06-q51-q60",
+  "session_id": "chatgpt-20261009-p001-tjsp-adaptive-01",
+  "block_id": "b06-q51-q60",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-06",
+  "recorded_at": "2026-11-06",
+  "timing_note": "Data de fechamento conforme sessao; tempos individuais de resposta e duracao de estudo nao medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Respostas A-E, niveis de confianca informados, alternativas consideradas, autorrelatos pos-correcao e seis reforcos Q52-R1 Q53-R1 Q54-R1 a R4 observados na conversa.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false
+  },
+  "scope": {
+    "first_main_question": 51,
+    "last_main_question": 60,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "reforcos Q52-R1 Q53-R1 Q54-R1 a R4",
+    "outside_scope": "Q01-Q50 pertencem a cinco reviews historicos imutaveis; nao recontar reforcos nem aplicar cumulativo de outros chats."
+  },
+  "score": {
+    "correct": 7,
+    "incorrect": 3,
+    "total": 10,
+    "computed_percent": 70
+  },
+  "cumulative_after_block": {
+    "correct": 48,
+    "incorrect": 12,
+    "total": 60,
+    "computed_percent": 80,
+    "scope": "session_local",
+    "global_canonical": false,
+    "interpretation": "Acumulado desta sequencia Q01-Q60 conforme cinco reviews desta mesma sessao e respostas desta conversa; nao representa agregacao global de chats paralelos."
+  },
+  "confidence": {
+    "firm": 9,
+    "firm_correct": 7,
+    "firm_incorrect": 2,
+    "uncertain": 1,
+    "uncertain_correct": 0,
+    "uncertain_incorrect": 1,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 7,
+    "correct_uncertain": 0,
+    "correct_by_guess": 0,
+    "incorrect_high_confidence": 2,
+    "incorrect_low_confidence": 1
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "elimination_or_inference": {
+    "observed": 0,
+    "not_reported": 10,
+    "interpretation": "Estrategias de eliminacao/inferencia nao foram informadas nas questoes principais; nao atribuir estrategia com base na alternativa escolhida."
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      52,
+      53,
+      54
+    ],
+    "high_confidence_error_question_ids": [
+      52,
+      54
+    ],
+    "confirmed_content_rule_errors": [
+      54
+    ],
+    "confirmed_reading_errors": 0,
+    "self_reported_false_knowledge_question_ids": [],
+    "possible_answer_marking_error_question_ids": [
+      52
+    ],
+    "error_pattern": "Q52 resposta E incorreta firme com relato posterior de possivel marcacao equivocada, sem confirmacao; Q53 erro sob duvida entre duas alternativas, com reteste e transferencia Q60 corretos; Q54 erro conceitual firme de contrapositiva, De Morgan isolada melhorou mas reteste completo Q54-R4 foi incorreto."
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        51
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        52,
+        59
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        53,
+        60
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        54
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        55
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        56
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        57
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        58
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 51,
+      "display_id": "51",
+      "subject": "portugues",
+      "subtopic": "concordancia_haver_existir_e_particula_se",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 52,
+      "display_id": "52",
+      "subject": "informatica",
+      "subtopic": "outlook_para_cc_cco_responder_a_todos",
+      "selected": "E",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "incorrect_high_confidence",
+      "error_type": "causa_nao_verificada",
+      "error_signal": "Relatou depois que pretendia selecionar D; registro original E incorreto permanece sem retificacao",
+      "post_explanation_doubt": "relato_posterior_de_possivel_erro_de_marcacao_nao_confirmado"
+    },
+    {
+      "question_number": 53,
+      "display_id": "53",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_334_335_litisconsorcio_desinteresse_e_prazo_contestacao",
+      "selected": "D",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "uncertain_between_2",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "incorrect_low_confidence",
+      "error_type": "incerteza_na_aplicacao_da_regra",
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_diminuiu_apos_reforco_q53_r1"
+    },
+    {
+      "question_number": 54,
+      "display_id": "54",
+      "subject": "raciocinio-logico",
+      "subtopic": "contraposicao_condicional_com_conjuncao_e_de_morgan",
+      "selected": "B",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "incorrect_high_confidence",
+      "error_type": "erro_conceitual_de_alta_confianca",
+      "error_signal": "Dificuldade expressa com equivalencia da contrapositiva; De Morgan isolada melhorou nos reforcos; reteste final de contrapositiva incorreto",
+      "post_explanation_doubt": "compreensao_declarada_apos_explicacao_q54_r4"
+    },
+    {
+      "question_number": 55,
+      "display_id": "55",
+      "subject": "matematica",
+      "subtopic": "porcentagens_sucessivas_aumento_e_reducao",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 56,
+      "display_id": "56",
+      "subject": "direito-penal",
+      "subtopic": "cp_319_320_prevaricacao_condescendencia_criminosa",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 57,
+      "display_id": "57",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_252_254_impedimento_e_suspeicao",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 58,
+      "display_id": "58",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_5_habeas_data_e_gratuidade_certidoes",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 59,
+      "display_id": "59",
+      "subject": "informatica",
+      "subtopic": "excel_cont_ses_referencias_absolutas_e_relativas",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza"
+    },
+    {
+      "question_number": 60,
+      "display_id": "60",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_334_335_prazo_contestacao_litisconsortes_audiencia_cancelada_ou_realizada",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza_e_diferencio_as_duas_situacoes"
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 6,
+    "valid": 6,
+    "valid_correct": 5,
+    "valid_incorrect": 1,
+    "ambiguous_excluded": 0,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 52,
+        "display_id": "Q52-R1",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [],
+        "self_reported_post_explanation": null,
+        "subtopic": "outlook_cco_responder_a_todos",
+        "interpretation": "Reteste correto firme; nao prova se Q52 foi erro de marcacao ou erro de conteudo."
+      },
+      {
+        "origin_main_question": 53,
+        "display_id": "Q53-R1",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [],
+        "self_reported_post_explanation": "duvida_diminuiu",
+        "subtopic": "cpc_334_335_litisconsorcio_e_termo_inicial",
+        "interpretation": "Reteste imediato correto firme com autorrelato de duvida reduzida; transferencia posterior Q60 correta firme."
+      },
+      {
+        "origin_main_question": 54,
+        "display_id": "Q54-R1",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "guess_between_4",
+        "considered_alternatives": [
+          "A",
+          "C",
+          "E"
+        ],
+        "self_reported_post_explanation": "duvida_permaneceu",
+        "subtopic": "contraposicao_de_condicional_com_disjuncao",
+        "interpretation": "Acerto por chute entre quatro; nao equivale a dominio."
+      },
+      {
+        "origin_main_question": 54,
+        "display_id": "Q54-R2",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": "uncertain_between_2",
+        "considered_alternatives": [
+          "A"
+        ],
+        "self_reported_post_explanation": "duvida_diminuiu_antes_da_q54_r3",
+        "subtopic": "de_morgan_negacao_de_disjuncao",
+        "interpretation": "Acerto incerto; o relato subsequente de melhora referiu a explicacao da Q54-R2."
+      },
+      {
+        "origin_main_question": 54,
+        "display_id": "Q54-R3",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [],
+        "self_reported_post_explanation": null,
+        "subtopic": "de_morgan_negacao_de_disjuncao",
+        "interpretation": "Acerto firme em negacao isolada, apos duas tentativas com menor confianca."
+      },
+      {
+        "origin_main_question": 54,
+        "display_id": "Q54-R4",
+        "selected": "D",
+        "correct_answer": "E",
+        "correct": false,
+        "confidence": null,
+        "confidence_note": "Resposta enviada manualmente, sem categoria de confianca explicita; nao inferir.",
+        "considered_alternatives": [],
+        "self_reported_post_explanation": "compreensao_declarada_apos_explicitacao_de_contraexemplo",
+        "subtopic": "contraposicao_condicional_com_conjuncao",
+        "interpretation": "Reteste de contrapositiva incorreto; o participante depois afirmou compreender por que E era equivalente e D nao. Requer revisao espacada para demonstrar transferencia."
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "portugues_concordancia",
+      "evidence": "Q51 correta C firme, autorrelato de certeza mantida; revisita fragilidade anterior de haver/existir/se em Q44",
+      "interpretation": "Evidencia positiva de transferencia imediata e recuperacao."
+    },
+    {
+      "topic": "outlook_cco",
+      "evidence": "Q52 E incorreta firme (gabarito D); usuario depois relatou possivel erro de marcacao; Q52-R1 D correta firme",
+      "interpretation": "Nao atribuir automaticamente falso conhecimento. Monitorar marcacao e leitura de alternativas em prova."
+    },
+    {
+      "topic": "cpc_prazo_litisconsortes",
+      "evidence": "Q53 D incorreta com duvida entre D e C; Q53-R1 B correta firme, duvida diminuiu; Q60 C correta firme e certeza mantida apos explicacao",
+      "interpretation": "Transferencia positiva apos correcao, recomendar reteste espacado."
+    },
+    {
+      "topic": "contraposicao_de_morgan",
+      "evidence": "Q54 B incorreta firme; Q54-R1 D correta por chute entre quatro; R2 B correta com duvida entre duas; R3 C correta firme; R4 D incorreta sem confianca informada; ao final declarou compreensao apos contraexemplo",
+      "interpretation": "Negacao isolada mostrou melhora, mas contrapositiva completa permanece fragilidade. Evitar declarar dominio definitivo."
+    },
+    {
+      "topic": "matematica_porcentagem_sucessiva",
+      "evidence": "Q55 C correta firme, autoavaliacao certeza mantida",
+      "interpretation": "Aplicacao positiva da base variavel em aumento e desconto sucessivos."
+    },
+    {
+      "topic": "cp_319_320",
+      "evidence": "Q56 B correta firme, certeza mantida",
+      "interpretation": "Discriminacao positiva entre prevaricacao e condescendencia criminosa."
+    },
+    {
+      "topic": "cpp_252_254",
+      "evidence": "Q57 D correta firme, certeza mantida; revisao de tema historico Q28",
+      "interpretation": "Recuperacao positiva do contraste impedimento e suspeicao."
+    },
+    {
+      "topic": "cf_habeas_data",
+      "evidence": "Q58 B correta firme, certeza mantida",
+      "interpretation": "Diferenciacao correta entre habeas data e certidoes isentas de taxas."
+    },
+    {
+      "topic": "excel_cont_ses",
+      "evidence": "Q59 B correta firme, certeza mantida",
+      "interpretation": "Aplicacao positiva de criterios simultaneos e referencias absolutas/relativas."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "rlm_contraposicao_condicional_composta",
+        "rlm_condicional_inversa_vs_contrapositiva",
+        "rlm_de_morgan_em_consequente_composto"
+      ],
+      "retest": "Depois de intervalo e de outra materia, usar nova condicional composta com contraexemplo e confirmar confianca sem expor regra antes da tentativa."
+    },
+    {
+      "priority": "medium_spaced",
+      "targets": [
+        "cpc_334_paragrafos_4_a_6",
+        "cpc_335_i_ii_paragrafo_1",
+        "litisconsorcio_termo_inicial"
+      ],
+      "retest": "Q60 acerto firme apos Q53 incorreta; variar se audiencia foi efetivamente realizada ou cancelada, distinguindo termos individuais."
+    },
+    {
+      "priority": "medium_monitor",
+      "targets": [
+        "informatica_outlook_para_cc_cco_responder_a_todos",
+        "controle_marcacao_de_alternativa"
+      ],
+      "retest": "Rever regra Cco e Reply All em situacao nova; nao classificar Q52 como simples erro de marcacao sem evidencias adicionais."
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "portugues_haver_existir_se",
+        "excel_cont_ses_referencias",
+        "matematica_porcentagens_sucessivas",
+        "cp_319_320",
+        "cpp_252_254",
+        "cf_5_habeas_data"
+      ],
+      "retest": "Revisao espaciada com novos contextos e distribuicao proxima ao edital, evitando repeticao imediata."
+    },
+    {
+      "priority": "assessment",
+      "targets": [
+        "simulado_integral_vunesp",
+        "medicao_tempo",
+        "calibracao_confianca"
+      ],
+      "retest": "Microdrill nao substitui transferencia em 70 questoes sob condicoes de prova."
+    }
+  ],
+  "legal_review_refs": [
+    "CPC_334_paragraphs_4_5_6",
+    "CPC_335_I_II_paragraph_1",
+    "CP_319_320",
+    "CPP_252_I_254_IV",
+    "CF_5_XXXIV_b_LXXII",
+    "LEI_9507_1997_7",
+    "STJ_SUMULA_2"
+  ],
+  "grammar_review_rules": [
+    "haver_existir_concordancia",
+    "se_apassivador"
+  ],
+  "evidence_limits": [
+    "Bloco de microdrill de 10 questoes principais; nao e simulado cronometrado e nao comprova mastery permanente.",
+    "Q52 resposta principal E errada e firme; relato posterior de possivel erro de marcacao nao foi verificado de modo independente.",
+    "Q54-R4 resposta manual D incorreta; nivel de confianca especifico nao informado. Compreensao declarada depois da explicacao nao equivale a acerto no teste.",
+    "Ausencia de outros distractores nas respostas firmes nao prova estrategia de resolucao nem elimina necessidade de revisao.",
+    "Tempos de resposta, justificativas mentais e eliminacao/inferencia nao foram observados.",
+    "Acumulado 48/60 e local a esta sequencia; chats paralelos exigem consolidacao com snapshot e chave de sessao.",
+    "Nao alterar, sobrescrever ou reindexar reviews Q01-Q50. Sem transcricao integral ou dados pessoais no repositorio publico."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
