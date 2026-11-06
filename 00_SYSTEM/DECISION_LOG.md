@@ -175,3 +175,9 @@ Consequências arquiteturais:
 O limite inicial de até 24 questões por lote de geração é um teto operacional provisório de qualidade baseado no tamanho máximo observado das seções históricas de Português usadas no projeto; não é tratado como limite técnico do modelo. Qualquer aumento deve ser sustentado por benchmark interno de qualidade.
 
 A política específica do último mês de preparação fica deliberadamente em aberto até decisão canônica própria; não deve ser inventada antecipadamente.
+
+
+## DEC-0021 — Sessões de estudo paralelas com feedback append-only
+**Status:** accepted
+
+Chats paralelos podem estudar o mesmo Enrollment, desde que usem `session_id` exclusivos, blocos numerados localmente, `feedback_id` idempotente, arquivos de evidência imutáveis e criação condicional via GitHub Contents API. Não compartilhar o mesmo arquivo de escrita nem atualizar cumulativos globais a cada chat. Retificações são novos eventos; consolidação é uma projeção por commit e por enrollment, com deduplicação e sinalização de conflitos. Cada gravação exige readback antes de declarar persistência. O protocolo completo é `00_SYSTEM/PARALLEL_STUDY_PROTOCOL.md`. Não se presume que a mera documentação forneça locks ou consolidação automática. Não altera `DIREITO-016` nem a metodologia de questão individual por chat.
