@@ -1,0 +1,235 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b04-q31-q40",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "block_id": "b04-q31-q40",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "simulation",
+  "simulation_type": "full_objective_diagnostic",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "70 authorial A-E questions with self-reported confidence; no answer feedback until all were answered",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_reasoning_validation": false,
+    "previous_personal_answer_history_used_for_item_selection": false
+  },
+  "scope": {
+    "first_main_question": 31,
+    "last_main_question": 40,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "none",
+    "outside_scope": "Other sessions and the other local blocks of this simulation"
+  },
+  "score": {
+    "correct": 8,
+    "incorrect": 2,
+    "total": 10,
+    "computed_percent": 80
+  },
+  "confidence": {
+    "firm": 3,
+    "firm_correct": 3,
+    "firm_incorrect": 0,
+    "uncertain": 4,
+    "uncertain_correct": 3,
+    "uncertain_incorrect": 1,
+    "guess": 3
+  },
+  "response_outcomes": {
+    "correct_firm": 3,
+    "correct_uncertain": 3,
+    "correct_by_guess": 2,
+    "incorrect_high_confidence": 0,
+    "incorrect_low_confidence": 1,
+    "incorrect_guess": 1
+  },
+  "guesses": {
+    "total": 3,
+    "correct": 2,
+    "incorrect": 1,
+    "question_ids": [
+      34,
+      38,
+      39
+    ]
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      32,
+      34
+    ],
+    "high_confidence_error_question_ids": [],
+    "confirmed_reading_errors": null,
+    "confirmed_false_knowledge": null,
+    "causal_attributions": "not_observed_no_explanations_or_responses_to_post_correction_question"
+  },
+  "subjects": [
+    {
+      "subject": "direito-constitucional",
+      "total": 5,
+      "correct": 3,
+      "question_ids": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "subject": "direito-administrativo",
+      "total": 5,
+      "correct": 5,
+      "question_ids": [
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 31,
+      "subject": "direito-constitucional",
+      "subtopic": null,
+      "selected": "A",
+      "correct_answer": "A",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 32,
+      "subject": "direito-constitucional",
+      "subtopic": "cf_38_iii_vereador_compatibilidade",
+      "selected": "A",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 33,
+      "subject": "direito-constitucional",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 34,
+      "subject": "direito-constitucional",
+      "subtopic": "cf_14_par6_desincompatibilizacao",
+      "selected": "B",
+      "correct_answer": "E",
+      "correct": false,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 35,
+      "subject": "direito-constitucional",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 36,
+      "subject": "direito-administrativo",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 37,
+      "subject": "direito-administrativo",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 38,
+      "subject": "direito-administrativo",
+      "subtopic": null,
+      "selected": "A",
+      "correct_answer": "A",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 39,
+      "subject": "direito-administrativo",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 40,
+      "subject": "direito-administrativo",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 0,
+    "included_in_main_score": false
+  },
+  "evidence_limits": [
+    "Single authored simulated test, no independent psychometric calibration",
+    "Self-reported confidence is not a verified problem-solving strategy",
+    "Only error outcomes are observed; reading, conceptual error and false knowledge not inferred",
+    "Question 02 original wording unavailable for full reconstruction in the current correction context"
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_no_full_transcript"
+}
