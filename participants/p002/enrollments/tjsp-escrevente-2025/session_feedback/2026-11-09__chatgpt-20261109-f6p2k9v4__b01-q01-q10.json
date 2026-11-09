@@ -1,0 +1,520 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p002__tjsp-escrevente-2025__chatgpt-20261109-f6p2k9v4__block_review__b01-q01-q10",
+  "session_id": "chatgpt-20261109-f6p2k9v4",
+  "block_id": "b01-q01-q10",
+  "participant_id": "p002",
+  "enrollment_id": "p002__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "timing_note": "Data observada no contexto da sessao. Tempos individuais e duracao nao registrados. Session_id alocado no primeiro registro persistido deste chat.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Q01-Q10 com alternativa principal, confianca, concorrentes, correcoes, autoavaliacoes e reforcos R01-R10 quando aplicaveis.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false
+  },
+  "scope": {
+    "first_main_question": 1,
+    "last_main_question": 10,
+    "valid_main_questions": 10,
+    "excluded_defective_main_questions": 0,
+    "reinforcements_outside_main_score": true,
+    "not_a_full_simulation": true,
+    "outside_scope": "Outras sessoes e outros participantes."
+  },
+  "score": {
+    "correct": 6,
+    "incorrect": 4,
+    "total": 10,
+    "computed_percent": 60
+  },
+  "confidence": {
+    "firm": 6,
+    "firm_correct": 4,
+    "firm_incorrect": 2,
+    "uncertain_between_2": 3,
+    "uncertain_correct": 2,
+    "uncertain_incorrect": 1,
+    "uncertain_between_3": 0,
+    "guess_between_4": 0,
+    "guess_between_5": 1,
+    "guess_correct": 0,
+    "guess_incorrect": 1
+  },
+  "response_outcomes": {
+    "correct_firm": 4,
+    "correct_uncertain": 2,
+    "incorrect_high_confidence": 2,
+    "incorrect_uncertain": 1,
+    "incorrect_guess": 1,
+    "correct_by_guess": 0
+  },
+  "post_explanation_self_assessment": {
+    "maintained_certainty": 5,
+    "doubt_decreased": 4,
+    "identified_false_knowledge": 1,
+    "doubt_remained": 0,
+    "doubt_increased_or_changed": 0
+  },
+  "strategies": {
+    "explicitly_reported_elimination": 0,
+    "explicitly_reported_inference": 0,
+    "unreported_for_questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "note": "Nao inferir metodo ou estrategia a partir de acerto, confianca ou alternativa selecionada."
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      2,
+      3,
+      7,
+      8
+    ],
+    "high_confidence_error_question_ids": [
+      2,
+      3
+    ],
+    "guess_error_question_ids": [
+      8
+    ],
+    "correct_key_among_considered_on_wrong_answer": [
+      7,
+      8
+    ],
+    "self_reported_false_knowledge_question_ids": [
+      7
+    ],
+    "confirmed_reading_errors": 0,
+    "confirmed_detailed_causal_explanations": 0,
+    "observed_candidate_patterns": [
+      "Q07: modalidade de peculato-desvio escolhida ante peculato-furto; C constava entre concorrentes; falso conhecimento autorrelatado sem explicacao causal.",
+      "Q08 e R08: respostas inseriram ou mantiveram travamento indevido de coluna; causa cognitiva nao confirmada."
+    ]
+  },
+  "subjects": [
+    {
+      "subject": "direito-processual-civil",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        1,
+        4
+      ]
+    },
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        2,
+        5
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        3,
+        6
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        7
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        8
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        9
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        10
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 1,
+      "display_id": "Q01",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_art_219_prazos_processuais_dias_uteis",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "D",
+        "C"
+      ],
+      "response_class": "correct_uncertain",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 2,
+      "display_id": "Q02",
+      "subject": "portugues",
+      "subtopic": "crase_a_uma_vs_aqueles",
+      "selected": "B",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 3,
+      "display_id": "Q03",
+      "subject": "raciocinio-logico",
+      "subtopic": "condicionais_encadeadas_contrapositiva",
+      "selected": "A",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "A"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 4,
+      "display_id": "Q04",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_art_219_prazos_processuais_vs_materiais",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "A"
+      ],
+      "response_class": "correct_uncertain",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 5,
+      "display_id": "Q05",
+      "subject": "portugues",
+      "subtopic": "crase_demonstrativos_e_regencia",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 6,
+      "display_id": "Q06",
+      "subject": "raciocinio-logico",
+      "subtopic": "condicionais_encadeadas_quatro_proposicoes",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 7,
+      "display_id": "Q07",
+      "subject": "direito-penal",
+      "subtopic": "cp_art_312_peculato_desvio_vs_furto",
+      "selected": "B",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "C"
+      ],
+      "response_class": "incorrect_uncertain",
+      "post_explanation_doubt": "identifiquei_falso_conhecimento",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 8,
+      "display_id": "Q08",
+      "subject": "informatica",
+      "subtopic": "excel_365_referencias_mistas_copia_formulas",
+      "selected": "E",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "guess_between_5",
+      "considered_alternatives": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "response_class": "incorrect_guess",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 9,
+      "display_id": "Q09",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_art_37_v_funcoes_confianca_cargos_comissao",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    },
+    {
+      "question_number": 10,
+      "display_id": "Q10",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_arts_261_263_defensor_nomeado_constituido",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null,
+      "error_cause_confirmed": null
+    }
+  ],
+  "reinforcements": {
+    "attempted": 7,
+    "valid": 7,
+    "valid_correct": 4,
+    "valid_incorrect": 3,
+    "skipped": [
+      6,
+      9,
+      10
+    ],
+    "included_in_main_score": false,
+    "items": [
+      {
+        "display_id": "R01",
+        "origin_main_question": 1,
+        "subject": "direito-processual-civil",
+        "selected": "Sim",
+        "correct_answer": "Não",
+        "correct": false,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R02",
+        "origin_main_question": 2,
+        "subject": "portugues",
+        "selected": "C",
+        "correct_answer": "A",
+        "correct": false,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R03",
+        "origin_main_question": 3,
+        "subject": "raciocinio-logico",
+        "selected": "A",
+        "correct_answer": "A",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R04",
+        "origin_main_question": 4,
+        "subject": "direito-processual-civil",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R05",
+        "origin_main_question": 5,
+        "subject": "portugues",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R07",
+        "origin_main_question": 7,
+        "subject": "direito-penal",
+        "selected": "A",
+        "correct_answer": "A",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R08",
+        "origin_main_question": 8,
+        "subject": "informatica",
+        "selected": "D",
+        "correct_answer": "B",
+        "correct": false,
+        "confidence": null,
+        "included_in_main_score": false
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "excel_referencias_mistas",
+      "evidence": "Q08 E incorreta com chute entre cinco, gabarito B; R08 D incorreta, gabarito B; resposta nas duas adiciona ou conserva travamento inadequado de coluna.",
+      "interpretation": "Aplicacao fragil; reteste com copia em coluna e linha, seguido de verificacao posterior sem dica."
+    },
+    {
+      "topic": "peculato_modalidades",
+      "evidence": "Q07 B desvio incorreta, C furto correta e considerada; autoavaliacao identificou falso conhecimento; R07 A desvio correta.",
+      "interpretation": "Autorreconhecimento de erro conceitual e recuperacao imediata; diferenciar posse funcional previa de subtracao sem posse."
+    },
+    {
+      "topic": "crase_demonstrativos",
+      "evidence": "Q02 B incorreta firme e R02 incorreto; Q05 D correta firme e R05 correta.",
+      "interpretation": "Melhora em reteste imediato; retencao futura ainda nao demonstrada."
+    },
+    {
+      "topic": "logica_contrapositiva",
+      "evidence": "Q03 A incorreta firme, R03 correta, Q06 E correta firme.",
+      "interpretation": "Recuperacao e transferencia local favoraveis; manter revisao espacada."
+    },
+    {
+      "topic": "cpc_219_natureza_prazo",
+      "evidence": "Q01 D correta com duvida C, R01 incorreto; Q04 B correta com duvida A, R04 correto.",
+      "interpretation": "Acertos persistem hesitantes; consolidar regime de prazo processual versus material."
+    },
+    {
+      "topic": "cf_art_37_v_e_cpp_261_263",
+      "evidence": "Q09 e Q10 respostas C e D corretas firmes; autoavaliacoes mantiveram certeza.",
+      "interpretation": "Bom resultado inicial, sem prova de dominio permanente."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "very_high",
+      "targets": [
+        "informatica_excel_referencias_relativas_absolutas_mistas"
+      ],
+      "retest": "Recuperacao guiada curta seguida de questao nova sem dica; variar deslocamento horizontal/vertical e evitar excesso de repeticao."
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "direito_penal_cp_312_peculato_furto_desvio"
+      ],
+      "retest": "Novo caso com posse funcional distinguivel, depois revisao espaçada."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "portugues_crase_demonstrativos",
+        "rlm_condicionais_contrapositivas",
+        "direito_processual_civil_art_219_prazos"
+      ],
+      "retest": "Itens novos distribuidos pelo proximo bloco, sem repeticao literal."
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "matematica",
+        "atualidades_e_lbi",
+        "informatica_outros_topicos",
+        "direito_outros_topicos_do_edital"
+      ],
+      "retest": "Retomar cobertura proporcional ao edital 2025, evitando dominancia de topicos ja testados."
+    }
+  ],
+  "session_progress": {
+    "valid_main_questions_this_session": 10,
+    "completed_local_blocks": 1,
+    "next_local_main_question": "Q11",
+    "active_review_due_after_local_main_question": 20,
+    "next_action": "Nao iniciar Q11 automaticamente; continuar com uma questao por vez."
+  },
+  "evidence_limits": [
+    "Sem tempo individual ou tempo de prova medido.",
+    "Estrategia de resolucao nao autorrelatada em nenhuma das dez principais; nao atribuir eliminacao ou inferencia.",
+    "Falso conhecimento autorrelatado apenas na Q07, sem mecanismo detalhado informado.",
+    "As 10 questoes autorais desta sessao nao equivalem ao simulado completo de 70 itens nem demonstram mastery definitivo.",
+    "Reforcos sao microdrills de recuperacao imediata e nao integram escore principal.",
+    "Este evento descreve uma unica sessao, nao total global de chats simultaneos.",
+    "Q01-Q10 e data resultam da conversa corrente; session_id foi atribuido no momento da persistencia."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
