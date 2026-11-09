@@ -1,0 +1,182 @@
+{
+  "schema_version": "0.1",
+  "record_type": "session_summary",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__session_summary__q01-q70",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "simulation",
+  "simulation_type": "full_objective_diagnostic",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "scope": {
+    "first_main_question": 1,
+    "last_main_question": 70,
+    "valid_main_questions": 70,
+    "record_source": "7 block_review events from the same session",
+    "included_block_feedback_ids": [
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b01-q01-q10",
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b02-q11-q20",
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b03-q21-q30",
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b04-q31-q40",
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b05-q41-q50",
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b06-q51-q60",
+      "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b07-q61-q70"
+    ],
+    "does_not_count_as_additional_questions": true,
+    "global_across_chats": false
+  },
+  "score": {
+    "correct": 59,
+    "incorrect": 11,
+    "total": 70,
+    "computed_percent": 84.29
+  },
+  "confidence": {
+    "firm": 38,
+    "firm_correct": 33,
+    "firm_incorrect": 5,
+    "uncertain": 18,
+    "uncertain_correct": 15,
+    "uncertain_incorrect": 3,
+    "guess": 14,
+    "guess_correct": 11,
+    "guess_incorrect": 3
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 16,
+      "correct": 13
+    },
+    {
+      "subject": "direito",
+      "total": 30,
+      "correct": 25,
+      "subsubjects": [
+        {
+          "subject": "penal",
+          "total": 4,
+          "correct": 4
+        },
+        {
+          "subject": "processual-penal",
+          "total": 5,
+          "correct": 3
+        },
+        {
+          "subject": "processual-civil",
+          "total": 5,
+          "correct": 4
+        },
+        {
+          "subject": "constitucional",
+          "total": 5,
+          "correct": 3
+        },
+        {
+          "subject": "administrativo",
+          "total": 6,
+          "correct": 6
+        },
+        {
+          "subject": "legislacao-interna",
+          "total": 5,
+          "correct": 5
+        }
+      ]
+    },
+    {
+      "subject": "atualidades_pcd",
+      "total": 4,
+      "correct": 4
+    },
+    {
+      "subject": "matematica",
+      "total": 4,
+      "correct": 3
+    },
+    {
+      "subject": "informatica",
+      "total": 9,
+      "correct": 8
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 7,
+      "correct": 6
+    }
+  ],
+  "error_signals": {
+    "wrong_question_ids": [
+      2,
+      13,
+      14,
+      24,
+      25,
+      26,
+      32,
+      34,
+      54,
+      59,
+      69
+    ],
+    "high_confidence_error_question_ids": [
+      2,
+      26,
+      54,
+      59,
+      69
+    ],
+    "unknown_error_causes": true,
+    "recorded_post_explanation_doubt": false,
+    "confirmed_false_knowledge": null
+  },
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "processual_penal_cpp_400_e_396a_par2",
+        "cpc_contagem_dje",
+        "direitos_politicos_cf_14_par6_e_cf_38_iii"
+      ]
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "portugues_colocacao_pronominal",
+        "portugues_concordancia_verbal",
+        "portugues_questao_02_sem_texto_recuperavel"
+      ]
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "matematica_geometria_area_faixa_interna",
+        "excel_cont_ses",
+        "rlm_exatamente_uma_afirmacao_verdadeira"
+      ]
+    },
+    {
+      "priority": "verification",
+      "targets": [
+        "11_acertos_em_14_chutes_exigem_reteste_independente",
+        "5_erros_sem_duvida_exigem_calibracao_de_confianca"
+      ]
+    }
+  ],
+  "qa_status": {
+    "structural_distribution": "pass",
+    "arithmetic_of_scores": "pass",
+    "psychometric_calibration": "not_performed",
+    "item_problem_suspicions": [],
+    "original_q02_full_text_available_for_this_report": false
+  },
+  "time_spent_minutes": null,
+  "reasoning_process_observed": false,
+  "full_transcript_persisted": false,
+  "privacy": "public_pseudonymous_no_full_transcript",
+  "evidence_status": "session_local_summary_from_verified_block_events_not_global_mastery"
+}
