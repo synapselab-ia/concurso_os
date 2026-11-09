@@ -1,0 +1,232 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b07-q61-q70",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "block_id": "b07-q61-q70",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "simulation",
+  "simulation_type": "full_objective_diagnostic",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "70 authorial A-E questions with self-reported confidence; no answer feedback until all were answered",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_reasoning_validation": false,
+    "previous_personal_answer_history_used_for_item_selection": false
+  },
+  "scope": {
+    "first_main_question": 61,
+    "last_main_question": 70,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "none",
+    "outside_scope": "Other sessions and the other local blocks of this simulation"
+  },
+  "score": {
+    "correct": 9,
+    "incorrect": 1,
+    "total": 10,
+    "computed_percent": 90
+  },
+  "confidence": {
+    "firm": 6,
+    "firm_correct": 5,
+    "firm_incorrect": 1,
+    "uncertain": 4,
+    "uncertain_correct": 4,
+    "uncertain_incorrect": 0,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 5,
+    "correct_uncertain": 4,
+    "correct_by_guess": 0,
+    "incorrect_high_confidence": 1,
+    "incorrect_low_confidence": 0,
+    "incorrect_guess": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      69
+    ],
+    "high_confidence_error_question_ids": [
+      69
+    ],
+    "confirmed_reading_errors": null,
+    "confirmed_false_knowledge": null,
+    "causal_attributions": "not_observed_no_explanations_or_responses_to_post_correction_question"
+  },
+  "subjects": [
+    {
+      "subject": "informatica",
+      "total": 3,
+      "correct": 3,
+      "question_ids": [
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 7,
+      "correct": 6,
+      "question_ids": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 61,
+      "subject": "informatica",
+      "subtopic": null,
+      "selected": "A",
+      "correct_answer": "A",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 62,
+      "subject": "informatica",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 63,
+      "subject": "informatica",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 64,
+      "subject": "raciocinio-logico",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 65,
+      "subject": "raciocinio-logico",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 66,
+      "subject": "raciocinio-logico",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 67,
+      "subject": "raciocinio-logico",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 68,
+      "subject": "raciocinio-logico",
+      "subtopic": null,
+      "selected": "A",
+      "correct_answer": "A",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 69,
+      "subject": "raciocinio-logico",
+      "subtopic": "logica_exatamente_uma_afirmacao_verdadeira",
+      "selected": "B",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 70,
+      "subject": "raciocinio-logico",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 0,
+    "included_in_main_score": false
+  },
+  "evidence_limits": [
+    "Single authored simulated test, no independent psychometric calibration",
+    "Self-reported confidence is not a verified problem-solving strategy",
+    "Only error outcomes are observed; reading, conceptual error and false knowledge not inferred",
+    "Question 02 original wording unavailable for full reconstruction in the current correction context"
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_no_full_transcript"
+}
