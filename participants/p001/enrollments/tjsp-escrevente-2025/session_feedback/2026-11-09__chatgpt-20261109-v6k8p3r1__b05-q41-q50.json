@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b05-q41-q50",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "block_id": "b05-q41-q50",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "simulation",
+  "simulation_type": "full_objective_diagnostic",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "70 authorial A-E questions with self-reported confidence; no answer feedback until all were answered",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_reasoning_validation": false,
+    "previous_personal_answer_history_used_for_item_selection": false
+  },
+  "scope": {
+    "first_main_question": 41,
+    "last_main_question": 50,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "none",
+    "outside_scope": "Other sessions and the other local blocks of this simulation"
+  },
+  "score": {
+    "correct": 10,
+    "incorrect": 0,
+    "total": 10,
+    "computed_percent": 100
+  },
+  "confidence": {
+    "firm": 0,
+    "firm_correct": 0,
+    "firm_incorrect": 0,
+    "uncertain": 3,
+    "uncertain_correct": 3,
+    "uncertain_incorrect": 0,
+    "guess": 7
+  },
+  "response_outcomes": {
+    "correct_firm": 0,
+    "correct_uncertain": 3,
+    "correct_by_guess": 7,
+    "incorrect_high_confidence": 0,
+    "incorrect_low_confidence": 0,
+    "incorrect_guess": 0
+  },
+  "guesses": {
+    "total": 7,
+    "correct": 7,
+    "incorrect": 0,
+    "question_ids": [
+      41,
+      42,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "error_signals": {
+    "wrong_question_ids": [],
+    "high_confidence_error_question_ids": [],
+    "confirmed_reading_errors": null,
+    "confirmed_false_knowledge": null,
+    "causal_attributions": "not_observed_no_explanations_or_responses_to_post_correction_question"
+  },
+  "subjects": [
+    {
+      "subject": "direito-administrativo",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        41
+      ]
+    },
+    {
+      "subject": "legislacao-interna",
+      "total": 5,
+      "correct": 5,
+      "question_ids": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "subject": "atualidades",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        47,
+        48
+      ]
+    },
+    {
+      "subject": "pessoa-com-deficiencia",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        49,
+        50
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 41,
+      "subject": "direito-administrativo",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 42,
+      "subject": "legislacao-interna",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 43,
+      "subject": "legislacao-interna",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 44,
+      "subject": "legislacao-interna",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 45,
+      "subject": "legislacao-interna",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 46,
+      "subject": "legislacao-interna",
+      "subtopic": null,
+      "selected": "A",
+      "correct_answer": "A",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 47,
+      "subject": "atualidades",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 48,
+      "subject": "atualidades",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 49,
+      "subject": "pessoa-com-deficiencia",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 50,
+      "subject": "pessoa-com-deficiencia",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 0,
+    "included_in_main_score": false
+  },
+  "evidence_limits": [
+    "Single authored simulated test, no independent psychometric calibration",
+    "Self-reported confidence is not a verified problem-solving strategy",
+    "Only error outcomes are observed; reading, conceptual error and false knowledge not inferred",
+    "Question 02 original wording unavailable for full reconstruction in the current correction context"
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_no_full_transcript"
+}
