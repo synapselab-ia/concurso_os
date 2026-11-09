@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "record_type": "correction",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__correction__q69-self-reported-marking-slip-01",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "correction_id": "q69-self-reported-marking-slip-01",
+  "supersedes_feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b07-q61-q70",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "raciocinio-logico",
+  "practice_mode": "simulation",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "scope": {
+    "question_number": 69,
+    "original_record_type": "block_review",
+    "original_block_id": "b07-q61-q70",
+    "correction_applies_to": "post_correction_error_cause_classification_only"
+  },
+  "observed": {
+    "selected_answer": "B",
+    "correct_answer": "D",
+    "marked_correct": false,
+    "confidence_at_attempt": "firm"
+  },
+  "participant_post_correction_self_report": {
+    "statement_paraphrase": "O raciocinio usado para resolver a questao foi correto; houve confusao apenas na hora de assinalar a alternativa.",
+    "claimed_error_type": "answer_marking_slip",
+    "self_report_timing": "after_answer_key_and_explanation",
+    "independent_verification_of_prior_reasoning": false
+  },
+  "interpretation": {
+    "classification": "self_reported_marking_error_not_confirmed_conceptual_error",
+    "do_not_infer_knowledge_deficit_from_question_69_alone": true,
+    "reported_reasoning_validity": "unverified_as_it_was_not_observed_before_answer_reveal",
+    "prioritize": "answer_transfer_and_marking_accuracy_check_rather_than_automatic_logic_reteaching",
+    "observed_score_unchanged": true,
+    "observed_simulation_score": "59/70",
+    "potential_counterfactual_correct_answer_not_counted": true
+  },
+  "privacy": "public_pseudonymous_no_transcript",
+  "evidence_status": "post_correction_self_report_append_only"
+}
