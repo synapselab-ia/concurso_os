@@ -1,0 +1,227 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b01-q01-q10",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "block_id": "b01-q01-q10",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "simulation",
+  "simulation_type": "full_objective_diagnostic",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "70 authorial A-E questions with self-reported confidence; no answer feedback until all were answered",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_reasoning_validation": false,
+    "previous_personal_answer_history_used_for_item_selection": false
+  },
+  "scope": {
+    "first_main_question": 1,
+    "last_main_question": 10,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "none",
+    "outside_scope": "Other sessions and the other local blocks of this simulation"
+  },
+  "score": {
+    "correct": 9,
+    "incorrect": 1,
+    "total": 10,
+    "computed_percent": 90
+  },
+  "confidence": {
+    "firm": 8,
+    "firm_correct": 7,
+    "firm_incorrect": 1,
+    "uncertain": 1,
+    "uncertain_correct": 1,
+    "uncertain_incorrect": 0,
+    "guess": 1
+  },
+  "response_outcomes": {
+    "correct_firm": 7,
+    "correct_uncertain": 1,
+    "correct_by_guess": 1,
+    "incorrect_high_confidence": 1,
+    "incorrect_low_confidence": 0,
+    "incorrect_guess": 0
+  },
+  "guesses": {
+    "total": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "question_ids": [
+      10
+    ]
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      2
+    ],
+    "high_confidence_error_question_ids": [
+      2
+    ],
+    "confirmed_reading_errors": null,
+    "confirmed_false_knowledge": null,
+    "causal_attributions": "not_observed_no_explanations_or_responses_to_post_correction_question"
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 10,
+      "correct": 9,
+      "question_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 1,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 2,
+      "subject": "portugues",
+      "subtopic": "portugues_q02_assunto_nao_recuperado",
+      "selected": "E",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 3,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 4,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 5,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 6,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 7,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 8,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 9,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 10,
+      "subject": "portugues",
+      "subtopic": null,
+      "selected": "A",
+      "correct_answer": "A",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 0,
+    "included_in_main_score": false
+  },
+  "evidence_limits": [
+    "Single authored simulated test, no independent psychometric calibration",
+    "Self-reported confidence is not a verified problem-solving strategy",
+    "Only error outcomes are observed; reading, conceptual error and false knowledge not inferred",
+    "Question 02 original wording unavailable for full reconstruction in the current correction context"
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_no_full_transcript"
+}
