@@ -1,0 +1,237 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-v6k8p3r1__block_review__b03-q21-q30",
+  "session_id": "chatgpt-20261109-v6k8p3r1",
+  "block_id": "b03-q21-q30",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "simulation",
+  "simulation_type": "full_objective_diagnostic",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "70 authorial A-E questions with self-reported confidence; no answer feedback until all were answered",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_reasoning_validation": false,
+    "previous_personal_answer_history_used_for_item_selection": false
+  },
+  "scope": {
+    "first_main_question": 21,
+    "last_main_question": 30,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "none",
+    "outside_scope": "Other sessions and the other local blocks of this simulation"
+  },
+  "score": {
+    "correct": 7,
+    "incorrect": 3,
+    "total": 10,
+    "computed_percent": 70
+  },
+  "confidence": {
+    "firm": 4,
+    "firm_correct": 3,
+    "firm_incorrect": 1,
+    "uncertain": 4,
+    "uncertain_correct": 3,
+    "uncertain_incorrect": 1,
+    "guess": 2
+  },
+  "response_outcomes": {
+    "correct_firm": 3,
+    "correct_uncertain": 3,
+    "correct_by_guess": 1,
+    "incorrect_high_confidence": 1,
+    "incorrect_low_confidence": 1,
+    "incorrect_guess": 1
+  },
+  "guesses": {
+    "total": 2,
+    "correct": 1,
+    "incorrect": 1,
+    "question_ids": [
+      25,
+      30
+    ]
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      24,
+      25,
+      26
+    ],
+    "high_confidence_error_question_ids": [
+      26
+    ],
+    "confirmed_reading_errors": null,
+    "confirmed_false_knowledge": null,
+    "causal_attributions": "not_observed_no_explanations_or_responses_to_post_correction_question"
+  },
+  "subjects": [
+    {
+      "subject": "direito-processual-penal",
+      "total": 5,
+      "correct": 3,
+      "question_ids": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 5,
+      "correct": 4,
+      "question_ids": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 21,
+      "subject": "direito-processual-penal",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 22,
+      "subject": "direito-processual-penal",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 23,
+      "subject": "direito-processual-penal",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 24,
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_400_interrogatorio_ao_final",
+      "selected": "A",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 25,
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_396a_par2_defensor_resposta",
+      "selected": "A",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 26,
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_diario_eletronico_prazo_dias_uteis",
+      "selected": "E",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "firm",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": "cause_not_observed"
+    },
+    {
+      "question_number": 27,
+      "subject": "direito-processual-civil",
+      "subtopic": null,
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 28,
+      "subject": "direito-processual-civil",
+      "subtopic": null,
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 29,
+      "subject": "direito-processual-civil",
+      "subtopic": null,
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "uncertain",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    },
+    {
+      "question_number": 30,
+      "subject": "direito-processual-civil",
+      "subtopic": null,
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "guess",
+      "reported_strategy": null,
+      "post_explanation_doubt": null,
+      "error_type": null
+    }
+  ],
+  "qa_exclusions": [],
+  "reinforcements": {
+    "attempted": 0,
+    "included_in_main_score": false
+  },
+  "evidence_limits": [
+    "Single authored simulated test, no independent psychometric calibration",
+    "Self-reported confidence is not a verified problem-solving strategy",
+    "Only error outcomes are observed; reading, conceptual error and false knowledge not inferred",
+    "Question 02 original wording unavailable for full reconstruction in the current correction context"
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_no_full_transcript"
+}
