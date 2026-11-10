@@ -1,0 +1,466 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-bd2d162f3734__block_review__b02-q11-q20",
+  "session_id": "chatgpt-20261109-bd2d162f3734",
+  "block_id": "b02-q11-q20",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-10",
+  "recorded_at": "2026-11-10",
+  "timing_note": "Data local de conclusao do bloco; horario e duracao de cada resposta nao medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Dez respostas principais A-E com confianca, alternativas consideradas e dez autoavaliacoes apos a correcao; sem reforcos neste bloco.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false,
+    "reference_scope": "competitions/tjsp-escrevente-2025/SYLLABUS.md e fontes legais/tecnicas citadas nas correcoes; review registra respostas observadas, nao certifica exaustividade normativa."
+  },
+  "scope": {
+    "first_main_question": 11,
+    "last_main_question": 20,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "Nenhum reforco neste bloco; outras sessoes e blocos nao entram no score.",
+    "outside_scope": "Bloco 01 da mesma sessao e quaisquer outros chats/sessoes do enrollment."
+  },
+  "score": {
+    "correct": 10,
+    "incorrect": 0,
+    "total": 10,
+    "computed_percent": 100
+  },
+  "confidence": {
+    "firm": 8,
+    "firm_correct": 8,
+    "firm_incorrect": 0,
+    "uncertain_between_2": 2,
+    "uncertain_correct": 2,
+    "uncertain_incorrect": 0,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 8,
+    "correct_uncertain": 2,
+    "incorrect_high_confidence": 0,
+    "incorrect_low_confidence": 0,
+    "correct_by_guess": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [],
+    "high_confidence_error_question_ids": [],
+    "self_reported_false_knowledge_question_ids": [],
+    "suspected_false_knowledge_question_ids": [],
+    "wrong_answer_but_key_considered_question_ids": [],
+    "confirmed_reading_errors": 0,
+    "correct_with_uncertainty_question_ids": [
+      16,
+      18
+    ],
+    "uncertainty_notes": [
+      {
+        "question_number": 16,
+        "considered": [
+          "B",
+          "D"
+        ],
+        "reported_reason": "fiquei_entre_duas",
+        "post_explanation_doubt": "duvida_diminuiu",
+        "interpretation": "Acerto com incerteza residual na escolha entre E e OU; nao houve erro principal."
+      },
+      {
+        "question_number": 18,
+        "considered": [
+          "B",
+          "C"
+        ],
+        "reported_reason": "outro_motivo",
+        "post_explanation_doubt": "duvida_resolvida",
+        "interpretation": "Usuario relatou considerar alternativa para desenvolver e aprofundar a ideia; nao inferir falso conhecimento."
+      }
+    ]
+  },
+  "subjects": [
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        11
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        12
+      ]
+    },
+    {
+      "subject": "portugues",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        13
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        14
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        15
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        16
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        17
+      ]
+    },
+    {
+      "subject": "atualidades_pcd",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        18
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        19
+      ]
+    },
+    {
+      "subject": "direito-administrativo",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        20
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 11,
+      "display_id": "Q11",
+      "question_uid": "mat-faixa-interna-teto-31x19-1p5-q11",
+      "subject": "matematica",
+      "subtopic": "area_faixa_interna_retangular",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 12,
+      "display_id": "Q12",
+      "question_uid": "dp-corrupcao-passiva-solicitacao-sem-recebimento-q12",
+      "subject": "direito-penal",
+      "subtopic": "cp_317_corrupcao_passiva_solicitacao_sem_recebimento",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 13,
+      "display_id": "Q13",
+      "question_uid": "pt-oracao-adjetiva-explicativa-pontuacao-q13",
+      "subject": "portugues",
+      "subtopic": "oracao_adjetiva_explicativa_virgulas",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "virgulas_explicativas"
+    },
+    {
+      "question_number": 14,
+      "display_id": "Q14",
+      "question_uid": "cpp-art400-analise-ata-sequencia-q14",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_400_ordem_ofendido_acusacao_defesa_interrogatorio",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "ambos"
+    },
+    {
+      "question_number": 15,
+      "display_id": "Q15",
+      "question_uid": "excel-referencias-mistas-copia-d5-f7-q15",
+      "subject": "informatica",
+      "subtopic": "excel_referencias_absolutas_relativas_mistas",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "regra_cifroes_mentalmente"
+    },
+    {
+      "question_number": 16,
+      "display_id": "Q16",
+      "question_uid": "rl-negacao-condicional-universal-nenhum-q16",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_condicional_universal_ninguem_p_e_nao_q",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "D"
+      ],
+      "response_class": "correct_uncertain",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_diminuiu",
+      "self_reported_error_cause": "fiquei_entre_duas",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 17,
+      "display_id": "Q17",
+      "question_uid": "cpc-219-224-publicacao-dje-prazo-cinco-dias-q17",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_219_224_disponibilizacao_publicacao_inicio_contagem",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "ambos"
+    },
+    {
+      "question_number": 18,
+      "display_id": "Q18",
+      "question_uid": "lbi-art4-recusas-adaptacao-razoavel-q18",
+      "subject": "atualidades_pcd",
+      "subtopic": "lbi_4_discriminacao_proposito_ou_efeito_adaptacao_razoavel",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "C"
+      ],
+      "response_class": "correct_uncertain",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_resolvida",
+      "self_reported_error_cause": "outro_motivo",
+      "reported_strategy": null,
+      "self_reported_note": "Pra desenvolver mais a ideia na minha cabeça e masterizar mais o assunto.."
+    },
+    {
+      "question_number": 19,
+      "display_id": "Q19",
+      "question_uid": "dc-cf5-xvi-direito-reuniao-aviso-autorizacao-q19",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_5_xvi_direito_de_reuniao_aviso_vs_autorizacao",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "aviso_vs_autorizacao"
+    },
+    {
+      "question_number": 20,
+      "display_id": "Q20",
+      "question_uid": "da-lei10261-art241-ordem-manifestamente-ilegal-q20",
+      "subject": "direito-administrativo",
+      "subtopic": "lei_10261_1968_art_241_ii_v_ordem_ilegal_representacao",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "ilegalidade_manifesta"
+    }
+  ],
+  "reinforcements": {
+    "attempted": 0,
+    "valid": 0,
+    "valid_correct": 0,
+    "valid_incorrect": 0,
+    "included_in_main_score": false,
+    "items": []
+  },
+  "learning_signals": [
+    {
+      "topic": "cpp_400_ordem_testemunhas",
+      "evidence": "Q14 correta firme em novo caso de ata, apos Q03 e Q09 incorretas no bloco 01 e reforcos imediatos corretos.",
+      "interpretation": "Reteste independente favoravel; erros anteriores preservados; dominio duradouro ainda nao demonstrado."
+    },
+    {
+      "topic": "matematica_faixa_interna",
+      "evidence": "Q11 correta firme em novo reteste apos erro Q07 do bloco 01 e reforco imediato correto.",
+      "interpretation": "Recuperacao em nova situacao; manter reteste e transferencia."
+    },
+    {
+      "topic": "rl_negacao_condicional",
+      "evidence": "Q16 correta com duvida entre B (OU) e D (E), autoavaliacao duvida_diminuiu; Q04 do bloco 01 incorreta firme e Q10 correta firme.",
+      "interpretation": "Progresso com hesitacao residual no conectivo; revisao espacada de P e nao Q."
+    },
+    {
+      "topic": "lbi_adaptacoes_razoaveis",
+      "evidence": "Q18 correta com duvida B/C, autoavaliacao duvida_resolvida e relato de que considerou outra alternativa para aprofundar o entendimento.",
+      "interpretation": "Reter a distincao proposito OU efeito e recusa de adaptacao razoavel; nao inferir ignorancia conceitual."
+    },
+    {
+      "topic": "cobertura_mista",
+      "evidence": "Q11-Q20 corretas em dez materias, oito respostas firmes e duas com duvida.",
+      "interpretation": "Desempenho local positivo em microdrill; nao extrapolar para simulacao completa ou dominio geral."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "spaced_high",
+      "targets": [
+        "cpp_400_ordem_acusacao_defesa_interrogatorio"
+      ],
+      "retest": "Reavaliar apos intervalo em item diferente e em simulacao; preservar Q03/Q09 incorretas do bloco 01."
+    },
+    {
+      "priority": "spaced_high",
+      "targets": [
+        "rl_negacao_condicional_p_e_nao_q"
+      ],
+      "retest": "Alternar quantificadores e distratores E/OU em novo contexto, sem resposta antecipada."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "lbi_discriminacao_proposito_ou_efeito_adaptacao_razoavel"
+      ],
+      "retest": "Caso novo que discrimine efeito de intencao e avalie razoabilidade/onus."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "matematica_area_faixa_interna"
+      ],
+      "retest": "Nova geometria contextualizada, distinguindo area central de area da faixa."
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "legislacao_interna",
+        "portugues_interpretacao",
+        "direito_administrativo_outros_topicos",
+        "informatica_outros_topicos"
+      ],
+      "retest": "Expandir cobertura do edital e realizar simulacoes de transferencia, sem usar este bloco como prova de dominio."
+    }
+  ],
+  "evidence_limits": [
+    "Sem cronometro ou duracao por questao.",
+    "Estrategia, motivo e autoavaliacao so relatados quando informados; nulos nao sao inferidos.",
+    "Q16 e Q18 permanecem acertos com duvida conforme confianca registrada antes da correcao.",
+    "Zero reforcos neste bloco; reforcos e erros do bloco 01 nao foram alterados.",
+    "Questoes autorais de microdrill nao equivalem a simulado objetivo completo nem comprovam dominio permanente.",
+    "Resultados de outros chats e sessoes nao foram somados; nao ha cumulativo global neste evento.",
+    "Registro resume questoes e sinais de aprendizagem; nao armazena transcricao integral nem enunciados completos."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
