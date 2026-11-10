@@ -1,0 +1,483 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-bd2d162f3734__block_review__b01-q01-q10",
+  "session_id": "chatgpt-20261109-bd2d162f3734",
+  "block_id": "b01-q01-q10",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "timing_note": "Data informada pela sessao. Tempos individuais e duracao nao medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Dez respostas principais A-E, confianca, alternativas consideradas e autoavaliacoes; quatro reforcos nao pontuaveis.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false
+  },
+  "scope": {
+    "first_main_question": 1,
+    "last_main_question": 10,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "Q03-R1, Q04-R1, Q07-R1, Q09-R1 e outras sessoes",
+    "outside_scope": "Demais blocos e chats com session_id distinto"
+  },
+  "score": {
+    "correct": 6,
+    "incorrect": 4,
+    "total": 10,
+    "computed_percent": 60
+  },
+  "confidence": {
+    "firm": 9,
+    "firm_correct": 6,
+    "firm_incorrect": 3,
+    "uncertain_between_2": 1,
+    "uncertain_correct": 0,
+    "uncertain_incorrect": 1,
+    "guess": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 6,
+    "correct_uncertain": 0,
+    "incorrect_high_confidence": 3,
+    "incorrect_low_confidence": 1,
+    "correct_by_guess": 0
+  },
+  "guesses": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "question_ids": []
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      3,
+      4,
+      7,
+      9
+    ],
+    "high_confidence_error_question_ids": [
+      4,
+      7,
+      9
+    ],
+    "self_reported_false_knowledge_question_ids": [],
+    "suspected_false_knowledge_question_ids": [
+      4,
+      7,
+      9
+    ],
+    "wrong_answer_but_key_considered_question_ids": [
+      3
+    ],
+    "confirmed_reading_errors": 0,
+    "unverified_causal_attributions": "Q04 motivo nao informado; Q07 e Q09 atribuicoes de erro de aplicacao sao autorrelatos nao verificados externamente."
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 3,
+      "correct": 3,
+      "question_ids": [
+        1,
+        2,
+        8
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 2,
+      "correct": 0,
+      "question_ids": [
+        3,
+        9
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        4,
+        10
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        5
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        6
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        7
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 1,
+      "display_id": "Q01",
+      "question_uid": "pt-concordancia-impessoais-se-q01",
+      "subject": "portugues",
+      "subtopic": "concordancia_haver_fazer_existir_se_apassivador",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 2,
+      "display_id": "Q02",
+      "question_uid": "pt-regencia-relativos-q02",
+      "subject": "portugues",
+      "subtopic": "regencia_e_pronomes_relativos_cujo_onde_necessitar",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 3,
+      "display_id": "Q03",
+      "question_uid": "cpp-art400-ordem-audiencia-q03",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_400_ordem_ofendido_acusacao_defesa_interrogatorio",
+      "selected": "B",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "C"
+      ],
+      "response_class": "incorrect_low_confidence",
+      "error_type": "unverified_error_cause",
+      "error_signal": "Preferiu equivocadamente defesa antes da acusacao, considerando tambem o gabarito.",
+      "post_explanation_doubt": "duvida_diminuiu",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 4,
+      "display_id": "Q04",
+      "question_uid": "rl-negacao-condicional-q04",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_condicional_p_implica_q",
+      "selected": "E",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "incorrect_firm",
+      "error_type": "unverified_error_cause",
+      "error_signal": "Escolheu P ou nao Q em lugar de P e nao Q; causa nao relatada.",
+      "post_explanation_doubt": "duvida_diminuiu",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 5,
+      "display_id": "Q05",
+      "question_uid": "excel-contses-multicriterios-q05",
+      "subject": "informatica",
+      "subtopic": "excel_cont_ses_criterios_simultaneos",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 6,
+      "display_id": "Q06",
+      "question_uid": "dp-art320-condescendencia-criminosa-q06",
+      "subject": "direito-penal",
+      "subtopic": "cp_320_condescendencia_criminosa_vs_prevaricacao",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 7,
+      "display_id": "Q07",
+      "question_uid": "mat-area-faixa-interna-retangular-q07",
+      "subject": "matematica",
+      "subtopic": "area_faixa_interna_retangulo",
+      "selected": "D",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "incorrect_firm",
+      "error_type": "self_reported_application_error",
+      "error_signal": "Selecionou 308 m2, area central, em lugar de 160 m2, area da faixa; causa autorrelatada.",
+      "post_explanation_doubt": "erro_de_aplicacao",
+      "self_reported_error_cause": "confundi_area_central_com_faixa",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 8,
+      "display_id": "Q08",
+      "question_uid": "pt-reescrita-concessao-relacoes-q08",
+      "subject": "portugues",
+      "subtopic": "coesao_concessao_preservacao_de_sentido",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    },
+    {
+      "question_number": 9,
+      "display_id": "Q09",
+      "question_uid": "cpp-art400-reteste-ordem-audiencia-q09",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_400_reteste_ordem_testemunhas",
+      "selected": "C",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "incorrect_firm",
+      "error_type": "self_reported_application_error",
+      "error_signal": "Reteste principal falhou: preferiu defesa antes da acusacao, com confianca alta; causa autorrelatada como confusao na ordem.",
+      "post_explanation_doubt": "erro_de_aplicacao",
+      "self_reported_error_cause": "confundi_ordem",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 10,
+      "display_id": "Q10",
+      "question_uid": "rl-negacao-universal-condicional-reteste-q10",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_universal_condicional_existe_contraexemplo",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_diminuiu",
+      "self_reported_error_cause": null,
+      "reported_strategy": null
+    }
+  ],
+  "reinforcements": {
+    "attempted": 4,
+    "valid": 4,
+    "valid_correct": 4,
+    "valid_incorrect": 0,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "origin_main_question": 3,
+        "display_id": "Q03-R1",
+        "question_uid": "cpp-art400-ordem-audiencia-reforco-q03-r1",
+        "subject": "direito-processual-penal",
+        "subtopic": "cpp_400_ordem_ofendido_acusacao_defesa_interrogatorio",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [
+          "D"
+        ],
+        "interpretation": "Acerto imediatamente apos a explicacao; nao compensa erro principal."
+      },
+      {
+        "origin_main_question": 4,
+        "display_id": "Q04-R1",
+        "question_uid": "rl-negacao-condicional-reforco-q04-r1",
+        "subject": "raciocinio-logico",
+        "subtopic": "negacao_condicional_contraexemplo",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [
+          "D"
+        ],
+        "interpretation": "Acerto em reforco imediato; Q10 reteve o principio em nova formulacao."
+      },
+      {
+        "origin_main_question": 7,
+        "display_id": "Q07-R1",
+        "question_uid": "mat-faixa-interna-30x20-3m-r1",
+        "subject": "matematica",
+        "subtopic": "area_faixa_interna_retangulo_30x20_largura_3",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [
+          "B"
+        ],
+        "interpretation": "Acerto 264 m2 no reforco imediato, reteste independente ainda pendente."
+      },
+      {
+        "origin_main_question": 9,
+        "display_id": "Q09-R1",
+        "question_uid": "cpp-art400-ampla-defesa-reforco-q09-r1",
+        "subject": "direito-processual-penal",
+        "subtopic": "cpp_400_ampla_defesa_nao_inverte_ordem",
+        "selected": "E",
+        "correct_answer": "E",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [
+          "E"
+        ],
+        "interpretation": "Acerto imediatamente apos erro no reteste; retenção continua nao demonstrada."
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "cpp_400_ordem_testemunhas",
+      "evidence": "Q03 B incorreta com duvida B/C; Q03-R1 D correta firme; Q09 C incorreta firme no reteste; Q09-R1 E correta firme; Q09 causa confundi_ordem.",
+      "interpretation": "Retencao no reteste principal nao demonstrada; reforcos imediatos nao neutralizam dois erros; priorizar novo reteste sem explicacao proxima."
+    },
+    {
+      "topic": "matematica_faixa_interna_retangular",
+      "evidence": "Q07 D incorreta firme, selecionou a area central 308 m2 em vez de faixa 160 m2; causa autorrelatada; Q07-R1 B correta firme (264 m2).",
+      "interpretation": "Recuperacao imediata, reteste independente pendente."
+    },
+    {
+      "topic": "raciocinio_logico_negacao_condicional",
+      "evidence": "Q04 E incorreta firme; Q04-R1 D correta firme; Q10 D correta firme no reteste com quantificador universal, autoavaliacao duvida_diminuiu.",
+      "interpretation": "Retencao de curto intervalo favoravel, mas nao equivale a dominio definitivo."
+    },
+    {
+      "topic": "portugues_informatica_direito_penal",
+      "evidence": "Q01 Q02 Q05 Q06 Q08 corretas firmes; sem estrategia explicita observada.",
+      "interpretation": "Evidencia local positiva em pequenas amostras; manutencao espacada."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "high",
+      "targets": [
+        "cpp_400_ordem_acusacao_defesa_interrogatorio"
+      ],
+      "retest": "Novo microdrill apos intervalo sem revelar ordem; distinguir regra legal de deducao pela ampla defesa; depois transferir para simulacao."
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "matematica_area_faixa_interna"
+      ],
+      "retest": "Nova geometria contextualizada; exigir identificacao do que esta sendo pedido, evitando area central como resposta."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "raciocinio_logico_negacao_condicional_quantificador"
+      ],
+      "retest": "Revisao espacada com itens de variacao estrutural e contraexemplos."
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "direito_constitucional",
+        "direito_processual_civil",
+        "direito_administrativo",
+        "legislacao",
+        "atualidades_e_LBI"
+      ],
+      "retest": "Expandir cobertura sem abandonar vulnerabilidades e respeitar blueprint."
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "portugues_concordancia_regencia_concessao",
+        "informatica_cont_ses",
+        "direito_penal_320"
+      ],
+      "retest": "Manutencao em contexto diverso e misto."
+    }
+  ],
+  "evidence_limits": [
+    "Sem cronometro ou duracao de resposta.",
+    "Estratégias so registradas quando declaradas; falta de relato nao vira estrategia presumida.",
+    "Quatro reforcos excluidos das 10 principais e do score.",
+    "A avaliacao no microdrill nao equivale a simulacao integral nem dominio permanente.",
+    "Pontuacao historica de outros chats nao consolidada nem somada neste evento.",
+    "O review registra resumos das questoes, nao enunciados completos nem transcricao."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
