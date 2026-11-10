@@ -1,0 +1,568 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p002__tjsp-escrevente-2025__chatgpt-20261109-f6p2k9v4__block_review__b02-q11-q20",
+  "session_id": "chatgpt-20261109-f6p2k9v4",
+  "block_id": "b02-q11-q20",
+  "participant_id": "p002",
+  "enrollment_id": "p002__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-09",
+  "timing_note": "Data identificada na sessão; sem medição de tempos individuais ou duração.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Q11-Q20, respostas principais, confiança, alternativas concorrentes, correções, autoavaliações, R13/R16/R19 e revisão ativa após Q20.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false
+  },
+  "scope": {
+    "first_main_question": 11,
+    "last_main_question": 20,
+    "valid_main_questions": 10,
+    "excluded_defective_main_questions": 0,
+    "reinforcements_outside_main_score": true,
+    "active_review_outside_main_score": true,
+    "not_a_full_simulation": true,
+    "outside_scope": "Outras sessões, outros participantes e resultados não observados."
+  },
+  "score": {
+    "correct": 8,
+    "incorrect": 2,
+    "total": 10,
+    "computed_percent": 80
+  },
+  "confidence": {
+    "firm": 8,
+    "firm_correct": 7,
+    "firm_incorrect": 1,
+    "uncertain_between_2": 1,
+    "uncertain_correct": 1,
+    "uncertain_incorrect": 0,
+    "uncertain_between_3": 0,
+    "guess_between_4": 0,
+    "guess_between_5": 1,
+    "guess_correct": 0,
+    "guess_incorrect": 1
+  },
+  "response_outcomes": {
+    "correct_firm": 7,
+    "correct_uncertain": 1,
+    "incorrect_high_confidence": 1,
+    "incorrect_uncertain": 0,
+    "incorrect_guess": 1,
+    "correct_by_guess": 0
+  },
+  "post_explanation_self_assessment": {
+    "maintained_certainty": 8,
+    "doubt_decreased": 2,
+    "identified_false_knowledge": 0,
+    "doubt_remained": 0,
+    "doubt_increased_or_changed": 0
+  },
+  "strategies": {
+    "explicitly_reported_elimination": 0,
+    "explicitly_reported_inference": 1,
+    "reported_for_questions": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "note": "Estratégias descritas resumem apenas autorrelatos; acerto, confiança e método permanecem dimensões distintas. Identificação de tese em Q17 é codificada como inferência reportada."
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      13,
+      16
+    ],
+    "high_confidence_error_question_ids": [
+      16
+    ],
+    "guess_error_question_ids": [
+      13
+    ],
+    "correct_key_among_considered_on_wrong_answer": [],
+    "confirmed_reading_errors": 0,
+    "confirmed_detailed_causal_explanations": 2,
+    "observed_candidate_patterns": [
+      "Q13: média ponderada 87 escolhida por chute entre cinco; dificuldade de montar o cálculo explicitamente relatada.",
+      "Q16: exclusão indevida do primeiro dia já definido computável, mesmo com alta confiança e autoavaliação Mantive minha certeza.",
+      "Q19: acerto com dúvida entre E e D por incerteza sobre mandado judicial diurno sem consentimento."
+    ]
+  },
+  "subjects": [
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        11
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        12
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        13
+      ]
+    },
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        14,
+        17
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        15
+      ]
+    },
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        16
+      ]
+    },
+    {
+      "subject": "conhecimentos-gerais-lbi",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        18
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        19
+      ]
+    },
+    {
+      "subject": "direito-administrativo",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        20
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 11,
+      "display_id": "Q11",
+      "subject": "informatica",
+      "subtopic": "excel_365_referencias_mistas_copia_de_F7_para_H10",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "resolvi_mentalmente_usando_deslocamentos"
+    },
+    {
+      "question_number": 12,
+      "display_id": "Q12",
+      "subject": "direito-penal",
+      "subtopic": "cp_art_312_peculato_desvio_vs_furto",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "identifiquei_posse_funcional_e_facilidade_decorrente_do_cargo",
+      "qa_caveat": "Caso de monitores possivelmente requer maior clareza sobre desvio definitivo versus uso transitório de bem público não fungível (peculato de uso). Resposta inicialmente aceita, sem penalização; item pendente de refinamento de autoria."
+    },
+    {
+      "question_number": 13,
+      "display_id": "Q13",
+      "subject": "matematica",
+      "subtopic": "media_ponderada_tres_grupos",
+      "selected": "D",
+      "correct_answer": "E",
+      "correct": false,
+      "confidence": "guess_between_5",
+      "considered_alternatives": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "response_class": "incorrect_guess",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": "nao_sabia_montar_media_ponderada",
+      "confirmed_issue": "Dificuldade de montar média ponderada, autorrelatada; resposta 87, média correta 88."
+    },
+    {
+      "question_number": 14,
+      "display_id": "Q14",
+      "subject": "portugues",
+      "subtopic": "crase_demonstrativos_aquela",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "apliquei_regra_de_demonstrativos_aquele_aquela_aquilo"
+    },
+    {
+      "question_number": 15,
+      "display_id": "Q15",
+      "subject": "raciocinio-logico",
+      "subtopic": "condicionais_contradicao_P_B",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "encadeei_condicionais_e_identifiquei_contradicao"
+    },
+    {
+      "question_number": 16,
+      "display_id": "Q16",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_arts_219_224_contagem_com_primeiro_dia_ja_computavel",
+      "selected": "E",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "exclui_primeiro_dia_ja_definido_como_computavel",
+      "confirmed_error_cause": "A participante excluiu 10/03/2026 por entendê-lo como dia do começo, apesar de o enunciado já especificá-lo como primeiro dia computável; gabarito 19/03/2026."
+    },
+    {
+      "question_number": 17,
+      "display_id": "Q17",
+      "subject": "portugues",
+      "subtopic": "compreensao_interpretacao_identificacao_tese",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "identifiquei_tese_central_e_conclusao_autor"
+    },
+    {
+      "question_number": 18,
+      "display_id": "Q18",
+      "subject": "conhecimentos-gerais-lbi",
+      "subtopic": "lei_13146_2015_arts_37_38_inclusao_trabalho_acessibilidade",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "reconheci_obrigatoriedade_acessibilidade_processo_seletivo"
+    },
+    {
+      "question_number": 19,
+      "display_id": "Q19",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_art_5_xi_inviolabilidade_domiciliar",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "E",
+        "D"
+      ],
+      "response_class": "correct_uncertain",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": "nao_tinha_certeza_de_que_mandado_diurno_dispensa_consentimento"
+    },
+    {
+      "question_number": 20,
+      "display_id": "Q20",
+      "subject": "direito-administrativo",
+      "subtopic": "lei_sp_10261_1968_arts_241_v_par_unico_242_ii_viii",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "analisei_separadamente_as_tres_condutas"
+    }
+  ],
+  "reinforcements": {
+    "attempted": 3,
+    "valid": 3,
+    "valid_correct": 3,
+    "valid_incorrect": 0,
+    "skipped": [
+      11,
+      12,
+      14,
+      15,
+      17,
+      18,
+      20
+    ],
+    "included_in_main_score": false,
+    "items": [
+      {
+        "display_id": "R13",
+        "origin_main_question": 13,
+        "subject": "matematica",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R16",
+        "origin_main_question": 16,
+        "subject": "direito-processual-civil",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      },
+      {
+        "display_id": "R19",
+        "origin_main_question": 19,
+        "subject": "direito-constitucional",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": null,
+        "included_in_main_score": false
+      }
+    ]
+  },
+  "active_review": {
+    "trigger_valid_main_question_count_session_local": 20,
+    "completed": true,
+    "not_in_main_or_reinforcement_score": true,
+    "retrieval_questions": {
+      "attempted": 3,
+      "answered_correct_under_stated_conditions": 3,
+      "confidence_all": "firm",
+      "items": [
+        {
+          "id": "REV1",
+          "origin_question": 16,
+          "subject": "direito-processual-civil",
+          "result": "correct_under_counterfactual_stipulation",
+          "answer": "12/01/2027; 04,05,07,08,11,12 de janeiro, assumindo 04/01 como primeiro dia já computável.",
+          "defect": "Prazos processuais ficam suspensos de 20/12 a 20/01, inclusive, por força do CPC art. 220; datas escolhidas não permitem uma contagem processual real nesse período. Não penalizar a participante nem validar como prazo real."
+        },
+        {
+          "id": "REV2",
+          "origin_question": 13,
+          "subject": "matematica",
+          "result": "correct",
+          "answer": "80; (30*76 - 12*70)/18 = 80"
+        },
+        {
+          "id": "REV3",
+          "origin_question": 19,
+          "subject": "direito-constitucional",
+          "result": "correct",
+          "answer": "Ingresso judicial às 15h permitido; ingresso para socorro em incêndio às 2h permitido."
+        }
+      ]
+    },
+    "flashcards": {
+      "presented": 3,
+      "participant_confirmed_reviewed": 3,
+      "topics": [
+        "Q16 primeiro dia computável",
+        "Q19 mandado diurno versus socorro noturno",
+        "Comparação Q13 média ponderada e Q16 contagem de prazo"
+      ],
+      "independent_of_main_score": true
+    },
+    "interpretation": "Recuperação imediata favorável em temas previamente fracos/instáveis; não demonstra retenção de longo prazo. REV1 tem hipótese artificial juridicamente inconsistente, que limita a evidência de domínio de prazo processual."
+  },
+  "learning_signals": [
+    {
+      "topic": "media_ponderada",
+      "evidence": "Q13 incorreta por chute; R13 e REV2 corretas; REV2 com fórmula e confiança firme.",
+      "interpretation": "Aprendizagem imediata observada; testar transferência futura sem dicas."
+    },
+    {
+      "topic": "cpc_prazo_primeiro_dia",
+      "evidence": "Q16 incorreta firme; R16 correta; REV1 correta com premissa artificial, mas data real coberta pela suspensão do art.220.",
+      "interpretation": "Recuperação do mecanismo de contagem, ainda não verificação juridicamente íntegra; exigir novo item em data fora da suspensão."
+    },
+    {
+      "topic": "cf_art_5_xi",
+      "evidence": "Q19 correta entre E e D, R19 e REV3 corretas; na REV3 declarou Sem dúvida.",
+      "interpretation": "Confiança e discriminação melhoraram no curto prazo; manter revisão espaçada."
+    },
+    {
+      "topic": "peculato_modalidades",
+      "evidence": "Q12 correta firme; item I tem potencial de ambiguidade por não afastar uso temporário de monitores.",
+      "interpretation": "Não concluir domínio definitivo; refinar e retestar com finalidade e posse claramente definidas."
+    },
+    {
+      "topic": "excel_referencias_mistas",
+      "evidence": "Q11 correta firme, após Q08 e R08 incorretas no bloco 1.",
+      "interpretation": "Melhora observada em Q11; revisão espaçada com nova fórmula e deslocamentos."
+    },
+    {
+      "topic": "crase_logica_lbi_estatuto",
+      "evidence": "Q14, Q15, Q18 e Q20 corretas firmes.",
+      "interpretation": "Acertos iniciais corretos, sem prova de domínio duradouro."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "very_high",
+      "targets": [
+        "cpc_arts_219_220_224_marco_inicial_feriados_suspensao"
+      ],
+      "retest": "Questão nova juridicamente válida com evento inicial real, sem primeiro dia fornecido, fora da suspensão do art.220."
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "matematica_media_ponderada"
+      ],
+      "retest": "Novo cenário de média ponderada com dois subgrupos e dados diferentes, sem dica."
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "informatica_excel_referencias_mistas",
+        "direito_penal_cp_312_desvio_vs_furto_peculato_de_uso"
+      ],
+      "retest": "Rever itens do bloco 1 e Q11/Q12 com casos claros e mudança de contexto."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "cf_art_5_xi_inviolabilidade_domiciliar",
+        "lbi_art_37_trabalho_com_apoio",
+        "portugues_crase",
+        "raciocinio_logico_condicionais",
+        "direito_administrativo_lei_sp_10261_1968"
+      ],
+      "retest": "Intercalar novos casos sem apresentar regra antes da resposta."
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "portugues",
+        "direito_outros_subtemas",
+        "informatica_outros_topicos",
+        "matematica",
+        "atualidades_e_lbi",
+        "raciocinio_logico"
+      ],
+      "retest": "Preservar proporção do edital TJSP 2025 ao longo de sequência maior."
+    }
+  ],
+  "session_progress": {
+    "valid_main_questions_this_session": 20,
+    "completed_local_blocks": 2,
+    "this_block_valid_main_questions": 10,
+    "next_local_main_question": "Q21",
+    "next_action": "Não iniciar Q21 automaticamente; oferecer controle de avanço separado.",
+    "cumulative_after_block": {
+      "scope": "session_local_not_global",
+      "valid_main_questions": 20,
+      "correct": 14,
+      "incorrect": 6,
+      "computed_percent": 70,
+      "correct_firm": 11,
+      "correct_uncertain": 3,
+      "incorrect_high_confidence": 3,
+      "incorrect_uncertain": 1,
+      "incorrect_guess": 2,
+      "reinforcements_attempted": 10,
+      "reinforcements_correct": 7,
+      "reinforcements_incorrect": 3
+    }
+  },
+  "qa_flags": [
+    {
+      "item": "Q12",
+      "severity": "needs_item_review",
+      "reason": "Premissa de desvio de bens não fungíveis pode exigir esclarecimento de intenção definitiva versus uso transitório (peculato de uso). Não reclassificada a resposta da participante."
+    },
+    {
+      "item": "REV1",
+      "severity": "confirmed_item_defect",
+      "reason": "Contagem fictícia de prazo processual nos dias 04-12/01/2027 contraria suspensão legal do CPC art.220. Resposta correta apenas sob hipótese expressamente estipulada; não equivale a cálculo real."
+    }
+  ],
+  "evidence_limits": [
+    "Nenhum tempo individual ou tempo de prova foi medido.",
+    "Sessão local única; placar acumulado não representa agregação canônica de múltiplos chats paralelos.",
+    "Não foi aplicado simulado integral de 70 questões.",
+    "Reforços e revisão ativa não integram o score principal nem devem ser somados novamente.",
+    "Q12 contém ressalva de autoria que impede inferência forte de domínio de peculato-desvio.",
+    "REV1 tem defeito de datas por suspensão do art. 220 do CPC; não usar para validar calendário processual real.",
+    "Respostas correctas do review e de reforços curtos indicam recuperação imediata, não retenção consolidada.",
+    "Respostas e estratégias baseiam-se no histórico desta conversa; não há validação externa da resolução individual.",
+    "Flashcards apresentados e concluídos no review somam três; revisão de cartões adicionais não foi adotada como evidência do fechamento."
+  ],
+  "evidence_status": "observed_block_review_with_completed_active_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
