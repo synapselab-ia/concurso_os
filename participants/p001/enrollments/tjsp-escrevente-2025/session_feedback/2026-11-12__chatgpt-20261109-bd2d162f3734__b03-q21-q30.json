@@ -1,0 +1,548 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p001__tjsp-escrevente-2025__chatgpt-20261109-bd2d162f3734__block_review__b03-q21-q30",
+  "session_id": "chatgpt-20261109-bd2d162f3734",
+  "block_id": "b03-q21-q30",
+  "participant_id": "p001",
+  "enrollment_id": "p001__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-12",
+  "recorded_at": "2026-11-12",
+  "timing_note": "Bloco iniciado em data anterior e concluído em 2026-11-12, horário local America/Sao_Paulo. Horários e duração por resposta não medidos.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Dez questões principais A-E com resposta, confiança, alternativas consideradas e autoavaliação pós-correção; três reforços não pontuáveis corrigidos separadamente.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false,
+    "reference_scope": "Apostilas canônicas de Português, Direito Processual Penal e Direito Penal, edital canônico TJSP 2025 e fontes normativas/técnicas citadas na sessão. Resultado observado no microdrill; sem alegação de domínio geral."
+  },
+  "scope": {
+    "first_main_question": 21,
+    "last_main_question": 30,
+    "valid_main_questions": 10,
+    "excluded_from_main_score": "Reforços Q21-R1, Q22-R1, Q30-R1; outras sessões e blocos.",
+    "outside_scope": "Blocos 01 e 02 da mesma sessão e todos os demais chats/sessões do enrollment."
+  },
+  "score": {
+    "correct": 8,
+    "incorrect": 2,
+    "total": 10,
+    "computed_percent": 80
+  },
+  "confidence": {
+    "firm": 7,
+    "firm_correct": 6,
+    "firm_incorrect": 1,
+    "uncertain_between_2": 2,
+    "uncertain_correct": 1,
+    "uncertain_incorrect": 1,
+    "guess": 1
+  },
+  "response_outcomes": {
+    "correct_firm": 6,
+    "correct_uncertain": 1,
+    "incorrect_high_confidence": 1,
+    "incorrect_low_confidence": 1,
+    "correct_by_guess": 1
+  },
+  "guesses": {
+    "total": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "question_ids": [
+      21
+    ]
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      22,
+      30
+    ],
+    "high_confidence_error_question_ids": [
+      30
+    ],
+    "self_reported_false_knowledge_question_ids": [],
+    "suspected_false_knowledge_question_ids": [
+      22,
+      30
+    ],
+    "wrong_answer_but_key_considered_question_ids": [],
+    "confirmed_reading_errors": 0,
+    "correct_with_uncertainty_question_ids": [
+      27
+    ],
+    "uncertainty_notes": [
+      {
+        "question_number": 21,
+        "considered": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "reported_reason": "multiplas_regras",
+        "post_explanation_doubt": "duvida_resolvida",
+        "interpretation": "Acerto por chute entre cinco; autoavaliação posterior não o converte em acerto firme. Reforço correto entre A e C."
+      },
+      {
+        "question_number": 22,
+        "considered": [
+          "A",
+          "E"
+        ],
+        "reported_reason": "nao_soube_montar",
+        "post_explanation_doubt": "duvida_diminuiu",
+        "interpretation": "Erro com dúvida, antecedente negado; reforço incorreto com confiança alta, mudando conectivo interno E para OU."
+      },
+      {
+        "question_number": 27,
+        "considered": [
+          "B",
+          "C"
+        ],
+        "reported_reason": "outro_ou_indefinido",
+        "post_explanation_doubt": "duvida_resolvida",
+        "interpretation": "Acerto com dúvida entre ordem incorreta do interrogatório e art. 400/402; correção posterior não altera classificação."
+      },
+      {
+        "question_number": 30,
+        "considered": [
+          "C"
+        ],
+        "reported_reason": "troquei_ou_por_e_automaticamente",
+        "post_explanation_doubt": "duvida_resolvida",
+        "interpretation": "Erro de alta confiança, troca indevida de OU por E dentro do antecedente; reteste imediato Q30-R1 correto firme, sem reparar o erro original."
+      }
+    ]
+  },
+  "subjects": [
+    {
+      "subject": "portugues",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        21
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 2,
+      "correct": 0,
+      "question_ids": [
+        22,
+        30
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        23,
+        27
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 2,
+      "correct": 2,
+      "question_ids": [
+        24,
+        28
+      ]
+    },
+    {
+      "subject": "atualidades_pcd",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        25
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        26
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        29
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 21,
+      "display_id": "Q21",
+      "question_uid": "pt-regencia-crase-relativo-a-qual-q21",
+      "subject": "portugues",
+      "subtopic": "crase_regencia_relativo_a_qual",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "guess_5",
+      "considered_alternatives": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "response_class": "correct_by_guess",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_resolvida",
+      "self_reported_error_cause": "multiplas_regras",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 22,
+      "display_id": "Q22",
+      "question_uid": "rl-negacao-condicional-ou-universal-q22",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_condicional_ou_e_universal",
+      "selected": "A",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "A",
+        "E"
+      ],
+      "response_class": "incorrect_low_confidence",
+      "error_type": "negacao_indevida_antecedente",
+      "error_signal": "Escolheu A, que nega o antecedente P OU Q em vez de preservá-lo.",
+      "post_explanation_doubt": "duvida_diminuiu",
+      "self_reported_error_cause": "nao_soube_montar",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 23,
+      "display_id": "Q23",
+      "question_uid": "cpp-397-iv-extincao-punibilidade-apos-resposta-q23",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_397_iv_extincao_punibilidade_apos_resposta",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "literalidade_397_iv"
+    },
+    {
+      "question_number": 24,
+      "display_id": "Q24",
+      "question_uid": "mat-media-ponderada-atendimentos-16x9-24x14-q24",
+      "subject": "matematica",
+      "subtopic": "media_ponderada_quantidade_atendimentos",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "tempo_total_dividido_quantidade"
+    },
+    {
+      "question_number": 25,
+      "display_id": "Q25",
+      "question_uid": "lbi-art6-capacidade-civil-planejamento-familiar-adocao-q25",
+      "subject": "atualidades_pcd",
+      "subtopic": "lbi_art6_capacidade_civil_direitos_familiares",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "literalidade_art6"
+    },
+    {
+      "question_number": 26,
+      "display_id": "Q26",
+      "question_uid": "info-word365-controle-alteracoes-sem-marcacao-q26",
+      "subject": "informatica",
+      "subtopic": "word365_controlar_alteracoes_sem_marcacao_aceitar_rejeitar",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_diminuiu",
+      "self_reported_error_cause": null,
+      "reported_strategy": "conhecimento_teorico"
+    },
+    {
+      "question_number": 27,
+      "display_id": "Q27",
+      "question_uid": "cpp-art400-402-interrogatorio-diligencias-q27",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_400_402_interrogatorio_final_e_diligencias",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "C"
+      ],
+      "response_class": "correct_uncertain",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "duvida_resolvida",
+      "self_reported_error_cause": "outro_ou_indefinido",
+      "reported_strategy": null
+    },
+    {
+      "question_number": 28,
+      "display_id": "Q28",
+      "question_uid": "mat-area-faixa-interna-retangulo-16x12-largura-1p5-q28",
+      "subject": "matematica",
+      "subtopic": "area_faixa_interna_retangulo",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "area_total_menos_central"
+    },
+    {
+      "question_number": 29,
+      "display_id": "Q29",
+      "question_uid": "dp-cp313a-alteracao-dados-corretos-funcionario-autorizado-q29",
+      "subject": "direito-penal",
+      "subtopic": "cp_313a_alteracao_indevida_dados_corretos",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "error_type": null,
+      "error_signal": null,
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "self_reported_error_cause": null,
+      "reported_strategy": "literalidade_art313a"
+    },
+    {
+      "question_number": 30,
+      "display_id": "Q30",
+      "question_uid": "rl-negacao-condicional-antecedente-e-ou-existe-q30",
+      "subject": "raciocinio-logico",
+      "subtopic": "negacao_condicional_composta_preservacao_antecedente_existencial",
+      "selected": "C",
+      "correct_answer": "E",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "error_type": "troca_conectivo_ou_para_e_no_antecedente",
+      "error_signal": "Substituiu P E (Q OU R) por P E Q E R; negou corretamente o consequente existencial.",
+      "post_explanation_doubt": "duvida_resolvida",
+      "self_reported_error_cause": "troquei_ou_por_e_automaticamente",
+      "reported_strategy": null
+    }
+  ],
+  "reinforcements": {
+    "attempted": 3,
+    "valid": 3,
+    "valid_correct": 2,
+    "valid_incorrect": 1,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "reinforcement_id": "Q21-R1",
+        "question_uid": "pt-crase-demonstrativo-aquela-reforco-q21-r1",
+        "origin_question_number": 21,
+        "subject": "portugues",
+        "subtopic": "crase_demonstrativo_aquela",
+        "selected": "C",
+        "correct_answer": "C",
+        "correct": true,
+        "confidence": "between_2",
+        "considered_alternatives": [
+          "A",
+          "C"
+        ],
+        "response_class": "correct_uncertain",
+        "included_in_main_score": false,
+        "post_explanation_doubt": null
+      },
+      {
+        "reinforcement_id": "Q22-R1",
+        "question_uid": "rl-negacao-condicional-e-nenhum-reforco-q22-r1",
+        "origin_question_number": 22,
+        "subject": "raciocinio-logico",
+        "subtopic": "negacao_condicional_e_ninguem",
+        "selected": "B",
+        "correct_answer": "D",
+        "correct": false,
+        "confidence": "firm",
+        "considered_alternatives": [
+          "B"
+        ],
+        "response_class": "incorrect_high_confidence",
+        "included_in_main_score": false,
+        "error_signal": "Alterou o conectivo interno E do antecedente para OU.",
+        "post_explanation_doubt": null
+      },
+      {
+        "reinforcement_id": "Q30-R1",
+        "question_uid": "rl-negacao-condicional-ou-e-universal-reforco-q30-r1",
+        "origin_question_number": 30,
+        "subject": "raciocinio-logico",
+        "subtopic": "negacao_condicional_ou_e_universal",
+        "selected": "B",
+        "correct_answer": "B",
+        "correct": true,
+        "confidence": "firm",
+        "considered_alternatives": [
+          "B"
+        ],
+        "response_class": "correct_firm",
+        "included_in_main_score": false,
+        "post_explanation_doubt": null
+      }
+    ]
+  },
+  "learning_signals": [
+    {
+      "topic": "rl_negacao_condicional_antecedente_composto",
+      "evidence": "Q22 principal errada com dúvida; Q22-R1 errada firme; Q30 principal errada firme; Q30-R1 correta firme após explicação.",
+      "interpretation": "Padrão recorrente de modificar conectivos internos ao negar condicional. Reteste imediato favorável não confirma domínio duradouro; prioridade máxima no bloco seguinte."
+    },
+    {
+      "topic": "cpp_400_ordem_testemunhas_interrogatorio",
+      "evidence": "Q27 correta com dúvida entre B e C, após dois erros no bloco 01 e acerto firme Q14 do bloco 02.",
+      "interpretation": "Recuperação parcial, permanece hesitação na ordem processual; reteste espaçado."
+    },
+    {
+      "topic": "matematica_area_faixa_interna",
+      "evidence": "Q28 correta firme usando área total menos área central, após erro Q07 no bloco 01 e acerto firme Q11 no bloco 02.",
+      "interpretation": "Reteste favorável; manter consolidação e variação de contexto."
+    },
+    {
+      "topic": "portugues_crase_regencia",
+      "evidence": "Q21 principal correta por chute entre cinco, Q21-R1 correta com dúvida entre duas.",
+      "interpretation": "Reforço sugere progresso imediato, não eleva confiança original nem comprova domínio."
+    },
+    {
+      "topic": "lbi_art6_e_art4",
+      "evidence": "Q25 correta firme no art. 6º; Q18 do bloco 02 correta com dúvida no art. 4º.",
+      "interpretation": "Revisar em separado a discriminação por propósito ou efeito e adaptações razoáveis no art. 4º."
+    },
+    {
+      "topic": "cobertura_mista",
+      "evidence": "Dez questões autorais em sete grupos de matéria, 8/10 principais e três reforços não pontuáveis.",
+      "interpretation": "Desempenho local de microdrill, não é simulado completo ou medida de proficiência geral."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "immediate_spaced_high",
+      "targets": [
+        "rl_negacao_condicional_preservar_antecedente_composto",
+        "negacao_quantificadores_universal_existencial"
+      ],
+      "retest": "Aplicar novo item original sem pista, com alternância E/OU no antecedente; distinguir autoconfiança de desempenho e preservar Q22/Q30 incorretas."
+    },
+    {
+      "priority": "spaced_high",
+      "targets": [
+        "cpp_400_ordem_acusacao_defesa_interrogatorio",
+        "cpp_402_diligencias_surgidas_instrucao"
+      ],
+      "retest": "Nova situação com ordem de depoimentos e momento do interrogatório; observar hesitação Q27."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "portugues_crase_pronomes_relativos_demonstrativos"
+      ],
+      "retest": "Novo contexto sem pista, verificando regência, presença de artigo e crase."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "lbi_4_discriminacao_proposito_ou_efeito_adaptacao_razoavel"
+      ],
+      "retest": "Caso com efeitos discriminatórios e recusa de adaptação razoável, mantendo separação do art. 6º."
+    },
+    {
+      "priority": "maintenance",
+      "targets": [
+        "matematica_area_faixa_interna"
+      ],
+      "retest": "Reteste de retenção em intervalo maior e geometria variada."
+    },
+    {
+      "priority": "coverage",
+      "targets": [
+        "legislacao_interna",
+        "portugues_interpretacao",
+        "direito_processual_civil",
+        "direito_constitucional",
+        "direito_administrativo"
+      ],
+      "retest": "Ampliar distribuição conforme edital canônico; evitar repetição excessiva dos mesmos conteúdos."
+    }
+  ],
+  "evidence_limits": [
+    "Sem cronômetro, hora ou duração individual das questões; data registrada é a conclusão do bloco.",
+    "Autoavaliação, estratégia e motivos refletem apenas relatos explícitos; não inferir dados ausentes.",
+    "Q21 continua correta por chute, Q27 correta com dúvida, Q22 e Q30 incorretas, apesar dos reforços e explicações.",
+    "Q30-R1 acerto firme é somente de reforço, não entra na nota e não constitui recuperação da questão principal Q30.",
+    "Possível falso conhecimento em Lógica é sinal comportamental, não foi autodeclarado literalmente como tal.",
+    "Este registro consolida dez questões autorais e não armazena transcrição integral nem questões completas.",
+    "Blocos 01 e 02 e demais sessões permanecem inalterados; sem agregação ou projeção de domínio geral."
+  ],
+  "evidence_status": "observed_block_review_no_mastery_projection",
+  "privacy": "public_pseudonymous_minimal_no_transcript"
+}
