@@ -1,0 +1,661 @@
+{
+  "schema_version": "0.1",
+  "record_type": "block_review",
+  "feedback_id": "p002__tjsp-escrevente-2025__chatgpt-20261109-f6p2k9v4__block_review__b03-q21-q30",
+  "session_id": "chatgpt-20261109-f6p2k9v4",
+  "block_id": "b03-q21-q30",
+  "participant_id": "p002",
+  "enrollment_id": "p002__tjsp-escrevente-2025",
+  "competition_id": "tjsp-escrevente-2025",
+  "subject_id": "mixed",
+  "practice_mode": "microdrill",
+  "occurred_at": "2026-11-09",
+  "recorded_at": "2026-11-11",
+  "timing_note": "A data de início identifica a sessão; encerramento do bloco solicitado em 11/11/2026. Durações e datas individuais de resposta não foram aferidas.",
+  "source": {
+    "type": "chatgpt_interactive_session",
+    "review_basis": "Q21-Q30 principais, respostas/confianças, autoavaliações reportadas, R21/R25/R27/R28/R30, REV3.1-REV3.6 e REV3.7 iniciada sem submissão.",
+    "question_level_evidence_complete_for_main_block": true,
+    "full_transcript_persisted": false,
+    "full_question_text_persisted": false,
+    "external_validation_of_reasoning": false,
+    "closure_rule": "Participante determinou encerrar o bloco antes de responder a REV3.7; ausência de resposta não gera nota ou erro."
+  },
+  "scope": {
+    "first_main_question": 21,
+    "last_main_question": 30,
+    "valid_main_questions": 10,
+    "excluded_defective_main_questions": 0,
+    "reinforcements_outside_main_score": true,
+    "active_review_outside_main_score": true,
+    "not_a_full_simulation": true,
+    "outside_scope": "Outros participantes e sessões, resultados de revisões não submetidas, desempenho futuro e dados não declarados."
+  },
+  "score": {
+    "correct": 6,
+    "incorrect": 4,
+    "total": 10,
+    "computed_percent": 60
+  },
+  "confidence": {
+    "firm": 8,
+    "firm_correct": 5,
+    "firm_incorrect": 3,
+    "uncertain_between_2": 2,
+    "uncertain_correct": 1,
+    "uncertain_incorrect": 1,
+    "uncertain_between_3": 0,
+    "guess_between_4": 0,
+    "guess_between_5": 0,
+    "guess_correct": 0,
+    "guess_incorrect": 0
+  },
+  "response_outcomes": {
+    "correct_firm": 5,
+    "correct_uncertain": 1,
+    "incorrect_high_confidence": 3,
+    "incorrect_uncertain": 1,
+    "incorrect_guess": 0,
+    "correct_by_guess": 0
+  },
+  "post_explanation_self_assessment": {
+    "maintained_certainty": 5,
+    "doubt_decreased": 5,
+    "identified_false_knowledge": 0,
+    "doubt_remained": 0,
+    "doubt_increased_or_changed": 0
+  },
+  "strategies": {
+    "explicitly_reported_elimination": 1,
+    "explicitly_reported_inference": 0,
+    "explicitly_reported_for_questions": [
+      22,
+      23,
+      24,
+      26,
+      29
+    ],
+    "note": "Relatos de estratégia preservados literalmente de forma abreviada nos itens. Não inferir estratégia a partir da correção, confiança ou causa de erro."
+  },
+  "error_signals": {
+    "wrong_question_ids": [
+      21,
+      25,
+      28,
+      30
+    ],
+    "high_confidence_error_question_ids": [
+      21,
+      28,
+      30
+    ],
+    "uncertain_error_question_ids": [
+      25
+    ],
+    "guess_error_question_ids": [],
+    "correct_key_among_considered_on_wrong_answer": [],
+    "confirmed_reading_errors": 0,
+    "confirmed_detailed_causal_explanations": 4,
+    "observed_candidate_patterns": [
+      "Q21: confundiu publicação no DJe com o primeiro dia computável; R21 correta e REV3.3 acertou a contagem.",
+      "Q25: não reconheceu inicialmente a impessoalidade de fazer indicando tempo decorrido; R25 apresentou nova dificuldade sobre se apassivador e concordância.",
+      "Q28: supôs possível separação entre suspensão do processo e da prescrição sob CPP art.366; R28 correta, REV3.2 sem resposta, REV3.5 parcialmente correta.",
+      "Q30: acreditou que responsabilidade por prejuízo à Fazenda exigia dolo; R30 correta, REV3.4 parcialmente correta."
+    ]
+  },
+  "subjects": [
+    {
+      "subject": "direito-processual-civil",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        21
+      ]
+    },
+    {
+      "subject": "matematica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        22
+      ]
+    },
+    {
+      "subject": "informatica",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        23
+      ]
+    },
+    {
+      "subject": "direito-penal",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        24
+      ]
+    },
+    {
+      "subject": "portugues",
+      "total": 2,
+      "correct": 1,
+      "question_ids": [
+        25,
+        29
+      ]
+    },
+    {
+      "subject": "raciocinio-logico",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        26
+      ]
+    },
+    {
+      "subject": "direito-constitucional",
+      "total": 1,
+      "correct": 1,
+      "question_ids": [
+        27
+      ]
+    },
+    {
+      "subject": "direito-processual-penal",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        28
+      ]
+    },
+    {
+      "subject": "direito-administrativo",
+      "total": 1,
+      "correct": 0,
+      "question_ids": [
+        30
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_number": 21,
+      "display_id": "Q21",
+      "subject": "direito-processual-civil",
+      "subtopic": "cpc_arts_219_224_publicacao_dje_termo_inicial",
+      "selected": "B",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "B"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "confirmed_error_cause": "Contou a data de publicação no DJe como primeiro dia computável."
+    },
+    {
+      "question_number": 22,
+      "display_id": "Q22",
+      "subject": "matematica",
+      "subtopic": "media_ponderada_tres_equipes",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "Calculei o total geral e subtraí os totais das equipes A e B."
+    },
+    {
+      "question_number": 23,
+      "display_id": "Q23",
+      "subject": "informatica",
+      "subtopic": "excel_referencias_mistas_e_absolutas_copia_formula",
+      "selected": "E",
+      "correct_answer": "E",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "E"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": "Identifiquei os componentes fixos e eliminei alternativas incompatíveis."
+    },
+    {
+      "question_number": 24,
+      "display_id": "Q24",
+      "subject": "direito-penal",
+      "subtopic": "cp_art_312_peculato_desvio_vs_peculato_furto",
+      "selected": "D",
+      "correct_answer": "D",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "Identifiquei o desvio de finalidade e a subtração."
+    },
+    {
+      "question_number": 25,
+      "display_id": "Q25",
+      "subject": "portugues",
+      "subtopic": "concordancia_fazer_impessoal_tempo_decorrido",
+      "selected": "A",
+      "correct_answer": "D",
+      "correct": false,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "A",
+        "E"
+      ],
+      "response_class": "incorrect_uncertain",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "confirmed_error_cause": "Não reconheceu que fazer, ao indicar tempo decorrido, é impessoal.",
+      "considered_key_note": "Entre A e E; gabarito D não foi considerado."
+    },
+    {
+      "question_number": 26,
+      "display_id": "Q26",
+      "subject": "raciocinio-logico",
+      "subtopic": "ordenacao_logica_posicoes",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "Montei sequências possíveis e comparei as posições."
+    },
+    {
+      "question_number": 27,
+      "display_id": "Q27",
+      "subject": "direito-constitucional",
+      "subtopic": "cf_art_5_xix_suspensao_vs_dissolucao_associacoes",
+      "selected": "B",
+      "correct_answer": "B",
+      "correct": true,
+      "confidence": "between_2",
+      "considered_alternatives": [
+        "B",
+        "C"
+      ],
+      "response_class": "correct_uncertain",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": null,
+      "confirmed_doubt_cause": "Não tinha certeza de que dissolução compulsória exige decisão judicial transitada em julgado."
+    },
+    {
+      "question_number": 28,
+      "display_id": "Q28",
+      "subject": "direito-processual-penal",
+      "subtopic": "cpp_arts_366_367_citacao_edital_suspensao",
+      "selected": "D",
+      "correct_answer": "B",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "D"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "confirmed_error_cause": "Achou que processo e prescrição poderiam ser suspensos separadamente pelo art.366."
+    },
+    {
+      "question_number": 29,
+      "display_id": "Q29",
+      "subject": "portugues",
+      "subtopic": "interpretacao_identificacao_tese_central",
+      "selected": "C",
+      "correct_answer": "C",
+      "correct": true,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "C"
+      ],
+      "response_class": "correct_firm",
+      "post_explanation_doubt": "mantive_minha_certeza",
+      "reported_strategy": "Identifiquei a tese central do texto e procurei a alternativa compatível."
+    },
+    {
+      "question_number": 30,
+      "display_id": "Q30",
+      "subject": "direito-administrativo",
+      "subtopic": "lei_sp_10261_1968_arts_245_246_responsabilidade_dolo_culpa",
+      "selected": "A",
+      "correct_answer": "C",
+      "correct": false,
+      "confidence": "firm",
+      "considered_alternatives": [
+        "A"
+      ],
+      "response_class": "incorrect_high_confidence",
+      "post_explanation_doubt": "minha_duvida_diminuiu",
+      "reported_strategy": null,
+      "confirmed_error_cause": "Achou que responsabilidade por prejuízo à Fazenda exigia dolo."
+    }
+  ],
+  "reinforcements": {
+    "attempted": 5,
+    "valid": 5,
+    "valid_correct": 4,
+    "valid_incorrect": 1,
+    "included_in_main_score": false,
+    "items": [
+      {
+        "display_id": "R21",
+        "origin_main_question": 21,
+        "subject": "direito-processual-civil",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm"
+      },
+      {
+        "display_id": "R25",
+        "origin_main_question": 25,
+        "subject": "portugues",
+        "selected": "D",
+        "correct_answer": "E",
+        "correct": false,
+        "confidence": "firm",
+        "confirmed_error_cause": "Achou que afixou-se deveria permanecer no singular."
+      },
+      {
+        "display_id": "R27",
+        "origin_main_question": 27,
+        "subject": "direito-constitucional",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm"
+      },
+      {
+        "display_id": "R28",
+        "origin_main_question": 28,
+        "subject": "direito-processual-penal",
+        "selected": "D",
+        "correct_answer": "D",
+        "correct": true,
+        "confidence": "firm"
+      },
+      {
+        "display_id": "R30",
+        "origin_main_question": 30,
+        "subject": "direito-administrativo",
+        "selected": "E",
+        "correct_answer": "E",
+        "correct": true,
+        "confidence": "firm"
+      }
+    ]
+  },
+  "active_review": {
+    "status": "closed_by_explicit_participant_request",
+    "completed": false,
+    "not_in_main_or_reinforcement_score": true,
+    "evaluated_count": 6,
+    "started_not_submitted_count": 1,
+    "score_policy": "Critérios de cada atividade permanecem independentes; não somar como questões principais ou reforços.",
+    "items": [
+      {
+        "id": "REV3.1",
+        "subject": "portugues",
+        "topic": "se_apassivador_vs_indeterminador",
+        "criteria_met": 2,
+        "criteria_total": 5,
+        "original_confidence": "Sem dúvida",
+        "post_correction_self_assessment": "Minha dúvida diminuiu",
+        "self_reported_cause": "Não sabia explicar a concordância do período I",
+        "result_note": "Resposta parcial; classificou o se do período I e reconheceu correção do período II; demais componentes não demonstrados."
+      },
+      {
+        "id": "REV3.2",
+        "subject": "direito-processual-penal",
+        "topic": "cpp_arts_366_367",
+        "criteria_met": 0,
+        "criteria_total": 7,
+        "original_confidence": "Não sei responder",
+        "post_correction_self_assessment": "Minha dúvida diminuiu",
+        "self_reported_cause": "Não lembrava os requisitos cumulativos do art.366",
+        "result_note": "Todos os itens sem resposta, 0 critérios demonstrados; não são sete afirmações juridicamente erradas."
+      },
+      {
+        "id": "REV3.3",
+        "subject": "direito-processual-civil",
+        "topic": "cpc_arts_219_220_224_dje_feriado",
+        "criteria_met": 4,
+        "criteria_total": 5,
+        "original_confidence": "Com dúvida",
+        "post_correction_self_assessment": "Agora consigo realizar a contagem sem dúvida",
+        "self_reported_cause": "Não lembrava o período de suspensão previsto no art.220",
+        "result_note": "Publicação 17/11/2026, primeiro dia 18/11, seis dias 18,19,23,24,25,26/11, vencimento 26/11 corretos; incidência art.220 omitida."
+      },
+      {
+        "id": "REV3.4",
+        "subject": "direito-administrativo",
+        "topic": "lei_sp_10261_1968_arts_245_246",
+        "criteria_met": 2,
+        "criteria_total": 7,
+        "original_confidence": "Com dúvida",
+        "post_correction_self_assessment": "Agora compreendo as três consequências",
+        "self_reported_cause": "Eu sabia as conclusões, mas não conseguia explicar a fundamentação legal",
+        "result_note": "Acertou duas conclusões gerais; quatro critérios não demonstrados e um incorreto sobre coexistência de consequências patrimonial e disciplinar."
+      },
+      {
+        "id": "REV3.5",
+        "subject": "direito-processual-penal",
+        "topic": "cpp_arts_366_367",
+        "criteria_met": 3,
+        "criteria_total": 7,
+        "original_confidence": "Com dúvida",
+        "post_correction_self_assessment": "Agora consigo distinguir as duas regras",
+        "self_reported_cause": "Confundi a citação por edital com a citação pessoal",
+        "result_note": "Três critérios corretos, dois errados sobre continuidade/suspensão conjunta do art.366 e dois omitidos."
+      },
+      {
+        "id": "REV3.6",
+        "subject": "portugues",
+        "topic": "se_apassivador_vs_indeterminador",
+        "criteria_met": 7,
+        "criteria_total": 8,
+        "original_confidence": "Sem dúvida",
+        "post_correction_self_assessment": "Mantive minha certeza",
+        "self_reported_cause": "Achei que a reescrita correta já justificava a concordância",
+        "result_note": "Sete critérios corretos, justificativa explícita do plural não demonstrada; sem afirmações conceituais erradas."
+      },
+      {
+        "id": "REV3.7",
+        "subject": "direito-processual-penal",
+        "topic": "cpp_arts_366_367",
+        "status": "presented_not_submitted",
+        "criteria_met": null,
+        "criteria_total": null,
+        "original_confidence": null,
+        "post_correction_self_assessment": null,
+        "self_reported_cause": null,
+        "result_note": "Atividade apresentada, mas participante encerrou o bloco antes de responder. Não atribuída nota ou erro."
+      }
+    ],
+    "planned_flashcards_status": "not_confirmed_reviewed_in_this_block",
+    "manual_review_sequence_status": "interrupted_by_explicit_block_closure",
+    "interpretation": "Revisões separadas: melhora em concordância com se e contagem do DJe; CPP arts.366/367 e fundamentação de responsabilidade funcional ainda exigem reteste. Autoavaliação pós-correção não substitui desempenho independente."
+  },
+  "learning_signals": [
+    {
+      "topic": "cpp_arts_366_367",
+      "evidence": "Q28 incorreta firme, R28 correta, REV3.2 não respondida, REV3.5 3/7, REV3.7 sem resposta.",
+      "interpretation": "Prioridade muito alta. Persistiu erro sobre suspensão conjunta processo/prescrição."
+    },
+    {
+      "topic": "portugues_concordancia_com_se",
+      "evidence": "Q25 incorreta; R25 incorreta firme; REV3.1 2/5; REV3.6 7/8 firme.",
+      "interpretation": "Recuperação posterior favorável, com necessidade de justificação escrita e teste espaçado."
+    },
+    {
+      "topic": "cpc_dje_prazos",
+      "evidence": "Q21 incorreta firme; R21 correta; REV3.3 4/5, omitiu o art.220 e informou sua causa.",
+      "interpretation": "Mecanismo de contagem recuperado; revisar suspensão 20/12 a 20/01 e testar sem dicas."
+    },
+    {
+      "topic": "lei_sp_10261_1968_245_246",
+      "evidence": "Q30 incorreta firme; R30 correta; REV3.4 2/7.",
+      "interpretation": "Rever dolo/culpa, custo de aquisição irregular e penalidades disciplinares cumulativas."
+    },
+    {
+      "topic": "matematica_media_ponderada",
+      "evidence": "Q22 correta firme, sem alteração dos sinais de dificuldade anterior em Q13.",
+      "interpretation": "A melhora não afasta reteste com variação de dados."
+    },
+    {
+      "topic": "excel_referencias_mistas",
+      "evidence": "Q23 correta firme com eliminação autorrelatada; episódios anteriores de erro no bloco 1.",
+      "interpretation": "Manter revisão espaçada de referências absolutas e mistas."
+    },
+    {
+      "topic": "peculato",
+      "evidence": "Q24 correta firme, CP art.312, modalidades desvio/furto.",
+      "interpretation": "Manutenção por discriminação de modalidades e finalidade."
+    },
+    {
+      "topic": "cf_art_5_xix",
+      "evidence": "Q27 correta com dúvida e R27 correta firme.",
+      "interpretation": "Reforçar trânsito em julgado para dissolução compulsória, em comparação com suspensão."
+    }
+  ],
+  "review_priorities": [
+    {
+      "priority": "very_high",
+      "targets": [
+        "cpp_arts_366_367_citacao_edital_pessoal_suspensao_conjunta"
+      ],
+      "retest": "Novo caso sem pistas; exigir requisitos cumulativos e efeitos sobre processo e prescrição."
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "lei_sp_10261_1968_arts_245_246_responsabilidade_dolo_culpa_custo_disciplinares"
+      ],
+      "retest": "Pergunta nova com fundamento expresso e consequências patrimonial e disciplinar."
+    },
+    {
+      "priority": "high",
+      "targets": [
+        "cpc_art_220_suspensao_20_dez_a_20_jan",
+        "cpc_arts_219_224_dje"
+      ],
+      "retest": "Contagem de prazo sem data inicial dada, incluindo feriados, com pergunta separada do art.220."
+    },
+    {
+      "priority": "spaced",
+      "targets": [
+        "portugues_concordancia_se_apassivador_indeterminador",
+        "matematica_media_ponderada",
+        "excel_referencias_mistas",
+        "cp_art_312_peculato",
+        "portugues_crase",
+        "raciocinio_logico",
+        "lbi",
+        "cf_art_5_xi_xix"
+      ],
+      "retest": "Intercalar novos exemplos sem revelar gabarito e preservar cobertura do edital."
+    }
+  ],
+  "flashcards_for_next_session": {
+    "status": "suggested_not_presented_or_tested",
+    "items": [
+      {
+        "front": "Quais são os requisitos cumulativos do CPP art.366?",
+        "back": "Citação por edital, não comparecimento e ausência de advogado constituído; em regra suspende-se processo e prescrição."
+      },
+      {
+        "front": "CPP art.367: acusado citado pessoalmente não comparece sem justificativa. O processo para?",
+        "back": "Não. O processo pode prosseguir sem sua presença, com defesa técnica assegurada."
+      },
+      {
+        "front": "Lei SP 10.261/1968 arts.245 e 246: responsabilidade exige dolo?",
+        "back": "Não. O art.245 admite dolo ou culpa devidamente apurados; aquisição irregular do art.246 implica responsabilidade pelo custo, sem prejuízo de sanções disciplinares."
+      },
+      {
+        "front": "Disponibilização e publicação no DJe: quando começa a contagem?",
+        "back": "Publicação é primeiro dia útil após disponibilização; contagem começa no primeiro dia útil seguinte à publicação. Art.224 §§2 e 3 do CPC."
+      },
+      {
+        "front": "Como distinguir se apassivador e índice de indeterminação?",
+        "back": "Com verbo transitivo direto e sujeito paciente, se apassivador e concordância com sujeito. Com verbo transitivo indireto, se indeterminador e verbo na 3ª pessoa do singular."
+      }
+    ]
+  },
+  "session_progress": {
+    "valid_main_questions_this_session": 30,
+    "completed_local_blocks": 3,
+    "this_block_valid_main_questions": 10,
+    "next_local_main_question": "Q31",
+    "next_action": "Bloco 3 encerrado por solicitação expressa; retomar apenas sob novo comando, considerando prioridades registradas e cobertura da prova.",
+    "cumulative_after_block": {
+      "scope": "session_local_not_global",
+      "valid_main_questions": 30,
+      "correct": 20,
+      "incorrect": 10,
+      "computed_percent": 66.7,
+      "correct_firm": 16,
+      "correct_uncertain": 4,
+      "incorrect_high_confidence": 6,
+      "incorrect_uncertain": 2,
+      "incorrect_guess": 2,
+      "reinforcements_attempted": 15,
+      "reinforcements_correct": 11,
+      "reinforcements_incorrect": 4,
+      "note": "Soma apenas dos três blocos confirmados deste mesmo session_id; não agrega outros chats ou participantes."
+    }
+  },
+  "qa_flags": [
+    "REV3.7 não submetida: não contabilizar como revisão respondida ou errada.",
+    "A confiança 'Sem dúvida' pode coexistir com erro e não implica domínio.",
+    "Recuperação em reforço e autorrelato pós-correção não substituem retenção independente.",
+    "O conteúdo proposto dos flashcards não corresponde a cartões efetivamente revisados."
+  ],
+  "evidence_limits": {
+    "main_question_answers": "Alternativas e autoclassificações observadas; sem transcrições de enunciados.",
+    "strategies": "Somente falas declaradas e registradas, nunca inferidas.",
+    "active_review": "Seis revisões pontuadas em critérios heterogêneos; REV3.7 pendente/não submetida no encerramento.",
+    "timing": "Sem cronometragem ou datas individuais verificadas.",
+    "global_mastery": "Não inferido de único bloco ou reforço."
+  },
+  "evidence_status": "block_closed_by_explicit_participant_request",
+  "privacy": {
+    "pseudonymized": true,
+    "no_personal_data": true,
+    "full_transcript_persisted": false,
+    "participant_scope": "p002_only",
+    "public_repository": true
+  },
+  "validation": {
+    "checked_invariants": [
+      "identity_match_enrollment",
+      "ten_main_questions",
+      "score_totals",
+      "confidence_partition",
+      "response_outcomes",
+      "reinforcement_independence",
+      "active_review_unsubmitted_exclusion",
+      "cumulative_session_local",
+      "no_duplicate_target"
+    ],
+    "canonical_repository_verify_py": "not_executed_full_checkout_unavailable_via_connector_only",
+    "note": "GitHub API create_file e readback são controles de persistência distintos do verificador integral tools/verify.py."
+  }
+}
